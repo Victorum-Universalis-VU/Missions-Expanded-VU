@@ -2737,7 +2737,7 @@ Ottoman_Missions_5 = {
 		required_missions = {} 
 		position = 1 
 		trigger = { 
-			total_development = 450 
+			total_development = 1000 
 		} 
 		effect = { 
 			add_country_modifier = { 
