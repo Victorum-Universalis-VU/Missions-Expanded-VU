@@ -656,6 +656,7 @@ GRA_ADU_missions_5 = {
 				OR = {
 					has_building = workshop
 					has_building = counting_house
+					trade_goods = gold
 				}
 				global_trade = 100
 				development = 40
@@ -671,7 +672,7 @@ GRA_ADU_missions_5 = {
 				}
 				else_if = {
 					limit = {
-						NOT = { province_has_center_of_trade_of_level = 3 }
+						NOT = { province_has_center_of_trade_of_level = 5 }
 					}
 					add_center_of_trade_level = 1
 				}
