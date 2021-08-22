@@ -29,6 +29,13 @@ GRA_ADU_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			northern_andalusia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -36,7 +43,10 @@ GRA_ADU_missions_1 = {
 		icon = mission_cannons_firing
 		required_missions = { gra_resistance }
 		provinces_to_highlight = {
-			area = lower_andalucia_area
+			OR = {
+				area = lower_andalucia_area
+				area = northern_andalusia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -44,9 +54,20 @@ GRA_ADU_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			northern_andalusia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			alentejo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			algarve_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -60,10 +81,17 @@ GRA_ADU_missions_1 = {
 		icon = mission_conquer_5_states
 		required_missions = { gra_reconquest }
 		provinces_to_highlight = {
-			area = alentejo_area
+			OR = {
+				area = alentejo_area
+				area = algarve_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			algarve_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			alentejo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -71,6 +99,13 @@ GRA_ADU_missions_1 = {
 		}
 		effect = {
 			toledo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			murcia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -95,6 +130,7 @@ GRA_ADU_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = toledo_area
+				area = murcia_area
 				province_id = 218
 				province_id = 1747
 			}
@@ -102,6 +138,10 @@ GRA_ADU_missions_1 = {
 		}
 		trigger = {
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			murcia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -433,14 +473,14 @@ GRA_ADU_missions_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { development = 25 }
+			NOT = { development = 35 }
 		}
 		position = 2
 		trigger = {
 			treasury = 150
 			is_institution_enabled = renaissance
 			capital_scope = {
-				development = 25
+				development = 35
 			}
 		}
 		effect = {
@@ -533,14 +573,14 @@ GRA_ADU_missions_5 = {
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { renaissance = 100 }
-				NOT = { development = 25 }
+				NOT = { development = 30 }
 			}
 		}
 		trigger = {
 			225 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				renaissance = 100
-				development = 25
+				development = 30
 			}
 		}
 		effect = {
@@ -562,14 +602,14 @@ GRA_ADU_missions_5 = {
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { printing_press = 100 }
-				NOT = { development = 25 }
+				NOT = { development = 40 }
 			}
 		}
 		trigger = {
 			225 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				printing_press = 100
-				development = 25
+				development = 40
 			}
 		}
 		effect = {
@@ -646,8 +686,9 @@ GRA_ADU_missions_5 = {
 				AND = {
 					NOT = { has_building = workshop }
 					NOT = { has_building = counting_house }
+					NOT = { trade_goods = gold }
 				}
-				NOT = { development = 40 }
+				NOT = { development = 50 }
 			}
 		}
 		trigger = {
@@ -659,7 +700,7 @@ GRA_ADU_missions_5 = {
 					trade_goods = gold
 				}
 				global_trade = 100
-				development = 40
+				development = 50
 			}
 		}
 		effect = {
