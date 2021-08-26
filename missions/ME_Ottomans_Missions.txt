@@ -2048,7 +2048,7 @@ Ottoman_Missions_4 = {
 				} 
 			} 
  
-			330 = { #trebizond 
+			pontus_area = { #trebizond 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -2057,7 +2057,24 @@ Ottoman_Missions_4 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
- 
+			1305 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				} 
+			}
+			1846 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				} 
+			}
 		} 
 	} 
 	TUR_ramazan = { 
@@ -2888,16 +2905,14 @@ Ottoman_Missions_5 = {
 		effect = { 
 			country_event = { id = ME_Ottoman_Events.6 } 
  
-			dulkadir_area = { 
+			332 = { 
 				limit = { 
 					NOT = { owned_by = ROOT } 
 					NOT = { is_core = ROOT } 
-					NOT = { province_id = 2308 } 
 				} 
 				add_permanent_claim = ROOT 
 			} 
- 
-			327 = { #ramazan 
+			cukurova_area = { #ramazan 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
