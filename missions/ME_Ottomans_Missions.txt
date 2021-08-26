@@ -446,6 +446,11 @@ Ottoman_Missions_1 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
+			3000 = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
 		} 
 	} 
  
