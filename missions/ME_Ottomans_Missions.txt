@@ -445,12 +445,28 @@ Ottoman_Missions_1 = {
 					NOT = { is_core = ROOT } 
 				} 
 				add_permanent_claim = ROOT 
+			}
+			montenegro_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
 			} 
 			3000 = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
 			}
-			add_permanent_claim = ROOT
+			7711 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
 		} 
 	} 
  
@@ -463,7 +479,10 @@ Ottoman_Missions_1 = {
 		provinces_to_highlight = { 
 			OR = { 
 				area = rascia_area 
-				area = serbia_area 
+				area = serbia_area
+				area = montenegro_area
+				province_id = 3000
+				province_id = 7711 
 			} 
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 			NOT = { province_id = 4239 } 
@@ -479,8 +498,20 @@ Ottoman_Missions_1 = {
 				OR = { 
 					country_or_non_sovereign_subject_holds = ROOT 
 					province_id = 4239 
-				} 
-			} 
+				}
+			}
+			montenegro_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3000 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7711 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		effect = { 
 			bosnia_area = { 
