@@ -218,6 +218,7 @@ naples_missions_1 = {
 			if = {
 				limit = {
 					exists = HUN
+					HUN = { is_subject = no }
 				}
 				HUN = {
 					country_event = {
@@ -709,6 +710,7 @@ naples_missions_2 = {
 			if = {
 				limit = {
 					exists = PRO
+					PRO = { is_subject = no }
 				}
 				PRO = {
 					country_event = {

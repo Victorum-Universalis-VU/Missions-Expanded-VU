@@ -445,7 +445,28 @@ Ottoman_Missions_1 = {
 					NOT = { is_core = ROOT } 
 				} 
 				add_permanent_claim = ROOT 
+			}
+			montenegro_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
 			} 
+			3000 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
+			7711 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
 		} 
 	} 
  
@@ -458,7 +479,10 @@ Ottoman_Missions_1 = {
 		provinces_to_highlight = { 
 			OR = { 
 				area = rascia_area 
-				area = serbia_area 
+				area = serbia_area
+				area = montenegro_area
+				province_id = 3000
+				province_id = 7711 
 			} 
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 			NOT = { province_id = 4239 } 
@@ -474,8 +498,20 @@ Ottoman_Missions_1 = {
 				OR = { 
 					country_or_non_sovereign_subject_holds = ROOT 
 					province_id = 4239 
-				} 
-			} 
+				}
+			}
+			montenegro_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3000 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7711 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		effect = { 
 			bosnia_area = { 
@@ -1387,6 +1423,114 @@ Ottoman_Missions_3 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
+			7137 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			6931 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7138 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7139 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			1764 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			3177 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7111 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			4701 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			3178 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7101 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7102 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
+			7163 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				}
+			}
 		} 
 	} 
  
@@ -2012,7 +2156,7 @@ Ottoman_Missions_4 = {
 				} 
 			} 
  
-			330 = { #trebizond 
+			pontus_area = { #trebizond 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -2021,7 +2165,24 @@ Ottoman_Missions_4 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
- 
+			1305 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				} 
+			}
+			1846 = {
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				} 
+			}
 		} 
 	} 
 	TUR_ramazan = { 
@@ -2804,6 +2965,27 @@ Ottoman_Missions_5 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
+			5146 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
+			5147 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
+			5150 = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				} 
+				add_permanent_claim = ROOT 
+			}
 		} 
 	} 
 	TUR_karaman = { 
@@ -2831,16 +3013,14 @@ Ottoman_Missions_5 = {
 		effect = { 
 			country_event = { id = ME_Ottoman_Events.6 } 
  
-			dulkadir_area = { 
+			332 = { 
 				limit = { 
 					NOT = { owned_by = ROOT } 
 					NOT = { is_core = ROOT } 
-					NOT = { province_id = 2308 } 
 				} 
 				add_permanent_claim = ROOT 
 			} 
- 
-			327 = { #ramazan 
+			cukurova_area = { #ramazan 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
