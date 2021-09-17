@@ -193,11 +193,12 @@ ROM_missions_1 = {
 				area = tunisia_area
 				area = djerba_area
 				area = kabylia_area
-				area = algiers_area
 				area = hautes_plaines_area
 				area = north_saharan_area
 				area = ouled_nail_area
 				area = tripolitania_area
+				area = northern_morocco_area
+				area = barbary_coast_area
 			}
 			NOT = { culture = roman }
 		}
@@ -214,7 +215,11 @@ ROM_missions_1 = {
 				type = all
 				culture = roman
 			}
-			algiers_area = {
+			northern_morocco_area = {
+				type = all
+				culture = roman
+			}
+			barbary_coast_area = {
 				type = all
 				culture = roman
 			}
@@ -694,54 +699,179 @@ ROM_missions_3 = {
 		position = 1
 		provinces_to_highlight = {
 			OR = {
-				region = italy_region
+			    region = anatolia_region
+				region = balkan_region
+				region = british_isles_region
+				region = carpathia_region
+				region = caucasia_region
+				region = egypt_region
 				region = france_region
 				region = iberia_region
+				region = italy_region
+				region = libya_region
+				region = low_countries_region
 				region = maghreb_region
-				region = egypt_region
-				region = balkan_region
-				region = anatolia_region
-				region = carpathia_region
+				region = mashriq_region
+				region = mesopotamia_region
+				region = north_german_region
 				region = south_german_region
-				area = lower_rhineland_area
-				area = wallonia_area
-				area = flanders_area
-				area = east_midlands_area
-				area = yorkshire_area
-				area = scottish_marches_area
-				area = wessex_area
-				area = home_counties_area
-				area = west_midlands_area
-				area = wales_area
-				area = armenia_area
-				area = imereti_area
-				area = samtskhe_area
-				area = kartli_kakheti_area
-				area = tabuk_area
-				province_id = 85
-				province_id = 1742
-				province_id = 2974
-				province_id = 95
-				province_id = 4305
-				province_id = 4299
-				province_id = 415
-				province_id = 2206
-				province_id = 4304
 			}
+			NOT = { area = grampians_area }
+			NOT = { area = highlands_area }
+			NOT = { area = kingdom_of_the_isles_area }
+			NOT = { area = lowlands_area }
+			NOT = { area = scottish_marches_area }
+			NOT = { area = alfold_area }
+			NOT = { area = bukovina_area }
+			NOT = { area = carpathian_ruthenia_area }
+			NOT = { area = eastern_alfold_area }
+			NOT = { area = moldavia_area }
 			NOT = { area = slovakia_area }
-			NOT = { province_id = 1952 }
-			NOT = { province_id = 268 }
-			NOT = { province_id = 2405 }
+			NOT = { area = upper_hungary_area }
+			NOT = { area = upper_muntenia_area }
+			NOT = { area = wallachia_area }
+			NOT = { area = western_moldovia }
+			NOT = { area = circassia_area }
+			NOT = { area = dagestan_area }
+			NOT = { area = east_sahara_area }
+			NOT = { area = fezzan_area }
+			NOT = { area = nafusa_mountains_area }
+			NOT = { area = southeast_sahara_area }
+			NOT = { area = frisia_area }
+			NOT = { area = altmark_area }
+			NOT = { area = anhalt_area }
+			NOT = { area = braunschweig_area }
+			NOT = { area = east_frisia_area }
+			NOT = { area = hesse_area }
+			NOT = { area = holstein_area }
+			NOT = { area = hinter_pommern_area }
+			NOT = { area = lower_saxony_area }
+			NOT = { area = lubeck_area }
+			NOT = { area = lusatia_area }
+			NOT = { area = mecklenburg_area }
+			NOT = { area = mittelmark_area }
+			NOT = { area = neumark_area }
+			NOT = { area = north_westphalia_area }
+			NOT = { area = oldenburg_area }
+			NOT = { area = saxony_area }
+			NOT = { area = thuringia_area }
+			NOT = { area = uckermark_area }
+			NOT = { area = vogtland_area }
+			NOT = { area = vorpommern_area }
+			NOT = { area = weser_area }
+			NOT = { area = westphalia_area }
 			NOT = { area = franconia_area }
+			NOT = { area = romandie_area }
+			NOT = { area = switzerland_area }
+			NOT = { province_id = 4381 }
+			NOT = { province_id = 7954 }
+			NOT = { province_id = 8032 }
+			NOT = { province_id = 8120 }
+			NOT = { province_id = 350 }
+			NOT = { province_id = 351 }
+			NOT = { province_id = 2456 }
+			NOT = { province_id = 2457 }
+			NOT = { province_id = 2472 }
+			NOT = { province_id = 5329 }
+			NOT = { province_id = 67 }
+			NOT = { province_id = 70 }
 			NOT = { province_id = 71 }
+			NOT = { province_id = 72 }
+			NOT = { province_id = 74 }
+			NOT = { province_id = 77 }
+			NOT = { province_id = 1757 }
 			NOT = { province_id = 2956 }
 			NOT = { province_id = 2957 }
-			NOT = { province_id = 1757 }
+			NOT = { province_id = 2995 }
+			NOT = { province_id = 3204 }
+			NOT = { province_id = 3206 }
+			NOT = { province_id = 3207 }
+			NOT = { province_id = 4708 }
+			NOT = { province_id = 4711 }
+			NOT = { province_id = 4713 }
+			NOT = { province_id = 4714 }
+			NOT = { province_id = 4715 }
+			NOT = { province_id = 4718 }
+			NOT = { province_id = 7319 }
+			NOT = { province_id = 7547 }
+			NOT = { province_id = 7548 }
+			NOT = { province_id = 7549 }
+			NOT = { province_id = 7550 }
+			NOT = { province_id = 7551 }
+			NOT = { province_id = 7552 }
+			NOT = { province_id = 7553 }
+			NOT = { province_id = 7554 }
+			NOT = { province_id = 7556 }
+			NOT = { province_id = 7557 }
+			NOT = { province_id = 7558 }
+			NOT = { province_id = 7560 }
+			NOT = { province_id = 7561 }
+			NOT = { province_id = 7562 }
+			NOT = { province_id = 7563 }
+			NOT = { province_id = 7564 }
+			NOT = { province_id = 7565 }
+			NOT = { province_id = 7566 }
+			NOT = { province_id = 7567 }
+			NOT = { province_id = 7568 }
+			NOT = { province_id = 7569 }
+			NOT = { province_id = 7570 }
+			NOT = { province_id = 7571 }
+			NOT = { province_id = 7572 }
+			NOT = { province_id = 7573 }
+			NOT = { province_id = 7574 }
+			NOT = { province_id = 7575 }
+			NOT = { province_id = 7606 }
+			NOT = { province_id = 7659 }
+			NOT = { province_id = 7661 }
+			NOT = { province_id = 7662 }
 			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			italy_region = {
+		    anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			british_isles_region = {
+				type = all
+				OR = {
+					area = grampians_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+					area = lowlands_area
+					area = scottish_marches_area
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			carpathia_region = {
+				type = all
+				OR = {
+					area = alfold_area
+					area = bukovina_area
+					area = carpathian_ruthenia_area
+					area = eastern_alfold_area
+					area = moldavia_area
+					area = slovakia_area
+					area = upper_hungary_area
+					area = upper_muntenia_area
+					area = wallachia_area
+					area = western_moldovia
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			caucasia_region = {
+				type = all
+				OR = {
+					area = circassia_area
+					area = dagestan_area
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			egypt_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -753,32 +883,77 @@ ROM_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			maghreb_region = {
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			libya_region = {
 				type = all
 				OR = {
-					NOT = { is_city = no }
+					area = east_sahara_area
+					area = fezzan_area
+					area = nafusa_mountains_area
+					area = southeast_sahara_area
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			egypt_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			balkan_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			anatolia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			carpathia_region = {
+			low_countries_region = {
 				type = all
 				OR = {
-					area = slovakia_area
-					province_id = 1952
-					province_id = 268
-					province_id = 2405
+					area = frisia_area
+					province_id = 4381
+					province_id = 7954
+					province_id = 8032
+					province_id = 8120
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			maghreb_region = {
+				type = all
+				OR = {
+					area = northwest_sahara_area
+					province_id = 350
+					province_id = 351
+					province_id = 2456
+					province_id = 2457
+					province_id = 2472
+					province_id = 5329
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mesopotamia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_german_region = {
+				type = all
+				OR = {
+				    area = altmark_area
+					area = anhalt_area
+					area = braunschweig_area
+					area = east_frisia_area
+					area = hesse_area
+					area = holstein_area
+					area = hinter_pommern_area
+					area = lower_saxony_area
+					area = lubeck_area
+					area = lusatia_area
+					area = mecklenburg_area
+					area = mittelmark_area
+					area = neumark_area
+					area = north_westphalia_area
+					area = oldenburg_area
+					area = saxony_area
+					area = thuringia_area
+					area = uckermark_area
+					area = vogtland_area
+					area = vorpommern_area
+					area = weser_area
+					area = westphalia_area
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
@@ -786,117 +961,61 @@ ROM_missions_3 = {
 				type = all
 				OR = {
 					area = franconia_area
+					area = romandie_area
+					area = switzerland_area
+					province_id = 67
+					province_id = 70
 					province_id = 71
+					province_id = 72
+					province_id = 74
+					province_id = 77
+					province_id = 1757
 					province_id = 2956
 					province_id = 2957
-					province_id = 1757
+					province_id = 2995
+					province_id = 3204
+					province_id = 3206
+					province_id = 3207
+					province_id = 4708
+					province_id = 4711
+					province_id = 4713
+					province_id = 4714
+					province_id = 4715
+					province_id = 4718
+					province_id = 7319
+					province_id = 7547
+					province_id = 7548
+					province_id = 7549
+					province_id = 7550
+					province_id = 7551
+					province_id = 7552
+					province_id = 7553
+					province_id = 7554
+					province_id = 7556
+					province_id = 7557
+					province_id = 7558
+					province_id = 7560
+					province_id = 7561
+					province_id = 7562
+					province_id = 7563
+					province_id = 7564
+					province_id = 7565
+					province_id = 7566
+					province_id = 7567
+					province_id = 7568
+					province_id = 7569
+					province_id = 7570
+					province_id = 7571
+					province_id = 7572
+					province_id = 7573
+					province_id = 7574
+					province_id = 7575
+					province_id = 7606
+					province_id = 7659
+					province_id = 7661
+					province_id = 7662
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-			}
-			lower_rhineland_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			85 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			wallonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			flanders_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1742 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			95 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_midlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_midlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			yorkshire_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			scottish_marches_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			wessex_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			home_counties_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_anglia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			wales_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mashriq_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			armenia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			imereti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			samtskhe_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kartli_kakheti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4305 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4299 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			421 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
-			4293 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4294 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			415 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4304 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2206 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabuk_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1363,7 +1482,16 @@ ROM_missions_3 = {
 					duration = -1
 				}
 			}
-			algiers_area = {
+			northern_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_province_modifier = {
+					name = "rome_roman_culture"
+					duration = -1
+				}
+			}
+			barbary_coast_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
