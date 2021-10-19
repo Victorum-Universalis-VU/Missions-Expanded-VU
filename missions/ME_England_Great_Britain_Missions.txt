@@ -1852,17 +1852,18 @@ ENG_missions_3_2 = {
 		NOT = { has_country_flag = ENG_Angevin_Missions }
 	}
 	has_country_shield  = yes
-	
+	# Couple of areas are non-existant at this point
 	ENG_markets_of_england = {
         icon = mission_market_place_with_asian_traders
         required_missions = { }
         position = 12
 		provinces_to_highlight = {
 			OR = {
-				area = home_counties_area
+				#area = home_counties_area
 				area = east_midlands_area
 				area = west_midlands_area
-				area = wessex_area
+				area = cornwall_area
+				#area = wessex_area
 				area = wales_area
 				area = east_anglia_area
 				area = yorkshire_area
@@ -1876,10 +1877,11 @@ ENG_missions_3_2 = {
 			NOT = {
 				any_province = {
 					OR = {
-						area = home_counties_area
+						#area = home_counties_area
 						area = east_midlands_area
 						area = west_midlands_area
-						area = wessex_area
+						area = cornwall_area
+						#area = wessex_area
 						area = wales_area
 						area = east_anglia_area
 						area = yorkshire_area
@@ -3069,8 +3071,7 @@ GBR_missions_4_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = te_waipounamu_area
-				area = te_ika_a_maui_hauauru_area 
-				area = te_ika_a_maui_waho_area 
+				area = te_ika_a_maui_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -3078,8 +3079,7 @@ GBR_missions_4_2 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				OR = {
-					area = te_ika_a_maui_hauauru_area 
-					area = te_ika_a_maui_waho_area 
+					area = te_ika_a_maui_area
 				}
 			}
 		}
@@ -3099,8 +3099,7 @@ GBR_missions_4_2 = {
 					OR = {
 						region = australia_region
 						area = te_waipounamu_area
-						area = te_ika_a_maui_hauauru_area
-						area = te_ika_a_maui_waho_area
+						area = te_ika_a_maui_area
 					}
 				}
 				AND = {
@@ -3137,11 +3136,7 @@ GBR_missions_4_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			te_ika_a_maui_waho_area = { 
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			te_ika_a_maui_hauauru_area = { 
+			te_ika_a_maui_area = { 
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -3474,7 +3469,7 @@ ENG_missions_5_1 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = wessex_area
+					area = cornwall_area 
 					OR = {
 						NOT = { owned_by = ROOT }
 						NOT = {
@@ -3491,7 +3486,7 @@ ENG_missions_5_1 = {
 					}
 				}
 				AND = {
-					area = home_counties_area
+					area = east_anglia_area
 					OR = {
 						NOT = { owned_by = ROOT }
 						NOT = {
@@ -3589,7 +3584,7 @@ ENG_missions_5_1 = {
 		}
 		trigger = {
 			treasurer = 1
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -3605,7 +3600,7 @@ ENG_missions_5_1 = {
 					total = 15
 				}
 			}
-			home_counties_area = {
+			east_anglia_area = {
 				type = all
 				owned_by = ROOT
 			}
