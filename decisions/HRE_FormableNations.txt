@@ -121,21 +121,7 @@ country_decisions = {
 				}
 				inherit = ING
 			}
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			east_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
@@ -438,7 +424,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-#			adm_tech = 10
+			#adm_tech = 10
 			OR = { #Wurzburg was the theoretical holder of the title
 				tag = WBG
 				NOT = { exists = WBG }
@@ -469,7 +455,7 @@ country_decisions = {
 				}
 				add_permanent_claim = root
 			}
-			upper_franconia_area = {
+			#upper_franconia_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
@@ -559,7 +545,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-#			adm_tech = 10
+			#adm_tech = 10
 			owns_core_province = 70 #Wurttemberg
 			owns_core_province = 1872 #Ulm
 			num_of_owned_provinces_with = {
