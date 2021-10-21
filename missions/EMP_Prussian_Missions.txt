@@ -320,7 +320,7 @@ emp_bra_pru_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_franconia_area = {
+			#upper_franconia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
