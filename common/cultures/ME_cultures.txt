@@ -501,7 +501,7 @@ british = {
 			Conredeu Conuallon Cynwallon Conmarch Cynfarch Convelin Cynfelyn Corguethen Courantgern 
 			Courantmonoc Culmin Custent Constans Custentin Constantine Dauid Deniel Daniel Denis Deroch 
 			Derrien Deui David Deurhoiarn Domnoret Domuel Dywel Donual Donald Donuallon Dyfnwallon Drogon 
-			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispo� Yves 
+			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispo? Yves 
 			Estienne Etgual Eudon Otto Euhocar Euhoiarn Eusebi Eusebius Even Eugene Evrard Everard Farinmael
 			Ffernfael Ferant Ferdinand Fracan Fragan Framual Fransaz Francis Frioc Friog Garmon German 
 			Geofroi Geralt Gerald Gereint Gerontius Gestin Justin Gilbert Godefroi Godfrey Goennoc Gouesnon 
@@ -520,11 +520,11 @@ british = {
 			Iliud Inisian Iocilin Joscelin Iodoc Ionas Jonas Iosep Joseph Iudcum Iuduallon Idwallon 
 			Ithel Iudicael Judicael Iudnerth Idnerth Iudnimet Ednyfed Iustoc Iudoc Iudual Idwal Iumael 
 			Iunceneu Iunuocon Iunmonoc Jord George Leucum Loi Lorens Laurence Louenan Loumarch Llywarch 
-			Iudhael Louis Maelcon Maelgwn Maeldo� Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
-			Marthin Martin Matheudo� Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
+			Iudhael Louis Maelcon Maelgwn Maeldo? Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
+			Marthin Martin Matheudo? Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
 			Meldroc Meriadoc Mermin Merfyn Meugan Mawgan Meven Michel Michael Morcant Morgan Morcondeleu 
 			Morgen Morguethen Morhaetho Mormarch Morfarch Morvan Mortiern Neven Nicolas Nicholas 
-			Nodhoiarn Nomino� Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
+			Nodhoiarn Nomino? Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
 			Pasquitan Patern Paternus Petroc Phelippe Phillip Piran Prigent Primael Primarhoc Putrael 
 			Peter Ralf Raoul Ralph Renan Resmen Riacet Ribald Ricart Richard Riceneu Ricenus Richwin 
 			Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rhiwallon Rodric Roderick Roenualloc 

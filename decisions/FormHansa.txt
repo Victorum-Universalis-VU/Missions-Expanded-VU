@@ -159,7 +159,13 @@ country_decisions = {
 				full_idea_group = trade_ideas
 				full_idea_group = maritime_ideas
 			}
-			1926 = { #danzig
+			1 = { #Bergslagen
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			43 = { #danzig
 				trade_share = {
 					country = ROOT
 					share = 50
