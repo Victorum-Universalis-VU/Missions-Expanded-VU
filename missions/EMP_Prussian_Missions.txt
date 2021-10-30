@@ -321,12 +321,12 @@ emp_bra_pru_2 = {
 				add_permanent_claim = ROOT
 			}
 			#upper_franconia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_permanent_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 	emp_brapru_franconian_conquest = {
@@ -335,7 +335,7 @@ emp_bra_pru_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = franconia_area
-				area = upper_franconia_area
+				#area = upper_franconia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -344,7 +344,7 @@ emp_bra_pru_2 = {
 				value = 6
 				OR = {
 					area = franconia_area
-					area = upper_franconia_area
+					#area = upper_franconia_area
 				}
 			}
 		}
@@ -556,13 +556,13 @@ emp_bra_pru_3 = {
 			}
 		}
 		effect = {
-			northern_saxony_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#northern_saxony_area = {
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_permanent_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			lower_saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -595,7 +595,7 @@ emp_bra_pru_3 = {
 		required_missions = { emp_brapru_show_of_strength }
 		provinces_to_highlight = {
 			OR = {
-				area = northern_saxony_area
+				#area = northern_saxony_area
 				area = lower_saxony_area
 				area = weser_area
 				province_id = 1931
@@ -608,7 +608,7 @@ emp_bra_pru_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
-					area = northern_saxony_area
+					#area = northern_saxony_area
 					area = lower_saxony_area
 					area = weser_area
 				}

@@ -96,13 +96,13 @@ ARL_missions_1 = {
 				name = "expansionist_country"
 				duration = 9125 #25 years
 			}
-			kartli_kakheti_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			samtskhe_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -120,7 +120,7 @@ ARL_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = samtskhe_area
-				area = kartli_kakheti_area
+				#area = kartli_kakheti_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -130,10 +130,10 @@ ARL_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kartli_kakheti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			country_event = { id = ME_Ardabil_Events.6 }
@@ -145,7 +145,7 @@ ARL_missions_1 = {
 		required_missions = { ARL_conquer_georgia ARL_adopt_persian_administration }
 		position = 10
 		provinces_to_highlight = {
-			area = kartli_kakheti_area
+			#area = kartli_kakheti_area #To replace with something else
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { has_province_modifier = autonomy_increased }
@@ -186,11 +186,11 @@ ARL_missions_1 = {
 						days = 36500
 					}
 				}
-				kartli_kakheti_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					has_province_modifier = autonomy_increased
-				}
+				#kartli_kakheti_area = {
+				#	type = all
+				#	country_or_non_sovereign_subject_holds = ROOT
+				#	has_province_modifier = autonomy_increased
+				#}
 			}
 		}
 		effect = {
