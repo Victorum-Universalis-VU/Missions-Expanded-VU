@@ -946,13 +946,13 @@ AZE_Missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kartli_kakheti_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_permanent_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			samtskhe_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1105,16 +1105,16 @@ AZE_Missions_5 = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				area = kartli_kakheti_area
+				#area = kartli_kakheti_area
 				area = samtskhe_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			kartli_kakheti_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			samtskhe_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

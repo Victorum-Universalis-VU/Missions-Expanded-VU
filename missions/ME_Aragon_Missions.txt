@@ -928,13 +928,13 @@ ARA_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#algiers_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			northern_morocco_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -952,7 +952,7 @@ ARA_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = barbary_coast_area
-				area = algiers_area
+				#area = algiers_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -961,10 +961,10 @@ ARA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#algiers_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			barbary_coast_area = {
@@ -977,16 +977,16 @@ ARA_missions_3 = {
 					duration = 7300
 				}
 			}
-			algiers_area = {
-				add_province_modifier = {
-					name = ara_new_administration
-					duration = 1825
-				}
-				add_province_modifier = {
-					name = ara_convert
-					duration = 7300
-				}
-			}
+			#algiers_area = {
+			#	add_province_modifier = {
+			#		name = ara_new_administration
+			#		duration = 1825
+			#	}
+			#	add_province_modifier = {
+			#		name = ara_convert
+			#		duration = 7300
+			#	}
+			#}
 			north_saharan_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}

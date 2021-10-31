@@ -515,13 +515,13 @@ australia_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_polynesia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#eastern_polynesia_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			mindanao_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -529,13 +529,13 @@ australia_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#west_mindanao_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 
@@ -549,7 +549,7 @@ australia_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
-				area = west_mindanao_area
+				#area = west_mindanao_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -558,10 +558,10 @@ australia_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			west_mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#west_mindanao_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_mercantilism = 3
@@ -573,13 +573,13 @@ australia_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#west_mindanao_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			luzon_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -663,18 +663,13 @@ australia_missions_4 = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = te_ika_a_maui_hauauru_area 
-				area = te_ika_a_maui_waho_area 
+				area = te_ika_a_maui_area
 				area = te_waipounamu_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			te_ika_a_maui_hauauru_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			te_ika_a_maui_waho_area = {
+			te_ika_a_maui_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -698,7 +693,7 @@ australia_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = polynesia_area
-				area = eastern_polynesia_area
+				#area = eastern_polynesia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -707,10 +702,10 @@ australia_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			eastern_polynesia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#eastern_polynesia_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_dip_power = 100
@@ -788,8 +783,7 @@ australia_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = te_waipounamu_area
-				area = te_ika_a_maui_hauauru_area
-				area = te_ika_a_maui_waho_area
+				area = te_ika_a_maui_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -816,14 +810,18 @@ australia_missions_5 = {
 				type = all
 				owned_by = ROOT
 			}
-			te_ika_a_maui_waho_area = {
+			te_ika_a_maui_area = {
 				type = all
 				owned_by = ROOT
 			}
-			te_ika_a_maui_hauauru_area = {
-				type = all
-				owned_by = ROOT
-			}
+			#te_ika_a_maui_waho_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
+			#te_ika_a_maui_hauauru_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
 		}
 		effect = {
 			add_adm_power = 50
@@ -835,18 +833,24 @@ australia_missions_5 = {
 					duration = 9125
 				}
 			}
-			te_ika_a_maui_waho_area = {
+			te_ika_a_maui_area = {
 				add_province_modifier = {
 					name = aus_settling
 					duration = 9125
 				}
 			}
-			te_ika_a_maui_hauauru_area = {
-				add_province_modifier = {
-					name = aus_settling
-					duration = 9125
-				}
-			}
+			#te_ika_a_maui_waho_area = {
+			#	add_province_modifier = {
+			#		name = aus_settling
+			#		duration = 9125
+			#	}
+			#}
+			#te_ika_a_maui_hauauru_area = {
+			#	add_province_modifier = {
+			#		name = aus_settling
+			#		duration = 9125
+			#	}
+			#}
 		}
 	}
 }

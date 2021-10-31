@@ -429,13 +429,13 @@ HLR_missions_1 = {
 			}
 		}
 		effect = {
-			ostra_svealand_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#ostra_svealand_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			svealand_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -466,7 +466,7 @@ HLR_missions_1 = {
 		position = 17
 		provinces_to_highlight = {
 			OR = {
-				area = ostra_svealand_area
+				#area = ostra_svealand_area
 				area = svealand_area
 				area = eastern_norway
 				area = western_norway
@@ -474,10 +474,10 @@ HLR_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			ostra_svealand_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#ostra_svealand_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			svealand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -765,8 +765,8 @@ HLR_missions_1 = {
 		position = 26
 		provinces_to_highlight = {
 			OR = {
-				area = badlands_area
-				area = upper_missouri_area
+				#area = badlands_area
+				#area = upper_missouri_area
 				area = dakota_area
 				area = south_dakota_area
 				area = wisconsin_area
@@ -775,14 +775,14 @@ HLR_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			badlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			upper_missouri_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#badlands_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#upper_missouri_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			dakota_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1704,7 +1704,7 @@ HLR_missions_2 = {
 				area = connecticut_valley_area
 				area = massachusetts_bay_area
 				area = hudson_bay_area
-				area = maryland_area
+				#area = maryland_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1725,10 +1725,10 @@ HLR_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			maryland_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#maryland_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1745,7 +1745,7 @@ HLR_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = chesapeake_area
-				area = piedmont_north_america_area
+				#area = piedmont_north_america_area
 				area = american_georgia_area
 				area = south_carolina_area
 				area = carolinas_area
@@ -1757,10 +1757,10 @@ HLR_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			piedmont_north_america_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#piedmont_north_america_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			american_georgia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1792,7 +1792,7 @@ HLR_missions_2 = {
 				area = susquehanna_area
 				area = south_iroquoisia_area
 				area = appalachia_area
-				area = south_appalachia_area
+				#area = south_appalachia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1813,10 +1813,10 @@ HLR_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_appalachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#south_appalachia_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1836,7 +1836,7 @@ HLR_missions_2 = {
 				area = choctaw_area
 				area = alabama_area
 				area = west_florida_area
-				area = mississippi_plain_area
+				#area = mississippi_plain_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1857,10 +1857,10 @@ HLR_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			mississippi_plain_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#mississippi_plain_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1921,10 +1921,10 @@ HLR_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = california_area
-				area = central_valley_area
+				#area = central_valley_area
 				area = oregon_area
-				area = snake_river_area
-				area = columbia_river_area
+				#area = snake_river_area
+				#area = columbia_river_area
 				area = salish_sea_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1934,22 +1934,22 @@ HLR_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			central_valley_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#central_valley_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			oregon_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			snake_river_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			columbia_river_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#snake_river_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			#columbia_river_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			salish_sea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
