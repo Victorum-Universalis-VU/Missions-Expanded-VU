@@ -390,7 +390,7 @@ NOR_mission_group_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = norrland_area
-				area = ostra_svealand_area
+				#area = ostra_svealand_area
 				province_id = 4151
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -402,10 +402,10 @@ NOR_mission_group_3 = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
             }
-			ostra_svealand_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
+			#ostra_svealand_area = {
+            #    type = all
+            #    country_or_non_sovereign_subject_holds = ROOT
+            #}
 			4151 = {
 					country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -473,13 +473,13 @@ NOR_mission_group_3 = {
 			}
 		}
 		effect = {
-			north_karelia = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#north_karelia = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			pomor_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
