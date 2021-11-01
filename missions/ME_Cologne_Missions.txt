@@ -296,14 +296,14 @@ KOL_missions_2 = {
                 duration = 9125
             }
 			hidden_effect = {
-				south_saxony_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				northern_saxony_area = {
+				#south_saxony_area = {
+				#	NOT = { owned_by = ROOT }
+				#		limit = {
+				#		NOT = { is_core = ROOT }
+				#	}
+				#	add_permanent_claim = ROOT
+				#}
+				saxony_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
