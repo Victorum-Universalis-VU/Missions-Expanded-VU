@@ -1603,14 +1603,14 @@ FRA_missions_3 = {
 				name = fra_united_france
 				duration = 7300
 			}
-			wessex_area = {
+			cornwall_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			home_counties_area = {
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1626,17 +1626,17 @@ FRA_missions_3 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = home_counties_area
-				area = wessex_area
+				area = south_east_area
+				area = cornwall_area
 			}
 			NOT = { controlled_by = ROOT }
 		}
 		trigger = {
 			OR = {
-				home_counties_area = {
+				south_east_area = {
 					controlled_by = ROOT
 				}
-				wessex_area = {
+				cornwall_area = {
 					controlled_by = ROOT
 				}
 			}
@@ -1715,8 +1715,8 @@ FRA_missions_3 = {
 				area = yorkshire_area
 				area = west_midlands_area
 				area = east_midlands_area
-				area = wessex_area
-				area = home_counties_area
+				area = cornwall_area
+				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1741,11 +1741,11 @@ FRA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			home_counties_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1773,11 +1773,11 @@ FRA_missions_3 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4361
-				province_id = 4362
 				area = lowlands_area
 				area = highlands_area
 				area = kingdom_of_the_isles_area
+				area = grampians_area
+				area = scottish_marches_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1794,10 +1794,12 @@ FRA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			246 = {
+			grampians_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			247 = {
+			scottish_marches_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -1987,7 +1989,7 @@ FRA_missions_3 = {
 				area = hautes_plaines_area
 				area = kabylia_area
 				area = north_saharan_area
-				area = algiers_area
+				#area = algiers_area
 				area = ouled_nail_area
 				area = barbary_coast_area
 			}
@@ -2006,10 +2008,10 @@ FRA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#algiers_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			ouled_nail_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2862,13 +2864,13 @@ FRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#algiers_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			kabylia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -3178,27 +3180,29 @@ FRA_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = lower_rhineland_area
-				area = upper_rhineland_area
+				area = baden_area
 				area = palatinate_area
 				area = hesse_area
 				area = westphalia_area
 				area = thuringia_area
 				area = franconia_area
-				area = lower_swabia_area
-				area = upper_swabia_area
-				area = lower_bavaria_area
-				area = upper_bavaria_area
-				area = upper_franconia_area
+				#area = lower_swabia_area
+				#area = upper_swabia_area
+				area = swabia_area
+				#area = lower_bavaria_area
+				#area = upper_bavaria_area
+				area = bavaria_area
+				#area = upper_franconia_area
 				area = north_rhine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			NOT = { exists = GER }
-			upper_franconia_area = {
-				type = all
-				owned_by = ROOT
-			}
+			#upper_franconia_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
 			north_rhine_area = {
 				type = all
 				owned_by = ROOT
@@ -3207,7 +3211,7 @@ FRA_missions_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			upper_rhineland_area = {
+			baden_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -3231,21 +3235,29 @@ FRA_missions_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			lower_swabia_area = {
+			#lower_swabia_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
+			#upper_swabia_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
+			swabia_area = {
 				type = all
 				owned_by = ROOT
 			}
-			upper_swabia_area = {
+			#lower_bavaria_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
+			#upper_bavaria_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
+			bavaria_area = {
 				type = all
-				owned_by = ROOT
-			}
-			lower_bavaria_area = {
-				type = all
-				owned_by = ROOT
-			}
-			upper_bavaria_area = {
-				type = all
-				owned_by = ROOT
+				owned_by = root
 			}
 		}
 		effect = {
@@ -3347,33 +3359,46 @@ FRA_missions_5 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
+				area = bourgogne_area
 				province_id = 88
 				province_id = 89
-				province_id = 191
-				province_id = 192
-				province_id = 181
-				province_id = 1877
+				province_id = 7963
+				province_id = 7965
+				province_id = 7966
+				province_id = 7968
+				province_id = 7969
+				province_id = 7974
 				province_id = 4392
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			bourgogne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
 			88 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			89 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			191 = {
+			7963 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			181 = {
+			7965 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			192 = {
+			7966 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1877 = {
+			7968 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7969 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7974 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			4392 = {

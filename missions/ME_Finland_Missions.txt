@@ -108,13 +108,13 @@ FIN_missions_1 = {
 					duration = 7300
 				}
 			}
-			north_karelia = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#north_karelia = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			pomor_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -137,7 +137,7 @@ FIN_missions_1 = {
 		required_missions = { fin_conquer_lappland }
 		provinces_to_highlight = {
 			OR = {
-				area = north_karelia
+				#area = north_karelia
 				area = karelia_area
 				area = pomor_area
 			}
@@ -145,10 +145,10 @@ FIN_missions_1 = {
 		}
 		position = 4
 		trigger = {
-			north_karelia = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#north_karelia = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			pomor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -159,12 +159,12 @@ FIN_missions_1 = {
 			}
 		}
 		effect = {
-			north_karelia = {
-				add_province_modifier = {
-					name = fin_integration
-					duration = 7300
-				}
-			}
+			#north_karelia = {
+			#	add_province_modifier = {
+			#		name = fin_integration
+			#		duration = 7300
+			#	}
+			#}
 			pomor_area = {
 				add_province_modifier = {
 					name = fin_integration
@@ -232,7 +232,7 @@ FIN_missions_1 = {
 				area = laponia_area
 				area = norrland_area
 				area = finland_area
-				area = north_karelia
+				#area = north_karelia
 				area = karelia_area
 				area = pomor_area
 				area = estonia_ingria_area
@@ -265,10 +265,10 @@ FIN_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			north_karelia = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#north_karelia = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
