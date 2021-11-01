@@ -118,14 +118,14 @@ Cornwall_missions_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			home_counties_area = {
+			south_east_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -142,8 +142,8 @@ Cornwall_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 239
-				area = wessex_area
-				area = home_counties_area
+				area = cornwall_area
+				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -151,11 +151,11 @@ Cornwall_missions_1 = {
 			239 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			home_counties_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
