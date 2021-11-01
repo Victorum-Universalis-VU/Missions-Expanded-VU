@@ -485,7 +485,14 @@ ireland_missions_column_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			#wessex_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			cornwall_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -505,8 +512,10 @@ ireland_missions_column_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wales_area
-				area = wessex_area
-				area = home_counties_area
+				#area = wessex_area
+				#area = home_counties_area
+				area = cornwall_area
+				area = south_east_area
 				area = east_anglia_area
 				area = yorkshire_area
 				area = east_midlands_area
@@ -521,11 +530,19 @@ ireland_missions_column_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			wessex_area = {
+			#wessex_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			home_counties_area = {
+			#home_counties_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -666,17 +683,29 @@ ireland_missions_column_4 = {
 		required_missions = { ireland_mission_12 }
 		position = 5
 		provinces_to_highlight = {
-			area = wessex_area
+			#area = wessex_area
+			area = cornwall_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wessex_area = {
+			#wessex_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			home_counties_area = {
+			#home_counties_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
