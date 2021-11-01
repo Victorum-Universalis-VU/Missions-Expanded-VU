@@ -558,7 +558,7 @@ CAS_missions_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 				area = mindanao_area
-				area = west_mindanao_area
+				#area = west_mindanao_area
 				area = visayas_area
 			}
 			NOT = { owned_by = ROOT }
@@ -574,9 +574,9 @@ CAS_missions_2 = {
 				mindanao_area = {
 					owned_by = ROOT
 				}
-				west_mindanao_area = {
-					owned_by = ROOT
-				}
+				#west_mindanao_area = {
+				#	owned_by = ROOT
+				#}
 				visayas_area = {
 					owned_by = ROOT
 				}
@@ -608,13 +608,13 @@ CAS_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#west_mindanao_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			visayas_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -976,13 +976,13 @@ CAS_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#western_sicily_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 
@@ -996,7 +996,7 @@ CAS_missions_3 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
-				area = western_sicily_area
+				#area = western_sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1017,10 +1017,10 @@ CAS_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#western_sicily_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1293,13 +1293,13 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#algiers_area = {
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 
@@ -1479,7 +1479,15 @@ CAS_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = pyrenees_area
-				area = basque_country
+				area = basque_area
+				province_id = 8026 
+				province_id = 209 
+				province_id = 8016 
+				province_id = 7929 
+				province_id = 210 
+				province_id = 7920
+				province_id = 173
+				province_id = 7923
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1488,10 +1496,18 @@ CAS_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			basque_country = {
+			basque_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			8026 = { country_or_non_sovereign_subject_holds = ROOT }
+			209 = { country_or_non_sovereign_subject_holds = ROOT }
+			8016 = { country_or_non_sovereign_subject_holds = ROOT }
+			7929 = { country_or_non_sovereign_subject_holds = ROOT }
+			210 = { country_or_non_sovereign_subject_holds = ROOT }
+			7920 = { country_or_non_sovereign_subject_holds = ROOT }
+			173 = { country_or_non_sovereign_subject_holds = ROOT }
+			7923 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			guyenne_area = {
@@ -1734,7 +1750,7 @@ CAS_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			basque_country = {
+			basque_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

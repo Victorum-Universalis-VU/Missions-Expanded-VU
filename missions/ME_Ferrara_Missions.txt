@@ -734,21 +734,7 @@ ferrara_mission_4 = {
 				}
 			}
 			else = {
-				lower_bavaria_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				upper_bavaria_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				east_bavaria_area = {
+				bavaria_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -766,7 +752,7 @@ ferrara_mission_4 = {
 				}
 			}
 			else = {
-				south_saxony_area = {
+				saxony_area = { #was south_saxony_area
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -780,13 +766,13 @@ ferrara_mission_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				northern_saxony_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				#northern_saxony_area = {
+				#	limit = {
+				#		NOT = { owned_by = ROOT }
+				#		NOT = { is_core = ROOT }
+				#	}
+				#	add_permanent_claim = ROOT
+				#}
 			}
 		}
 	}
@@ -801,15 +787,15 @@ ferrara_mission_4 = {
 			OR = {
 				overlord_of = ROOT
 				AND = {
-					lower_bavaria_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					upper_bavaria_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					east_bavaria_area = {
+					#lower_bavaria_area = {
+					#	type = all
+					#	country_or_non_sovereign_subject_holds = ROOT
+					#}
+					#upper_bavaria_area = {
+					#	type = all
+					#	country_or_non_sovereign_subject_holds = ROOT
+					#}
+					bavaria_area = { #was east_bavaria_area
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -1038,13 +1024,13 @@ ferrara_mission_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}				
-				add_permanent_claim = ROOT
-			}
+			#western_sicily_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}				
+			#	add_permanent_claim = ROOT
+			#}
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1065,15 +1051,15 @@ ferrara_mission_5 = {
 			OR = {
 				overlord_of = SAX
 				AND = {
-					south_saxony_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+					#south_saxony_area = {
+					#	type = all
+					#	country_or_non_sovereign_subject_holds = ROOT
+					#}
 					thuringia_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					northern_saxony_area = {
+					saxony_area = { # wasnorthern_saxony_area
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
