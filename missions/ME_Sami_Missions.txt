@@ -229,7 +229,7 @@ SMI_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			ostra_svealand_area = {
+			svealand_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -250,7 +250,7 @@ SMI_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_karelia = {
+			north_karelia_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -509,7 +509,7 @@ SMI_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = svealand_area
-				area = ostra_svealand_area
+			#	area = ostra_svealand_area
 				area = vastra_gotaland_area
 				area = finland_area
 				province_id = 2
@@ -526,7 +526,7 @@ SMI_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ostra_svealand_area = {
+			svealand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -795,7 +795,7 @@ SMI_missions_3 = {
 		required_missions = { expand_sami_borders }
 		provinces_to_highlight = {
 			OR = {
-				area = north_karelia
+				area = north_karelia_area
 				area = pomor_area
 				area = arkhangelsk_area
 				province_id = 1961
@@ -807,7 +807,7 @@ SMI_missions_3 = {
 		position = 6
 		trigger = {
 			is_at_war = no
-			north_karelia = {
+			north_karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

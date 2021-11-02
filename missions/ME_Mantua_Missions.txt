@@ -298,7 +298,7 @@ mantua_mission_2 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = western_sicily_area
+				#area = western_sicily_area
 				AND = {
 					area = sicily_area
 					NOT = { province_id = 126 }
@@ -307,10 +307,10 @@ mantua_mission_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#western_sicily_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			sicily_area = {
 				NOT = { province_id = 126 }
 				country_or_non_sovereign_subject_holds = ROOT
@@ -767,13 +767,13 @@ mantua_mission_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}				
-				add_permanent_claim = ROOT
-			}
+			#western_sicily_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}				
+			#	add_permanent_claim = ROOT
+			#}
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

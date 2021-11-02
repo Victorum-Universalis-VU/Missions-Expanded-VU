@@ -316,11 +316,11 @@ MLC_missions_3 = {
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = {
-			area = north_malaya_area
+			area = malaya_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			north_malaya_area = {
+			malaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -410,7 +410,7 @@ MLC_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			sukhothai_area = {
+			sukothai_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -443,7 +443,7 @@ MLC_missions_3 = {
 				area = lower_burma_area
 				area = central_thai_area
 				area = cambodia_area
-				area = sukhothai_area
+				area = sukothai_area
 				area = khorat_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -481,14 +481,14 @@ MLC_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			tay_nguyen_area = {
+			degar_highlands_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			angkor_area = {
+			cambodia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -506,8 +506,8 @@ MLC_missions_3 = {
 			OR = {
 				area = mekong_area
 				area = champa_area
-				area = tay_nguyen_area
-				area = angkor_area
+				area = degar_highlands_area
+				area = cambodia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -520,11 +520,11 @@ MLC_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			tay_nguyen_area = {
+			degar_highlands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			angkor_area = {
+			cambodia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -560,8 +560,8 @@ MLC_missions_3 = {
 			OR = {
 				area = mekong_area
 				area = champa_area
-				area = tay_nguyen_area
-				area = angkor_area
+				area = degar_highlands_area
+				area = cambodia_area
 			}
 			NOT = { has_dlc = "Mandate of Heaven" }
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -591,11 +591,11 @@ MLC_missions_3 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				tay_nguyen_area = {
+				degar_highlands_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				angkor_area = {
+				cambodia_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -787,13 +787,6 @@ MLC_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			banten_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			south_sumatra_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -801,7 +794,7 @@ MLC_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			jambi_area = {
+			palembang_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -822,7 +815,7 @@ MLC_missions_4 = {
 				area = minangkabau_area
 				area = central_sumatra_area
 				area = south_sumatra_area
-				area = jambi_area
+				area = palembang_area
 			}
 			is_empty = no
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -863,7 +856,7 @@ MLC_missions_4 = {
 					is_empty = yes
 				}
 			}
-			jambi_area = {
+			palembang_area = {
 				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -886,7 +879,7 @@ MLC_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = kalimantan_area
-				area = banjar_area
+				area = kapuas_area
 			}
 			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -897,7 +890,7 @@ MLC_missions_4 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				banjar_area = {
+				kapuas_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -1062,12 +1055,12 @@ MLC_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = west_java_area
-				area = banten_area
+				area = kapuas_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			banten_area = {
+			kapuas_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1096,13 +1089,6 @@ MLC_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			surabaya_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			east_java_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1121,7 +1107,6 @@ MLC_missions_5 = {
 			OR = {
 				area = central_java_area
 				area = east_java_area
-				area = surabaya_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1131,10 +1116,6 @@ MLC_missions_5 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			east_java_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			surabaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1177,7 +1158,7 @@ MLC_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			makassar_area = {
+			east_sulawesi_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1195,7 +1176,7 @@ MLC_missions_5 = {
 			OR = {
 				area = sulawesi_area
 				area = south_sulawesi_area
-				area = makassar_area
+				area = east_sulawesi_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1208,7 +1189,7 @@ MLC_missions_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			makassar_area = {
+			east_sulawesi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1225,13 +1206,6 @@ MLC_missions_5 = {
 					name = malacca_sulawesi_doctrine_province_modifier
 					duration = -1
 				}
-			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 			mindanao_area = {
 				limit = {
@@ -1256,17 +1230,12 @@ MLC_missions_5 = {
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				area = west_mindanao_area
 				area = mindanao_area
 				area = visayas_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			mindanao_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

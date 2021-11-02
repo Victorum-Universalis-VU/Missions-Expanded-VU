@@ -324,13 +324,13 @@ BEI_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			jambi_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#jambi_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			south_sumatra_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -384,10 +384,10 @@ BEI_missions_2 = {
 		position = 6
 		required_missions = { Brunei_colonist }
 		provinces_to_highlight = {
-			OR = {
+			#OR = {
 				area = kalimantan_area
-				area = banjar_area
-			}
+				#area = banjar_area
+			#}
 			has_discovered = ROOT
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -400,11 +400,11 @@ BEI_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
 			}
-			banjar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_city = yes
-			}
+			#banjar_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#	is_city = yes
+			#}
 		}
 		effect = {
 			kalimantan_area = {
@@ -413,12 +413,12 @@ BEI_missions_2 = {
 					duration = 7300
 				}
 			}
-			banjar_area = {
-				add_province_modifier = {
-					name = bei_new_colonies
-					duration = 7300
-				}
-			}
+			#banjar_area = {
+			#	add_province_modifier = {
+			#		name = bei_new_colonies
+			#		duration = 7300
+			#	}
+			#}
 		}
 	}
 	
@@ -430,7 +430,7 @@ BEI_missions_2 = {
 			OR = {
 				area = south_sulawesi_area
 				area = sulawesi_area
-				area = makassar_area
+				#area = makassar_area
 			}
 			has_discovered = ROOT
 			OR = {
@@ -449,11 +449,11 @@ BEI_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
 			}
-			makassar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_city = yes
-			}
+			#makassar_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#	is_city = yes
+			#}
 		}
 		effect = {
 			2717 = {
@@ -564,13 +564,13 @@ BEI_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			johor_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#johor_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 	
@@ -582,7 +582,7 @@ BEI_missions_3 = {
 			OR = {
 				area = malaya_area
 				area = malacca_area
-				area = johor_area
+				#area = johor_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -595,10 +595,10 @@ BEI_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			johor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#johor_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			central_sumatra_area = {
@@ -608,13 +608,13 @@ BEI_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_malaya_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#north_malaya_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 	
@@ -629,7 +629,7 @@ BEI_missions_3 = {
 				area = south_sumatra_area
 				area = batak_area
 				area = minangkabau_area
-				area = jambi_area
+				#area = jambi_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -646,10 +646,10 @@ BEI_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			jambi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#jambi_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			batak_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -782,11 +782,12 @@ BEI_missions_4 = {
 		position = 3
 		required_missions = { Brunei_malacca }
 		provinces_to_highlight = {
-			area = north_malaya_area
+			#area = north_malaya_area
+			area = malaya_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			north_malaya_area = {
+			malaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -862,7 +863,7 @@ BEI_missions_4 = {
 				area = brunei_area
 				area = kutai_area
 				area = kalimantan_area
-				area = banjar_area
+				#area = banjar_area
 				area = sabah_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -880,10 +881,10 @@ BEI_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			banjar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#banjar_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			sabah_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -905,7 +906,7 @@ BEI_missions_4 = {
 			OR = {
 				area = east_java_area
 				area = central_java_area
-				area = surabaya_area
+				#area = surabaya_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -918,10 +919,10 @@ BEI_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			surabaya_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#surabaya_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			west_java_area = {
@@ -931,13 +932,13 @@ BEI_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			banten_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#banten_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			1361 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -954,10 +955,10 @@ BEI_missions_4 = {
 		position = 7
 		required_missions = { Brunei_majapahit }
 		provinces_to_highlight = {
-			OR = {
+			#OR = {
 				area = west_java_area
-				area = banten_area
-			}
+			#	#area = banten_area
+			#}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -965,10 +966,10 @@ BEI_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			banten_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#banten_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1116,20 +1117,20 @@ BEI_missions_5 = {
 		position = 5
 		required_missions = { Brunei_kutai }
 		provinces_to_highlight = {
-			OR = {
-				area = makassar_area
+			#OR = {
+				#area = makassar_area
 				area = south_sulawesi_area
-			}
+			#}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				is_empty = yes
 			}
 		}
 		trigger = {
-			makassar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
-			}
+			#makassar_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT 
+			#}
 			south_sulawesi_area = {
 				type = all
 				OR = {
@@ -1139,12 +1140,12 @@ BEI_missions_5 = {
 			}
 		}
 		effect = {
-			makassar_area = {
-				add_province_modifier = {
-					name = bei_makassar_conversion
-					duration = 7300 
-				}
-			}
+			#makassar_area = {
+			#	add_province_modifier = {
+			#		name = bei_makassar_conversion
+			#		duration = 7300 
+			#	}
+			#}
 			south_sulawesi_area = {
 				add_province_modifier = {
 					name = bei_conversion
@@ -1176,13 +1177,13 @@ BEI_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			surabaya_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#surabaya_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			central_java_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

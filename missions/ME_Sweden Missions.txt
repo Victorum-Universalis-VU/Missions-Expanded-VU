@@ -363,7 +363,7 @@ SWE_missions_2 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = ostra_svealand_area
+				area = svealand_area
 				area = gotaland_area
 			}
 			OR = {
@@ -382,9 +382,9 @@ SWE_missions_2 = {
 							NOT = { development = 20 }
 							OR = {
 								AND = {
-									area = ostra_svealand_area
+									area = svealand_area
 									NOT = {
-										ostra_svealand_area = {
+										svealand_area = {
 											development = 20
 										}
 									}
@@ -410,7 +410,7 @@ SWE_missions_2 = {
 					share = 80
 				}
 			}
-			ostra_svealand_area = {
+			svealand_area = {
 				type = all
 				owned_by = ROOT
 				is_state = yes
@@ -424,7 +424,7 @@ SWE_missions_2 = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
 				}
-				ostra_svealand_area = {
+				svealand_area = {
 					type = all
 					custom_trigger_tooltip = {
 						tooltip = IS_PROSPEROUS
@@ -448,10 +448,10 @@ SWE_missions_2 = {
 				}
 			}
 			else = {
-				ostra_svealand_area = {
+				svealand_area = {
 					development = 20
 				}
-				ostra_svealand_area = {
+				svealand_area = {
 					type = all
 					NOT = { devastation = 1 }
 					NOT = { unrest = 1 }

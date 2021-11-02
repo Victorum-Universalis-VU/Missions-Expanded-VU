@@ -49,18 +49,18 @@ GER_missions_1 = {
 		icon = mission_into_africa
 		position = 3
 		provinces_to_highlight = {
-			area = angola_namibia_area
+			area = namibe_area
 			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			angola_namibia_area = {
+			namibe_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			angola_namibia_area = {
+			namibe_area = {
 				add_province_modifier = {
 					name = germany_deutsch_suedwestafrika_province_modifier
 					duration = 7300
@@ -156,7 +156,7 @@ GER_missions_2 = {
 		trigger = {
 			num_of_colonists = 1
 			OR = {
-				angola_namibia_area = {
+				namibe_area = {
 					has_discovered = ROOT
 				}
 				gulf_of_guinea_area = {

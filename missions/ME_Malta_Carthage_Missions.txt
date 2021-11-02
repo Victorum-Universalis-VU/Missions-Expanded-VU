@@ -226,7 +226,7 @@ CTH_missions_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
+			barbary_coast_area = { #Algiers
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -248,7 +248,7 @@ CTH_missions_slot_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = kabylia_area 
-				area = algiers_area 
+				area = barbary_coast_area 
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -257,7 +257,7 @@ CTH_missions_slot_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			algiers_area = {
+			barbary_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

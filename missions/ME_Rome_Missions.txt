@@ -1108,7 +1108,7 @@ ROM_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			northern_saxony_area = {
+			altmark_area= {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1164,7 +1164,7 @@ ROM_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -1244,7 +1244,7 @@ ROM_missions_3 = {
 			OR = {
 				area = holstein_area
 				area = erzgebirge_area
-				area = south_saxony_area
+				area = saxony_area
 				area = mittelmark_area
 				area = bohemia_area
 				area = vorpommern_area
@@ -1265,7 +1265,7 @@ ROM_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_saxony_area = {
+			saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2064,7 +2064,7 @@ ROM_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			northern_saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }

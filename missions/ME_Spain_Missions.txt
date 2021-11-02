@@ -919,14 +919,14 @@ SPA_missions_2 = {
 		}
 		effect = {
 			# Coast
-			algiers_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			barbary_coast_area = {
+			#algiers_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			barbary_coast_area = { #Algiers
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -981,17 +981,17 @@ SPA_missions_2 = {
 		position = 9
 		provinces_to_highlight = {
 			OR = {
-				area = algiers_area
+				#area = algiers_area
 				area = barbary_coast_area
 				area = kabylia_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			algiers_area = {
-				type = all
-				owned_by = ROOT
-			}
+			#algiers_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
 			barbary_coast_area = {
 				type = all
 				owned_by = ROOT
@@ -1977,13 +1977,6 @@ SPA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -1992,10 +1985,7 @@ SPA_missions_4 = {
 		required_missions = { spain_conquer_naples }
 		position = 7
 		provinces_to_highlight = {
-			OR = {
-				area = sicily_area
-				area = western_sicily_area
-			}
+			area = sicily_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -2003,20 +1993,9 @@ SPA_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
 			sicily_area = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_local_autonomy = -10
-				add_unrest = -5
-			}
-			western_sicily_area = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -2456,7 +2435,7 @@ SPA_missions_4 = {
 			owns_core_province = 4371
 		}
 		effect = {
-			home_counties_area = {
+			south_east_area = { #Home Counties
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2480,7 +2459,7 @@ SPA_missions_4 = {
 				}
 				add_claim = ROOT
 			}
-			wessex_area = {
+			cornwall_area = { #Wessex
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2719,7 +2698,6 @@ SPA_missions_5 = {
 				area = palawan_area
 				area = visayas_area
 				area = mindanao_area
-				area = west_mindanao_area
 			}
 			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2733,7 +2711,6 @@ SPA_missions_5 = {
 					area = palawan_area
 					area = visayas_area
 					area = mindanao_area
-					area = west_mindanao_area
 				}
 			}
 		}
