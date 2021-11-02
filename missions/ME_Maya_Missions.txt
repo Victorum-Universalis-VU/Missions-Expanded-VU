@@ -278,14 +278,14 @@ maya_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			nayarit_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					is_empty = no
-				}
-				add_permanent_claim = ROOT
-			}
+			#nayarit_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#		is_empty = no
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			zacatecas_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -312,7 +312,7 @@ maya_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = jalisco_area
-				area = nayarit_area
+				#area = nayarit_area
 				area = zacatecas_area
 				area = gran_chichimeca_area
 			}
@@ -327,13 +327,13 @@ maya_missions_1 = {
 					is_empty = yes
 				}
 			}
-			nayarit_area = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					is_empty = yes
-				}
-			}
+			#nayarit_area = {
+			#	type = all
+			#	OR = {
+			#		country_or_non_sovereign_subject_holds = ROOT
+			#		is_empty = yes
+			#	}
+			#}
 			zacatecas_area = {
 				type = all
 				OR = {

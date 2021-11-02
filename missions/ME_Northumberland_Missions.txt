@@ -123,13 +123,13 @@ northumberland_missions_1 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = home_counties_area
+				area = south_east_area #Home Counties
 				area = east_anglia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			home_counties_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -203,7 +203,7 @@ northumberland_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -220,7 +220,7 @@ northumberland_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wales_area
-				area = wessex_area
+				area = cornwall_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -229,13 +229,13 @@ northumberland_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			home_counties_area = {
+			south_east_area = { #home counties
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

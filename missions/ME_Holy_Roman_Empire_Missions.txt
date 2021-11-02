@@ -2557,7 +2557,7 @@ HLR_missions_3 = {
 			}
 		}
 		effect = {
-			basque_country = {
+			basque_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2649,8 +2649,6 @@ HLR_missions_3 = {
 		position = 14
 		provinces_to_highlight = {
 			OR = {
-				#area = wessex_area
-				#area = home_counties_area
 				area = cornwall_area
 				area = south_east_area
 				area = east_anglia_area
@@ -2658,11 +2656,11 @@ HLR_missions_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			cornwall_area = { #was wessex_area before
+			cornwall_area = { # Wessex
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = { #was home_counties_area before
+			south_east_area = { #Home Counties
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -3424,7 +3422,7 @@ HLR_missions_4 = {
 			controls = 233
 		}
 		effect = {
-			wessex_area = {
+			cornwall_area = { #Wessex
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

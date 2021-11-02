@@ -866,7 +866,7 @@ caucasia_missions_5 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = kartli_kakheti_area
+				#area = kartli_kakheti_area
 				area = imereti_area
 				area = samtskhe_area
 			}
@@ -880,12 +880,12 @@ caucasia_missions_5 = {
 			stability = 1
 			government = monarchy
 			legitimacy = 100
-			kartli_kakheti_area = {
-				type = all
-				owned_by = ROOT
-				NOT = { unrest = 0.01 }
-				NOT = { local_autonomy = 0.1 }
-			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#	NOT = { unrest = 0.01 }
+			#	NOT = { local_autonomy = 0.1 }
+			#}
 			imereti_area = {
 				type = all
 				owned_by = ROOT
@@ -900,12 +900,12 @@ caucasia_missions_5 = {
 			}
 		}
 		effect = {
-			kartli_kakheti_area = {
-				add_province_modifier = {
-					name = caucasia_georgian_union_province_modifier
-					duration = -1
-				}
-			}
+			#kartli_kakheti_area = {
+			#	add_province_modifier = {
+			#		name = caucasia_georgian_union_province_modifier
+			#		duration = -1
+			#	}
+			#}
 			imereti_area = {
 				add_province_modifier = {
 					name = caucasia_georgian_union_province_modifier

@@ -78,11 +78,6 @@ sicily_mission_1 = {
 				NOT = { unrest = 3 }
 				NOT = { province_id = 126 }
 			}
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				NOT = { unrest = 3 }
-			}
 		}
 		effect = {
 			if = {
@@ -97,24 +92,6 @@ sicily_mission_1 = {
 				add_casus_belli = {
 					target = ARA
 					type = cb_restore_personal_union
-				}
-			}
-			western_sicily_area = {
-				if = {
-					limit = { has_dlc = "Mandate of Heaven" }
-					add_prosperity = 50
-					add_devastation = -25
-				}
-				else = {
-					add_devastation = -10
-				}
-				add_province_modifier = {
-					name = nap_legacy_ruggero
-					duration = -1
-				}
-				add_province_modifier = {
-					name = nap_beauty_of_sicily
-					duration = -1
 				}
 			}
 			sicily_area = {
@@ -804,7 +781,6 @@ sicily_mission_3 = {
 				area = apulia_area
 				area = naples_area
 				area = calabria_area
-				area = western_sicily_area
 				area = sicily_area
 			}
 		}
@@ -880,19 +856,6 @@ sicily_mission_3 = {
 						}
 						NOT = { devastation = 1 }
 					}
-				}
-			}
-			western_sicily_area = {
-				type = all
-				owned_by = ROOT
-				if = {
-					limit = {
-						has_dlc = "Mandate of Heaven"
-					}
-					prosperity = 50
-				}
-				else = {
-					NOT = { devastation = 1 }
 				}
 			}
 			sicily_area = {
@@ -1235,13 +1198,6 @@ sicily_mission_5 = {
 					name = sic_parramentu_sicilianu_modifier
 					duration = -1
 				}
-			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 			sicily_area = {
 				limit = {
