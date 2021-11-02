@@ -391,7 +391,7 @@ texas_missions_2_native = {
 				}
 			}
 			else = {
-				mississippi_plain_area = {
+				ozarks_area = { #Arkansas
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -469,10 +469,7 @@ texas_missions_3 = {
 		position = 1
 		required_missions = { }
 		provinces_to_highlight = {
-			OR = {
-				area = texas_area
-				area = coastal_prarie_area
-			}
+			area = texas_area
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				has_owner_culture = no
@@ -484,20 +481,9 @@ texas_missions_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_owner_culture = yes
 			}
-			coastal_prarie_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				has_owner_culture = yes
-			}
 		}
 		effect = {
 			texas_area = {
-				add_province_modifier = {
-					name = tex_purified_texas
-					duration = 10950
-				}
-			}
-			coastal_prarie_area = {
 				add_province_modifier = {
 					name = tex_purified_texas
 					duration = 10950
@@ -827,14 +813,14 @@ texas_missions_4 = {
 		required_missions = { tex_rein_wild_west }
 		provinces_to_highlight = {
 			OR = {
-				area = northern_california_area
+				area = baja_california_area
 				area = california_area
-				area = central_valley_area
+				area = sonora_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			northern_california_area = {
+			baja_california_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -842,7 +828,7 @@ texas_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			central_valley_area = {
+			sonora_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

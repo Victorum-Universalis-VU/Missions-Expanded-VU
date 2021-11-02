@@ -1001,6 +1001,17 @@ ENG_missions_2_2 = {
 			create_admiral = {
 				tradition = 60
 			}
+			226 = { #Gibraltar
+				if = {
+					limit = {
+						NOT = { 
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
         }
     }
 	

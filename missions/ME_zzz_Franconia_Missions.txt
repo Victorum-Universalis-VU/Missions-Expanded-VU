@@ -172,13 +172,13 @@ FKN_Gen_Missions_3 = {
 			}
 		}
 		effect = {
-			upper_franconia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#upper_franconia_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			franconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -257,7 +257,7 @@ FKN_Gen_Missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = franconia_area
-				area = upper_franconia_area
+				#area = upper_franconia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -265,7 +265,7 @@ FKN_Gen_Missions_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = franconia_area
-					area = upper_franconia_area
+					#area = upper_franconia_area
 				}
 				value = 5
 			}
@@ -286,12 +286,12 @@ FKN_Gen_Missions_3 = {
 				}
 				add_prosperity = 50
 			}
-			random_owned_province = {
-				limit = {
-					area = upper_franconia_area
-				}
-				add_prosperity = 50
-			}
+			#random_owned_province = {
+			#	limit = {
+			#		area = upper_franconia_area
+			#	}
+			#	add_prosperity = 50
+			#}
 			add_yearly_manpower = 1
 		}
 	}
@@ -301,19 +301,19 @@ FKN_Gen_Missions_3 = {
 		required_missions = { FKN_unifying_franconia }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
+			#OR = {
 				area = franconia_area
-				area = upper_franconia_area
-			}
+				#area = upper_franconia_area
+			#}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			tag = FKN
 			num_of_owned_provinces_with = {
-				OR = {
+				#OR = {
 					area = franconia_area
-					area = upper_franconia_area
-				}
+					#area = upper_franconia_area
+				#}
 				value = 6
 			}
 			if = {
@@ -328,21 +328,7 @@ FKN_Gen_Missions_3 = {
 		}
 		effect = {
 			country_event = { id = ME_Franconia_Events.1 }
-			east_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -370,7 +356,7 @@ FKN_Gen_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -716,15 +702,15 @@ FKN_Missions_1 = {
 						}
 					}
 				}
-				AND = {
-					area = upper_franconia_area
-					NOT = {
-						upper_franconia_area = {
-							owned_by = ROOT
-							has_building = university
-						}
-					}
-				}
+				#AND = {
+				#	area = upper_franconia_area
+				#	NOT = {
+				#		upper_franconia_area = {
+				#			owned_by = ROOT
+				#			has_building = university
+				#		}
+				#	}
+				#}
 			}
 		}
 		trigger = {	
@@ -732,10 +718,10 @@ FKN_Missions_1 = {
 				owned_by = ROOT
 				has_building = university
 			}
-			upper_franconia_area = {
-				owned_by = ROOT
-				has_building = university
-			}
+			#upper_franconia_area = {
+			#	owned_by = ROOT
+			#	has_building = university
+			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -809,20 +795,12 @@ FKN_Missions_2 = {
 		required_missions = { FKN_dux_francorum }
 		position = 6
 		provinces_to_highlight = {
-			OR = {
-				area = east_bavaria_area
-				area = lower_bavaria_area
-				area = upper_bavaria_area
-			}
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = east_bavaria_area
-					area = lower_bavaria_area
-					area = upper_bavaria_area
-				}
+				area = bavaria_area
 				value = 7
 			}
 		}
@@ -1193,7 +1171,7 @@ FKN_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_rhineland_area = {
+			baden_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1207,14 +1185,7 @@ FKN_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_swabia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1252,9 +1223,8 @@ FKN_Missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = alsace_area
-				area = upper_rhineland_area
-				area = lower_swabia_area
-				area = upper_swabia_area
+				area = baden_area
+				area = swabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1262,9 +1232,8 @@ FKN_Missions_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = alsace_area
-					area = upper_rhineland_area
-					area = lower_swabia_area
-					area = upper_swabia_area
+					area = baden_area
+					area = swabia_area
 				}
 				value = 10
 			}
@@ -1433,7 +1402,7 @@ FKN_Missions_4 = {
 		position = 6
 		provinces_to_highlight = {
 			OR = {
-				area = south_saxony_area
+				area = saxony_area
 				area = thuringia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1441,7 +1410,7 @@ FKN_Missions_4 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = south_saxony_area
+					area = saxony_area
 					area = thuringia_area
 				}
 				value = 5
@@ -1465,7 +1434,7 @@ FKN_Missions_4 = {
 					key = FKN_influence_in_saxony
 				}
 			}
-			northern_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

@@ -298,7 +298,14 @@ ire_conquest_main = {
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			#wessex_area = { #Cut from VU. Replacing it by Cornwall.
+			#	limit = {
+			#		NOT = { is_permanent_claim = ROOT	}
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			cornwall_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -313,7 +320,8 @@ ire_conquest_main = {
 		provinces_to_highlight = {
 			OR = {
 				area = west_midlands_area
-				area = wessex_area
+				#area = wessex_area
+				area = cornwall_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -324,14 +332,14 @@ ire_conquest_main = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			wessex_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#wessex_area = { #Cut from VU. Replacing it by Cornwall.
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_army_tradition = 10
-			home_counties_area = {
+			south_east_area = { #Home Counties
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
