@@ -979,18 +979,11 @@ SardiniaPiedmont_missions_5 = {
 			spi_port_modernization
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = western_sicily_area
-				area = sicily_area
-			}
+			area = sicily_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = { province_id = 226 }
 		}
 		trigger = {
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			sicily_area = {
 				type = all
 				OR = {
@@ -1000,12 +993,6 @@ SardiniaPiedmont_missions_5 = {
 			}
 		}
 		effect = {
-			western_sicily_area = {
-				add_province_modifier = {
-					name = spi_dream_independence
-					duration = 3650
-				}
-			}
 			sicily_area = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT
