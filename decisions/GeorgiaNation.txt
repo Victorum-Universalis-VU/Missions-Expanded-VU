@@ -87,13 +87,13 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			kartli_kakheti_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = GEO
-			}
+			#kartli_kakheti_area = { #removed from VU, leaving it in the code just in case
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = GEO
+			#}
 			samtskhe_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
