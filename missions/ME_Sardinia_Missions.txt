@@ -144,7 +144,7 @@ sardinia_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
+			barbary_coast_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -533,13 +533,6 @@ sardinia_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_sicily_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			baleares_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -566,12 +559,9 @@ sardinia_missions_2 = {
 			sar_naval_preparation
 		}
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					area = sicily_area
-					NOT = { province_id = 126 }
-				}
-				area = western_sicily_area
+			AND = {
+				area = sicily_area
+				NOT = { province_id = 126 }
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -583,22 +573,12 @@ sardinia_missions_2 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			western_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
 			sicily_area = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				add_province_modifier = {
-					name = sar_beauty_sicily
-					duration = 9125
-				}
-			}
-			western_sicily_area = {
 				add_province_modifier = {
 					name = sar_beauty_sicily
 					duration = 9125

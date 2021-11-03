@@ -15,7 +15,7 @@ Meissen_missions_1 = {
 			is_subject = no
 		}
 		effect = {
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -30,11 +30,11 @@ Meissen_missions_1 = {
 		required_missions = { Meissen_independence }
 		position = 2
 		provinces_to_highlight = {
-			area = south_saxony_area
+			area = saxony_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			south_saxony_area = {
+			saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

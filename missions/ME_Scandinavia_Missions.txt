@@ -15,7 +15,7 @@ SCA_missions_1 = {
 			OR = {
 				area = skaneland_area
 				area = svealand_area
-				area = ostra_svealand_area
+				#area = ostra_svealand_area
 				area = vastra_gotaland_area
 				area = gotaland_area
 				area = jutland_area
@@ -32,10 +32,10 @@ SCA_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ostra_svealand_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#ostra_svealand_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			svealand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -433,7 +433,7 @@ SCA_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_karelia = {
+			north_karelia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -559,7 +559,7 @@ SCA_missions_3 = {
 			OR = {
 				area = arkhangelsk_area
 				area = pomor_area
-				area = north_karelia
+				area = north_karelia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -572,7 +572,7 @@ SCA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			north_karelia = {
+			north_karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

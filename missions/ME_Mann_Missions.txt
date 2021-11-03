@@ -329,7 +329,7 @@ Mann_missions_3 = {
 			}
 		}
 		effect = {
-			wessex_area = {
+			cornwall_area = { #Wessex
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -344,11 +344,11 @@ Mann_missions_3 = {
 		required_missions = { Mann_Midlands }
 		position = 7
 		provinces_to_highlight = {
-			area = wessex_area
+			area = cornwall_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -567,7 +567,7 @@ Mann_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			home_counties_area = {
+			south_east_area = { #Home counties
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -584,7 +584,7 @@ Mann_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = east_anglia_area
-				area = home_counties_area
+				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -593,7 +593,7 @@ Mann_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			home_counties_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

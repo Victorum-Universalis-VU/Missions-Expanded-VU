@@ -84,9 +84,9 @@ milan_missions_1 = {
 		}
 		position = 2
 		trigger = {
-			61 = {
+			58 = {
 				has_merchant = ROOT
-			}
+			} 
 			1876 = {
 				has_merchant = ROOT
 			}

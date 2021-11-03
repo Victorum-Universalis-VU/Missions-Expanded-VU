@@ -40,21 +40,21 @@ WES_missions_1 = {
 			}
 		}
 		effect = {
-			lower_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_swabia_area = {
+			baden_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_rhineland_area = {
+			wurttemburg_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -74,36 +74,29 @@ WES_missions_1 = {
 		position = 4
 		provinces_to_highlight = {
 			OR = {
-				area = lower_swabia_area
-				area = upper_swabia_area
-				area = upper_rhineland_area
+				area = swabia_area
+				area = baden_area
+				area = wurttemburg_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			upper_swabia_area = {
+			baden_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			upper_rhineland_area = {
+			wurttemburg_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 
 		}
 		effect = {
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -173,14 +166,14 @@ WES_missions_2 = {
 			}
 		}
 		effect = {
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			northern_saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -309,18 +302,11 @@ WES_missions_2 = {
 		required_missions = { wes_franconia wes_swabia }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-				area = upper_bavaria_area
-				area = lower_bavaria_area
-			}
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_bavaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			lower_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -387,8 +373,8 @@ WES_missions_3 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = south_saxony_area
-				area = northern_saxony_area
+				area = saxony_area
+				area = altmark_area
 				area = thuringia_area
 				area = neumark_area
 				area = mittelmark_area
@@ -397,11 +383,11 @@ WES_missions_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			south_saxony_area = {
+			saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			northern_saxony_area = {
+			altmark_area= {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -452,14 +438,7 @@ WES_missions_3 = {
 			}
 		}
 		effect = {
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

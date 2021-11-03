@@ -193,13 +193,13 @@ emp_sav_missions_conquest = {
 				}
 			}
 			else = {
-				western_sicily_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
+				#western_sicily_area = {
+				#	limit = {
+				#		NOT = { is_core = root }
+				#		NOT = { is_permanent_claim = root }
+				#	}
+				#	add_permanent_claim = root
+				#}
 				sicily_area = {
 					limit = {
 						NOT = { is_core = root }
@@ -215,7 +215,7 @@ emp_sav_missions_conquest = {
 		required_missions = { emp_sav_conquer_sardinia }
 		provinces_to_highlight = {
 			OR = {
-				area = western_sicily_area
+				#area = western_sicily_area
 				area = sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
@@ -224,7 +224,7 @@ emp_sav_missions_conquest = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 5 #can leave out Malta
 						OR = {
-							area = western_sicily_area
+							#area = western_sicily_area
 							area = sicily_area
 						}
 					}
@@ -235,7 +235,7 @@ emp_sav_missions_conquest = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5 #can leave out Malta
 				OR = {
-					area = western_sicily_area
+					#area = western_sicily_area
 					area = sicily_area
 				}
 			}

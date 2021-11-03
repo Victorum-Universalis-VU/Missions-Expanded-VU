@@ -980,7 +980,7 @@ HNS_missions_1_WoN_Dharma = {
 				area = benin_area
 				area = gulf_of_guinea_area
 				area = coastal_kongo
-				area = angola_namibia_area
+				area = namibe_area
 				area = cape_of_good_hope_area
 				area = south_african_plateau_area
 				area = limpopo_area
@@ -1016,7 +1016,7 @@ HNS_missions_1_WoN_Dharma = {
 						area = benin_area
 						area = gulf_of_guinea_area
 						area = coastal_kongo
-						area = angola_namibia_area
+						area = namibe_area
 					}
 				}
 				change_trade_goods = gold

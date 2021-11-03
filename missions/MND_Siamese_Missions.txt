@@ -28,9 +28,10 @@ mnd_siam_1 = {
 			num_of_times_used_transfer_development = 3
 		}
 		effect = {
-			add_dip_power = 100
+			change_government_reform_progress = 50
 		}
 	}
+	
 	mnd_siam_mandala = {
 		icon = mission_mnd_siam_royal_duel
 		required_missions = { mnd_siam_transfer_development }
@@ -50,8 +51,12 @@ mnd_siam_1 = {
 				name = siam_mandala_modifier
 				duration = 7300
 			}
+			capital_scope = {
+				add_prosperity = 100
+			}
 		}
 	}
+	
 	mnd_siam_great_monument = {
 		icon = mission_buddhist_monk_praying
 		required_missions = { mnd_siam_mandala }
@@ -91,6 +96,7 @@ mnd_siam_1 = {
 			}
 		}
 	}
+	
 	mnd_siam_city_of_worlds_desire = {
 		icon = mission_mnd_khm_restored_empire
 		required_missions = { mnd_siam_great_monument }
@@ -207,6 +213,7 @@ mnd_siam_2 = {
 			set_estate_privilege = estate_church_brahmins_at_court
 		}
 	}
+	
 	mnd_siam_revolution = {
 		icon = mission_mnd_siam_revolution
 		required_missions = { mnd_siam_devaraja }
@@ -238,6 +245,7 @@ mnd_siam_2 = {
 			add_adm_power = 200
 		}
 	}
+	
 	mnd_siam_absolutism = {
 		icon = mission_mnd_siam_royal_duel
 		required_missions = { mnd_siam_revolution }
@@ -253,11 +261,20 @@ mnd_siam_2 = {
 			}
 			has_regency = no
 			is_at_war = no
-			NOT = { exists = SIA }
+			OR = {
+				tag = SIA
+				NOT = { exists = SIA }
+			}
 			is_subject = no
 		}
 		effect = {
-			change_tag = SIA
+			if = {
+				limit = {
+					NOT = { tag = SIA }
+					NOT = { exists = SIA }
+				}
+				change_tag = SIA
+			}
 			set_country_flag = siam_royal_absolutism
 			if = {
 				limit = {
@@ -307,25 +324,18 @@ mnd_siam_3 = {
 		}
 		trigger = {
 			is_monarch_leader = yes
-			OR = {
-				army_tradition = KHM
-				AND = {
-					angkor_area = {
-						owner = {
-							NOT = { army_tradition = ROOT }
-						}
-					}
-					cambodia_area = {
-						owner = {
-							NOT = { army_tradition = ROOT }
-						}
-					}
-					mekong_area = {
-						owner = {
-							NOT = { army_tradition = ROOT }
-						}
-					}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
 				}
+				army_professionalism = 0.03
+			}
+			else = {
+				army_tradition = 20
+			}
+			OR = {
+				NOT = { exists = KHM }
+				army_tradition = KHM
 			}
 		}
 		effect = {
@@ -356,7 +366,7 @@ mnd_siam_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				angkor_area = {
+				cambodia_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -366,6 +376,7 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_subjugate_khmer = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = { mnd_siam_royal_duel }
@@ -373,7 +384,7 @@ mnd_siam_3 = {
 			OR = {
 				area = cambodia_area
 				area = mekong_area
-				area = angkor_area
+				area = cambodia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -400,7 +411,7 @@ mnd_siam_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			angkor_area = {
+			cambodia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -419,6 +430,7 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_divide_the_lao = {
 		icon = mission_mnd_siam_royal_duel
 		required_missions = { mnd_siam_subjugate_khmer }
@@ -445,14 +457,15 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_subjugate_the_lao = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = { mnd_siam_divide_the_lao }
 		provinces_to_highlight = {
 			OR = {
 				area = north_laos_area
-				area = champasak_area
-				area = vientiane_area
+				area = south_laos_area
+				area = khorat_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -478,8 +491,8 @@ mnd_siam_3 = {
 				all_province = {
 					OR = {
 						area = north_laos_area
-						area = champasak_area
-						area = vientiane_area
+						area = south_laos_area
+						area = khorat_area
 					}
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -528,6 +541,7 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_subjugate_vietnam = {
 		icon = mission_mnd_dai_imperial_citadel
 		required_missions = { mnd_siam_subjugate_the_lao }
@@ -574,6 +588,7 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_defy_china = {
 		icon = mission_great_wall
 		required_missions = { mnd_siam_subjugate_vietnam mnd_siam_conquer_burma }
@@ -600,6 +615,7 @@ mnd_siam_3 = {
 			}
 		}
 	}
+	
 	mnd_siam_take_the_mandate = {
 		icon = mission_scholar_officials
 		required_missions = { mnd_siam_defy_china }
@@ -687,11 +703,11 @@ mnd_siam_4 = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = {  }
 		provinces_to_highlight = {
-			area = sukhothai_area
+			area = sukothai_area
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			sukhothai_area = {
+			sukothai_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -720,6 +736,7 @@ mnd_siam_4 = {
 			}
 		}
 	}
+	
 	mnd_siam_subjugate_chiang_mai = {
 		icon = mission_mnd_siam_revolution
 		required_missions = { mnd_siam_inherit_sukhothai }
@@ -769,6 +786,7 @@ mnd_siam_4 = {
 			}
 		}
 	}
+	
 	mnd_siam_protect_the_mon = {
 		icon = mission_rice_field
 		required_missions = { mnd_siam_subjugate_chiang_mai }
@@ -810,6 +828,7 @@ mnd_siam_4 = {
 			}
 		}
 	}
+	
 	mnd_siam_defeat_burma = {
 		icon = mission_mnd_siam_royal_duel
 		required_missions = { mnd_siam_protect_the_mon }
@@ -846,6 +865,7 @@ mnd_siam_4 = {
 			}
 		}
 	}
+	
 	mnd_siam_conquer_burma = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = { mnd_siam_defeat_burma }
@@ -1018,6 +1038,7 @@ mnd_siam_5 = {
 			}
 		}
 	}
+	
 	mnd_siam_trade = {
 		icon = mission_market_place_with_asian_traders
 		required_missions = { mnd_siam_mlc }

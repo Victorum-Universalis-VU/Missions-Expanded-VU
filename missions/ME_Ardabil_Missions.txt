@@ -47,7 +47,7 @@ ARL_missions_1 = {
 			OR = {
 				province_id = 421
 				province_id = 4299
-				province_id = 4305
+				province_id = 4340
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -58,7 +58,7 @@ ARL_missions_1 = {
 			4299 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4305 = {
+			4340 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -96,7 +96,14 @@ ARL_missions_1 = {
 				name = "expansionist_country"
 				duration = 9125 #25 years
 			}
-			kartli_kakheti_area = {
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
+			imereti_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -104,6 +111,13 @@ ARL_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			samtskhe_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4303 = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -120,7 +134,12 @@ ARL_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = samtskhe_area
-				area = kartli_kakheti_area
+				#area = kartli_kakheti_area
+				province_id = 422
+				province_id = 462
+				province_id = 1856
+				province_id = 2196
+				province_id = 4303
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -130,10 +149,25 @@ ARL_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kartli_kakheti_area = {
-				type = all
+			422 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			462 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1856 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2196 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4303 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			country_event = { id = ME_Ardabil_Events.6 }
@@ -145,7 +179,13 @@ ARL_missions_1 = {
 		required_missions = { ARL_conquer_georgia ARL_adopt_persian_administration }
 		position = 10
 		provinces_to_highlight = {
-			area = kartli_kakheti_area
+			#area = kartli_kakheti_area #To replace with something else
+			area = samtskhe_area
+			province_id = 422
+			province_id = 462
+			province_id = 1856
+			province_id = 2196
+			province_id = 4303
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { has_province_modifier = autonomy_increased }
@@ -186,11 +226,11 @@ ARL_missions_1 = {
 						days = 36500
 					}
 				}
-				kartli_kakheti_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					has_province_modifier = autonomy_increased
-				}
+				#kartli_kakheti_area = {
+				#	type = all
+				#	country_or_non_sovereign_subject_holds = ROOT
+				#	has_province_modifier = autonomy_increased
+				#}
 			}
 		}
 		effect = {
@@ -328,6 +368,13 @@ ARL_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			mardin_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			al_jazira_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -345,6 +392,7 @@ ARL_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = erzurum_area
+				area = mardin_area
 				area = north_kurdistan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -355,6 +403,10 @@ ARL_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			mardin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			north_kurdistan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -362,6 +414,12 @@ ARL_missions_2 = {
 		}
 		effect = {
 			erzurum_area = {
+				add_province_modifier = {
+					name = ALR_recruitment_of_turkic_shias
+					duration = 14600
+				}
+			}
+			mardin_area = {
 				add_province_modifier = {
 					name = ALR_recruitment_of_turkic_shias
 					duration = 14600

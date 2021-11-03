@@ -1692,13 +1692,13 @@ Ottoman_Missions_3 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
-			kartli_kakheti_area = { 
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
-			} 
+			#kartli_kakheti_area = { 
+			#	limit = { 
+			#		NOT = { owned_by = ROOT } 
+			#		NOT = { is_core = ROOT } 
+			#	} 
+			#	add_permanent_claim = ROOT 
+			#} 
 			al_jazira_area = { 
 				limit = { 
 					NOT = { owned_by = ROOT } 
@@ -1725,7 +1725,7 @@ Ottoman_Missions_3 = {
 			OR = { 
 				area = samtskhe_area 
 				area = imereti_area 
-				area = kartli_kakheti_area 
+				#area = kartli_kakheti_area 
 			} 
 			NOT = { owned_by = ROOT } 
 		} 
@@ -1739,10 +1739,10 @@ Ottoman_Missions_3 = {
 				type = all 
 				owned_by = ROOT 
 			} 
-			kartli_kakheti_area = { 
-				type = all 
-				owned_by = ROOT 
-			} 
+			#kartli_kakheti_area = { 
+			#	type = all 
+			#	owned_by = ROOT 
+			#} 
 		} 
 		effect = { 
 			armenia_area = { 
@@ -3014,11 +3014,13 @@ Ottoman_Missions_5 = {
 			country_event = { id = ME_Ottoman_Events.6 } 
  
 			332 = { 
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
+				if = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
 				} 
-				add_permanent_claim = ROOT 
 			} 
 			cukurova_area = { #ramazan 
 				if = { 
@@ -3343,13 +3345,13 @@ Ottoman_Missions_5 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
-			algiers_area = { 
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
-			} 
+			#algiers_area = { 
+			#	limit = { 
+			#		NOT = { owned_by = ROOT } 
+			#		NOT = { is_core = ROOT } 
+			#	} 
+			#	add_permanent_claim = ROOT 
+			#} 
 		} 
 	} 
  
@@ -3402,10 +3404,10 @@ Ottoman_Missions_5 = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
 			} 
-			algiers_area = { 
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-			} 
+			#algiers_area = { 
+			#	type = all 
+			#	country_or_non_sovereign_subject_holds = ROOT 
+			#} 
 		} 
 		effect = { 
 			country_event = { id = ME_Ottoman_Events.21 } 

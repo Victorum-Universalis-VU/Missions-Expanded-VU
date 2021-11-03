@@ -1258,7 +1258,7 @@ UKS_missions_1 = {
 				area = red_river_area
 				area = saskatchewan_area
 				area = assiniboia_area
-				area = upper_missouri_area
+				#area = upper_missouri_area
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1281,11 +1281,11 @@ UKS_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_city = yes
 			}
-			upper_missouri_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_city = yes
-			}
+			#upper_missouri_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#	is_city = yes
+			#}
 		}
         effect = {
 			add_country_modifier = {
@@ -2445,7 +2445,7 @@ UKS_missions_4 = {
 						hidden = yes
 					}
 				}
-				home_counties_area = {
+				south_east_area = { #Home Counties
 					add_province_modifier = {
 						name = UKS_plus
 						duration = -1

@@ -5,7 +5,7 @@ me_RUS_missions_1 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -408,7 +408,7 @@ me_RUS_missions_1_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		OR = {
 			has_country_modifier = foreign_auxilaries
@@ -476,7 +476,7 @@ me_RUS_missions_1_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = national_army
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -525,7 +525,7 @@ me_RUS_missions_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -539,7 +539,7 @@ me_RUS_missions_2 = {
 			OR = {
 				area = kazan_area
 				area = samara_area
-				area = volga_area
+				#area = volga_area #Removed for now
 				area = bashkiria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -553,10 +553,10 @@ me_RUS_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			volga_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#volga_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			bashkiria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -874,7 +874,7 @@ me_RUS_missions_2_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -952,7 +952,7 @@ me_RUS_missions_2_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		OR = {
 			has_country_modifier = exotic_ships
@@ -1011,7 +1011,7 @@ me_RUS_missions_2_4 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = local_sailors
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1038,7 +1038,7 @@ me_RUS_missions_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -1201,7 +1201,7 @@ me_RUS_missions_3_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = used_local_nobles
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1256,7 +1256,7 @@ me_RUS_missions_3_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+		#	tag = RRR
 		}
 		OR = {
 			has_country_modifier = rus_peter_2
@@ -1401,7 +1401,7 @@ me_RUS_missions_3_4 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = rus_isolation
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1522,7 +1522,7 @@ me_RUS_missions_4 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -1680,7 +1680,7 @@ me_RUS_missions_4_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -1768,7 +1768,7 @@ mr_RUS_missions_4_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+		#	tag = RRR
 		}
 		OR = {
 			has_country_modifier = free_trade
@@ -1838,7 +1838,7 @@ me_RUS_missions_4_4 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = banned_foreign_traders
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1868,7 +1868,7 @@ me_RUS_missions_5 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -2064,7 +2064,7 @@ me_RUS_missions_5_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		OR = {
 			has_country_modifier = western_diplomacy
@@ -2143,7 +2143,7 @@ me_RUS_missions_5_3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_modifier = isolationist_diplomacy
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -2408,7 +2408,7 @@ russia_great_northern_war_incident5 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = rus_gnw
 	}

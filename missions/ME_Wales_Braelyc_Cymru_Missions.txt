@@ -59,12 +59,12 @@ WLS_CYR_BRL_missions_1 = {
 			WLS_indep_3
 		}
 		provinces_to_highlight = {
-			area = wessex_area
+			area = cornwall_area #Wessex
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		position = 4
 		trigger = {
-			wessex_area = {
+			cornwall_area = {
 				type = all
 				owned_by = ROOT
 			}

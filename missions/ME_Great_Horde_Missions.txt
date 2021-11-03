@@ -659,13 +659,13 @@ Great_Horde_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kartli_kakheti_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			imereti_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -706,7 +706,7 @@ Great_Horde_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = shirvan_area
-				area = kartli_kakheti_area
+				#area = kartli_kakheti_area
 				area = imereti_area
 			}
 			NOT = { country_or_subject_holds = ROOT } 
@@ -717,10 +717,10 @@ Great_Horde_missions_4 = {
 				type = all
 				country_or_subject_holds = ROOT
 			}
-			kartli_kakheti_area = {
-				type = all
-				country_or_subject_holds = ROOT
-			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_subject_holds = ROOT
+			#}
 			imereti_area = {
 				type = all
 				country_or_subject_holds = ROOT

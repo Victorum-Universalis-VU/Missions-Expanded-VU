@@ -563,7 +563,7 @@ NRM_missions_5 = {
 			owns_core_province = 236
 		}
 		effect = {
-			wessex_area = {
+			cornwall_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

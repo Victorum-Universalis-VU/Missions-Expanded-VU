@@ -293,7 +293,7 @@ country_decisions = {
 						area = apulia_area
 						area = calabria_area
 						area = sicily_area
-						area = western_sicily_area
+						#area = western_sicily_area
 					}
 				}
 			}

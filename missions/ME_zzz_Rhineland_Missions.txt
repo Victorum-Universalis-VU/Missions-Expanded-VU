@@ -146,21 +146,7 @@ RHN_missions_1 = {
 					key = RHN_control_of_Swabia
 				}
 			}
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -175,20 +161,12 @@ RHN_missions_1 = {
         required_missions = { RHN_franconia RHN_swabia }
         position = 8
 		provinces_to_highlight = {
-			OR = {
-				area = upper_bavaria_area
-				area = lower_bavaria_area
-				area = east_bavaria_area
-			}
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
         trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = upper_bavaria_area
-					area = lower_bavaria_area
-					area = east_bavaria_area
-				}
+				area = bavaria_area
 				value = 8
 			}
 		}
@@ -398,18 +376,18 @@ RHN_missions_2 = {
         required_missions = { rhn_generic_unite_rhineland }
         position = 7
 		provinces_to_highlight = {
-			OR = {
+		#	OR = {
 				area = franconia_area
-				area = upper_franconia_area
-			}
+			#	area = upper_franconia_area
+			#}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
         trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
+		#		OR = {
 					area = franconia_area
-					area = upper_franconia_area
-				}
+					#area = upper_franconia_area
+			#	}
 				value = 6
 			}
 			67 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -424,21 +402,7 @@ RHN_missions_2 = {
 				type = mission_rewards_power_projection
 				amount = 10
 			}
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -452,7 +416,7 @@ RHN_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -467,9 +431,9 @@ RHN_missions_2 = {
         position = 9
 		provinces_to_highlight = {
 			OR = {
-				area = south_saxony_area
+				area = saxony_area
 				area = thuringia_area
-				area = northern_saxony_area
+				area = altmark_area
 				area = mecklenburg_area
 				area = mittelmark_area
 			}
@@ -478,9 +442,9 @@ RHN_missions_2 = {
         trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = south_saxony_area
+					area = saxony_area
 					area = thuringia_area
-					area = northern_saxony_area
+					area = altmark_area
 					area = mecklenburg_area
 					area = mittelmark_area
 				}
@@ -821,7 +785,7 @@ RHN_missions_3 = {
 				name = RHN_king_of_saxony
 				duration = 9125
 			}
-			northern_saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
