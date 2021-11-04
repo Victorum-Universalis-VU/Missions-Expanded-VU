@@ -5,6 +5,7 @@ peasants_1 = {
 	potential = {
 		tag = DTT
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -285,6 +286,7 @@ peasants_2 = {
 	potential = {
 		tag = DTT
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
