@@ -6,6 +6,7 @@ emp_burgundy_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BUR
 			tag = LOT
@@ -254,6 +255,7 @@ emp_lotharingia_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = LOT
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -325,6 +327,7 @@ emp_burgundy_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BUR
 			tag = LOT
@@ -535,6 +538,7 @@ emp_burgundy_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BUR
 			tag = LOT
@@ -791,6 +795,7 @@ emp_burgundy_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BUR
 			tag = LOT
@@ -1525,6 +1530,7 @@ emp_lotharingia_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = LOT
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -1596,6 +1602,7 @@ emp_burgundy_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BUR
 			tag = LOT
@@ -2062,6 +2069,7 @@ emp_lotharingia_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = LOT
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
