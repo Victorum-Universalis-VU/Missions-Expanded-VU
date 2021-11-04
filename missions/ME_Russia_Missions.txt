@@ -2183,7 +2183,7 @@ russia_great_northern_war_incident2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = rus_gnw
 	}
