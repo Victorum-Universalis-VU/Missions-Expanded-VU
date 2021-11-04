@@ -457,6 +457,7 @@ tr_russia_exclusive_1 = {
 		tag = RUS
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -768,6 +769,7 @@ tr_russia_conquest_3 = {
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
