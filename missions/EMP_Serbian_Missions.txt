@@ -7,7 +7,6 @@ emp_ser_economy_internal = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		has_country_flag = use_paradox_missions
 		tag = SER
 		NOT = { map_setup = map_setup_random }
 	}
@@ -122,7 +121,6 @@ emp_ser_danube = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		has_country_flag = use_paradox_missions
 		tag = SER
 		NOT = { map_setup = map_setup_random }
 	}
@@ -292,12 +290,13 @@ emp_ser_danube = {
 		
 		provinces_to_highlight = {
 			province_id = 137
+			province_id = 4239
 		}
 		trigger = {
 			137 = {		# Ragusa
 				is_strongest_trade_power = ROOT
 			}
-			153 = {		# Ragusa
+			4239 = {		# Ragusa
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -340,7 +339,6 @@ emp_ser_west_balkan_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		has_country_flag = use_paradox_missions
 		tag = SER
 		NOT = { map_setup = map_setup_random }
 	}
@@ -357,7 +355,7 @@ emp_ser_west_balkan_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
+				value = 4
 				area = albania_area
 			}
 		}
@@ -369,7 +367,7 @@ emp_ser_west_balkan_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			4754 = {
+			montenegro_area = {
 				if = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -388,19 +386,26 @@ emp_ser_west_balkan_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = east_adriatic_coast_area
+				province_id = 3182
+				province_id = 7708
+				province_id = 137
+				province_id = 7731
+				province_id = 136
+				province_id = 7732
+				province_id = 4753
 				province_id = 4754
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			east_adriatic_coast_area = {
-				type = all
-				owned_by = ROOT
-			}
-			4754 = {
-				owned_by = ROOT
-			}
+			3182 = { owned_by = ROOT }
+			7708 = { owned_by = ROOT }
+			137 = { owned_by = ROOT }
+			7731 = { owned_by = ROOT }
+			136 = { owned_by = ROOT }
+			7732 = { owned_by = ROOT }
+			4753 = { owned_by = ROOT }
+			4754 = { owned_by = ROOT }
 		}
 		effect = {
 			if = {
@@ -411,6 +416,40 @@ emp_ser_west_balkan_branch = {
 						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
+				}
+				herzegovina_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				7709 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				1828 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				7727 = {
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 			else = {
@@ -429,15 +468,35 @@ emp_ser_west_balkan_branch = {
 		position = 4
 		
 		provinces_to_highlight = {
-			area = bosnia_area
 			OR = {
-				NOT = { religion = ROOT }
-				owner = { NOT = { religion = ROOT } }
+				area = bosnia_area
+				area = herzegovina_area
+				province_id = 7709
+				province_id = 1828
+				province_id = 7727
+				province_id = 7730
 			}
+			owner = { NOT = { religion = ROOT } }
 		}
 		trigger = {
 			bosnia_area = {
-				type = ALL
+				type = all
+				owner = { religion = ROOT }
+			}
+			herzegovina_area = {
+				type = all
+				owner = { religion = ROOT }
+			}
+			7709 = {
+				owner = { religion = ROOT }
+			}
+			1828 = {
+				owner = { religion = ROOT }
+			}
+			7727 = {
+				owner = { religion = ROOT }
+			}
+			7730 = {
 				owner = { religion = ROOT }
 			}
 		}
@@ -456,6 +515,13 @@ emp_ser_west_balkan_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			krajina_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -466,31 +532,37 @@ emp_ser_west_balkan_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = croatia_area
+				province_id = 131
+				province_id = 1826
+				province_id = 3196
+				province_id = 7733
+				province_id = 7734
+				province_id = 7736
 				area = slavonia_area
+				#area = krajina_area
+				province_id = 7728
+				province_id = 7729
 			}
-			NOT = { 
-				OR = {
-					owned_by = ROOT
-					owner = { is_subject_of = ROOT }
-				}
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			croatia_area = {
-				type = all
-				OR = {
-					owned_by = ROOT
-					owner = { is_subject_of = ROOT }
-				}
-			}
+			131 = { country_or_non_sovereign_subject_holds = ROOT }
+			1826 = { country_or_non_sovereign_subject_holds = ROOT }
+			3196 = { country_or_non_sovereign_subject_holds = ROOT }
+			7733 = { country_or_non_sovereign_subject_holds = ROOT }
+			7734 = { country_or_non_sovereign_subject_holds = ROOT }
+			7736 = { country_or_non_sovereign_subject_holds = ROOT }
 			slavonia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owner = { is_subject_of = ROOT }
-				}
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
+			#krajina_area =
+			#{
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT 
+			#}
+			7728 = { country_or_non_sovereign_subject_holds = ROOT }
+			7729 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			carinthia_area = {
@@ -499,6 +571,15 @@ emp_ser_west_balkan_branch = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			4751 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -509,27 +590,63 @@ emp_ser_west_balkan_branch = {
 		position = 6
 		
 		provinces_to_highlight = {
-			area = carinthia_area
-			NOT = { 
-				OR = {
-					owned_by = ROOT
-					owner = { is_subject_of = ROOT }
-				}
+			OR = {
+				area = carinthia_area
+				province_id = 4751
+				province_id = 4752
+				province_id = 7735
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			carinthia_area = {
 				type = all
-				OR = {
-					owned_by = ROOT
-					owner = { is_subject_of = ROOT }
-				}
+				country_or_non_sovereign_subject_holds = ROOT 
 			}
+			4751 = { country_or_non_sovereign_subject_holds = ROOT }
+			4752 = { country_or_non_sovereign_subject_holds = ROOT }
+			7735 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			add_country_modifier = {
 				name = "ser_united_balkans"
 				duration = -1
+			}
+			7082 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			130 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7090 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4738 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -544,7 +661,6 @@ emp_ser_east_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		has_country_flag = use_paradox_missions
 		tag = SER
 		NOT = { map_setup = map_setup_random }
 	}
@@ -560,6 +676,13 @@ emp_ser_east_branch = {
 		}
 		effect = {
 			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_macedonia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -582,13 +705,20 @@ emp_ser_east_branch = {
 		position = 2
 		
 		provinces_to_highlight = {
-			area = macedonia_area
+			OR = {
+				area = macedonia_area
+				area = northern_macedonia_area
+			}
 			NOT = { 
 				owned_by = ROOT
 			}
 		}
 		trigger = {
 			macedonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_macedonia_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -602,6 +732,41 @@ emp_ser_east_branch = {
 				add_permanent_claim = ROOT
 			}
 			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aetolia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_epirus_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -620,6 +785,11 @@ emp_ser_east_branch = {
 			OR = {
 				area = morea_area
 				area = northern_greece_area
+				area = aetolia_area
+				area = thessaly_area
+				area = western_aegean_area
+				area = eastern_mediterrenean_islands_area
+				area = northern_epirus_area
 			}
 			NOT = { 
 				owned_by = ROOT
@@ -634,6 +804,26 @@ emp_ser_east_branch = {
 				type = all
 				owned_by = ROOT
 			}
+			aetolia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			thessaly_area = {
+				type = all
+				owned_by = ROOT
+			}
+			western_aegean_area = {
+				type = all
+				owned_by = ROOT
+			} 
+			eastern_mediterrenean_islands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_epirus_area = {
+				type = all
+				owned_by = ROOT
+			} 
 		}
 		effect = {
 			bulgaria_area = {
@@ -644,6 +834,27 @@ emp_ser_east_branch = {
 				add_permanent_claim = ROOT
 			}
 			silistria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vidin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			danubian_plain_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -662,6 +873,9 @@ emp_ser_east_branch = {
 			OR = {
 				area = bulgaria_area
 				area = silistria_area
+				area = upper_thrace_area
+				area = vidin_area 
+				area = danubian_plain_area
 			}
 			owner = { NOT = { religion = ROOT } }
 		}
@@ -674,9 +888,35 @@ emp_ser_east_branch = {
 				type = ALL
 				owner = { religion = ROOT }
 			}
+			upper_thrace_area = {
+				type = ALL
+				owner = { religion = ROOT }
+			}
+			vidin_area = {
+				type = ALL
+				owner = { religion = ROOT }
+			}
+			danubian_plain_area = {
+				type = ALL
+				owner = { religion = ROOT }
+			}
 		}
 		effect = {
 			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -692,7 +932,11 @@ emp_ser_east_branch = {
 		position = 5
 		
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_macedonia_area
+				area = northern_thrace_area 
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
@@ -700,7 +944,14 @@ emp_ser_east_branch = {
 				type = ALL
 				owned_by = ROOT
 			}
-			owns = 151
+			eastern_macedonia_area = {
+				type = ALL
+				owned_by = ROOT
+			}
+			northern_thrace_area = {
+				type = ALL
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			add_prestige = 50
@@ -754,7 +1005,6 @@ emp_ser_religious = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		has_country_flag = use_paradox_missions
 		tag = SER
 		NOT = { map_setup = map_setup_random }
 	}

@@ -13,7 +13,6 @@ emp_hab_netherlands_branch = {
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -26,7 +25,7 @@ emp_hab_netherlands_branch = {
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 12 #out of 21 (but at least 7 are not ruled by Burgundy at start)
+						value = 20 
 						region = low_countries_region
 					}
 				}
@@ -35,7 +34,7 @@ emp_hab_netherlands_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 12 #out of 21 (but at least 7 are not ruled by Burgundy at start)
+				value = 20 #out of 21 (but at least 7 are not ruled by Burgundy at start)
 				region = low_countries_region
 			}
 		}
@@ -58,9 +57,9 @@ emp_hab_netherlands_branch = {
 						has_dlc = "Wealth of Nations"
 					}
 				}
-				any_owned_province = {
-					is_owned_by_trade_company = yes
-					continent = asia
+				custom_trigger_tooltip = {
+					tooltip = emp_hab_ostend_company_trigger_tooltip
+					num_of_trade_companies = 1
 				}
 			}
 			else = {
@@ -242,49 +241,49 @@ emp_hab_netherlands_branch = {
 						}
 					}
 				}
-				AND = {
-					trade_company_region = trade_company_indonesia
-					if = {
-						limit = {
-							ROOT = {
-								OR = {
-									has_dlc = "Dharma"
-									has_dlc = "Wealth of Nations"
-								}
-							}
-						}
-						is_owned_by_trade_company = no
-					}
-					else = {
-						OR = {
-							NOT = { is_core = root }
-							unrest = 1
-						}
-					}
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 5
-								trade_company_region = trade_company_indonesia
-								if = {
-									limit = {
-										ROOT = {
-											OR = {
-												has_dlc = "Dharma"
-												has_dlc = "Wealth of Nations"
-											}
-										}
-									}
-									is_owned_by_trade_company = yes
-								}
-								else = {
-									is_core = root
-									NOT = { unrest = 1 }
-								}
-							}
-						}
-					}
-				}
+				#AND = { #Cut for now
+				#	trade_company_region = trade_company_indonesia
+				#	if = {
+				#		limit = {
+				#			ROOT = {
+				#				OR = {
+				#					has_dlc = "Dharma"
+				#					has_dlc = "Wealth of Nations"
+				#				}
+				#			}
+				#		}
+				#		is_owned_by_trade_company = no
+				#	}
+				#	else = {
+				#		OR = {
+				#			NOT = { is_core = root }
+				#			unrest = 1
+				#		}
+				#	}
+				#	ROOT = {
+				#		NOT = {
+				#			num_of_owned_provinces_with = {
+				#				value = 5
+				#				trade_company_region = trade_company_indonesia
+				#				if = {
+				#					limit = {
+				#						ROOT = {
+				#							OR = {
+				#								has_dlc = "Dharma"
+				#								has_dlc = "Wealth of Nations"
+				#							}
+				#						}
+				#					}
+				#					is_owned_by_trade_company = yes
+				#				}
+				#				else = {
+				#					is_core = root
+				#					NOT = { unrest = 1 }
+				#				}
+				#			}
+				#		}
+				#	}
+				#}
 			}
 			has_port = yes
 		}
@@ -311,11 +310,11 @@ emp_hab_netherlands_branch = {
 					trade_company_region = trade_company_east_india
 					is_owned_by_trade_company = yes
 				}
-				num_of_owned_provinces_with = {
-					value = 5
-					trade_company_region = trade_company_indonesia
-					is_owned_by_trade_company = yes
-				}
+				#num_of_owned_provinces_with = { #Cut for now
+				#	value = 5
+				#	trade_company_region = trade_company_indonesia
+				#	is_owned_by_trade_company = yes
+				#}
 			}
 			else = {
 				num_of_owned_provinces_with = {
@@ -336,12 +335,12 @@ emp_hab_netherlands_branch = {
 					is_core = root
 					NOT = { unrest = 1 }
 				}
-				num_of_owned_provinces_with = {
-					value = 5
-					trade_company_region = trade_company_indonesia
-					is_core = root
-					NOT = { unrest = 1 }
-				}
+				#num_of_owned_provinces_with = { #Cut for now
+				#	value = 5
+				#	trade_company_region = trade_company_indonesia
+				#	is_core = root
+				#	NOT = { unrest = 1 }
+				#}
 			}
 		}
 		effect = {
@@ -491,7 +490,6 @@ emp_hab_develop_hungary_bohemia_branch = {
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes

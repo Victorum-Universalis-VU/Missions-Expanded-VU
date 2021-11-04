@@ -1,4 +1,5 @@
-﻿dh_tim_india = {
+#Updated and scriptified by Dub.
+dh_tim_india = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -15,7 +16,6 @@
 		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -34,34 +34,8 @@
 				name = "oma_buildforces_mod"
 				duration = 5475
 			}
-			mashhad_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			birjand_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sistan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			herat_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=dh_tim_khorasan_one }
+			#I don't get why these are here to begin with, but they are. All but 506 are required in a later mission.
 			lahore_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -90,56 +64,20 @@
 		position = 3
 		
 		provinces_to_highlight = {
-			OR = {
-				area = mashhad_area
-				area = birjand_area
-				area = sistan_area
-				area = herat_area
-			}
+			dh_tim_khorasan_one_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			mashhad_area = {
-				type = all
-				owned_by = ROOT
-			}
-			birjand_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sistan_area = {
-				type = all
-				owned_by = ROOT
-			}
-			herat_area = {
-				type = all
-				owned_by = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=dh_tim_khorasan_one_provinces
+				owner_type=owned_by
 			}
 		}
 		
 		effect = {
-			ghor_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kabulistan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			balkh_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=dh_tim_khorasan_two }
 		}
 	}
 	
@@ -149,26 +87,15 @@
 		position = 5
 		
 		provinces_to_highlight = {
-			OR = {
-				area = ghor_area
-				area = kabulistan_area
-				area = balkh_area
-			}
+			dh_tim_khorasan_two_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			ghor_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kabulistan_area = {
-				type = all
-				owned_by = ROOT
-			}
-			balkh_area = {
-				type = all
-				owned_by = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=dh_tim_khorasan_two_provinces
+				owner_type=owned_by
 			}
 		}
 		
@@ -291,20 +218,7 @@
 					trait = master_of_arms_personality
 				}
 			}
-			lahore_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sind_sagar_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=dh_conquer_punjab_MUG }
 		}
 	}
 	
@@ -313,10 +227,7 @@
 		required_missions = { dh_indian_raid }
 		
 		provinces_to_highlight = {
-			OR = {
-				area = lahore_area
-				area = sind_sagar_area
-			}
+			dh_conquer_punjab_MUG_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		ai_weight = {
@@ -326,13 +237,10 @@
 			factor = 5
 		}
 		trigger = {
-			lahore_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sind_sagar_area = {
-				type = all
-				owned_by = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=dh_conquer_punjab_MUG_provinces
+				owner_type=owned_by
 			}
 		}
 		
@@ -341,20 +249,7 @@
 				name = "mug_looting"
 				duration = 9125 #25 years
 			}
-			sirhind_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_doab_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=dh_conquer_delhi }
 		}
 	}
 	
@@ -369,21 +264,15 @@
 			factor = 5
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = sirhind_area
-				area = upper_doab_area
-			}
+			dh_conquer_delhi_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			sirhind_area = {
-				type = all
-				owned_by = ROOT
-			}
-			upper_doab_area = {
-				type = all
-				owned_by = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=dh_conquer_delhi_provinces
+				owner_type=owned_by
 			}
 		}
 		

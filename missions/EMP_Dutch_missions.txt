@@ -6,7 +6,6 @@ emp_ned_slot1_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -137,7 +136,7 @@ emp_ned_slot1_branch = {
 		
 		effect = {
 			taiwan_area = {
-				add_province_modifier = {
+				add_province_modifier = { #Dev boost unchanged as there's twice as many provinces.
 					name = "ned_zeelandia_mod"
 					duration = "-1"
 				}
@@ -184,7 +183,6 @@ emp_ned_slot2_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -210,7 +208,7 @@ emp_ned_slot2_branch = {
 			custom_trigger_tooltip = {
 				tooltip = emp_ned_assert_dutch_sovereignty_tt
 				num_of_owned_provinces_with = {
-					value = 4
+					value = 7 #Up from Vanilla 4
 					is_core = ROOT
 				}
 			}
@@ -331,7 +329,7 @@ emp_ned_slot2_branch = {
 						has_building = fort_18th
 					}
 				}
-				amount = 3
+				amount = 7
 			}
 		}
 		effect = {
@@ -351,7 +349,6 @@ emp_ned_slot2_ned_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			AND = {
@@ -400,7 +397,6 @@ emp_ned_slot2_ned_fla_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = FLA
@@ -449,7 +445,6 @@ emp_ned_slot2_indies_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -471,12 +466,18 @@ emp_ned_slot2_indies_branch = {
 		completed_by = 1602.3.20 # historical date of its establishment
 		
 		trigger = {
-			trade_company_indonesia = {
+			colonial_indonesia = {
 				has_discovered = ROOT
 			}
-			trade_company_moluccas = {
+			trade_company_polynesia = {
 				has_discovered = ROOT
 			}
+			#trade_company_indonesia = {
+			#	has_discovered = ROOT
+			#}
+			#trade_company_moluccas = {
+			#	has_discovered = ROOT
+			#}
 		}
 		effect = {
 			lanka_area = {
@@ -540,8 +541,9 @@ emp_ned_slot2_indies_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
-				trade_company_region = trade_company_moluccas
-				trade_company_region = trade_company_indonesia
+				trade_company_region = trade_company_polynesia
+				#trade_company_region = trade_company_moluccas
+				#trade_company_region = trade_company_indonesia
 			}
 			is_sea = no
 			NOT = { owned_by = ROOT }
@@ -552,8 +554,9 @@ emp_ned_slot2_indies_branch = {
 			calc_true_if = {
 				all_owned_province = {
 					OR = {
-						trade_company_region = trade_company_moluccas
-						trade_company_region = trade_company_indonesia
+						trade_company_region = trade_company_polynesia
+						#trade_company_region = trade_company_moluccas
+						#trade_company_region = trade_company_indonesia
 					}
 				}
 				amount = 15
@@ -589,7 +592,6 @@ emp_ned_slot3_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -646,14 +648,46 @@ emp_ned_slot3_branch = {
 		position = 3
 		completed_by = 1550.1.1
 		
-		provinces_to_highlight = {
-			province_id = 45
+		provinces_to_highlight = { ##Since Lubeck doesn't feed directly, now it's any european node feeding into EC
+			OR = { 
+				province_id = 85
+				province_id = 183
+				province_id = 167
+				province_id = 1284
+				province_id = 1975
+			}
 		}
 		trigger = {
-			45 = {
-				trade_share = {
-					country = ROOT
-					share = 33
+			OR = {
+				85 = { #Cologne
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				183 = { #Paris
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				167 = { #Rouen
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				1284 = { #Irish Sea
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
+				}
+				1975 = { #North Sea
+					trade_share = {
+						country = ROOT
+						share = 33
+					}
 				}
 			}
 		}
@@ -694,7 +728,10 @@ emp_ned_slot3_branch = {
 		completed_by = 1621.6.3
 		
 		provinces_to_highlight = {
-			region = guinea_region
+		    OR = {
+			    region = guinea_region
+			    region = lower_guinea_region
+		    }
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -702,6 +739,10 @@ emp_ned_slot3_branch = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = guinea_region
+				value = 6
+			}
+			num_of_owned_provinces_with = {
+				region = lower_guinea_region
 				value = 6
 			}
 		}
@@ -718,7 +759,7 @@ emp_ned_slot3_branch = {
 		required_missions = { emp_ned_charter_the_voc }
 		position = 6
 		completed_by = 1652.1.1
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_cape
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -770,7 +811,6 @@ emp_ned_slot4_branch = { # Statists
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = NED
 		NOT = { map_setup = map_setup_random }
@@ -879,7 +919,7 @@ emp_ned_slot4_branch = { # Statists
 					region = low_countries_region
 					base_tax = 8
 				}
-				amount = 5
+				amount = 15 #From 5 to 15
 			}
 		}
 		effect = {
@@ -970,7 +1010,7 @@ emp_ned_slot4_branch = { # Statists
 				}
 			}
 			else = {
-				home_counties_area = {
+				greater_london_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -1052,7 +1092,6 @@ emp_ned_slot4_colony_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -1163,7 +1202,6 @@ emp_ned_slot5_branch = { # Orangists
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = NED
 		NOT = { map_setup = map_setup_random }
@@ -1297,7 +1335,7 @@ emp_ned_slot5_branch = { # Orangists
 			factor = 3
 			modifier = {
 				factor = 0
-				home_counties_area = {
+				greater_london_area = {
 					owner = {
 						alliance_with = ROOT
 					}
@@ -1310,14 +1348,14 @@ emp_ned_slot5_branch = { # Orangists
 		
 		provinces_to_highlight = {
 			OR = {
-				area = home_counties_area
+				area = greater_london_area
 				area = east_anglia_area
 				area = east_midlands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			home_counties_area = {
+			greater_london_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1422,7 +1460,6 @@ emp_ned_slot5_colony_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED

@@ -9,7 +9,6 @@ mnd_khmer_1 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -78,7 +77,6 @@ mnd_khmer_2 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -112,7 +110,7 @@ mnd_khmer_2 = {
 		icon = mission_mnd_khm_resurgence
 		required_missions = { mnd_khm_religion mnd_khm_restore_angkor mnd_khm_rebuild }
 		provinces_to_highlight = {
-		} 
+		}
 		trigger = {
 			stability = 2
 			legitimacy_equivalent = 90
@@ -210,7 +208,6 @@ mnd_khmer_3 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -221,7 +218,7 @@ mnd_khmer_3 = {
 			OR = {
 				area = cambodia_area
 				area = mekong_area
-				area = angkor_area
+				area = cambodia_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -239,7 +236,7 @@ mnd_khmer_3 = {
 				owned_by = ROOT
 				development = 10
 			}
-			angkor_area = {
+			cambodia_area = {
 				type = all
 				owned_by = ROOT
 				development = 10
@@ -426,7 +423,7 @@ mnd_khmer_3 = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { mnd_khm_subjugate_dia_viet }
 		provinces_to_highlight = {
-			area = banjar_area
+			area = kalimantan_area
 			area = brunei_area
 			area = kalimantan_area
 			area = kutai_area
@@ -439,7 +436,7 @@ mnd_khmer_3 = {
 				all_province = {
 					culture = bornean
 					OR = {
-						area = banjar_area
+						area = kalimantan_area
 						area = brunei_area
 						area = kalimantan_area
 						area = kutai_area
@@ -469,7 +466,6 @@ mnd_khmer_4 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -482,9 +478,11 @@ mnd_khmer_4 = {
 		}
 		trigger = {
 			OR = {
-				AYU = {
-					OR = {
+				OR = {
+					AYU = {
 						humiliated_by = ROOT
+					}
+					ROOT = {
 						has_pillaged_capital_against = AYU
 					}
 				}
@@ -614,7 +612,6 @@ mnd_khmer_5 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -622,11 +619,11 @@ mnd_khmer_5 = {
 		icon = mission_mnd_khm_resurgence
 		required_missions = {  }
 		provinces_to_highlight = {
-			area = champasak_area
+			area = south_laos_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			champasak_area = {
+			south_laos_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -658,7 +655,7 @@ mnd_khmer_5 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				vientiane_area = {
+				khorat_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -674,8 +671,8 @@ mnd_khmer_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = north_laos_area
-				area = champasak_area
-				area = vientiane_area
+				area = south_laos_area
+				area = khorat_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -686,8 +683,8 @@ mnd_khmer_5 = {
 					OR = {
 						area = south_laos_area
 						area = north_laos_area
-						area = champasak_area
-						area = vientiane_area
+						area = south_laos_area
+						area = khorat_area
 					}
 					country_or_non_sovereign_subject_holds = ROOT
 				}
