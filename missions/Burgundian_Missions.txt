@@ -10,6 +10,7 @@ bur_conquest = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -153,6 +154,7 @@ bur_arles = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
