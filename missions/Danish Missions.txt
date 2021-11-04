@@ -6,7 +6,8 @@ danish_missions_kalmar = {
 	potential = {
 		OR = {
 			tag = DAN
-			tag = DNR
+			tag = DN
+			has_country_flag = use_paradox_missionsR
 		}
 	}
 	has_country_shield = yes
@@ -131,6 +132,7 @@ bt_danish_trade_2 = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	dan_strengthen_sound_toll = {
@@ -299,6 +301,7 @@ bt_danish_colonialism = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -452,6 +455,7 @@ bt_danish_trade = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	dan_curtail_hanseatic_trade = {
@@ -572,6 +576,7 @@ bt_danish_internal_missions = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	dan_found_kongsberg_silver_mine = {
@@ -679,6 +684,7 @@ bt_danish_colonialism_2 = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	danish_east_indian_trade_company = {
@@ -721,6 +727,7 @@ bt_danish_resist_prussia = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	dan_restore_danevirke = {
@@ -889,6 +896,7 @@ danish_missions_baltic = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -1009,6 +1017,7 @@ bt_north_sea_empire = {
 			tag = DAN
 			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	dan_north_sea_navy = {
