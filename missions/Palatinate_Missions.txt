@@ -29,13 +29,6 @@ palatinate_conquest_group = {
 				}
 				add_permanent_claim = root
 			}
-			upper_franconia_area = {
-				limit = {
-					NOT = { is_claim = root }
-					NOT = { is_core = root }
-				}
-				add_permanent_claim = root
-			}
 			70 = {
 				if = {
 					limit = {
@@ -174,21 +167,7 @@ palatinate_conquest_group = {
 				}
 			}
 			else = {
-				upper_bavaria_area = {
-					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
-					}
-					add_permanent_claim = root
-				}
-				lower_bavaria_area = {
-					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
-					}
-					add_permanent_claim = root
-				}
-				east_bavaria_area = {
+				bavaria_area = {
 					limit = {
 						NOT = { is_permanent_claim = root }
 						NOT = { is_core = root }
@@ -203,22 +182,14 @@ palatinate_conquest_group = {
 		required_missions = { pal_connect_oberpfalz }
 
 		provinces_to_highlight = {
-			OR = {
-				area = upper_bavaria_area
-				area = lower_bavaria_area
-				area = east_bavaria_area
-			}
+			area = bavaria_area
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 8
-						OR = {
-							area = upper_bavaria_area
-							area = lower_bavaria_area
-							area = east_bavaria_area
+						area = bavaria_area
 						}
 					}
-				}
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
@@ -226,11 +197,7 @@ palatinate_conquest_group = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8
-				OR = {
-					area = upper_bavaria_area
-					area = lower_bavaria_area
-					area = east_bavaria_area
-				}
+				area = bavaria_area
 			}
 			if = {
 				limit = {
@@ -293,7 +260,14 @@ palatinate_conquest_group = {
 				}
 				add_permanent_claim = root
 			}
-			upper_rhineland_area = {
+			baden_area = {
+				limit = {
+					NOT = { is_permanent_claim = root }
+					NOT = { is_core = root }
+				}
+				add_permanent_claim = root
+			}
+			wurttemburg_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
 					NOT = { is_core = root }
@@ -319,7 +293,8 @@ palatinate_conquest_group = {
 			OR = {
 				area = north_rhine_area
 				area = lower_rhineland_area
-				area = upper_rhineland_area
+				area = baden_area
+				area = wurttemburg_area
 				area = alsace_area
 			}
 			ROOT = {
@@ -329,7 +304,8 @@ palatinate_conquest_group = {
 						OR = {
 							area = north_rhine_area
 							area = lower_rhineland_area
-							area = upper_rhineland_area
+							area = baden_area
+							area = wurttemburg_area
 							area = alsace_area
 						}
 					}
@@ -344,7 +320,8 @@ palatinate_conquest_group = {
 				OR = {
 					area = north_rhine_area
 					area = lower_rhineland_area
-					area = upper_rhineland_area
+					area = baden_area
+					area = wurttemburg_area
 					area = alsace_area
 				}
 			}

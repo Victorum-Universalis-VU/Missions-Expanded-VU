@@ -13,18 +13,30 @@ tr_russian_minors_1 = {
 					tag = VOL
 					tag = KIE
 					tag = CHR
+					tag = OKA
 					tag = PSK
 					tag = RYA
 					tag = TVE
+					tag = UKR
 					tag = YAR
 					tag = PLT
-					tag = PRM
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 					tag = BLO
 					tag = RSO
 					tag = SMO
 					tag = NZH
 					tag = ZAZ
-					tag = OKA
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
 				}
 			}
 			tag = UKR
@@ -55,54 +67,16 @@ tr_russian_minors_1 = {
 				name = "nov_defeated_muscovy"
 				duration = 7300
 			}
-			oka_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			custom_tooltip = bt_southern_russia_perm_claims
+			hidden_effect = {
+				russia_region = {
+					limit = {
+						bt_trigger_southern_russia_areas = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			ryazan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			vladimir_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			suzdal_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			yaroslavl_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			tver_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			tambov_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -123,18 +97,30 @@ tr_russian_minors_2 = {
 					tag = VOL
 					tag = KIE
 					tag = CHR
+					tag = OKA
 					tag = PSK
 					tag = RYA
 					tag = TVE
+					tag = UKR
 					tag = YAR
 					tag = PLT
-					tag = PRM
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 					tag = BLO
 					tag = RSO
 					tag = SMO
 					tag = NZH
 					tag = ZAZ
-					tag = OKA
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
 				}
 			}
 			tag = UKR
@@ -156,7 +142,7 @@ tr_russian_minors_2 = {
 		trigger = {
 			is_subject = no
 			capital_scope = {
-				fort_level = 3
+				fort_level = 2
 				area_for_scope_province = {
 					type = all
 					owned_by = ROOT
@@ -249,18 +235,30 @@ tr_russian_minors_3 = {
 					tag = VOL
 					tag = KIE
 					tag = CHR
+					tag = OKA
 					tag = PSK
 					tag = RYA
 					tag = TVE
+					tag = UKR
 					tag = YAR
 					tag = PLT
-					tag = PRM
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 					tag = BLO
 					tag = RSO
 					tag = SMO
 					tag = NZH
 					tag = ZAZ
-					tag = OKA
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
 				}
 			}
 			tag = UKR
@@ -291,54 +289,16 @@ tr_russian_minors_3 = {
 				name = "tr_conquered_nov"
 				duration = 7300
 			}
-			pskov_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			custom_tooltip = bt_northern_russia_perm_claims
+			hidden_effect = {
+				russia_region = {
+					limit = {
+						bt_trigger_northern_russia_areas = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			beloozero_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			pomor_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			karelia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			#north_karelia = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = { is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			arkhangelsk_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			vologda_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -347,15 +307,40 @@ tr_russian_minors_3 = {
 		required_missions = { tr_dniepr }
 		position = 4
 		provinces_to_highlight = {
-			area = zaporizhia_area
-			NOT = {
-				owned_by = ROOT
+			OR = {
+				area = zaporizhia_area
+				area = sloboda_ukraine_area
+				area = middle_don_area
+				area = yedisan_area
+				area = pryazovia_area
+				area = lower_dnieper_area
 			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			zaporizhia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			sloboda_ukraine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			middle_don_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			yedisan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			pryazovia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lower_dnieper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -370,20 +355,6 @@ tr_russian_minors_3 = {
 			}
 			else = {
 				add_army_tradition = 15
-			}
-			sloboda_ukraine_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			podolia_volhynia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 			crimea_region = {
 				limit = {
@@ -411,18 +382,30 @@ tr_russian_minors_4 = {
 					tag = VOL
 					tag = KIE
 					tag = CHR
+					tag = OKA
 					tag = PSK
 					tag = RYA
 					tag = TVE
+					tag = UKR
 					tag = YAR
 					tag = PLT
-					tag = PRM
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 					tag = BLO
 					tag = RSO
 					tag = SMO
 					tag = NZH
 					tag = ZAZ
-					tag = OKA
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
 				}
 			}
 			tag = UKR
@@ -464,6 +447,41 @@ tr_russian_minors_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			bryansk_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			severia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			oka_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			smolensk_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			white_ruthenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -472,7 +490,14 @@ tr_russian_minors_4 = {
 		required_missions = { tr_stability }
 		position = 3
 		provinces_to_highlight = {
-			area = east_dniepr_area
+			OR = {
+				area = east_dniepr_area
+				area = bryansk_area
+				area = severia_area
+				area = oka_area
+				area = smolensk_area
+				area = white_ruthenia_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -482,17 +507,76 @@ tr_russian_minors_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			bryansk_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			severia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			smolensk_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			white_ruthenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_army_tradition = 20
-			west_dniepr_area = {
+			280 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			zaporizhia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			zaporizhia_area = {
+			sloboda_ukraine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			middle_don_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yedisan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pryazovia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_dnieper_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -506,20 +590,11 @@ tr_russian_minors_4 = {
 		required_missions = { tr_cossacks tr_kiev }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-				region = ruthenia_region
-				area = red_ruthenia_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			region = ruthenia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			ruthenia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			red_ruthenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -556,18 +631,30 @@ tr_russian_minors_5 = {
 					tag = VOL
 					tag = KIE
 					tag = CHR
+					tag = OKA
 					tag = PSK
 					tag = RYA
 					tag = TVE
+					tag = UKR
 					tag = YAR
 					tag = PLT
-					tag = PRM
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
 					tag = BLO
 					tag = RSO
 					tag = SMO
 					tag = NZH
 					tag = ZAZ
-					tag = OKA
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
 				}
 			}
 			tag = UKR
@@ -582,49 +669,16 @@ tr_russian_minors_5 = {
 		required_missions = { tr_dniepr  }
 		position = 4
 		provinces_to_highlight = {
-			area = west_dniepr_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			province_id = 280
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			west_dniepr_area = {
-				type = all
-				owned_by = ROOT
-			}
+			owns = 280
 		}
 		effect = {
 			add_prestige = 20
 			country_event = { id = flavor_rus.2002 }
-			white_ruthenia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			pripyat_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			smolensk_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			minsk_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			red_ruthenia_area = {
+			ruthenia_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
