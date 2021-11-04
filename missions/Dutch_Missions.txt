@@ -15,6 +15,7 @@ ned_reconquest_group = {
 			tag = FRI
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -133,6 +134,7 @@ ned_colonial_group = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -233,6 +235,7 @@ ned_colonial_group_two = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -413,6 +416,7 @@ ned_colonial_group_three = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -474,6 +478,7 @@ ned_colonial_group_four = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
