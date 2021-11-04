@@ -6,6 +6,7 @@ emp_gen_missions_general = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
 	#	NOT = { map_setup = map_setup_random }
@@ -99,6 +100,7 @@ emp_gen_missions_general_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
 		NOT = { map_setup = map_setup_random }
@@ -300,6 +302,7 @@ emp_gen_missions_western_med = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
 		NOT = { map_setup = map_setup_random }
@@ -779,6 +782,7 @@ emp_gen_missions_western_med_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
 		NOT = { map_setup = map_setup_random }
