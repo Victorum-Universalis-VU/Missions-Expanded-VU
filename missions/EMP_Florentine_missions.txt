@@ -6,6 +6,7 @@ emp_tusc_fighting_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = TUS
@@ -112,6 +113,7 @@ emp_tusc_dip_and_war_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = TUS
@@ -361,6 +363,7 @@ emp_tusc_government_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = TUS
@@ -574,6 +577,7 @@ emp_tusc_renaissance_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = TUS
@@ -755,6 +759,7 @@ emp_tusc_infra_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = TUS
