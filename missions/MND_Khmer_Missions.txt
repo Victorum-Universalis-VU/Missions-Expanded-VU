@@ -9,6 +9,7 @@ mnd_khmer_1 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -77,6 +78,7 @@ mnd_khmer_2 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -208,6 +210,7 @@ mnd_khmer_3 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -466,6 +469,7 @@ mnd_khmer_4 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -612,6 +616,7 @@ mnd_khmer_5 = {
 		tag = KHM
 		has_dlc = "Leviathan"
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 

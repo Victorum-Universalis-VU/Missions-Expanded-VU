@@ -11,6 +11,7 @@ hannoverian_group_1 = {
 			tag = HAN
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -336,6 +337,7 @@ hannoverian_group_2 = {
 	potential = {
 		tag = HAN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -576,6 +578,7 @@ hannoverian_group_3 = {
 			tag = HAN
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -627,6 +630,7 @@ hannoverian_group_4 = {
 	potential = {
 		tag = HAN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

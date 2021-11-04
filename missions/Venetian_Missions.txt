@@ -7,6 +7,7 @@ venice_missions_1 = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -165,6 +166,7 @@ venice_missions_2 = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

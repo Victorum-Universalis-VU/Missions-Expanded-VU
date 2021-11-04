@@ -8,16 +8,25 @@ tatar_missions_1 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = GOL
-			tag = CRI
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = GOL
+					tag = CRI
+					tag = NOG
+					tag = KAZ
+					tag = SHY
+					tag = GLH
+					tag = SIB
+					tag = BSH
+					tag = AST
+					tag = QAS
+					tag = KZH
+				}
+			}			
 			tag = NOG
-			tag = KAZ
 			tag = SHY
-			tag = GLH
 			tag = SIB
-			tag = BSH
-			tag = AST
-			tag = QAS
 			tag = KZH
 		}
 		NOT = { map_setup = map_setup_random }
@@ -329,16 +338,25 @@ tatar_missions_slot_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = GOL
-			tag = CRI
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = GOL
+					tag = CRI
+					tag = NOG
+					tag = KAZ
+					tag = SHY
+					tag = GLH
+					tag = SIB
+					tag = BSH
+					tag = AST
+					tag = QAS
+					tag = KZH
+				}
+			}			
 			tag = NOG
-			tag = KAZ
 			tag = SHY
-			tag = GLH
 			tag = SIB
-			tag = BSH
-			tag = AST
-			tag = QAS
 			tag = KZH
 		}
 		NOT = { map_setup = map_setup_random }
@@ -622,16 +640,25 @@ tatar_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = GOL
-			tag = CRI
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = GOL
+					tag = CRI
+					tag = NOG
+					tag = KAZ
+					tag = SHY
+					tag = GLH
+					tag = SIB
+					tag = BSH
+					tag = AST
+					tag = QAS
+					tag = KZH
+				}
+			}			
 			tag = NOG
-			tag = KAZ
 			tag = SHY
-			tag = GLH
 			tag = SIB
-			tag = BSH
-			tag = AST
-			tag = QAS
 			tag = KZH
 		}
 		NOT = { map_setup = map_setup_random }

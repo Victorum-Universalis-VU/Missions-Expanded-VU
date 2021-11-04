@@ -4,6 +4,7 @@ mnd_mlc_1 = {
 	ai = yes
 	potential = {
 		tag = MLC
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -365,6 +366,7 @@ mnd_mlc_2 = {
 	ai = yes
 	potential = {
 		tag = MLC
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

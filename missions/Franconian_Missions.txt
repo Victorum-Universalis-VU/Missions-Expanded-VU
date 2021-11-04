@@ -14,6 +14,7 @@ franconia_conquest_group_1 = {
 			tag = FKN
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -304,6 +305,7 @@ franconia_conquest_group_2 = {
 	potential = {
 		tag = FKN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -384,6 +386,7 @@ franconia_splendour_group = {
 			tag = FKN
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -527,6 +530,7 @@ franconia_splendour_group_2 = {
 			tag = BYT
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

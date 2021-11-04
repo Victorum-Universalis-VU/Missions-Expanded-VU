@@ -10,6 +10,7 @@ romanian_missions_1 = {
 			tag = TRA
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -254,6 +255,7 @@ romanian_missions_5 = {
 			tag = TRA
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

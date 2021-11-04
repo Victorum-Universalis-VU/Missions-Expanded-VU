@@ -4,6 +4,7 @@ mam_south_missions = {
 	ai = yes
 	potential = {
 		tag = MAM
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -122,6 +123,7 @@ mam_north_missions = {
 	ai = yes
 	potential = {
 		tag = MAM
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

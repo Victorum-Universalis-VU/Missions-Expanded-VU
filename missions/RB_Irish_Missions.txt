@@ -50,6 +50,7 @@ ire_conquest_1 = {
 			tag = WTF
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	ire_conquer_ulster = {
@@ -160,6 +161,7 @@ ire_conquest_main = {
 			tag = WTF
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -455,6 +457,7 @@ ire_conquest_2 = {
 			tag = WTF
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -681,6 +684,7 @@ ire_conquest_4 = {
 			tag = WTF
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -791,6 +795,7 @@ ire_colonial_missions = {
 			tag = WTF
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	irish_america = {

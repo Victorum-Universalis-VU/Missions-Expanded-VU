@@ -8,6 +8,7 @@ french_missions_north = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -200,6 +201,7 @@ french_mission_slot_2 = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -253,6 +255,7 @@ french_missions_colonial = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	build_french_fleet = {
@@ -595,6 +598,7 @@ france_expand_south = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	reconquer_gascony = {
@@ -799,6 +803,7 @@ france_expand_south_2 = {
 		NOT = {
 			has_dlc = "Emperor"
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	annex_savoy = {

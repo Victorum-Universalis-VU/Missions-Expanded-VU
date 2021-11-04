@@ -6,6 +6,7 @@ indonesians_3 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
 	}
 	has_country_shield = yes
 	
@@ -148,6 +149,7 @@ indonesians_4 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { tag = MAJ }
+		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
 	}
 	has_country_shield = yes
 	
@@ -712,6 +714,7 @@ indonesians_5 = {
 	potential = {
 		technology_group = chinese
 		culture_group = malay
+		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
 	}
 	has_country_shield = yes
 	

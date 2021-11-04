@@ -9,6 +9,7 @@ emp_ven_slot_1 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = VEN
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -72,6 +73,7 @@ emp_ven_slot_2 = {
 	}
 	
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = VEN
 		NOT = { map_setup = map_setup_random }
@@ -227,6 +229,7 @@ emp_ven_slot_3 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = VEN
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -484,6 +487,7 @@ emp_ven_slot_4 = {
 		has_dlc = "Emperor"
 		tag = VEN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -635,6 +639,7 @@ emp_ven_slot_5 = {
 		has_dlc = "Emperor"
 		tag = VEN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes

@@ -9,6 +9,7 @@ lithuanian_missions_1 = {
 	potential = {
 		tag = LIT
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -166,6 +167,8 @@ lithuanian_missions_2 = {
 	potential = {
 		tag = LIT
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
+
 	}
 	has_country_shield = yes
 	
@@ -279,6 +282,7 @@ lithuanian_missions_slot = {
 	potential = {
 		tag = LIT
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

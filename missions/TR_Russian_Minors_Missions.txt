@@ -7,33 +7,39 @@ tr_russian_minors_1 = {
 	}
 	potential = {
 		OR = {
-			tag = VOL
-			tag = KIE
-			tag = CHR
-			tag = OKA
-			tag = PSK
-			tag = RYA
-			tag = TVE
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = VOL
+					tag = KIE
+					tag = CHR
+					tag = OKA
+					tag = PSK
+					tag = RYA
+					tag = TVE
+					tag = UKR
+					tag = YAR
+					tag = PLT
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
+					tag = BLO
+					tag = RSO
+					tag = SMO
+					tag = NZH
+					tag = ZAZ
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
+				}
+			}
 			tag = UKR
-			tag = YAR
-			tag = PLT
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
-			tag = RSO
-			tag = SMO
-			tag = NZH
-			tag = ZAZ
-			#BT Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
@@ -85,33 +91,39 @@ tr_russian_minors_2 = {
 	}
 	potential = {
 		OR = {
-			tag = VOL
-			tag = KIE
-			tag = CHR
-			tag = OKA
-			tag = PSK
-			tag = RYA
-			tag = TVE
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = VOL
+					tag = KIE
+					tag = CHR
+					tag = OKA
+					tag = PSK
+					tag = RYA
+					tag = TVE
+					tag = UKR
+					tag = YAR
+					tag = PLT
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
+					tag = BLO
+					tag = RSO
+					tag = SMO
+					tag = NZH
+					tag = ZAZ
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
+				}
+			}
 			tag = UKR
-			tag = YAR
-			tag = PLT
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
-			tag = RSO
-			tag = SMO
-			tag = NZH
-			tag = ZAZ
-			#BT Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
@@ -217,33 +229,39 @@ tr_russian_minors_3 = {
 	}
 	potential = {
 		OR = {
-			tag = VOL
-			tag = KIE
-			tag = CHR
-			tag = OKA
-			tag = PSK
-			tag = RYA
-			tag = TVE
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = VOL
+					tag = KIE
+					tag = CHR
+					tag = OKA
+					tag = PSK
+					tag = RYA
+					tag = TVE
+					tag = UKR
+					tag = YAR
+					tag = PLT
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
+					tag = BLO
+					tag = RSO
+					tag = SMO
+					tag = NZH
+					tag = ZAZ
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
+				}
+			}
 			tag = UKR
-			tag = YAR
-			tag = PLT
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
-			tag = RSO
-			tag = SMO
-			tag = NZH
-			tag = ZAZ
-			#BT Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
@@ -358,33 +376,39 @@ tr_russian_minors_4 = {
 	}
 	potential = {
 		OR = {
-			tag = VOL
-			tag = KIE
-			tag = CHR
-			tag = OKA
-			tag = PSK
-			tag = RYA
-			tag = TVE
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = VOL
+					tag = KIE
+					tag = CHR
+					tag = OKA
+					tag = PSK
+					tag = RYA
+					tag = TVE
+					tag = UKR
+					tag = YAR
+					tag = PLT
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
+					tag = BLO
+					tag = RSO
+					tag = SMO
+					tag = NZH
+					tag = ZAZ
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
+				}
+			}
 			tag = UKR
-			tag = YAR
-			tag = PLT
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
-			tag = RSO
-			tag = SMO
-			tag = NZH
-			tag = ZAZ
-			#BT Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
@@ -601,33 +625,39 @@ tr_russian_minors_5 = {
 	}
 	potential = {
 		OR = {
-			tag = VOL
-			tag = KIE
-			tag = CHR
-			tag = OKA
-			tag = PSK
-			tag = RYA
-			tag = TVE
+			AND = {
+				has_country_flag = use_paradox_missions
+				OR = {
+					tag = VOL
+					tag = KIE
+					tag = CHR
+					tag = OKA
+					tag = PSK
+					tag = RYA
+					tag = TVE
+					tag = UKR
+					tag = YAR
+					tag = PLT
+					#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
+					tag = BLO
+					tag = RSO
+					tag = SMO
+					tag = NZH
+					tag = ZAZ
+					#BT Added
+					tag = ZBT
+					tag = GLC
+					tag = MLL
+					tag = SPK
+					tag = MOZ
+					tag = PRS
+					tag = BLV
+					tag = MSL
+					tag = VTN
+					tag = VYA
+				}
+			}
 			tag = UKR
-			tag = YAR
-			tag = PLT
-			#tag = PRM			#Disabling Perm. Eventually I ought to do some uralic missions, but in the meantime this makes no sense for Perm, imho
-			tag = BLO
-			tag = RSO
-			tag = SMO
-			tag = NZH
-			tag = ZAZ
-			#BT Added
-			tag = ZBT
-			tag = GLC
-			tag = MLL
-			tag = SPK
-			tag = MOZ
-			tag = PRS
-			tag = BLV
-			tag = MSL
-			tag = VTN
-			tag = VYA
 		}
 		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }

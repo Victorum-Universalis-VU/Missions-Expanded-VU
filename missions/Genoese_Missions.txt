@@ -5,6 +5,7 @@ genoa_missions_africa = {
 	potential = {
 		tag = GEN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -157,6 +158,7 @@ genoa_africa_slot_2 = {
 	potential = {
 		tag = GEN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -191,6 +193,7 @@ genoa_europe_slot = {
 	ai = yes
 	potential = {
 		tag = GEN
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -313,6 +316,7 @@ genoa_europe_slot = {
 	ai = yes
 	potential = {
 		tag = GEN
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

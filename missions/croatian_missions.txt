@@ -9,6 +9,7 @@ cro_1 = {
 			tag = RAG
 			tag = DAL
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -187,6 +188,7 @@ cro_2 = {
 			tag = RAG
 			tag = DAL
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -356,6 +358,7 @@ cro_5 = {
 			tag = RAG
 			tag = DAL
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
