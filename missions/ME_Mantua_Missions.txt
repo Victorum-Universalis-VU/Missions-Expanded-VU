@@ -11,7 +11,7 @@ mantua_mission_1 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LML }
+				NOT = { was_tag = LVN } #Same other Italian. Probably a C/P gone wrong
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -148,7 +148,7 @@ mantua_mission_2 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LML }
+				NOT = { was_tag = LVN }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -364,7 +364,7 @@ mantua_mission_3 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LML }
+				NOT = { was_tag = LVN }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -581,7 +581,7 @@ mantua_mission_4 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LML }
+				NOT = { was_tag = LVN }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -876,7 +876,7 @@ mantua_mission_5 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LML }
+				NOT = { was_tag = LVN }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox

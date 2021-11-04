@@ -239,7 +239,7 @@ memmingen_missions_5 = {
 			}
 		}
 		effect = {
-			lower_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -253,11 +253,11 @@ memmingen_missions_5 = {
 		icon = mission_conquer_5_states
 		required_missions = { mem_ulm }
 		provinces_to_highlight = {
-			area = lower_swabia_area
+			area = swabia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -287,7 +287,70 @@ memmingen_missions_5 = {
 			}
 		}
 		effect = {
-			lower_bavaria_area = {
+			67 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			71 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			1757 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2955 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2956 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2957 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4708 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7659 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7661 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7662 = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -301,17 +364,32 @@ memmingen_missions_5 = {
 		icon = mission_cossack_cavalry
 		required_missions = { mem_franconia }
 		provinces_to_highlight = {
-			area = lower_bavaria_area
+			province_id = 67
+			province_id = 71
+			province_id = 1757
+			province_id = 2955
+			province_id = 2956
+			province_id = 2957
+			province_id = 4708
+			province_id = 7659
+			province_id = 7661
+			province_id = 7662
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_bavaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			67 = { country_or_non_sovereign_subject_holds = ROOT }
+			71 = { country_or_non_sovereign_subject_holds = ROOT }
+			1757 = { country_or_non_sovereign_subject_holds = ROOT }
+			2955 = { country_or_non_sovereign_subject_holds = ROOT }
+			2956 = { country_or_non_sovereign_subject_holds = ROOT }
+			2957 = { country_or_non_sovereign_subject_holds = ROOT }
+			4708 = { country_or_non_sovereign_subject_holds = ROOT }
+			7659 = { country_or_non_sovereign_subject_holds = ROOT }
+			7661 = { country_or_non_sovereign_subject_holds = ROOT }
+			7662 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			upper_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -325,11 +403,11 @@ memmingen_missions_5 = {
 		icon = mission_empire
 		required_missions = { mem_bav_1 }
 		provinces_to_highlight = {
-			area = upper_bavaria_area
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -2680,11 +2680,11 @@ POL_Missions_4_2 = {
 			hidden_effect = {
 				for = {
 					amount = 10
-					effect = "
+					effect = {
 						random_owned_province = {
 							add_base_manpower = 1
 						}
-					"
+					}
 				}
 			}
 		}
@@ -3846,7 +3846,7 @@ POL_Missions_5_2 = {
 				area = minsk_area
 				area = white_ruthenia_area
 				area = smolensk_area
-				area = chernigov_area
+				#area = chernigov_area #Removed in VU
 				area = west_dniepr_area
 				area = east_dniepr_area
 				area = oka_area
@@ -3874,7 +3874,7 @@ POL_Missions_5_2 = {
 						area = minsk_area
 						area = white_ruthenia_area
 						area = smolensk_area
-						area = chernigov_area
+						#area = chernigov_area Removed from VU
 						area = west_dniepr_area
 						area = east_dniepr_area
 						area = oka_area

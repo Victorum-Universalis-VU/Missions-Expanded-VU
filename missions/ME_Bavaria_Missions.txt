@@ -6,7 +6,7 @@ bavaria_missions_1 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUB
+				tag = AUE #AUB doesn't exist. Suppose that was meant to be AUE
 				primary_culture = bavarian
 			}
 		}
@@ -279,7 +279,7 @@ bavaria_missions_2 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUB
+				tag = AUE
 				primary_culture = bavarian
 			}
 		}
@@ -467,7 +467,7 @@ bavaria_missions_3_AoW = {
 		OR = {
 			tag = BAV
 			AND = {
-				#tag = AUB
+				tag = AUE
 				primary_culture = bavarian
 			}
 		}
@@ -509,7 +509,7 @@ bavaria_missions_3 = {
 		OR = {
 			tag = BAV
 			AND = {
-				#tag = AUB
+				tag = AUE
 				primary_culture = bavarian
 			}
 		}
@@ -759,7 +759,7 @@ bavaria_missions_4 = {
 		OR = {
 			tag = BAV
 			AND = {
-				#tag = AUB
+				tag = AUE
 				primary_culture = bavarian
 			}
 		}
@@ -1095,7 +1095,7 @@ bavaria_missions_5 = {
 		OR = {
 			tag = BAV
 			AND = {
-				#tag = AUB
+				tag = AUE
 				primary_culture = bavarian
 			}
 		}

@@ -317,7 +317,7 @@ kamchatka_missions_4 = {
 			OR = {
 				has_reform = martial_society_reform
 				has_reform = civil_society_reform
-				has_reform = snow_life_reform
+				#has_reform = snow_life_reform 
 				has_reform = three_jurchen_tribes_reform
 			}
 		}

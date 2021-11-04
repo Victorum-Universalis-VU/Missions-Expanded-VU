@@ -119,9 +119,9 @@ RHN_missions_1 = {
         position = 6
 		provinces_to_highlight = {
 			OR = {
-				area = upper_swabia_area
-				area = lower_swabia_area
-				area = upper_rhineland_area
+				area = swabia_area
+				area = baden_area
+				area = wurttemburg_area
 				area = alsace_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -129,9 +129,9 @@ RHN_missions_1 = {
         trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = upper_swabia_area
-					area = lower_swabia_area
-					area = upper_rhineland_area
+					area = swabia_area
+					area = baden_area
+					area = wurttemburg_area
 					area = alsace_area
 				}
 				value = 10
