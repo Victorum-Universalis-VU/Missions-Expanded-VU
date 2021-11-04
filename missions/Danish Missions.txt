@@ -6,9 +6,9 @@ danish_missions_kalmar = {
 	potential = {
 		OR = {
 			tag = DAN
-			tag = DN
-			has_country_flag = use_paradox_missionsR
+			tag = DNR
 		}
+		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
