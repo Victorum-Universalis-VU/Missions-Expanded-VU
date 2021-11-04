@@ -7,6 +7,7 @@ provence_missions_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = PRO
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -91,6 +92,7 @@ provence_missions_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = PRO
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -273,6 +275,7 @@ provence_missions_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = PRO
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -340,6 +343,7 @@ provence_missions_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = PRO
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
@@ -477,6 +481,7 @@ provence_missions_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = PRO
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"

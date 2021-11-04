@@ -10,6 +10,7 @@ emp_sav_missions_conquest = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -296,6 +297,7 @@ emp_sav_missions_conquest_north = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -423,6 +425,7 @@ emp_sav_missions_conquest_italia = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -553,6 +556,7 @@ emp_sav_missions_conquest_west = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -753,6 +757,7 @@ emp_sav_missions_conquest_italia_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -799,6 +804,7 @@ emp_sav_missions_security = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -1085,6 +1091,7 @@ emp_sav_missions_economy = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV
@@ -1221,6 +1228,7 @@ emp_sav_missions_papacy = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = SAV

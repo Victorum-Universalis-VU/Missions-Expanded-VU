@@ -7,6 +7,7 @@ emp_ita_development_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = ITA
 		NOT = { map_setup = map_setup_random }
@@ -130,6 +131,7 @@ emp_ita_gallia_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = ITA
 		NOT = { map_setup = map_setup_random }
@@ -432,6 +434,7 @@ emp_ita_war_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = ITA
 		NOT = { map_setup = map_setup_random }
@@ -1145,6 +1148,7 @@ emp_ita_unification_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = ITA
 		NOT = { map_setup = map_setup_random }
@@ -1291,6 +1295,7 @@ emp_ita_overseas_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = ITA
 		NOT = { map_setup = map_setup_random }

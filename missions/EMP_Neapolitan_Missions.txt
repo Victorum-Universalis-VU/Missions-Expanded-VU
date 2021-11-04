@@ -6,6 +6,7 @@ emp_naples_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -90,6 +91,7 @@ emp_naples_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -235,6 +237,7 @@ emp_naples_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -460,6 +463,7 @@ emp_naples_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -641,6 +645,7 @@ emp_naples_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
