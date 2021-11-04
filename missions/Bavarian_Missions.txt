@@ -11,7 +11,6 @@ bavarian_missions_main = {
 			tag = UBV
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -202,13 +201,6 @@ bavarian_missions_main = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#upper_franconia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = {  is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 		}
 	}
 
@@ -217,10 +209,7 @@ bavarian_missions_main = {
 		required_missions = { bav_expand_in_bavaria }
 		completed_by = 1806.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = franconia_area
-				#area = upper_franconia_area
-			}
+			area = franconia_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -228,10 +217,7 @@ bavarian_missions_main = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				OR = {
-					area = franconia_area
-					#rea = upper_franconia_area
-				}
+				area = franconia_area
 			}
 		}
 		effect = {
@@ -240,26 +226,12 @@ bavarian_missions_main = {
 				name = "bavarian_ambition"
 				duration = 7300
 			}
-			#lower_swabia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = {  is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#upper_swabia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = {  is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			swabia_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -268,10 +240,6 @@ bavarian_missions_main = {
 		icon = mission_landsknecht_soldier
 		required_missions = { conquer_franken }
 		provinces_to_highlight = {
-			#OR = {
-			#	area = lower_swabia_area
-			#	area = upper_swabia_area
-			#}
 			area = swabia_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -280,23 +248,18 @@ bavarian_missions_main = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				#OR = {
-				#	area = lower_swabia_area
-				#	area = upper_swabia_area
-				#}
 				area = swabia_area
 			}
 		}
 		effect = {
 			add_adm_power = 100
-			#upper_rhineland_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = {  is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			lower_rhineland_area = {
+			wurttemburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			baden_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }

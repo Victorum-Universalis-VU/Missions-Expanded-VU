@@ -1829,7 +1829,7 @@ me_venice_missions_5 = {
 				limit = {
 					NOT = { alliance_with = MAM }
 				}
-				gulf_of_arabia_area = {
+				vostani_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -1872,7 +1872,7 @@ me_venice_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = gulf_of_arabia_area
+					area = vostani_area
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					ROOT = { NOT = { alliance_with = MAM } }
 				}
@@ -1886,7 +1886,7 @@ me_venice_missions_5 = {
 		trigger = {
 			if = {
 				limit = { NOT = { alliance_with = MAM } }
-				gulf_of_arabia_area = {
+				vostani_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}

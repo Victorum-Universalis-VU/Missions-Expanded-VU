@@ -268,7 +268,7 @@ hanseatic_united_tree = {
 		position = 3
 		
 		trigger = {
-			num_of_merchants = 4
+			num_of_merchants = 6 #Up from 4 in vanilla
 			years_of_income = 3
 		}
 
@@ -299,7 +299,7 @@ hanseatic_united_tree = {
 		trigger = {
 			owns_core_province = 45
 			45 = {
-				development = 30
+				development = 50 #Up from 30 in vanilla
 				if = {
 					limit = { has_dlc = "Dharma" }
 					province_has_center_of_trade_of_level = 3
@@ -431,11 +431,11 @@ hanseatic_sound_toll_tree = {
 		position = 2
 	
 		provinces_to_highlight = {
-			province_id = 1926 # Baltic Sea
+			province_id = 1 # Baltic Sea
 		}
 	
 		trigger = {
-			1926 = {
+			1 = {
 				trade_share = {
 					country = ROOT
 					share = 30
@@ -445,6 +445,13 @@ hanseatic_sound_toll_tree = {
 	
 		effect = {
 			holstein_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			schleswig_area = { # Added to match vanilla claims closely.
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -474,16 +481,18 @@ hanseatic_sound_toll_tree = {
 			OR = {
 				area = holstein_area
 				area = jutland_area
+				area = schleswig_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 12 #Up from 4
 				OR = {
-					area = jutland_area
 					area = holstein_area
+					area = jutland_area
+					area = schleswig_area
 				}
 			}
 		}
@@ -500,7 +509,14 @@ hanseatic_sound_toll_tree = {
 				}
 			}
 			else = {
-				western_norway = {
+				western_norway = { #Added/shifted claims to accomodate all Norwegian culture provinces vanilla covers
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_norway_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -514,12 +530,46 @@ hanseatic_sound_toll_tree = {
 					}
 					add_permanent_claim = ROOT
 				}
-				northern_norway = {
+				trondelag_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = ROOT
+				}
+				#northern_norway = { 
+				#	limit = {
+				#		NOT = { is_core = root }
+				#		NOT = { is_permanent_claim = root }
+				#	}
+				#	add_permanent_claim = ROOT
+				#}
+				21 = {
+					if = {
+						limit = {
+							NOT = { is_core = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				7789 = {
+					if = {
+						limit = {
+							NOT = { is_core = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				7747 = {
+					if = {
+						limit = {
+							NOT = { is_core = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 		}
@@ -534,7 +584,7 @@ hanseatic_sound_toll_tree = {
 			OR = {
 				province_id = 17
 				province_id = 23
-				OR = {
+				OR = { #What is this entire block doing here??
 					AND = {
 						province_id = 370
 						NOT = {
@@ -590,14 +640,14 @@ hanseatic_sound_toll_tree = {
 						}
 					}
 				}
-				20 = {
-					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
-						owner = {
-							is_in_trade_league_with = root
-						}
-					}
-				}
+				#20 = {
+				#	OR = {
+				#		country_or_non_sovereign_subject_holds = ROOT
+				#		owner = {
+				#			is_in_trade_league_with = root
+				#		}
+				#	}
+				#}
 			}
 			else = {
 				17 = {
@@ -606,9 +656,9 @@ hanseatic_sound_toll_tree = {
 				23 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				20 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				#20 = {
+				#	country_or_non_sovereign_subject_holds = ROOT
+				#}   #Trondelag kicked out of checks as it is no longer a CoT.
 			}
 		}
 
@@ -643,12 +693,12 @@ hanseatic_britain_tree = {
 	generic = no
 	ai = yes
 	potential = {
-		has_country_flag = use_paradox_missions
 		tag = HSA
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 	}
 	potential_on_load = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -739,7 +789,7 @@ hanseatic_britain_tree = {
 					add_permanent_claim = root
 				}
 			}
-			249 = { #Ayr
+			3019 = { #Not Ayr, Strathclyde
 				if = {
 					limit = {
 						NOT = { is_core = root }
@@ -758,7 +808,7 @@ hanseatic_britain_tree = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 248
-				province_id = 249
+				province_id = 3019
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			NOT = {
@@ -777,7 +827,7 @@ hanseatic_britain_tree = {
 						owner = { is_in_trade_league_with = root }
 					}
 				}
-				249 = {
+				3019 = {
 					OR = {
 						country_or_non_sovereign_subject_holds = root
 						owner = { is_in_trade_league_with = root }
@@ -786,7 +836,7 @@ hanseatic_britain_tree = {
 			}
 			else = {
 				248 = { country_or_non_sovereign_subject_holds = root }
-				249 = { country_or_non_sovereign_subject_holds = root }
+				3019 = { country_or_non_sovereign_subject_holds = root } #Not Ayr, Strathclyde
 			}
 		}
 
@@ -873,7 +923,7 @@ hanseatic_colonisation_tree = {
 		
 		effect = {
 			newfoundland_area = { add_base_production = 1 }
-			980 = { center_of_trade = 1 }
+			5013 = { center_of_trade = 1 } #Beothuk shifted within BT
 		}
 	}
 
@@ -1125,11 +1175,10 @@ hanseatic_united_tree_2 = {
 		}
 
 		trigger = {
-			num_of_merchants = 6
+			num_of_merchants = 9 #Up from 6 in vanilla
 			trade_income_percentage = 0.50
 			is_great_power = yes
 		}
-
 		effect = {
 			if = {
 				limit = {
@@ -1137,7 +1186,12 @@ hanseatic_united_tree_2 = {
 				}
 				every_country = {
 					limit = { is_in_trade_league_with = root }
-					ROOT = { vassalize = PREV }
+					ROOT = {
+						create_subject = {
+						subject_type = hanseatic_league_member_bt
+						subject = PREV
+						}
+					}
 					hidden_effect = { country_event = { id = emp_mission_events.14 } }
 				}
 			}
@@ -1156,7 +1210,7 @@ hanseatic_united_tree_2 = {
 						}
 						is_at_war = no
 						OR = {
-							capital = 25
+							capital = 25 
 							capital = 38
 							capital = 43
 							capital = 44
@@ -1168,9 +1222,14 @@ hanseatic_united_tree_2 = {
 							capital = 1858
 							capital = 1874
 							capital = 4382
+						} 
+					}
+					ROOT = {
+						create_subject = {
+						subject_type = hanseatic_league_member_bt
+						subject = PREV
 						}
 					}
-					ROOT = { vassalize = PREV }
 					hidden_effect = { country_event = { id = emp_mission_events.14 } }
 				}
 				if = {

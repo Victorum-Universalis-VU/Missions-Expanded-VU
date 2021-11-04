@@ -1410,13 +1410,13 @@ saxony_missions_slot_3 = {
 		required_missions = { saxony_conquer_hesse saxony_conquer_upper_franconia }
 		provinces_to_highlight = {
 			OR = {
-				area = lower_bavaria_area
+				area = vogtland_area
 				area = franconia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_bavaria_area = {
+			vogtland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1430,14 +1430,14 @@ saxony_missions_slot_3 = {
 				name = saxony_conquer_lower_franconia_modifier
 				duration = 3650
 			}
-			upper_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1453,8 +1453,8 @@ saxony_missions_slot_3 = {
 		required_missions = { saxony_conquer_lower_franconia }
 		provinces_to_highlight = {
 			OR = {
-				area = upper_bavaria_area
-				area = upper_swabia_area
+				area = bavaria_area
+				area = swabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1466,11 +1466,11 @@ saxony_missions_slot_3 = {
 				}
 				NOT = { mission_completed = saxony_claim_east_frankish_heritage }
 			}
-			upper_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			upper_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2031,7 +2031,7 @@ saxony_missions_slot_4 = {
 					duration = 5475
 				}
 			}
-			upper_franconia_area = {
+			palatinate_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2053,11 +2053,11 @@ saxony_missions_slot_4 = {
 		position = 10
 		required_missions = { saxony_reunite_saxony_and_thuringia }
 		provinces_to_highlight = {
-			area = upper_franconia_area
+			area = palatinate_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_franconia_area = {
+			palatinate_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2068,7 +2068,7 @@ saxony_missions_slot_4 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			lower_bavaria_area = {
+			wurttemburg_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

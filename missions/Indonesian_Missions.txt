@@ -187,7 +187,7 @@ indonesians_4 = {
 								area = kutai_area
 								area = brunei_area
 								area = kalimantan_area
-								area = banjar_area
+								area = kalimantan_area
 								area = sabah_area
 							}
 						}
@@ -196,7 +196,7 @@ indonesians_4 = {
 						area = kutai_area
 						area = brunei_area
 						area = kalimantan_area
-						area = banjar_area
+						area = kalimantan_area
 						area = sabah_area
 					}
 				}
@@ -207,7 +207,7 @@ indonesians_4 = {
 								area = north_sumatra_area
 								area = central_sumatra_area
 								area = south_sumatra_area
-								area = jambi_area
+								area = palembang_area
 								area = batak_area
 								area = minangkabau_area
 							}
@@ -217,7 +217,7 @@ indonesians_4 = {
 						area = north_sumatra_area
 						area = central_sumatra_area
 						area = south_sumatra_area
-						area = jambi_area
+						area = palembang_area
 						area = batak_area
 						area = minangkabau_area
 					}
@@ -230,8 +230,8 @@ indonesians_4 = {
 								area = central_java_area
 								area = west_java_area
 								area = lesser_sunda_islands_area
-								area = surabaya_area
-								area = banten_area
+								area = central_java_area
+								area = west_java_area
 							}
 						}
 					}
@@ -240,8 +240,8 @@ indonesians_4 = {
 						area = central_java_area
 						area = west_java_area
 						area = lesser_sunda_islands_area
-						area = surabaya_area
-						area = banten_area
+						area = central_java_area
+						area = west_java_area
 					}
 				}
 				AND = { # malay peninsula
@@ -251,8 +251,8 @@ indonesians_4 = {
 								area = tenasserim_area
 								area = north_tenasserim_area
 								area = malaya_area
-								area = johor_area
-								area = north_malaya_area
+								area = indonesian_islands_area
+								area = kedah_area
 								area = malacca_area
 							}
 						}
@@ -261,8 +261,8 @@ indonesians_4 = {
 						area = tenasserim_area
 						area = north_tenasserim_area
 						area = malaya_area
-						area = johor_area
-						area = north_malaya_area
+						area = indonesian_islands_area
+						area = kedah_area
 						area = malacca_area
 					}
 				}
@@ -273,15 +273,15 @@ indonesians_4 = {
 								area = molluca_area
 								area = sulawesi_area
 								area = south_sulawesi_area
-								area = makassar_area
+								area = south_sulawesi_area
 								area = spice_islands_area
 							}
 						}
 					}
 					OR = {
 						area = malaya_area
-						area = johor_area
-						area = north_malaya_area
+						area = indonesian_islands_area
+						area = kedah_area
 						area = malacca_area
 					}
 				}
@@ -292,7 +292,6 @@ indonesians_4 = {
 								area = luzon_area
 								area = southern_luzon_area
 								area = mindanao_area
-								area = west_mindanao_area
 								area = visayas_area
 								area = palawan_area
 							}
@@ -302,7 +301,6 @@ indonesians_4 = {
 						area = luzon_area
 						area = southern_luzon_area
 						area = mindanao_area
-						area = west_mindanao_area
 						area = visayas_area
 						area = palawan_area
 					}
@@ -321,7 +319,7 @@ indonesians_4 = {
 								area = kutai_area
 								area = brunei_area
 								area = kalimantan_area
-								area = banjar_area
+								area = kalimantan_area
 								area = sabah_area
 							}
 						}
@@ -334,7 +332,7 @@ indonesians_4 = {
 						type = all
 						religion = ROOT
 					}
-					banjar_area = {
+					kalimantan_area = {
 						type = all
 						religion = ROOT
 					}
@@ -358,8 +356,8 @@ indonesians_4 = {
 								area = central_java_area
 								area = west_java_area
 								area = lesser_sunda_islands_area
-								area = surabaya_area
-								area = banten_area
+								area = central_java_area
+								area = west_java_area
 							}
 						}
 					}
@@ -375,11 +373,11 @@ indonesians_4 = {
 						type = all
 						religion = ROOT
 					}
-					surabaya_area = {
+					central_java_area = {
 						type = all
 						religion = ROOT
 					}
-					banten_area = {
+					west_java_area = {
 						type = all
 						religion = ROOT
 					}
@@ -398,7 +396,7 @@ indonesians_4 = {
 								area = north_sumatra_area
 								area = central_sumatra_area
 								area = south_sumatra_area
-								area = jambi_area
+								area = palembang_area
 								area = batak_area
 								area = minangkabau_area
 							}
@@ -412,7 +410,7 @@ indonesians_4 = {
 						type = all
 						religion = ROOT
 					}
-					jambi_area = {
+					palembang_area = {
 						type = all
 						religion = ROOT
 					}
@@ -445,8 +443,8 @@ indonesians_4 = {
 								area = tenasserim_area
 								area = north_tenasserim_area
 								area = malaya_area
-								area = johor_area
-								area = north_malaya_area
+								area = indonesian_islands_area
+								area = kedah_area
 								area = malacca_area
 							}
 						}
@@ -463,11 +461,11 @@ indonesians_4 = {
 						type = all
 						religion = ROOT
 					}
-					johor_area = {
+					indonesian_islands_area = {
 						type = all
 						religion = ROOT
 					}
-					north_malaya_area = {
+					kedah_area = {
 						type = all
 						religion = ROOT
 					}
@@ -483,7 +481,7 @@ indonesians_4 = {
 								area = molluca_area
 								area = sulawesi_area
 								area = south_sulawesi_area
-								area = makassar_area
+								area = south_sulawesi_area
 								area = spice_islands_area
 							}
 						}
@@ -509,7 +507,7 @@ indonesians_4 = {
 							is_empty = yes
 						}
 					}
-					makassar_area = {
+					south_sulawesi_area = {
 						type = all
 						OR = {
 							religion = ROOT
@@ -531,7 +529,6 @@ indonesians_4 = {
 								area = luzon_area
 								area = southern_luzon_area
 								area = mindanao_area
-								area = west_mindanao_area
 								area = visayas_area
 								area = palawan_area
 							}
@@ -552,13 +549,6 @@ indonesians_4 = {
 						}
 					}
 					mindanao_area = {
-						type = all
-						OR = {
-							religion = ROOT
-							is_empty = yes
-						}
-					}
-					west_mindanao_area = {
 						type = all
 						OR = {
 							religion = ROOT
@@ -736,13 +726,13 @@ indonesians_5 = {
 			province_id = 2715
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_building = weapons }
+				NOT = { has_manufactory_trigger = yes }
 			}
 		}
 		trigger = {
 			2715 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_building = weapons
+				has_manufactory_trigger = yes
 			}
 		}
 		effect = {
@@ -762,13 +752,13 @@ indonesians_5 = {
 			province_id = 639
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_building = textile }
+				NOT = { has_manufactory_trigger = yes }
 			}
 		}
 		trigger = {
 			639 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_building = textile
+				has_manufactory_trigger = yes
 			}
 		}
 		effect = {
@@ -788,13 +778,13 @@ indonesians_5 = {
 			province_id = 623
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_building = tradecompany }
+				NOT = { has_manufactory_trigger = yes }
 			}
 		}
 		trigger = {
 			623 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_building = tradecompany
+				has_manufactory_trigger = yes
 			}
 		}
 		effect = {
@@ -817,17 +807,17 @@ indonesians_5 = {
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_building = tradecompany }
+				NOT = { has_manufactory_trigger = yes }
 			}
 		}
 		trigger = {
 			649 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_building = tradecompany
+				has_manufactory_trigger = yes
 			}
 			650 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_building = tradecompany
+				has_manufactory_trigger = yes
 			}
 		}
 		effect = {
@@ -853,8 +843,7 @@ indonesians_5 = {
 			province_id = 2728
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_building = wharf }
-				NOT = { has_building = trade_depot }
+				NOT = { has_manufactory_trigger = yes }
 			}
 		}
 		trigger = {
@@ -881,7 +870,6 @@ indonesians_5 = {
 						}
 					}
 					OR = {
-						has_building = wharf
 						has_building = trade_depot
 						has_manufactory_trigger = yes
 					}

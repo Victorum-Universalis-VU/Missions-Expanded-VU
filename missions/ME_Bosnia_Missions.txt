@@ -43,6 +43,7 @@ BOS_missions_1 = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
 			7732 = {
 				if = {
 					limit = {

@@ -200,32 +200,16 @@ ned_colonial_group = {
 		completed_by = 1660.1.1
 		
 		provinces_to_highlight = {
-			OR = {
-				province_id = 833
-				province_id = 1177
-				province_id = 1179
-			}
-			NOT = { owned_by = ROOT }
+			colonial_region = colonial_cape
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 				
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = ned_south_africa_colony.tooltip
-				OR = {
-					833 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1177 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					1179 = {
-						owned_by = ROOT
-						is_city = yes
-					}
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				colonial_region = colonial_cape
+				is_city = yes
 			}
 		}
 		
@@ -341,12 +325,18 @@ ned_colonial_group_two = {
 				colonial_australia = {
 					has_discovered = ROOT
 				}
-				trade_company_indonesia = {
+				colonial_indonesia = { #To disable if the trade company is reenabled
 					has_discovered = ROOT
 				}
-				trade_company_moluccas = {
+				trade_company_polynesia = { #To disable if moluccas trade charter gets back in
 					has_discovered = ROOT
 				}
+				#trade_company_indonesia = { #Cut for now
+				#	has_discovered = ROOT
+				#}
+				#trade_company_moluccas = { #Cut for now
+				#	has_discovered = ROOT
+				#}
 			}
 		}
 		
@@ -354,7 +344,7 @@ ned_colonial_group_two = {
 			create_admiral = {
 				tradition = 80
 			}
-			north_malaya_area = {
+			kedah_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -375,7 +365,7 @@ ned_colonial_group_two = {
 				}
 				add_permanent_claim = ROOT
 			}
-			johor_area = {
+			indonesian_islands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -437,17 +427,17 @@ ned_colonial_group_three = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = north_malaya_area
+				area = kedah_area
 				area = malaya_area
 				area = malacca_area
-				area = johor_area
+				area = indonesian_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
-			north_malaya_area = {
+			kedah_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -459,7 +449,7 @@ ned_colonial_group_three = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			johor_area = {
+			indonesian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

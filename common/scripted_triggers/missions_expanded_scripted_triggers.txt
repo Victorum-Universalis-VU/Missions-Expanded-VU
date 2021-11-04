@@ -391,7 +391,7 @@ is_italian_minor = {
 		tag = URB
 		tag = VRN
 		#from FE
-		tag = LML
+		#tag = LML
 	}
 }
 
@@ -410,6 +410,6 @@ was_italian_minor = {
 		was_tag = URB
 		was_tag = VRN
 		#from FE
-		was_tag = LML
+		#was_tag = LML
 	}
 }

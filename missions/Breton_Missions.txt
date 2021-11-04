@@ -35,12 +35,39 @@ bri_1 = {
 			}
 		}
 		effect = {
-			loire_area = {
+			orleans_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			7979 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4389 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7935 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -48,17 +75,34 @@ bri_1 = {
 		icon = mission_unite_home_region
 		required_missions = { bri_build_alliances }
 		provinces_to_highlight = {
-			area = loire_area
+			OR = {
+				area = orleans_area
+				province_id = 7979
+				province_id = 4389 
+				province_id = 7935
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 2 #all three are owned by different countries in 1444, too harsh to make you annoy all three
-				area = loire_area
+				value = 6 #5 owned by Anjou, 2 by England, 3 by France. You must go against 2 at least.
+				OR = { 
+					area = orleans_area
+					province_id = 7979 
+					province_id = 4389 
+					province_id = 7935
+				}
 			}
 		}
 		effect = {
 			normandy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_normandy_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -71,13 +115,19 @@ bri_1 = {
 		icon = mission_landsknecht_soldier
 		required_missions = { bri_expand_up_the_loire }
 		provinces_to_highlight = {
-			area = normandy_area
+			OR = {
+				area = normandy_area
+				area = lower_normandy_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			normandy_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = lower_normandy_area
+					area = normandy_area
+				}
 			}
 		}
 		effect = {
@@ -88,14 +138,21 @@ bri_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			orleans_area = {
+			loire_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			berry_touraine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_east_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
 					NOT = { is_core = root }
@@ -110,9 +167,9 @@ bri_1 = {
 		required_missions = { bri_seize_normandy }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 183
 				area = ile_de_france_area
-				area = orleans_area
+				area = loire_area
+				area = berry_touraine_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -125,7 +182,11 @@ bri_1 = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					orleans_area = {
+					loire_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					berry_touraine_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -205,15 +266,15 @@ bri_2 = {
 		icon = mission_invade_island
 		required_missions = { bri_brest }
 		provinces_to_highlight = {
-			colonial_region = colonial_canada
+			colonial_region = colonial_newfoundland
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			has_port = yes
 			has_discovered = root
 		}
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = has_colony_in_colonial_canada
-				colonial_canada = {
+				tooltip = has_colony_in_colonial_newfoundland
+				colonial_newfoundland = {
 					owner = {
 						is_colonial_nation_of = root
 					}

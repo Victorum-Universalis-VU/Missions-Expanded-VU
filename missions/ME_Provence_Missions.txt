@@ -647,7 +647,7 @@ PRO_Missions_2 = {
 					duration = -1
 				}
 			}
-			north_atlantic_area = {
+			north_atlantic_region = {
 				discover_country = ROOT
 			}
 		}

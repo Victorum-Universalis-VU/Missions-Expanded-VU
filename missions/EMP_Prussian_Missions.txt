@@ -6,8 +6,8 @@ emp_bra_pru_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
+		has_dlc = "Emperor"
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
@@ -197,9 +197,11 @@ emp_bra_pru_1 = {
 				has_tax_building_trigger = yes
 				has_production_building_trigger = yes
 			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			50 = {
+				owned_by = ROOT
 				development = 25
 				has_tax_building_trigger = yes
 				has_production_building_trigger = yes
@@ -220,8 +222,8 @@ emp_bra_pru_1_b = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
+		has_dlc = "Emperor"
 		NOT = { map_setup = map_setup_random }
 		tag = PRU
 	}
@@ -290,8 +292,8 @@ emp_bra_pru_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
+		has_dlc = "Emperor"
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
@@ -320,32 +322,19 @@ emp_bra_pru_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#upper_franconia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = { is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 		}
 	}
 	emp_brapru_franconian_conquest = {
 		icon = mission_eastern_european_city
 		required_missions = { emp_brapru_ansbach_succession }
 		provinces_to_highlight = {
-			OR = {
-				area = franconia_area
-				#area = upper_franconia_area
-			}
+			area = franconia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				OR = {
-					area = franconia_area
-					#area = upper_franconia_area
-				}
+				area = franconia_area
 			}
 		}
 		effect = {
@@ -532,8 +521,8 @@ emp_bra_pru_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
+		has_dlc = "Emperor"
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
@@ -556,13 +545,13 @@ emp_bra_pru_3 = {
 			}
 		}
 		effect = {
-			#northern_saxony_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = { is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+			saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			lower_saxony_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -595,7 +584,7 @@ emp_bra_pru_3 = {
 		required_missions = { emp_brapru_show_of_strength }
 		provinces_to_highlight = {
 			OR = {
-				#area = northern_saxony_area
+				area = saxony_area
 				area = lower_saxony_area
 				area = weser_area
 				province_id = 1931
@@ -608,7 +597,7 @@ emp_bra_pru_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
-					#area = northern_saxony_area
+					area = saxony_area
 					area = lower_saxony_area
 					area = weser_area
 				}
@@ -728,7 +717,18 @@ emp_bra_pru_3 = {
 					province_id = 1775
 					NOT = {
 						owned_by = ROOT
-						has_construction = kiel_canal
+						if = {
+							limit = {
+								has_dlc = "Leviathan"
+							}
+							has_great_project = {
+								type = kiel_canal
+								tier = 1
+							} 
+						}
+						else = {
+							has_construction = kiel_canal
+						}
 					}
 				}
 				AND = {
@@ -739,8 +739,20 @@ emp_bra_pru_3 = {
 		}
 		trigger = {	
 			1775 = {
-				owned_by = ROOT
-				has_construction = kiel_canal
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					owned_by = ROOT
+					has_great_project = {
+						type = kiel_canal
+						tier = 1
+					} 
+				}
+				else = {
+					owned_by = ROOT
+					has_construction = kiel_canal
+				}
 			}
 			4141 = {
 				owned_by = ROOT
@@ -785,8 +797,8 @@ emp_bra_pru_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
+		has_dlc = "Emperor"
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA

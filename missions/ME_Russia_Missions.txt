@@ -1140,7 +1140,7 @@ me_RUS_missions_3_2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		OR = {
 			has_country_modifier = brought_western_administrators
@@ -2183,7 +2183,7 @@ russia_great_northern_war_incident2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = rus_gnw
 	}
@@ -2234,7 +2234,7 @@ russia_great_northern_war_incident3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			#tag = RRR
 		}
 		has_country_flag = rus_gnw
 	}
