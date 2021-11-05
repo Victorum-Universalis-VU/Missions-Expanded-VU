@@ -17,7 +17,7 @@ me_venice_missions_1 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -522,7 +522,7 @@ me_venice_missions_2 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -804,7 +804,7 @@ me_venice_missions_3 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -1278,7 +1278,7 @@ me_venice_missions_4 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -1636,7 +1636,7 @@ me_venice_missions_5 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
