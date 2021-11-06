@@ -3081,7 +3081,7 @@ Ottoman_Missions_5 = {
 				type = all 
 				owned_by = ROOT 
 			} 
-			365 = { #sinai 
+			syrian_desert_area = { #sinai 
 				owned_by = ROOT 
 			} 
 			4268 = { #aqabah 

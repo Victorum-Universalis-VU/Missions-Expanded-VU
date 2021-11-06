@@ -37,13 +37,6 @@ ETH_slot_2 = {
 				name = jewish_subjugation
 				duration = 9125
 			}
-			shewa_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			southern_ethiopia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -51,39 +44,27 @@ ETH_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			hadiya_area = {
+			MED = { 
+				every_owned_province = { 
+					limit = { 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT 
+				} 
+			}
+			1218 = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			2766 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
+			2756 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
-			}
-			2787 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			1230 = {
-				if = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -92,37 +73,41 @@ ETH_slot_2 = {
 		icon = mission_have_two_subjects
 		required_missions = { eth_jews }
 		provinces_to_highlight = {
-			OR = {
-				area = southern_ethiopia_area
-				area = damot_area
-				province_id = 2787
-				province_id = 1230
-				province_id = 2766
+				OR = {
+					area = southern_ethiopia_area
+					province_id = 1218
+					province_id = 2756
+					AND = {
+						owned_by = MED
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				OR = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { religion = coptic }
+				}
 			}
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { religion = coptic }
-			}
-		}
 		trigger = {
 			southern_ethiopia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = coptic
 			}
-			damot_area = {
+			hadiya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = coptic
 			}
-			2766 = {
+			2761 = {
 				country_or_non_sovereign_subject_holds = ROOT
+				religion = coptic
 			}
-			2787 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1230 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				war_score_against = {
+					who = MED
+					value = 50
+				}
+				NOT = { exists = MED }
 			}
 		}
 		effect = {
