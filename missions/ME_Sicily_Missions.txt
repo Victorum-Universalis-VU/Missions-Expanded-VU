@@ -17,7 +17,7 @@ sicily_mission_1 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -238,7 +238,7 @@ sicily_mission_2 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -469,7 +469,7 @@ sicily_mission_3 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -900,7 +900,7 @@ sicily_mission_4 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}
@@ -1113,7 +1113,7 @@ sicily_mission_5 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								was_tag = LVN
+								#was_tag = LMN
 							}
 						}
 					}

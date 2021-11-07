@@ -1387,7 +1387,7 @@ Ottoman_Missions_3 = {
 					tradition = 75 
 				} 
 			} 
-			145 = { 
+			thrace_area = { 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1396,7 +1396,7 @@ Ottoman_Missions_3 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
-			146 = { 
+			northern_thrace_area = { 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1405,7 +1405,7 @@ Ottoman_Missions_3 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
-			1773 = { 
+			morea_area = { 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1414,7 +1414,7 @@ Ottoman_Missions_3 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
-			151 = { 
+			western_aegean_area = { 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1423,106 +1423,7 @@ Ottoman_Missions_3 = {
 					add_permanent_claim = ROOT 
 				} 
 			} 
-			7137 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			6931 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7138 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7139 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			1764 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			3177 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7111 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			4701 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			3178 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7101 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7102 = {
-				if = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				}
-			}
-			7163 = {
+			aetolia_area = {
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1581,7 +1482,7 @@ Ottoman_Missions_3 = {
 			else = { 
 				add_prestige = 10 
 			} 
-			330 = { #trebizond 
+			pontus_area = { #trebizond 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1599,12 +1500,12 @@ Ottoman_Missions_3 = {
 			TUR_candar 
 		} 
 		provinces_to_highlight = { 
-			province_id = 330 
+			area = pontus_area
 			NOT = { owned_by = ROOT } 
 		} 
 		position = 4 
 		trigger = { 
-			330 = { 
+			pontus_area = { 
 				owned_by = ROOT 
 			} 
 		} 
@@ -3180,7 +3081,7 @@ Ottoman_Missions_5 = {
 				type = all 
 				owned_by = ROOT 
 			} 
-			365 = { #sinai 
+			syrian_desert_area = { #sinai 
 				owned_by = ROOT 
 			} 
 			4268 = { #aqabah 
