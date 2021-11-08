@@ -1594,10 +1594,15 @@ naples_missions_4 = {
 		position = 2
 		provinces_to_highlight = {
 			area = tuscany_area
+			area = south_tuscany_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_tuscany_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
