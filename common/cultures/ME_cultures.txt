@@ -471,7 +471,26 @@ british = {
 	occitain_UKS = {
 		primary = UKS
 	}
-	wallonian_UKS = {
+#added missing french cultures
+	arpitan_UKS = {
+		primary = UKS
+	}
+	poitevin_UKS = {
+		primary = UKS
+	}
+	angevin_UKS = {
+		primary = UKS
+	}
+	lorraine_UKS = {
+		primary = UKS
+	}
+	auvergnat_UKS = {
+		primary = UKS
+	}
+	gallo_UKS = {
+		primary = UKS
+	}
+	wallonian_UKS = {		#could probably be removed, not used in shift event
 		primary = UKS
 	}
 	breton_UKS = {
