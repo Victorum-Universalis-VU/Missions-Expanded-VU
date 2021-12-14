@@ -240,11 +240,19 @@
  cosmopolitan_french_UKS: "Francien"
  gascon_UKS: "Gascon"
  normand_UKS: "Norman"
- aquitaine_UKS: "Aquitanian"
+ aquitaine_UKS: "Provençal"
  burgundian_UKS: "Burgundian"
  occitain_UKS: "Occitan"
- wallonian_UKS: "Walloon"
+ wallonian_UKS: "Walloon" #could probably be removed
  breton_UKS: "Breton"
+ #added missing french cultures
+ arpitan_UKS: "Arpitan"
+ poitevin_UKS: "Poitevin"
+ angevin_UKS: "Norman"
+ lorraine_UKS: "Lorraine"
+ auvergnat_UKS: "Auvergnat"
+ gallo_UKS: "Gallo"
+ 
  
  # Buildings:
  building_UKS_Palace: "Great Palace"

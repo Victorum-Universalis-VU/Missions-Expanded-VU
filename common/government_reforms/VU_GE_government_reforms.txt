@@ -1,0 +1,39 @@
+#############################
+###########Tier4#############
+############################# 
+#Tier 4 {
+	#######
+	#Ottoman Reforms By Clavin, NOT PROPERTY OF GE
+	#######
+	tur_reform_beylerbeys = {
+		icon = "parliament_hall"
+		allow_normal_conversion = yes
+		modifiers = {
+			governing_capacity = 250
+		}
+		trigger = {
+			mission_completed = TUR_beylerbeys
+		}
+		potential = {
+			tag = TUR
+			mission_completed = TUR_beylerbeys
+			NOT = { mission_completed = TUR_eyalets }
+		}
+	}
+
+	tur_reform_eyalets = {
+		icon = "parliament_hall"
+		allow_normal_conversion = yes
+		modifiers = {
+			governing_capacity = 350
+			state_maintenance_modifier = -0.05
+		}
+		trigger = {
+			mission_completed = TUR_beylerbeys
+		}
+		potential = {
+			tag = TUR
+			mission_completed = TUR_eyalets 
+		}
+	}
+}
