@@ -1162,7 +1162,7 @@ kurland_missions_5 = {
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
-			province_id = 39
+			province_id = 7839
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { has_building = grand_shipyard }
@@ -1170,14 +1170,14 @@ kurland_missions_5 = {
 			}
 		}
 		trigger = {
-			39 = {
+			7839 = {
 				owned_by = ROOT
 				has_building = grand_shipyard
 				has_building = drydock
 			}
 		}
 		effect = {
-			39 = {
+			7839 = {
 				add_province_modifier = {
 					name = kur_colonial_port
 					duration = -1
