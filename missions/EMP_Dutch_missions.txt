@@ -448,7 +448,8 @@ emp_ned_slot2_indies_branch = {
 	potential_on_load = {
 		has_dlc = "Emperor"
 	}
-	potential = {has_country_flag = use_paradox_missions
+	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -546,8 +547,11 @@ emp_ned_slot2_indies_branch = {
 		provinces_to_highlight = {
 			OR = {
 				trade_company_region = trade_company_polynesia
-				#trade_company_region = trade_company_moluccas
-				#trade_company_region = trade_company_indonesia
+				colonial_indonesia = {
+					OR = {
+						NOT = { country_or_non_sovereign_subject = ROOT }
+					}
+				}
 			}
 			is_sea = no
 			NOT = { owned_by = ROOT }
@@ -559,8 +563,9 @@ emp_ned_slot2_indies_branch = {
 				all_owned_province = {
 					OR = {
 						trade_company_region = trade_company_polynesia
-						#trade_company_region = trade_company_moluccas
-						#trade_company_region = trade_company_indonesia
+						colonial_indonesia = { 
+							owned_by = { country_or_non_sovereign_subject = ROOT }
+						}
 					}
 				}
 				amount = 15
@@ -733,7 +738,7 @@ emp_ned_slot3_branch = {
 		completed_by = 1621.6.3
 		
 		provinces_to_highlight = {
-		    OR = {
+			OR = {
 			    region = guinea_region
 			    region = lower_guinea_region
 		    }
@@ -764,7 +769,7 @@ emp_ned_slot3_branch = {
 		required_missions = { emp_ned_charter_the_voc }
 		position = 6
 		completed_by = 1652.1.1
-
+		
 		provinces_to_highlight = {
 			colonial_region = colonial_cape
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }

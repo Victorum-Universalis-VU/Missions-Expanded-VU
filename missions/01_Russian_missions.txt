@@ -20,15 +20,12 @@ consolidate_expand_russia_missions = {
 		completed_by = 1478.1.15
 		provinces_to_highlight = {
 			OR = {
-				region = russia_region
-				region = ural_region
-				region = scandinavia_region
-			}
-			OR = {
 				owned_by = NOV
-				province_id = 310			
+				province_id = 310
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			OR = {
@@ -39,28 +36,26 @@ consolidate_expand_russia_missions = {
 		effect = {
 			russia_region = {
 				limit = {
-					owned_by = NOV
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			ural_region = {
 				limit = {
-					owned_by = NOV
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			scandinavia_region = {
 				limit = {
-					owned_by = NOV
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
+			
 		}
 	}
 	subjugate_novgorod = {
@@ -72,42 +67,29 @@ consolidate_expand_russia_missions = {
 				region = russia_region
 				region = ural_region
 			}
-			OR = {
-				owner = { tag = NOV }
-				province_id = 310
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			russia_region = {
 				type = all
-				OR = {
-					NOT = { owned_by = NOV }
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			ural_region = {
 				type = all
-				OR = {
-					NOT = { owned_by = NOV }
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			scandinavia_region = {
 				type = all
-				OR = {
-					NOT = { owned_by = NOV }
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			310 = {
 				country_or_non_sovereign_subject_holds = ROOT
+			}
 			}
 		}
 		effect = {
 			russia_region = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -140,13 +122,14 @@ consolidate_expand_russia_missions = {
 		provinces_to_highlight = {
 			region = russia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
+			# integrate minors
 			russia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -157,7 +140,7 @@ consolidate_expand_russia_missions = {
 			}
 			ruthenia_region = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -213,42 +196,42 @@ consolidate_expand_russia_missions = {
 			}
 			finland_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			laponia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			bothnia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			estonia_ingria_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			curonia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			livonia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -381,28 +364,28 @@ russia_steppe_siberia_missions = {
 		effect = {
 			kazan_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			#volga_area = {
 			#	limit = {
-			#		NOT = { owned_by = ROOT	}
+			#		NOT = { is_permanent_claim = ROOT }
 			#		NOT = { is_core = ROOT	}
 			#	}
 			#	add_permanent_claim = ROOT
 			#}
 			kama_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			samara_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -475,28 +458,28 @@ russia_steppe_siberia_missions = {
 			}
 			tambov_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_don_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			astrakhan_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			saratov_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -577,28 +560,28 @@ russia_steppe_siberia_missions = {
 			}
 			crimea_region = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			ural_region = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			nogai_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_yik_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -606,7 +589,7 @@ russia_steppe_siberia_missions = {
 			west_siberia_region = {
 				limit = {
 					is_empty = no
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -675,12 +658,9 @@ russia_siberian_missions_slot = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = russia_westsiberia.tooltip
-				num_of_owned_provinces_with = {
-					region = west_siberia_region
-					value = 15
-				}
+			num_of_owned_provinces_with = {
+				region = west_siberia_region
+				value = 15
 			}
 		}
 		effect = {
@@ -688,8 +668,6 @@ russia_siberian_missions_slot = {
 				limit = {
 					NOT = {
 						tag = RUS
-					}
-					NOT = {
 						has_dlc = "Third Rome"
 					}
 				}
@@ -725,12 +703,9 @@ russia_siberian_missions_slot = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = russia_eastsiberia.tooltip
-				num_of_owned_provinces_with = {
-					region = east_siberia_region
-					value = 10
-				}
+			num_of_owned_provinces_with = {
+				region = east_siberia_region
+				value = 10
 			}
 			owns_core_province = 1043
 		}

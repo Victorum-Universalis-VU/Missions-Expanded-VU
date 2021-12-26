@@ -7,6 +7,7 @@ indonesians_3 = {
 		culture_group = malay
 		NOT = { tag = MAJ }
 		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
 	
@@ -31,7 +32,11 @@ indonesians_3 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 1361
+					ROOT = {
+						home_trade_node = {
+							province_id = PREV_PREV
+						}
+					}
 					OR = {
 						NOT = { is_strongest_trade_power = ROOT }
 						NOT = { highest_value_trade_node = yes }
@@ -110,7 +115,7 @@ indonesians_3 = {
 		}
 	}
 	indonesia_invade_the_mainland = {
-		icon = mission_asian_cannon
+		icon = mission_asian_city
 		required_missions = { indonesia_unite_nusantara }
 		provinces_to_highlight = {
 			region = indo_china_region
@@ -150,6 +155,7 @@ indonesians_4 = {
 		culture_group = malay
 		NOT = { tag = MAJ }
 		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
 	
@@ -177,7 +183,6 @@ indonesians_4 = {
 		icon = mission_hands_praying
 		required_missions = {  }
 		provinces_to_highlight = {
-			is_empty = no
 			NOT = { religion = ROOT }
 			OR = {
 				AND = { # borneo
@@ -187,7 +192,6 @@ indonesians_4 = {
 								area = kutai_area
 								area = brunei_area
 								area = kalimantan_area
-								area = kalimantan_area
 								area = sabah_area
 							}
 						}
@@ -195,7 +199,6 @@ indonesians_4 = {
 					OR = {
 						area = kutai_area
 						area = brunei_area
-						area = kalimantan_area
 						area = kalimantan_area
 						area = sabah_area
 					}
@@ -273,7 +276,6 @@ indonesians_4 = {
 								area = molluca_area
 								area = sulawesi_area
 								area = south_sulawesi_area
-								area = south_sulawesi_area
 								area = spice_islands_area
 							}
 						}
@@ -308,17 +310,15 @@ indonesians_4 = {
 			}
 		}
 		trigger = {
+			NOT = { current_age = age_of_discovery }
 			custom_trigger_tooltip = {
 				tooltip = indonesia_convert_island.tooltip
-				NOT = { current_age = age_of_discovery }
-				NOT = { religion_group = pagan }
 				if = { # borneo
 					limit = {
 						capital_scope = {
 							OR = {
 								area = kutai_area
 								area = brunei_area
-								area = kalimantan_area
 								area = kalimantan_area
 								area = sabah_area
 							}
@@ -329,10 +329,6 @@ indonesians_4 = {
 						religion = ROOT
 					}
 					brunei_area = {
-						type = all
-						religion = ROOT
-					}
-					kalimantan_area = {
 						type = all
 						religion = ROOT
 					}
@@ -481,7 +477,6 @@ indonesians_4 = {
 								area = molluca_area
 								area = sulawesi_area
 								area = south_sulawesi_area
-								area = south_sulawesi_area
 								area = spice_islands_area
 							}
 						}
@@ -494,13 +489,6 @@ indonesians_4 = {
 						}
 					}
 					sulawesi_area = {
-						type = all
-						OR = {
-							religion = ROOT
-							is_empty = yes
-						}
-					}
-					south_sulawesi_area = {
 						type = all
 						OR = {
 							religion = ROOT
@@ -715,24 +703,25 @@ indonesians_5 = {
 		technology_group = chinese
 		culture_group = malay
 		NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		NOT = { has_reform = pirate_republic_reform }
 	}
 	has_country_shield = yes
 	
 	indonesia_palopo_iron = {
-		icon = mission_war_chest
+		icon = mission_have_manufactories
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 2715
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = weapons }
 			}
 		}
 		trigger = {
 			2715 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = weapons
 			}
 		}
 		effect = {
@@ -752,13 +741,13 @@ indonesians_5 = {
 			province_id = 639
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = textile }
 			}
 		}
 		trigger = {
 			639 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = textile
 			}
 		}
 		effect = {
@@ -771,20 +760,20 @@ indonesians_5 = {
 		}
 	}
 	indonesia_lampung_pepper = {
-		icon = mission_war_chest
+		icon = mission_rb_colonise_spice_islands
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 623
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = tradecompany }
 			}
 		}
 		trigger = {
 			623 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 		}
 		effect = {
@@ -797,7 +786,7 @@ indonesians_5 = {
 		}
 	}
 	indonesia_moluccan_cloves = {
-		icon = mission_war_chest
+		icon = mission_rb_monopolize_the_channel
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
@@ -807,17 +796,17 @@ indonesians_5 = {
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = tradecompany }
 			}
 		}
 		trigger = {
 			649 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 			650 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_manufactory_trigger = yes
+				has_building = tradecompany
 			}
 		}
 		effect = {
@@ -836,14 +825,15 @@ indonesians_5 = {
 		}
 	}
 	indonesia_sea_cucumbers = {
-		icon = mission_war_chest
+		icon = mission_junk_boat
 		required_missions = { }
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			province_id = 2728
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_manufactory_trigger = yes }
+				NOT = { has_building = wharf }
+				NOT = { has_building = trade_depot }
 			}
 		}
 		trigger = {
@@ -870,6 +860,7 @@ indonesians_5 = {
 						}
 					}
 					OR = {
+						has_building = wharf
 						has_building = trade_depot
 						has_manufactory_trigger = yes
 					}

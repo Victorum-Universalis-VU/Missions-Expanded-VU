@@ -6,8 +6,8 @@ swiss_missions_1 = {
 		 has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		tag = SWI
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 	}
@@ -31,6 +31,7 @@ swiss_missions_1 = {
 		}
 		effect = {
 			1867 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
+			1871 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
 		}
 	}
 	emp_swi_geneva = {
@@ -40,11 +41,16 @@ swiss_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 4720
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
+			SWI = {
+				NOT = { 
+					is_subject_of = GNV 
+				}
+			}
 			OR = {
 				4720 = { country_or_non_sovereign_subject_holds = ROOT }
 				GNV = {
@@ -94,7 +100,7 @@ swiss_missions_1 = {
 				}
 				support_independence_of = GNV
 			}
-			4720 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
+			add_mil_power = 50
 		}
 	}
 }
@@ -123,21 +129,18 @@ swiss_missions_2 = {
 			stability = 1
 		}
 		effect = {
-			165 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
-		switzerland_area  = {
-			limit = {
-				NOT = { is_core = root }
-				NOT = { is_permanent_claim = root }
-			}
-			add_permanent_claim = root
-		}
-		romandie_area  = {
+			switzerland_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_core = ROOT
 			}
+			romandie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}			
 		}
 	}
 	emp_swi_three_leagues = {
@@ -250,7 +253,7 @@ swiss_missions_2 = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
-			}
+			}		
 		}
 	}
 	emp_swi_imperial_status = {
@@ -527,6 +530,7 @@ swiss_missions_5 = {
 			OR = {
 				religion = reformed
 				religion = protestant
+				religion = hussite
 				council_position = concilatory
 				council_position = harsh
 			}
@@ -560,6 +564,7 @@ swiss_missions_5 = {
 					OR = {
 						religion = reformed
 						religion = protestant
+						religion = hussite
 					}
 				}
 				every_neighbor_country = {

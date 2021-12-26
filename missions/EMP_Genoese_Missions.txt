@@ -1,3 +1,4 @@
+
 emp_gen_missions_general = {
 	slot = 3
 	generic = no
@@ -6,10 +7,10 @@ emp_gen_missions_general = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
-	#	NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
+		#NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -100,9 +101,9 @@ emp_gen_missions_general_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -302,9 +303,9 @@ emp_gen_missions_western_med = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -453,7 +454,6 @@ emp_gen_missions_western_med = {
 					key = gen_dominance_of_tyrrhennian
 				}
 			}
-
 			sicily_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -782,9 +782,9 @@ emp_gen_missions_western_med_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = GEN
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

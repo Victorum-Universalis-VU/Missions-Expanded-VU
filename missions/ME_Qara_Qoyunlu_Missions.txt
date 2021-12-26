@@ -414,14 +414,14 @@ QAR_missions_3 = {
 			azerbaijan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			luristan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -457,28 +457,28 @@ QAR_missions_3 = {
 			iraq_e_ajam_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			farsistan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			persian_gulf_coast = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			isfahan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -520,7 +520,7 @@ QAR_missions_3 = {
 			persia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -561,7 +561,7 @@ QAR_missions_4 = {
 				shirvan_area  = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 						owned_by = SRV
 					}
 					add_permanent_claim = ROOT
@@ -602,14 +602,14 @@ QAR_missions_4 = {
 			shirvan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			dagestan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -664,20 +664,16 @@ QAR_missions_5 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4295
+				province_id = 2307
 				province_id = 4296
-				province_id = 5295
-				province_id = 5330
-				province_id = 5331
+				province_id = 4302
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns = 4295
+			owns = 2307
 			owns = 4296
-			owns = 5295
-			owns = 5330
-			owns = 5331
+			owns = 4302
 			NOT = { exists = BTL }
 		}
 		effect = {
@@ -750,18 +746,18 @@ QAR_missions_5 = {
 		}
 		effect = {
 			add_prestige = 25
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			imereti_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			samtskhe_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}

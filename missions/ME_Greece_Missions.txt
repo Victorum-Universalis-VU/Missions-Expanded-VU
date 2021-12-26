@@ -106,14 +106,14 @@ GRE_missions_2 = {
 			aydin_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			hudavendigar_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -144,7 +144,7 @@ GRE_missions_2 = {
 			crimea_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -178,22 +178,15 @@ GRE_missions_2 = {
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			#western_sicily_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT	}
-			#		NOT = { is_core = ROOT	}
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			122 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 					}
 				}
 				add_permanent_claim = ROOT
@@ -202,7 +195,7 @@ GRE_missions_2 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 					}
 				}
 				add_permanent_claim = ROOT
@@ -216,7 +209,6 @@ GRE_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				#area = western_sicily_area
 				province_id = 122
 				province_id = 123
 			}
@@ -227,10 +219,6 @@ GRE_missions_2 = {
 				type = all
 				owned_by = ROOT
 			}
-			#western_sicily_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
 			122 = {
 				owned_by = ROOT
 			}
@@ -250,7 +238,7 @@ GRE_missions_2 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 					}
 				}
 				add_permanent_claim = ROOT
@@ -283,7 +271,7 @@ GRE_missions_2 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 					}
 				}
 				add_permanent_claim = ROOT

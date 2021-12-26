@@ -1,3 +1,4 @@
+#Reworked by Altan for ME-VU
 PRU_generic_missions_3 = {
 	slot = 3
 	generic = no
@@ -968,6 +969,7 @@ PRU_missions_3 = {
 			total_development = 300
 		}
 		effect = {
+			change_national_focus_effect = yes
 			country_event = { id = ME_Prussia_Events.29 }
 			kuyavia_area = {
 				limit = {

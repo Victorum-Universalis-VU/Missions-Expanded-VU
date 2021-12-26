@@ -180,31 +180,17 @@ BRA_missions_1_franconia = {
 				}
 			}
 			else = {
-				OR = {
-					franconia_area = {
-						owner = { 
-							dynasty = "von Hohenzollern"
-							OR = {
-								tag = ROOT
-								has_opinion = {
-									who = ROOT
-									value = 100
-								}
+				franconia_area = {
+					owner = { 
+						dynasty = "von Hohenzollern"
+						OR = {
+							tag = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 100
 							}
 						}
 					}
-					#upper_franconia_area = {
-					#	owner = { 
-					#		dynasty = "von Hohenzollern"
-					#		OR = {
-					#			tag = ROOT
-					#			has_opinion = {
-					#				who = ROOT
-					#				value = 100
-					#			}
-					#		}
-					#	}
-					#}
 				}
 			}
 		}
@@ -214,10 +200,7 @@ BRA_missions_1_franconia = {
 					any_country = {  #performance sry!
 						dynasty = "von Hohenzollern"
 						capital_scope = {
-							OR = {
-								area = franconia_area
-								#area = upper_franconia_area
-							}
+							area = franconia_area
 						}
 					}
 				}
@@ -236,17 +219,13 @@ BRA_missions_1_franconia = {
 		provinces_to_highlight = {
 			OR = {
 				area = franconia_area
-				#area = upper_franconia_area
+				area = upper_franconia_area
 			}
 			NOT = {
 				owner = { dynasty = "von Hohenzollern" }
 			}
 		}
 		trigger = {
-			#upper_franconia_area = {
-			#	type = all
-			#	owner = { dynasty = "von Hohenzollern" }
-			#}
 			franconia_area = {
 				type = all
 				owner = { dynasty = "von Hohenzollern" }
@@ -799,13 +778,7 @@ BRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#south_saxony_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+			
 			lusatia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -813,18 +786,12 @@ BRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#northern_saxony_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
 				name = BRA_controlling_the_circle
@@ -852,7 +819,6 @@ BRA_missions_4 = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					OR = {
 						area = thuringia_area
-						#area = south_saxony_area
 						area = saxony_area
 					}
 					value = 4
@@ -1071,6 +1037,12 @@ BRA_missions_5 = {
 			}
 		}
 		effect = {
+			custom_tooltip = BRA_5_favors_with_every_ally
+			hidden_effect = {
+				every_ally = {
+					ROOT = { add_favors = { who = PREV amount = 5 } }
+				}
+			}
 			set_country_flag = BRA_extra_dip_slot
 			custom_tooltip = BRA_extra_dip_slot_tt			
 		}

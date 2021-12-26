@@ -11,7 +11,7 @@ ferrara_missions_1 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -154,7 +154,7 @@ ferrara_missions_1 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_dip_power = 25
 		}
 	}
@@ -175,10 +175,9 @@ ferrara_missions_1 = {
 			OR = {
 				NOT = { exists = VEN }
 				overlord_of = VEN
-				VEN = {
-					NOT = {
-						any_province = { region = italy_region }
-					}
+				italy_region = {
+					type = all
+					NOT = { owned_by = VEN }
 				}
 			}
 		}
@@ -204,7 +203,7 @@ ferrara_missions_2 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LVN }
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -401,7 +400,7 @@ ferrara_mission_3 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LVN }
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -523,12 +522,9 @@ ferrara_mission_3 = {
 			OR = {
 				NOT = { exists = MLO }
 				overlord_of = MLO
-				MLO = {
-					NOT = {
-						any_province = {
-							region = italy_region
-						}
-					}
+				italy_region = {
+					type = all
+					NOT = { owned_by = MLO }
 				}
 			}
 		}
@@ -597,7 +593,7 @@ ferrara_mission_4 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LVN }
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -752,7 +748,7 @@ ferrara_mission_4 = {
 				}
 			}
 			else = {
-				saxony_area = { #was south_saxony_area
+				saxony_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -766,13 +762,6 @@ ferrara_mission_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				#northern_saxony_area = {
-				#	limit = {
-				#		NOT = { owned_by = ROOT }
-				#		NOT = { is_core = ROOT }
-				#	}
-				#	add_permanent_claim = ROOT
-				#}
 			}
 		}
 	}
@@ -785,20 +774,10 @@ ferrara_mission_4 = {
 		position = 12
 		trigger = {
 			OR = {
-				overlord_of = ROOT
-				AND = {
-					#lower_bavaria_area = {
-					#	type = all
-					#	country_or_non_sovereign_subject_holds = ROOT
-					#}
-					#upper_bavaria_area = {
-					#	type = all
-					#	country_or_non_sovereign_subject_holds = ROOT
-					#}
-					bavaria_area = { #was east_bavaria_area
+				overlord_of = BAV
+				bavaria_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
-					}
 				}
 			}
 		}
@@ -824,7 +803,7 @@ ferrara_mission_5 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				NOT = { was_tag = LVN }
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1024,13 +1003,6 @@ ferrara_mission_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#western_sicily_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}				
-			#	add_permanent_claim = ROOT
-			#}
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1051,15 +1023,11 @@ ferrara_mission_5 = {
 			OR = {
 				overlord_of = SAX
 				AND = {
-					#south_saxony_area = {
-					#	type = all
-					#	country_or_non_sovereign_subject_holds = ROOT
-					#}
 					thuringia_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					saxony_area = { # wasnorthern_saxony_area
+					saxony_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}

@@ -4,6 +4,11 @@ ETH_slot_2 = {
 	ai = yes
 	potential = {
 		tag = ETH
+		OR = {
+			NOT = { has_dlc = "Origins" }
+			map_setup = map_setup_random
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -37,6 +42,13 @@ ETH_slot_2 = {
 				name = jewish_subjugation
 				duration = 9125
 			}
+			shewa_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			southern_ethiopia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -44,27 +56,39 @@ ETH_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			MED = { 
-				every_owned_province = { 
-					limit = { 
-						NOT = { is_core = ROOT } 
-					} 
-					add_permanent_claim = ROOT 
-				} 
-			}
-			1218 = {
+			hadiya_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			2756 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+			2766 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			2787 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1230 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -73,41 +97,37 @@ ETH_slot_2 = {
 		icon = mission_have_two_subjects
 		required_missions = { eth_jews }
 		provinces_to_highlight = {
-				OR = {
-					area = southern_ethiopia_area
-					province_id = 1218
-					province_id = 2756
-					AND = {
-						owned_by = MED
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-				}
-				OR = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					NOT = { religion = coptic }
-				}
+			OR = {
+				area = southern_ethiopia_area
+				area = damot_area
+				province_id = 2787
+				province_id = 1230
+				province_id = 2766
 			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { religion = coptic }
+			}
+		}
 		trigger = {
 			southern_ethiopia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = coptic
 			}
-			hadiya_area = {
+			damot_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = coptic
 			}
-			2761 = {
+			2766 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = coptic
 			}
-			OR = {
-				war_score_against = {
-					who = MED
-					value = 50
-				}
-				NOT = { exists = MED }
+			2787 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1230 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -284,13 +304,6 @@ ETH_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#gulf_of_arabia_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			al_wahat_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -312,7 +325,6 @@ ETH_slot_2 = {
 				area = medina_area
 				area = said_area
 				area = al_wahat_area
-				#area = gulf_of_arabia_area
 				area = delta_area
 				area = bahari_area
 				area = vostani_area
@@ -342,10 +354,6 @@ ETH_slot_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#gulf_of_arabia_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			delta_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -477,6 +485,11 @@ ETH_slot_3 = {
 	ai = yes
 	potential = {
 		tag = ETH
+		OR = {
+			NOT = { has_dlc = "Origins" }
+			map_setup = map_setup_random
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -527,7 +540,7 @@ ETH_slot_3 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 25 }
+			add_legitimacy_equivalent = { amount = 25 republican_tradition = 25 }
 			add_prestige = 25
 			add_country_modifier = {
 				name = ethiopian_unification
@@ -910,6 +923,11 @@ ETH_slot_4 = {
 	ai = yes
 	potential = {
 		tag = ETH
+		OR = {
+			NOT = { has_dlc = "Origins" }
+			map_setup = map_setup_random
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -943,7 +961,7 @@ ETH_slot_4 = {
 		}
 		effect = {
 			add_prestige = 10
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_adm_power = 75
 			aussa_area = {
 				limit = {

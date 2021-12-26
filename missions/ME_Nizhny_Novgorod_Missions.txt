@@ -95,13 +95,6 @@ NZH_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#volga_area = { #Disabled for now
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			vologda_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -124,10 +117,7 @@ NZH_missions_1 = {
 		position = 8
 		required_missions = { nizhny_novgorod_conquer_perm_and_kama }
 		provinces_to_highlight = {
-			#OR = {
 				area = kazan_area
-				#area = volga_area
-			#}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -135,10 +125,6 @@ NZH_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#volga_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 		}
 		effect = {
 			samara_area = {
@@ -213,7 +199,7 @@ NZH_missions_1 = {
 		}
 		effect = {
 			add_prestige = 20
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100

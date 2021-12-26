@@ -6,7 +6,7 @@ bavaria_missions_1 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE #AUB doesn't exist. Suppose that was meant to be AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -54,7 +54,7 @@ bavaria_missions_1 = {
 			legitimacy_equivalent = 90
 		}
 		effect = {
-			bavaria_area = {
+			 = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -279,7 +279,7 @@ bavaria_missions_2 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -358,7 +358,6 @@ bavaria_missions_2 = {
 		required_missions = { bavaria_conquer_ulm }
 		position = 9
 		provinces_to_highlight = {
-			#area = upper_rhineland_area
 			area = baden_area
 			area = wurttemburg_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -467,7 +466,7 @@ bavaria_missions_3_AoW = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -509,7 +508,7 @@ bavaria_missions_3 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -526,7 +525,7 @@ bavaria_missions_3 = {
 			is_papal_controller = yes
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_country_modifier = {
 				name = bavaria_become_papal_controller_modifier
 				duration = 3650
@@ -759,7 +758,7 @@ bavaria_missions_4 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -894,7 +893,7 @@ bavaria_missions_4 = {
 		}
 		effect = {
 			add_papal_influence = 15
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_country_modifier = {
 				name = bavaria_join_catholic_league_modifier
 				duration = 7300
@@ -959,10 +958,6 @@ bavaria_missions_4 = {
 		required_missions = { bavaria_build_army_buildings bavaria_become_papal_controller bavaria_build_cathedrals }
 		position = 8
 		provinces_to_highlight = {
-			#OR = {
-			#	area = upper_bavaria_area
-			#	area = lower_bavaria_area
-			#}
 			area = bavaria_area
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1095,7 +1090,7 @@ bavaria_missions_5 = {
 		OR = {
 			tag = BAV
 			AND = {
-				tag = AUE
+				tag = AUB
 				primary_culture = bavarian
 			}
 		}
@@ -1341,7 +1336,7 @@ bavaria_missions_5 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 20 }
+			add_legitimacy_equivalent = { amount = 20 republican_tradition = 20 }
 			add_country_modifier = {
 				name = bavaria_unite_wittelsbach_modifier
 				duration = 7300
@@ -1409,7 +1404,7 @@ bavaria_missions_5 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 5 }
+			add_legitimacy_equivalent = { amount = 5 republican_tradition = 5 }
 			add_country_modifier = {
 				name = bavaria_have_high_absolutism_modifier
 				duration = 7300

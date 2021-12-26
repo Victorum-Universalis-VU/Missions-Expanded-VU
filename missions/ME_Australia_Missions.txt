@@ -403,7 +403,7 @@ australia_missions_2 = {
 		}
 		effect = {
 			add_dip_power = 200
-			add_legitimacy_equivalent = { value = 20 }
+			add_legitimacy_equivalent = { amount = 20 republican_tradition = 20 }
 			custom_tooltip = AUS_MASTER_INDIES
 			hidden_effect = {
 				1357 = {
@@ -691,10 +691,10 @@ australia_missions_4 = {
 			aus_nearby_island
 		}
 		provinces_to_highlight = {
-			OR = {
+			#OR = {
 				area = polynesia_area
 				#area = eastern_polynesia_area
-			}
+			#}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -814,14 +814,6 @@ australia_missions_5 = {
 				type = all
 				owned_by = ROOT
 			}
-			#te_ika_a_maui_waho_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
-			#te_ika_a_maui_hauauru_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
 		}
 		effect = {
 			add_adm_power = 50
@@ -839,18 +831,6 @@ australia_missions_5 = {
 					duration = 9125
 				}
 			}
-			#te_ika_a_maui_waho_area = {
-			#	add_province_modifier = {
-			#		name = aus_settling
-			#		duration = 9125
-			#	}
-			#}
-			#te_ika_a_maui_hauauru_area = {
-			#	add_province_modifier = {
-			#		name = aus_settling
-			#		duration = 9125
-			#	}
-			#}
 		}
 	}
 }

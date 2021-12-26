@@ -320,13 +320,6 @@ corsica_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#western_sicily_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -500,17 +493,10 @@ corsica_missions_4 = {
 		position = 5
 		required_missions = { cor_seize_sardinia }
 		provinces_to_highlight = {
-			#OR = {
-			#	area = western_sicily_area
-				area = sicily_area
-			#}
+			area = sicily_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			#western_sicily_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			sicily_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

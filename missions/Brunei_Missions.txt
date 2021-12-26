@@ -9,7 +9,7 @@ mnd_bei_1 = {
 	has_country_shield = yes
 	
 	mnd_bei_conquer_sambas = {
-		icon = mission_kowtow
+		icon = mission_impaled_soldies
 		required_missions = { }
 		provinces_to_highlight = {
 			area = kalimantan_area
@@ -37,7 +37,7 @@ mnd_bei_1 = {
 					}
 					OR = {
 						area = kalimantan_area
-						area = kalimantan_area
+						area = banjar_area
 					}
 				}
 				add_permanent_province_modifier = {
@@ -54,7 +54,7 @@ mnd_bei_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = kalimantan_area
-				area = kalimantan_area
+				area = banjar_area
 				area = sabah_area
 				area = brunei_area
 				area = kutai_area
@@ -66,7 +66,7 @@ mnd_bei_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kalimantan_area = {
+			banjar_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -89,7 +89,7 @@ mnd_bei_1 = {
 	}
 	
 	mnd_bei_impress_sulu = {
-		icon = mission_kowtow
+		icon = mission_sw_torquoise_mining
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
@@ -142,22 +142,22 @@ mnd_bei_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#west_mindanao_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = {  is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+			west_mindanao_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mnd_bei_conquer_mindanao = {
-		icon = mission_junk_boat
+		icon = mission_ne_palisades
 		required_missions = { mnd_bei_impress_sulu }
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
-				#area = west_mindanao_area
+				area = west_mindanao_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -168,7 +168,7 @@ mnd_bei_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						area = mindanao_area
-						#area = west_mindanao_area
+						area = west_mindanao_area
 					}
 				}
 			}
@@ -205,7 +205,7 @@ mnd_bei_1 = {
 					}
 					OR = {
 						area = mindanao_area
-						#area = west_mindanao_area
+						area = west_mindanao_area
 					}
 				}
 				add_permanent_province_modifier = {
@@ -216,12 +216,12 @@ mnd_bei_1 = {
 		}
 	}
 	mnd_bei_conquer_philippines = {
-		icon = mission_invade_island
+		icon = mission_oceania_assemble_an_army
 		required_missions = { mnd_bei_conquer_mindanao mnd_bei_conquer_luzon }
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
-				#area = west_mindanao_area
+				area = west_mindanao_area
 				area = luzon_area
 				area = southern_luzon_area
 				area = visayas_area
@@ -237,7 +237,7 @@ mnd_bei_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						area = mindanao_area
-						#area = west_mindanao_area
+						area = west_mindanao_area
 						area = luzon_area
 						area = southern_luzon_area
 						area = visayas_area
@@ -282,7 +282,7 @@ mnd_bei_2 = {
 	has_country_shield = yes
 	
 	mnd_bei_conquer_berau = {
-		icon = mission_asian_cannon
+		icon = mission_oceania_build_army_mission
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
@@ -311,7 +311,7 @@ mnd_bei_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kalimantan_area = {
+			banjar_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -321,7 +321,7 @@ mnd_bei_2 = {
 		}
 	}
 	mnd_bei_civil_strife = {
-		icon = mission_hands_praying
+		icon = mission_rice_field
 		required_missions = { }
 		provinces_to_highlight = {
 		}
@@ -370,7 +370,7 @@ mnd_bei_2 = {
 	}
 	
 	mnd_bei_impress_maynila = {
-		icon = mission_kowtow
+		icon = mission_se_birdmen
 		required_missions = { mnd_bei_impress_sulu }
 		provinces_to_highlight = {
 			OR = {
@@ -433,7 +433,7 @@ mnd_bei_2 = {
 		}
 	}
 	mnd_bei_conquer_luzon = {
-		icon = mission_asian_cannon
+		icon = mission_ne_great_lakes_conquest
 		required_missions = { mnd_bei_impress_maynila }
 		provinces_to_highlight = {
 			OR = {

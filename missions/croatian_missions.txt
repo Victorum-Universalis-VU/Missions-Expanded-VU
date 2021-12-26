@@ -3,24 +3,22 @@ cro_1 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = CRO
 			tag = RAG
 			tag = DAL
 		}
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
 	cro_reconquer_dalmatia = {
 		icon = mission_invade_island
-		required_missions = { cro_independence }
+		required_missions = {  }
 		position = 2
 		provinces_to_highlight = {
-			OR = {
-				area = east_adriatic_coast_area 
-			}
+			area = east_adriatic_coast_area
 			NOT = { owned_by = ROOT }
 			NOT = { province_id = 137 }
 			NOT = { province_id = 4754 }
@@ -58,12 +56,12 @@ cro_1 = {
 		provinces_to_highlight = {
 			province_id = 137
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { owned_by = ROOT }
 				NOT = { is_strongest_trade_power = ROOT }
 			}			
 		}
 		trigger = {
-			137 = { country_or_non_sovereign_subject_holds = ROOT }
+			137 = { owned_by = ROOT }
 			137 = { is_strongest_trade_power = ROOT }
 		}
 		effect = {
@@ -182,13 +180,13 @@ cro_2 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = CRO
 			tag = RAG
 			tag = DAL
 		}
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -259,28 +257,25 @@ cro_2 = {
 	}
 	cro_reclaim_bosnia = {
 		icon = mission_unite_home_region
-		required_missions = { cro_independence }
+		required_missions = {  }
 		provinces_to_highlight = {
 			OR = {
-				area = bosnia_area
 				area = herzegovina_area
-				province_id = 1828
-				province_id = 7727
+				area = bosnia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			is_subject = no
-			bosnia_area = {
+			croatia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			herzegovina_area = {
+			bosnia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
-				
 			}
 			7727 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -307,7 +302,7 @@ cro_2 = {
 	}
 	cro_croatian_fleet = {
 		icon = mission_galleys_in_port
-		required_missions = { cro_reclaim_bosnia }
+		required_missions = {  }
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -327,10 +322,7 @@ cro_2 = {
 		icon = mission_landsknecht_soldier
 		required_missions = { cro_dominate_dubrovnik }
 		provinces_to_highlight = {
-			OR = {
-				area = carinthia_area
-				province_id = 4752
-			}
+			area = carinthia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		position = 5
@@ -339,7 +331,6 @@ cro_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4752 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			add_army_tradition = 30
@@ -352,13 +343,13 @@ cro_5 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = CRO
 			tag = RAG
 			tag = DAL
 		}
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -372,7 +363,7 @@ cro_5 = {
 			num_of_owned_provinces_with = {
 				area = slavonia_area
 				development = 10
-				value = 4
+				value = 3
 			}
 		}
 		effect = {

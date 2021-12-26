@@ -1180,6 +1180,7 @@ Japan_missions_3 = {
 					owned_by = ROOT
 					province_id = 1015
 					province_id = 1032
+					area = hokkaido_area
 				}
 			}
 		}
@@ -1268,13 +1269,6 @@ Japan_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#west_mindanao_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			mindanao_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1301,7 +1295,6 @@ Japan_missions_3 = {
 				value = 10
 				OR = {
 					area = palawan_area
-					#area = west_mindanao_area
 					area = mindanao_area
 					area = visayas_area
 					area = southern_luzon_area
@@ -1453,7 +1446,6 @@ Japan_missions_3 = {
 					OR = {
 						region = bengal_region
 						area = palawan_area
-						#area = west_mindanao_area
 						area = mindanao_area
 						area = visayas_area
 						area = southern_luzon_area
@@ -1576,10 +1568,6 @@ Japan_missions_3 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				#west_mindanao_area = {
-				#	type = all
-				#	country_or_non_sovereign_subject_holds = ROOT
-				#}
 				mindanao_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT

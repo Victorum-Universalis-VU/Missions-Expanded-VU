@@ -325,13 +325,13 @@ perm_missions_2 = {
 			}
 		}
 		effect = {
-			#volga_area = {
-			#	limit = {
-			#		NOT = {	owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+#			volga_area = {
+#				limit = {
+#					NOT = {	owned_by = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = ROOT
+#			}
 			samara_area = {
 				limit = {
 					NOT = {	owned_by = ROOT }
@@ -347,17 +347,17 @@ perm_missions_2 = {
 		required_missions = { perm_kama_kazan }
 		position = 9
 		provinces_to_highlight = {
-			#OR = {
-				#area = volga_area
+#			OR = {
+#				area = volga_area
 				area = samara_area
-			#}
+#			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			#volga_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
+#			volga_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 			samara_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
