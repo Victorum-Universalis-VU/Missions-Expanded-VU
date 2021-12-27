@@ -154,10 +154,7 @@ PAL_Missions_3 = {
 					1757 = { owned_by = ROOT }
 					77 = { owned_by = ROOT }
 				}
-				#OR = {
 					area = franconia_area
-					#area = upper_franconia_area
-				#}
 			}
 			else = {
 				OR = {
@@ -220,7 +217,7 @@ PAL_Missions_3 = {
 		position = 3
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = bavaria_area
+				bavaria_area
 				value = 8
 			}
 		}
@@ -291,13 +288,6 @@ PAL_Missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#upper_franconia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = { is_permanent_claim = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 		}
 	}
 

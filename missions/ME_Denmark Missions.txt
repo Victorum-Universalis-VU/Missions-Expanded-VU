@@ -96,7 +96,7 @@ DAN_missions_1 = {
 					}
 					add_claim = ROOT
 				}
-				svealand_area = {
+				ostra_svealand_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
@@ -120,7 +120,7 @@ DAN_missions_1 = {
 				area = norrland_area
 				area = gotaland_area
 				area = vastra_gotaland_area
-				area = svealand_area
+				area = ostra_svealand_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -141,7 +141,7 @@ DAN_missions_1 = {
 				type = all
 				owned_by = ROOT
 			}
-			svealand_area = {
+			ostra_svealand_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -165,7 +165,7 @@ DAN_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_karelia_area = {
+			north_karelia = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -182,7 +182,7 @@ DAN_missions_1 = {
 			OR = {
 				area = finland_area
 				area = bothnia_area
-				area = north_karelia_area
+				area = north_karelia
 				area = pomor_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -196,10 +196,10 @@ DAN_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#north_karelia = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
+			north_karelia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			pomor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -218,7 +218,7 @@ DAN_missions_1 = {
 					duration = 7300
 				}
 			}
-			north_karelia_area = {
+			north_karelia = {
 				add_province_modifier = {
 					name = dan_danish_integration
 					duration = 7300
@@ -633,14 +633,14 @@ DAN_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			cornwall_area = {
+			wessex_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
+			home_counties_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -676,8 +676,8 @@ DAN_missions_2 = {
 				area = east_anglia_area
 				area = east_midlands_area
 				area = west_midlands_area
-				area = cornwall_area
-				area = south_east_area
+				area = wessex_area
+				area = home_counties_area
 				area = yorkshire_area
 				area = northern_norway
 				area = eastern_norway
@@ -706,11 +706,11 @@ DAN_missions_2 = {
 				type = all
 				owned_by = ROOT
 			}
-			cornwall_area = {
+			wessex_area = {
 				type = all
 				owned_by = ROOT
 			}
-			south_east_area = {
+			home_counties_area = {
 				type = all
 				owned_by = ROOT
 			}

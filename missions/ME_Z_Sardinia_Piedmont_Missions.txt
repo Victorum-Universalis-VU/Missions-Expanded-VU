@@ -12,6 +12,7 @@ SardiniaPiedmont_missions_1 = {
 				OR = {
 					was_tag = SAV
 					was_tag = SAR
+					was_tag = SPI
 				}
 				NOT = {
 					calc_true_if = {
@@ -19,7 +20,7 @@ SardiniaPiedmont_missions_1 = {
 						was_tag = TUS
 						was_tag = TTS
 						was_tag = SPI
-						#was_tag = LMN
+						was_tag = LVN
 					}
 				}
 			}
@@ -328,6 +329,7 @@ SardiniaPiedmont_missions_2 = {
 				OR = {
 					was_tag = SAV
 					was_tag = SAR
+					was_tag = SPI
 				}
 				NOT = {
 					calc_true_if = {
@@ -335,7 +337,7 @@ SardiniaPiedmont_missions_2 = {
 						was_tag = TUS
 						was_tag = TTS
 						was_tag = SPI
-						#was_tag = LMN
+						was_tag = LVN
 					}
 				}
 			}
@@ -538,6 +540,7 @@ SardiniaPiedmont_missions_3 = {
 				OR = {
 					was_tag = SAV
 					was_tag = SAR
+					was_tag = SPI
 				}
 				NOT = {
 					calc_true_if = {
@@ -545,7 +548,7 @@ SardiniaPiedmont_missions_3 = {
 						was_tag = TUS
 						was_tag = TTS
 						was_tag = SPI
-						#was_tag = LMN
+						was_tag = LVN
 					}
 				}
 			}
@@ -776,6 +779,7 @@ SardiniaPiedmont_missions_4 = {
 				OR = {
 					was_tag = SAV
 					was_tag = SAR
+					was_tag = SPI
 				}
 				NOT = {
 					calc_true_if = {
@@ -783,7 +787,7 @@ SardiniaPiedmont_missions_4 = {
 						was_tag = TUS
 						was_tag = TTS
 						was_tag = SPI
-						#was_tag = LMN
+						was_tag = LVN
 					}
 				}
 			}
@@ -892,6 +896,7 @@ SardiniaPiedmont_missions_5 = {
 				OR = {
 					was_tag = SAV
 					was_tag = SAR
+					was_tag = SPI
 				}
 				NOT = {
 					calc_true_if = {
@@ -899,7 +904,7 @@ SardiniaPiedmont_missions_5 = {
 						was_tag = TUS
 						was_tag = TTS
 						was_tag = SPI
-						#was_tag = LMN
+						was_tag = LVN
 					}
 				}
 			}

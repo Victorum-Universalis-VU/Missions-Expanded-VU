@@ -11,7 +11,7 @@ mantua_mission_1 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -98,7 +98,7 @@ mantua_mission_1 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_dip_power = 25
 		}
 	}
@@ -119,10 +119,9 @@ mantua_mission_1 = {
 			OR = {
 				NOT = { exists = VEN }
 				overlord_of = VEN
-				VEN = {
-					NOT = {
-						any_province = { region = italy_region }
-					}
+				italy_region = {
+					type = all
+					NOT = { owned_by = VEN }
 				}
 			}
 		}
@@ -148,7 +147,7 @@ mantua_mission_2 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -297,20 +296,13 @@ mantua_mission_2 = {
 		}
 		position = 10
 		provinces_to_highlight = {
-			OR = {
-				#area = western_sicily_area
-				AND = {
-					area = sicily_area
-					NOT = { province_id = 126 }
-				}
+			AND = {
+				area = sicily_area
+				NOT = { province_id = 126 }
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			#western_sicily_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			sicily_area = {
 				NOT = { province_id = 126 }
 				country_or_non_sovereign_subject_holds = ROOT
@@ -364,7 +356,7 @@ mantua_mission_3 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -505,12 +497,9 @@ mantua_mission_3 = {
 			OR = {
 				NOT = { exists = MLO }
 				overlord_of = MLO
-				MLO = {
-					NOT = {
-						any_province = {
-							region = italy_region
-						}
-					}
+				italy_region = {
+					type = all
+					NOT = { owned_by = MLO }
 				}
 			}
 		}
@@ -581,7 +570,7 @@ mantua_mission_4 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -767,13 +756,6 @@ mantua_mission_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#western_sicily_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}				
-			#	add_permanent_claim = ROOT
-			#}
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -858,7 +840,7 @@ mantua_mission_4 = {
 			}
 		}
 		effect = {
-			add_legitimacy = 10
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
 		}
 	}
 }
@@ -876,7 +858,7 @@ mantua_mission_5 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
-				#NOT = { was_tag = LML } 
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox

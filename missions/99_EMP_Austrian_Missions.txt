@@ -26,7 +26,7 @@ emp_hab_netherlands_branch = {
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 20 
+						value = 12 #out of 21 (but at least 7 are not ruled by Burgundy at start)
 						region = low_countries_region
 					}
 				}
@@ -35,7 +35,7 @@ emp_hab_netherlands_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 20 #out of 21 (but at least 7 are not ruled by Burgundy at start)
+				value = 12 #out of 21 (but at least 7 are not ruled by Burgundy at start)
 				region = low_countries_region
 			}
 		}
@@ -58,9 +58,9 @@ emp_hab_netherlands_branch = {
 						has_dlc = "Wealth of Nations"
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = emp_hab_ostend_company_trigger_tooltip
-					num_of_trade_companies = 1
+				any_owned_province = {
+					is_owned_by_trade_company = yes
+					continent = asia
 				}
 			}
 			else = {

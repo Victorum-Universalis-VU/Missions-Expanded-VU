@@ -17,7 +17,7 @@ florence_missions_1 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LML
+								was_tag = LVN
 							}
 						}
 					}
@@ -295,7 +295,7 @@ florence_missions_2 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LML
+								was_tag = LVN
 							}
 						}
 					}
@@ -354,18 +354,15 @@ florence_missions_2 = {
 				has_tax_building_trigger = yes
 			}
 			if = {
-				limit = {
-					has_dlc = "Leviathan"
-					is_expanded_mod_active = { mod = great_monuments }
-				}
+				limit = { has_dlc = "Leviathan" }
 				116 = {
 					OR = {
 						has_great_project = {
-							type = florence_cattedrale_santa_maria_fiore
+							type = santa_maria_del_fiore
 							tier = 2
 						}
 						has_great_project = {
-							type = florence_cattedrale_santa_maria_fiore
+							type = santa_maria_del_fiore
 							tier = 3
 						}
 					}
@@ -492,7 +489,7 @@ florence_missions_3 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -686,7 +683,7 @@ florence_missions_4 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -883,7 +880,7 @@ florence_missions_5 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -933,7 +930,7 @@ florence_missions_5 = {
 			owns = 117
 		}
 		effect = {
-			add_republican_tradition = 10
+			add_legitimacy_equivalent = { amount = 20 republican_tradition = 10 }
 			add_navy_tradition = 10
 		}
 	}

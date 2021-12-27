@@ -8,15 +8,17 @@ EMP_crusader_1 = {
 	potential = {
 		has_dlc = "Emperor"
 		OR = {
-			tag = CYP
-			tag = KNI
+			AND = {
+				tag = CYP
+				tag = KNI
+				tag = NAX
+				tag = EPI
+				has_country_flag = use_paradox_missions
+			}
 			tag = ATH
-			tag = NAX
 			tag = KOJ
-			tag = EPI
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
@@ -45,7 +47,7 @@ EMP_crusader_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			tripoli_area = {
+			syrian_desert_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -64,7 +66,6 @@ EMP_crusader_1 = {
 				area = palestine_area
 				area = trans_jordan_area
 				area = aleppo_area
-				area = tripoli_area
 			}
 			NOT = { religion = ROOT }
 		}
@@ -82,10 +83,6 @@ EMP_crusader_1 = {
 				religion = ROOT
 			}
 			aleppo_area = {
-				type = all
-				religion = ROOT
-			}
-			tripoli_area = {
 				type = all
 				religion = ROOT
 			}
@@ -109,15 +106,17 @@ EMP_crusader_2 = {
 	potential = {
 		has_dlc = "Emperor"
 		OR = {
-			tag = CYP
-			tag = KNI
+			AND = {
+				tag = CYP
+				tag = KNI
+				tag = NAX
+				tag = EPI
+				has_country_flag = use_paradox_missions
+			}
 			tag = ATH
-			tag = NAX
 			tag = KOJ
-			tag = EPI
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -241,7 +240,7 @@ EMP_crusader_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#gulf_of_arabia_area = { # Maybe replace something else. Blocking that for now as I'm not sure what area to put instead
+			#gulf_of_arabia_area = {
 			#	limit = {
 			#		NOT = { is_permanent_claim = ROOT	}
 			#		NOT = { is_core = ROOT	}
@@ -365,15 +364,17 @@ EMP_crusader_3 = {
 	potential = {
 		has_dlc = "Emperor"
 		OR = {
-			tag = CYP
-			tag = KNI
+			AND = {
+				tag = CYP
+				tag = KNI
+				tag = NAX
+				tag = EPI
+				has_country_flag = use_paradox_missions
+			}
 			tag = ATH
-			tag = NAX
 			tag = KOJ
-			tag = EPI
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -454,11 +455,10 @@ EMP_crusader_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = crusader_greece_tt
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 12
+			custom_trigger_tooltip = {
+				tooltip = crusader_greece_tt
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 12
 						OR = {
 							area = morea_area
 							area = western_aegean_area
@@ -466,21 +466,6 @@ EMP_crusader_3 = {
 							area = eastern_mediterrenean_islands_area
 						}
 					}
-				}
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = crusader_greece_tt
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 6
-							OR = {
-								area = morea_area
-								area = western_aegean_area
-								area = aegean_archipelago_area
-								area = eastern_mediterrenean_islands_area
-							}
-						}
-					}
-					NOT = { exists = BYZ }
 				}
 			}
 		}
@@ -689,15 +674,17 @@ EMP_crusader_4 = {
 	potential = {
 		has_dlc = "Emperor"
 		OR = {
-			tag = CYP
-			tag = KNI
+			AND = {
+				tag = CYP
+				tag = KNI
+				tag = NAX
+				tag = EPI
+				has_country_flag = use_paradox_missions
+			}
 			tag = ATH
-			tag = NAX
 			tag = KOJ
-			tag = EPI
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -957,15 +944,17 @@ EMP_crusader_5 = {
 	potential = {
 		has_dlc = "Emperor"
 		OR = {
-			tag = CYP
-			tag = KNI
+			AND = {
+				tag = CYP
+				tag = KNI
+				tag = NAX
+				tag = EPI
+				has_country_flag = use_paradox_missions
+			}
 			tag = ATH
-			tag = NAX
 			tag = KOJ
-			tag = EPI
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 		is_random_new_world = no
 	}
 	has_country_shield = yes

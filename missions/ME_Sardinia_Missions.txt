@@ -17,7 +17,7 @@ sardinia_missions_1 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -300,7 +300,7 @@ sardinia_missions_2 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -461,7 +461,7 @@ sardinia_missions_2 = {
 						if = {
 							limit = {
 								NOT = { owned_by = ROOT }
-								NOT = { is_core = ROOT	}
+								NOT = { is_core = ROOT }
 							}
 							add_permanent_claim = ROOT
 						}
@@ -470,7 +470,7 @@ sardinia_missions_2 = {
 						if = {
 							limit = {
 								NOT = { owned_by = ROOT }
-								NOT = { is_core = ROOT	}
+								NOT = { is_core = ROOT }
 							}
 							add_permanent_claim = ROOT
 						}
@@ -498,14 +498,14 @@ sardinia_missions_2 = {
 					liguria_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT	}
+							NOT = { is_core = ROOT }
 						}
 						add_permanent_claim = ROOT
 					}
 					baleares_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT	}
+							NOT = { is_core = ROOT }
 						}
 						add_permanent_claim = ROOT
 					}
@@ -529,14 +529,14 @@ sardinia_missions_2 = {
 			sicily_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			baleares_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -544,7 +544,7 @@ sardinia_missions_2 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -634,7 +634,7 @@ sardinia_missions_3 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -812,7 +812,7 @@ sardinia_missions_4 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}
@@ -1020,7 +1020,7 @@ sardinia_missions_5 = {
 								was_tag = TUS
 								was_tag = TTS
 								was_tag = SPI
-								#was_tag = LMN
+								was_tag = LVN
 							}
 						}
 					}

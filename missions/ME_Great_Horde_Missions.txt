@@ -61,7 +61,7 @@ Great_Horde_missions_1 = {
 			285 = {
 				owned_by = ROOT
 				is_core = ROOT
-				OR = {
+				OR {
 					has_building = marketplace
 					has_building = trade_depot
 					has_building = stock_exchange
@@ -70,7 +70,7 @@ Great_Horde_missions_1 = {
 			286 = {
 				owned_by = ROOT
 				is_core = ROOT
-				OR = {
+				OR {
 					has_building = marketplace
 					has_building = trade_depot
 					has_building = stock_exchange
@@ -196,13 +196,13 @@ Great_Horde_missions_2 = {
 				}
 				if = {
 					limit = {
-						NOT = { province_has_center_of_trade_of_level = 1 }
+						NOT { province_has_center_of_trade_of_level = 1 }
 					}
 					center_of_trade = 1
 				}
 				else_if = {
 					limit = {
-						NOT = { province_has_center_of_trade_of_level = 3 }
+						NOT { province_has_center_of_trade_of_level = 3 }
 					}
 					add_center_of_trade_level = 1
 				}
@@ -612,7 +612,7 @@ Great_Horde_missions_4 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 10 }
+			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			if = {
 				limit = {
 					exists = IME
@@ -659,13 +659,6 @@ Great_Horde_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#kartli_kakheti_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			imereti_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -706,7 +699,6 @@ Great_Horde_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = shirvan_area
-				#area = kartli_kakheti_area
 				area = imereti_area
 			}
 			NOT = { country_or_subject_holds = ROOT } 
@@ -717,17 +709,13 @@ Great_Horde_missions_4 = {
 				type = all
 				country_or_subject_holds = ROOT
 			}
-			#kartli_kakheti_area = {
-			#	type = all
-			#	country_or_subject_holds = ROOT
-			#}
 			imereti_area = {
 				type = all
 				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 20 }
+			add_legitimacy_equivalent = { amount = 20 republican_tradition = 20 }
 			423 = {
 				add_base_tax = -2
 			}
@@ -758,7 +746,7 @@ Great_Horde_missions_4 = {
 			}
 		}
 		effect = {
-			add_legitimacy_equivalent = { value = 30 }
+			add_legitimacy_equivalent = { amount = 30 republican_tradition = 30 }
 			add_country_modifier = {
 				name = Great_Horde_Consolidate_Caucassia_modifier
 				duration = -1

@@ -1,5 +1,5 @@
 #########
-#Made by claivin for Missions Extended Mod, reworked by Stiopa for Missions Extended Mod
+#Made by claivin for Missions Extended Mod, reworked by Stiopa for Missions Extended Mod, reworked by Altan for ME-VU submod
 #########
 hannover_missions_1 = {
 	slot = 1
@@ -20,31 +20,19 @@ hannover_missions_1 = {
 			manpower_percentage = 0.5
 		}
 		effect = {
-			#south_saxony_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#northern_saxony_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			lower_saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			thuringia_area = {
 				limit = {
@@ -96,8 +84,6 @@ hannover_missions_1 = {
 				area = neumark_area
 				area = mittelmark_area
 				area = thuringia_area
-				#area = northern_saxony_area
-				#area = south_saxony_area
 				area = saxony_area
 				area = lower_saxony_area
 			}
@@ -116,14 +102,6 @@ hannover_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
-			#northern_saxony_area = {
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#	type = all
-			#}
-			#south_saxony_area = {
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#	type = all
-			#}
 			saxony_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
@@ -310,20 +288,6 @@ hannover_missions_2 = {
 			}
 		}
 		effect = {
-			#lower_bavaria_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#upper_bavaria_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -349,7 +313,6 @@ hannover_missions_2 = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				#area = lower_bavaria_area
 				area = bavaria_area
 				province_id = 2955
 				province_id = 65
@@ -357,10 +320,6 @@ hannover_missions_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			#lower_bavaria_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -390,7 +349,7 @@ hannover_missions_2 = {
 		}
 		effect = {
 			add_prestige = 50
-			add_legitimacy = 25
+			add_legitimacy_equivalent = { amount = 25 republican_tradition = 13 }
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
@@ -532,27 +491,20 @@ hannover_missions_3 = {
 			}
 		}
 		effect = {
-			baden_area = { # was upper_rhineland_area before
+			baden_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			#lower_swabia_area = {
-			#	limit = {
-			#		NOT = { is_core = ROOT }
-			#		NOT = { owned_by = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#upper_swabia_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+			lower_swabia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -572,8 +524,6 @@ hannover_missions_3 = {
 		position = 4
 		provinces_to_highlight = {
 			OR = {
-				#area = upper_rhineland_area
-				#area = upper_swabia_area
 				area = baden_area
 				area = swabia_area
 				province_id = 70

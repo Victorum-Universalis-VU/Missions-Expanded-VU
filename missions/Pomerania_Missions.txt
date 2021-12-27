@@ -10,7 +10,6 @@ pom_1 = {
 			tag = STE
 			tag = WOL
 			tag = MKL
-			tag = STP
 		}
 	}
 	has_country_shield = yes
@@ -606,7 +605,6 @@ pom_2 = {
 			tag = STE
 			tag = WOL
 			tag = MKL
-			tag = STP
 		}
 	}
 	has_country_shield = yes

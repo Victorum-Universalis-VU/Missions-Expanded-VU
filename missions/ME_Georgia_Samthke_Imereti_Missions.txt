@@ -271,25 +271,11 @@ GEO_missions_2_shared = {
 					}
 					add_permanent_claim = ROOT
 				}
-				#kartli_kakheti_area = { 
-				#	limit = {
-				#		NOT = { is_core = ROOT }
-				#		NOT = { is_permanent_claim = ROOT }
-				#	}
-				#	add_permanent_claim = ROOT
-				#}
 			}
 			else_if = {
 				limit = {
 					tag = SME
 				}
-				#kartli_kakheti_area = {
-				#	limit = {
-				#		NOT = { is_core = ROOT }
-				#		NOT = { is_permanent_claim = ROOT }
-				#	}
-				#	add_permanent_claim = ROOT
-				#}
 				imereti_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -350,7 +336,6 @@ GEO_missions_2 = {
 			OR = {
 				area = samtskhe_area
 				area = imereti_area
-				#area = kartli_kakheti_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -363,10 +348,6 @@ GEO_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#kartli_kakheti_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 		}
 		effect = {
 			add_country_modifier = {
@@ -481,7 +462,6 @@ IME_missions_3 = {
 		required_missions = { GEO_combat_the_collapse }
 		position = 2
 		provinces_to_highlight = {
-			#area = kartli_kakheti_area
 			province_id = 423
 			NOT = { owned_by = ROOT }
 			ROOT = {
@@ -491,9 +471,7 @@ IME_missions_3 = {
 		trigger = {
 			OR = {
 				overlord_of = GEO
-				#kartli_kakheti_area 
 				423 = {
-					#type = all
 					owned_by = ROOT
 				}
 			}
@@ -511,7 +489,6 @@ IME_missions_3 = {
 				}
 			}
 			else = {
-				#kartli_kakheti_area 
 				samtskhe_area = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -553,19 +530,15 @@ SME_missions_3 = {
 		required_missions = { GEO_combat_the_collapse }
 		position = 2
 		provinces_to_highlight = {
-			#area = kartli_kakheti_area
 			province_id = 423
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			#kartli_kakheti_area 
 			423 = {
-				#type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			# kartli_kakheti_area 
 			423 = {
 				add_core = ROOT
 				add_local_autonomy = -25

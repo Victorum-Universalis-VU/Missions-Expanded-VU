@@ -883,7 +883,7 @@ FRA_missions_2 = {
 					duration = -1
 				}
 			}
-			add_legitimacy_equivalent = { value = 25 }
+			add_legitimacy_equivalent = { amount = 25 republican_tradition = 25 }
 		}
 	}
 
@@ -1610,7 +1610,7 @@ FRA_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_east_area = {
+			east_anglia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1626,14 +1626,14 @@ FRA_missions_3 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = south_east_area
+				area = east_anglia_area
 				area = cornwall_area
 			}
 			NOT = { controlled_by = ROOT }
 		}
 		trigger = {
 			OR = {
-				south_east_area = {
+				east_anglia_area = {
 					controlled_by = ROOT
 				}
 				cornwall_area = {
@@ -1716,7 +1716,7 @@ FRA_missions_3 = {
 				area = west_midlands_area
 				area = east_midlands_area
 				area = cornwall_area
-				area = south_east_area
+				area = east_anglia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1745,7 +1745,7 @@ FRA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = {
+			east_anglia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1989,7 +1989,6 @@ FRA_missions_3 = {
 				area = hautes_plaines_area
 				area = kabylia_area
 				area = north_saharan_area
-				#area = algiers_area
 				area = ouled_nail_area
 				area = barbary_coast_area
 			}
@@ -2008,10 +2007,6 @@ FRA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#algiers_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			ouled_nail_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2285,7 +2280,7 @@ FRA_missions_3 = {
 			egypt_region = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -2426,7 +2421,7 @@ FRA_missions_4 = {
 			alsace_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -2864,13 +2859,6 @@ FRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#algiers_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			kabylia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -3186,23 +3174,14 @@ FRA_missions_4 = {
 				area = westphalia_area
 				area = thuringia_area
 				area = franconia_area
-				#area = lower_swabia_area
-				#area = upper_swabia_area
 				area = swabia_area
-				#area = lower_bavaria_area
-				#area = upper_bavaria_area
 				area = bavaria_area
-				#area = upper_franconia_area
 				area = north_rhine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			NOT = { exists = GER }
-			#upper_franconia_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
 			north_rhine_area = {
 				type = all
 				owned_by = ROOT
@@ -3235,29 +3214,13 @@ FRA_missions_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			#lower_swabia_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
-			#upper_swabia_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
 			swabia_area = {
 				type = all
 				owned_by = ROOT
 			}
-			#lower_bavaria_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
-			#upper_bavaria_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
 			bavaria_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
 		effect = {

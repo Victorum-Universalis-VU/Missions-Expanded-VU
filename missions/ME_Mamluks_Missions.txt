@@ -400,13 +400,6 @@ MAM_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#algiers_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			barbary_coast_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -431,7 +424,6 @@ MAM_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_morocco_area
-				#area = algiers_area
 				area = barbary_coast_area
 				area = kabylia_area
 			}
@@ -443,10 +435,6 @@ MAM_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#algiers_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			barbary_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

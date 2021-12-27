@@ -47,7 +47,7 @@ ARL_missions_1 = {
 			OR = {
 				province_id = 421
 				province_id = 4299
-				province_id = 4340
+				province_id = 4305
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -226,11 +226,31 @@ ARL_missions_1 = {
 						days = 36500
 					}
 				}
-				#kartli_kakheti_area = {
-				#	type = all
-				#	country_or_non_sovereign_subject_holds = ROOT
-				#	has_province_modifier = autonomy_increased
-				#}
+				samtskhe_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
+				422 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
+				462 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
+				1856 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
+				2196 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
+				4303 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_province_modifier = autonomy_increased
+				}
 			}
 		}
 		effect = {
