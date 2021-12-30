@@ -454,18 +454,22 @@ Ottoman_Missions_1 = {
 				add_permanent_claim = ROOT 
 			} 
 			3000 = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
+				if ={
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT
+				}
 			}
 			7711 = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
+				if ={
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					} 
+					add_permanent_claim = ROOT
+				}
 			}
 		} 
 	} 
@@ -504,14 +508,8 @@ Ottoman_Missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3000 = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			7711 = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			3000 = { country_or_non_sovereign_subject_holds = ROOT }
+			7711 = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 		effect = { 
 			bosnia_area = { 
@@ -2867,25 +2865,31 @@ Ottoman_Missions_5 = {
 				add_permanent_claim = ROOT 
 			} 
 			5146 = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			5147 = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			5150 = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				} 
-				add_permanent_claim = ROOT 
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		} 
 	} 

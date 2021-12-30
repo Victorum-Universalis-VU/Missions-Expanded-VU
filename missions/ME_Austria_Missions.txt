@@ -3,13 +3,13 @@ ME_austria_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+			#AND = {
+			#	tag = AUB
+			#	primary_culture = austrian
+			#}
+#		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -208,13 +208,13 @@ ME_austria_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+			#AND = {
+			#	tag = AUB
+			#	primary_culture = austrian
+			#}
+#		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -653,13 +653,13 @@ ME_austria_missions_2_RB = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = austrian
+#			}
+#		}
 		has_dlc = "Rule Britannia"
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -686,13 +686,13 @@ ME_austria_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = austrian
+#			}
+#		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -933,13 +933,13 @@ ME_austria_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = austrian
+#			}
+#		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -1371,13 +1371,13 @@ ME_austria_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = HAB
-			AND = {
-				tag = AUB
-				primary_culture = austrian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = austrian
+#			}
+#		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes

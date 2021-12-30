@@ -10,7 +10,7 @@ ENG_UKS_missions_1 = {
 				has_country_flag = ENG_Angevin_Missions
 			}
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -210,7 +210,7 @@ ENG_UKS_missions_2 = {
 				has_country_flag = ENG_Angevin_Missions
 			}
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -427,7 +427,7 @@ ENG_UKS_missions_3 = {
 				has_country_flag = ENG_Angevin_Missions
 			}
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -679,7 +679,7 @@ ENG_UKS_missions_4 = {
 				has_country_flag = ENG_Angevin_Missions
 			}
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -792,7 +792,7 @@ ENG_UKS_missions_5 = {
 				has_country_flag = ENG_Angevin_Missions
 			}
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -1009,7 +1009,7 @@ UKS_missions_1 = {
 	potential = {
 		OR = {
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -1303,7 +1303,7 @@ UKS_missions_2 = {
 	potential = {
 		OR = {
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -1725,7 +1725,7 @@ UKS_missions_3 = {
 	potential = {
 		OR = {
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -2327,7 +2327,7 @@ UKS_missions_4 = {
 	potential = {
 		OR = {
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes
@@ -3424,7 +3424,7 @@ UKS_missions_5 = {
 	potential = {
 		OR = {
 			tag = UKS
-			tag = ANV
+#			tag = ANV
 		}
 	}
 	has_country_shield  = yes

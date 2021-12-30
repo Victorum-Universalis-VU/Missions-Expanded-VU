@@ -641,7 +641,8 @@ RHN_missions_2 = {
 					is_expanded_mod_active = { mod = trade_goods }
 				}
 				any_owned_province = {
-					trade_goods = leather
+					# trade_goods = leather #Doesn't exist in VU, replacing that to avoir errors
+					trade_goods = tanned_leather
 					has_manufactory_trigger = yes
 				}
 			}

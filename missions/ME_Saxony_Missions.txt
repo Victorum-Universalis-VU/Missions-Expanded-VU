@@ -1411,13 +1411,13 @@ saxony_missions_slot_3 = {
 		required_missions = { saxony_conquer_hesse saxony_conquer_upper_franconia }
 		provinces_to_highlight = {
 			OR = {
-				area = lower_bavaria_area
+				area = bavaria_area
 				area = franconia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2098,7 +2098,7 @@ saxony_missions_slot_4 = {
 						}
 					}
 					num_accepted_cultures = 4
-					has_age_ability = ase_saxony_piety
+					#has_age_ability = ase_saxony_piety
 				}
 			}
 			else = {

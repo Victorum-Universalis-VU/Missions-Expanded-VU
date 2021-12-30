@@ -217,7 +217,7 @@ PAL_Missions_3 = {
 		position = 3
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				bavaria_area
+				area = bavaria_area
 				value = 8
 			}
 		}

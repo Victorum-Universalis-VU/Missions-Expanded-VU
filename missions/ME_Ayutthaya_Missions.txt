@@ -241,11 +241,13 @@ AYU_missions_3 = {
 				add_permanent_claim = ROOT
 			}
 			8580 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
 				name = "thriving_arms_industry"
@@ -275,9 +277,7 @@ AYU_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			8580 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			8580 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			khorat_area = {

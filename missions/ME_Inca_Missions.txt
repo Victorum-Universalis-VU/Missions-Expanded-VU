@@ -2021,10 +2021,10 @@ inca_missions_3 = {
 		required_missions = { inca_to_the_east }
 		position = 14
 		provinces_to_highlight = {
-			OR = {
-				area = ofaie_area
+#			OR = {
+#				area = ofaie_area
 				area = goias_area
-			}
+#			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2032,11 +2032,11 @@ inca_missions_3 = {
 			}
 		}
 		trigger = {
-			ofaie_area = {
-				type = all
-				owned_by = ROOT
-				is_city = yes
-			}
+#			ofaie_area = {
+#				type = all
+#				owned_by = ROOT
+#				is_city = yes
+#			}
 			goias_area = {
 				type = all
 				owned_by = ROOT
@@ -2047,11 +2047,11 @@ inca_missions_3 = {
 			if = {
 				limit = {
 					OR = {
-						ofaie_area = {
-							NOT = { trade_goods = gold }
-							NOT = { trade_goods = coffee }
-							NOT = { trade_goods = gems }
-						}
+#						ofaie_area = {
+#							NOT = { trade_goods = gold }
+#							NOT = { trade_goods = coffee }
+#							NOT = { trade_goods = gems }
+#						}
 						goias_area = {
 							NOT = { trade_goods = gold }
 							NOT = { trade_goods = coffee }
@@ -2062,10 +2062,10 @@ inca_missions_3 = {
 				add_years_of_income = 0.5
 				random_province = {
 					limit = {
-						OR = {
-							area = ofaie_area
+#						OR = {
+#							area = ofaie_area
 							area = goias_area
-						}
+#						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2074,10 +2074,10 @@ inca_missions_3 = {
 				}
 				random_province = {
 					limit = {
-						OR = {
-							area = ofaie_area
+#						OR = {
+#							area = ofaie_area
 							area = goias_area
-						}
+#						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2086,10 +2086,10 @@ inca_missions_3 = {
 				}
 				random_province = {
 					limit = {
-						OR = {
-							area = ofaie_area
+#						OR = {
+#							area = ofaie_area
 							area = goias_area
-						}
+#						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2595,10 +2595,10 @@ inca_missions_4 = {
 		required_missions = { inca_to_the_east }
 		position = 14
 		provinces_to_highlight = {
-			OR = {
-				area = guapore_area
+#			OR = {
+#				area = guapore_area
 				area = mato_grosso_area
-			}
+#			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2606,11 +2606,11 @@ inca_missions_4 = {
 			}
 		}
 		trigger = {
-			guapore_area = {
-				type = all
-				owned_by = ROOT
-				is_city = yes
-			}
+#			guapore_area = {
+#				type = all
+#				owned_by = ROOT
+#				is_city = yes
+#			}
 			mato_grosso_area = {
 				type = all
 				owned_by = ROOT
@@ -2628,10 +2628,10 @@ inca_missions_4 = {
 		required_missions = { inca_colonize_eastern_amazon }
 		position = 15
 		provinces_to_highlight = {
-			OR = {
-				area = pontal_area
+#			OR = {
+#				area = pontal_area
 				area = maranhao_area
-			}
+#			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2639,11 +2639,11 @@ inca_missions_4 = {
 			}
 		}
 		trigger = {
-			pontal_area = {
-				type = all
-				owned_by = ROOT
-				is_city = yes
-			}
+#			pontal_area = {
+#				type = all
+#				owned_by = ROOT
+#				is_city = yes
+#			}
 			maranhao_area = {
 				type = all
 				owned_by = ROOT

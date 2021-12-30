@@ -184,7 +184,6 @@ emp_ned_slot2_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -351,7 +350,6 @@ emp_ned_slot2_ned_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			AND = {
@@ -400,7 +398,6 @@ emp_ned_slot2_ned_fla_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = FLA
@@ -449,7 +446,6 @@ emp_ned_slot2_indies_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -547,11 +543,8 @@ emp_ned_slot2_indies_branch = {
 		provinces_to_highlight = {
 			OR = {
 				trade_company_region = trade_company_polynesia
-				colonial_indonesia = {
-					OR = {
-						NOT = { country_or_non_sovereign_subject = ROOT }
-					}
-				}
+				#trade_company_region = trade_company_moluccas
+				#trade_company_region = trade_company_indonesia
 			}
 			is_sea = no
 			NOT = { owned_by = ROOT }
@@ -563,9 +556,8 @@ emp_ned_slot2_indies_branch = {
 				all_owned_province = {
 					OR = {
 						trade_company_region = trade_company_polynesia
-						colonial_indonesia = { 
-							owned_by = { country_or_non_sovereign_subject = ROOT }
-						}
+						#trade_company_region = trade_company_moluccas
+						#trade_company_region = trade_company_indonesia
 					}
 				}
 				amount = 15
@@ -601,7 +593,6 @@ emp_ned_slot3_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -738,7 +729,7 @@ emp_ned_slot3_branch = {
 		completed_by = 1621.6.3
 		
 		provinces_to_highlight = {
-			OR = {
+		    OR = {
 			    region = guinea_region
 			    region = lower_guinea_region
 		    }
@@ -769,7 +760,7 @@ emp_ned_slot3_branch = {
 		required_missions = { emp_ned_charter_the_voc }
 		position = 6
 		completed_by = 1652.1.1
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_cape
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -821,7 +812,6 @@ emp_ned_slot4_branch = { # Statists
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = NED
 		NOT = { map_setup = map_setup_random }
@@ -1103,7 +1093,6 @@ emp_ned_slot4_colony_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED
@@ -1214,7 +1203,6 @@ emp_ned_slot5_branch = { # Orangists
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = NED
 		NOT = { map_setup = map_setup_random }
@@ -1473,7 +1461,6 @@ emp_ned_slot5_colony_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		OR = {
 			tag = NED

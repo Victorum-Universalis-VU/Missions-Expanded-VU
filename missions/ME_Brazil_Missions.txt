@@ -13,26 +13,26 @@ BRZ_missions_1 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = amapa_area
+				#area = amapa_area
 				area = amazon_area
 				area = grao_para_area
-				area = pontal_area
+				#area = pontal_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			pontal_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+#			pontal_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 			grao_para_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			amapa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+#			amapa_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 			amazon_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -206,7 +206,7 @@ BRZ_missions_2 = {
 				area = piaui_area
 				area = ceara_area
 				area = pernambuco_area
-				area = sao_francisco_area
+#				area = sao_francisco_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -231,10 +231,10 @@ BRZ_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			sao_francisco_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+#			sao_francisco_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 		}
 		effect = {
 			country_event = { id = ME_Brazil_Events.3 } #Extraction of Brazilwood
@@ -386,7 +386,7 @@ BRZ_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = minas_gerais_area
-				area = diamantina_area
+#				area = diamantina_area
 				area = rio_de_janeiro_area
 				area = sao_paolo_area
 			}
@@ -397,10 +397,10 @@ BRZ_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			diamantina_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+#			diamantina_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 			rio_de_janeiro_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -765,8 +765,8 @@ BRZ_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = goias_area
-				area = ofaie_area
-				area = guapore_area
+#				area = ofaie_area
+#				area = guapore_area
 				area = mato_grosso_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -776,14 +776,14 @@ BRZ_missions_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ofaie_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			guapore_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+#			ofaie_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
+#			guapore_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 			mato_grosso_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

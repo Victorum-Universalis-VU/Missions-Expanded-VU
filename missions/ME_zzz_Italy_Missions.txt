@@ -1675,15 +1675,17 @@ italy_missions_3 = {
 					type = all
 					OR = {
 						NOT = {
-							has_terrain = farmlands
-							has_terrain = grasslands
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = fish
-							trade_goods = rice
-							trade_goods = olive_oil
-							trade_goods = cheese
-							trade_goods = potato
+							OR = {
+								has_terrain = farmlands
+								has_terrain = grasslands
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = fish
+								trade_goods = rice
+								trade_goods = olive_oil
+								trade_goods = cheese
+								trade_goods = potato
+							}
 						}
 						development = 20
 						has_production_building_trigger = yes

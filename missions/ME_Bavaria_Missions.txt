@@ -3,13 +3,13 @@ bavaria_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -54,7 +54,7 @@ bavaria_missions_1 = {
 			legitimacy_equivalent = 90
 		}
 		effect = {
-			 = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -276,13 +276,13 @@ bavaria_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -463,13 +463,13 @@ bavaria_missions_3_AoW = {
 		has_dlc = "Art of War"
 	}
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		has_dlc = "Art of War"
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -505,13 +505,13 @@ bavaria_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -755,13 +755,13 @@ bavaria_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
@@ -1087,13 +1087,13 @@ bavaria_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+#		OR = {
 			tag = BAV
-			AND = {
-				tag = AUB
-				primary_culture = bavarian
-			}
-		}
+#			AND = {
+#				tag = AUB
+#				primary_culture = bavarian
+#			}
+#		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}

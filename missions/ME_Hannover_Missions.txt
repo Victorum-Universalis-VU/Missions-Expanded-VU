@@ -498,13 +498,13 @@ hannover_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_swabia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+#			lower_swabia_area = {
+#				limit = {
+#					NOT = { owned_by = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = ROOT
+#			}
 			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

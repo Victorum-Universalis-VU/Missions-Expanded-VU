@@ -3617,8 +3617,10 @@ POL_Missions_5_2 = {
 					senior_union_with = RUS
 					AND = {
 						NOT = { 
-							exists = MOS
-							exists = RUS
+							OR = {
+								exists = MOS
+								exists = RUS
+							}
 						}
 						owns = 295
 					}
@@ -3629,8 +3631,10 @@ POL_Missions_5_2 = {
 					senior_union_with = MOS
 					AND = {
 						NOT = { 
-							exists = MOS
-							exists = RUS
+							OR = {
+								exists = MOS
+								exists = RUS
+							}
 						}
 						owns = 295
 					}
