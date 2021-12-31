@@ -378,7 +378,6 @@ BEI_missions_2 = {
 		required_missions = { Brunei_colonist }
 		provinces_to_highlight = {
 			area = kalimantan_area
-			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1043,7 +1042,6 @@ BEI_missions_5 = {
 		required_missions = { Brunei_kutai }
 		provinces_to_highlight = {
 			area = south_sulawesi_area
-			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				is_empty = yes

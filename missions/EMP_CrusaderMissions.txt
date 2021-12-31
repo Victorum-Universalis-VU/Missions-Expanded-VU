@@ -465,7 +465,6 @@ EMP_crusader_3 = {
 							area = aegean_archipelago_area
 							area = eastern_mediterrenean_islands_area
 						}
-					}
 				}
 			}
 		}

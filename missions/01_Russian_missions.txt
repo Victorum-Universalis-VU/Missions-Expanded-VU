@@ -84,8 +84,8 @@ consolidate_expand_russia_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			}
 		}
+		
 		effect = {
 			russia_region = {
 				limit = {

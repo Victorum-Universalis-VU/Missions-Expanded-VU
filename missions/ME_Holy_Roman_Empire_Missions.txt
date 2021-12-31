@@ -2716,7 +2716,7 @@ HLR_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_karelia = {
+			north_karelia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2756,7 +2756,7 @@ HLR_missions_3 = {
 				area = pomor_area
 				area = karelia_area
 				area = arkhangelsk_area
-				area = north_karelia
+				area = north_karelia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2773,7 +2773,7 @@ HLR_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			north_karelia = {
+			north_karelia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2930,13 +2930,13 @@ HLR_missions_3 = {
 		position = 23
 		provinces_to_highlight = {
 			OR = {
-				area = north_florida_area
+				area = florida_area
 				area = south_carolina_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			north_florida_area = {
+			florida_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

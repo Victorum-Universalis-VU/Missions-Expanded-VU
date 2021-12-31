@@ -951,12 +951,12 @@ HNS_missions_1_WoN_Dharma = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		OR = {
-			has_dlc = "Wealth of Nations"
-			has_dlc = "Dharma"
-		}
-	}
+	#potential_on_load = {
+	#	OR = {
+	#		has_dlc = "Wealth of Nations"
+	#		has_dlc = "Dharma"
+	#	}
+	#}
 	potential = {
 		tag = HNS
 		OR = {
@@ -993,16 +993,8 @@ HNS_missions_1_WoN_Dharma = {
 		}
 		position = 9
 		trigger = {
-			trade_company_west_africa = {
-				owned_by = ROOT
-				is_owned_by_trade_company = yes
-				trade_company_size = 5
-			}
-			trade_company_south_africa = {
-				owned_by = ROOT
-				is_owned_by_trade_company = yes
-				trade_company_size = 1
-			}
+			colonial_somalia = { country_or_non_sovereign_subject_holds = ROOT }
+			colonial_cape = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			random_owned_province = {
@@ -1095,7 +1087,7 @@ HNS_missions_1_WoN_Dharma = {
 			}
 			NOT = { area = assam_area }
 			NOT = { area = naga_hills_area }
-			NOT = { area = tripura_area }
+#			NOT = { area = tripura_area }
 			province_has_center_of_trade_of_level = 2
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}

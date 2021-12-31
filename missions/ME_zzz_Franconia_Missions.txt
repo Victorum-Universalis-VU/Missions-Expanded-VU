@@ -758,12 +758,12 @@ FKN_Missions_2 = {
 		required_missions = { FKN_dux_francorum }
 		position = 6
 		provinces_to_highlight = {
-			bavaria_area
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = east_bavaria_area
+				area = bavaria_area
 				value = 7
 			}
 		}

@@ -189,13 +189,13 @@ francia_missions_1 = {
 			}
 		}
 		effect = {
-			upper_swabia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			#upper_swabia_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			1880 = {
 				if = {
 					limit = {
@@ -224,11 +224,11 @@ francia_missions_1 = {
 		}
 		position = 11
 		provinces_to_highlight = {
-			area = upper_bavaria_area
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -354,14 +354,14 @@ francia_missions_2 = {
 		position = 9
 		provinces_to_highlight = {
 			OR = {
-				area = upper_swabia_area
+				area = swabia_area
 				province_id = 1880
 				province_id = 72
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -373,7 +373,7 @@ francia_missions_2 = {
 			}
 		}
 		effect = {
-			lower_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -407,14 +407,14 @@ francia_missions_2 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = lower_swabia_area
+				area = swabia_area
 				province_id = 74
 				province_id = 75
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -426,14 +426,7 @@ francia_missions_2 = {
 			}
 		}
 		effect = {
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_bavaria_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -689,7 +682,7 @@ francia_missions_3 = {
 			}
 		}
 		effect = {
-			upper_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -724,11 +717,11 @@ francia_missions_3 = {
 		}
 		position = 11
 		provinces_to_highlight = {
-			area = lower_bavaria_area
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_bavaria_area = {
+			bavaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1075,13 +1068,6 @@ francia_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			northern_saxony_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -1092,16 +1078,11 @@ francia_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = lower_saxony_area
-				area = northern_saxony_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			lower_saxony_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1441,7 +1422,7 @@ francia_missions_5 = {
 			}
 		}
 		effect = {
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1459,11 +1440,11 @@ francia_missions_5 = {
 		}
 		position = 12
 		provinces_to_highlight = {
-			area = south_saxony_area
+			area = saxony_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			south_saxony_area = {
+			saxony_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
