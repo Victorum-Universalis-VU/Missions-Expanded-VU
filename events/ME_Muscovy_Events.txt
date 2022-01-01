@@ -300,10 +300,10 @@ country_event = {
 				limit = {
 					is_expanded_mod_active = { mod = subjects }
 				}
-				create_subject = {
-					subject_type = protectorate
-					subject = ROOT
-				}
+#				create_subject = {
+#					subject_type = protectorate
+#					subject = ROOT
+#				}
 			}
 			else = { vassalize = ROOT }
 		}
