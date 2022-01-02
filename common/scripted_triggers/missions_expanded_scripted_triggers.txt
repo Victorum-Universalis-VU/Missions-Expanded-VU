@@ -317,12 +317,12 @@ country_gets_japanese_generic_missions = {
 	}
 	OR = {
 		tag = OTM
-		tag = HKC
-		tag = NNC
-		tag = KNM
-		tag = FJI
-		tag = TAA
-		tag = MTO
+#		tag = HKC
+#		tag = NNC
+#		tag = KNM
+#		tag = FJI
+#		tag = TAA
+#		tag = MTO
 		NOT = { country_gets_japanese_unique_missions = yes }
 	}
 }
@@ -367,7 +367,7 @@ is_evenki_minor = {
 		tag = SOL
 		tag = NVK
 		tag = BRT
-		tag = EVK
+		#tag = EVK
 	}
 }
 
@@ -376,7 +376,7 @@ was_evenki_minor = {
 		was_tag = SOL
 		was_tag = NVK
 		was_tag = BRT
-		was_tag = EVK
+		#was_tag = EVK
 	}
 }
 
@@ -386,7 +386,7 @@ is_kamchatkan_minor = {
 		tag = HOD
 		tag = CHV
 		tag = KMC
-		tag = KCH
+		#tag = KCH
 	}
 }
 
@@ -396,7 +396,7 @@ was_kamchatkan_minor = {
 		was_tag = HOD
 		was_tag = CHV
 		was_tag = KMC
-		was_tag = KCH
+	#	was_tag = KCH
 	}
 }
 
