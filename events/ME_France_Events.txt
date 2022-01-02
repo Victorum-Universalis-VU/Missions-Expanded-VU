@@ -203,7 +203,7 @@ country_event = {
 			cede_province = GER
 			add_core = GER
 		}
-		upper_rhineland_area = {
+		north_rhine_area = {
 			cede_province = GER
 			add_core = GER
 		}
@@ -227,23 +227,15 @@ country_event = {
 			cede_province = GER
 			add_core = GER
 		}
-		lower_swabia_area = {
+		swabia_area = {
 			cede_province = GER
 			add_core = GER
 		}
-		upper_swabia_area = {
+		bavaria_area = {
 			cede_province = GER
 			add_core = GER
 		}
-		lower_bavaria_area = {
-			cede_province = GER
-			add_core = GER
-		}
-		upper_bavaria_area = {
-			cede_province = GER
-			add_core = GER
-		}
-		upper_franconia_area = {
+		franconia_area = {
 			cede_province = GER
 			add_core = GER
 		}
