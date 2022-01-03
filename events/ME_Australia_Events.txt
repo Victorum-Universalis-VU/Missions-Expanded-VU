@@ -346,12 +346,20 @@ country_event = { # The Scouring of New Zealand
 		te_ika_a_maui_area = {
 			limit = {
 				owned_by = ROOT
+				OR = {
+					has_terrain = hills
+					has_terrain = mountain
+					has_terrain = highlands
+				}
 			}
-			add_devastation = -10
-			add_unrest = -10
-			add_province_modifier = {
-				name = aus_scouring_stopped
-				duration = -1
+			add_devastation = 5
+			random_list = {
+				50 = {
+					change_trade_goods = copper
+				}
+				50 = {
+					change_trade_goods = iron
+				}
 			}
 		}
 		te_waipounamu_area = {
