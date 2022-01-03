@@ -251,7 +251,7 @@ country_event = {
 		}
 		italy_region = {
 			owned_by = ROOT
-			NOT = { area = western_sicily_area }
+			#NOT = { area = western_sicily_area }
 			NOT = { area = sicily_area }
 			NOT = { area = calabria_area }
 			NOT = { area = apulia_area }
@@ -273,7 +273,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = italy_region
-				NOT = { area = western_sicily_area }
+				#NOT = { area = western_sicily_area }
 				NOT = { area = sicily_area }
 				NOT = { area = calabria_area }
 				NOT = { area = apulia_area }
@@ -324,7 +324,7 @@ country_event = {
 		italy_region = {
 			owned_by = ROOT
 			OR = {
-				area = western_sicily_area
+				#area = western_sicily_area
 				area = sicily_area
 				area = calabria_area
 				area = apulia_area
@@ -348,7 +348,7 @@ country_event = {
 			limit = {
 				region = italy_region
 				OR = {
-					area = western_sicily_area
+					#area = western_sicily_area
 					area = sicily_area
 					area = calabria_area
 					area = apulia_area
