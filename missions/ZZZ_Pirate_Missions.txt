@@ -234,13 +234,6 @@ pirate_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_cuba_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	pirate_running_down_to_cuba = {
@@ -248,20 +241,13 @@ pirate_2 = {
 		required_missions = { pirate_an_old_fort }
 		
 		provinces_to_highlight = {
-			OR = {
-				area = cuba_area
-				area = east_cuba_area
-			}
+			area = cuba_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
 		trigger = {
 			cuba_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_cuba_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -1194,7 +1194,7 @@ savoy_missions_5 = {
 		}
 		effect = {
 			4720 = {
-				add_or_upgrade_tax_building = yes
+				#add_or_upgrade_tax_building = yes
 				add_province_modifier = {
 					name = sav_religious_castle
 					duration = 3650
