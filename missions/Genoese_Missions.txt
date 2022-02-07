@@ -308,22 +308,9 @@ genoa_europe_slot = {
 			}
 		}
 	}
-}
-
-genoa_europe_slot = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		tag = GEN
-		has_country_flag = use_paradox_missions
-	}
-	has_country_shield = yes
-	
 	gen_war_ottomans = {
 		icon = mission_siege_of_galata
 		required_missions = { }
-		position = 5
 		
 		trigger = {
 			if = {

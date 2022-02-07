@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 government = monarchy
 add_government_reform = feudalism_reform
 technology_group = western
 religion = catholic
-=======
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-religion = catholic
->>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
 primary_culture = czech

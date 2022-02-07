@@ -123,9 +123,9 @@ ANS_missions_5 = {
 			}
 		}
 		effect = {
-			71 = {
-				add_or_upgrade_tax_building = yes
-			}
+			#71 = {
+			#	add_or_upgrade_tax_building = yes
+			#}
 			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}

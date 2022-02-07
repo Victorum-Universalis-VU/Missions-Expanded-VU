@@ -37,7 +37,7 @@ FRN_Missions_1 = {
 		}
 		effect = {
 			1876 = {
-				add_or_upgrade_trade_building = yes
+				#add_or_upgrade_trade_building = yes
 				add_trade_modifier = {
 					who = ROOT
 					duration = -1
@@ -204,9 +204,9 @@ FRN_Missions_5 = {
 			}
 		}
 		effect = {
-			1876 = {
-				add_or_upgrade_tax_building = yes
-			}
+			#1876 = {
+			#	add_or_upgrade_tax_building = yes
+			#}
 			add_papal_influence = 25
 			add_church_power = 25
 			add_fervor = 25
