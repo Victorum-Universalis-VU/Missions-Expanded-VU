@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4087e1e (merge)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 melva_jews_value = { }
 
 italian_jew_province = { }
@@ -17,4 +25,52 @@ melva_jews_medic_modifier = {
 	monarch_lifespan = 0.125
 	heir_chance = 0.125
 	manpower_recovery_speed = 0.05
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+melva_jews_value = { }
+
+italian_jew_province = { }
+
+italian_jew_allowed_stay = {
+	local_build_cost = -0.075
+	local_tax_modifier = 0.075
+	local_missionary_strength = -0.025
+}
+italian_jew_allowed_stay_2 = {
+	local_build_cost = -0.125
+	local_tax_modifier = 0.125
+	local_missionary_strength = -0.05
+}
+
+melva_jews_medic_modifier = {
+	monarch_lifespan = 0.125
+	heir_chance = 0.125
+	manpower_recovery_speed = 0.05
+>>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
+=======
+>>>>>>> parent of 4087e1e (merge)
+=======
+melva_jews_value = { }
+
+italian_jew_province = { }
+
+italian_jew_allowed_stay = {
+	local_build_cost = -0.075
+	local_tax_modifier = 0.075
+	local_missionary_strength = -0.025
+}
+italian_jew_allowed_stay_2 = {
+	local_build_cost = -0.125
+	local_tax_modifier = 0.125
+	local_missionary_strength = -0.05
+}
+
+melva_jews_medic_modifier = {
+	monarch_lifespan = 0.125
+	heir_chance = 0.125
+	manpower_recovery_speed = 0.05
+>>>>>>> parent of 807019c (Merge branch 'Victorum-Universalis-VU:beta-branch' into beta-branch)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 }

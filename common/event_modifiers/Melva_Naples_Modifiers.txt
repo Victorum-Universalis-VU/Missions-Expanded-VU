@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4087e1e (merge)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 nap_magnanimo = {
 	reform_progress_growth = 0.10
 	global_unrest = -1
@@ -17,4 +25,52 @@ nap_twenty_years_prosperity = {
 	global_unrest = -2
 	development_cost = -0.10
 	global_tax_modifier = 0.05
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+nap_magnanimo = {
+	reform_progress_growth = 0.10
+	global_unrest = -1
+}
+nap_transumanza = {
+	trade_goods_size_modifier = 0.10
+	local_development_cost = -0.05
+}
+nap_transumanza_ge = {
+	rural_goods_produced_modifier = 0.10
+}
+nap_porta_capuana = {
+	local_defensiveness = 0.05
+	province_trade_power_value = 5
+}
+nap_twenty_years_prosperity = {
+	global_unrest = -2
+	development_cost = -0.10
+	global_tax_modifier = 0.05
+>>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
+=======
+>>>>>>> parent of 4087e1e (merge)
+=======
+nap_magnanimo = {
+	reform_progress_growth = 0.10
+	global_unrest = -1
+}
+nap_transumanza = {
+	trade_goods_size_modifier = 0.10
+	local_development_cost = -0.05
+}
+nap_transumanza_ge = {
+	rural_goods_produced_modifier = 0.10
+}
+nap_porta_capuana = {
+	local_defensiveness = 0.05
+	province_trade_power_value = 5
+}
+nap_twenty_years_prosperity = {
+	global_unrest = -2
+	development_cost = -0.10
+	global_tax_modifier = 0.05
+>>>>>>> parent of 807019c (Merge branch 'Victorum-Universalis-VU:beta-branch' into beta-branch)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 }

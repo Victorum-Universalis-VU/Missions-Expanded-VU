@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4087e1e (merge)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 spriteTypes = {
 	spriteType = {
 		name = "GFX_modifier_icon_salt"
@@ -24,4 +32,66 @@ spriteTypes = {
 		name = "GFX_modifier_icon_portuguese_flag"
 		textureFile = "gfx/interface/ideas_EU4/modifier_icon_portuguese_flag.dds"
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+spriteTypes = {
+	spriteType = {
+		name = "GFX_modifier_icon_salt"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_salt.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_lubeck_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_lubeck_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_lubeck_flag_grey"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_lubeck_flag_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_muslim_center"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_muslim_center.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_malay_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_malay_flag.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_modifier_icon_portuguese_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_portuguese_flag.dds"
+	}
+>>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
+=======
+>>>>>>> parent of 4087e1e (merge)
+=======
+spriteTypes = {
+	spriteType = {
+		name = "GFX_modifier_icon_salt"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_salt.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_lubeck_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_lubeck_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_lubeck_flag_grey"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_lubeck_flag_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_muslim_center"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_muslim_center.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_icon_malay_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_malay_flag.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_modifier_icon_portuguese_flag"
+		textureFile = "gfx/interface/ideas_EU4/modifier_icon_portuguese_flag.dds"
+	}
+>>>>>>> parent of 807019c (Merge branch 'Victorum-Universalis-VU:beta-branch' into beta-branch)
+>>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 }
