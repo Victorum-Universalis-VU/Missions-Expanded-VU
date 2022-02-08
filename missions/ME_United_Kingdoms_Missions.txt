@@ -645,7 +645,7 @@ ENG_UKS_missions_3 = {
         trigger = {
 			overlord_of = FRA
 			FRA = {
-				NOT = { num_of_cities = 120 }
+				NOT = { num_of_cities = 60 }
 				NOT = { liberty_desire = 10 }
 			}
 			reverse_has_opinion = {
