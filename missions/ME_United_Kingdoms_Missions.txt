@@ -645,11 +645,7 @@ ENG_UKS_missions_3 = {
         trigger = {
 			overlord_of = FRA
 			FRA = {
-<<<<<<< HEAD
-				NOT = { num_of_cities = 60 }
-=======
 				NOT = { num_of_cities = 120 }
->>>>>>> parent of 4087e1e (merge)
 				NOT = { liberty_desire = 10 }
 			}
 			reverse_has_opinion = {

@@ -13,11 +13,7 @@ generic_rhenish_missions_2 = {
 			tag = PAL
 			tag = KLE
 			tag = BRG
-<<<<<<< HEAD
-			tag = RHN
-=======
 			#tag = RHN
->>>>>>> parent of 4087e1e (merge)
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland
@@ -208,17 +204,6 @@ generic_rhenish_missions_3 = {
 			tag = NSA
 			tag = KLE
 			tag = BRG
-<<<<<<< HEAD
-			AND = {
-				tag = RHN
-				NOT = {
-					OR = {
-						was_tag = PAL
-						was_tag = HES
-					}
-				}
-			}
-=======
 			#AND = {
 			#	tag = RHN
 			#	NOT = {
@@ -228,7 +213,6 @@ generic_rhenish_missions_3 = {
 			#		}
 			#	}
 			#}
->>>>>>> parent of 4087e1e (merge)
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland
@@ -304,17 +288,6 @@ generic_rhenish_missions_4 = {
 			tag = NSA
 			tag = KLE
 			tag = BRG
-<<<<<<< HEAD
-			AND = {
-				tag = RHN
-				NOT = {
-					OR = {
-						was_tag = PAL
-						was_tag = HES
-					}
-				}
-			}
-=======
 #			AND = {
 #				tag = RHN
 #				NOT = {
@@ -324,7 +297,6 @@ generic_rhenish_missions_4 = {
 #					}
 #				}
 #			}
->>>>>>> parent of 4087e1e (merge)
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland

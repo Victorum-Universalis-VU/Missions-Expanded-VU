@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 4087e1e (merge)
 namespace = ME_Ryukyu_Events
 
 country_event = { #Event for Piracy
@@ -31,38 +27,4 @@ country_event = { #Event for Piracy
 		set_ruler_flag = historical_pirate
 		swap_non_generic_missions = yes
 	}
-<<<<<<< HEAD
-=======
-namespace = ME_Ryukyu_Events
-
-country_event = { #Event for Piracy
-	id = ME_Ryukyu_Events.1
-	title = ME_Ryukyu_Events.1.t
-	desc = ME_Ryukyu_Events.1.d
-	picture = SMUGGLERS_eventPicture
-	
-	major = yes
-	is_triggered_only = yes
-	
-	option = { #Nah
-		name = ME_Ryukyu_Events.1.a
-		
-		add_country_modifier = {
-			name = RYU_maritime_culture_thriving
-			duration = 10950
-		}
-	}
-	
-	option = { #we wokou now noice
-		name = ME_Ryukyu_Events.1.b
-		
-		change_government = republic
-		add_government_reform = pirate_republic_reform
-		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }0
-		set_ruler_flag = historical_pirate
-		swap_non_generic_missions = yes
-	}
->>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
-=======
->>>>>>> parent of 4087e1e (merge)
 }

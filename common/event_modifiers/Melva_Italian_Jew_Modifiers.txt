@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 4087e1e (merge)
 melva_jews_value = { }
 
 italian_jew_province = { }
@@ -21,28 +17,4 @@ melva_jews_medic_modifier = {
 	monarch_lifespan = 0.125
 	heir_chance = 0.125
 	manpower_recovery_speed = 0.05
-<<<<<<< HEAD
-=======
-melva_jews_value = { }
-
-italian_jew_province = { }
-
-italian_jew_allowed_stay = {
-	local_build_cost = -0.075
-	local_tax_modifier = 0.075
-	local_missionary_strength = -0.025
-}
-italian_jew_allowed_stay_2 = {
-	local_build_cost = -0.125
-	local_tax_modifier = 0.125
-	local_missionary_strength = -0.05
-}
-
-melva_jews_medic_modifier = {
-	monarch_lifespan = 0.125
-	heir_chance = 0.125
-	manpower_recovery_speed = 0.05
->>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
-=======
->>>>>>> parent of 4087e1e (merge)
 }
