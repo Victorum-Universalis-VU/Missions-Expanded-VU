@@ -110,7 +110,7 @@ Ducal_PRU_missions_1 = {
 		}
 		effect = {
 			41 = {
-				add_or_upgrade_university_building = yes
+				#add_or_upgrade_university_building = yes
 				add_province_modifier = {
 					name = PRU_universita_albertina
 					duration = -1

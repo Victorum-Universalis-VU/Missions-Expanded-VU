@@ -74,4 +74,3 @@ decline_of_mali = {
 		}
 	}
 }
-

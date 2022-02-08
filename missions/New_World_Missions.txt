@@ -635,4 +635,3 @@ new_world_natives_missions_slot5 = {
 		}
 	}
 }
-

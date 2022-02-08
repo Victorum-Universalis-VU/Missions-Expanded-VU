@@ -1,4 +1,4 @@
-﻿l_english:
+﻿﻿l_english:
  # Reforms:
  incan_society_reform: "Incan Society"
  incan_society_reform_desc: "Incan Society is the most sohpisticated in all of the Americas. The Priesthood, Nobility, Merchants and Ruler all function together as part of one impressive machine with the sole purpose of bringing the Empire of the Incans to the next great height of civilisation."
@@ -181,4 +181,3 @@
  ME_Reform_Events1.EVTOPT4: "[Root.Monarch.GetName] wasn't elected, but [Root.Monarch.GetSheHe] seems to be the right choice..."
 
  CALIPHATE_CURRENT_RULER_STAYS: "§Y[Root.Monarch.GetName]§! ([Root.Monarch.GetAdm]/[Root.Monarch.GetDip]/[Root.Monarch.GetMil]), of §Y[Root.current_ruler_culture.GetCultureName]§! heritage, following the §Y[Root.current_ruler_religion.GetReligionName]§! faith, remains ruler of §Y[Root.GetName]§! at the age of §Y[Root.current_ruler_age.GetValue]§!.\n"
-

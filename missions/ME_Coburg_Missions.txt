@@ -142,9 +142,10 @@ COB_missions_5 = {
 			}
 		}
 		effect = {
-			4716 = {
-				add_or_upgrade_university_building =  yes
-			}
+			#4716 = {
+			#	add_or_upgrade_university_building =  yes
+			#}
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}
 	

@@ -124,9 +124,9 @@ MAI_Missions_3 = {
 		}
 		effect = {
 			add_years_of_income = 1
-			78 = {
-				add_or_upgrade_trade_building = yes
-			}
+			#78 = {
+			#	add_or_upgrade_trade_building = yes
+			#}
 		}
 	}
 }

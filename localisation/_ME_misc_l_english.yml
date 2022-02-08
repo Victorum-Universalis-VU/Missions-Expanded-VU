@@ -17,3 +17,16 @@ l_english:
  ME_yes: "£yes£"
  ME_no: "£no£"
  ME_nothing: ""
+ 
+ #MEVU Additions
+ italy_reach:0 "Italian Reach"
+ desc_italy_reach:0 "."
+ italy_colonial_rush:0 "Italian Colonial Rush"
+ desc_italy_colonial_rush:0 "."
+ italy_colonial_trade:0 "Italian Colonial Trade"
+ desc_italy_colonial_trade:0 "."
+ italy_tariff_boost:0 "Italian Tariff Boost"
+ desc_italy_tariff_boost:0 "."
+ HRE_conquering_frenzy:0 "Italian Tariff Boost"
+ desc_HRE_conquering_frenzy:0 "."
+ 

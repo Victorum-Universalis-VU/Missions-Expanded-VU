@@ -1,0 +1,23 @@
+#########
+#By San Felipe for MEVU
+#########
+
+italy_reach = {
+	trade_range_modifier = 0.35
+}
+
+italy_colonial_rush = {
+	global_own_trade_power = 0.35
+}
+
+italy_colonial_trade = {
+	global_trade_power = 0.35
+}
+
+italy_tariff_boost = {
+	trade_goods_size_modifier = 0.35
+}
+
+HRE_conquering_frenzy = {
+	army_tradition = 1
+}

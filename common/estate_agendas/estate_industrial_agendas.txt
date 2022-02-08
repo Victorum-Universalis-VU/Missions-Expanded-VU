@@ -455,7 +455,7 @@ estate_industrial_workshop = {
 			estate = estate_industrial
 			loyalty = 10
 		}
-		else = {
+		else_if = {
 			event_target:agenda_province = {
 				add_base_production = 1
 			}
