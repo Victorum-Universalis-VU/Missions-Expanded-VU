@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 4087e1e (merge)
->>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 vij_pegu_relation_positive = {
 	opinion = 50
 	yearly_decay = 2	# optional
@@ -22,46 +14,4 @@ vij_pegu_relation_negative = {
 #	max = 15			# optional
 #	yearly_decay = 5	# optional
 #	months = 10			# optional
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-vij_pegu_relation_positive = {
-	opinion = 50
-	yearly_decay = 2	# optional
-}
-
-vij_pegu_relation_negative = {
-	opinion = -50
-	yearly_decay = 2	# optional
-}
-
-#name_of_modifier = {
-#	opinion = 1
-#	min = -15			# optional
-#	max = 15			# optional
-#	yearly_decay = 5	# optional
-#	months = 10			# optional
->>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
-=======
->>>>>>> parent of 4087e1e (merge)
-=======
-vij_pegu_relation_positive = {
-	opinion = 50
-	yearly_decay = 2	# optional
-}
-
-vij_pegu_relation_negative = {
-	opinion = -50
-	yearly_decay = 2	# optional
-}
-
-#name_of_modifier = {
-#	opinion = 1
-#	min = -15			# optional
-#	max = 15			# optional
-#	yearly_decay = 5	# optional
-#	months = 10			# optional
->>>>>>> parent of 807019c (Merge branch 'Victorum-Universalis-VU:beta-branch' into beta-branch)
->>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 #}

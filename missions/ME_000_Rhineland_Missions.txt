@@ -13,7 +13,7 @@ generic_rhenish_missions_2 = {
 			tag = PAL
 			tag = KLE
 			tag = BRG
-			#tag = RHN
+			tag = RHN
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland
@@ -204,15 +204,15 @@ generic_rhenish_missions_3 = {
 			tag = NSA
 			tag = KLE
 			tag = BRG
-			#AND = {
-			#	tag = RHN
-			#	NOT = {
-			#		OR = {
-			#			was_tag = PAL
-			#			was_tag = HES
-			#		}
-			#	}
-			#}
+			AND = {
+				tag = RHN
+				NOT = {
+					OR = {
+						was_tag = PAL
+						was_tag = HES
+					}
+				}
+			}
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland
@@ -288,15 +288,15 @@ generic_rhenish_missions_4 = {
 			tag = NSA
 			tag = KLE
 			tag = BRG
-#			AND = {
-#				tag = RHN
-#				NOT = {
-#					OR = {
-#						was_tag = PAL
-#						was_tag = HES
-#					}
-#				}
-#			}
+			AND = {
+				tag = RHN
+				NOT = {
+					OR = {
+						was_tag = PAL
+						was_tag = HES
+					}
+				}
+			}
 			AND = {
 				tag = KOL
 				has_country_flag = Cologne_Rheinland

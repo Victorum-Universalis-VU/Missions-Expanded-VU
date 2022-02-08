@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 government = monarchy
 add_government_reform = feudalism_reform
 technology_group = western
 religion = catholic
-<<<<<<< HEAD
-=======
-=======
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-religion = catholic
->>>>>>> c8735030c20cda65e91c801daee1c39ad6ed26b8
-=======
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-religion = catholic
->>>>>>> parent of 807019c (Merge branch 'Victorum-Universalis-VU:beta-branch' into beta-branch)
->>>>>>> bb928e4392de6a3d974c84c7cab9a01b1d2a1dea
 primary_culture = czech
