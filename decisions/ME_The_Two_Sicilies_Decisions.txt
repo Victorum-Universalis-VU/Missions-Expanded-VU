@@ -414,7 +414,7 @@ country_decisions = {
 		potential = {
 			125 = {
 				NOT = {
-					has_great_project = gme_palermo_duomo_monreale = {
+					has_great_project = gme_palermo_duomo_monreale
 
 				}
 			}

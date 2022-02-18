@@ -2089,5 +2089,4 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-
 #A large event chain will be here soon probably
