@@ -172,8 +172,8 @@ Tuscany_missions_1 = {
 				OR = {
 					116 = {
 						has_great_project = {
-							#type = santa_maria_del_fiore
-							type = duomo_di_firenze
+							type = santa_maria_del_fiore
+							#type = duomo_di_firenze
 							tier = 3
 						}
 					}

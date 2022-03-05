@@ -1180,17 +1180,17 @@ italy_missions_3 = {
 				}
 				custom_tooltip = italy_italian_hegemony_nASE_tt
 			}
-			if = {
-				limit = {
-					is_expanded_mod_active = { mod = great_monuments }
-				}
-				118 = {
-					add_great_project_tier = {
-						type = gme_rome_altare_patria
-						tier = 1
-					}
-				}
-			}
+			#if = {
+			#	limit = {
+			#		is_expanded_mod_active = { mod = great_monuments }
+			#	}
+			#	118 = {
+			#		add_great_project_tier = {
+			#			type = gme_rome_altare_patria
+			#			tier = 1
+			#		}
+			#	}
+			#}
 		}
 	}
 
