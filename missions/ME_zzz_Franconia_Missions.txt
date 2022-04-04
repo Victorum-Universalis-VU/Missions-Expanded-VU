@@ -613,7 +613,7 @@ FKN_Missions_1 = {
 				if = {
 					limit = {
 						num_of_owned_provinces_with = {
-							num_of_times_improved = 5
+							num_of_times_improved_by_owner = 5
 							value = 5
 						}
 					}
@@ -622,7 +622,7 @@ FKN_Missions_1 = {
 				else = {
 					every_owned_province = {
 						limit = {
-							num_of_times_improved = 5
+							num_of_times_improved_by_owner = 5
 						}
 						ROOT = { add_years_of_income = 0.2 }
 					}

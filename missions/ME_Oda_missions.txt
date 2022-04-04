@@ -194,7 +194,7 @@ ODA_missions_1 = {
 		trigger = {
 			1028 = {
 				owned_by = ROOT
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {

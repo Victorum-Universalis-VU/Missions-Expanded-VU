@@ -36,13 +36,13 @@ generic_rhenish_missions_4_2 = {
 			owned_by = ROOT
 			OR = {
 				NOT = { development = 20 }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 		}
 		trigger = {
 			any_owned_province = {
 				development = 20
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {
@@ -69,7 +69,7 @@ generic_rhenish_missions_4_2 = {
 				random_owned_province = {
 					limit = {
 						development = 20
-						num_of_times_improved = 5
+						num_of_times_improved_by_owner = 5
 					}
 					add_province_modifier = {
 						name = RHN_pearl_of_the_rhineland
@@ -581,12 +581,12 @@ RHN_missions_2 = {
         trigger = {
             1878 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 				has_production_building_trigger = yes
 			}
 			82 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 				has_production_building_trigger = yes
 			}
         }
@@ -1010,7 +1010,7 @@ RHN_missions_4 = {
 						#trade_goods = brass
 						#trade_goods = bronze
 						#AND = {
-						#	num_of_times_improved = 5
+						#	num_of_times_improved_by_owner = 5
 						#	has_trade_building_trigger = yes
 						#}
 			#		}
@@ -1020,7 +1020,7 @@ RHN_missions_4 = {
 				
 			#}
 			83 = {
-				num_of_times_improved = 7
+				num_of_times_improved_by_owner = 7
 				has_trade_building_trigger = yes
 			}
 			#Developer Note: TGE Removed alloying mechanic, so I was forced to change the mission, I'm keeping comments in case of return of said mechanic
@@ -1197,11 +1197,11 @@ RHN_missions_4 = {
         trigger = {
 			1760 = {
 				owned_by = ROOT
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 			}
 			80 = {
 				owned_by = ROOT
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 			}
 			#else = {
 			#	num_of_owned_provinces_with = {
@@ -1375,7 +1375,7 @@ RHN_missions_5 = {
 					is_expanded_mod_active = { mod = trade_goods }
 					province_id = 4768
 					OR = {
-						NOT = { num_of_times_improved = 3 }
+						NOT = { num_of_times_improved_by_owner = 3 }
 						NOT = { owned_by = ROOT }
 					}
 				}
@@ -1383,21 +1383,21 @@ RHN_missions_5 = {
 					province_id = 81
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 10 }
+						NOT = { num_of_times_improved_by_owner = 10 }
 					}
 				}
 			}
 		}
         trigger = {
 			81 = {
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 			}
 			if = {
 				limit = {
 					is_expanded_mod_active = { mod = trade_goods }
 				}
 				4768 = {
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
         }

@@ -190,7 +190,7 @@ mexico_missions_1 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
-				NOT = { num_of_times_improved = 6 }
+				NOT = { num_of_times_improved_by_owner = 6 }
 			}
 		}
 		trigger = {
@@ -200,7 +200,7 @@ mexico_missions_1 = {
 			}
 			owns_core_province = 835
 			835 = {
-				num_of_times_improved = 6
+				num_of_times_improved_by_owner = 6
 			}
 		}
 		effect = {

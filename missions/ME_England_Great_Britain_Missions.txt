@@ -2366,30 +2366,30 @@ GBR_missions_3_5 = {
 				province_id = 1861
 			}
 			OR = {
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 		}
         trigger = {
 			has_institution = enlightenment
 			241 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 			4362 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 			246 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 			4375 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 			1861 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
         effect = {
@@ -2493,23 +2493,23 @@ GBR_missions_3_5 = {
 			else = {
 				241 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 				4362 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 				246 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 				4375 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 				1861 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 			}
 		}
@@ -3425,17 +3425,17 @@ ENG_missions_5_1 = {
 				province_id = 4371
 			}
 			OR = {
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 				NOT = { owned_by = ROOT }
 			}
 		}
         trigger = {
 			235 = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				owned_by = ROOT
 			}
 			4371 = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				owned_by = ROOT
 			}
 		}
@@ -4390,17 +4390,17 @@ ENG_missions_5_3 = {
 				province_id = 4370
 			}
 			OR = {
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 				NOT = { owned_by = ROOT }
 			}
 		}
         trigger = {
 			237 = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				owned_by = ROOT
 			}
 			4370 = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				owned_by = ROOT
 			}
 		}

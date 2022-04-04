@@ -432,7 +432,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 				AND = {
 					owned_by = ROOT
 					trade_goods = gold
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 				}
 				AND = {
 					region_for_scope_province = {
@@ -446,7 +446,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 					num_of_owned_provinces_with = {
 						value = 3
 						trade_goods = gold
-						num_of_times_improved = 3
+						num_of_times_improved_by_owner = 3
 					}
 				}
 				NOT = {
@@ -464,7 +464,7 @@ CN_Generic_missions_3_Gold_Producing_Cns = {
 				num_of_owned_provinces_with = {
 					value = 3
 					trade_goods = gold
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 				capital_scope = {
 					region_for_scope_province = {

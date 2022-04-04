@@ -52,13 +52,13 @@ italian_minor_misisons_1 = {
 		provinces_to_highlight = {
 			has_port = yes
 			owned_by = ROOT
-			NOT = { num_of_times_improved = 2 }
+			NOT = { num_of_times_improved_by_owner = 2 }
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 2
 				has_port = yes
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 		}
 		effect = {
@@ -902,7 +902,7 @@ italian_minor_misisons_4 = {
 		position = 8
 		trigger = {
 			capital_scope = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				renaissance = 100
 			}
 		}
@@ -929,7 +929,7 @@ italian_minor_misisons_4 = {
 					type = all
 					owned_by = ROOT
 					NOT = { devastation = 1 }
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
 		}

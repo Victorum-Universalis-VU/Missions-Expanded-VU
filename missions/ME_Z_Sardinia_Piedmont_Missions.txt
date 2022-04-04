@@ -958,7 +958,7 @@ SardiniaPiedmont_missions_5 = {
 			province_id = 2986
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 				NOT = { has_production_building_trigger = yes }
 				devastation = 1
 			}
@@ -967,7 +967,7 @@ SardiniaPiedmont_missions_5 = {
 			treasury = 500
 			2986 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				has_production_building_trigger = yes
 				NOT = { devastation = 1 }
 			}

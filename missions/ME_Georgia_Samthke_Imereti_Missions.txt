@@ -137,12 +137,12 @@ GEO_missions_1 = {
 				AND = {
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 2 }
+						NOT = { num_of_times_improved_by_owner = 2 }
 					}
 					NOT = {
 						area_for_scope_province = {
 							owned_by = ROOT
-							num_of_times_improved = 2
+							num_of_times_improved_by_owner = 2
 						}
 					}
 				}
@@ -165,7 +165,7 @@ GEO_missions_1 = {
 					}
 					area_for_scope_province = {
 						owned_by = ROOT
-						num_of_times_improved = 2
+						num_of_times_improved_by_owner = 2
 					}
 				}
 			}
@@ -173,7 +173,7 @@ GEO_missions_1 = {
 				capital_scope = {
 					area_for_scope_province = {
 						owned_by = ROOT
-						num_of_times_improved = 2
+						num_of_times_improved_by_owner = 2
 					}
 				}
 			}
@@ -200,7 +200,7 @@ GEO_missions_1 = {
 					province_id = 421
 					OR = {
 						NOT = { base_production = 6 }
-						NOT = { num_of_times_improved = 3 }
+						NOT = { num_of_times_improved_by_owner = 3 }
 					}
 				}
 			}
@@ -212,7 +212,7 @@ GEO_missions_1 = {
 			}
 			421 = {
 				base_production = 6
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {

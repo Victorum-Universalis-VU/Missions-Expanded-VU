@@ -557,7 +557,7 @@ sicily_mission_3 = {
 			province_id = 125
 			NOT = { owned_by = ROOT }
 			OR = {
-				NOT = { num_of_times_improved = 4 }
+				NOT = { num_of_times_improved_by_owner = 4 }
 				NOT = { base_production = 10 }
 			}
 			has_trade_building_trigger = no
@@ -567,7 +567,7 @@ sicily_mission_3 = {
 				owned_by = ROOT
 				OR = {	
 					base_production = 10
-					num_of_times_improved = 4
+					num_of_times_improved_by_owner = 4
 				}					
 				has_trade_building_trigger = yes
 			}			
@@ -1159,7 +1159,7 @@ sicily_mission_5 = {
 				treasury = 100
 			}
 			125 = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {

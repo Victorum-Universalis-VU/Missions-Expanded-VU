@@ -193,7 +193,7 @@ country_event = {
 		109 = {
 			owned_by = ROOT
 			renaissance = 100
-			num_of_times_improved = 2
+			num_of_times_improved_by_owner = 2
 		}
 		OR = {
 			theologian = 2
@@ -387,7 +387,7 @@ country_event = {
 	trigger = {
 		owns = 109
 		is_year = 1470
-		109 = { num_of_times_improved = 5 }
+		109 = { num_of_times_improved_by_owner = 5 }
 	}
 
 	mean_time_to_happen = {

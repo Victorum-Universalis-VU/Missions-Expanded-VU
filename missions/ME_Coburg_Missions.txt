@@ -76,13 +76,13 @@ COB_missions_1 = {
 			province_id = 4716
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 15 }
+				NOT = { num_of_times_improved_by_owner = 15 }
 			}
 		}
 		trigger = {
 			4716 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 			}
 		}
 		effect = {

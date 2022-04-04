@@ -1044,7 +1044,7 @@ sardinia_missions_5 = {
 			OR = {
 				devastation = 1
 				unrest = 1
-				NOT = { num_of_times_improved = 2 }
+				NOT = { num_of_times_improved_by_owner = 2 }
 				NOT = { owned_by = ROOT }
 			}
 		}
@@ -1057,19 +1057,19 @@ sardinia_missions_5 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			4735 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			2986 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 		}
 		effect = {

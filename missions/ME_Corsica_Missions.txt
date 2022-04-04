@@ -453,11 +453,11 @@ corsica_missions_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { num_of_times_improved = 4 }
+			NOT = { num_of_times_improved_by_owner = 4 }
 		}
 		trigger = {
 			capital_scope = {
-				num_of_times_improved = 4
+				num_of_times_improved_by_owner = 4
 			}
 		}
 		effect = {

@@ -118,13 +118,13 @@ vijayanagara_mission_1 = {
 			province_id = 2030
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 			}
 		}
 		trigger = {
 			2030 = {
 				owned_by = ROOT
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {
@@ -368,7 +368,7 @@ vijayanagara_mission_1 = {
 							owned_by = ROOT
 							NOT = { local_autonomy_above_min = 10 }
 							NOT = { devastation = 1 }
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -379,7 +379,7 @@ vijayanagara_mission_1 = {
 							owned_by = ROOT
 							NOT = { local_autonomy_above_min = 10 }
 							NOT = { devastation = 1 }
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -390,7 +390,7 @@ vijayanagara_mission_1 = {
 							owned_by = ROOT
 							NOT = { local_autonomy_above_min = 10 }
 							NOT = { devastation = 1 }
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -401,7 +401,7 @@ vijayanagara_mission_1 = {
 							owned_by = ROOT
 							NOT = { local_autonomy_above_min = 10 }
 							NOT = { devastation = 1 }
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -412,7 +412,7 @@ vijayanagara_mission_1 = {
 							owned_by = ROOT
 							NOT = { local_autonomy_above_min = 10 }
 							NOT = { devastation = 1 }
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -421,7 +421,7 @@ vijayanagara_mission_1 = {
 				NOT = { owned_by = ROOT }
 				local_autonomy_above_min = 10
 				devastation = 1
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 			}
 		}
 		trigger = {
@@ -429,31 +429,31 @@ vijayanagara_mission_1 = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { devastation = 1 }
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 			konkan_area = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { devastation = 1 }
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 			desh_area = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { devastation = 1 }
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 			ahmednagar_area = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { devastation = 1 }
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 			berar_area = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { devastation = 1 }
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {
@@ -2499,7 +2499,7 @@ vijayanagara_mission_4 = {
 					has_dlc = "Mandate of Heaven"
 					NOT = { prosperity = 10 }
 				}
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 			}
 		}
 		trigger = {
@@ -2510,7 +2510,7 @@ vijayanagara_mission_4 = {
 					limit = { has_dlc = "Mandate of Heaven" }
 					prosperity = 10
 				}
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {
@@ -2984,7 +2984,7 @@ vijayanagara_mission_5 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { development = 20 }
-				NOT = { num_of_times_improved = 4 }
+				NOT = { num_of_times_improved_by_owner = 4 }
 			}
 		}
 		trigger = {
@@ -2992,7 +2992,7 @@ vijayanagara_mission_5 = {
 				owned_by = ROOT
 				OR = {
 					development = 20
-					num_of_times_improved = 4
+					num_of_times_improved_by_owner = 4
 				}
 			}
 		}

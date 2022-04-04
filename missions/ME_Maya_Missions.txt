@@ -1472,7 +1472,7 @@ maya_missions_3 = {
 			is_capital_of = ROOT
 			OR = {
 				NOT = { development = 10 }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 			ROOT = {
 				NOT = { ADM = 3 }
@@ -1486,7 +1486,7 @@ maya_missions_3 = {
 					has_regency = no
 					capital_scope = {
 						development = 10
-						num_of_times_improved = 5
+						num_of_times_improved_by_owner = 5
 					}
 				}
 			}
