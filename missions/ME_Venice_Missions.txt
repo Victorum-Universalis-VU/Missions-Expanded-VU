@@ -1536,16 +1536,14 @@ me_venice_missions_4 = {
 		position = 7
 		provinces_to_highlight = {
 			area = venetia_area
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
-			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			venetia_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 3
+				is_core = ROOT
+				num_of_times_improved_by_owner = 3
 			}
 			development_in_provinces = {
 				area = venetia_area
