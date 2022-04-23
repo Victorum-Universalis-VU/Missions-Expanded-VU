@@ -24,7 +24,7 @@ cilli_missions_1 = {
 					}
 				}
 			}
-			NOT = { num_of_times_improved = 5 }
+			NOT = { num_of_times_improved_by_owner = 5 }
 		}
 		trigger = {
 			army_size = 8
@@ -33,12 +33,12 @@ cilli_missions_1 = {
 					owns = 4751
 				}
 				4751 = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 			}
 			else = {
 				capital_scope = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 			}
 		}

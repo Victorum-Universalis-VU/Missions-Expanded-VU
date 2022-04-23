@@ -939,7 +939,7 @@ BRA_missions_4 = {
 			province_id = 50
 			NOT = {
 				OR = {
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 					owned_by = ROOT
 				}
 			}
@@ -952,7 +952,7 @@ BRA_missions_4 = {
 				}
 				50 = {
 					owned_by = ROOT
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
 		}
@@ -973,7 +973,7 @@ BRA_missions_4 = {
 				NOT = { owned_by = ROOT }
 				AND = {
 					NOT = { has_building = university }
-					NOT = { num_of_times_improved = 13 }
+					NOT = { num_of_times_improved_by_owner = 13 }
 				}
 			}
 		}
@@ -982,7 +982,7 @@ BRA_missions_4 = {
 				owned_by = ROOT
 				OR = {
 					has_building = university
-					num_of_times_improved = 13
+					num_of_times_improved_by_owner = 13
 				}
 			}
 		}
@@ -1176,7 +1176,7 @@ BRA_missions_5 = {
 					owned_by = ROOT
 					OR = {
 						num_of_buildings_in_province = 3
-						num_of_times_improved = 8
+						num_of_times_improved_by_owner = 8
 					}
 				}
 			}
@@ -1186,7 +1186,7 @@ BRA_missions_5 = {
 				owned_by = ROOT
 				OR = {
 					num_of_buildings_in_province = 3
-					num_of_times_improved = 9
+					num_of_times_improved_by_owner = 9
 				}
 			}
 		}

@@ -884,11 +884,11 @@ ME_austria_missions_3 = {
 		required_missions = { austria_build_buildings }
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { num_of_times_improved = 5 }
+			NOT = { num_of_times_improved_by_owner = 5 }
 		}
 		trigger = {
 			capital_scope = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {

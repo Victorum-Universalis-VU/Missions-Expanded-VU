@@ -77,13 +77,13 @@ NUM_missions_1 = {
 			province_id = 67
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 10 }
+				NOT = { num_of_times_improved_by_owner = 10 }
 			}
 		}
 		trigger = {
 			67 = {
 				owned_by = ROOT
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 			}
 		}
 		effect = {

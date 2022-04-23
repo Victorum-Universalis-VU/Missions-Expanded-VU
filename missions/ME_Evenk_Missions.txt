@@ -156,7 +156,7 @@ evenk_missions_3 = {
 		position = 1
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { num_of_times_improved = 1 }
+			NOT = { num_of_times_improved_by_owner = 1 }
 		}
 		trigger = {
 			if = {
@@ -164,14 +164,14 @@ evenk_missions_3 = {
 				OR = {
 					army_size_percentage = 1.0
 					capital_scope = {
-						num_of_times_improved = 1
+						num_of_times_improved_by_owner = 1
 					}
 				}
 			}
 			else = {
 				army_size_percentage = 1.0
 				capital_scope = {
-					num_of_times_improved = 1
+					num_of_times_improved_by_owner = 1
 				}
 			}
 		}

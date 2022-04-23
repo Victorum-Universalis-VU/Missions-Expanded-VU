@@ -405,7 +405,7 @@ aachen_missions_4 = {
 			}
 			else = {
 				capital_scope = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 			}
 			custom_trigger_tooltip = {

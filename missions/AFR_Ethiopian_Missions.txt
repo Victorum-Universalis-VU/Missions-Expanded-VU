@@ -887,14 +887,14 @@ ethiopia_slot_aksumite_empire = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 		}
 		trigger = {
 			1227 = {
 				is_core = ROOT
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {
@@ -939,14 +939,14 @@ ethiopia_slot_aksumite_empire = {
 			province_id = 1230
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 		}
 		trigger = {
 			owns = 1230
 			1230 = {
 				religion = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {

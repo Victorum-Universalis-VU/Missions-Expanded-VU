@@ -324,7 +324,7 @@ savoy_missions_2 = {
 					is_capital_of = ROOT
 					OR = {
 						NOT = { renaissance = 100 }
-						NOT = { num_of_times_improved = 5 }
+						NOT = { num_of_times_improved_by_owner = 5 }
 					}
 				}
 				AND = {
@@ -346,7 +346,7 @@ savoy_missions_2 = {
 		trigger = {
 			total_development = 100
 			capital_scope = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				renaissance = 100
 			}
 			if = {
@@ -1248,7 +1248,7 @@ savoy_missions_5 = {
 			province_id = 103
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 				NOT = { has_building = university }
 				devastation = 1
 			}
@@ -1256,7 +1256,7 @@ savoy_missions_5 = {
 		trigger = {
 			103 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				has_building = university
 				NOT = { devastation = 1 }
 			}

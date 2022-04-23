@@ -140,13 +140,13 @@ ANS_missions_5 = {
 				NOT = { owned_by = ROOT }
 				NOT = { has_courthouse_building_trigger = yes }
 				NOT = { renaissance = 100 }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 			}
 		}
 		trigger = {
 			owns = 71
 			71 = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				has_courthouse_building_trigger = yes
 				renaissance = 100
 				owned_by = ROOT

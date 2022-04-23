@@ -449,7 +449,7 @@ ME_OTM_missions_5 = {
 				}
 				AND = {
 					NOT = { has_dlc = "Mandate of Heaven" }
-					NOT = { num_of_times_improved = 1 }
+					NOT = { num_of_times_improved_by_owner = 1 }
 				}
 			}
 		}
@@ -482,13 +482,13 @@ ME_OTM_missions_5 = {
 					type = all
 					owned_by = ROOT
 					is_state = yes
-					num_of_times_improved = 1
+					num_of_times_improved_by_owner = 1
 				}
 				kyushu_area = {
 					type = all
 					owned_by = ROOT
 					is_state = yes
-					num_of_times_improved = 1
+					num_of_times_improved_by_owner = 1
 				}
 			}
 		}

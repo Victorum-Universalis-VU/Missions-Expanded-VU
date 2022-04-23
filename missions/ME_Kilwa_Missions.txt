@@ -1085,27 +1085,27 @@ ZAN_missions_5 = {
 					OR = {
 						devastation = 1
 						AND = {
-							NOT = { num_of_times_improved = 5 }
+							NOT = { num_of_times_improved_by_owner = 5 }
 							OR = {
 								AND = {
 									area = indonesian_islands_area
 									indonesian_islands_area = {
 										type = all
-										NOT = { num_of_times_improved = 5 }
+										NOT = { num_of_times_improved_by_owner = 5 }
 									}
 								}
 								AND = {
 									area = indian_ocean_islands_area
 									indian_ocean_islands_area = {
 										type = all
-										NOT = { num_of_times_improved = 5 }
+										NOT = { num_of_times_improved_by_owner = 5 }
 									}
 								}
 								AND = {
 									area = mascarenes_area
 									mascarenes_area = {
 										type = all
-										NOT = { num_of_times_improved = 5 }
+										NOT = { num_of_times_improved_by_owner = 5 }
 									}
 								}
 							}
@@ -1159,7 +1159,7 @@ ZAN_missions_5 = {
 					NOT = { devastation = 1 }
 				}
 				indonesian_islands_area = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 				indian_ocean_islands_area = {
 					type = all
@@ -1169,7 +1169,7 @@ ZAN_missions_5 = {
 					NOT = { devastation = 1 }
 				}
 				indian_ocean_islands_area = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 				mascarenes_area = {
 					type = all
@@ -1179,7 +1179,7 @@ ZAN_missions_5 = {
 					NOT = { devastation = 1 }
 				}
 				mascarenes_area = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 			}
 		}

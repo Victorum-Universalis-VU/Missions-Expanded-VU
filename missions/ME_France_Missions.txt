@@ -4037,7 +4037,7 @@ FRA_missions_5 = {
 			1466 = {
 				is_strongest_trade_power = ROOT
 			}
-			1276 = {
+			174 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

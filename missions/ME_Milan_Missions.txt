@@ -1866,7 +1866,7 @@ milan_missions_5 = {
 			NOT = {
 				lombardy_area = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 				}
 			}
 		}
@@ -1874,7 +1874,7 @@ milan_missions_5 = {
 			has_institution = renaissance
 			lombardy_area = {
 				owned_by = ROOT
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 			}
 		}
 		effect = {

@@ -195,7 +195,7 @@ WBG_missions_5 = {
 			province_id = 79
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 20 }
+				NOT = { num_of_times_improved_by_owner = 20 }
 				NOT = { num_of_buildings_in_province = 4 }
 			}
 		}
@@ -206,14 +206,14 @@ WBG_missions_5 = {
 				}
 				79 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 					num_of_buildings_in_province = 4
 				}
 			}
 			else = {
 				79 = {
 					owned_by = ROOT
-					num_of_times_improved = 20
+					num_of_times_improved_by_owner = 20
 					num_of_buildings_in_province = 4
 				}
 			}

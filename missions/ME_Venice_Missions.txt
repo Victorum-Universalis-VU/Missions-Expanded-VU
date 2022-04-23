@@ -318,7 +318,7 @@ me_venice_missions_1 = {
 			province_id = 112
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
 		trigger = {
@@ -326,7 +326,7 @@ me_venice_missions_1 = {
 			num_of_galley = 10
 			112 = {
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
 		effect = {
@@ -737,14 +737,14 @@ me_venice_missions_2 = {
 			province_id = 112
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 10 }
+				NOT = { num_of_times_inum_of_times_improved_by_ownermproved = 10 }
 				NOT = { has_dock_building_trigger = yes }
 			}
 		}
 		trigger = {
 			112 = {
 				owned_by = ROOT
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 				has_dock_building_trigger = yes
 			}
 		}
@@ -1536,16 +1536,14 @@ me_venice_missions_4 = {
 		position = 7
 		provinces_to_highlight = {
 			area = venetia_area
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
-			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			venetia_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 3
+				is_core = ROOT
+				num_of_times_improved_by_owner = 3
 			}
 			development_in_provinces = {
 				area = venetia_area
@@ -1774,7 +1772,7 @@ me_venice_missions_5 = {
 									}
 								}
 							}
-							NOT = { num_of_times_improved = 2 }
+							NOT = { num_of_times_improved_by_owner = 2 }
 						}
 					}
 					ROOT = { alliance_with = MAM }
@@ -1812,7 +1810,7 @@ me_venice_missions_5 = {
 						}
 					}
 					else = {
-						num_of_times_improved = 2
+						num_of_times_improved_by_owner = 2
 					}
 				}
 			}

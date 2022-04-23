@@ -824,14 +824,14 @@ POL_Missions_2 = {
 			province_id = 262
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 				NOT = { num_of_buildings_in_province = 2 }
 			}
 		}
 		trigger = {
 			262 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				num_of_buildings_in_province = 2
 			}
 		}
@@ -1240,7 +1240,7 @@ POL_Missions_2 = {
 					province_id = 269
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 10 }
+						NOT = { num_of_times_improved_by_owner = 10 }
 					}
 				}
 				AND = {
@@ -1250,7 +1250,7 @@ POL_Missions_2 = {
 					}
 					NOT = {
 						area_for_scope_province = {
-							num_of_times_improved = 10
+							num_of_times_improved_by_owner = 10
 							owned_by = ROOT
 						}
 					}
@@ -1260,14 +1260,14 @@ POL_Missions_2 = {
 		trigger = {
 			269 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 			podolia_volhynia_area = {
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 				owned_by = ROOT
 			}
 			sandomierz_area = {
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 				owned_by = ROOT
 			}
 		}

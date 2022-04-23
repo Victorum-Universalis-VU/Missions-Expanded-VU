@@ -866,7 +866,7 @@ ENG_UKS_missions_5 = {
 						NOT = {
 							calc_true_if = {
 								all_owned_province = {
-									num_of_times_improved = 5
+									num_of_times_improved_by_owner = 5
 								}
 								amount = 5
 							}
@@ -911,7 +911,7 @@ ENG_UKS_missions_5 = {
 					num_of_owned_provinces_with = {
 						value = 5
 						culture_group = french
-						num_of_times_improved = 5
+						num_of_times_improved_by_owner = 5
 					}
 				}
 			}
@@ -1753,13 +1753,13 @@ UKS_missions_3 = {
 				}
 				AND = {
 					NOT = { has_dlc = "Common Sense" }
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								value = 5
 								region = france_region
-								num_of_times_improved = 3
+								num_of_times_improved_by_owner = 3
 							}
 						}
 					}
@@ -1781,7 +1781,7 @@ UKS_missions_3 = {
 				num_of_owned_provinces_with = {
 					value = 5
 					region = france_region
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
 		}
@@ -2352,59 +2352,59 @@ UKS_missions_4 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { development = 15 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
         trigger = {
 			201 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			202 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4391 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			203 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1877 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			192 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			183 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4392 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			185 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4390 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
         effect = {
@@ -2506,7 +2506,7 @@ UKS_missions_4 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { development = 15 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
         trigger = {
@@ -2514,176 +2514,176 @@ UKS_missions_4 = {
 			201 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			202 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4391 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			203 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1877 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			192 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			183 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4392 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			185 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4390 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#Provence-Bordeaux
 			200 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			2753 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			196 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			175 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			174 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#West Coast
 			4111 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4386 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			172 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			171 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			170 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			178 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			177 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4385 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4389 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			184 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4776 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#provence-calais
 			4388 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			167 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			89 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			87 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#rest
 			186 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			187 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			188 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			189 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
         effect = {
@@ -2922,7 +2922,7 @@ UKS_missions_4 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { development = 15 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
         trigger = {
@@ -2930,84 +2930,84 @@ UKS_missions_4 = {
 			90 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1865 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1744 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			96 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4383 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			97 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			98 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			99 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4381 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4382 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1931 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#2 provs
 			91 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1743 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#rest
 			94 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			93 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			2974 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
         effect = {
@@ -3623,7 +3623,7 @@ UKS_missions_5 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { development = 15 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
         trigger = {
@@ -3631,83 +3631,83 @@ UKS_missions_5 = {
 			236 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			235 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			237 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			239 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			241 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			234 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4366 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4130 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4373 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			#rest
 			243 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			245 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4370 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1861 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4372 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			1743 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			4785 = {
 				owned_by = ROOT
 				development = 15
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
         effect = {

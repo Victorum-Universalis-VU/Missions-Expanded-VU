@@ -576,7 +576,7 @@ inca_missions_1 = {
 					is_sea = no
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 						NOT = { development = 5 }
 						unrest = 1
 					}
@@ -594,7 +594,7 @@ inca_missions_1 = {
 				OR = {
 					AND = {
 						owned_by = ROOT
-						num_of_times_improved = 1
+						num_of_times_improved_by_owner = 1
 						development = 5
 						NOT = { unrest = 1 }
 					}
@@ -786,7 +786,7 @@ inca_missions_2 = {
 			trade_goods = gold
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
 		trigger = {
@@ -796,7 +796,7 @@ inca_missions_2 = {
 					AND = {
 						trade_goods = gold
 						base_production = 5
-						num_of_times_improved = 1
+						num_of_times_improved_by_owner = 1
 					}
 				}
 			}
@@ -962,7 +962,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 				AND = {
@@ -979,7 +979,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 				AND = {
@@ -997,7 +997,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 				AND = {
@@ -1015,7 +1015,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 			}
@@ -1024,7 +1024,7 @@ inca_missions_2 = {
 			huanuco_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_809_AREA_HAS_AT_LEAST_15_TAX
@@ -1041,7 +1041,7 @@ inca_missions_2 = {
 			cajamarca_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_813_AREA_HAS_AT_LEAST_15_TAX
@@ -1057,7 +1057,7 @@ inca_missions_2 = {
 			chimor_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_812_AREA_HAS_AT_LEAST_20_TAX
@@ -1074,7 +1074,7 @@ inca_missions_2 = {
 			quito_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_816_AREA_HAS_AT_LEAST_20_TAX
@@ -1726,7 +1726,7 @@ inca_missions_3 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 				AND = {
@@ -1742,7 +1742,7 @@ inca_missions_3 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 			}
@@ -1751,7 +1751,7 @@ inca_missions_3 = {
 			kuntisuyu_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_807_AREA_HAS_AT_LEAST_20_PRODUCTION
@@ -1767,7 +1767,7 @@ inca_missions_3 = {
 			peruan_coast = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_805_AREA_HAS_AT_LEAST_10_PRODUCTION
@@ -2292,14 +2292,14 @@ inca_missions_4 = {
 					}
 				}
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
 		trigger = {
 			antisuyu_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_802_AREA_HAS_AT_LEAST_15_PRODUCTION
@@ -2402,7 +2402,7 @@ inca_missions_4 = {
 			trade_goods = copper
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_times_improved_by_owner = 1 }
 			}
 		}
 		trigger = {
@@ -2413,7 +2413,7 @@ inca_missions_4 = {
 					AND = {
 						trade_goods = copper
 						base_production = 5
-						num_of_times_improved = 1
+						num_of_times_improved_by_owner = 1
 					}
 				}
 			}
@@ -2833,7 +2833,7 @@ inca_missions_5_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 				AND = {
@@ -2850,7 +2850,7 @@ inca_missions_5_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved = 1 }
+						NOT = { num_of_times_improved_by_owner = 1 }
 					}
 				}
 			}
@@ -2859,7 +2859,7 @@ inca_missions_5_2 = {
 			upper_peru = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_2835_AREA_HAS_AT_LEAST_10_MANPOWER
@@ -2875,7 +2875,7 @@ inca_missions_5_2 = {
 			potosi_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			custom_trigger_tooltip = {
 				tooltip = INC_795_AREA_HAS_AT_LEAST_15_MANPOWER
@@ -2949,7 +2949,7 @@ inca_missions_5_2 = {
 			trade_goods = wool
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved = 2 }
+				NOT = { num_of_times_improved_by_owner = 2 }
 			}
 		}
 		trigger = {
@@ -2959,7 +2959,7 @@ inca_missions_5_2 = {
 					AND = {
 						trade_goods = wool
 						base_production = 5
-						num_of_times_improved = 2
+						num_of_times_improved_by_owner = 2
 					}
 				}
 			}

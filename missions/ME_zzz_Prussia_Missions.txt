@@ -1401,21 +1401,21 @@ PRU_missions_3 = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 15 }
+				NOT = { num_of_times_improved_by_owner = 15 }
 			}
 		}
 		trigger = {
 			4523 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 			}
 			2969 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 			}
 			52 = {
 				owned_by = ROOT
-				num_of_times_improved = 15
+				num_of_times_improved_by_owner = 15
 			}
 		}
 		effect = {
@@ -2039,7 +2039,7 @@ PRU_missions_4 = {
 				NOT = { owned_by = ROOT }
 				NOT = { has_trade_building_trigger = yes }
 				local_autonomy_above_min = 10
-				NOT = { num_of_times_improved = 10 }
+				NOT = { num_of_times_improved_by_owner = 10 }
 			}
 		}
 		trigger = {
@@ -2047,19 +2047,19 @@ PRU_missions_4 = {
 			OR = {
 				44 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 					has_trade_building_trigger = yes
 					NOT = { local_autonomy_above_min = 10 }
 				}
 				1858 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 					has_trade_building_trigger = yes
 					NOT = { local_autonomy_above_min = 10 }
 				}
 				43 = {
 					owned_by = ROOT
-					num_of_times_improved = 10
+					num_of_times_improved_by_owner = 10
 					has_trade_building_trigger = yes
 					NOT = { local_autonomy_above_min = 10 }
 				}

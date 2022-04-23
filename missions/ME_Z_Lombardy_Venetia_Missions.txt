@@ -980,7 +980,7 @@ LombardyVenetia_missions_5 = {
 				}
 				AND = {
 					NOT = { has_manufactory_trigger = yes }
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 				}
 			}
 		}
@@ -997,7 +997,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -1011,7 +1011,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -1025,7 +1025,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -1039,7 +1039,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -1053,7 +1053,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}
@@ -1067,7 +1067,7 @@ LombardyVenetia_missions_5 = {
 						}
 						AND = {
 							has_manufactory_trigger = yes
-							num_of_times_improved = 3
+							num_of_times_improved_by_owner = 3
 						}
 					}
 				}

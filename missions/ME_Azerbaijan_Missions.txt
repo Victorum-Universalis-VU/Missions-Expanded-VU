@@ -337,12 +337,12 @@ Azerbaijani_Generic_Missions_SRV = {
 		position = 1
 		provinces_to_highlight = {
 			province_id = 421
-			NOT = { num_of_times_improved = 5 }
+			NOT = { num_of_times_improved_by_owner = 5 }
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			421 = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				owned_by = ROOT
 			}
 		}
@@ -530,7 +530,7 @@ Azerbaijani_Generic_Missions_MGR = {
 		provinces_to_highlight = {
 			province_id = 2207
 			NOT = { owned_by = ROOT }
-			NOT = { num_of_times_improved = 10 }
+			NOT = { num_of_times_improved_by_owner = 10 }
 			AND = {
 				is_prosperous = no
 				has_dlc = "Mandate of Heaven"
@@ -538,7 +538,7 @@ Azerbaijani_Generic_Missions_MGR = {
 		}
 		trigger = {
 			2207 = {
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 				owned_by = ROOT
 				if = {
 					limit = {

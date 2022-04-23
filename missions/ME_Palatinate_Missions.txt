@@ -105,14 +105,14 @@ PAL_Missions_1 = {
 			province_id = 1757
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 7 }
+				NOT = { num_of_times_improved_by_owner = 7 }
 				NOT = { has_production_building_trigger = yes }
 			}
 		}
 		trigger = {
 			1757 = {
 				owned_by = ROOT
-				num_of_times_improved = 7
+				num_of_times_improved_by_owner = 7
 				has_production_building_trigger = yes
 			}
 		}

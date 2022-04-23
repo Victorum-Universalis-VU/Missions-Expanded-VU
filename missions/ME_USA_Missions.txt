@@ -37,14 +37,14 @@ USA_missions_1 = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			has_owner_culture = yes
-			NOT = { num_of_times_improved = 1 }
+			NOT = { num_of_times_improved_by_owner = 1 }
 			is_city = yes
 		}
 		trigger = {
 			all_owned_province = {
 				OR = {
 					has_owner_culture = no
-					num_of_times_improved = 1
+					num_of_times_improved_by_owner = 1
 					is_city = no
 				}
 			}
@@ -171,7 +171,7 @@ USA_missions_1 = {
 			province_id = 878
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 				unrest = 1
 			}
 		}
@@ -179,7 +179,7 @@ USA_missions_1 = {
 			NOT = { exists = NAH }
 			owns = 878
 			878 = {
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 				NOT = { unrest = 1 }
 			}
 		}
@@ -347,7 +347,7 @@ USA_missions_2 = {
 				}
 				AND = {
 					province_id = 4638
-					NOT = { num_of_times_improved = 2 }
+					NOT = { num_of_times_improved_by_owner = 2 }
 				}
 			}
 		}
@@ -357,7 +357,7 @@ USA_missions_2 = {
 				owned_by = ROOT
 			}
 			4638 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 		}
 		effect = {
@@ -375,7 +375,7 @@ USA_missions_2 = {
 			province_id = 4638
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 10 }
+				NOT = { num_of_times_improved_by_owner = 10 }
 				AND = {
 					NOT = { has_building = marketplace }
 					NOT = { has_building = trade_depot }
@@ -386,7 +386,7 @@ USA_missions_2 = {
 		trigger = {
 			owns = 4638
 			4638 = {
-				num_of_times_improved = 10
+				num_of_times_improved_by_owner = 10
 				OR = {
 					has_building = marketplace
 					has_building = trade_depot
@@ -689,11 +689,11 @@ USA_missions_3 = {
 				AND = {
 					has_dlc = "Dharma"
 					NOT = { province_has_center_of_trade_of_level = 2 }
-					NOT = { num_of_times_improved = 5 }
+					NOT = { num_of_times_improved_by_owner = 5 }
 				}
 				AND = {
 					NOT = { has_dlc = "Dharma" }
-					NOT = { num_of_times_improved = 5 }
+					NOT = { num_of_times_improved_by_owner = 5 }
 				}
 				AND = {
 					NOT = { has_building = marketplace }
@@ -712,11 +712,11 @@ USA_missions_3 = {
 					}
 					OR = {
 						province_has_center_of_trade_of_level = 2
-						num_of_times_improved = 5
+						num_of_times_improved_by_owner = 5
 					}
 				}
 				else = {
-					num_of_times_improved = 5
+					num_of_times_improved_by_owner = 5
 				}
 				OR = {
 					has_building = marketplace
@@ -1188,33 +1188,33 @@ USA_missions_4 = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 2 }
+				NOT = { num_of_times_improved_by_owner = 2 }
 			}
 		}
 		trigger = {
 			owns = 959
 			959 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			owns = 958
 			958 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			owns = 954
 			954 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			owns = 2557
 			2557 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			owns = 2023
 			2023 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 			owns = 956
 			956 = {
-				num_of_times_improved = 2
+				num_of_times_improved_by_owner = 2
 			}
 		}
 		effect = {

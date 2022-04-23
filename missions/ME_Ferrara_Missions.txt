@@ -450,7 +450,7 @@ ferrara_mission_3 = {
 		trigger = {
 			114 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				has_tax_building_trigger = yes
 			}
 		}

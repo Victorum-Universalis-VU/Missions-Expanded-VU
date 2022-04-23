@@ -431,17 +431,17 @@ HSK_missions_5 = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 			}
 		}
 		trigger = {
 			1825 = {
 				owned_by = ROOT
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 			1820 = {
 				owned_by = ROOT
-				num_of_times_improved = 3
+				num_of_times_improved_by_owner = 3
 			}
 		}
 		effect = {

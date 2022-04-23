@@ -121,7 +121,7 @@ canada_missions_1 = {
 				has_trade_building_trigger = yes
 				AND = {
 					has_colonist = no
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 				}
 			}
 		}
@@ -131,7 +131,7 @@ canada_missions_1 = {
 				has_trade_building_trigger = yes
 				OR = {
 					has_colonist = yes
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
 		}
