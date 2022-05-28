@@ -1,4 +1,4 @@
-melva_naples_recoinciliation = {
+melva_naples_reconciliation = {
 	opinion = 50
 	months = 240
 }

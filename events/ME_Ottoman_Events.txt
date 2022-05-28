@@ -114,6 +114,24 @@ country_event = { #Fall of Constantinople
 			145 = {
 				owned_by = BYZ
 			}
+			7163 = {
+				owned_by = BYZ
+			}
+			4701 = {
+				owned_by = BYZ
+			}
+			7102 = {
+				owned_by = BYZ
+			}
+			7101 = {
+				owned_by = BYZ
+			}
+			1773 = {
+				owned_by = BYZ
+			}
+			3178 = {
+				owned_by = BYZ
+			}
 		}
 		# BYZ = {
 			# every_subject_country = {
@@ -130,6 +148,29 @@ country_event = { #Fall of Constantinople
 		# }
 		add_prestige = 10
 		145 = {
+			add_core = MOE
+			cede_province = MOE
+		}
+		7163 = {
+			add_core = MOE
+			cede_province = MOE
+		}
+		4701 = {
+			add_core = MOE
+			cede_province = MOE
+		}
+		7102 = {
+			add_core = MOE
+			cede_province = MOE		}
+		7101 = {
+			add_core = MOE
+			cede_province = MOE
+		}
+		1773 = {
+			add_core = MOE
+			cede_province = MOE
+		}
+		3178 = {
 			add_core = MOE
 			cede_province = MOE
 		}
