@@ -53,7 +53,7 @@ BRA_missions_1 = {
 					name = BRA_prussian_legacy
 					duration = 7300
 				}
-			}		
+			}
 		}
 	}
 	BRA_renaissance = {
@@ -293,7 +293,7 @@ BRA_missions_2 = {
 			hidden_effect = {
 				if = {
 					limit = {					
-						NOT = { 4747 = { country_or_non_sovereign_subject_holds = ROOT } }
+						NOT = { country_or_non_sovereign_subject_holds = 4747 }
 					}
 					4747 = {
 						remove_province_modifier = BRA_neumark_province
@@ -308,7 +308,7 @@ BRA_missions_2 = {
 				}
 				if = {
 					limit = {					
-						NOT = { 49 = { country_or_non_sovereign_subject_holds = ROOT } }
+						NOT = { country_or_non_sovereign_subject_holds = 49 }
 					}
 					49 = {
 						remove_province_modifier = BRA_neumark_province
@@ -746,7 +746,7 @@ BRA_missions_4 = {
 					value = army_size
 					who = BRA
 				}
-				change_variable = {            
+				change_variable = {			
 					which = BRA_SAX_Army
 					which = BRA_THU_Army
 				}
@@ -775,7 +775,6 @@ BRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			
 			lusatia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -906,7 +905,7 @@ BRA_missions_4 = {
 						duration = 7300
 					}
 					add_adm_power = 50
-				}	
+				}
 			}
 			custom_tooltip = BRA_rewards_when_alliance
 			custom_tooltip = BRA_higher_chance_to_inherit_saxony
@@ -939,7 +938,7 @@ BRA_missions_4 = {
 			province_id = 50
 			NOT = {
 				OR = {
-					num_of_times_improved_by_owner = 3
+					num_of_times_improved = 3
 					owned_by = ROOT
 				}
 			}
@@ -952,7 +951,7 @@ BRA_missions_4 = {
 				}
 				50 = {
 					owned_by = ROOT
-					num_of_times_improved_by_owner = 3
+					num_of_times_improved = 3
 				}
 			}
 		}
@@ -973,7 +972,7 @@ BRA_missions_4 = {
 				NOT = { owned_by = ROOT }
 				AND = {
 					NOT = { has_building = university }
-					NOT = { num_of_times_improved_by_owner = 13 }
+					NOT = { num_of_times_improved = 13 }
 				}
 			}
 		}
@@ -982,7 +981,7 @@ BRA_missions_4 = {
 				owned_by = ROOT
 				OR = {
 					has_building = university
-					num_of_times_improved_by_owner = 13
+					num_of_times_improved = 13
 				}
 			}
 		}
@@ -1176,7 +1175,7 @@ BRA_missions_5 = {
 					owned_by = ROOT
 					OR = {
 						num_of_buildings_in_province = 3
-						num_of_times_improved_by_owner = 8
+						num_of_times_improved = 8
 					}
 				}
 			}
@@ -1186,7 +1185,7 @@ BRA_missions_5 = {
 				owned_by = ROOT
 				OR = {
 					num_of_buildings_in_province = 3
-					num_of_times_improved_by_owner = 9
+					num_of_times_improved = 9
 				}
 			}
 		}
