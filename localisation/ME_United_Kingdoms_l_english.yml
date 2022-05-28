@@ -236,7 +236,7 @@
  UKS_Patronize_the_french_subjects_title: "Patronize the French Subjects"
  UKS_Patronize_the_french_subjects_desc: "Under our rule there is a variety of cultures and traditions. One of the major factions stemming from the cultures are the French Subjects, which we need to appease if we are to unite the kingdoms."
  
- # Cultures:
+ # Cultures: (+ Additions from VU)
  cosmopolitan_french_UKS: "Francien"
  gascon_UKS: "Gascon"
  normand_UKS: "Norman"
@@ -263,7 +263,7 @@
  #ideas:
  UKS_ideas: "Angevin Ideas"
  UKS_ideas_start: "Angevin Traditions"
- UKS_ideas_end: "Angevin Ambitions"
+ UKS_ideas_bonus: "Angevin Ambitions"
  elan2: "Elan!"
  elan2_desc: "Despite incredibly odds, a truly magnificent relationship between the French and English militaries has arisen. As such, we have brought forth the French battle-cry from the brink of extinction. Elan!"
  admiralty2: "Admiralty"
@@ -345,7 +345,7 @@
  ME_United_Kingdoms_Events.10.a: "This is not ideal... or is it?"
  
  ME_United_Kingdoms_Events.11.t: "Bretons Integrate"
- ME_United_Kingdoms_Events.11.d: "The peace and prosperity our reign has brought to the Bretons have convinced them that the [Root.GetAdjective.GetName] rule isn't all that bad as they initially thought. In this peaceful environment, many Bretons have decided to change their customs to be more alike to the one practiced in the East."
+ ME_United_Kingdoms_Events.11.d: "The peace and prosperity our reign has brought to the Bretons have convinced them that the [Root.Adjective.GetName] rule isn't all that bad as they initially thought. In this peaceful environment, many Bretons have decided to change their customs to be more alike to the one practiced in the East."
  ME_United_Kingdoms_Events.11.a: "Marvelous!"
  
  ME_United_Kingdoms_Events.12.t: "Catalan March"
