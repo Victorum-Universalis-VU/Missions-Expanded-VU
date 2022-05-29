@@ -11,15 +11,9 @@ sardinia_missions_1 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -294,15 +288,9 @@ sardinia_missions_2 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -628,15 +616,9 @@ sardinia_missions_3 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -806,15 +788,9 @@ sardinia_missions_4 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -1014,15 +990,9 @@ sardinia_missions_5 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -1044,7 +1014,7 @@ sardinia_missions_5 = {
 			OR = {
 				devastation = 1
 				unrest = 1
-				NOT = { num_of_times_improved_by_owner = 2 }
+				NOT = { num_of_times_improved = 2 }
 				NOT = { owned_by = ROOT }
 			}
 		}
@@ -1057,19 +1027,19 @@ sardinia_missions_5 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 			4735 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 			2986 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 		}
 		effect = {
