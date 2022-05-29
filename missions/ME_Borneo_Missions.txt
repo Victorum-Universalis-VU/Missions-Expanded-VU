@@ -354,7 +354,7 @@ BEI_generic_missions_4 = {
 #								NOT = { tag = ROOT }
 #								navy_size = ROOT
 #							}
-						}
+#						}
 					}
 				}
 			}
