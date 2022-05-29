@@ -1,7 +1,3 @@
-#Updated by C1CK
-#Worked fine, except for when it strayed into Russia and Ruthenia
-#Has no changes besides updating claims for BT
-
 tatar_missions_1 = {
 	slot = 1
 	generic = no
@@ -13,21 +9,17 @@ tatar_missions_1 = {
 				OR = {
 					tag = GOL
 					tag = CRI
-					tag = NOG
 					tag = KAZ
-					tag = SHY
-					tag = GLH
-					tag = SIB
-					tag = BSH
 					tag = AST
 					tag = QAS
-					tag = KZH
+					tag = GLH
 				}
 			}			
 			tag = NOG
 			tag = SHY
 			tag = SIB
 			tag = KZH
+			tag = BSH
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -45,8 +37,10 @@ tatar_missions_1 = {
 				province_id = 465
 			}
 			NOT = {
-				owned_by = ROOT
-				is_core = ROOT
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -185,6 +179,7 @@ tatar_missions_1 = {
 			}
 		}
 	}
+
 	mission_conquer_persia_tatars = {
 		icon = mission_persian_soldiers
 		required_missions = { mission_conquer_caucausus mission_conquer_samarkand }
@@ -290,35 +285,29 @@ tatar_missions_1 = {
 						province_has_center_of_trade_of_level = 3
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = tatar_silk_road_tooltip_2
-					num_of_owned_provinces_with = {
-						OR = {
-							region = persia_region
-							region = central_asia_region
-							region = khorasan_region
-						}
-						province_has_center_of_trade_of_level = 2
-						value = 6
+				num_of_owned_provinces_with = {
+					OR = {
+						region = persia_region
+						region = central_asia_region
+						region = khorasan_region
 					}
+					province_has_center_of_trade_of_level = 2
+					value = 6
 				}
 			}
 			else = {
-				custom_trigger_tooltip = {
-					tooltip = tatar_silk_road_tooltip_3
-					num_of_owned_provinces_with = {
-						OR = {
-							region = persia_region
-							region = central_asia_region
-							region = khorasan_region
-						}
-						OR = {
-							has_building = marketplace
-							has_building = trade_depot
-							has_building = stock_exchange
-						}
-						value = 8
+				num_of_owned_provinces_with = {
+					OR = {
+						region = persia_region
+						region = central_asia_region
+						region = khorasan_region
 					}
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+					value = 8
 				}
 			}
 		}
@@ -343,15 +332,11 @@ tatar_missions_slot_2 = {
 				OR = {
 					tag = GOL
 					tag = CRI
-					tag = NOG
 					tag = KAZ
-					tag = SHY
-					tag = GLH
-					tag = SIB
 					tag = BSH
 					tag = AST
 					tag = QAS
-					tag = KZH
+					tag = GLH
 				}
 			}			
 			tag = NOG
@@ -645,15 +630,11 @@ tatar_missions_2 = {
 				OR = {
 					tag = GOL
 					tag = CRI
-					tag = NOG
 					tag = KAZ
-					tag = SHY
-					tag = GLH
-					tag = SIB
 					tag = BSH
 					tag = AST
 					tag = QAS
-					tag = KZH
+					tag = GLH
 				}
 			}			
 			tag = NOG
@@ -665,7 +646,7 @@ tatar_missions_2 = {
 	}
 	has_country_shield = yes
 
-	crimean_expansion_horde = { #Updated by C1CK
+	crimean_expansion_horde = {
 		icon = mission_non-western_soldiers
 		required_missions = {  }
 		provinces_to_highlight = {
@@ -683,7 +664,6 @@ tatar_missions_2 = {
 				province_id = 7204 #Lugansk
 			}
 			NOT = {
-				province_id = 2406 #Perevizka
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -795,7 +775,7 @@ tatar_missions_2 = {
 			}
 		}
 	}
-	ruin_ruthenia = { #Updated by C1CK
+	ruin_ruthenia = {
 		icon = mission_steppe_warriors
 		required_missions = { crimean_expansion_horde }
 		provinces_to_highlight = {
@@ -851,7 +831,6 @@ tatar_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
 		effect = {
 			add_adm_power = 100
 			add_mil_power = 100
@@ -859,7 +838,7 @@ tatar_missions_2 = {
 			add_horde_unity = 25
 		}
 	}
-	subjugate_ryazan_horde = { #Updated by C1CK
+	subjugate_ryazan_horde = {
 		icon = mission_cossack_cavalry
 		provinces_to_highlight = {
 			province_id = 301
@@ -909,13 +888,6 @@ tatar_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#vladimir_area = { #This is no longer vladimir in BT
-			#	limit = {
-			#		NOT = { is_permanent_claim = ROOT	}
-			#		NOT = { is_core = ROOT	}
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
 			beloozero_area = { #Bezhetsk
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -932,17 +904,16 @@ tatar_missions_2 = {
 			}
 		}
 	}
-	tatar_yoke_mission = { #Updaed by C1CK
+	tatar_yoke_mission = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { subjugate_ryazan_horde }
 		provinces_to_highlight = {
 			OR = {
 				area = ryazan_area
 				area = moscow_area
-				area = suzdal_area #Zalesye
+				area = suzdal_area
 				area = tver_area
 				area = yaroslavl_area
-				#area = vladimir_area #This is no longer vladimir in BT
 				area = beloozero_area #Bezhetsk
 				area = novgorod_area
 			}
@@ -959,7 +930,7 @@ tatar_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			suzdal_area = { #Zalesye
+			suzdal_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -971,10 +942,6 @@ tatar_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#vladimir_area = { #This is no longer vladimir in BT
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			beloozero_area = { #Bezhetsk
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
