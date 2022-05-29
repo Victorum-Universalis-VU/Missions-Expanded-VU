@@ -586,59 +586,10 @@ MSA_claims_java = {
 		}
 		add_permanent_claim = ROOT
 	}
-	surabaya_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	banten_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
 }
 
 MSA_claims_borneo = {
-	brunei_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	sabah_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	kalimantan_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	palawan_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	kutai_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	banjar_area = {
+	borneo_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -648,28 +599,7 @@ MSA_claims_borneo = {
 }
 
 MSA_claims_malaya = {
-	malacca_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	north_malaya_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	malaya_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	johor_area = {
+	malaya_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -679,21 +609,7 @@ MSA_claims_malaya = {
 }
 
 MSA_claims_sulawesi = {
-	south_sulawesi_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	sulawesi_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	makassar_area = {
+	celebes_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -703,42 +619,7 @@ MSA_claims_sulawesi = {
 }
 
 MSA_claims_sumatra = {
-	minangkabau_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	north_sumatra_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	south_sumatra_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	batak_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	central_sumatra_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	jambi_area = {
+	sumatran_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -748,14 +629,7 @@ MSA_claims_sumatra = {
 }
 
 MSA_claims_spice_islands = {
-	spice_islands_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	molluca_area = {
+	lesser_sunda_islands_area = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }
@@ -765,35 +639,7 @@ MSA_claims_spice_islands = {
 }
 
 MSA_claims_philippines = {
-	southern_luzon_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	luzon_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	visayas_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	mindanao_area = {
-		limit = {
-			NOT = { is_core = ROOT }
-			NOT = { is_permanent_claim = ROOT }
-		}
-		add_permanent_claim = ROOT
-	}
-	west_mindanao_area = {
+	philippines_region = {
 		limit = {
 			NOT = { is_core = ROOT }
 			NOT = { is_permanent_claim = ROOT }

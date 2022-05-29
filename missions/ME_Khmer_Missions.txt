@@ -108,7 +108,7 @@ KHM_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			degar_highlands_area= {
+			degar_highlands_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -142,12 +142,30 @@ KHM_missions_2 = {
 			}
 		}
 		effect = {
-			2380 = {
-				add_unit_construction = {
-					type = light_ship
-					amount = 3
-					speed = 0.5
-					cost = 0
+			if = {
+				limit = {
+					owns = 2380
+				}
+				2376 = {
+					add_unit_construction = {
+						type = light_ship
+						amount = 3
+						speed = 0.5
+						cost = 0
+					}
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					add_unit_construction = {
+						type = light_ship
+						amount = 3
+						speed = 0.5
+						cost = 0
+					}
 				}
 			}
 			add_prestige = 5
@@ -268,18 +286,7 @@ KHM_missions_3 = {
 				limit = {
 					exists = AYU
 				}
-				AYU = {
-					OR = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = insulted
-						}
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
-						}
-					}
-				}
+				AYU = { has_been_insulted_by_root = yes }
 			}
 			else = {
 				600 = {
@@ -368,7 +375,7 @@ KHM_missions_3 = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
-				}
+			}
 		}
 	}
 	
@@ -406,7 +413,7 @@ KHM_missions_3 = {
 			prachin_area = {
 				type = all
 				owned_by = ROOT
-			} 
+			}
 		}
 		effect = {
 			add_adm_power = 150

@@ -918,7 +918,7 @@ add_prestige_or_monarch_power = {
 	hidden_effect = {
 		for = {
 			amount = $amount$
-			effect = "
+			effect = {
 				if = {
 					limit = {
 						NOT = { prestige = 100 }
@@ -930,7 +930,7 @@ add_prestige_or_monarch_power = {
 					add_dip_power = 1
 					add_mil_power = 1
 				}
-			"
+			}
 		}
 	}
 }
@@ -945,7 +945,7 @@ add_army_tradition_or_mil_power = {
 	hidden_effect = {
 		for = {
 			amount = $amount$
-			effect = "
+			effect = {
 				if = {
 					limit = {
 						NOT = { army_tradition = 99.9 }
@@ -955,7 +955,7 @@ add_army_tradition_or_mil_power = {
 				else = {
 					add_mil_power = 3
 				}
-			"
+			}
 		}
 	}
 }
@@ -1794,11 +1794,11 @@ pick_best_province = {
 # Executes the $effect$ $amount$ of times.
 # for = {
 #	amount = 5
-#	effect = "
-#	random_owned_province = {
-#		add_base_tax = 1
+#	effect = {
+#		random_owned_province = {
+#			add_base_tax = 1
+#		}
 #	}
-#	"
 # }
 #####
 

@@ -1,23 +1,9 @@
 MSA_is_in_borneo = {
-	OR = {
-		area = banjar_area
-		area = kutai_area
-		area = palawan_area
-		area = kalimantan_area
-		area = sabah_area
-		area = brunei_area
-	}
+	region = borneo_region
 }
 
 MSA_is_in_sumatra = {
-	OR = {
-		area = central_sumatra_area
-		area = jambi_area
-		area = minangkabau_area
-		area = north_sumatra_area
-		area = south_sumatra_area
-		area = batak_area
-	}
+	region = sumatran_region
 }
 
 MSA_is_in_java = {
@@ -25,26 +11,15 @@ MSA_is_in_java = {
 		area = east_java_area
 		area = central_java_area
 		area = west_java_area
-		area = surabaya_area
-		area = banten_area
 	}
 }
 
 MSA_is_in_sulawesi = {
-	OR = {
-		area = south_sulawesi_area
-		area = sulawesi_area
-		area = makassar_area
-	}
+	region = celebes_region
 }
 
 MSA_is_in_malaya = {
-	OR = {
-		area = malacca_area
-		area = malaya_area
-		area = north_malaya_area
-		area = johor_area
-	}
+	region = malaya_region
 }
 
 MSA_is_in_spice_islands = {
@@ -55,13 +30,7 @@ MSA_is_in_spice_islands = {
 }
 
 MSA_is_in_philippines = {
-	OR = {
-		area = visayas_area
-		area = luzon_area
-		area = southern_luzon_area
-		area = mindanao_area
-		area = west_mindanao_area
-	}
+	region = philippines_region
 }
 
 MSA_is_tag = {
