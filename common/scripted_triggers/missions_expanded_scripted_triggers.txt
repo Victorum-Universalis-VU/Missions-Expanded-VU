@@ -5,6 +5,7 @@ country_has_both_paradox_and_me_missions = {
 			has_dlc = "Dharma"
 			tag = VIJ
 		# Origins DLC
+		}
 		AND = {
 			has_dlc = "Origins"
 			NOT = { map_setup = map_setup_random }
