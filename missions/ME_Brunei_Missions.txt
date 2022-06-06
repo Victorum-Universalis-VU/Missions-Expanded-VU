@@ -144,7 +144,7 @@ BEI_missions_1 = {
 				area = central_sumatra_area
 				area = palembang_area
 				area = malacca_area
-				area = north_malaya_area
+				area = malaya_area
 				area = indonesian_islands_area
 				area = malaya_area
 			}
@@ -157,7 +157,7 @@ BEI_missions_1 = {
 							area = central_sumatra_area
 							area = palembang_area
 							area = malacca_area
-							area = north_malaya_area
+							area = malaya_area
 							area = indonesian_islands_area
 							area = malaya_area
 						}
@@ -173,7 +173,7 @@ BEI_missions_1 = {
 					area = central_sumatra_area
 					area = palembang_area
 					area = malacca_area
-					area = north_malaya_area
+					area = malaya_area
 					area = indonesian_islands_area
 					area = malaya_area
 				}
@@ -483,7 +483,7 @@ BEI_missions_3 = {
 		required_missions = { BEI_bruneian_empire }
 		position = 5
 		provinces_to_highlight = {
-			area = makassar_area
+			area = south_sulawesi_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -669,7 +669,7 @@ BEI_missions_4 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = west_mindanao_area
+				area = palawan_area
 				area = mindanao_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }

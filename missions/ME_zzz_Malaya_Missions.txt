@@ -1285,38 +1285,24 @@ MSA_Missions_Trade_1 = {
 		required_missions = { MSA_masters }
 		position = 15
 		trigger = {
-			if = {
-				limit = {
-					is_expanded_mod_active = { mod = trade_goods }
-				}
-				trading_part = {
-					trade_goods = spices
-					value = 0.33
-				}
-				trading_part = {
-					trade_goods = nutmeg
-					value = 0.75
-				}
-				trading_part = {
-					trade_goods = cloves
-					value = 0.75
-				}
-				trading_part = {
-					trade_goods = vanilla
-					value = 0.75
-				}
+			trading_part = {
+				trade_goods = spices
+				value = 0.33
 			}
-			else = {
-				trading_part = {
-					trade_goods = spices
-					value = 0.6
-				}
-				trading_part = {
-					trade_goods = cloves
-					value = 0.9
-				}
+			trading_part = {
+				trade_goods = nutmeg
+				value = 0.75
+			}
+			trading_part = {
+				trade_goods = cloves
+				value = 0.75
+			}
+			trading_part = {
+				trade_goods = vanilla
+				value = 0.75
 			}
 		}
+		
 		effect = {
 			add_mercantilism = 5
 			custom_tooltip = MSA_modify_capitalization_of_goods_by
@@ -1387,11 +1373,11 @@ MSA_Missions_Trade_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			johor_area = {
+			indonesian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			jambi_area = {
+			palembang_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1409,13 +1395,13 @@ MSA_Missions_Trade_1 = {
 					duration = -1
 				}
 			}
-			johor_area = {
+			indonesian_islands_area = {
 				add_province_modifier = {
 					name = MSA_strait_of_malaya
 					duration = -1
 				}
 			}
-			jambi_area = {
+			palembang_area = {
 				add_province_modifier = {
 					name = MSA_strait_of_malaya
 					duration = -1
@@ -1518,35 +1504,17 @@ MSA_Missions_Trade_2 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					is_expanded_mod_active = { mod = trade_goods  }
-				}
-				add_years_of_owned_provinces_production_income = {
-					years = 5
-					trigger = {
-						OR = {
-							trade_goods = tropical_wood
-							trade_goods = ebony
-							trade_goods = incense
-						}
+			add_years_of_owned_provinces_production_income = {
+				years = 5
+				trigger = {
+					OR = {
+						trade_goods = tropical_wood
+						trade_goods = ebony
+						trade_goods = incense
 					}
-					custom_tooltip = MSA_from_wood_production_TGE
 				}
+				custom_tooltip = MSA_from_wood_production_TGE
 			}
-			else = {
-				add_years_of_owned_provinces_production_income = {
-					years = 5
-					trigger = {
-						OR = {
-							trade_goods = tropical_wood
-							trade_goods = incense
-						}
-					}
-					custom_tooltip = MSA_from_wood_production
-				}
-			}
-			country_event = { id = ME_Malaya_Events.53 }
 		}
 	}
 
@@ -2419,7 +2387,7 @@ MSA_Missions_Muslim_1 = {
 						area = north_sumatra_area
 						area = central_sumatra_area
 						area = south_sumatra_area
-						area = jambi_area
+						area = indonesian_islands_area
 						area = batak_area
 						area = minangkabau_area
 					}
@@ -2437,7 +2405,7 @@ MSA_Missions_Muslim_1 = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
-							jambi_area = {
+							indonesian_islands_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
@@ -2457,7 +2425,7 @@ MSA_Missions_Muslim_1 = {
 						area = north_sumatra_area
 						area = central_sumatra_area
 						area = south_sumatra_area
-						area = jambi_area
+						area = indonesian_islands_area
 						area = batak_area
 						area = minangkabau_area
 					}
@@ -2471,11 +2439,11 @@ MSA_Missions_Muslim_1 = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
-							johor_area = {
+							indonesian_islands_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
-							north_malaya_area = {
+							malaya_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
@@ -2521,7 +2489,7 @@ MSA_Missions_Muslim_1 = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
-					jambi_area = {
+					indonesian_islands_area = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
@@ -2546,11 +2514,11 @@ MSA_Missions_Muslim_1 = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
-					johor_area = {
+					indonesian_islands_area = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
-					north_malaya_area = {
+					malaya_area = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}

@@ -1397,11 +1397,11 @@ me_bavaria_missions_3 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 	}
 	has_country_shield = yes
@@ -1859,14 +1859,14 @@ me_bavaria_missions_3 = {
 				name = bavaria_reunification_of_bavaria_modifier
 				duration = 5475
 			}
-			upper_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_franconia_area = {
+			franconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2159,11 +2159,11 @@ me_bavaria_missions_4 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 	}
 	has_country_shield = yes
@@ -2258,11 +2258,11 @@ me_bavaria_missions_4 = {
 		required_missions = { bavaria_reunification_of_bavaria }
 		position = 7
 		provinces_to_highlight = {
-			area = upper_franconia_area
+			area = franconia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_franconia_area = {
+			franconia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2310,10 +2310,9 @@ me_bavaria_missions_4 = {
 			hidden_effect = {
 				random_province = {
 					limit = {
-						OR = {
-							area = upper_franconia_area
+						#OR = {
 							area = franconia_area
-						}
+						#}
 						country_or_non_sovereign_subject_holds = ROOT
 						NOT = { has_province_flag = bavaria_capture_lower_franconia_flag }
 					}
@@ -2324,10 +2323,9 @@ me_bavaria_missions_4 = {
 				}
 				random_province = {
 					limit = {
-						OR = {
-							area = upper_franconia_area
+						#OR = {
 							area = franconia_area
-						}
+						#}
 						country_or_non_sovereign_subject_holds = ROOT
 						NOT = { has_province_flag = bavaria_capture_lower_franconia_flag }
 					}
@@ -2338,10 +2336,10 @@ me_bavaria_missions_4 = {
 				}
 				random_province = {
 					limit = {
-						OR = {
-							area = upper_franconia_area
+						#OR = {
+							#area = upper_franconia_area
 							area = franconia_area
-						}
+						#}
 						country_or_non_sovereign_subject_holds = ROOT
 						NOT = { has_province_flag = bavaria_capture_lower_franconia_flag }
 					}
@@ -2350,12 +2348,12 @@ me_bavaria_missions_4 = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				upper_franconia_area = {
-					limit = {
-						has_province_flag = bavaria_capture_lower_franconia_flag
-					}
-					clr_province_flag = bavaria_capture_lower_franconia_flag
-				}
+#				upper_franconia_area = {
+#					limit = {
+#						has_province_flag = bavaria_capture_lower_franconia_flag
+#					}
+#					clr_province_flag = bavaria_capture_lower_franconia_flag
+#				}
 				franconia_area = {
 					limit = {
 						has_province_flag = bavaria_capture_lower_franconia_flag
@@ -2517,11 +2515,11 @@ me_bavaria_missions_5 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 	}
 	has_country_shield = yes
@@ -2625,11 +2623,11 @@ me_bavaria_missions_5_2 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 	}
 	has_country_shield = yes
@@ -2800,11 +2798,11 @@ me_bavaria_missions_5_3 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 	}
 	has_country_shield = yes
@@ -2814,29 +2812,29 @@ me_bavaria_missions_5_3 = {
 		required_missions = { bavaria_reunification_of_bavaria }
 		position = 7
 		provinces_to_highlight = {
-			area = upper_swabia_area
+			area = swabia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			upper_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			upper_swabia_area = {
+			swabia_area = {
 				add_province_modifier = {
 					name = bavaria_the_swabian_border_province_modifier
 					duration = 7300
 				}
 			}
-			lower_swabia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+#			lower_swabia_area = {
+#				limit = {
+#					NOT = { owned_by = ROOT }
+#					NOT = { is_core = ROOT }
+#				}
+#				add_permanent_claim = ROOT
+#			}
 		}
 	}
 
@@ -2845,11 +2843,11 @@ me_bavaria_missions_5_3 = {
 		required_missions = { bavaria_the_swabian_border }
 		position = 8
 		provinces_to_highlight = {
-			area = lower_swabia_area
+			area = swabia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			lower_swabia_area = {
+			swabia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2964,11 +2962,11 @@ me_bavaria_missions_wittelsbach_1 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 		has_country_flag = bav_dynasty_wittelsbach
 	}
@@ -3031,20 +3029,20 @@ me_bavaria_missions_wittelsbach_1 = {
 						}
 					}
 				}
-				if = {
-					limit = {
-						is_expanded_mod_active = { mod = subjects }
-						can_create_subject_type = {
-							subject = KOL
-							subject_type = palatinate_vassal
-						}
-					}
-					create_subject = {
-						subject = KOL
-						subject_type = palatinate_vassal
-					}
-				}
-				else = {
+#				if = {
+#					limit = {
+#						is_expanded_mod_active = { mod = subjects }
+#						can_create_subject_type = {
+#							subject = KOL
+#							subject_type = palatinate_vassal
+#						}
+#					}
+#					create_subject = {
+#						subject = KOL
+#						subject_type = palatinate_vassal
+#					}
+#				}
+#				else = {
 					KOL = {
 						custom_tooltip = legitimate_subject_elector_tt
 						add_country_modifier = {
@@ -3053,7 +3051,7 @@ me_bavaria_missions_wittelsbach_1 = {
 							hidden = yes
 						}
 					}
-				}
+#				}
 			}
 			custom_tooltip = " "
 			north_brabant_area = {
@@ -3098,11 +3096,11 @@ me_bavaria_missions_wittelsbach_2 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 		has_country_flag = bav_dynasty_wittelsbach
 	}
@@ -3245,11 +3243,11 @@ me_bavaria_missions_wittelsbach_3 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
+#			}
 		}
 		has_country_flag = bav_dynasty_wittelsbach
 	}
@@ -3571,10 +3569,10 @@ me_bavaria_missions_wittelsbach_4 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
 			}
 		}
 		has_country_flag = bav_dynasty_wittelsbach
@@ -3961,10 +3959,10 @@ me_bavaria_missions_wittelsbach_5 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
+#			AND = {
+#				is_expanded_mod_active = { mod = formables }
+#				tag = AUB
+#				was_tag = BAV
 			}
 		}
 		has_country_flag = bav_dynasty_wittelsbach

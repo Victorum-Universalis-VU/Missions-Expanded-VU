@@ -40,8 +40,6 @@ caliphate_sunni = {
 		2 = HEIR_fem
 		3 = HEIR_fem
 	}
-	
-	government_reform = caliphate_reform_sunni
 
 	trigger = {
 		has_reform = caliphate_reform_sunni

@@ -443,14 +443,14 @@ HAN_missions_2 = {
 			hidden_effect = {
 				for = {
 					amount = 5
-					effect = {
+					effect = "
 						random_owned_province = {
 							limit = {
 								development = 10
 							}
 							add_base_production = 1
 						}
-					}
+					"
 				}
 			}
 			

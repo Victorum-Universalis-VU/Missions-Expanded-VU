@@ -831,6 +831,7 @@ tatar_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+		}
 		effect = {
 			add_adm_power = 100
 			add_mil_power = 100
