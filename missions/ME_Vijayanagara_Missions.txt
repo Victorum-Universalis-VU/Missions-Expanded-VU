@@ -3225,7 +3225,6 @@ vijayanagara_mission_3_tall = {
 			}
 			production_leader = { trade_goods = gems }
 			production_leader = { trade_goods = pearls }
-		}
 			custom_trigger_tooltip = {
 				tooltip = VIJ_GEM_CUTTING_INDUSTRIES_TT
 				1340 = {

@@ -443,9 +443,9 @@ HAN_gen_missions_3 = {
 					area = braunschweig_area
 					area = lower_saxony_area
 					area = lubeck_area
-			}
 				}
 				value = 10
+			}
 		}
 		effect = {
 			add_country_modifier = {
