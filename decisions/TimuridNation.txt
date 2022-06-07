@@ -73,12 +73,12 @@ country_decisions = {
 			define_ruler = {
 				dynasty = "Timurid"
 			}
-			add_legitimacy_equivalent = { amount = 20 republican_tradition = 10 }
+			add_legitimacy = 20
 			if = {
 				limit = {
 					has_heir = yes
 				}
-				remove_heir = {}
+				remove_heir = yes
 			}
 			define_heir = {
 				dynasty = "Timurid"
@@ -142,11 +142,8 @@ country_decisions = {
 			NOT = { exists = TIM }
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 446	# Herat
 			owns_core_province = 454	# Samarkand
-			454 = {						# Samarkand
-				is_state = yes
-			}
+			owns_core_province = 446	# Herat
 			OR = {
 				AND = {
 					owns_core_province = 429	# Isfahan
@@ -177,7 +174,7 @@ country_decisions = {
 				}
 				set_government_rank = 3
 			}
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 3650

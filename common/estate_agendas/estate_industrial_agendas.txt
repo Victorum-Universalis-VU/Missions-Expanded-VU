@@ -5,7 +5,7 @@ estate_industrial_conquer_good = {
 				NOT = { owned_by = ROOT }
 				area_for_scope_province = {
 					NOT = { owned_by = ROOT }
-					if = {
+					if = { 
 						limit = {
 							is_expanded_mod_active = { mod = trade_goods }
 						}
@@ -32,7 +32,7 @@ estate_industrial_conquer_good = {
 					}
 				}
 			}
-		}
+		}				
 	}
 	selection_weight = {
 		factor = 1
@@ -44,7 +44,7 @@ estate_industrial_conquer_good = {
 					NOT = { owned_by = ROOT }
 					area_for_scope_province = {
 						NOT = { owned_by = ROOT }
-						if = {
+						if = { 
 							limit = {
 								is_expanded_mod_active = { mod = trade_goods }
 							}
@@ -108,7 +108,7 @@ estate_industrial_conquer_good = {
 					limit = {
 						area = PREV
 						NOT = { owned_by = ROOT }
-						if = {
+						if = { 
 							limit = {
 								is_expanded_mod_active = { mod = trade_goods }
 							}
@@ -429,7 +429,7 @@ estate_industrial_workshop = {
 			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		if = {
 			limit = {
 				check_variable = {
@@ -449,24 +449,26 @@ estate_industrial_workshop = {
 				}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_industrial
 			loyalty = 10
 		}
-		event_target:agenda_province = {
-			add_base_production = 1
+		else_if = {
+			event_target:agenda_province = {
+				add_base_production = 1
+			}
 		}
-	}
-	failing_effect = {
-		add_estate_loyalty_modifier = {
-			estate = estate_industrial
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_industrial
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_industrial_manufactory = {
@@ -537,15 +539,15 @@ estate_industrial_manufactory = {
 			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				has_manufactory_trigger = yes
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_industrial
 			loyalty = 10
@@ -557,15 +559,15 @@ estate_industrial_manufactory = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
-		add_estate_loyalty_modifier = {
-			estate = estate_industrial
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_industrial
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_industrial_production_dev = {
@@ -667,26 +669,26 @@ estate_industrial_production_dev = {
 			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			base_production = "province_dip_var"
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_industrial
 			loyalty = 10
 		}
 		add_years_of_income = 0.5
-	}
-	failing_effect = {
-		add_estate_loyalty_modifier = {
-			estate = estate_industrial
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_industrial
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_industrial_blast_furnaces = {
@@ -806,7 +808,7 @@ estate_industrial_blast_furnaces = {
 	fail_if = {
 		NOT = { has_country_flag = RHN_Blast_furnaces }
 	}
-	task_requirements = {
+    task_requirements = {
 		if = {
 			limit = {
 				check_variable = {
@@ -870,8 +872,8 @@ estate_industrial_blast_furnaces = {
 		else = {
 			always = yes
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_industrial
 			loyalty = 15
@@ -880,13 +882,13 @@ estate_industrial_blast_furnaces = {
 			name = RHN_blast_furnace_cost
 			duration = 1825
 		}
-	}
-	failing_effect = {
-		add_estate_loyalty_modifier = {
-			estate = estate_industrial
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_industrial
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }

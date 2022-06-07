@@ -4,15 +4,13 @@ ME_austria_missions_1 = {
 	ai = yes
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
-#				tag = AUB
-#				primary_culture = austrian
-#			}
+			tag = HAB
+			#AND = {
+			#	tag = AUB
+			#	primary_culture = austrian
+			#}
 #		}
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -211,15 +209,13 @@ ME_austria_missions_2 = {
 	ai = yes
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
-#				tag = AUB
-#				primary_culture = austrian
-#			}
+			tag = HAB
+			#AND = {
+			#	tag = AUB
+			#	primary_culture = austrian
+			#}
 #		}
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -328,7 +324,7 @@ ME_austria_missions_2 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
+		    add_country_modifier = {
 				name = "austria_habsburg_triumph"
 				duration = 7300
 			}
@@ -658,16 +654,14 @@ ME_austria_missions_2_RB = {
 	}
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
+			tag = HAB
+#			AND = {
 #				tag = AUB
 #				primary_culture = austrian
 #			}
 #		}
 		has_dlc = "Rule Britannia"
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -693,15 +687,13 @@ ME_austria_missions_3 = {
 	ai = yes
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
+			tag = HAB
+#			AND = {
 #				tag = AUB
 #				primary_culture = austrian
 #			}
 #		}
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -892,11 +884,11 @@ ME_austria_missions_3 = {
 		required_missions = { austria_build_buildings }
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { num_of_times_improved = 5 }
+			NOT = { num_of_times_improved_by_owner = 5 }
 		}
 		trigger = {
 			capital_scope = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 			}
 		}
 		effect = {
@@ -942,15 +934,13 @@ ME_austria_missions_4 = {
 	ai = yes
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
+			tag = HAB
+#			AND = {
 #				tag = AUB
 #				primary_culture = austrian
 #			}
 #		}
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -1054,7 +1044,7 @@ ME_austria_missions_4 = {
 				}
 				country_event = { id = ME_Austria_Events.1 }
 			}
-			add_country_modifier = {
+		    add_country_modifier = {
 				name = "austria_habsburg_triumph"
 				duration = 7300
 			}
@@ -1382,15 +1372,13 @@ ME_austria_missions_5 = {
 	ai = yes
 	potential = {
 #		OR = {
-			AND = {
-				tag = HAB
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-#			AND = {			#FE ?
+			tag = HAB
+#			AND = {
 #				tag = AUB
 #				primary_culture = austrian
 #			}
 #		}
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -1568,7 +1556,7 @@ ME_austria_missions_5 = {
 		effect = {
 			add_dip_power = 50
 			add_adm_power = 50
-			add_country_modifier = {
+		    add_country_modifier = {
 				name = "austria_habsburg_triumph"
 				duration = 7300
 			}

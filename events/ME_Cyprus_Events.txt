@@ -147,7 +147,6 @@ country_event = { # The King of Jerusalem?
 
 		add_treasury = 3000
 		add_prestige = -30
-		custom_tooltip = ME_Cyprus_Events.3.tooltip
 		random_country = {
 			limit = {
 				religion = catholic
@@ -232,9 +231,9 @@ country_event = { # The Knightly Pact
 		if = {
 			limit = {
 				is_expanded_mod_active = { mod = subjects }
-				FROM = {
-					can_be_overlord = crusader_state_vassal
-				}
+#				FROM = {
+#					can_be_overlord = crusader_state_vassal
+#				}
 				is_excommunicated = no
 				religion = catholic
 				capital_scope = {
@@ -244,12 +243,12 @@ country_event = { # The Knightly Pact
 					}
 				}
 			}
-			FROM = {
-				create_subject = {
-					subject = ROOT
-					subject_type = crusader_state_vassal
-				}
-			}
+#			FROM = {
+#				create_subject = {
+#					subject = ROOT
+#					subject_type = crusader_state_vassal
+#				}
+#			}
 		}
 		else = {
 			FROM = {

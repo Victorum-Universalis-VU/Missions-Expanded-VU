@@ -149,24 +149,16 @@ POM_STE_missions_1 = {
 		required_missions = { STE_build_marketplace }
 		position = 4
 		provinces_to_highlight = {
-			OR = {
-				province_id = 1858
-				province_id = 4746
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
-			}
 			1858 = {
 				OR = {
 					NOT = { owned_by = ROOT }
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 				}
 			}
 			4746 = {
 				OR = {
 					NOT = { owned_by = ROOT }
-					NOT = { num_of_times_improved = 3 }
+					NOT = { num_of_times_improved_by_owner = 3 }
 				}
 			}
 		}
@@ -174,11 +166,11 @@ POM_STE_missions_1 = {
 			OR = {
 				1858 = {
 					owned_by = ROOT
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 				4746 = {
 					owned_by = ROOT
-					num_of_times_improved = 3
+					num_of_times_improved_by_owner = 3
 				}
 			}
 		}
@@ -232,25 +224,25 @@ POM_WOL_missions_1 = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 3 }
+				NOT = { num_of_times_improved_by_owner = 3 }
 			}
 		}
 		trigger = {
 			47 = {
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			48 = {
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			2994 = {
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 			2995 = {
 				owned_by = ROOT
-				num_of_times_improved = 1
+				num_of_times_improved_by_owner = 1
 			}
 		}
 		effect = {
@@ -695,7 +687,7 @@ POM_missions_1 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				AND = {
-					NOT = { num_of_times_improved = 5 }
+					NOT = { num_of_times_improved_by_owner = 5 }
 					NOT = { has_building = university }
 				}
 				NOT = { higher_development_than = 46 }
@@ -705,7 +697,7 @@ POM_missions_1 = {
 			2994 = {
 				owned_by = ROOT
 				OR = {
-					num_of_times_improved = 8
+					num_of_times_improved_by_owner = 8
 					has_building = university
 				}
 				higher_development_than = 46
@@ -820,7 +812,7 @@ POM_missions_2 = {
 					loyalty = 5
 				}
 			}
-			custom_tooltip = POM_if_we_are_not_catholic
+			custom_tooltip = POM_if_we_are_not_catholic 
 			tooltip = {
 				add_country_modifier = {
 					name = POM_kirche
@@ -1066,7 +1058,7 @@ POM_missions_4 = {
 		}
 	}
 	has_country_shield = yes
-
+	
 	POM_legacy_of_eric = {
 		icon = league_of_the_public_weal
 		required_missions = { POM_duke_of_pomerania }
@@ -1093,7 +1085,7 @@ POM_missions_4 = {
 				total_development = NOR
 			}
 			total_development = 500
-			legitimacy_equivalent = 100
+			legitimacy = 100
 		}
 		effect = {
 			if = {
@@ -1115,7 +1107,7 @@ POM_missions_4 = {
 				}
 			}
 			else = {
-				if = {
+				if = { 
 					limit = {
 						exists = DAN
 					}
@@ -1125,7 +1117,7 @@ POM_missions_4 = {
 						months = -1
 					}
 				}
-				if = {
+				if = { 
 					limit = {
 						exists = SWE
 					}
@@ -1135,7 +1127,7 @@ POM_missions_4 = {
 						months = -1
 					}
 				}
-				if = {
+				if = { 
 					limit = {
 						exists = NOR
 					}
@@ -1152,7 +1144,7 @@ POM_missions_4 = {
 			}
 		}
 	}
-
+	
 	POM_liberate_pomerelia = {
 		icon = protect_against_the_turks
 		required_missions = { POM_vengeance }

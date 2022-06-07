@@ -4,11 +4,12 @@ DAN_missions_1 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		tag = DNR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 
-	me_denmark_norway_integration = {
+	denmark_norway_integration = {
 		icon = mission_have_two_subjects
 		required_missions = { }
 		completed_by = 1536.1.1
@@ -111,9 +112,9 @@ DAN_missions_1 = {
 		}
 	}
 
-	me_denmark_sweden_integration = {
+	denmark_sweden_integration = {
 		icon = mission_monarch_in_throne_room
-		required_missions = { me_denmark_norway_integration }
+		required_missions = { denmark_norway_integration }
 		provinces_to_highlight = {
 			OR = {
 				area = svealand_area
@@ -177,7 +178,7 @@ DAN_missions_1 = {
 
 	danish_into_greater_finland = {
 		icon = mission_cannons_firing
-		required_missions = { me_denmark_sweden_integration }
+		required_missions = { denmark_sweden_integration }
 		provinces_to_highlight = {
 			OR = {
 				area = finland_area
@@ -516,6 +517,7 @@ DAN_missions_2 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		tag = DNR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -944,11 +946,12 @@ DAN_missions_3 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		tag = DNR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 
-	me_denmark_baltic_fleet = {
+	denmark_baltic_fleet = {
 		icon = mission_galleys_in_port
 		required_missions = { }
 		trigger = {
@@ -975,9 +978,9 @@ DAN_missions_3 = {
 		}
 	}
 	
-	me_control_osel = {
+	control_osel = {
 		icon = mission_sea_battles
-		required_missions = { me_denmark_baltic_fleet }
+		required_missions = { denmark_baltic_fleet }
 		provinces_to_highlight = {
 			OR = {
 				province_id = 35
@@ -1034,9 +1037,9 @@ DAN_missions_3 = {
 		}
 	}
 	
-	me_danish_controlled_cot = {
+	danish_controlled_cot = {
 		icon = mission_dominate_home_trade_node
-		required_missions = { me_control_osel }
+		required_missions = { control_osel }
 		provinces_to_highlight = {
 			OR = {
 				province_id = 43
@@ -1084,7 +1087,7 @@ DAN_missions_3 = {
 	
 	danish_conquer_livonia_and_curonia = {
 		icon = mission_alliances
-		required_missions = { me_danish_controlled_cot }
+		required_missions = { danish_controlled_cot }
 		provinces_to_highlight = {
 			OR = {
 				area = livonia_area
@@ -1384,6 +1387,7 @@ DAN_missions_4 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		tag = DNR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
@@ -1410,7 +1414,7 @@ DAN_missions_4 = {
 			}
 			add_adm_power = 50
 		}
-	}
+	}	
 	
 	dan_colonize_greenland = {
 		icon = mission_colonial
@@ -1625,6 +1629,7 @@ DAN_missions_5 = {
 	ai = yes
 	potential = {
 		tag = DAN
+		tag = DNR
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes

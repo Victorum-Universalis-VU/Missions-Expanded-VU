@@ -665,7 +665,7 @@ l_english:
  TUR_tripoli_jan: "Janissary Rule of Tripolitania"
  desc_TUR_tripoli_jan: "The Janissaries have taken charge in Tripoli."
  
- TUR_tripoli_jan_no_coc: "Janissary Rule of Tripolitania"
+ TUR_tripoli_jan: "Janissary Rule of Tripolitania"
  desc_TUR_tripoli_jan_no_coc: "The Janissaries have taken charge in Tripoli."
  
  TUR_persian_defense: "The Persian Defense"
@@ -703,7 +703,7 @@ l_english:
  desc_TUR_hun_subject: "The Kingdom of Hungary, now ruled by the Ottoman Sultan serves as a helpful hinterland against German aggression."
  
  TUR_hun_subject_provinces: "Ottoman March"
- desc_TUR_hun_subject_provinces: "The Kingdom of Hungary, now ruled by the Ottoman Sultan serves as a helpful hinterland against German aggression."
+ desc_TUR_hun_subject_provinces: "The Kingdom of Hungary, now ruled by the Ottoman Sultan serves as a helpful hinterland against German aggression.""
  
  TUR_slo_subject: "Loyal to the Sultan"
  desc_TUR_slo_subject: "The Sultan has generously established a state for our people!"
@@ -831,4 +831,3 @@ l_english:
  TUR_expand_janissaries_no_coc: "Expansion of the Janissaries"
  desc_TUR_expand_janissaries_no_coc: "More Jannissaries, more fun!"
  
- TUR_failed_tunis_expedition: "Failed Tunisian Expedition"

@@ -3,13 +3,7 @@ dagestan_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = DAG
-			AND = {
-				primary_culture = dagestani
-				has_country_flag = formed_dagestan
-			}
-		}
+		tag = DAG
 	}
 	has_country_shield = yes
 	
@@ -61,13 +55,7 @@ dagestan_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = DAG
-			AND = {
-				primary_culture = dagestani
-				has_country_flag = formed_dagestan
-			}
-		}
+		tag = DAG
 	}
 	has_country_shield = yes
 	
@@ -114,13 +102,7 @@ dagestan_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = DAG
-			AND = {
-				primary_culture = dagestani
-				has_country_flag = formed_dagestan
-			}
-		}
+		tag = DAG
 	}
 	has_country_shield = yes
 	
@@ -170,13 +152,6 @@ dagestan_missions_3 = {
 				name = dagestan_march_on_georgia_modifier
 				duration = 10950
 			}
-#			kartli_kakheti_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT }
-#					NOT = { is_core = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
 			samtskhe_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -192,17 +167,10 @@ dagestan_missions_3 = {
 		required_missions = { dagestan_march_on_georgia }
 		position = 4
 		provinces_to_highlight = {
-#			OR = {
-#				area = kartli_kakheti_area
-				area = samtskhe_area
-#			}
+			area = samtskhe_area
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-#			kartli_kakheti_area = {
-#				type = all
-#				owned_by = ROOT
-#			}
 			samtskhe_area = {
 				type = all
 				owned_by = ROOT
@@ -222,13 +190,7 @@ dagestan_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = DAG
-			AND = {
-				primary_culture = dagestani
-				has_country_flag = formed_dagestan
-			}
-		}
+		tag = DAG
 	}
 	has_country_shield = yes
 	
@@ -423,13 +385,7 @@ dagestan_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = DAG
-			AND = {
-				primary_culture = dagestani
-				has_country_flag = formed_dagestan
-			}
-		}
+		tag = DAG
 	}
 	has_country_shield = yes
 	

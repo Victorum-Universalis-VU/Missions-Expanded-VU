@@ -190,7 +190,7 @@ mexico_missions_1 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
-				NOT = { num_of_times_improved = 6 }
+				NOT = { num_of_times_improved_by_owner = 6 }
 			}
 		}
 		trigger = {
@@ -200,7 +200,7 @@ mexico_missions_1 = {
 			}
 			owns_core_province = 835
 			835 = {
-				num_of_times_improved = 6
+				num_of_times_improved_by_owner = 6
 			}
 		}
 		effect = {
@@ -534,13 +534,13 @@ mexico_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			north_florida_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT  }
-#					NOT = { is_core = ROOT  }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#north_florida_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT  }
+			#		NOT = { is_core = ROOT  }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 
@@ -549,10 +549,10 @@ mexico_missions_2 = {
 		position = 8
 		required_missions = { mex_sunshine_bays }
 		provinces_to_highlight = {
-#			OR = {
+			OR = {
 				area = florida_area
-#				area = north_florida_area
-#			}
+			#	area = north_florida_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -560,10 +560,10 @@ mexico_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			north_florida_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			#north_florida_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			add_yearly_sailors = 5
@@ -574,13 +574,13 @@ mexico_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			east_cuba_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT  }
-#					NOT = { is_core = ROOT  }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#east_cuba_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT  }
+			#		NOT = { is_core = ROOT  }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 }
@@ -619,7 +619,7 @@ mexico_missions_3 = {
 		}
 		effect = {
 			add_prestige = 10
-			add_legitimacy_equivalent = { amount = 5 republican_tradition = 5 }
+			add_legitimacy_equivalent = { value = 5 }
 		}
 	}
 
@@ -751,13 +751,13 @@ mexico_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			northern_california_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT }
-#					NOT = { is_core = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#northern_california_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			sonora_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -816,13 +816,6 @@ mexico_missions_3 = {
 				duration = -1
 			}
 			mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			palawan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1066,13 +1059,13 @@ mexico_missions_4 = {
 				name = mex_grazing_plains
 				duration = 7300
 			}
-#			badlands_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT }
-#					NOT = { is_core = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#badlands_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			dakota_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

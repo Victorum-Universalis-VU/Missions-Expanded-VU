@@ -327,10 +327,6 @@ Azerbaijani_Generic_Missions_SRV = {
 				tag = AZE
 				was_tag = SRV
 			}
-			AND = {
-				tag = SRV
-				has_country_flag = AZE_flag
-			}
 		}
 		primary_culture = azerbaijani
 	}
@@ -341,12 +337,12 @@ Azerbaijani_Generic_Missions_SRV = {
 		position = 1
 		provinces_to_highlight = {
 			province_id = 421
-			NOT = { num_of_times_improved = 5 }
+			NOT = { num_of_times_improved_by_owner = 5 }
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			421 = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				owned_by = ROOT
 			}
 		}
@@ -435,10 +431,6 @@ Azerbaijani_Generic_Missions_TBR = {
 				tag = AZE
 				was_tag = TBR
 			}
-			AND = {
-				tag = TBR
-				has_country_flag = AZE_flag
-			}
 		}
 		primary_culture = azerbaijani
 	}
@@ -503,10 +495,6 @@ Azerbaijani_Generic_Missions_MGR = {
 				tag = AZE
 				was_tag = MGR
 			}
-			AND = {
-				tag = MGR
-				has_country_flag = AZE_flag
-			}
 		}
 		primary_culture = azerbaijani
 	}
@@ -542,7 +530,7 @@ Azerbaijani_Generic_Missions_MGR = {
 		provinces_to_highlight = {
 			province_id = 2207
 			NOT = { owned_by = ROOT }
-			NOT = { num_of_times_improved = 15 } #was 10, set it to 15 for VU
+			NOT = { num_of_times_improved_by_owner = 10 }
 			AND = {
 				is_prosperous = no
 				has_dlc = "Mandate of Heaven"
@@ -550,7 +538,7 @@ Azerbaijani_Generic_Missions_MGR = {
 		}
 		trigger = {
 			2207 = {
-				num_of_times_improved = 15 #was 10, set it to 15 for VU
+				num_of_times_improved_by_owner = 10
 				owned_by = ROOT
 				if = {
 					limit = {
@@ -576,17 +564,7 @@ AZE_Missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 	}
 	has_country_shield = yes
@@ -741,17 +719,7 @@ AZE_Missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 	}
 	has_country_shield = yes
@@ -823,17 +791,7 @@ AZE_Missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 	}
 	has_country_shield = yes
@@ -916,10 +874,8 @@ AZE_Missions_3 = {
 			151 = {
 				if = {
 					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
+						NOT = {	is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -953,17 +909,7 @@ AZE_Missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 	}
 	has_country_shield = yes
@@ -1000,13 +946,13 @@ AZE_Missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			kartli_kakheti_area = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { is_permanent_claim = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { is_core = ROOT }
+			#		NOT = { is_permanent_claim = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			samtskhe_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1149,17 +1095,7 @@ AZE_Missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 	}
 	has_country_shield = yes
@@ -1168,17 +1104,17 @@ AZE_Missions_5 = {
 		required_missions = { AZE_conquer_armenia }
 		position = 5
 		provinces_to_highlight = {
-#			OR = {
-#				area = kartli_kakheti_area
+			OR = {
+				#area = kartli_kakheti_area
 				area = samtskhe_area
-#			}
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-#			kartli_kakheti_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			samtskhe_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1258,17 +1194,7 @@ AZE_Missions_5_M_o_H = {
 		has_dlc = "Mandate of Heaven"
 	}
 	potential = {
-		OR = {
-			tag = AZE
-			AND = {
-				OR = {
-					tag = SRV
-					tag = TBR
-					tag = MGR
-				}
-				has_country_flag = AZE_flag
-			}
-		}
+		tag = AZE
 		primary_culture = azerbaijani
 		has_dlc = "Mandate of Heaven"
 	}

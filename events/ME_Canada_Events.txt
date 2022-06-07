@@ -1038,7 +1038,7 @@ country_event = {
 			override_country_name = quebeclowercanada
 			hidden_effect = {
 				add_country_modifier = {
-					name = can_quebecois_revolution
+					name = can_canadien_revolution
 					duration = 3650
 				}
 				ROOT = {
@@ -2095,10 +2095,10 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_quebecois_party_appeased
-		set_country_flag = can_quebecois_party_appeased
+		clr_country_flag = can_canadien_party_appeased
+		set_country_flag = can_canadien_party_appeased
 		cote_nord_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2106,7 +2106,7 @@ country_event = {
 			}
 		}
 		upper_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2114,7 +2114,7 @@ country_event = {
 			}
 		}
 		lower_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2122,7 +2122,7 @@ country_event = {
 			}
 		}
 		lower_canada_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2130,7 +2130,7 @@ country_event = {
 			}
 		}
 		laurentian_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2138,7 +2138,7 @@ country_event = {
 			}
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2157,27 +2157,27 @@ country_event = {
 		hidden_effect = { set_country_flag = canada_refused_reform_1 }
 		add_prestige = 10
 		cote_nord_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		upper_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		lower_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		lower_canada_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		laurentian_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 	}
@@ -2199,10 +2199,10 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_quebecois_party_appeased
-		set_country_flag = can_quebecois_party_appeased
+		clr_country_flag = can_canadien_party_appeased
+		set_country_flag = can_canadien_party_appeased
 		cote_nord_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2210,7 +2210,7 @@ country_event = {
 			}
 		}
 		upper_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2218,7 +2218,7 @@ country_event = {
 			}
 		}
 		lower_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2226,7 +2226,7 @@ country_event = {
 			}
 		}
 		lower_canada_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2234,7 +2234,7 @@ country_event = {
 			}
 		}
 		laurentian_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2242,7 +2242,7 @@ country_event = {
 			}
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2261,27 +2261,27 @@ country_event = {
 		hidden_effect = { set_country_flag = canada_refused_reform_2 }
 		add_prestige = 10
 		cote_nord_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		upper_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		lower_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		lower_canada_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		laurentian_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_unrest = 1
 		}
 	}
@@ -2303,30 +2303,30 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_quebecois_party_appeased
-		set_country_flag = can_quebecois_party_appeased
+		clr_country_flag = can_canadien_party_appeased
+		set_country_flag = can_canadien_party_appeased
 		cote_nord_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		upper_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		lower_acadia_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		lower_canada_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		laurentian_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = quebecois }
+			limit = { culture = canadien }
 			add_local_autonomy = 10
 		}
 		994 = {
@@ -2584,7 +2584,7 @@ country_event = {
 			add_government_reform = oligarchy_reform
 			hidden_effect = {
 				add_country_modifier = {
-					name = can_quebecois_revolution
+					name = can_canadien_revolution
 					duration = 3650
 				}
 				CAN = {
@@ -3318,17 +3318,17 @@ country_event = {
 	title = ME_Canada_Events.47.T
 	desc = ME_Canada_Events.47.D
 	picture = {
-		trigger = {
-			has_dlc = "American Dream"
-		}
-		picture = COLONIZATION_eventPicture
-	}
-	picture = {
-		trigger = {
-			NOT = { has_dlc = "American Dream" }
-		}
-		picture = COLONIZATION_eventPicture
-	}
+        trigger = {
+            has_dlc = "American Dream"
+        }
+        picture = COLONIZATION_eventPicture
+    }
+    picture = {
+        trigger = {
+            NOT = { has_dlc = "American Dream" }
+        }
+        picture = COLONIZATION_eventPicture
+    }
 
 	is_triggered_only = yes
 
@@ -3602,17 +3602,17 @@ country_event = {
 	title = ME_Canada_Events.52.T
 	desc = ME_Canada_Events.52.D
 	picture = {
-		trigger = {
-			has_dlc = "El Dorado"
-		}
-		picture = SIERRA_DE_LA_PLATA_eventPicture
-	}
-	picture = {
-		trigger = {
-			NOT = { has_dlc = "El Dorado" }
-		}
-		picture = PRAYING_eventPicture
-	}
+        trigger = {
+            has_dlc = "El Dorado"
+        }
+        picture = SIERRA_DE_LA_PLATA_eventPicture
+    }
+    picture = {
+        trigger = {
+            NOT = { has_dlc = "El Dorado" }
+        }
+        picture = PRAYING_eventPicture
+    }
 
 	is_triggered_only = yes
 
@@ -3731,17 +3731,17 @@ country_event = {
 	title = ME_Canada_Events.53.T
 	desc = ME_Canada_Events.53.D
 	picture = {
-		trigger = {
-			has_dlc = "El Dorado"
-		}
-		picture = SIERRA_DE_LA_PLATA_eventPicture
-	}
-	picture = {
-		trigger = {
-			NOT = { has_dlc = "El Dorado" }
-		}
-		picture = TRADEGOODS_eventPicture
-	}
+        trigger = {
+            has_dlc = "El Dorado"
+        }
+        picture = SIERRA_DE_LA_PLATA_eventPicture
+    }
+    picture = {
+        trigger = {
+            NOT = { has_dlc = "El Dorado" }
+        }
+        picture = TRADEGOODS_eventPicture
+    }
 
 	is_triggered_only = yes
 
@@ -5158,11 +5158,11 @@ province_event = {
 	trigger = {
 		OR = {
 			AND = {
-				has_province_modifier = can_quebecois_content
+				has_province_modifier = can_canadien_content
 				unrest = 0.1
 			}
 			AND = {
-				has_province_modifier = can_quebecois_discontent
+				has_province_modifier = can_canadien_discontent
 				NOT = { unrest = 0.1 }
 			}
 		}
@@ -5172,18 +5172,18 @@ province_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_province_modifier = can_quebecois_content
+					has_province_modifier = can_canadien_content
 				}
-				remove_province_modifier = can_quebecois_content
+				remove_province_modifier = can_canadien_content
 				add_province_modifier = {
-					name = can_quebecois_discontent
+					name = can_canadien_discontent
 					duration = -1
 				}
 			}
 			else = {
-				remove_province_modifier = can_quebecois_discontent
+				remove_province_modifier = can_canadien_discontent
 				add_province_modifier = {
-					name = can_quebecois_content
+					name = can_canadien_content
 					duration = -1
 				}
 			}
@@ -5249,13 +5249,13 @@ country_event = {
 
 	trigger = {
 		faction_influence = {
-			faction = can_quebecois_party
+			faction = can_canadien_party
 			influence = 30
 		}
 		AND = {
-			NOT = { has_country_flag = canada_quebecois_party_1 }
-			NOT = { has_country_flag = canada_quebecois_party_2 }
-			NOT = { has_country_flag = canada_quebecois_party_3 }
+			NOT = { has_country_flag = canada_canadien_party_1 }
+			NOT = { has_country_flag = canada_canadien_party_2 }
+			NOT = { has_country_flag = canada_canadien_party_3 }
 		}
 	}
 
@@ -5268,27 +5268,27 @@ country_event = {
 			random_list = {
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_quebecois_party_1 }
+						NOT = { has_country_flag = canada_canadien_party_1 }
 					}
-					set_country_flag = canada_quebecois_party_1
+					set_country_flag = canada_canadien_party_1
 					country_event = {
 						id = ME_Canada_Events.32
 					}
 				}
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_quebecois_party_2 }
+						NOT = { has_country_flag = canada_canadien_party_2 }
 					}
-					set_country_flag = canada_quebecois_party_2
+					set_country_flag = canada_canadien_party_2
 					country_event = {
 						id = ME_Canada_Events.33
 					}
 				}
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_quebecois_party_3 }
+						NOT = { has_country_flag = canada_canadien_party_3 }
 					}
-					set_country_flag = canada_quebecois_party_3
+					set_country_flag = canada_canadien_party_3
 					country_event = {
 						id = ME_Canada_Events.34
 					}

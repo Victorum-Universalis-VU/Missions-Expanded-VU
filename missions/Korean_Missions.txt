@@ -367,15 +367,6 @@ kor_military_missions = {
 				name = "thriving_arms_industry"
 				duration = 9125 #25 years
 			}
-			if = {
-				limit = {
-					ai = no
-					has_country_flag = starts_with_inwards_perfection
-					has_estate_privilege = estate_church_inwards_perfection
-				}
-				remove_estate_privilege = estate_church_inwards_perfection
-				clr_country_flag = starts_with_inwards_perfection
-			}
 		}
 	}
 }
@@ -1136,28 +1127,20 @@ kor_settle_land = {
 				AND = {
 					province_id = 2742
 					NOT = { culture = korean }
-					NOT = { culture = korean_new }
 				}
 				AND = {
 					province_id = 2743
 					NOT = { culture = korean }
-					NOT = { culture = korean_new }
 				}
 			}
 		}
 
 		trigger = {
 			2742 = {
-				OR = {
-					culture = korean
-					culture = korean_new
-				}
+				culture = korean
 			}
 			2743 = {
-				OR = {
-					culture = korean
-					culture = korean_new
-				}
+				culture = korean
 			}
 		}
 		effect = {
@@ -1173,16 +1156,12 @@ kor_settle_land = {
 		provinces_to_highlight = {
 			owned_by = root
 			NOT = { culture = korean }
-			NOT = { culture = korean_new }
 		}
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
-				OR = {
-					culture = korean
-					culture = korean_new
-				}
+				culture = korean
 			}
 		}
 		effect = {
@@ -1361,7 +1340,6 @@ korea_economic_social_political_path_1 = {
 				NOT = { owned_by = root }
 				NOT = { is_core = root }
 				NOT = { culture = korean }
-				NOT = { culture = korean_new }
 				NOT = { development = 8 }
 				has_manufactory_trigger = no
 			}
@@ -1374,10 +1352,7 @@ korea_economic_social_political_path_1 = {
 				type = all
 				owned_by = root
 				is_core = root
-				OR = {
-					culture = korean
-					culture = korean_new
-				}
+				culture = korean
 				development = 8
 				has_manufactory_trigger = yes
 			}
@@ -1421,10 +1396,7 @@ korea_economic_social_political_path_2 = {
 
 		trigger = {
 			capital_scope = {
-				OR = {
-					culture = korean
-					culture = korean_new
-				}
+				culture = korean
 				development = 30
 			}
 		}

@@ -5,12 +5,9 @@ country_decisions = {
 			OR = {
 				tag = ENG
 				tag = UKS
-				tag = ANV #Formable extended ?
-			}
-			OR = {
 				tag = ANV
-				has_country_flag = ENG_Angevin_Missions
 			}
+			has_country_flag = ENG_Angevin_Missions
 			NOT = {
 				check_variable = {
 					which = ENG_Patronized

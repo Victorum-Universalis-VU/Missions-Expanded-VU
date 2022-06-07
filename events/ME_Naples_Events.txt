@@ -88,7 +88,6 @@ country_event = {
 	}
 
 	trigger = {
-		culture_group = latin
 		2983 = {
 			owned_by = ROOT
 			has_province_modifier = nap_restore_republic
@@ -274,10 +273,10 @@ country_event = {
 						}
 					}
 				}
-				create_subject = {
-					subject_type = brother_kingdom
-					subject = ROOT
-				}
+#				create_subject = {
+#					subject_type = brother_kingdom
+#					subject = ROOT
+#				}
 			}
 			else = {
 				create_subject = {
@@ -397,10 +396,10 @@ country_event = {
 						}
 					}
 				}
-				create_subject = {
-					subject_type = brother_kingdom
-					subject = ROOT
-				}
+#				create_subject = {
+#					subject_type = brother_kingdom
+#					subject = ROOT
+#				}
 			}
 			else = {
 				create_subject = {

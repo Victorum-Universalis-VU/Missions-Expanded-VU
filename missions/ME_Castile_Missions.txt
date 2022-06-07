@@ -558,7 +558,6 @@ CAS_missions_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 				area = mindanao_area
-				area = palawan_area
 				area = visayas_area
 			}
 			NOT = { owned_by = ROOT }
@@ -572,9 +571,6 @@ CAS_missions_2 = {
 					owned_by = ROOT
 				}
 				mindanao_area = {
-					owned_by = ROOT
-				}
-				palawan_area = {
 					owned_by = ROOT
 				}
 				visayas_area = {
@@ -602,13 +598,6 @@ CAS_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			mindanao_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			palawan_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -976,13 +965,6 @@ CAS_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			western_sicily_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT	}
-#					NOT = { is_core = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
 		}
 	}
 
@@ -1293,13 +1275,6 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			algiers_area = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { is_claim = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
 		}
 	}
 

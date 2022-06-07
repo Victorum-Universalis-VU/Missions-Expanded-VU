@@ -9,12 +9,7 @@ AKK_missions_1 = {
 				was_tag = AKK
 				tag = TRK
 			}
-			AND = {
-				tag = AKK
-				has_country_flag = qirqoyunlu_flag
-			}
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 
@@ -176,7 +171,6 @@ AKK_missions_1 = {
 		}
 	}
 }
-
 AKK_missions_2 = {
 	slot = 2
 	generic = no
@@ -188,12 +182,7 @@ AKK_missions_2 = {
 				was_tag = AKK
 				tag = TRK
 			}
-			AND = {
-				tag = AKK
-				has_country_flag = qirqoyunlu_flag
-			}
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	AKK_conquer_armenia = {
@@ -292,7 +281,6 @@ AKK_missions_2 = {
 		}
 	}
 }
-
 AKK_missions_3 = {
 	slot = 3
 	generic = no
@@ -304,12 +292,7 @@ AKK_missions_3 = {
 				was_tag = AKK
 				tag = TRK
 			}
-			AND = {
-				tag = AKK
-				has_country_flag = qirqoyunlu_flag
-			}
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	
@@ -626,7 +609,6 @@ AKK_missions_3 = {
 		}
 	}
 }
-
 AKK_missions_4 = {
 	slot = 4
 	generic = no
@@ -638,12 +620,7 @@ AKK_missions_4 = {
 				was_tag = AKK
 				tag = TRK
 			}
-			AND = {
-				tag = AKK
-				has_country_flag = qirqoyunlu_flag
-			}
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	AKK_rivalry = {
@@ -692,13 +669,13 @@ AKK_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			kartli_kakheti_area = {
-#				limit = {
-#					NOT = { owned_by = ROOT }
-#					NOT = { is_core = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#kartli_kakheti_area = {
+			#	limit = {
+			#		NOT = { owned_by = ROOT }
+			#		NOT = { is_core = ROOT }
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 		}
 	}
 	AKK_integrate_azerbaijani = {
@@ -719,7 +696,6 @@ AKK_missions_4 = {
 		}
 	}
 }
-
 AKK_missions_5 = {
 	slot = 5
 	generic = no
@@ -731,12 +707,7 @@ AKK_missions_5 = {
 				was_tag = AKK
 				tag = TRK
 			}
-			AND = {
-				tag = AKK
-				has_country_flag = qirqoyunlu_flag
-			}
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 	AKK_end_the_civil_war = {
@@ -792,6 +763,9 @@ AKK_missions_5 = {
 		provinces_to_highlight = {
 			province_id = 330
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				marriage_with = TRE
+			}
 		}
 		trigger = {
 			OR = { 
@@ -820,10 +794,10 @@ AKK_missions_5 = {
 		required_missions = { AKK_samtskhe }
 		position = 5
 		provinces_to_highlight = {
-#			OR = {
+			OR = {
 				area = imereti_area
-#				area = kartli_kakheti_area
-#			}
+				#area = kartli_kakheti_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -831,10 +805,10 @@ AKK_missions_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			kartli_kakheti_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			#kartli_kakheti_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			caucasia_region = {

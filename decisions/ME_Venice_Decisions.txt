@@ -6,8 +6,11 @@ country_decisions = {
 			OR = {
 				tag = VEN
 				AND = {
+					OR = {
+						tag = LVN
+						has_country_flag = lvn_without_fe
+					}
 					was_tag = VEN
-					tag = ITA
 				}
 			}
 		}
@@ -35,7 +38,7 @@ country_decisions = {
 				duration = 3650
 			}
 			country_event = {
-				id = ME_Venice_Events.4
+				id = ME_Venice_Events.8
 			}
 		}
 	}
@@ -47,8 +50,11 @@ country_decisions = {
 			OR = {
 				tag = VEN
 				AND = {
+					OR = {
+						tag = LVN
+						has_country_flag = lvn_without_fe
+					}
 					was_tag = VEN
-					tag = ITA
 				}
 			}
 		}
@@ -72,7 +78,7 @@ country_decisions = {
 				set_country_flag = ven_salt_flag
 			}
 			country_event = {
-				id = ME_Venice_Events.3
+				id = ME_Venice_Events.7
 			}
 			custom_tooltip = VENICE_SALT_CONQUEST
 			hidden_effect = {
@@ -80,8 +86,8 @@ country_decisions = {
 					every_neighbor_province = {
 						limit = {
 							trade_goods = salt
-							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT	}
+							NOT = { is_core = ROOT	}
 						}
 						add_permanent_claim = ROOT
 					}

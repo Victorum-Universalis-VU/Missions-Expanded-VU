@@ -2,60 +2,65 @@
 ## is_ahead_of_time_in_tech = { type = adm }
 ### type supports the following: adm, dip, mil, all, any, none
 is_ahead_of_time_in_tech = {
-	is_ahead_of_time_in_tech_$type$ = yes
-}
-
-# usage:
-## is_ahead_of_time_in_tech_all = yes
-is_ahead_of_time_in_tech_all = {
-	custom_trigger_tooltip = {
-		tooltip = is_ahead_of_time_in_tech_tt_all
-		is_ahead_of_time_in_specific_tech = { type = adm }
-		is_ahead_of_time_in_specific_tech = { type = dip }
-		is_ahead_of_time_in_specific_tech = { type = mil }
-	}
-}
-
-# usage:
-## is_ahead_of_time_in_tech_any = yes
-is_ahead_of_time_in_tech_any = {
-	custom_trigger_tooltip = {
-		tooltip = is_ahead_of_time_in_tech_tt_any
-		OR = {
+	if = {
+		limit = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = type_all
+					value = 0
+				}
+				change_variable = { which = type_$type$ value = 1 }
+				is_variable_equal = { which = type_all value = 1 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = is_ahead_of_time_in_tech_tt_$type$
 			is_ahead_of_time_in_specific_tech = { type = adm }
 			is_ahead_of_time_in_specific_tech = { type = dip }
 			is_ahead_of_time_in_specific_tech = { type = mil }
 		}
 	}
-}
-
-# usage:
-## is_ahead_of_time_in_tech_none = yes
-is_ahead_of_time_in_tech_none = {
-	custom_trigger_tooltip = {
-		tooltip = is_ahead_of_time_in_tech_tt_none
-		NOT = { is_ahead_of_time_in_specific_tech = { type = adm } }
-		NOT = { is_ahead_of_time_in_specific_tech = { type = dip } }
-		NOT = { is_ahead_of_time_in_specific_tech = { type = mil } }
+	else_if = {
+		limit = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = type_any
+					value = 0
+				}
+				change_variable = { which = type_$type$ value = 1 }
+				is_variable_equal = { which = type_any value = 1 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = is_ahead_of_time_in_tech_tt_$type$
+			OR = {
+				is_ahead_of_time_in_specific_tech = { type = adm }
+				is_ahead_of_time_in_specific_tech = { type = dip }
+				is_ahead_of_time_in_specific_tech = { type = mil }
+			}
+		}
 	}
-}
-
-# usage:
-## is_ahead_of_time_in_tech_adm = yes
-is_ahead_of_time_in_tech_adm = {
-	is_ahead_of_time_in_specific_tech = { type = adm }
-}
-
-# usage:
-## is_ahead_of_time_in_tech_dip = yes
-is_ahead_of_time_in_tech_dip = {
-	is_ahead_of_time_in_specific_tech = { type = dip }
-}
-
-# usage:
-## is_ahead_of_time_in_tech_mil = yes
-is_ahead_of_time_in_tech_mil = {
-	is_ahead_of_time_in_specific_tech = { type = mil }
+	else_if = {
+		limit = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = type_none
+					value = 0
+				}
+				change_variable = { which = type_$type$ value = 1 }
+				is_variable_equal = { which = type_none value = 1 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = is_ahead_of_time_in_tech_tt_$type$
+			NOT = { is_ahead_of_time_in_specific_tech = { type = adm } }
+			NOT = { is_ahead_of_time_in_specific_tech = { type = dip } }
+			NOT = { is_ahead_of_time_in_specific_tech = { type = mil } }
+		}
+	}
+	else = {
+		is_ahead_of_time_in_specific_tech = { type = $type$ }
+	}
 }
 
 # usage:
@@ -181,55 +186,6 @@ is_ahead_of_time_in_specific_tech = {
 			AND = {
 				NOT = { is_year = 1835 }
 				$type$_tech = 32
-			}
-		}
-	}
-}
-
-# usage:
-## has_better_tech_than = { who = PREV amount = 1 }
-has_better_tech_than = {
-	$who$ = {
-		custom_trigger_tooltip = {
-			tooltip = HAS_BETTER_TECH_THAN_TT
-			OR = {
-				num_of_cities = $amount$ # for the tooltip
-				always = yes
-			}
-			variable_arithmetic_trigger = {
-				export_to_variable = {
-					which = our_tech_amount
-					value = trigger_value:adm_tech
-					who = PREV
-				}
-				export_to_variable = {
-					which = our_dip_tech_amount
-					value = trigger_value:dip_tech
-					who = PREV
-				}
-				export_to_variable = {
-					which = our_mil_tech_amount
-					value = trigger_value:mil_tech
-					who = PREV
-				}
-				change_variable = { which = our_tech_amount which = our_dip_tech_amount }
-				change_variable = { which = our_tech_amount which = our_mil_tech_amount }
-				export_to_variable = {
-					which = their_tech_amount
-					value = trigger_value:adm_tech
-				}
-				export_to_variable = {
-					which = their_dip_tech_amount
-					value = trigger_value:dip_tech
-				}
-				export_to_variable = {
-					which = their_mil_tech_amount
-					value = trigger_value:mil_tech
-				}
-				change_variable = { which = their_tech_amount which = their_dip_tech_amount }
-				change_variable = { which = their_tech_amount which = their_mil_tech_amount }
-				change_variable = { which = their_tech_amount value = $amount$ }
-				check_variable = { which = our_tech_amount which = their_tech_amount }
 			}
 		}
 	}

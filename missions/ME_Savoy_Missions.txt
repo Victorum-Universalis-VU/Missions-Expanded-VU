@@ -11,9 +11,14 @@ savoy_missions_1 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -25,9 +30,14 @@ savoy_missions_1 = {
 					AND = {
 						was_tag = SPI
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -209,9 +219,14 @@ savoy_missions_2 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -223,9 +238,14 @@ savoy_missions_2 = {
 					AND = {
 						was_tag = SPI
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -304,7 +324,7 @@ savoy_missions_2 = {
 					is_capital_of = ROOT
 					OR = {
 						NOT = { renaissance = 100 }
-						NOT = { num_of_times_improved = 5 }
+						NOT = { num_of_times_improved_by_owner = 5 }
 					}
 				}
 				AND = {
@@ -326,7 +346,7 @@ savoy_missions_2 = {
 		trigger = {
 			total_development = 100
 			capital_scope = {
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				renaissance = 100
 			}
 			if = {
@@ -533,9 +553,14 @@ savoy_missions_3 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -547,9 +572,14 @@ savoy_missions_3 = {
 					AND = {
 						was_tag = SPI
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -584,7 +614,9 @@ savoy_missions_3 = {
 						NOT = { is_part_of_hre = yes }
 					}
 					AND = {
-						FRA = { has_been_insulted_by_root = yes }
+						FRA = {
+							has_been_insulted_by_root = yes
+						}
 						army_size_percentage = 0.9
 						OR = {
 							is_emperor = yes
@@ -806,9 +838,14 @@ savoy_missions_4 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -820,9 +857,14 @@ savoy_missions_4 = {
 					AND = {
 						was_tag = SPI
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -1036,9 +1078,14 @@ savoy_missions_5 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -1050,9 +1097,14 @@ savoy_missions_5 = {
 					AND = {
 						was_tag = SPI
 						tag = ITA
-						NOT = { was_tag = TTS }
-						NOT = { was_tag = TUS }
-						country_was_not_more_than_one_italian_formable = yes
+						NOT = {
+							calc_true_if = {
+								amount = 2
+								was_tag = TUS
+								was_tag = TTS
+								was_tag = SPI
+							}
+						}
 					}
 				}
 			}
@@ -1142,7 +1194,7 @@ savoy_missions_5 = {
 		}
 		effect = {
 			4720 = {
-				add_or_upgrade_tax_building = yes
+				#add_or_upgrade_tax_building = yes
 				add_province_modifier = {
 					name = sav_religious_castle
 					duration = 3650
@@ -1196,7 +1248,7 @@ savoy_missions_5 = {
 			province_id = 103
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved = 5 }
+				NOT = { num_of_times_improved_by_owner = 5 }
 				NOT = { has_building = university }
 				devastation = 1
 			}
@@ -1204,7 +1256,7 @@ savoy_missions_5 = {
 		trigger = {
 			103 = {
 				owned_by = ROOT
-				num_of_times_improved = 5
+				num_of_times_improved_by_owner = 5
 				has_building = university
 				NOT = { devastation = 1 }
 			}

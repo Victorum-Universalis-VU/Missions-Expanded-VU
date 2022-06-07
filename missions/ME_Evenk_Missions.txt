@@ -156,7 +156,7 @@ evenk_missions_3 = {
 		position = 1
 		provinces_to_highlight = {
 			is_capital_of = ROOT
-			NOT = { num_of_times_improved = 1 }
+			NOT = { num_of_times_improved_by_owner = 1 }
 		}
 		trigger = {
 			if = {
@@ -164,14 +164,14 @@ evenk_missions_3 = {
 				OR = {
 					army_size_percentage = 1.0
 					capital_scope = {
-						num_of_times_improved = 1
+						num_of_times_improved_by_owner = 1
 					}
 				}
 			}
 			else = {
 				army_size_percentage = 1.0
 				capital_scope = {
-					num_of_times_improved = 1
+					num_of_times_improved_by_owner = 1
 				}
 			}
 		}
@@ -319,7 +319,7 @@ evenk_missions_4 = {
 			OR = {
 				has_reform = martial_society_reform
 				has_reform = civil_society_reform
-				has_reform = snow_life_reform
+				#has_reform = snow_life_reform #Cut ?
 				has_reform = three_jurchen_tribes_reform
 			}
 		}
@@ -347,7 +347,6 @@ evenk_missions_4 = {
 		}
 		effect = {
 			custom_tooltip = evenk_expand_federation.TT
-			set_country_flag = siberian_colonisation_flag
 			hidden_effect = {
 				country_event = {
 					id = ME_Evenk_Events.4

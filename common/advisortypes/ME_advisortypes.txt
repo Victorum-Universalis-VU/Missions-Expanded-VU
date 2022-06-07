@@ -118,7 +118,7 @@ muscovy_architect = {
 	}
 }
 
-me_reformist = {
+reformist = {
 	monarch_power = ADM
 
 	# Bonus
@@ -142,7 +142,7 @@ me_reformist = {
 	}
 }
 
-me_lyricist = {
+lyricist = {
 	monarch_power = ADM
 
 	# Bonus
@@ -214,18 +214,4 @@ bendahara = {
 	ai_will_do = {
 		factor = 1
 	}
-}
-
-#France mission advisor Jean Baptiste Colbert
-jean_baptiste = {
-	monarch_power = DIP
-
-	# Bonus
-	mercantilism_cost = -0.2
-
-	allow_only_male = yes
-
-	chance = { factor = 0 }
-
-	ai_will_do = { factor = 0 }
 }

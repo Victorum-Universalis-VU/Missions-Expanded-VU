@@ -2427,7 +2427,7 @@ GBR_missions_3_5 = {
     }
 }
 
-GBR_missions_3_6 = {
+GBR_missions_3_5 = {
 	slot = 3
 	generic = no
 	ai = yes

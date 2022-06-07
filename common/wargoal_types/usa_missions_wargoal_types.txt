@@ -1,24 +1,17 @@
 usa_defense_of_the_americas_wargoal = {
 	type = superiority
 
-	attacker = {
-		badboy_factor = 1
-		prestige_factor = 1.5
-		peace_cost_factor = 0.5
+	badboy_factor = 1
+	prestige_factor = 1.5
+	peace_cost_factor = 0.5
 
-		peace_options = {
-			po_release_vassals
-		}
+	allowed_provinces = {
+		always = no
 	}
+	allowed_provinces_are_eligible = yes
 
-	defender = {
-		badboy_factor = 1
-		prestige_factor = 1.5
-		peace_cost_factor = 0.5
-
-		peace_options = {
-			po_release_vassals
-		}
+	peace_options = {
+		po_release_vassals
 	}
 
 	war_name = USA_DEFENSE_OF_AMERICA_WAR_NAME

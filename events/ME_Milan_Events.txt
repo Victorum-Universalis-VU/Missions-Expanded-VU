@@ -5,9 +5,7 @@ country_event = {
 	title = ME_Milan_Events.1.T
 	desc = ME_Milan_Events.1.D
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = ME_Milan_Events.1.OPT1
 
@@ -16,7 +14,6 @@ country_event = {
 				alliance_with = FRA
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -34,7 +31,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT2
 
@@ -43,7 +39,6 @@ country_event = {
 				alliance_with = ENG
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -61,7 +56,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT3
 
@@ -70,7 +64,6 @@ country_event = {
 				alliance_with = GBR
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -88,7 +81,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT4
 
@@ -97,7 +89,6 @@ country_event = {
 				alliance_with = DAN
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -115,7 +106,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT5
 
@@ -124,7 +114,6 @@ country_event = {
 				alliance_with = POL
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -142,7 +131,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT6
 
@@ -151,7 +139,6 @@ country_event = {
 				alliance_with = LIT
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -169,7 +156,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT7
 
@@ -178,7 +164,6 @@ country_event = {
 				alliance_with = PLC
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -196,7 +181,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT8
 
@@ -205,7 +189,6 @@ country_event = {
 				alliance_with = ARA
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -223,7 +206,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT9
 
@@ -232,7 +214,6 @@ country_event = {
 				alliance_with = CAS
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -250,7 +231,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT10
 
@@ -259,7 +239,6 @@ country_event = {
 				alliance_with = SPA
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -277,7 +256,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT11
 
@@ -286,7 +264,6 @@ country_event = {
 				alliance_with = HAB
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -304,7 +281,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = ME_Milan_Events.1.OPT12
 
@@ -313,7 +289,6 @@ country_event = {
 				alliance_with = TUR
 			}
 		}
-
 		ai_chance = {
 			factor = 8
 		}
@@ -431,7 +406,10 @@ country_event = {
 		trigger = {
 			hidden_trigger = {
 				NOT = { government = republic }
-				NOT = { tag = ITA }
+				OR = {
+					NOT = { tag = LVN }
+					NOT = { tag = ITA }
+				}
 			}
 		}
 
@@ -585,6 +563,7 @@ country_event = {
 			adm = 3
 			dip = 3
 			mil = 3
+			fixed = yes
 		}
 	}
 

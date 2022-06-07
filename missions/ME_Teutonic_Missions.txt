@@ -25,12 +25,10 @@ TEU_Missions_1 = {
 				}
 				owned_by = POL
 				NOT = {
-					ROOT = {
-						has_won_war_against = {
-							who = POL
-						}
-						prestige = POL
+					has_won_war_against = {
+						who = POL
 					}
+					prestige = POL
 				}
 			}
 			else_if = {
@@ -39,12 +37,10 @@ TEU_Missions_1 = {
 				}
 				owned_by = PLC
 				NOT = {
-					ROOT = {
-						has_won_war_against = {
-							who = PLC
-						}
-						prestige = PLC
+					has_won_war_against = {
+						who = PLC
 					}
+					prestige = PLC
 				}
 			}
 			else = {
@@ -636,7 +632,14 @@ TEU_Missions_3 = {
 							who = root
 							value = 100
 						}
-						has_been_insulted_by_root = yes
+						has_opinion_modifier = {
+							who = root
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = root
+							modifier = scornfully_insulted
+						}
 					}
 				}
 			}

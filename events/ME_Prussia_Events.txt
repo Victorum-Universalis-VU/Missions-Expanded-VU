@@ -433,7 +433,10 @@ country_event = {
 	major_trigger = {
 		dynasty = "von Hohenzollern"
 		capital_scope = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+#				area = upper_franconia_area
+			}
 		}
 	}
 		
@@ -447,7 +450,10 @@ country_event = {
 			limit = {
 				dynasty = "von Hohenzollern"
 				capital_scope = {
+					OR = {
 						area = franconia_area
+#						area = upper_franconia_area
+					}
 				}
 			}
 			ROOT = {
@@ -944,9 +950,6 @@ country_event = {
 				if = {
 					limit = {
 						exists = HAB
-						HAB = {
-							is_subject = no 
-						}
 					}
 					if = {
 						limit = {
@@ -960,11 +963,6 @@ country_event = {
 					else_if = {
 						limit = {
 							emperor = { total_development = HAB }
-							emperor = {
-								NOT = {
-									tag = ROOT
-								}
-							}
 						}
 						emperor = {
 							save_global_event_target_as = ME_PRU_EMPEROR_TARGET
@@ -988,9 +986,6 @@ country_event = {
 			else_if = {
 				limit = {
 					exists = HAB
-					HAB = {
-						is_subject = no 
-					}
 				}
 				HAB = {
 					save_global_event_target_as = ME_PRU_EMPEROR_TARGET

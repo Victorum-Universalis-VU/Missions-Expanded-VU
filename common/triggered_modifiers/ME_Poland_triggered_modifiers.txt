@@ -18,6 +18,9 @@ prussia_noble_cooperation_triggered_modifier = {
 	}
 	trigger = {
 		overlord_of = PRU
+		PRU = {
+			is_march = yes
+		}
 	}
 	
 	army_tradition = 0.5
@@ -31,6 +34,9 @@ POL_kurland_subject_triggered_modifier = {
 	}
 	trigger = {
 		overlord_of = KUR
+		KUR= {
+			is_march = yes
+		}
 	}
 	
 	trade_efficiency = 0.1

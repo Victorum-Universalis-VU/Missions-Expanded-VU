@@ -9,7 +9,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -110,7 +109,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		is_year = 1447
 		OR = {
 			tag = NAP
@@ -181,7 +179,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			AND = {
 				OR = {
@@ -301,7 +298,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -353,7 +349,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		is_year = 1484
 		owns_core_province = 121
 		121 = {
@@ -393,7 +388,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -413,9 +407,7 @@ country_event = {
 			factor = 50
 		}
 		trigger = {
-			always = no
 			hidden_trigger = {
-				always = no
 				has_consort = yes
 			}
 		}
@@ -459,7 +451,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -486,7 +477,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -538,7 +528,7 @@ country_event = {
 					size = 1
 					type = noble_rebels
 				}
-			}
+			}	
 			random_owned_province = {
 				limit = {
 					area = calabria_area
@@ -570,7 +560,7 @@ country_event = {
 					size = 2
 					type = noble_rebels
 				}
-			}
+			}	
 			random_owned_province = {
 				limit = {
 					area = calabria_area
@@ -602,7 +592,7 @@ country_event = {
 					size = 2
 					type = noble_rebels
 				}
-			}
+			}	
 			random_owned_province = {
 				limit = {
 					area = calabria_area
@@ -634,7 +624,7 @@ country_event = {
 					size = 3
 					type = noble_rebels
 				}
-			}
+			}	
 			random_owned_province = {
 				limit = {
 					area = calabria_area
@@ -654,7 +644,7 @@ country_event = {
 					size = 3
 					type = noble_rebels
 				}
-			}
+			}	
 			random_owned_province = {
 				limit = {
 					area = calabria_area
@@ -677,7 +667,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -743,7 +732,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -797,7 +785,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -841,7 +828,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -883,7 +869,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -1094,7 +1079,7 @@ country_event = {
 						size = 1
 						type = noble_rebels
 					}
-				}
+				}	
 				random_owned_province = {
 					limit = {
 						OR = {
@@ -1134,7 +1119,7 @@ country_event = {
 						size = 2
 						type = noble_rebels
 					}
-				}
+				}	
 				random_owned_province = {
 					limit = {
 						OR = {
@@ -1174,7 +1159,7 @@ country_event = {
 						size = 2
 						type = noble_rebels
 					}
-				}
+				}	
 				random_owned_province = {
 					limit = {
 						OR = {
@@ -1214,7 +1199,7 @@ country_event = {
 						size = 3
 						type = noble_rebels
 					}
-				}
+				}	
 				random_owned_province = {
 					limit = {
 						OR = {
@@ -1242,7 +1227,7 @@ country_event = {
 						size = 3
 						type = noble_rebels
 					}
-				}
+				}	
 				random_owned_province = {
 					limit = {
 						OR = {
@@ -1270,7 +1255,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -1310,7 +1294,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		OR = {
 			tag = NAP
 			tag = TTS
@@ -1421,7 +1404,6 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
 		is_year = 1492
 		OR = {
 			tag = NAP

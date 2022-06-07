@@ -183,10 +183,7 @@ mnd_khmer_2 = {
 				absolutism = 50
 			}
 			total_own_and_non_tributary_subject_development = 600
-			OR = {
-				num_of_times_used_transfer_development = 2
-				capital_scope = { num_of_times_improved = 5 }
-			}
+			num_of_times_used_transfer_development = 3
 		}
 		effect = {
 			set_country_flag = siam_royal_absolutism
@@ -343,19 +340,13 @@ mnd_khmer_3 = {
 				limit = {
 					any_country = {
 						is_free_or_tributary_trigger = yes
-						OR = {
-							primary_culture = vietnamese
-							primary_culture = vietnamese_new
-						}
+						primary_culture = vietnamese
 					}
 				}
 				every_country = {
 					limit = {
 						is_free_or_tributary_trigger = yes
-						OR = {
-							primary_culture = vietnamese
-							primary_culture = vietnamese_new
-						}
+						primary_culture = vietnamese
 					}
 					reverse_add_casus_belli = {
 						target = ROOT

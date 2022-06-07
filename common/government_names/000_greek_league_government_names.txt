@@ -41,6 +41,8 @@ greek_league_name = {
 		3 = HEIR_fem
 	}
 	
+	government_reform = greek_league_reform
+	
 	trigger = {
 		has_reform = greek_league_reform
 	}

@@ -8,7 +8,6 @@ country_decisions = {
 				NOT = { exists = DAG }
 			}
 			primary_culture = dagestani
-			NOT = { has_country_flag = formed_dagestan }
 		}
 		provinces_to_highlight = {
 			area = dagestan_area
@@ -26,10 +25,9 @@ country_decisions = {
 			}
 		}
 		effect = {
-			set_country_flag = formed_dagestan
-			override_country_name = DAG
+			change_tag = DAG
 			swap_non_generic_missions = yes
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 9125

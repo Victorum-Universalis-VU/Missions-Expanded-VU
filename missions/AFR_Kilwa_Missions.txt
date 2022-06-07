@@ -60,7 +60,7 @@ kilwa_cape_missions_slot = {
 	#Conquer Mutapa
 	zan_mutapan_gold = {
 		icon = mission_african_gold
-		required_missions = { 
+		required_missions = {
 			zan_annex_sofala
 		}
 		position = 2
@@ -95,10 +95,7 @@ kilwa_cape_missions_slot = {
 	#Discover the Cape
 	zan_discover_the_cape = {
 		icon = mission_sw_against_the_desert
-		required_missions = { 
-			zan_mutapan_gold
-			zan_build_workshops
-		}
+		required_missions = { zan_mutapan_gold }
 		position = 3
 		provinces_to_highlight = {
 			province_id = 1177
@@ -950,7 +947,7 @@ kilwa_colonization_missions_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-				palembang_area = {
+				jambi_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -972,6 +969,20 @@ kilwa_colonization_missions_slot = {
 					add_permanent_claim = ROOT
 				}
 				east_java_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				banten_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				surabaya_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }

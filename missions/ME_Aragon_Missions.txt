@@ -950,10 +950,10 @@ ARA_missions_3 = {
 		required_missions = { ara_kabylia }
 		position = 6
 		provinces_to_highlight = {
-#			OR = {
+			OR = {
 				area = barbary_coast_area
-#				area = algiers_area
-#			}
+				#area = algiers_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -961,10 +961,10 @@ ARA_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			algiers_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			#algiers_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 		}
 		effect = {
 			barbary_coast_area = {
@@ -977,16 +977,16 @@ ARA_missions_3 = {
 					duration = 7300
 				}
 			}
-#			algiers_area = {
-#				add_province_modifier = {
-#					name = ara_new_administration
-#					duration = 1825
-#				}
-#				add_province_modifier = {
-#					name = ara_convert
-#					duration = 7300
-#				}
-#			}
+			#algiers_area = {
+			#	add_province_modifier = {
+			#		name = ara_new_administration
+			#		duration = 1825
+			#	}
+			#	add_province_modifier = {
+			#		name = ara_convert
+			#		duration = 7300
+			#	}
+			#}
 			north_saharan_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}

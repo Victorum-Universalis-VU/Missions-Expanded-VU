@@ -39,7 +39,7 @@
  Muscovy_Ryazan_title: "Ryazan"
  Muscovy_Ryazan_desc: "The lands of ryazanian principality are russian by heart, they belong to mother Russia."
  Muscovy_Ruthenia_title: "Liberate Ruthenia"
- Muscovy_Ruthenia_desc: "The Polish Commonwealth is both weak and unfit to rule the proud Ruthenian and Byelorussian peoples and other countries have also come to this realization. It is high time we act before the region is partitioned among our rivals.
+ Muscovy_Ruthenia_desc: "The Polish Commonwealth is both weak and unfit to rule the proud Ruthenian and Byelorussian peoples and other countries have also come to this realization. It is high time we act before the region is partitioned among our rivals."
  Muscovy_Crimea_title: "The Crimean Horde"
  Muscovy_Crimea_desc: "The tatars in Crimea have terrorized the ruthenians for too long, its time to put them out of their misery."
  Muscovy_Bashkir_Or_War_title: "Bashkiria Or War"
@@ -192,7 +192,7 @@
  muscovy_retrieve_codex_desc: "Ryazan, although a Rurikovich domain, lies in an complicated position. They act as a buffer state between us and our former masters. We should not forget that they hold the Hypatian Codex: A book containing much of our history. We may have no choice but to subjugate them peacefully."
  muscovy_dynasty_rule_title: "One Dynasty to Rule Them"
  muscovy_dynasty_rule_desc: "Now that our nation is united with the Rurikovich domains and our main rival exiled to the pages of history, it is time to look beyond our borders. We have been ruled by countless foreign khans or kings, but history shall be reversed from now on."
- muscovy_dynasty_rule_tta: "No other country:\n		l is in the §YRussia§! region\n		Have		 large than §Y[Root.GetName]§!"
+ muscovy_dynasty_rule_tta: "No other country:\n        Capital is in the §YRussia§! region\n        Have an army large than §Y[Root.GetName]§!"
  muscovy_city_artillery_title: "The City of Artillery"
  muscovy_city_artillery_desc: "Smolensk has been controlled by the Kings of Lithuania for decades. It is our duty to liberate our slavic brethren in the city. Smolensk also hosts one of the best artillery workshops across Europe. We shall use their cannons against them and blow our enemies to smithereens."
  muscovy_incorporate_rurikovich_title: "Incorporate the Rurikovich"

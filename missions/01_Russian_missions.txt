@@ -34,13 +34,13 @@ consolidate_expand_russia_missions = {
 			}
 		}
 		effect = {
-#			russia_region = {
-#				limit = {
-#					NOT = { is_permanent_claim = ROOT }
-#					NOT = { is_core = ROOT	}
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			russia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			ural_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -55,6 +55,7 @@ consolidate_expand_russia_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			
 		}
 	}
 	subjugate_novgorod = {
@@ -63,19 +64,18 @@ consolidate_expand_russia_missions = {
 		completed_by = 1478.1.15
 		provinces_to_highlight = {
 			OR = {
-#				region = russia_region
+				region = russia_region
 				region = ural_region
-				region = scandinavia_region
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-#			russia_region = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			russia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			ural_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -85,6 +85,7 @@ consolidate_expand_russia_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+		
 		effect = {
 			russia_region = {
 				limit = {
@@ -94,6 +95,21 @@ consolidate_expand_russia_missions = {
 				add_permanent_claim = ROOT
 			}
 			310 = {
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+			}
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			random_owned_province = {
+				limit = {
+					owned_by = ROOT
+					is_core = ROOT
+					culture = ROOT
+				}
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
@@ -353,13 +369,13 @@ russia_steppe_siberia_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			volga_area = {
-#				limit = {
-#					NOT = { is_permanent_claim = ROOT }
-#					NOT = { is_core = ROOT	}
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			#volga_area = {
+			#	limit = {
+			#		NOT = { is_permanent_claim = ROOT }
+			#		NOT = { is_core = ROOT	}
+			#	}
+			#	add_permanent_claim = ROOT
+			#}
 			kama_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -385,7 +401,7 @@ russia_steppe_siberia_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = kazan_area
-#				area = volga_area
+				#area = volga_area
 				area = kama_area
 				area = samara_area
 			}
@@ -398,10 +414,10 @@ russia_steppe_siberia_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			volga_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
+			#volga_area = {
+			#	type = all
+			#	country_or_non_sovereign_subject_holds = ROOT
+			#}
 			kama_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -419,13 +435,13 @@ russia_steppe_siberia_missions = {
 					duration = 5475
 				}
 			}
-#			volga_area = {
-#				limit = { owned_by = ROOT }
-#				add_province_modifier = {
-#					name = "convert_the_steppes"
-#					duration = 5475
-#				}
-#			}
+			#volga_area = {
+			#	limit = { owned_by = ROOT }
+			#	add_province_modifier = {
+			#		name = "convert_the_steppes"
+			#		duration = 5475
+			#	}
+			#}
 			kama_area = {
 				limit = { owned_by = ROOT }
 				add_province_modifier = {

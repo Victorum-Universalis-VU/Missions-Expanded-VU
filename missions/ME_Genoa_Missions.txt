@@ -11,6 +11,7 @@ genoa_missions_1 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
+#				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -31,7 +32,14 @@ genoa_missions_1 = {
 				}
 				BYZ = {
 					OR = {
-						has_been_insulted_by_root = yes
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
 						alliance_with = ROOT
 						is_rival = ROOT
 						is_enemy = ROOT
@@ -583,6 +591,7 @@ genoa_missions_2 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
+#				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1428,6 +1437,7 @@ genoa_missions_3 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
+				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -1901,111 +1911,108 @@ genoa_missions_3 = {
 		}
 		position = 7
 		trigger = {
-			358 = {
-				is_strongest_trade_power = ROOT
-				custom_trigger_tooltip = {
-					tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
-					NOT = {
-						any_country = {
-							NOT = { tag = ROOT }
-							PREV = {
-								trade_share = {
-									share = 10
-									country = PREV 
-								}
-							}
-							navy_size = ROOT
-						}
-					}
-				}
-			}
-			341 = {
-				is_strongest_trade_power = ROOT
-				custom_trigger_tooltip = {
-					tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
-					NOT = {
-						any_country = {
-							NOT = { tag = ROOT }
-							PREV = {
-								trade_share = {
-									share = 10
-									country = PREV 
-								}
-							}
-							navy_size = ROOT
-						}
-					}
-				}
-			}
-			1298 = {
-				is_strongest_trade_power = ROOT
-				custom_trigger_tooltip = {
-					tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
-					NOT = {
-						any_country = {
-							NOT = { tag = ROOT }
-							PREV = {
-								trade_share = {
-									share = 10
-									country = PREV 
-								}
-							}
-							navy_size = ROOT
-						}
-					}
-				}
-			}
-			1293 = {
-				is_strongest_trade_power = ROOT
-				custom_trigger_tooltip = {
-					tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
-					NOT = {
-						any_country = {
-							NOT = { tag = ROOT }
-							PREV = {
-								trade_share = {
-									share = 10
-									country = PREV 
-								}
-							}
-							navy_size = ROOT
-						}
-					}
-				}
-			}
-			OR = {
-				1308 = {
+			custom_trigger_tooltip = {
+				tooltip = GEN_MARE_NOSTRUM_TT
+				358 = {
 					is_strongest_trade_power = ROOT
-					custom_trigger_tooltip = {
-						tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
+					NOT = {
+						any_country = {
+							358 = {
+								trade_share = {
+									share = 10
+									country = PREV
+								}
+							}
+							naval_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+				}
+				341 = {
+					is_strongest_trade_power = ROOT
+					NOT = {
+						any_country = {
+							341 = {
+								trade_share = {
+									share = 10
+									country = PREV
+								}
+							}
+							naval_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+				}
+				1298 = {
+					is_strongest_trade_power = ROOT
+					NOT = {
+						any_country = {
+							1298 = {
+								trade_share = {
+									share = 10
+									country = PREV
+								}
+							}
+							naval_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+				}
+				1293 = {
+					is_strongest_trade_power = ROOT
+					NOT = {
+						any_country = {
+							1293 = {
+								trade_share = {
+									share = 10
+									country = PREV
+								}
+							}
+							naval_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+				}
+				OR = {
+					1308 = {
+						is_strongest_trade_power = ROOT
 						NOT = {
 							any_country = {
-								NOT = { tag = ROOT }
-								PREV = {
+								1308 = {
 									trade_share = {
 										share = 10
-										country = PREV 
+										country = PREV
 									}
 								}
-								navy_size = ROOT
+								naval_strength = {
+									who = ROOT
+									value = 0.5
+								}
 							}
 						}
 					}
-				}
-				1320 = {
-					is_strongest_trade_power = ROOT
-					custom_trigger_tooltip = {
-						tooltip = ME_5_TRADE_SHARE_NAVY_ROOT
+					1320 = {
+						is_strongest_trade_power = ROOT
 						NOT = {
 							any_country = {
-								NOT = { tag = ROOT }
-								PREV = {
+								1320 = {
 									trade_share = {
 										share = 10
-										country = PREV 
+										country = PREV
 									}
 								}
-								navy_size = ROOT
+								naval_strength = {
+									who = ROOT
+									value = 0.5
+								}
 							}
 						}
 					}
@@ -2086,25 +2093,20 @@ genoa_missions_3 = {
 		position = 13
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = ITALY_CONQUEST_ROME_TT
+				tooltip = LVN_CONQUEST_OF_ROME_TRIGGER_TT #TODO - MAKE A UNITED ONE
 				NOT = {
 					any_country = {
 						culture_group = latin
 						capital_scope = {
 							region = italy_region
 						}
-						army_size = 1
-						total_development = ROOT
+						army_size = ROOT
 					}
 				}
 			}
 		}
 		effect = {
 			118 = { add_core = ROOT }
-			capital_scope = {
-				add_development_scaled_on_monthly_monarch_power = yes
-			}
-			add_mana_scaled_on_monthly_monarch_power = yes
 			complete_conquest_of_rome_missions = yes
 		}
 	}
@@ -2123,6 +2125,7 @@ genoa_missions_4 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
+#				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -2292,11 +2295,9 @@ genoa_missions_4 = {
 			}
 		}
 		effect = {
-			354 = {
-				add_province_modifier = {
-					name = gen_genoese_fortress
-					duration = 9125
-				}
+			add_country_modifier = {
+				name = gen_genoese_fortress
+				duration = 9125
 			}
 		}
 	}
@@ -2481,6 +2482,7 @@ genoa_missions_5 = {
 				NOT = { was_tag = SPI }
 				NOT = { was_tag = TUS }
 				NOT = { was_tag = TTS }
+#				NOT = { was_tag = LML }
 			}
 		}
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox

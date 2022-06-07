@@ -3,17 +3,17 @@
 	generic = yes
 	ai = yes
 	potential = {
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = ANS
-			tag = BAM
-			tag = BYT
-			tag = COB
+			tag = WBG
 			tag = NUM
 			tag = ROT
-			tag = WBG
+			tag = BYT
+			tag = BAM
+			tag = COB
+			tag = ANS
 			tag = FKN
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	} 
 	has_country_shield  = yes
 	
@@ -106,19 +106,12 @@
 		icon = switzerland_and_the_empire
 		required_missions = { FKN_strength_in_unity }
 		position = 5
-		provinces_to_highlight = {
-			owned_by = emperor
-		}
 		trigger = {
-			OR = {
-				emperor = {
-					has_opinion = {
-						who = ROOT
-						value = 125
-					}
+			emperor = {
+				has_opinion = {
+					who = ROOT
+					value = 125
 				}
-				is_emperor = yes
-				NOT = { hre_size = 1 }
 			}
 		}
 		effect = {
@@ -154,17 +147,17 @@ FKN_Gen_Missions_3 = {
 	generic = yes
 	ai = yes
 	potential = {
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = ANS
-			tag = BAM
-			tag = BYT
-			tag = COB
+			tag = WBG
 			tag = NUM
 			tag = ROT
-			tag = WBG
+			tag = BYT
+			tag = BAM
+			tag = COB
+			tag = ANS
 			tag = FKN
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	} 
 	has_country_shield = yes
 	
@@ -255,7 +248,7 @@ FKN_Gen_Missions_3 = {
 		required_missions = { FKN_conquer_wurzburg FKN_conquer_nuremburg FKN_conquer_ansbach }
 		position = 3
 		provinces_to_highlight = {
-				area = franconia_area
+			area = franconia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -382,17 +375,17 @@ FKN_Gen_Missions_4 = {
 	generic = yes
 	ai = yes
 	potential = {
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = ANS
-			tag = BAM
-			tag = BYT
-			tag = COB
+			tag = WBG
 			tag = NUM
 			tag = ROT
-			tag = WBG
+			tag = BYT
+			tag = BAM
+			tag = COB
+			tag = ANS
 			tag = FKN
 		}
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	} 
 	has_country_shield = yes
 	
@@ -511,8 +504,8 @@ FKN_Missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		tag = FKN
 	} 
 	has_country_shield  = yes
 	
@@ -620,7 +613,7 @@ FKN_Missions_1 = {
 				if = {
 					limit = {
 						num_of_owned_provinces_with = {
-							num_of_times_improved = 5
+							num_of_times_improved_by_owner = 5
 							value = 5
 						}
 					}
@@ -629,7 +622,7 @@ FKN_Missions_1 = {
 				else = {
 					every_owned_province = {
 						limit = {
-							num_of_times_improved = 5
+							num_of_times_improved_by_owner = 5
 						}
 						ROOT = { add_years_of_income = 0.2 }
 					}
@@ -755,8 +748,8 @@ FKN_Missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		tag = FKN
 	} 
 	has_country_shield  = yes
 	
@@ -873,18 +866,37 @@ FKN_Missions_2 = {
 		position = 9
 		provinces_to_highlight = {
 			owned_by = ROOT
-			OR = {
-				trade_goods = beer
-				trade_goods = wine
-			}
-		}
-		trigger = {
-			development_in_provinces = {	
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
 				OR = {
 					trade_goods = beer
 					trade_goods = wine
 				}
-				value = 75
+			}
+			else = {
+				trade_goods = wine
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				development_in_provinces = {	
+					OR = {
+						trade_goods = beer
+						trade_goods = wine
+					}
+					value = 75
+				}
+			}
+			else = {
+				development_in_provinces = {	
+					trade_goods = wine
+					value = 75
+				}
 			}
 		}
 		effect = {
@@ -1054,8 +1066,8 @@ FKN_Missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		tag = FKN
 	} 
 	has_country_shield  = yes
 	
@@ -1341,8 +1353,8 @@ FKN_Missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		tag = FKN
 	} 
 	has_country_shield  = yes
 	
@@ -1385,7 +1397,7 @@ FKN_Missions_4 = {
 					key = FKN_influence_in_saxony
 				}
 			}
-			saxony_area = { # Find something to put in there instead
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1625,8 +1637,8 @@ FKN_Missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = FKN
 		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		tag = FKN
 	} 
 	has_country_shield  = yes
 	

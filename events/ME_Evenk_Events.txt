@@ -177,7 +177,10 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
-		has_country_flag = siberian_colonisation_flag
+		OR = {
+			mission_completed = evenk_expand_federation
+			mission_completed = kamchatka_assimilate_tribes
+		}
 		#num of active possible siberian frontiers is
 		#equal to 1 for every 100 dev over 100, up to 4
 		#i.e.
@@ -242,7 +245,10 @@ country_event = {
 					any_neighbor_province = {
 						owner = {
 							tag = ROOT
-							has_country_flag = siberian_colonisation_flag
+							OR = {
+								mission_completed = evenk_expand_federation
+								mission_completed = kamchatka_assimilate_tribes
+							}
 						}
 					}
 				}
@@ -252,7 +258,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 2
+		years = 1
 	}
 	
 	option = { #begin reaching out ot the tribes
@@ -322,7 +328,10 @@ province_event = {
 		}
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 		}
 	}
 	
@@ -348,7 +357,10 @@ province_event = {
 		province_id = 1042
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = yakut }
 		}
 		NOT = { culture = yakut }
@@ -400,7 +412,10 @@ province_event = {
 		province_id = 1042
 		culture = yakut
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 		}
 	}
 	
@@ -448,7 +463,10 @@ province_event = {
 			any_owned_province = {
 				culture = yakut
 			}
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 		}
 	}
 	
@@ -502,7 +520,10 @@ province_event = {
 		province_id = 1057
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = buryat }
 		}
 		NOT = { culture = buryat }
@@ -549,7 +570,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_country_flag = siberian_colonisation_flag
+		OR = {
+			mission_completed = evenk_expand_federation
+			mission_completed = kamchatka_assimilate_tribes
+		}
 		any_owned_province = {
 			culture = buryat
 		}
@@ -588,7 +612,10 @@ province_event = {
 		}
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = tungus }
 		}
 		NOT = {
@@ -627,7 +654,10 @@ province_event = {
 		area = kolyma_area
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = yukagyr }
 			NOT = {
 				any_owned_province = {
@@ -670,7 +700,10 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
-		has_country_flag = siberian_colonisation_flag
+		OR = {
+			mission_completed = evenk_expand_federation
+			mission_completed = kamchatka_assimilate_tribes
+		}
 		any_owned_province = {
 			culture = yukagyr
 		}
@@ -713,7 +746,10 @@ province_event = {
 		area = kamchatka_area
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = kamchatkan }
 		}
 		NOT = { culture = kamchatkan }
@@ -752,7 +788,10 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
-		has_country_flag = siberian_colonisation_flag
+		OR = {
+			mission_completed = evenk_expand_federation
+			mission_completed = kamchatka_assimilate_tribes
+		}
 		any_owned_province = {
 			culture = kamchatkan
 		}
@@ -806,7 +845,10 @@ province_event = {
 		}
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 			NOT = { primary_culture = ainu }
 		}
 		NOT = { culture = ainu }
@@ -847,7 +889,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_country_flag = siberian_colonisation_flag
+		OR = {
+			mission_completed = evenk_expand_federation
+			mission_completed = kamchatka_assimilate_tribes
+		}
 		any_owned_province = {
 			culture = ainu
 		}
@@ -891,7 +936,10 @@ province_event = {
 		}
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 		}
 	}
 	
@@ -920,7 +968,10 @@ province_event = {
 		}
 		is_colony = yes
 		owner = {
-			has_country_flag = siberian_colonisation_flag
+			OR = {
+				mission_completed = evenk_expand_federation
+				mission_completed = kamchatka_assimilate_tribes
+			}
 		}
 	}
 	
