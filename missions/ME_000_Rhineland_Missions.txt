@@ -3,25 +3,40 @@ generic_rhenish_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = MAI
-			tag = TRI
-			tag = FRN
-			tag = HES
-			tag = NSA
-			tag = PAL
-			tag = KLE
-			tag = BRG
-			tag = RHN
 			AND = {
-				tag = KOL
-				has_country_flag = Cologne_Rheinland
+				OR = {
+					tag = MAI
+					tag = TRI
+					tag = PAL
+					AND = {
+						tag = KOL
+						has_country_flag = Cologne_Rheinland
+					}
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
+			AND = {
+				OR = {
+					tag = HES
+					tag = BRG
+					tag = NSA
+					tag = KLE
+					tag = FRN
+				}
+				OR = {
+					AND = {
+						NOT = { primary_culture = hannoverian }
+						NOT = { primary_culture = hessian }
+					}
+					has_country_flag = use_missions_expanded_missions_instead_of_paradox
+				}
+			}
+			tag = RHN
 		}
 	}
 	has_country_shield = no
-	
+
 	rhn_generic_fc = {
 		icon = mission_build_up_to_force_limit
 		required_missions = {  }
@@ -56,7 +71,7 @@ generic_rhenish_missions_2 = {
 			}
 		}
 	}
-	
+
 	rhn_generic_expand = {
 		icon = mission_cannons_firing
 		required_missions = { rhn_generic_fc }
@@ -88,7 +103,7 @@ generic_rhenish_missions_2 = {
 			}
 		}
 	}
-	
+
 	rhn_generic_unite_rhineland = {
 		icon = mission_unite_home_region
 		required_missions = { rhn_generic_expand }
@@ -166,27 +181,13 @@ generic_rhenish_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#upper_swabia_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#lower_swabia_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
-			#upper_rhineland_area = {
-			#	limit = {
-			#		NOT = { owned_by = ROOT }
-			#		NOT = { is_core = ROOT }
-			#	}
-			#	add_permanent_claim = ROOT
-			#}
+			baden_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -196,14 +197,33 @@ generic_rhenish_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = MAI
-			tag = TRI
-			tag = FRN
-			tag = NSA
-			tag = KLE
-			tag = BRG
+			AND = {
+				OR = {
+					tag = MAI
+					tag = TRI
+					AND = {
+						tag = KOL
+						has_country_flag = Cologne_Rheinland
+					}
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
+			AND = {
+				OR = {
+					tag = BRG
+					tag = NSA
+					tag = KLE
+					tag = FRN
+				}
+				OR = {
+					AND = {
+						NOT = { primary_culture = hannoverian }
+						NOT = { primary_culture = hessian }
+					}
+					has_country_flag = use_missions_expanded_missions_instead_of_paradox
+				}
+			}
 			AND = {
 				tag = RHN
 				NOT = {
@@ -213,15 +233,11 @@ generic_rhenish_missions_3 = {
 					}
 				}
 			}
-			AND = {
-				tag = KOL
-				has_country_flag = Cologne_Rheinland
-			}
 		}
 	}
 	has_country_shield = no
-	
-	
+
+
 	rhn_generic_allies = {
 		icon = mission_alliances
 		required_missions = { }
@@ -249,7 +265,7 @@ generic_rhenish_missions_3 = {
 			}
 		}
 	}
-	
+
 	rhn_generic_approval = {
 		icon = me_mission_crown_hre
 		required_missions = { rhn_generic_allies rhn_generic_expand }
@@ -272,7 +288,7 @@ generic_rhenish_missions_3 = {
 			}
 		}
 	}
-	
+
 }
 
 generic_rhenish_missions_4 = {
@@ -280,14 +296,33 @@ generic_rhenish_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = MAI
-			tag = TRI
-			tag = FRN
-			tag = NSA
-			tag = KLE
-			tag = BRG
+			AND = {
+				OR = {
+					tag = MAI
+					tag = TRI
+					AND = {
+						tag = KOL
+						has_country_flag = Cologne_Rheinland
+					}
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
+			AND = {
+				OR = {
+					tag = BRG
+					tag = NSA
+					tag = KLE
+					tag = FRN
+				}
+				OR = {
+					AND = {
+						NOT = { primary_culture = hannoverian }
+						NOT = { primary_culture = hessian }
+					}
+					has_country_flag = use_missions_expanded_missions_instead_of_paradox
+				}
+			}
 			AND = {
 				tag = RHN
 				NOT = {
@@ -296,10 +331,6 @@ generic_rhenish_missions_4 = {
 						was_tag = HES
 					}
 				}
-			}
-			AND = {
-				tag = KOL
-				has_country_flag = Cologne_Rheinland
 			}
 		}
 	}
@@ -364,7 +395,7 @@ generic_rhenish_missions_4 = {
 								type = muscovy_architect
 								name = "Alessandro Pasqualini"
 								skill = 1
-								culture =  romanch_culture #romagnol
+								culture = romanch_culture #romagnol
 								religion = catholic
 								location = 4730
 								culture = PREV
@@ -386,14 +417,33 @@ generic_rhenish_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		OR = {
-			tag = MAI
-			tag = TRI
-			tag = FRN
-			tag = NSA
-			tag = KLE
-			tag = BRG
+			AND = {
+				OR = {
+					tag = MAI
+					tag = TRI
+					AND = {
+						tag = KOL
+						has_country_flag = Cologne_Rheinland
+					}
+				}
+				has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			}
+			AND = {
+				OR = {
+					tag = BRG
+					tag = NSA
+					tag = KLE
+					tag = FRN
+				}
+				OR = {
+					AND = {
+						NOT = { primary_culture = hannoverian }
+						NOT = { primary_culture = hessian }
+					}
+					has_country_flag = use_missions_expanded_missions_instead_of_paradox
+				}
+			}
 			AND = {
 				tag = RHN
 				NOT = {
@@ -403,14 +453,10 @@ generic_rhenish_missions_5 = {
 					}
 				}
 			}
-			AND = {
-				tag = KOL
-				has_country_flag = Cologne_Rheinland
-			}
 		}
 	}
 	has_country_shield  = no
-	
+
 	rhn_generic_reformation = {
 		icon = mission_luther_theses
 		required_missions = { rhn_generic_embrace_renaissance }

@@ -90,7 +90,7 @@ estate_maya = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 10
-				has_estate = estate_maya
+				#has_estate = estate_maya
 				religion = mesoamerican_religion
 			}
 		}

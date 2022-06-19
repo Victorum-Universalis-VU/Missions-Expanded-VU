@@ -9,10 +9,10 @@ emp_hab_poland_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -125,10 +125,10 @@ emp_hab_empire_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -144,7 +144,7 @@ emp_hab_empire_branch = {
 				OR = {
 					AND = {
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 15
+							value = 10
 							continent = europe
 						}
 						is_part_of_hre = yes
@@ -166,7 +166,7 @@ emp_hab_empire_branch = {
 								NOT = { is_subject_of = ROOT }
 								is_part_of_hre = yes
 								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-									value = 15
+									value = 10
 									continent = europe
 								}
 							}
@@ -174,7 +174,7 @@ emp_hab_empire_branch = {
 					}
 					calc_true_if = {
 						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
-						amount = 15
+						amount = 10
 						all_country = {
 							has_reform = free_city
 						}
@@ -514,10 +514,10 @@ emp_hab_prestige_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -761,10 +761,10 @@ emp_hab_minorities_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -947,10 +947,10 @@ emp_hab_german_expansion_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -1010,27 +1010,6 @@ emp_hab_german_expansion_branch = {
 				}
 			}
 			else = {
-				#upper_bavaria_area = {
-				#	limit = {
-				#		NOT = { is_core = root }
-				#		NOT = { is_permanent_claim = root }
-				#	}
-				#	add_permanent_claim = root
-				#}
-				#lower_bavaria_area = {
-				#	limit = {
-				#		NOT = { is_core = root }
-				#		NOT = { is_permanent_claim = root }
-				#	}
-				#	add_permanent_claim = root
-				#}
-				#east_bavaria_area = {
-				#	limit = {
-				#		NOT = { is_core = root }
-				#		NOT = { is_permanent_claim = root }
-				#	}
-				#	add_permanent_claim = root
-				#}
 				bavaria_area = {
 					limit = {
 						NOT = { is_core = root }
@@ -1047,21 +1026,11 @@ emp_hab_german_expansion_branch = {
 		
 		required_missions = { emp_hab_take_salzburg }
 		provinces_to_highlight = {
-			#OR = {
-			#	area = east_bavaria_area
-			#	area = upper_bavaria_area
-			#	area = lower_bavaria_area
-			#}
 			area = bavaria_area
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 8 #out of 12
-						#OR = {
-						#	area = east_bavaria_area
-						#	area = upper_bavaria_area
-						#	area = lower_bavaria_area
-						#}
 						area = bavaria_area
 					}
 				}
@@ -1071,11 +1040,6 @@ emp_hab_german_expansion_branch = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8 #out of 12
-				#OR = {
-				#	area = east_bavaria_area
-				#	area = upper_bavaria_area
-				#	area = lower_bavaria_area
-				#}
 				area = bavaria_area
 			}
 		}
@@ -1093,12 +1057,18 @@ emp_hab_german_expansion_branch = {
 		
 		required_missions = { emp_hab_union_bayern emp_hab_connect_further_austria }
 		provinces_to_highlight = {
-			area = swabia_area
+			OR = {
+				area = swabia_area
+				area = baden_area
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 8 #of 10 (you can spare the FCs)
-						area = swabia_area
+						OR = {
+							area = swabia_area
+							area = baden_area
+						}
 					}
 				}
 			}
@@ -1107,11 +1077,22 @@ emp_hab_german_expansion_branch = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 8 #of 10 (you can spare the FCs)
-				area = swabia_area
+				OR = {
+					area = swabia_area
+					area = baden_area
+						}
 			}
 		}
 		effect = {
 			swabia_area = {
+				limit = { country_or_non_sovereign_subject_holds = root }
+				add_nationalism = -5
+				add_province_modifier = {
+					name = hab_holdings_in_swabia
+					duration = 10950
+				}
+			}
+			baden_area = {
 				limit = { country_or_non_sovereign_subject_holds = root }
 				add_nationalism = -5
 				add_province_modifier = {
@@ -1132,10 +1113,10 @@ emp_hab_german_expansion_branch_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -1353,10 +1334,10 @@ emp_hab_western_expansion_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -1420,7 +1401,7 @@ emp_hab_western_expansion_branch = {
 				}
 				add_permanent_claim = root
 			}
-			baden_area = {
+			north_rhine_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -1482,13 +1463,6 @@ emp_hab_western_expansion_branch = {
 				add_permanent_claim = root
 			}
 			lorraine_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			west_burgundy_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -1624,10 +1598,10 @@ emp_hab_balkans = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -1705,41 +1679,6 @@ emp_hab_balkans = {
 				}
 				add_permanent_claim = root
 			}
-			vidin_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			danubian_plain_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			upper_thrace_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			northern_thrace_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			silistria_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
 		}
 	}
 }
@@ -1753,10 +1692,10 @@ emp_hab_balkans_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -1903,10 +1842,10 @@ emp_hab_more_italy_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -2089,10 +2028,10 @@ emp_hab_diplo_branch = {
 		has_dlc = "Emperor"
 	}
 	potential = {
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes

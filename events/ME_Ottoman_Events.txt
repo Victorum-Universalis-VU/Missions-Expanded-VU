@@ -13,7 +13,7 @@ country_event = { #Return of the Sultan
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #lead
 		name = ME_Ottoman_Events.1.a
 		ai_chance  = { factor = 85 }
@@ -29,7 +29,7 @@ country_event = { #Return of the Sultan
 			siege = 2
 		}
 	}
-	
+
 	option = { #rule
 		name = ME_Ottoman_Events.1.b
 		ai_chance  = { factor = 10 }
@@ -42,7 +42,6 @@ country_event = { #Return of the Sultan
 			male = yes
 			age = 39
 			claim = 100
-			fixed = yes
 		}
 		add_ruler_personality = inspiring_leader_personality
 		define_ruler_to_general = {
@@ -66,7 +65,7 @@ country_event = { #Return of the Sultan
 			claim = 100
 		}
 	}
-	
+
 	option = { #rest
 		name = ME_Ottoman_Events.1.c
 		ai_chance  = { factor = 5 }
@@ -85,13 +84,13 @@ country_event = { #Fall of Constantinople
 	id = ME_Ottoman_Events.2
 	title = ME_Ottoman_Events.2.t
 	desc = ME_Ottoman_Events.2.d
-	#include picture of 
+	#include picture of
 	picture = RELIGIOUS_WARS_eventPicture
 
 	fire_only_once = yes
 	is_triggered_only = yes
 	major = yes
-	
+
 	option = { #No quarter
 		name = ME_Ottoman_Events.2.a
 		ai_chance  = { factor = 90 }
@@ -107,7 +106,7 @@ country_event = { #Fall of Constantinople
 		# }
 		add_prestige = 5
 	}
-	
+
 	option = { #show the pretenders mercy
 		name = ME_Ottoman_Events.2.b
 		ai_chance  = { factor = 10 }
@@ -182,7 +181,7 @@ country_event = { #Fall of Constantinople
 			subject = MOE
 		}
 	}
-	
+
 	option = { #make our own
 		name = ME_Ottoman_Events.2.c
 		ai_chance  = { factor = 0 }
@@ -230,7 +229,7 @@ country_event = { #Annexation of Athens
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #annexed by ottos
 		name = ME_Ottoman_Events.2.a
 		ai_chance  = { factor = 100 }
@@ -238,7 +237,7 @@ country_event = { #Annexation of Athens
 			cede_province = TUR
 		}
 	}
-	
+
 	option = { #refuse annexation
 		name = ME_Ottoman_Events.2.b
 		ai_chance  = { factor = 0 }
@@ -254,7 +253,7 @@ country_event = { #Annexation of Athens (byz)
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #annexed by byz
 		name = ME_Ottoman_Events.4.a
 		ai_chance  = { factor = 100 }
@@ -262,7 +261,7 @@ country_event = { #Annexation of Athens (byz)
 			cede_province = BYZ
 		}
 	}
-	
+
 	option = { #refuse annexation
 		name = ME_Ottoman_Events.4.b
 		ai_chance  = { factor = 0 }
@@ -279,7 +278,7 @@ country_event = { #Legacy of Skanderbeg
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #honor him
 		name = ME_Ottoman_Events.5.a
 		ai_chance  = { factor = 50 }
@@ -306,7 +305,7 @@ country_event = { #Legacy of Skanderbeg
 		}
 		add_prestige = 10
 	}
-	
+
 	option = { #condemn him
 		name = ME_Ottoman_Events.5.b
 		ai_chance  = { factor = 50 }
@@ -326,7 +325,7 @@ country_event = { #displacement of Karaman
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { #resettlement
 		name = ME_Ottoman_Events.6.a
 		ai_chance  = { factor = 50 }
@@ -342,7 +341,7 @@ country_event = { #displacement of Karaman
 			add_base_manpower = 1
 		}
 	}
-	
+
 	option = { #do not resettle
 		name = ME_Ottoman_Events.6.b
 		ai_chance  = { factor = 50 }
@@ -389,7 +388,7 @@ country_event = { #displacement of Karaman
 	# option = { #annex them
 		# name = ME_Ottoman_Events.7.a
 		# ai_chance  = { factor = 0 }
-		
+
 		# hidden_effect = {
 			# flag enables mamluk estate and switches out conquest of egypt missions for reining in mamluk estate
 			# set_variable = {
@@ -622,7 +621,7 @@ country_event = { #displacement of Karaman
 			# 40
 		# }
 	# }
-	
+
 	# option = { #vassalize
 		# name = ME_Ottoman_Events.7.b
 		# ai_chance  = { factor = 0 }
@@ -631,7 +630,7 @@ country_event = { #displacement of Karaman
 			# add_liberty_desire = -10
 		# }
 	# }
-	
+
 	# option = { #CLAIMS
 		# name = ME_Ottoman_Events.7.c
 		# ai_chance  = { factor = 100 }
@@ -652,7 +651,7 @@ country_event = { #displacement of Karaman
 	# title = ME_Ottoman_Events.8.t
 	# desc = ME_Ottoman_Events.8.d
 	# picture = ACCUSATION_eventPicture
-	
+
 	# trigger = {
 		# has_country_flag = enables_mamluk_estate
 		# ai = no
@@ -666,11 +665,11 @@ country_event = { #displacement of Karaman
 		# }
 		# NOT = { has_country_flag = mamluks_gone }
 	# }
-	
+
 	# mean_time_to_happen = {
-		# days = 1 
+		# days = 1
 	# }
-	
+
 	# #autonomy corresponds to 100-MEP*x
 	# #whenever var is changed, also update provinces with scripted effect
 	# immediate = {
@@ -690,7 +689,7 @@ country_event = { #displacement of Karaman
 			# }
 		# }
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.8.a
 		# if = {
@@ -710,7 +709,7 @@ country_event = { #displacement of Karaman
 	# title = ME_Ottoman_Events.9.t
 	# desc = ME_Ottoman_Events.9.d
 	# picture = DIPLOMACY_eventPicture
-	
+
 	# trigger = {
 		# NOT = { has_country_flag = enables_mamluk_estate }
 		# NOT = {
@@ -722,11 +721,11 @@ country_event = { #displacement of Karaman
 			# has_mamluk_autonomy_modifier = yes
 		# }
 	# }
-	
+
 	# mean_time_to_happen = {
-		# days = 1 
+		# days = 1
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.9.a
 		# remove_mamluk_autonomy = yes
@@ -738,10 +737,10 @@ country_event = { #liberation of syria
 	title = ME_Ottoman_Events.10.t
 	desc = ME_Ottoman_Events.10.d
 	picture = REFORM_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		hidden_effect = {
 			change_variable = {
@@ -750,7 +749,7 @@ country_event = { #liberation of syria
 			}
 		}
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.10.a
 		#hidden_effect = {
@@ -772,10 +771,10 @@ country_event = { #capitulation of mamluks
 	title = ME_Ottoman_Events.11.t
 	desc = ME_Ottoman_Events.11.d
 	picture = REVOLUTION_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	# immediate = {
 		# hidden_effect = {
 			# change_variable = {
@@ -784,7 +783,7 @@ country_event = { #capitulation of mamluks
 			# }
 		# }
 	# }
-	
+
 	option = {
 		name = ME_Ottoman_Events.11.a
 		add_adm_power = 100
@@ -802,10 +801,10 @@ country_event = { #conquest of Jerusalem
 	title = ME_Ottoman_Events.12.t
 	desc = ME_Ottoman_Events.12.d
 	picture = WESTERNISATION_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #tolerate all religions
 		name = ME_Ottoman_Events.12.a
 		ai_chance  = { factor = 100 }
@@ -820,7 +819,7 @@ country_event = { #conquest of Jerusalem
 			add_base_manpower = 1
 		}
 	}
-	
+
 	option = { #expel the dhimmi
 		name = ME_Ottoman_Events.12.b
 		ai_chance  = { factor = 0 }
@@ -837,7 +836,7 @@ country_event = { #conquest of Jerusalem
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = -15
-			}		
+			}
 		}
 		379 = {
 			add_base_tax = -1
@@ -860,10 +859,10 @@ country_event = { #capture of Rhodes
 	title = ME_Ottoman_Events.13.t
 	desc = ME_Ottoman_Events.13.d
 	picture = FORT_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #they fought valiantly
 		name = ME_Ottoman_Events.13.a
 		ai_chance  = { factor = 50 }
@@ -888,7 +887,7 @@ country_event = { #capture of Rhodes
 		}
 		add_prestige = 10
 	}
-	
+
 	option = { #no quarter
 		name = ME_Ottoman_Events.13.b
 		ai_chance  = { factor = 50 }
@@ -924,10 +923,10 @@ country_event = { #capture of Cyprus
 	title = ME_Ottoman_Events.14.t
 	desc = ME_Ottoman_Events.14.d
 	picture = NAVAL_MILITARY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #allow the Church to administrate
 		name = ME_Ottoman_Events.14.a
 		ai_chance  = { factor = 100 }
@@ -945,7 +944,7 @@ country_event = { #capture of Cyprus
 			add_territorial_core = ROOT
 		}
 	}
-	
+
 	option = { #we shall appoint our own adminstrators
 		name = ME_Ottoman_Events.14.b
 		ai_chance  = { factor = 0 }
@@ -964,10 +963,10 @@ country_event = { #capture of Cyprus
 	# title = ME_Ottoman_Events.15.t
 	# desc = ME_Ottoman_Events.15.d
 	# picture = ECONOMY_eventPicture
-	
+
 	# is_triggered_only = yes
 	# fire_only_once = yes
-	
+
 	# immediate = {
 		# hidden_effect = {
 			# change_variable = {
@@ -976,7 +975,7 @@ country_event = { #capture of Cyprus
 			# }
 		# }
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.15.a
 		# hidden_effect = {
@@ -991,10 +990,10 @@ country_event = { #capture of tunis
 	title = ME_Ottoman_Events.16.t
 	desc = ME_Ottoman_Events.16.d
 	picture = SHIP_SAILING_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = ME_Ottoman_Events.16.a
 		emperor = {
@@ -1034,7 +1033,7 @@ country_event = { #capture of tunis
 		custom_tooltip = opt_in_quest_explanation
 		swap_non_generic_missions = yes
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.16.b
 		add_truce_with = emperor
@@ -1051,15 +1050,15 @@ country_event = { #defeat of the expedition
 	title = ME_Ottoman_Events.17.t
 	desc = ME_Ottoman_Events.17.d
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		clr_country_flag = opt_in_tunis
 		set_country_flag = finished_opt_in_tunis
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.17.a
 		add_country_modifier = {
@@ -1075,9 +1074,9 @@ country_event = { #failure to complete tunis coalition
 	title = ME_Ottoman_Events.18.t
 	desc = ME_Ottoman_Events.18.d
 	picture = COUNTRY_COLLAPSE_eventPicture
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		NOT = { has_country_flag = finished_opt_in_tunis }
 		OR = {
@@ -1096,15 +1095,15 @@ country_event = { #failure to complete tunis coalition
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	immediate = {
 		clr_country_flag = opt_in_tunis
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.18.a
 		if = {
@@ -1131,14 +1130,14 @@ country_event = { #Alliance with Morrocco
 	title = ME_Ottoman_Events.19.t
 	desc = ME_Ottoman_Events.19.d
 	picture = COURT_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		set_country_flag = TUR_allied_MOR
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.19.a
 		swap_non_generic_missions = yes
@@ -1156,14 +1155,14 @@ country_event = { #Invasion of Morrocco (Same as second option of alliance with 
 	title = ME_Ottoman_Events.20.t
 	desc = ME_Ottoman_Events.20.d
 	picture = BATTLE_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		set_country_flag = TUR_invaded_MOR
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.20.a
 		swap_non_generic_missions = yes
@@ -1273,24 +1272,24 @@ country_event = { #Occupation of Tlemcen
 	title = ME_Ottoman_Events.21.t
 	desc = ME_Ottoman_Events.21.d
 	picture = CITY_VIEW_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = ME_Ottoman_Events.21.a
 		338 = { #mitdja
 			add_center_of_trade_level = 1
 		}
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.21.b
 		341 = { #tunis
 			add_center_of_trade_level = 1
 		}
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.21.c
 		336 = {
@@ -1308,10 +1307,10 @@ country_event = { #Morocco, an Ottoman state?
 	title = ME_Ottoman_Events.22.t
 	desc = ME_Ottoman_Events.22.d
 	picture = COURT_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = ME_Ottoman_Events.22.a
 		MOR = {
@@ -1320,7 +1319,7 @@ country_event = { #Morocco, an Ottoman state?
 				days = 10
 			}
 		}
-		IF = { 
+		IF = {
 			limit = {
 				MOR = {
 					ai = yes
@@ -1353,10 +1352,10 @@ country_event = { #Morocco, an Ottoman state? moroccan end
 	title = ME_Ottoman_Events.23.t
 	desc = ME_Ottoman_Events.23.d
 	picture = COURT_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = ME_Ottoman_Events.23.a
 		ai_chance = { factor = 30 }
@@ -1366,8 +1365,8 @@ country_event = { #Morocco, an Ottoman state? moroccan end
 				subject = MOR
 			}
 		}
-	}	
-	
+	}
+
 	option = {
 		name = ME_Ottoman_Events.23.b
 		ai_chance = { factor = 10 }
@@ -1375,7 +1374,7 @@ country_event = { #Morocco, an Ottoman state? moroccan end
 			create_union = MOR
 		}
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.23.c
 		ai_chance = { factor = 60 }
@@ -1390,10 +1389,10 @@ country_event = { #the persian threat
 	title = ME_Ottoman_Events.24.t
 	desc = ME_Ottoman_Events.24.d
 	picture = BORDER_TENSION_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		hidden_effect = { #selects the biggest country in khorasan or persia
 			random_country = {
@@ -1420,7 +1419,7 @@ country_event = { #the persian threat
 			}
 		}
 	}
-	
+
 	option = { #to war!
 		name = ME_Ottoman_Events.24.a
 		ai_chance = { factor = 0 }
@@ -1440,8 +1439,8 @@ country_event = { #the persian threat
 		custom_tooltip = opt_in_quest_persia
 		custom_tooltip = opt_in_quest_explanation
 		swap_non_generic_missions = yes
-	}	
-	
+	}
+
 	option = { #step down
 		name = ME_Ottoman_Events.24.b
 		ai_chance = { factor = 100 }
@@ -1458,10 +1457,10 @@ country_event = { #janissary rule in tripoli
 	title = ME_Ottoman_Events.25.t
 	desc = ME_Ottoman_Events.25.d
 	picture = LAND_MILITARY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #create the tripoli vassal
 		name = ME_Ottoman_Events.25.a
 		ai_chance = { factor = 0 }
@@ -1499,7 +1498,7 @@ country_event = { #janissary rule in tripoli
 			}
 		}
 	}
-	
+
 	option = { #administrate directly
 		name = ME_Ottoman_Events.25.b
 		ai_chance = { factor = 100 }
@@ -1522,10 +1521,10 @@ country_event = { #Sharifate of Mecca
 	title = ME_Ottoman_Events.26.t
 	desc = ME_Ottoman_Events.26.d
 	picture = PRAYING_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #make vassal
 		name = ME_Ottoman_Events.26.a
 		ai_chance = { factor = 100 }
@@ -1568,7 +1567,7 @@ country_event = { #Sharifate of Mecca
 		}
 		add_piety = 0.5
 	}
-	
+
 	option = { #dual gov
 		name = ME_Ottoman_Events.26.b
 		ai_chance = { factor = 0 }
@@ -1613,10 +1612,10 @@ country_event = { #Sharifate of Mecca
 			name = TUR_dual_mecca
 			duration = -1
 		}
-		
+
 		add_piety = -0.25
 	}
-	
+
 	option = { #keep for self
 		name = ME_Ottoman_Events.26.c
 		ai_chance = { factor = 0 }
@@ -1636,10 +1635,10 @@ country_event = { #principality of upper hungary
 	title = ME_Ottoman_Events.27.t
 	desc = ME_Ottoman_Events.27.d
 	picture = CONQUEST_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #establish the principality of upper hungary
 		name = ME_Ottoman_Events.27.a
 		ai_chance = { factor = 100 }
@@ -1665,7 +1664,7 @@ country_event = { #principality of upper hungary
 			}
 		}
 	}
-	
+
 	option = { #create a slovak vassal state
 		name = ME_Ottoman_Events.27.b
 		ai_chance = { factor = 0 }
@@ -1691,7 +1690,7 @@ country_event = { #principality of upper hungary
 			}
 		}
 	}
-	
+
 	option = { #administrate directly
 		name = ME_Ottoman_Events.27.c
 		ai_chance = { factor = 0 }
@@ -1721,10 +1720,10 @@ country_event = { #Right Bank Ukraine
 	title = ME_Ottoman_Events.28.t
 	desc = ME_Ottoman_Events.28.d
 	picture = CONQUEST_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #Create the Hetmante
 		name = ME_Ottoman_Events.28.a
 		ai_chance = { factor = 100 }
@@ -1760,7 +1759,7 @@ country_event = { #Right Bank Ukraine
 			}
 		}
 	}
-	
+
 	option = { #nothing
 		name = ME_Ottoman_Events.28.a
 		ai_chance = { factor = 0 }
@@ -1773,10 +1772,10 @@ country_event = { #Expansion of Janissaries
 	title = ME_Ottoman_Events.29.t
 	desc = ME_Ottoman_Events.29.d
 	picture = LAND_MILITARY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #Expand vanguard
 		name = ME_Ottoman_Events.29.a
 		ai_chance = { factor = 33 }
@@ -1797,7 +1796,7 @@ country_event = { #Expansion of Janissaries
 			}
 		}
 	}
-	
+
 	option = { #Expand Garrison
 		name = ME_Ottoman_Events.29.b
 		ai_chance = { factor = 33 }
@@ -1808,7 +1807,7 @@ country_event = { #Expansion of Janissaries
 		}
 		add_army_professionalism = 0.05
 	}
-	
+
 	option = { #Expand civil responsibilites
 		name = ME_Ottoman_Events.29.c
 		ai_chance = { factor = 33 }
@@ -1826,10 +1825,10 @@ country_event = { #Crimean Timar
 	title = ME_Ottoman_Events.30.t
 	desc = ME_Ottoman_Events.30.d
 	picture = DIPLOMACY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #send an offer
 		name = ME_Ottoman_Events.30.a
 		ai_chance = { factor = 100 }
@@ -1850,7 +1849,7 @@ country_event = { #Crimean Timar
 		#set_country_flag = made_crimea_timar
 		#custom_tooltip = cri_timar_tooltip
 	}
-	
+
 	option = { #current arrangement is fine
 		name = ME_Ottoman_Events.30.b
 		ai_chance = { factor = 0 }
@@ -1866,10 +1865,10 @@ country_event = { #Faith of the Janissaries
 	title = ME_Ottoman_Events.31.t
 	desc = ME_Ottoman_Events.31.d
 	picture = RELIGION_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #promote
 		name = ME_Ottoman_Events.31.a
 		ai_chance = { factor = 33 }
@@ -1879,7 +1878,7 @@ country_event = { #Faith of the Janissaries
 			duration = -1
 		}
 	}
-	
+
 	option = { #forbid
 		name = ME_Ottoman_Events.31.b
 		ai_chance = { factor = 33 }
@@ -1889,7 +1888,7 @@ country_event = { #Faith of the Janissaries
 			duration = -1
 		}
 	}
-	
+
 	option = { #neutral
 		name = ME_Ottoman_Events.31.c
 		ai_chance = { factor = 33 }
@@ -1905,10 +1904,10 @@ country_event = { #Taqi al-Din
 	title = ME_Ottoman_Events.32.t
 	desc = ME_Ottoman_Events.32.d
 	picture = ADVISOR_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #hire
 		name = ME_Ottoman_Events.32.a
 		ai_chance = { factor = 50 }
@@ -1922,7 +1921,7 @@ country_event = { #Taqi al-Din
 		}
 		change_innovativeness = 3
 	}
-	
+
 	option = { #found school
 		name = ME_Ottoman_Events.32.b
 		ai_chance = { factor = 50 }
@@ -1950,10 +1949,10 @@ country_event = { #piri reis
 	title = ME_Ottoman_Events.33.t
 	desc = ME_Ottoman_Events.33.d
 	picture = SHIP_SAILING_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #admiral
 		name = ME_Ottoman_Events.33.a
 		ai_chance = { factor = 33 }
@@ -1984,7 +1983,7 @@ country_event = { #piri reis
 		discover_province = 1566
 		add_navy_tradition = 10
 	}
-	
+
 	option = { #explorer
 		name = ME_Ottoman_Events.33.b
 		ai_chance = { factor = 33 }
@@ -2016,7 +2015,7 @@ country_event = { #piri reis
 		discover_province = 1566
 		add_navy_tradition = 10
 	}
-	
+
 	option = { #advisor
 		name = ME_Ottoman_Events.33.c
 		ai_chance = { factor = 33 }
@@ -2037,10 +2036,10 @@ country_event = { #yerliyya
 	title = ME_Ottoman_Events.34.t
 	desc = ME_Ottoman_Events.34.d
 	picture = CITY_VIEW_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #local reserves
 		name = ME_Ottoman_Events.34.a
 		ai_chance = { factor = 50 }
@@ -2050,7 +2049,7 @@ country_event = { #yerliyya
 			duration = -1
 		}
 	}
-	
+
 	option = { #peacekeepers
 		name = ME_Ottoman_Events.34.b
 		ai_chance = { factor = 50 }
@@ -2066,15 +2065,15 @@ country_event = { #Military band
 	title = ME_Ottoman_Events.35.t
 	desc = ME_Ottoman_Events.35.d
 	picture = LAND_MILITARY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #keep band
 		name = ME_Ottoman_Events.35.a
 		ai_chance = { factor = 50 }
 		trigger = { has_dlc = "Cradle of Civilization" }
-		if = { 
+		if = {
 			limit = {
 				has_dlc = "Mandate of Heaven"
 			}
@@ -2088,7 +2087,7 @@ country_event = { #Military band
 			duration = -1
 		}
 	}
-	
+
 	option = { #cultural expenditures should be enjoyed by everyone
 		name = ME_Ottoman_Events.35.b
 		ai_chance = { factor = 50 }
@@ -2104,12 +2103,12 @@ country_event = { #empowering the native estates
 	title = ME_Ottoman_Events.36.t
 	desc = ME_Ottoman_Events.36.d
 	picture = FEAST_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
 
-	
+
+
 	option = {
 		name = ME_Ottoman_Events.36.a
 		add_country_modifier = {
@@ -2125,7 +2124,7 @@ country_event = { #empowering the native estates
 	# title = ME_Ottoman_Events.37.t
 	# desc = ME_Ottoman_Events.37.d
 	# picture = SPY_eventPicture
-	
+
 	# trigger = {
 		# tag = TUR
 		# any_subject_country = {
@@ -2133,13 +2132,13 @@ country_event = { #empowering the native estates
 			# any_owned_province = {
 				# has_mamluk_autonomy_modifier = yes
 			# }
-		# }		
+		# }
 	# }
-	
+
 	# mean_time_to_happen = {
-		# days = 1 
+		# days = 1
 	# }
-	
+
 	# option = { #sieze control immediately
 		# name = ME_Ottoman_Events.37.a
 		# every_subject_country = {
@@ -2151,7 +2150,7 @@ country_event = { #empowering the native estates
 			# }
 		# }
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.37.b
 		# custom_tooltip = mamluks_estates_in_vassal_may_revolt
@@ -2166,7 +2165,7 @@ country_event = { #empowering the native estates
 	# title = ME_Ottoman_Events.38.t
 	# desc = ME_Ottoman_Events.38.d
 	# picture = SPY_eventPicture
-	
+
 	# trigger = {
 		# exists = MAM
 		# owner = {
@@ -2174,11 +2173,11 @@ country_event = { #empowering the native estates
 		# }
 		# has_mamluk_autonomy_modifier = yes
 	# }
-	
+
 	# mean_time_to_happen = {
 		# months = 24
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.38.a
 		# cede_province = MAM
@@ -2191,7 +2190,7 @@ country_event = { #empowering the native estates
 	# title = ME_Ottoman_Events.39.t
 	# desc = ME_Ottoman_Events.39.d
 	# picture = SPY_eventPicture
-	
+
 	# trigger = {
 		# NOT = { exists = MAM }
 		# has_country_flag = was_warned_about_mamluk_vassals
@@ -2199,11 +2198,11 @@ country_event = { #empowering the native estates
 			# has_mamluk_autonomy_modifier = yes
 		# }
 	# }
-	
+
 	# mean_time_to_happen = {
 		# months = 48
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.39.a
 		#copied from form mamluks decision
@@ -2260,18 +2259,18 @@ country_event = { #empowering the native estates
 	# title = ME_Ottoman_Events.4001.t
 	# desc = ME_Ottoman_Events.4001.d
 	# picture = CORRUPTION_eventPicture
-	
+
 	# trigger = {
 		# has_estate = estate_mamluk
 		# any_owned_province = {
 			# has_estate = estate_mamluk
 		# }
 	# }
-	
+
 	# mean_time_to_happen = {
 		# months = 120
 	# }
-	
+
 	# immediate = {
 		# random_province = {
 			# limit = {
@@ -2319,7 +2318,7 @@ country_event = { #empowering the native estates
 	# title = ME_Ottoman_Events.4002.t
 	# desc = ME_Ottoman_Events.4002.d
 	# picture = BATTLE_eventPicture
-	
+
 	# trigger = {
 		# has_estate = estate_mamluk
 		# is_at_war = yes
@@ -2328,11 +2327,11 @@ country_event = { #empowering the native estates
 			# loyalty = 50
 		# }
 	# }
-	
+
 	# mean_time_to_happen = {
 		# months = 120
 	# }
-	
+
 	# option = { #fantastic news!
 		# name = ME_Ottoman_Events.4001.a
 		# trigger = {
@@ -2346,7 +2345,7 @@ country_event = { #empowering the native estates
 		# }
 		# raise_war_taxes = yes
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.4001.b
 		# add_estate_influence_modifier = {
@@ -2364,16 +2363,16 @@ country_event = { #end of persian humiliation
 	title = ME_Ottoman_Events.41.t
 	desc = ME_Ottoman_Events.41.d
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	immediate = {
 		clr_country_flag = TUR_opt_in_persia
 		clear_global_event_target = TUR_persian_power
 		set_country_flag = TUR_persian_incident_finished
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.41.a
 		highlight = yes
@@ -2549,9 +2548,9 @@ country_event = { #failure to complete persia
 	title = ME_Ottoman_Events.42.t
 	desc = ME_Ottoman_Events.42.d
 	picture = COUNTRY_COLLAPSE_eventPicture
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		NOT = { has_country_flag = TUR_persian_incident_finished }
 		OR = {
@@ -2573,15 +2572,15 @@ country_event = { #failure to complete persia
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	immediate = {
 		clr_country_flag = TUR_opt_in_persia
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.42.a
 		if = {
@@ -2607,18 +2606,18 @@ country_event = { #failure to complete persia
 	# title = ME_Ottoman_Events.43.t
 	# desc = ME_Ottoman_Events.43.d
 	# picture = SHIP_SAILING_eventPicture
-	
+
 	# fire_only_once = yes
-	
+
 	# trigger = {
 		# tag = TUR
 		# religion_group = christian
 	# }
-	
+
 	# mean_time_to_happen = {
 		# days = 1
 	# }
-	
+
 	# option = { #start tree
 		# name = ME_Ottoman_Events.43.a
 		# ai_chance = { factor = 0 }
@@ -2907,9 +2906,9 @@ country_event = { #failure to complete persia
 		# custom_tooltip = opt_in_quest_christian
 		# custom_tooltip = opt_in_quest_explanation
 		# swap_non_generic_missions = yes
-		
-	# }	
-	
+
+	# }
+
 	# option = { #dont do that
 		# name = ME_Ottoman_Events.43.b
 		# ai_chance = { factor = 100 }
@@ -2922,9 +2921,9 @@ country_event = { #failure to complete persia
 	# title = ME_Ottoman_Events.44.t
 	# desc = ME_Ottoman_Events.44.d
 	# picture = SHIP_SAILING_eventPicture
-	
+
 	# fire_only_once = yes
-	
+
 	# trigger = {
 		# tag = tUR
 		# OR = {
@@ -2932,15 +2931,15 @@ country_event = { #failure to complete persia
 			# NOT = { religion_group = christian }
 		# }
 	# }
-	
+
 	# mean_time_to_happen = {
 		# days = 1
 	# }
-	
+
 	# immediate = {
 		# clr_country_flag = TUR_opt_in_christian
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.44.a
 		# add_stability = -3
@@ -2969,15 +2968,15 @@ country_event = { #failure to complete persia
 	# title = ME_Ottoman_Events.45.t
 	# desc = ME_Ottoman_Events.45.d
 	# picture = SHIP_SAILING_eventPicture
-	
+
 	# fire_only_once = yes
 	# is_triggered_only = yes
-	
+
 	# immediate = {
 		# clr_country_flag = TUR_opt_in_christian
 		# set_country_flag = TUR_christian_missions
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.45.a
 		# swap_non_generic_missions = yes
@@ -2989,10 +2988,10 @@ country_event = { #failure to complete persia
 	# title = ME_Ottoman_Events.46.t
 	# desc = ME_Ottoman_Events.46.d
 	# picture = SHIP_SAILING_eventPicture
-	
+
 	# fire_only_once = yes
 	# is_triggered_only = yes
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.45.a
 		# random_owned_province = {
@@ -3021,10 +3020,10 @@ country_event = { #Serafeddin Sabuncuoglu
 	title = ME_Ottoman_Events.47.t
 	desc = ME_Ottoman_Events.47.d
 	picture = ADVISOR_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #
 		name = ME_Ottoman_Events.47.a
 		ai_chance = { factor = 50 }
@@ -3034,7 +3033,7 @@ country_event = { #Serafeddin Sabuncuoglu
 		}
 		change_innovativeness = 3
 	}
-	
+
 	option = { #
 		name = ME_Ottoman_Events.47.b
 		ai_chance = { factor = 50 }
@@ -3045,7 +3044,7 @@ country_event = { #Serafeddin Sabuncuoglu
 		}
 		change_innovativeness = 3
 	}
-	
+
 	option = { #
 		name = ME_Ottoman_Events.47.b
 		ai_chance = { factor = 50 }
@@ -3063,10 +3062,10 @@ country_event = { #sultanate of aceh
 	title = ME_Ottoman_Events.48.t
 	desc = ME_Ottoman_Events.48.d
 	picture = DIPLOMACY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #
 		name = ME_Ottoman_Events.48.a
 		ai_chance = { factor = 50 }
@@ -3083,7 +3082,7 @@ country_event = { #sultanate of aceh
 			add_permanent_claim = ATJ
 		}
 	}
-	
+
 	option = { #
 		name = ME_Ottoman_Events.48.b
 		ai_chance = { factor = 50 }
@@ -3096,10 +3095,10 @@ country_event = { #fund the madaris
 	title = ME_Ottoman_Events.49.t
 	desc = ME_Ottoman_Events.49.d
 	picture = UNIVERSITY_eventPicture
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { #support spiritual education
 		name = ME_Ottoman_Events.49.a
 		ai_chance = { factor = 50 }
@@ -3155,23 +3154,23 @@ country_event = { #fund the madaris
 	# title = ME_Ottoman_Events.50.t
 	# desc = ME_Ottoman_Events.50.d
 	# picture = REFORM_eventPicture
-	
+
 	# fire_only_once = yes
-	
+
 	# trigger = {
 		# tag = TUR
 		# any_owned_province = {
 			# has_province_modifier = mamluk_rule_05
 		# }
 	# }
-	
+
 	# immediate = {
 		# set_country_flag = mamluks_gone
 	# }
 	# mean_time_to_happen = {
 		# days = 1
 	# }
-	
+
 	# option = {
 		# name = ME_Ottoman_Events.50.a
 		# remove_mamluk_autonomy = yes
@@ -3184,9 +3183,9 @@ country_event = { #death of ghazi sultan
 	title = ME_Ottoman_Events.51.t
 	desc = ME_Ottoman_Events.51.d
 	picture = KING_SICK_IN_BED_eventPicture
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		OR = {
 			has_leader = "Murad II"
@@ -3195,7 +3194,7 @@ country_event = { #death of ghazi sultan
 		tag = TUR
 		is_year = 1451
 	}
-	
+
 	immediate = {
 		if = {
 			limit = {
@@ -3212,7 +3211,7 @@ country_event = { #death of ghazi sultan
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.51.a
 	}
@@ -3222,9 +3221,9 @@ country_event = { #death of ghazi sultan
 	title = ME_Ottoman_Events.52.t
 	desc = ME_Ottoman_Events.52.d
 	picture = LAND_MILITARY_eventPicture
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		OR = {
 			has_leader = "Murad II"
@@ -3233,7 +3232,7 @@ country_event = { #death of ghazi sultan
 		tag = TUR
 		is_year = 1451
 	}
-	
+
 	immediate = {
 		if = {
 			limit = {
@@ -3250,7 +3249,7 @@ country_event = { #death of ghazi sultan
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	option = {
 		name = ME_Ottoman_Events.51.a
 	}

@@ -986,7 +986,7 @@ SWE_missions_5_catholic_1 = {
 			set_country_flag = swe_catholic_missions
 			swap_non_generic_missions = yes
 			hidden_effect = {
-				set_variable = { swe_num_of_wars_against_non_catholics = 0 }
+				set_variable = { which = swe_num_of_wars_against_non_catholics value = 0 }
 			}
 		}
 	}
@@ -1019,7 +1019,7 @@ SWE_missions_4_catholic = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = SWE_DECLARED_WAR_AGAINST_7_NON_CATHOLICS
-				check_variable = { swe_num_of_wars_against_non_catholics = 7 }
+				check_variable = { which = swe_num_of_wars_against_non_catholics value = 7 }
 			}
 		}
 		effect = {

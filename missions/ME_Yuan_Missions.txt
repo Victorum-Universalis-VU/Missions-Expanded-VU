@@ -351,7 +351,7 @@ Yuan_missions_2 = {
 				type = all
 				owned_by = ROOT
 			}
-			1816 = { owned_by = ROOT }	
+			1816 = { owned_by = ROOT }
 			1821 = { owned_by = ROOT }
 			667 = { owned_by = ROOT }
 			khorasan_region = {
@@ -723,7 +723,7 @@ Yuan_missions_5 = {
 			2116 = {
 				owned_by = ROOT
 				development = 15
-				NOT = { devastation = 0.1 }
+				NOT = { devastation = 1 }
 			}
 		}
 		effect = {

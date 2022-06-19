@@ -27,7 +27,7 @@ greek_league = {
 		}
 		has_parliament = yes
 	}
-
+	
 	factions = {
 		gl_aristocrats
 		gl_democrats

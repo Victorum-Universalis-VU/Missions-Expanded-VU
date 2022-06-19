@@ -558,6 +558,7 @@ CAS_missions_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 				area = mindanao_area
+			#	area = west_mindanao_area
 				area = visayas_area
 			}
 			NOT = { owned_by = ROOT }
@@ -573,6 +574,9 @@ CAS_missions_2 = {
 				mindanao_area = {
 					owned_by = ROOT
 				}
+			#	west_mindanao_area = {
+			#		owned_by = ROOT
+			#	}
 				visayas_area = {
 					owned_by = ROOT
 				}
@@ -604,6 +608,13 @@ CAS_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+	#		west_mindanao_area = {
+	#			limit = {
+	#				NOT = { owned_by = ROOT }
+	#				NOT = { is_core = ROOT }
+	#			}
+	#			add_permanent_claim = ROOT
+	#		}
 			visayas_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -978,7 +989,6 @@ CAS_missions_3 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
-#				area = western_sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -999,10 +1009,6 @@ CAS_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			western_sicily_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
 		}
 		effect = {
 			add_country_modifier = {

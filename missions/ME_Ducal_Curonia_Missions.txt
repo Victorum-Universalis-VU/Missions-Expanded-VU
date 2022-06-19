@@ -47,8 +47,8 @@ Ducal_KUR_missions_1 = {
 				AND = {
 					OR = {
 						#province_id = 1177
-						province_id = 7364
-						province_id = 5581
+						province_id = 1114
+						province_id = 502
 					}
 					NOT = { has_discovered = ROOT }
 				}
@@ -64,8 +64,12 @@ Ducal_KUR_missions_1 = {
 		effect = {
 			if = {
 				limit = {
-					5581 = { is_empty = yes }
+					OR = {
+						7364 = { is_empty = yes }
+						5581 = { is_empty = yes }
+					}
 				}
+				7364 = { add_siberian_construction = 200 }
 				5581 = { add_siberian_construction = 200 }
 			}
 			else_if = {
@@ -90,7 +94,7 @@ Ducal_KUR_missions_1 = {
 					}
 					add_siberian_construction = 200
 				}
-			}			
+			}
 		}
 	}
 	
@@ -108,7 +112,7 @@ Ducal_KUR_missions_1 = {
 					}
 				}
 				AND = {
-					province_id = 7364
+					province_id = 7839
 					OR = {
 						NOT = { has_discovered = ROOT }
 						NOT = { range = ROOT }
@@ -117,12 +121,12 @@ Ducal_KUR_missions_1 = {
 			}
 		}
 		trigger = {
-			7839 = {
+			39 = {
 				has_shipyard_building_trigger = yes
 				owned_by = ROOT
 			}
-			7364 = { has_discovered = ROOT }
-			7364 = { range = ROOT }
+			1114 = { has_discovered = ROOT }
+			1114 = { range = ROOT }
 		}
 		effect = {
 			country_event = { id = ME_Ducal_Prussia_Events.3 }

@@ -603,7 +603,6 @@ country_event = { #Death of Ulugh Beg
 			dip = 3
 			adm = 3
 			mil = 6
-			fixed = yes
 			claim = 50
 			age = 30
 			attach_leader = "Abu Sa'id Mirza"
@@ -783,15 +782,15 @@ country_event = { #legitimacy stuff
 				value = modifier:timurid_legitimacy_influence
 			}
 			# Round to two decimals
-			divide_variable = { timurid_legitimacy = 100 }
-			multiply_variable = { timurid_legitimacy = 100 }
+			divide_variable = { which = timurid_legitimacy value = 100 }
+			multiply_variable = { which = timurid_legitimacy value = 100 }
 			# Add to progress
-			change_variable = { which = timurid_legitimacy_value which =  timurid_legitimacy }
+			change_variable = { which = timurid_legitimacy_value which = timurid_legitimacy }
 			if = {
 				limit = {
-					check_variable = { timurid_legitimacy_value = 100 }
+					check_variable = { which = timurid_legitimacy_value value = 100 }
 				}
-				set_variable = { timurid_legitimacy_value = 100 }
+				set_variable = { which = timurid_legitimacy_value value = 100 }
 			}
 			add_country_modifier = {
 				name = legitimacy_var_increased
@@ -820,10 +819,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT1
 
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 10 }
+			check_variable = { which = timurid_legitimacy_value value = 10 }
 		}
 
-		subtract_variable = { timurid_legitimacy_value = 10 }
+		subtract_variable = { which = timurid_legitimacy_value value = 10 }
 		add_yearly_manpower = 0.6
 	}
 
@@ -831,10 +830,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT2
 
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 20 }
+			check_variable = { which = timurid_legitimacy_value value = 20 }
 		}
 
-		subtract_variable = { timurid_legitimacy_value = 20 }
+		subtract_variable = { which = timurid_legitimacy_value value = 20 }
 		create_general = { tradition = 40 }
 	}
 
@@ -842,10 +841,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT3
 
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 10 }
+			check_variable = { which = timurid_legitimacy_value value = 10 }
 		}
 
-		subtract_variable = { timurid_legitimacy_value = 10 }
+		subtract_variable = { which = timurid_legitimacy_value value = 10 }
 		add_country_modifier = {
 			name = timurid_prince_satisfied_the_masses
 			duration = 7300
@@ -856,10 +855,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT4
 
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 15 }
+			check_variable = { which = timurid_legitimacy_value value = 15 }
 		}
 
-		subtract_variable = { timurid_legitimacy_value = 15 }
+		subtract_variable = { which = timurid_legitimacy_value value = 15 }
 		add_years_of_income = 0.4
 	}
 
@@ -867,10 +866,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT5
 
 		trigger = {
-			check_variable = { timurid_legitimacy_value = 15 }
+			check_variable = { which = timurid_legitimacy_value value = 15 }
 		}
 
-		subtract_variable = { timurid_legitimacy_value = 15 }
+		subtract_variable = { which = timurid_legitimacy_value value = 15 }
 		define_advisor = {
 			type = army_reformer
 			skill = 2

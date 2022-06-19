@@ -16,14 +16,14 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			country_event = { id = missions_expanded_events.1 } # global flag
-			#country_event = { id = golden_bull_events.1 } # global flag
+			country_event = { id = golden_bull_events.1 } # global flag
 			set_global_flag = paradox_or_mod_missions_events_flag
 			every_country = {
 				if = {
 					limit = {
 						OR = {
 							country_has_both_paradox_and_me_missions = yes
-							#country_has_both_paradox_and_golden_bull_missions = yes
+							country_has_both_paradox_and_golden_bull_missions = yes
 						}
 					}
 					country_event = { id = paradox_or_mod_missions_events.2 days = 1 }
@@ -57,7 +57,7 @@ country_event = {
 		NOT = { has_country_flag = has_selected_missions_@ROOT }
 		OR = {
 			country_has_both_paradox_and_me_missions = yes
-			#country_has_both_paradox_and_golden_bull_missions = yes
+			country_has_both_paradox_and_golden_bull_missions = yes
 		}
 	}
 

@@ -8,8 +8,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				#area = upper_bavaria_area
-				#area = lower_bavaria_area
 				area = bavaria_area
 				province_id = 66
 				province_id = 67
@@ -32,14 +30,6 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = PRU_holds_all_of_the_highlighted_lands
 				AND = {
-					#upper_bavaria_area = {
-					#	type = all
-					#	country_or_non_sovereign_subject_holds = ROOT
-					#}
-					#lower_bavaria_area = {
-					#	type = all
-					#	country_or_non_sovereign_subject_holds = ROOT
-					#}
 					bavaria_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
@@ -58,22 +48,17 @@ country_decisions = {
 			}
 		}
 		effect = {
-			#upper_bavaria_area = {
-			#	cede_province = BAV
-			#	add_core = BAV
-			#	hidden_effect = { remove_core = ROOT }
-			#}
-			#lower_bavaria_area = {
-			#	cede_province = BAV
-			#	add_core = BAV
-			#	hidden_effect = { remove_core = ROOT }
-			#}
-			#east_bavaria_area = {
-			#	cede_province = BAV
-			#	add_core = BAV
-			#	hidden_effect = { remove_core = ROOT }
-			#}
-			bavaria_area = {
+#			upper_bavaria_area = {
+#				cede_province = BAV
+#				add_core = BAV
+#				hidden_effect = { remove_core = ROOT }
+#			}
+#			lower_bavaria_area = {
+#				cede_province = BAV
+#				add_core = BAV
+#				hidden_effect = { remove_core = ROOT }
+#			}
+#			east_bavaria_area = {
 				cede_province = BAV
 				add_core = BAV
 				hidden_effect = { remove_core = ROOT }
@@ -175,11 +160,10 @@ country_decisions = {
 				desc = PRU_until_germany_is_formed
 				duration = -1
 			}
-			add_adm_power = 75
-			add_dip_power = 75
-			add_mil_power = 75
-			BAV = { add_liberty_desire = -100 }
-		}
+		add_adm_power = 75
+		add_dip_power = 75
+		add_mil_power = 75
+		BAV = { add_liberty_desire = -100 }
 		ai_will_do = {
 			factor = 0
 		}
@@ -803,5 +787,29 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+	}
+	
+	PRU_do_not_integrate_me = {
+		major = no
+		potential = {
+			ai = yes
+			OR = {
+				tag = POL
+				tag = PLC
+			}
+		}
+		provinces_to_highlight = {
+		}
+		allow = {	
+			always = no
+		}
+		effect = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+		do_not_integrate = PRU
+		do_not_integrate = KUR
 	}
 }

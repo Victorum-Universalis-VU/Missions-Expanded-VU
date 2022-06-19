@@ -292,7 +292,7 @@ bur_arles = {
 				}
 				add_claim = ROOT
 			}
-			piemont_area = {
+			piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

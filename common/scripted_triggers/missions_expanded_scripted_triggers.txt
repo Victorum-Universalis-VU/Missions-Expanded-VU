@@ -3,9 +3,7 @@ country_has_both_paradox_and_me_missions = {
 		# Dharma DLC
 		AND = {
 			has_dlc = "Dharma"
-			OR = {
-				tag = VIJ
-			}
+			tag = VIJ
 		}
 		# Origins DLC
 		AND = {
@@ -16,6 +14,7 @@ country_has_both_paradox_and_me_missions = {
 				tag = ETH
 				tag = MAL
 				tag = SON
+				tag = KON
 				# Madagascar Generics
 				tag = SKA
 				tag = MIR
@@ -51,6 +50,7 @@ country_has_both_paradox_and_me_missions = {
 				tag = THU
 				#Balkans
 				tag = SER
+				tag = HUN
 				#France
 				tag = PRO
 			}
@@ -62,7 +62,6 @@ country_has_both_paradox_and_me_missions = {
 				tag = YAR
 				tag = NZH
 				tag = PRM
-				tag = BLO
 				tag = CHR
 				tag = NOV
 				tag = PLT
@@ -100,7 +99,8 @@ country_has_both_paradox_and_me_missions = {
 			has_dlc = "Leviathan"
 			OR = {
 				tag = KHM
-				tag = AYU
+				tag = PLB
+				tag = MAJ
 			}
 		}
 		AND = {
@@ -117,10 +117,7 @@ country_has_both_paradox_and_me_missions = {
 		# Default
 		tag = ARA
 		tag = CAS
-		tag = AST
 		tag = HAB
-		tag = BSH
-		tag = BAV
 		tag = CRI
 		tag = DAN
 		tag = FRA
@@ -143,6 +140,8 @@ country_has_both_paradox_and_me_missions = {
 		tag = TRA
 		tag = TIM
 		tag = PER
+		tag = QAR
+		tag = AKK
 		AND = {
 			tag = SPA
 			is_random_new_world = no
@@ -184,7 +183,6 @@ country_has_both_paradox_and_me_missions = {
 		tag = QOM
 		tag = AFG
 		tag = OTM
-
 		# Japan
 		AND = {
 			OR = {
@@ -199,7 +197,6 @@ country_has_both_paradox_and_me_missions = {
 			}
 		}
 		#Germany
-		tag = HSA
 		tag = PAL
 		tag = KOL
 		tag = TRI
@@ -207,47 +204,59 @@ country_has_both_paradox_and_me_missions = {
 		tag = DTT
 		tag = GER
 		tag = HLR
-			#Pomerania
-			tag = POM
-			tag = STE
-			tag = WOL
-			#Franconia
-			tag = WBG
-			tag = ANS
-			tag = BAM
-			tag = BYT
-			tag = ROT
-			tag = NUM
-			tag = FKN
-			#Westphalia
-			tag = RVA
-			tag = OSN
-			tag = OLD
-			tag = LPP
-			tag = MUN
-			tag = HES
-			tag = BRG
-			tag = NSA
-			tag = KLE
-			tag = FRN
-			tag = AAC
-			tag = WES
-			#Hanover
-			tag = BRU
-			tag = LUN
-			tag = CLB
-			tag = HAN
-			#Swabia
-			tag = WUR
-			tag = BAD
-			tag = ALS
-			tag = MLH
-			tag = KNZ
-			tag = MEM
-			tag = ULM
-			tag = AUG
-			tag = DWT
-			tag = SWA
+		#Pomerania
+		tag = POM
+		tag = STE
+		tag = WOL
+		#Franconia
+		tag = WBG
+		tag = ANS
+		tag = BAM
+		tag = BYT
+		tag = ROT
+		tag = NUM
+		tag = FKN
+		#Westphalia
+		AND = {
+			OR = {
+				tag = RVA
+				tag = OSN
+				tag = OLD
+				tag = LPP
+				tag = MUN
+				tag = HES
+				tag = BRG
+				tag = NSA
+				tag = KLE
+				tag = FRN
+				tag = AAC
+				tag = WES
+			}
+			OR = {
+				primary_culture = hannoverian
+				primary_culture = hessian
+			}
+		}
+		#Hanover
+		tag = BRU
+		tag = LUN
+		tag = CLB
+		tag = HAN
+		#Swabia
+		tag = WUR
+		tag = BAD
+		tag = ALS
+		tag = MLH
+		tag = KNZ
+		tag = MEM
+		tag = ULM
+		tag = DWT
+		tag = SWA
+		#Bavaria
+		tag = BAV
+		tag = ING
+		tag = LBV
+		tag = UBV
 		#Low Countries
 		tag = UTR
 		tag = GEL
@@ -264,6 +273,10 @@ country_has_both_paradox_and_me_missions = {
 		tag = SAR
 		tag = SIC
 		tag = VEN
+		tag = PGA
+		tag = LUC
+		tag = SIE
+		tag = VRN
 		#France
 		tag = BUR
 		tag = FRA
@@ -274,10 +287,38 @@ country_has_both_paradox_and_me_missions = {
 		tag = BUL
 		tag = CRO
 		tag = RAG
-		#Leviathan Patch
+		tag = HUN
+		#Malaya
 		tag = MLC
 		tag = BEI
 		tag = MSA
+		#Spice Islands
+		tag = TER
+		tag = TID
+		#Phillippines
+		tag = PGS
+		tag = TDO
+		tag = MNA
+		tag = PHI #Luzon from FE
+		tag = MAS
+		tag = CEB
+		tag = BTU
+		tag = MGD
+		tag = SUL
+		#Pasai and Aceh
+		tag = PSA
+		tag = ATJ
+		#Java
+		tag = SUN
+		tag = BLI
+		tag = BAN
+		tag = CRB
+		#Tibet
+		tag = TIB
+		tag = GUG
+		tag = UTS
+		tag = KAM
+		tag = PHA
 		##############################################################################################################################
 		## Add other possible countries here.																						##
 		## Remember to add "has_country_flag = use_paradox_missions" to the default missions.										##
@@ -317,6 +358,7 @@ country_gets_japanese_generic_missions = {
 	}
 	OR = {
 		tag = OTM
+		#from FE
 #		tag = HKC
 #		tag = NNC
 #		tag = KNM
@@ -367,7 +409,8 @@ is_evenki_minor = {
 		tag = SOL
 		tag = NVK
 		tag = BRT
-		#tag = EVK
+		#from FE
+#		tag = EVK
 	}
 }
 
@@ -376,7 +419,8 @@ was_evenki_minor = {
 		was_tag = SOL
 		was_tag = NVK
 		was_tag = BRT
-		#was_tag = EVK
+		#from FE
+#		was_tag = EVK
 	}
 }
 
@@ -386,7 +430,8 @@ is_kamchatkan_minor = {
 		tag = HOD
 		tag = CHV
 		tag = KMC
-		#tag = KCH
+		#from FE
+#		tag = KCH
 	}
 }
 
@@ -396,223 +441,37 @@ was_kamchatkan_minor = {
 		was_tag = HOD
 		was_tag = CHV
 		was_tag = KMC
-	#	was_tag = KCH
+		#from FE
+#		was_tag = KCH
 	}
 }
 
 is_italian_minor = {
 	OR = {
-		tag = ABR
-		tag = ADR
-		tag = ALP
-		tag = ALR
-		tag = ANC
 		tag = AQU
-		tag = APU
-		tag = ARE
-		tag = ARR
-		tag = ATI
-		tag = ATR
-		tag = ASD
-		tag = BAI
-		tag = BGM
 		tag = BLG
-		tag = BLL
-		tag = BOB
-		tag = BRD
-		tag = BRX
-		tag = BSC
-		tag = CAG
-		tag = CBR
-		tag = CDA
-		tag = CDC
-		tag = CEN
-		tag = CIE
-		tag = CEV
-		tag = CMN
-		tag = CMO
-		tag = CMR
-		tag = CNL
-		tag = CRP
-		tag = CRR
-		tag = CTG
-		tag = CTN
-		tag = CUI
-		tag = DOV
-		tag = EMR
-		tag = FAB
-		tag = FLG
-		tag = FMO
-		tag = FNL
-		tag = FNZ
-		tag = FRL
-		tag = FTR
-		tag = GLL
-		tag = GRO
-		tag = GRZ
-		tag = GUB
-		tag = GZR
-		tag = IVR
-		tag = LCN
-		tag = LEC
-		tag = LGD
-		tag = LUC
 		tag = MOD
-		tag = MNC
-		tag = MNO
-		tag = MRC
-		tag = MRT
-		tag = MSM
-		tag = MSS
-		tag = MTA
-		tag = MTS
-		tag = MVI
-		tag = NRC
-		tag = NVA
-		tag = NZZ
-		tag = ORV
 		tag = PAR
-		tag = PAV
-		tag = PCZ
 		tag = PDV
-		tag = PGA
-		tag = PIO
-		tag = PRA
-		tag = PSR
-		tag = PST
-		tag = RAV
-		tag = RGO
-		tag = RMG
-		tag = SIE
 		tag = SPL
-		tag = SRA
-		tag = SSV
-		tag = SVN
 		tag = SZO
-		tag = TTO
-		tag = TIV
-		tag = TND
-		tag = TNI
-		tag = TRV
-		tag = TST
-		tag = TTN
-		tag = UMB
 		tag = URB
-		tag = VCL
-		tag = VCZ
-		tag = VLR
-		tag = VLT
-		tag = VRN
-		#from FE
-		#tag = LML
+		tag = JAI
+		tag = MFA
 	}
 }
 
 was_italian_minor = {
 	OR = {
-		tag = ABR
-		tag = ADR
-		tag = ALP
-		tag = ALR
-		tag = ANC
-		tag = AQU
-		tag = APU
-		tag = ARE
-		tag = ARR
-		tag = ATI
-		tag = ATR
-		tag = ASD
-		tag = BAI
-		tag = BGM
-		tag = BLG
-		tag = BLL
-		tag = BOB
-		tag = BRD
-		tag = BRX
-		tag = BSC
-		tag = CAG
-		tag = CBR
-		tag = CDA
-		tag = CDC
-		tag = CEN
-		tag = CIE
-		tag = CEV
-		tag = CMN
-		tag = CMO
-		tag = CMR
-		tag = CNL
-		tag = CRP
-		tag = CRR
-		tag = CTG
-		tag = CTN
-		tag = CUI
-		tag = DOV
-		tag = EMR
-		tag = FAB
-		tag = FLG
-		tag = FMO
-		tag = FNL
-		tag = FNZ
-		tag = FRL
-		tag = FTR
-		tag = GLL
-		tag = GRO
-		tag = GRZ
-		tag = GUB
-		tag = GZR
-		tag = IVR
-		tag = LCN
-		tag = LEC
-		tag = LGD
-		tag = LUC
-		tag = MOD
-		tag = MNC
-		tag = MNO
-		tag = MRC
-		tag = MRT
-		tag = MSM
-		tag = MSS
-		tag = MTA
-		tag = MTS
-		tag = MVI
-		tag = NRC
-		tag = NVA
-		tag = NZZ
-		tag = ORV
-		tag = PAR
-		tag = PAV
-		tag = PCZ
-		tag = PDV
-		tag = PGA
-		tag = PIO
-		tag = PRA
-		tag = PSR
-		tag = PST
-		tag = RAV
-		tag = RGO
-		tag = RMG
-		tag = SIE
-		tag = SGM
-		tag = SPL
-		tag = SRA
-		tag = SSV
-		tag = SVN
-		tag = SZO
-		tag = TTO
-		tag = TIV
-		tag = TND
-		tag = TNI
-		tag = TRV
-		tag = TST
-		tag = TTN
-		tag = UMB
-		tag = URB
-		tag = VCL
-		tag = VCZ
-		tag = VLR
-		tag = VLT
-		tag = VRN
-		#from FE
-		#tag = LML
+		was_tag = AQU
+		was_tag = BLG
+		was_tag = MOD
+		was_tag = PAR
+		was_tag = PDV
+		was_tag = SPL
+		was_tag = SZO
+		was_tag = URB
+		was_tag = JAI
+		was_tag = MFA
 	}
 }

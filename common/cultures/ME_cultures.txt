@@ -402,7 +402,7 @@ east_asian = {
 	graphical_culture = asiangfx
 	
 	chaoxian = {
-		primary = JOS
+		#primary = JOS
 		dynasty_names = { 
 			Yi Wang Kim Shin Song Pak Chae Gang Jeong Jang Yun Han Hong Yu Ki
 		}
@@ -471,7 +471,7 @@ british = {
 	occitain_UKS = {
 		primary = UKS
 	}
-#added missing french cultures
+	#added missing french cultures
 	arpitan_UKS = {
 		primary = UKS
 	}
@@ -520,7 +520,7 @@ british = {
 			Conredeu Conuallon Cynwallon Conmarch Cynfarch Convelin Cynfelyn Corguethen Courantgern 
 			Courantmonoc Culmin Custent Constans Custentin Constantine Dauid Deniel Daniel Denis Deroch 
 			Derrien Deui David Deurhoiarn Domnoret Domuel Dywel Donual Donald Donuallon Dyfnwallon Drogon 
-			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispo? Yves 
+			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispo Yves 
 			Estienne Etgual Eudon Otto Euhocar Euhoiarn Eusebi Eusebius Even Eugene Evrard Everard Farinmael
 			Ffernfael Ferant Ferdinand Fracan Fragan Framual Fransaz Francis Frioc Friog Garmon German 
 			Geofroi Geralt Gerald Gereint Gerontius Gestin Justin Gilbert Godefroi Godfrey Goennoc Gouesnon 
@@ -539,11 +539,11 @@ british = {
 			Iliud Inisian Iocilin Joscelin Iodoc Ionas Jonas Iosep Joseph Iudcum Iuduallon Idwallon 
 			Ithel Iudicael Judicael Iudnerth Idnerth Iudnimet Ednyfed Iustoc Iudoc Iudual Idwal Iumael 
 			Iunceneu Iunuocon Iunmonoc Jord George Leucum Loi Lorens Laurence Louenan Loumarch Llywarch 
-			Iudhael Louis Maelcon Maelgwn Maeldo? Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
-			Marthin Martin Matheudo? Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
+			Iudhael Louis Maelcon Maelgwn Maeldo Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
+			Marthin Martin Matheudo Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
 			Meldroc Meriadoc Mermin Merfyn Meugan Mawgan Meven Michel Michael Morcant Morgan Morcondeleu 
 			Morgen Morguethen Morhaetho Mormarch Morfarch Morvan Mortiern Neven Nicolas Nicholas 
-			Nodhoiarn Nomino? Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
+			Nodhoiarn Nomino Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
 			Pasquitan Patern Paternus Petroc Phelippe Phillip Piran Prigent Primael Primarhoc Putrael 
 			Peter Ralf Raoul Ralph Renan Resmen Riacet Ribald Ricart Richard Riceneu Ricenus Richwin 
 			Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rhiwallon Rodric Roderick Roenualloc 
@@ -582,43 +582,43 @@ british = {
 	canadian = {
 		primary = CAN
 	}
-	#quebecois = {
-	#	primary = QBC
-	#}
-	#dynasty_names = {
-	#	"de Valois" "de Bourbon" "de la Tour" "d'Anjou" 
-	#	"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
-	#	"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" "de Bourgogne"
-	#	"de Castellane" "d'Auvergne" "de Metz" 
-	#	#CKII Frankish
-	#	"de Laval" "de la Tour du Pin" "de Broglie"
-	#	"de Montesquiou" "de Courtenay" "d'Harcourt" "de La Croix" "Le Tellier"
-	#	"de Rochechouart" "d'Aumont" "de Vergy" "de Saboulin" "de Gramont" "de Bissy"
-	#	"de Barrau" "de La Fayette" "d'Armagnac" "du Quenoy" "de Ficquelmont"
-	#	"de Talleyrand" "de Saintignon" "von Luxemburg" "de Montmorency" "de Savoie"
-	#	"de Vaudemont" 	}
-	#male_names = {
-	#	Adrien Aimery Alain 
-	#	Aldebert Alphonse Amaury Ancel Andra Archambaud Arnaud 
-	#	Arnault Arnoul Aubry Aymar Baudouin Bernard Bertrand Bohemond 
-	#	Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques 
-	#	Gaucher Gaucelin Gauthier Geoffroi Gilbert Gilles Godefroi
-	#	Guichard Guiges Guilhem Guillaume Guy Hamelin Henri Herbert Hildebert Hugues Humbert Jacques 
-	#	Jean Jourdain Julien Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
-	#	Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault 
-	#	Thierry Thomas Valeran Yves
-	#}
-	#female_names = {
-	#	Adalmode Adelaide Adelinde 
-	#	Alice Agathe
-	#	Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde 
-	#	Belleassez 		Berthe Blanche Bonne Bourgogne Bourguigne 
-	#	Charlotte Constance Denise Douce Echive Eglantine
-	#	Elisabeth Emma Ermengarde Ermessinde Esclarmonde 
-	#	Euphrosine Eustachie Eve Gerberge Guillaumette Helvis Hodierne Ide 		Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
-	#	Mascarose Mathilde Pernelle Perinne Pernette Plaisance 
-	#	Raymonde Sarrazine Sophie Sybille Tiburge Valence Yolande
-	#}
+	quebecois = {
+		primary = QUE
+	}
+	dynasty_names = {
+		"de Valois" "de Bourbon" "de la Tour" "d'Anjou" 
+		"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
+		"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" "de Bourgogne"
+		"de Castellane" "d'Auvergne" "de Metz" 
+		#CKII Frankish
+		"de Laval" "de la Tour du Pin" "de Broglie"
+		"de Montesquiou" "de Courtenay" "d'Harcourt" "de La Croix" "Le Tellier"
+		"de Rochechouart" "d'Aumont" "de Vergy" "de Saboulin" "de Gramont" "de Bissy"
+		"de Barrau" "de La Fayette" "d'Armagnac" "du Quenoy" "de Ficquelmont"
+		"de Talleyrand" "de Saintignon" "von Luxemburg" "de Montmorency" "de Savoie"
+		"de Vaudemont" 	}
+	male_names = {
+		Adrien Aimery Alain 
+		Aldebert Alphonse Amaury Ancel Andra Archambaud Arnaud 
+		Arnault Arnoul Aubry Aymar Baudouin Bernard Bertrand Bohemond 
+		Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques 
+		Gaucher Gaucelin Gauthier Geoffroi Gilbert Gilles Godefroi
+		Guichard Guiges Guilhem Guillaume Guy Hamelin Henri Herbert Hildebert Hugues Humbert Jacques 
+		Jean Jourdain Julien Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
+		Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault 
+		Thierry Thomas Valeran Yves
+	}
+	female_names = {
+		Adalmode Adelaide Adelinde 
+		Alice Agathe
+		Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde 
+		Belleassez 		Berthe Blanche Bonne Bourgogne Bourguigne 
+		Charlotte Constance Denise Douce Echive Eglantine
+		Elisabeth Emma Ermengarde Ermessinde Esclarmonde 
+		Euphrosine Eustachie Eve Gerberge Guillaumette Helvis Hodierne Ide 		Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
+		Mascarose Mathilde Pernelle Perinne Pernette Plaisance 
+		Raymonde Sarrazine Sophie Sybille Tiburge Valence Yolande
+	}
 }
 	
 
@@ -634,6 +634,76 @@ caucasian = {
 		female_names = {
 			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis 
 			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina 
+		}
+	}
+}
+
+iranian	= {
+	graphical_culture = muslimgfx
+	khwarezmians = {
+		primary = KHI
+		dynasty_names = {
+			"Arabshahid" "Qungrat" "Bayan Arslan" "Mongke Cheren" "Mongke Bayar" "Suren Chinua" "Oyugun Nasan"
+			"Bora Tolui" Qadancher Batulun Batutai Bokejin Arighqan Burilgiteni
+			Bayarnai Subegene Tegusdai Yekedei
+		}
+		male_names = {
+			Abdul-Aziz Abdul-Karim Abdul-Mumin Abdul-Rahim Abdulla Abu Said Abu'l-Feiz Abu'l-Ghazi Abu'l-Khayr 
+			Abu'l-Mansur Agatay Alim Anusha Arab Muhammad Avanesh Bahadur Bakht Baqi Muhammad Budjuga Bureke 
+			Djuchi Dost Habash Hadji Hadji Muhammad Hassan Quli Haydar Imam Quli Ilbars Irdana Isfandiyar Isim 
+			Janibek Kal Khudayar Khudaydad Kochkunju Muhammad Muhammad Amin Muhammad Hakim Muhammad Rahim Nadir 
+			Muhammad Narbuta Navruz Ahmad Niyaz Pir Muhammad Sanjar Sevinch Shadi Shahmurad Shahrukh Shaykh 
+			Subhan Quli Sufyan Suleyman Tahir Timur Ubaydulla Umar Vali Vali Muhammad Yadgar Daniyal Haidar 
+			Iskandar
+		}
+		female_names = {
+			Hooda Malaika Munira Rabiya Rafiqa Ksyusha Sabina Zarina Hatyra Gulnaza Selbi Aziza Jeren Zeynab Myahri
+		}
+	}
+	tajiks = {
+		primary = SHY
+		male_names = {
+			Abdul-Aziz Abdul-Karim Abdul-Mumin Abdul-Rahim Abdulla Abu Said Abu'l-Feiz Abu'l-Ghazi Abu'l-Khayr 
+			Abu'l-Mansur Agatay Alim Anusha Arab Muhammad Avanesh Bahadur Bakht Baqi Muhammad Budjuga Bureke 
+			Djuchi Dost Habash Hadji Hadji Muhammad Hassan Quli Haydar Imam Quli Ilbars Irdana Isfandiyar Isim 
+			Janibek Kal Khudayar Khudaydad Kochkunju Muhammad Muhammad Amin Muhammad Hakim Muhammad Rahim Nadir 
+			Muhammad Narbuta Navruz Ahmad Niyaz Pir Muhammad Sanjar Sevinch Shadi Shahmurad Shahrukh Shaykh 
+			Subhan Quli Sufyan Suleyman Tahir Timur Ubaydulla Umar Vali Vali Muhammad Yadgar Daniyal Haidar 
+			Iskandar
+		}
+		female_names = {
+			Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+		}
+	}
+	al_iraqiya_arabic_PER = { #Mashriqi Arab
+		primary = IRQ
+		dynasty_names = {
+			"Saadun" "Jalili" "Hasanid" "Sabah" Javid
+			"Yaruba" "al-Said" "Usfurid" "Jarwanid" "Hashim"
+		}
+		male_names = {
+			Sulayman 'Abdallâh 'Alî 'Umar Dâ'ûd Hasan Sa'îd 'Abbas 'Abd al-Karim 'Abd al-Rahman Anwar Atuf Bakr 
+			Faruq Fouad Hakim Harun Hikmat Hisham Husayn Isma'il Jafar Jamaal Karim Khalil Malîk Mirza Muhammad 
+			Qasim Rashîd Rusul Shimun Tarîq Usama Yasir Yusuf Zaid Zîyad Zulqifar Fahd Mustafa
+		}
+		female_names = {
+			Badr Fatimah Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima 
+			Jamila Khadija Majida Mariam Maria Nabila Nura Radiya Rana Sacmis Safiya 
+			Samira Suhaila Tawaret Taweret Titi Thuriya Zara Zahra Zahra
+		}
+	}
+	dagestani_PER = {
+		primary = GAZ
+		dynasty_names = {
+			Shamkhal Kumukh
+		}
+		male_names = {
+			Surkhay Eldar Budai Alibek Aidemer Magomed Hassan Khalil Bahram Farrukhsiyar Ghazi Farrukhsiyar Mahmud Ghazi
+		}
+		female_names = {
+			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis 
+			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina 
+			
 		}
 	}
 }

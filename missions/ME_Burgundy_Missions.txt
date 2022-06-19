@@ -435,7 +435,7 @@ BUR_missions_2 = {
 			}
 		}
 		effect = {
-			238 = {
+			greater_london_area = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -459,10 +459,17 @@ BUR_missions_2 = {
 		required_missions = { BUR_eng_1 }
 		position = 11
 		provinces_to_highlight = {
-			area = south_east_area
+			OR = {
+				area = south_east_area
+				area = greater_london_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			greater_london_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

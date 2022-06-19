@@ -180,14 +180,14 @@ BRG_Missions_5 = {
 			OR = {
 				local_autonomy_above_min = 10
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved_by_owner = 3 }
+				NOT = { num_of_times_improved = 3 }
 			}
 		}
 		trigger = {
 			4775 = {
 				owned_by = ROOT
 				NOT = { local_autonomy_above_min = 10 }
-				num_of_times_improved_by_owner = 3
+				num_of_times_improved = 3
 			}
 		}
 		effect = {
