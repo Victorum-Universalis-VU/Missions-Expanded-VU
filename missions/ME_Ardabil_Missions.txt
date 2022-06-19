@@ -3,16 +3,10 @@ ARL_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = ARL
-			AND = {
-				tag = PER
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
+		tag = ARL
 	}
 	has_country_shield = yes
-	
+
 	ARL_Support_of_the_Qizilbash = {
 		icon = mission_persian_soldiers
 		required_missions = { }
@@ -38,7 +32,7 @@ ARL_missions_1 = {
 			}
 		}
 	}
-	
+
 	ARL_Revenge_on_Shirvanshah = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { ARL_Rise_of_Safavids }
@@ -58,7 +52,7 @@ ARL_missions_1 = {
 			4299 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4340 = {
+			4305 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -76,7 +70,7 @@ ARL_missions_1 = {
 			}
 		}
 	}
-	
+
 	ARL_Pacify_the_armenians = {
 		icon = mission_cannons_firing
 		required_missions = { ARL_Revenge_on_Shirvanshah ARL_Capture_Tabriz }
@@ -86,7 +80,7 @@ ARL_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			armenia_area = {	
+			armenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -164,7 +158,7 @@ ARL_missions_1 = {
 			}
 		}
 	}
-	
+
 	ARL_conquer_georgia = {
 		icon = mission_assemble_an_army
 		required_missions = { ARL_Pacify_the_armenians }
@@ -211,7 +205,7 @@ ARL_missions_1 = {
 			country_event = { id = ME_Ardabil_Events.6 }
 		}
 	}
-	
+
 	ARL_the_third_force = {
 		icon = mission_asian_trader
 		required_missions = { ARL_conquer_georgia ARL_adopt_persian_administration }
@@ -305,16 +299,10 @@ ARL_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = ARL
-			AND = {
-				tag = PER
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
+		tag = ARL
 	}
 	has_country_shield = yes
-	
+
 	ARL_Foundation_of_an_empire = {
 		icon = mission_empire
 		required_missions = { }
@@ -352,7 +340,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_Rise_of_Safavids = {
 		icon = mission_unite_home_region
 		required_missions = { ARL_Foundation_of_an_empire ARL_Gilan ARL_Support_of_the_Qizilbash }
@@ -364,9 +352,18 @@ ARL_missions_2 = {
 					has_ruler_flag = ARL_ismail_ruling
 				}
 				AND = {
-					ADM = 5
-					DIP = 5
-					MIL = 5
+					OR = {
+						ADM = 5
+						monthly_adm = 7
+					}
+					OR = {
+						DIP = 5
+						monthly_dip = 7
+					}
+					OR = {
+						MIL = 5
+						monthly_mil = 7
+					}
 				}
 			}
 		}
@@ -388,7 +385,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_Capture_Tabriz = {
 		icon = mission_mosque
 		required_missions = { ARL_Rise_of_Safavids ARL_Partition_Biapas ARL_Revenge_on_Shirvanshah }
@@ -426,13 +423,6 @@ ARL_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			mardin_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			al_jazira_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -442,7 +432,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_Pacification_of_the_sheep = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { ARL_conquer_georgia ARL_Capture_Tabriz }
@@ -450,7 +440,6 @@ ARL_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = erzurum_area
-				area = mardin_area
 				area = north_kurdistan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -458,10 +447,6 @@ ARL_missions_2 = {
 		trigger = {
 			NOT = { exists = AKK }
 			erzurum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mardin_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -477,12 +462,6 @@ ARL_missions_2 = {
 					duration = 14600
 				}
 			}
-			mardin_area = {
-				add_province_modifier = {
-					name = ALR_recruitment_of_turkic_shias
-					duration = 14600
-				}
-			}
 			north_kurdistan_area = {
 				add_province_modifier = {
 					name = ALR_recruitment_of_turkic_shias
@@ -491,7 +470,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_Shia_Propaganda = {
 		icon = mission_mosque
 		required_missions = { ARL_Pacification_of_the_sheep }
@@ -520,7 +499,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_adopt_persian_administration = {
 		icon = admin_missions_icon
 		required_missions = { }
@@ -546,7 +525,7 @@ ARL_missions_2 = {
 			}
 		}
 	}
-	
+
 	ARL_conversion_of_mosques = {
 		icon = mission_mosque
 		required_missions = { ARL_Shia_state_religion }
@@ -574,16 +553,10 @@ ARL_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = ARL
-			AND = {
-				tag = PER
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
+		tag = ARL
 	}
 	has_country_shield = yes
-	
+
 	ARL_Gilan = {
 		icon = mission_alliances
 		required_missions = { }
@@ -627,10 +600,10 @@ ARL_missions_3 = {
 				KRY = {
 					add_historical_friend = ROOT
 				}
-			}			
+			}
 		}
 	}
-	
+
 	ARL_Partition_Biapas = {
 		icon = mission_conquer_kannauj
 		required_missions = { ARL_Rise_of_Safavids ARL_Gilan }
@@ -676,7 +649,7 @@ ARL_missions_3 = {
 			add_mil_power = 100
 		}
 	}
-	
+
 	ARL_Shahanshah = {
 		icon = me_mission_shiny_crown
 		required_missions = { ARL_Capture_Tabriz }
@@ -691,7 +664,7 @@ ARL_missions_3 = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						religion = shiite 
+						religion = shiite
 						culture_group = iranian
 					}
 					add_core = ROOT
@@ -700,7 +673,7 @@ ARL_missions_3 = {
 			custom_tooltip = ARL_Tooltip.9
 		}
 	}
-	
+
 	ARL_The_Persian_Gulf_Trade = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { ARL_Iraq }
@@ -720,7 +693,7 @@ ARL_missions_3 = {
 			}
 		}
 	}
-	
+
 	ARL_Unexpected_contender = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { ARL_Pacification_of_the_sheep }
@@ -749,7 +722,7 @@ ARL_missions_3 = {
 			}
 		}
 	}
-	
+
 	ARL_Shia_state_religion = {
 		icon = mission_mosque
 		required_missions = { }
@@ -771,7 +744,7 @@ ARL_missions_3 = {
 			}
 		}
 	}
-	
+
 	ARL_invite_shia_scholars = {
 		icon = me_mission_muslim_priest
 		required_missions = { ARL_Shia_state_religion }
@@ -785,7 +758,7 @@ ARL_missions_3 = {
 						value = 25
 					}
 					any_owned_province = {
-						religion = shiite 
+						religion = shiite
 					}
 				}
 			}
@@ -794,7 +767,7 @@ ARL_missions_3 = {
 					has_dlc = "Cradle of Civilization"
 				}
 				capital_scope = {
-					has_province_modifier = invite_minorities_modifier 
+					has_province_modifier = invite_minorities_modifier
 				}
 			}
 		}
@@ -805,7 +778,7 @@ ARL_missions_3 = {
 			}
 		}
 	}
-	
+
 	ARL_Conversion_of_iran = {
 		icon = mission_hands_praying
 		required_missions = { ARL_invite_shia_scholars ARL_conversion_of_mosques }
@@ -821,18 +794,18 @@ ARL_missions_3 = {
 			religious_unity = 0.9
 			khorasan_region = {
 				type = all
-				religion = shiite 
+				religion = shiite
 			}
 			persia_region = {
 				type = all
-				religion = shiite 
+				religion = shiite
 			}
 		}
 		effect = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						religion = shiite 
+						religion = shiite
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }
 					}
@@ -849,16 +822,10 @@ ARL_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = ARL
-			AND = {
-				tag = PER
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
+		tag = ARL
 	}
 	has_country_shield = yes
-	
+
 	ARL_Luristan = {
 		icon = mission_persian_soldiers
 		required_missions = { ARL_Into_Persia }
@@ -907,7 +874,7 @@ ARL_missions_4 = {
 			}
 		}
 	}
-	
+
 	ARL_Iraq = {
 		icon = mission_the_tamil_trade_guilds
 		required_missions = { ARL_Luristan ARL_Capture_Tabriz }
@@ -948,7 +915,7 @@ ARL_missions_4 = {
 			country_event = { id = ME_Ardabil_Events.7 }
 		}
 	}
-	
+
 	ARL_Fars = {
 		icon = me_mission_muslim_family
 		required_missions = { ARL_Isfahan }
@@ -960,7 +927,7 @@ ARL_missions_4 = {
 				area = persian_gulf_coast
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+		}
 		trigger = {
 			kerman_area = {
 				type = all
@@ -983,7 +950,7 @@ ARL_missions_4 = {
 			}
 		}
 	}
-	
+
 	ARL_Flow_from_hormuz = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { ARL_Fars ARL_The_Persian_Gulf_Trade }
@@ -1000,7 +967,7 @@ ARL_missions_4 = {
 			add_years_of_income = 1
 		}
 	}
-	
+
 	ARL_Gholams = {
 		icon = mission_non-western_soldiers
 		required_missions = { ARL_Qurchi_guard }
@@ -1027,17 +994,14 @@ ARL_missions_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			custom_trigger_tooltip = {
-				tooltip = ARL_Tooltip.5
-				area_has_total_development_of_type = {
-					type = manpower
-					1 = 4302
-					2 = 419
-					3 = 2205
-					4 = 2202
-					5 = 420
-					total = 20
-				}
+			area_has_total_development_of_type = {
+				type = manpower
+				1 = 4302
+				2 = 419
+				3 = 2205
+				4 = 2202
+				5 = 420
+				total = 20
 			}
 		}
 		effect = {
@@ -1054,16 +1018,10 @@ ARL_missions_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = ARL
-			AND = {
-				tag = PER
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
+		tag = ARL
 	}
 	has_country_shield = yes
-	
+
 	ARL_Into_Persia = {
 		icon = mission_conquer_maharashtra
 		required_missions = { }
@@ -1105,7 +1063,7 @@ ARL_missions_5 = {
 			}
 		}
 	}
-	
+
 	ARL_Isfahan = {
 		icon = mission_crusade_for_varna
 		required_missions = { ARL_Into_Persia }
@@ -1194,7 +1152,7 @@ ARL_missions_5 = {
 			}
 		}
 	}
-	
+
 	ARL_Graveyard = {
 		icon = mission_central_asian_city
 		required_missions = { ARL_Isfahan }
@@ -1238,7 +1196,7 @@ ARL_missions_5 = {
 			}
 		}
 	}
-	
+
 	ARL_Qurchi_guard = {
 		icon = mission_persian_soldiers
 		required_missions = { }
@@ -1261,7 +1219,7 @@ ARL_missions_5 = {
 			}
 		}
 	}
-	
+
 	ARL_Tupchi = {
 		icon = mission_cannons_firing
 		required_missions = { ARL_Qurchi_guard }

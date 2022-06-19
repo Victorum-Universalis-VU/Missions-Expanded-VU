@@ -1,0 +1,35 @@
+gl_democrats = { #Added to avoid errors with Greece MT, modifiers are very much arbitrary
+
+	monarch_power = ADM
+	always = yes
+	
+	modifier = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+		global_unrest = -1
+	}
+}
+
+gl_aristocrats = {
+
+	monarch_power = DIP
+	always = yes
+	
+	modifier = {
+		diplomatic_reputation = 2
+		defensiveness = 0.10
+		advisor_cost = 0.1
+	}
+}
+
+gl_oligarchs = {
+
+	monarch_power = MIL
+	always = yes
+	
+	modifier = {
+		cavalry_cost = -0.1
+		infantry_fire = 0.1
+		max_absolutism = -10
+	}
+}

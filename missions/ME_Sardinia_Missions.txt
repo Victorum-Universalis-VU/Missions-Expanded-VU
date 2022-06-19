@@ -11,15 +11,9 @@ sardinia_missions_1 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -40,8 +34,9 @@ sardinia_missions_1 = {
 				NOT = { owned_by = ROOT }
 				NOT = { base_manpower = 5 }
 				AND = {
-					NOT = { has_building = coastal_defence }
-					NOT = { has_building = naval_battery }
+					NOT = { has_building = naval_base }
+					NOT = { has_building = naval_arsenal }
+					NOT = { has_building = coastal_artillery }
 					NOT = { has_shipyard_building_trigger = yes }
 					NOT = { has_dock_building_trigger = yes }
 				}
@@ -52,8 +47,9 @@ sardinia_missions_1 = {
 				owned_by = ROOT
 				base_manpower = 5
 				OR = {
-					has_building = coastal_defence
-					has_building = naval_battery
+					has_building = naval_base
+					has_building = naval_arsenal
+					has_building = coastal_artillery
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
@@ -106,8 +102,9 @@ sardinia_missions_1 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				AND = {
-					NOT = { has_building = coastal_defence }
-					NOT = { has_building = naval_battery }
+					NOT = { has_building = naval_base }
+					NOT = { has_building = naval_arsenal }
+					NOT = { has_building = coastal_artillery }
 				}
 				NOT = { fort_level = 2 }
 			}
@@ -115,8 +112,9 @@ sardinia_missions_1 = {
 				corsica_sardinia_area = {
 					owned_by = ROOT
 					OR = {
-						has_building = coastal_defence
-						has_building = naval_battery
+						has_building = naval_base
+						has_building = naval_arsenal
+						has_building = coastal_artillery
 					}
 					fort_level = 2
 				}
@@ -126,8 +124,9 @@ sardinia_missions_1 = {
 			corsica_sardinia_area = {
 				owned_by = ROOT
 				OR = {
-					has_building = coastal_defence
-					has_building = naval_battery
+					has_building = naval_base
+					has_building = naval_arsenal
+					has_building = coastal_artillery
 				}
 				fort_level = 2
 			}
@@ -294,15 +293,9 @@ sardinia_missions_2 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -559,9 +552,11 @@ sardinia_missions_2 = {
 			sar_naval_preparation
 		}
 		provinces_to_highlight = {
-			AND = {
-				area = sicily_area
-				NOT = { province_id = 126 }
+			OR = {
+				AND = {
+					area = sicily_area
+					NOT = { province_id = 126 }
+				}
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -628,15 +623,9 @@ sardinia_missions_3 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -806,15 +795,9 @@ sardinia_missions_4 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -1014,15 +997,9 @@ sardinia_missions_5 = {
 					tag = SPI
 					AND = {
 						tag = ITA
-						NOT = {
-							calc_true_if = {
-								amount = 2
-								was_tag = TUS
-								was_tag = TTS
-								was_tag = SPI
-								was_tag = LVN
-							}
-						}
+						NOT = { was_tag = TTS }
+						NOT = { was_tag = TUS }
+						country_was_not_more_than_one_italian_formable = yes
 					}
 				}
 			}
@@ -1044,7 +1021,7 @@ sardinia_missions_5 = {
 			OR = {
 				devastation = 1
 				unrest = 1
-				NOT = { num_of_times_improved_by_owner = 2 }
+				NOT = { num_of_times_improved = 2 }
 				NOT = { owned_by = ROOT }
 			}
 		}
@@ -1057,19 +1034,19 @@ sardinia_missions_5 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 			4735 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 			2986 = {
 				owned_by = ROOT
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
-				num_of_times_improved_by_owner = 2
+				num_of_times_improved = 2
 			}
 		}
 		effect = {

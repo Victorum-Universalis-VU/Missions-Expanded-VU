@@ -1768,16 +1768,18 @@ Japan_missions_4 = {
 						has_building = fort_16th
 						has_building = fort_17th
 						has_building = fort_18th
-						has_building = coastal_defence
-						has_building = naval_battery
+						has_building = naval_base
+						has_building = naval_arsenal
+						has_building = coastal_artillery
 						area_for_scope_province = {
 							OR = {
 								has_building = fort_15th
 								has_building = fort_16th
 								has_building = fort_17th
 								has_building = fort_18th
-								has_building = coastal_defence
-								has_building = naval_battery
+								has_building = naval_base
+								has_building = naval_arsenal
+								has_building = coastal_artillery
 							}
 						}
 					}
@@ -1795,16 +1797,18 @@ Japan_missions_4 = {
 						has_building = fort_16th
 						has_building = fort_17th
 						has_building = fort_18th
-						has_building = coastal_defence
-						has_building = naval_battery
+						has_building = naval_base
+						has_building = naval_arsenal
+						has_building = coastal_artillery
 						area_for_scope_province = {
 							OR = {
 								has_building = fort_15th
 								has_building = fort_16th
 								has_building = fort_17th
 								has_building = fort_18th
-								has_building = coastal_defence
-								has_building = naval_battery
+								has_building = naval_base
+								has_building = naval_arsenal
+								has_building = coastal_artillery
 							}
 						}
 					}
@@ -2453,8 +2457,9 @@ Japan_missions_5 = {
 				value = 15
 				NOT = { region = japan_region }
 				OR = {
-					has_building = coastal_defence
-					has_building = naval_battery
+					has_building = naval_base
+					has_building = naval_arsenal
+					has_building = coastal_artillery
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
@@ -2473,8 +2478,9 @@ Japan_missions_5 = {
 					limit = {
 						NOT = { region = japan_region }
 						OR = {
-							has_building = coastal_defence
-							has_building = naval_battery
+							has_building = naval_base
+							has_building = naval_arsenal
+							has_building = coastal_artillery
 							has_shipyard_building_trigger = yes
 							has_dock_building_trigger = yes
 						}

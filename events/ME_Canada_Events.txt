@@ -274,10 +274,10 @@ country_event = {
 			}
 		}
 		add_prestige = -20
-#		create_subject = { #Would cause conflict with VU ?
-#			subject_type = autonomous_dominion
-#			subject = FROM
-#		}
+		create_subject = {
+			subject_type = autonomous_dominion
+			subject = FROM
+		}
 	}
 
 	option = {
@@ -897,10 +897,10 @@ country_event = {
 						subject_type = native_reserve
 					}
 				}
-#				create_subject = {
-#					subject_type = native_reserve
-#					subject = FROM
-#				}
+				create_subject = {
+					subject_type = native_reserve
+					subject = FROM
+				}
 			}
 			else = {
 				vassalize = ROOT
@@ -1038,7 +1038,7 @@ country_event = {
 			override_country_name = quebeclowercanada
 			hidden_effect = {
 				add_country_modifier = {
-					name = can_canadien_revolution
+					name = can_quebecois_revolution
 					duration = 3650
 				}
 				ROOT = {
@@ -2095,8 +2095,8 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_canadien_party_appeased
-		set_country_flag = can_canadien_party_appeased
+		clr_country_flag = can_quebecois_party_appeased
+		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
 			limit = { culture = canadien }
 			add_local_autonomy = 10
@@ -2199,8 +2199,8 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_canadien_party_appeased
-		set_country_flag = can_canadien_party_appeased
+		clr_country_flag = can_quebecois_party_appeased
+		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
 			limit = { culture = canadien }
 			add_local_autonomy = 10
@@ -2303,8 +2303,8 @@ country_event = {
 			factor = 50
 		}
 
-		clr_country_flag = can_canadien_party_appeased
-		set_country_flag = can_canadien_party_appeased
+		clr_country_flag = can_quebecois_party_appeased
+		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
 			limit = { culture = canadien }
 			add_local_autonomy = 10
@@ -2584,7 +2584,7 @@ country_event = {
 			add_government_reform = oligarchy_reform
 			hidden_effect = {
 				add_country_modifier = {
-					name = can_canadien_revolution
+					name = can_quebecois_revolution
 					duration = 3650
 				}
 				CAN = {
@@ -3318,17 +3318,17 @@ country_event = {
 	title = ME_Canada_Events.47.T
 	desc = ME_Canada_Events.47.D
 	picture = {
-        trigger = {
-            has_dlc = "American Dream"
-        }
-        picture = COLONIZATION_eventPicture
-    }
-    picture = {
-        trigger = {
-            NOT = { has_dlc = "American Dream" }
-        }
-        picture = COLONIZATION_eventPicture
-    }
+		trigger = {
+			has_dlc = "American Dream"
+		}
+		picture = COLONIZATION_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "American Dream" }
+		}
+		picture = COLONIZATION_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -3602,17 +3602,17 @@ country_event = {
 	title = ME_Canada_Events.52.T
 	desc = ME_Canada_Events.52.D
 	picture = {
-        trigger = {
-            has_dlc = "El Dorado"
-        }
-        picture = SIERRA_DE_LA_PLATA_eventPicture
-    }
-    picture = {
-        trigger = {
-            NOT = { has_dlc = "El Dorado" }
-        }
-        picture = PRAYING_eventPicture
-    }
+		trigger = {
+			has_dlc = "El Dorado"
+		}
+		picture = SIERRA_DE_LA_PLATA_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "El Dorado" }
+		}
+		picture = PRAYING_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -3731,17 +3731,17 @@ country_event = {
 	title = ME_Canada_Events.53.T
 	desc = ME_Canada_Events.53.D
 	picture = {
-        trigger = {
-            has_dlc = "El Dorado"
-        }
-        picture = SIERRA_DE_LA_PLATA_eventPicture
-    }
-    picture = {
-        trigger = {
-            NOT = { has_dlc = "El Dorado" }
-        }
-        picture = TRADEGOODS_eventPicture
-    }
+		trigger = {
+			has_dlc = "El Dorado"
+		}
+		picture = SIERRA_DE_LA_PLATA_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "El Dorado" }
+		}
+		picture = TRADEGOODS_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -5158,11 +5158,11 @@ province_event = {
 	trigger = {
 		OR = {
 			AND = {
-				has_province_modifier = can_canadien_content
+				has_province_modifier = can_quebecois_content
 				unrest = 0.1
 			}
 			AND = {
-				has_province_modifier = can_canadien_discontent
+				has_province_modifier = can_quebecois_discontent
 				NOT = { unrest = 0.1 }
 			}
 		}
@@ -5172,18 +5172,18 @@ province_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_province_modifier = can_canadien_content
+					has_province_modifier = can_quebecois_content
 				}
-				remove_province_modifier = can_canadien_content
+				remove_province_modifier = can_quebecois_content
 				add_province_modifier = {
-					name = can_canadien_discontent
+					name = can_quebecois_discontent
 					duration = -1
 				}
 			}
 			else = {
-				remove_province_modifier = can_canadien_discontent
+				remove_province_modifier = can_quebecois_discontent
 				add_province_modifier = {
-					name = can_canadien_content
+					name = can_quebecois_content
 					duration = -1
 				}
 			}
@@ -5249,13 +5249,13 @@ country_event = {
 
 	trigger = {
 		faction_influence = {
-			faction = can_canadien_party
+			faction = can_quebecois_party
 			influence = 30
 		}
 		AND = {
-			NOT = { has_country_flag = canada_canadien_party_1 }
-			NOT = { has_country_flag = canada_canadien_party_2 }
-			NOT = { has_country_flag = canada_canadien_party_3 }
+			NOT = { has_country_flag = canada_quebecois_party_1 }
+			NOT = { has_country_flag = canada_quebecois_party_2 }
+			NOT = { has_country_flag = canada_quebecois_party_3 }
 		}
 	}
 
@@ -5268,27 +5268,27 @@ country_event = {
 			random_list = {
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_canadien_party_1 }
+						NOT = { has_country_flag = canada_quebecois_party_1 }
 					}
-					set_country_flag = canada_canadien_party_1
+					set_country_flag = canada_quebecois_party_1
 					country_event = {
 						id = ME_Canada_Events.32
 					}
 				}
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_canadien_party_2 }
+						NOT = { has_country_flag = canada_quebecois_party_2 }
 					}
-					set_country_flag = canada_canadien_party_2
+					set_country_flag = canada_quebecois_party_2
 					country_event = {
 						id = ME_Canada_Events.33
 					}
 				}
 				33 = {
 					trigger = {
-						NOT = { has_country_flag = canada_canadien_party_3 }
+						NOT = { has_country_flag = canada_quebecois_party_3 }
 					}
-					set_country_flag = canada_canadien_party_3
+					set_country_flag = canada_quebecois_party_3
 					country_event = {
 						id = ME_Canada_Events.34
 					}

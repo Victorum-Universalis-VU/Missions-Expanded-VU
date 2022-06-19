@@ -124,9 +124,9 @@ MAI_Missions_3 = {
 		}
 		effect = {
 			add_years_of_income = 1
-			#78 = {
-			#	add_or_upgrade_trade_building = yes
-			#}
+			78 = {
+				add_or_upgrade_trade_building = yes
+			}
 		}
 	}
 }
@@ -154,7 +154,7 @@ MAI_Missions_4 = {
 		provinces_to_highlight = {
 			owner = {
 				culture_group = germanic
-				#has_reform = clerical_state #Not sure where that's from. Maybe a new GE reform ?
+				has_reform = leading_clergy_reform 
 				religion = ROOT
 				prestige = ROOT
 			}
@@ -167,7 +167,7 @@ MAI_Missions_4 = {
 				NOT = {
 					any_country = {
 						culture_group = germanic
-						#has_reform = clerical_state
+						has_reform = leading_clergy_reform 
 						religion = ROOT
 						prestige = ROOT
 					}
@@ -207,7 +207,7 @@ MAI_Missions_5 = {
 		provinces_to_highlight = {
 			owner = {
 				culture_group = germanic
-				#has_reform = clerical_state
+				has_reform = leading_clergy_reform  
 				religion = ROOT
 				prestige = ROOT
 			}
@@ -222,7 +222,7 @@ MAI_Missions_5 = {
 				NOT = {
 					any_country = {
 						culture_group = germanic
-						#has_reform = clerical_state
+						has_reform = leading_clergy_reform  
 						religion = ROOT
 						prestige = ROOT
 					}

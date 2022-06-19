@@ -54,7 +54,7 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { check_variable = { ENG_Culture = 11 } }
+		NOT = { check_variable = { which = ENG_Culture value = 11 } }
 		mission_completed = UKS_cultures_of_France
 	}
 	
@@ -69,6 +69,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
+				accepted_culture = wallonian
 				accepted_culture = arpitan
 				accepted_culture = poitevin_culture
 				accepted_culture = angevin_culture
@@ -86,6 +87,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
+				accepted_culture = wallonian
 				accepted_culture = arpitan
 				accepted_culture = poitevin_culture
 				accepted_culture = angevin_culture
@@ -104,7 +106,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
-				accepted_culture = arpitan
+				accepted_culture = wallonian
 				accepted_culture = poitevin_culture
 				accepted_culture = angevin_culture
 				accepted_culture = lorraine_culture
@@ -117,7 +119,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			change_variable = {            
+			change_variable = {			
 				which = ENG_Culture
 				value = 1
 			}
@@ -332,13 +334,18 @@ country_event = {
 				}
 				change_culture = cosmopolitan_french_UKS
 			}
-			#breton should switch gradualy via different event
-			#every_province = {
-			#	limit = {
-			#		culture = breton
-			#	}
-			#	change_culture = breton_UKS 
-			#}
+			every_province = {
+				limit = {
+					culture = breton
+				}
+				change_culture = breton_UKS 
+			}
+			every_province = {
+				limit = {
+					culture = wallonian
+				}
+				change_culture = wallonian_UKS 
+			}
 			every_province = {
 				limit = {
 					culture = occitain
@@ -362,49 +369,6 @@ country_event = {
 					culture = gascon
 				}
 				change_culture = gascon_UKS  
-			}
-			#added missing french cultures
-			every_province = {
-				limit = {
-					culture = arpitan
-				}
-				change_culture = arpitan_UKS 
-			}
-			every_province = {
-				limit = {
-					culture = aquitaine
-				}
-				change_culture = aquitaine_UKS  
-			}
-			every_province = {
-				limit = {
-					culture = poitevin_culture
-				}
-				change_culture = poitevin_UKS  
-			}
-			every_province = {
-				limit = {
-					culture = angevin_culture
-				}
-				change_culture = angevin_UKS  
-			}
-			every_province = {
-				limit = {
-					culture = lorraine_culture
-				}
-				change_culture = lorraine_UKS  
-			}
-			every_province = {
-				limit = {
-					culture = auvergnat_culture
-				}
-				change_culture = auvergnat_UKS  
-			}
-			every_province = {
-				limit = {
-					culture = gallo_culture
-				}
-				change_culture = gallo_UKS  
 			}
 		}
 		custom_tooltip = England_tooltip.26

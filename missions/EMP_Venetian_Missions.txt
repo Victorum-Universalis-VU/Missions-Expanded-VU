@@ -9,8 +9,8 @@ emp_ven_slot_1 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = VEN
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -73,10 +73,10 @@ emp_ven_slot_2 = {
 	}
 	
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 		tag = VEN
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -140,13 +140,54 @@ emp_ven_slot_2 = {
 		icon = expand_the_doges_palace
 		position = 3
 		required_missions = { emp_ven_patronize_the_scuole_grandi }
-		
+		provinces_to_highlight = {
+			province_id = 112
+			OR = {
+				NOT = { is_core = ROOT }
+				NOT = { owned_by = ROOT }
+			}
+		}
 		trigger = {
 			treasury = 3000
 			legitimacy_equivalent = 90
+			owns_core_province = 112
 		}
 		effect = {
 			add_prestige = 50
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				if = {
+					limit = {
+						112 = {
+							NOT = {
+								has_great_project = {
+									type = doges_palace
+									tier = 3
+								}
+							}
+						}
+					}
+					112 = {
+						add_great_project_tier = {
+							type = doges_palace
+							tier = 1
+						}
+					}
+					add_treasury = -3000
+				}
+				else =  {
+					112 = {
+						add_base_tax = 2
+					}
+				}
+			}
+			else = {
+				112 = {
+					add_base_tax = 2
+				}
+			}
 		}
 	}
 	
@@ -229,8 +270,8 @@ emp_ven_slot_3 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = VEN
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 	}
 	
 	has_country_shield = yes
@@ -303,7 +344,7 @@ emp_ven_slot_3 = {
 		icon = expand_the_terraferma
 		position = 3
 		required_missions = { emp_ven_land_grants_for_free_companies emp_ven_contest_genoese_trade }
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = emilia_romagna_area
@@ -685,14 +726,14 @@ emp_ven_slot_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_mediterrenean_islands_area 	= {
+			eastern_mediterrenean_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			morea_area 	= {
+			morea_area	= {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -708,22 +749,21 @@ emp_ven_slot_5 = {
 		required_missions = { emp_ven_monopolize_adriatic_trade emp_ven_expand_the_arsenal }
 		
 		provinces_to_highlight = {
-				province_id = 5493
-			NOT = {
-				trade_share = {
-					country = ROOT
-					share = 25
-				}
+			OR = {
+				area = morea_area
+				area = aegean_archipelago_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			5493 = {
-				trade_share = {
-					country = ROOT
-					share = 25
-				}
+		morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			151 = {
@@ -760,7 +800,6 @@ emp_ven_slot_5 = {
 		}
 		trigger = {
 			cyprus_area = {
-				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}

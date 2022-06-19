@@ -383,17 +383,8 @@ Ottoman_Missions_1 = {
 					if = { 
 						limit = { 
 							ai = no 
-						} 
-						OR = { 
-							reverse_has_opinion_modifier = { 
-								who = HUN 
-								modifier = insulted 
-							} 
-							reverse_has_opinion_modifier = { 
-								who = HUN 
-								modifier = scornfully_insulted 
-							} 
-						} 
+						}
+						HUN = { has_been_insulted_by_root = yes }
 					} 
 				} 
 				else = { 
@@ -407,16 +398,7 @@ Ottoman_Missions_1 = {
 								limit = { 
 									ROOT = { ai = no } 
 								} 
-								OR = { 
-									has_opinion_modifier = { 
-										who = ROOT 
-										modifier = insulted 
-									} 
-									has_opinion_modifier = { 
-										who = ROOT 
-										modifier = scornfully_insulted 
-									} 
-								} 
+								has_been_insulted_by_root = yes 
 							} 
 						} 
 					} 
@@ -502,7 +484,7 @@ Ottoman_Missions_1 = {
 				OR = { 
 					country_or_non_sovereign_subject_holds = ROOT 
 					province_id = 4239 
-				}
+				} 
 			}
 			montenegro_area = {
 				type = all
@@ -1420,7 +1402,7 @@ Ottoman_Missions_3 = {
 					} 
 					add_permanent_claim = ROOT 
 				} 
-			} 
+			}
 			aetolia_area = {
 				if = { 
 					limit = { 
@@ -1480,7 +1462,7 @@ Ottoman_Missions_3 = {
 			else = { 
 				add_prestige = 10 
 			} 
-			pontus_area = { #trebizond 
+			330 = { #trebizond 
 				if = { 
 					limit = { 
 						NOT = { owned_by = ROOT } 
@@ -1591,13 +1573,13 @@ Ottoman_Missions_3 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
-			#kartli_kakheti_area = { 
-			#	limit = { 
-			#		NOT = { owned_by = ROOT } 
-			#		NOT = { is_core = ROOT } 
-			#	} 
-			#	add_permanent_claim = ROOT 
-			#} 
+#			kartli_kakheti_area = { 
+#				limit = { 
+#					NOT = { owned_by = ROOT } 
+#					NOT = { is_core = ROOT } 
+#				} 
+#				add_permanent_claim = ROOT 
+#			} 
 			al_jazira_area = { 
 				limit = { 
 					NOT = { owned_by = ROOT } 
@@ -1624,7 +1606,7 @@ Ottoman_Missions_3 = {
 			OR = { 
 				area = samtskhe_area 
 				area = imereti_area 
-				#area = kartli_kakheti_area 
+			#	area = kartli_kakheti_area 
 			} 
 			NOT = { owned_by = ROOT } 
 		} 
@@ -2063,7 +2045,7 @@ Ottoman_Missions_4 = {
 					} 
 					add_permanent_claim = ROOT 
 				} 
-			} 
+			}
 			1305 = {
 				if = { 
 					limit = { 
@@ -2822,21 +2804,21 @@ Ottoman_Missions_5 = {
 					limit = { 
 						has_reform = ottoman_government 
 					} 
-					janissary_percentage = 0.25 
+					janissary_percentage = 0.2
 				} 
-				army_size_percentage = 1.0 
+				army_size_percentage = 0.8
 			} 
 			else = { 
 				if = { 
 					limit = { 
 						ai = no 
 					} 
-					army_size_percentage = 1.0 
-					#cavalry_fraction = 0.3 
-					#Pain 
+					army_size_percentage = 1.0
+					#cavalry_fraction = 0.3
+					#Pain
 				} 
 				else = { 
-					army_size_percentage = 0.75 
+					army_size_percentage = 0.75
 				} 
 			} 
 		} 
@@ -2863,7 +2845,7 @@ Ottoman_Missions_5 = {
 					NOT = { is_core = ROOT } 
 				} 
 				add_permanent_claim = ROOT 
-			} 
+			}
 			5146 = {
 				if = {
 					limit = {
@@ -2918,14 +2900,15 @@ Ottoman_Missions_5 = {
 		effect = { 
 			country_event = { id = ME_Ottoman_Events.6 } 
  
-			332 = { 
-				if = { 
+			332 = {
+				if = {
 					limit = { 
 						NOT = { owned_by = ROOT } 
 						NOT = { is_core = ROOT } 
+						NOT = { province_id = 2308 } 
 					} 
 					add_permanent_claim = ROOT 
-				} 
+				}
 			} 
 			cukurova_area = { #ramazan 
 				if = { 
@@ -3250,13 +3233,13 @@ Ottoman_Missions_5 = {
 				} 
 				add_permanent_claim = ROOT 
 			} 
-			#algiers_area = { 
-			#	limit = { 
-			#		NOT = { owned_by = ROOT } 
-			#		NOT = { is_core = ROOT } 
-			#	} 
-			#	add_permanent_claim = ROOT 
-			#} 
+#			algiers_area = { 
+#				limit = { 
+#					NOT = { owned_by = ROOT } 
+#					NOT = { is_core = ROOT } 
+#				} 
+#				add_permanent_claim = ROOT 
+#			} 
 		} 
 	} 
  
@@ -3309,10 +3292,10 @@ Ottoman_Missions_5 = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
 			} 
-			#algiers_area = { 
-			#	type = all 
-			#	country_or_non_sovereign_subject_holds = ROOT 
-			#} 
+	#		algiers_area = { 
+	#			type = all 
+	#			country_or_non_sovereign_subject_holds = ROOT 
+	#		} 
 		} 
 		effect = { 
 			country_event = { id = ME_Ottoman_Events.21 } 

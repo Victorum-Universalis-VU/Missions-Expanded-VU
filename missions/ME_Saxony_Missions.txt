@@ -1,4 +1,3 @@
-# Reworked by Altan for ME-VU
 saxony_missions_slot_1 = {
 	slot = 1
 	generic = no
@@ -1410,17 +1409,10 @@ saxony_missions_slot_3 = {
 		position = 11
 		required_missions = { saxony_conquer_hesse saxony_conquer_upper_franconia }
 		provinces_to_highlight = {
-			OR = {
-				area = bavaria_area
-				area = franconia_area
-			}
+			area = franconia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			bavaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			franconia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1545,7 +1537,7 @@ saxony_missions_slot_3 = {
 				set_country_flag = sax_unlock_new_advisor_type_reformist
 				define_advisor = {
 					name = "Martin Luther"
-					type = reformist
+					type = me_reformist
 					skill = 3
 					religion = protestant
 					culture = ROOT
@@ -2098,7 +2090,7 @@ saxony_missions_slot_4 = {
 						}
 					}
 					num_accepted_cultures = 4
-					#has_age_ability = ase_saxony_piety
+					has_age_ability = ase_saxony_piety
 				}
 			}
 			else = {
@@ -2541,7 +2533,7 @@ saxony_missions_slot_5 = {
 			set_country_flag = sax_unlock_new_advisor_type_lyricist
 			define_advisor = {
 				name = "Johann Wolfgang Goethe"
-				type = lyricist
+				type = me_lyricist
 				skill = 3
 				culture = ROOT
 				religion = ROOT

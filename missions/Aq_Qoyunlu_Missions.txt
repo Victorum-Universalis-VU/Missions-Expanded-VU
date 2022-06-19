@@ -1,47 +1,67 @@
- ##################################################
- ##### Dub's Mission Work - All credit to Dub for this #####
- ##################################################
-#Updated vanilla missions to BT. Updates done by Dub.
 akk_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential = {
-		tag = AKK
+	potential = {	
+		NOT = { map_setup = map_setup_random }
+		OR = {
+			tag = AKK
+			tag = QAR
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 
 	destroy_ayyubids = {
-		icon = mission_arabian_fort
+		icon = mission_bedouins
 		required_missions = {  }
 		provinces_to_highlight = {
-			destroy_ayyubids_provinces = yes
+			province_id = 4295
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=destroy_ayyubids_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			4295 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_prestige = 10
-			
-			#Claims
-			custom_tooltip = defeat_black_sheep_claims
-			hidden_effect = {
-				every_province = {
-					limit = {
-						defeat_black_sheep_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			north_kurdistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
+			}
+			armenia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			tabriz_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -50,16 +70,37 @@ akk_missions = {
 		required_missions = { destroy_ayyubids }
 		position = 5
 		provinces_to_highlight = {
-			defeat_black_sheep_provinces = yes
+			OR = {
+				area = north_kurdistan_area
+				area = armenia_area
+				area = tabriz_area
+				area = shahrizor_area
+				area = al_jazira_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=defeat_black_sheep_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			north_kurdistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			armenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tabriz_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shahrizor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -67,29 +108,61 @@ akk_missions = {
 				name = "white_sheep_ascendant"
 				duration = 7300
 			}
-			
-			#Claims
-			custom_tooltip = conquer_the_caucasus_akk_claims
-			hidden_effect = {
-				every_province = {
-					limit = {
-						conquer_the_caucasus_akk_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			shirvan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			custom_tooltip = conquer_iraq_akk_claims
-			hidden_effect = {
-				every_province = {
-					limit = {
-						conquer_iraq_akk_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			imereti_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
+			}
+			samtskhe_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+#			kartli_kakheti_area = {
+#				limit = {
+#					NOT = { is_permanent_claim = ROOT }
+#					NOT = { is_core = ROOT	}
+#				}
+#				add_permanent_claim = ROOT
+#			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			khuzestan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			luristan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -97,52 +170,82 @@ akk_missions = {
 		icon = mission_conquer_50_development
 		required_missions = { defeat_black_sheep }
 		provinces_to_highlight = {
-			conquer_the_caucasus_akk_provinces = yes
+			OR = {
+				area = shirvan_area
+				area = imereti_area
+				area = samtskhe_area
+#				area = kartli_kakheti_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=conquer_the_caucasus_akk_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
+			imereti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			samtskhe_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+#			kartli_kakheti_area = {
+#				type = all
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = "akk_caucasus"
 				duration = 7300
 			}
-			
-			#Claims
-			custom_tooltip = invade_persia_akk_claims_1
-			hidden_effect = {
-				every_province = {
-					limit = {
-						invade_persia_akk_1_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			azerbaijan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
+			}
+			tabarestan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_e_ajam_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			isfahan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 	invade_persia_akk = {
-		icon = mission_unite_home_region
+		icon = mission_persian_soldiers
 		required_missions = { conquer_the_caucasus_akk conquer_iraq_akk }
 		provinces_to_highlight = {
-			invade_persia_akk_provinces = yes
+			region = persia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=invade_persia_akk_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -160,7 +263,11 @@ akk_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = AKK
+		NOT = { map_setup = map_setup_random }
+		OR = {
+			tag = AKK
+			tag = QAR
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -170,16 +277,32 @@ akk_missions_2 = {
 		required_missions = { defeat_black_sheep }
 		position = 6
 		provinces_to_highlight = {
-			conquer_iraq_akk_provinces = yes
+			OR = {
+				area = iraq_arabi_area
+				area = basra_area
+				area = khuzestan_area
+				area = luristan_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=conquer_iraq_akk_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khuzestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			luristan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -188,18 +311,33 @@ akk_missions_2 = {
 				name = "akk_iraq"
 				duration = 7300
 			}
-			
-			#Claims
-			custom_tooltip = invade_persia_akk_claims_2
-			hidden_effect = {
-				every_province = {
-					limit = {
-						invade_persia_akk_2_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			persian_gulf_coast = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
+			}
+			farsistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kerman_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mogostan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

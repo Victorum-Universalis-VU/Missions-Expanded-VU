@@ -18,6 +18,12 @@ estate_industrial = {
 	country_modifier_angry = {
 		global_trade_goods_size_modifier = -0.1
 	}
+	land_ownership_modifier = {
+		estate_industrial_loyalty_modifier = 0.1
+	}
+	province_independence_weight = {
+		factor = 1
+	}
 	
 	influence_from_dev_modifier = 0.5
 	
