@@ -2799,14 +2799,23 @@ Ottoman_Missions_5 = {
 			if = { 
 				limit = { 
 					has_dlc = "Cradle of Civilization" 
-				} 
-				if = { 
-					limit = { 
+				}
+				if = {
+					limit = {
 						has_reform = ottoman_government 
-					} 
-					janissary_percentage = 0.2
-				} 
-				army_size_percentage = 0.8
+					}
+					if = { 
+						limit = {
+							ai = no
+						} 
+						janissary_percentage = 0.2
+						army_size_percentage = 0.8
+					}
+					else = {
+						janissary_percentage = 0.15
+						army_size_percentage = 0.75
+					}
+				}
 			} 
 			else = { 
 				if = { 
