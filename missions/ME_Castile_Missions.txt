@@ -172,7 +172,7 @@ CAS_missions_1 = {
 		required_missions = { spa_rb_incans_two_ME }
 		position = 10
 		provinces_to_highlight = {
-			province_id = 2754
+			province_id = 225
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { base_tax = 5 }
@@ -181,15 +181,15 @@ CAS_missions_1 = {
 			}
 		}
 		trigger = {
-			owns = 2754
-			2754 = {
+			owns = 225
+			225 = {
 				base_tax = 5
 				base_production = 5
 				base_manpower = 5
 			}
 		}
 		effect = {
-			2754 = {
+			225 = {
 				add_province_modifier = {
 					name = Castile_la_mancha
 					duration = -1
