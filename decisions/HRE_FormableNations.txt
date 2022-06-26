@@ -555,21 +555,21 @@ country_decisions = {
 		effect = {
 			change_tag = SWA
 			restore_country_name_effect = yes
-			lower_swabia_area = {
+			swabia_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
-			upper_swabia_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			upper_rhineland_area = {
+			#upper_swabia_area = {
+			#	limit = {
+			#		NOT = { owned_by = root }
+			#		NOT = { is_permanent_claim = root }
+			#	}
+			#	add_permanent_claim = root
+			#}
+			north_rhine_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
@@ -680,9 +680,9 @@ country_decisions = {
 							num_of_owned_provinces_with = {
 								value = 6
 								OR = {
-									area = south_saxony_area
+									area = saxony_area
 									area = thuringia_area
-									area = northern_saxony_area
+									area = lower_saxony_area
 								}
 								is_core = root
 							}
@@ -694,9 +694,9 @@ country_decisions = {
 						}
 					}
 					OR = {
-						area = south_saxony_area
+						area = saxony_area
 						area = thuringia_area
-						area = northern_saxony_area
+						area = lower_saxony_area
 					}
 				}
 			}
@@ -718,9 +718,9 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 6
 				OR = {
-					area = south_saxony_area
+					area = saxony_area
 					area = thuringia_area
-					area = northern_saxony_area
+					area = lower_saxony_area
 				}
 				is_core = root
 			}
@@ -728,7 +728,7 @@ country_decisions = {
 		effect = {
 			change_tag = SAX
 			restore_country_name_effect = yes
-			south_saxony_area = {
+			saxony_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
