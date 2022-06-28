@@ -215,7 +215,7 @@ ME_austria_missions_2 = {
 				tag = HAB
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-		""	AND = {
+		#	AND = {
 		#		tag = AUB
 		#		primary_culture = austrian
 		#	}
