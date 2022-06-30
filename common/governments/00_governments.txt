@@ -822,8 +822,8 @@ republic = {
 				national_assembly_republic_reform
 				french_second_republic_reform
 				french_third_republic_reform
-				self_governing_dominion_vu_government
-				self_governing_super_dominion_vu_government
+#				self_governing_dominion_vu_government
+#				self_governing_super_dominion_vu_government
 				#End of VU additions
 				# ME Reforms:
 				greek_league_reform
