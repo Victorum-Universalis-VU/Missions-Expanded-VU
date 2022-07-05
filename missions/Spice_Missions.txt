@@ -188,13 +188,6 @@ spice_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			makassar_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	spice_conquer_sulawesi = {
@@ -204,7 +197,6 @@ spice_2 = {
 			OR = {
 				area = sulawesi_area
 				area = south_sulawesi_area
-				area = makassar_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -214,12 +206,18 @@ spice_2 = {
 				OR = {
 					area = sulawesi_area
 					area = south_sulawesi_area
-					area = makassar_area
 				}
 			}
 		}
 		effect = {
-			surabaya_area = {
+			central_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_java_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -233,7 +231,7 @@ spice_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_mindanao_area = {
+			mindanao_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }

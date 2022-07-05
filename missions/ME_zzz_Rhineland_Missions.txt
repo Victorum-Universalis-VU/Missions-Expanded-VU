@@ -653,7 +653,7 @@ RHN_missions_2 = {
 		position = 13
 		trigger = {
 			any_owned_province = {
-				trade_goods = tanned_leather
+				trade_goods = leather
 				has_manufactory_trigger = yes
 			}
 		}

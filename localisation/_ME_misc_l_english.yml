@@ -37,3 +37,68 @@ l_english:
  desc_italy_tariff_boost:0 "."
  HRE_conquering_frenzy:0 "Italian Tariff Boost"
  desc_HRE_conquering_frenzy:0 "."
+ fra_conquest_of_naples:0 "Conquest of Naples"
+ desc_fra_conquest_of_naples:0 "."
+
+ #Missing Province Modifiers
+ fer_grazing_fields_modifier:0 "Grazing Fields"
+ desc_fer_grazing_fields_modifier:0 "Vast open fields covered with grass or herbage and suitable for grazing livestock."
+ 
+ nitra_transdanubian_integration_modifier:0 "Transdanubian Integration"
+ desc_nitra_transdanubian_integration_modifier:0 "The integration of two Transdanubian states."
+ 
+ nitra_carpathian_hegemony_modifier:0 "Carpathian Hegemony"
+ desc_nitra_carpathian_hegemony_modifier:0 "Hegmonic dominance or Carpathia."
+ 
+ nitra_slovakization_modifier:0 "Slovakization"
+ desc_nitra_slovakization_modifier:0 "The slovak transformation of an area."
+ 
+ nitra_repair_devin_modifier:0 "Repair Devin"
+ desc_nitra_repair_devin_modifier:0 "Repair Devin."
+ 
+ nitra_land_castles_modifier:0 "Castles"
+ desc_nitra_land_castles_modifier:0 "Defensive structures made of wood and stone built on land."
+ 
+ developed_presporok_modifier:0 "Developed Presporok"
+ desc_developed_presporok_modifier:0 "Improvement of Presporok."
+ 
+ fra_university_modifier:0 "French University"
+ desc_fra_university_modifier:0 "A prestigious institution for learning."
+ 
+ #Missing Country Modifiers
+ WES_swabia_modifier:0 "Swabia"
+ desc_WES_swabia_modifier:0 "Swabian Mercenaries."
+ 
+ ME_HUN_crownsUnitedBohemia_modifier:0 "Crowns United"
+ desc_ME_HUN_crownsUnitedBohemia_modifier:0 "Two countries united."
+ 
+ ME_Hungary_fierceConversion_modifier:0 "Fierce Conversions"
+ desc_ME_Hungary_fierceConversion_modifier:0 "REPENT! REPENT! Turn away from your heathen ways and embrace the one true GOD!"
+ 
+ nitra_rex_sclavorum_modifier:0 "Rex Sclavorum"
+ desc_nitra_rex_sclavorum_modifier:0 "King of the Slavs."
+ 
+ nitra_svatopluk_ambition_modifier:0 "Svatopluk Ambition"
+ desc_nitra_svatopluk_ambition_modifier:0 "Ruler of Greater Moravia."
+ 
+ nitra_habsburgs_modifier:0 "Slavic Habsburgs"
+ desc_nitra_habsburgs_modifier:0 "Slavic Habsburg rule."
+ 
+ great_moravian_empire_modifier:0 "Great Moravian Empire"
+ desc_great_moravian_empire_modifier:0 "An Empire ecompassing the entirity of Moravia."
+ 
+ nitra_freedom_fighters_modifier:0 "Freedom Fighters"
+ desc_nitra_freedom_fighters_modifier:0 "A very unruly group of people fighting for freedom from their oppressive state."
+ 
+ nitra_independence_modifier:0 "Independence"
+ desc_nitra_independence_modifier:0 "An independent state born from the efforts of freedom fighters."
+ 
+ nitra_suppress_magyars_modifier:0 "Suppress Magyars"
+ desc_nitra_suppress_magyars_modifier:0 "Suppression of the local Magyar population."
+ 
+ nitra_domestic_intelligence_modifier:0 "Domestic Intelligence"
+ desc_nitra_domestic_intelligence_modifier:0 "Domestic Intelligence."
+ 
+ nitra_universitas_istropolitana_modifier:0 "Universitas Istropolitana"
+ desc_nitra_universitas_istropolitana_modifier:0 "A prestigious institution for learning."
+ 

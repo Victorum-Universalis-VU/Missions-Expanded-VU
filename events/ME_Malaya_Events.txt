@@ -95,9 +95,9 @@ country_event = {
 			kutai_area = { #kutai and berau
 				MSA_start_expedition = { delay = 120 }
 			}
-#			banjar_area = { #Banjar
-#				MSA_start_expedition = { delay = 90 }
-#			}
+			kapuas_area = { #Banjar
+				MSA_start_expedition = { delay = 90 }
+			}
 			indonesia_region = { #noone
 				MSA_start_expedition = { delay = 135 }
 			}
@@ -137,9 +137,6 @@ country_event = {
 			minangkabau_area = { #Pagarruyung, Indrapuri
 				MSA_start_expedition = { delay = 240 }
 			}
-#			surabaya_area = { #noone
-#				MSA_start_expedition = { delay = 240 }
-#			}
 			lesser_sunda_islands_area = { #Bali
 				MSA_start_expedition = { delay = 270 }
 			}

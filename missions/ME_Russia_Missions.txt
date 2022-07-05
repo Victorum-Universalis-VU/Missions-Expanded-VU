@@ -8,7 +8,7 @@ me_RUS_missions_1 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -413,7 +413,7 @@ me_RUS_missions_1_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = foreign_auxilaries
@@ -483,7 +483,7 @@ me_RUS_missions_1_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = national_army
 	}
@@ -534,7 +534,7 @@ me_RUS_missions_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -885,7 +885,7 @@ me_RUS_missions_2_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -965,7 +965,7 @@ me_RUS_missions_2_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = exotic_ships
@@ -1026,7 +1026,7 @@ me_RUS_missions_2_4 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = local_sailors
 	}
@@ -1055,7 +1055,7 @@ me_RUS_missions_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -1159,7 +1159,7 @@ me_RUS_missions_3_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = brought_western_administrators
@@ -1222,7 +1222,7 @@ me_RUS_missions_3_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = used_local_nobles
 	}
@@ -1279,7 +1279,7 @@ me_RUS_missions_3_4 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = rus_peter_2
@@ -1426,7 +1426,7 @@ me_RUS_missions_3_5 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = rus_isolation
 	}
@@ -1549,7 +1549,7 @@ me_RUS_missions_4 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -1709,7 +1709,7 @@ me_RUS_missions_4_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -1799,7 +1799,7 @@ mr_RUS_missions_4_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = free_trade
@@ -1871,7 +1871,7 @@ me_RUS_missions_4_4 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = banned_foreign_traders
 	}
@@ -1903,7 +1903,7 @@ me_RUS_missions_5 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 	}
 	has_country_shield = yes
@@ -2098,7 +2098,7 @@ me_RUS_missions_5_2 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		OR = {
 			has_country_modifier = western_diplomacy
@@ -2179,7 +2179,7 @@ me_RUS_missions_5_3 = {
 				tag = RUS
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			tag = RRR
+			tag = TZR
 		}
 		has_country_modifier = isolationist_diplomacy
 	}
@@ -2218,7 +2218,7 @@ russia_great_northern_war_incident2 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			tag = TZR
 		}
 		has_country_flag = rus_gnw
 	}
@@ -2269,7 +2269,7 @@ russia_great_northern_war_incident3 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			tag = TZR
 		}
 		has_country_flag = rus_gnw
 	}
@@ -2443,7 +2443,7 @@ russia_great_northern_war_incident5 = {
 	potential = {
 		OR = {
 			tag = RUS
-			tag = RRR
+			tag = TZR
 		}
 		has_country_flag = rus_gnw
 	}

@@ -573,11 +573,11 @@ country_event = {
 				government = monarchy
 				OR = {
 					tag = BAV
-					AND = {
-						# is_expanded_mod_active = { mod = formables }
-						tag = AUB
-						was_tag = BAV
-					}
+					#AND = {
+					#	# is_expanded_mod_active = { mod = formables }
+					#	tag = AUB
+					#	was_tag = BAV
+					#}
 				}
 			}
 			custom_tooltip = BAV_UNLOCK_MISSION_BRANCH_WITTELSBACH
@@ -623,11 +623,11 @@ country_event = {
 				government = monarchy
 				OR = {
 					tag = BAV
-					AND = {
-						# is_expanded_mod_active = { mod = formables }
-						tag = AUB
-						was_tag = BAV
-					}
+					#AND = {
+					#	# is_expanded_mod_active = { mod = formables }
+					#	tag = AUB
+					#	was_tag = BAV
+					#}
 				}
 			}
 			custom_tooltip = BAV_UNLOCK_MISSION_BRANCH_WELF
@@ -659,11 +659,11 @@ country_event = {
 					government = monarchy
 					OR = {
 						tag = BAV
-						AND = {
-							# is_expanded_mod_active = { mod = formables }
-							tag = AUB
-							was_tag = BAV
-						}
+						#AND = {
+						#	# is_expanded_mod_active = { mod = formables }
+						#	tag = AUB
+						#	was_tag = BAV
+						#}
 					}
 					OR = {
 						has_country_flag = bav_dynasty_wittelsbach

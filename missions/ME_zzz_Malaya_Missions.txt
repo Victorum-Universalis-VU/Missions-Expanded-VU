@@ -504,7 +504,7 @@ MSA_Missions_Expansion_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = champa_area
-				area = tay_nguyen_area
+				area = degar_highlands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {

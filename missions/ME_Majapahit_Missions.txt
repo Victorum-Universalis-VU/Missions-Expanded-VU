@@ -822,13 +822,13 @@ MAJ_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			banjar_area = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { is_permanent_claim = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
+			kapuas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }

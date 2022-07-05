@@ -928,20 +928,6 @@ Javan_missions_5 = {
 							duration = 9125
 						}
 					}
-#					surabaya_area = {
-#						limit = { trade_goods = rice }
-#						add_province_modifier = {
-#							name = MAJ_rice_fields
-#							duration = 9125
-#						}
-#					}
-				#	banten_area = {
-				#		limit = { trade_goods = rice }
-				#		add_province_modifier = {
-				#			name = MAJ_rice_fields
-				#			duration = 9125
-				#		}
-				#	}
 				}
 				else = { #inefficient use of space but eh
 					east_java_area = {
@@ -977,28 +963,6 @@ Javan_missions_5 = {
 							duration = 9125
 						}
 					}
-#					surabaya_area = {
-#						limit = {
-#							has_production_building_trigger = yes
-#							has_terrain = grasslands
-#							development = 10
-#						}
-#						add_province_modifier = {
-#							name = MAJ_rice_fields
-#							duration = 9125
-#						}
-#					}
-#					banten_area = {
-#						limit = {
-#							has_production_building_trigger = yes
-#							development = 10
-#							has_terrain = grasslands
-#						}
-#						add_province_modifier = {
-#							duration = 9125
-#							name = MAJ_rice_fields
-#						}
-#					}
 				}
 			}
 			
@@ -1049,18 +1013,6 @@ Javan_missions_5 = {
 						duration = -1
 					}
 				}
-#				surabaya_area = {
-#					add_province_modifier = {
-#						name = JAV_mancanegara
-#						duration = -1
-#					}
-#				}
-#				banten_area = {
-#					add_province_modifier = {
-#						name = JAV_mancanegara
-#						duration = -1
-#					}
-#				}
 			}
 		}
 	}
