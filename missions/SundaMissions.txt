@@ -328,8 +328,6 @@ sun_2 = {
 				area = east_java_area
 				area = central_java_area
 				area = west_java_area
-			#	area = surabaya_area
-			#	area = banten_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -346,14 +344,6 @@ sun_2 = {
 				type = all
 				owned_by = ROOT 
 			}
-			#surabaya_area = {
-			#	type = all
-			#	owned_by = ROOT 
-			#}
-			#banten_area = {
-			#	type = all
-			#	owned_by = ROOT 
-			#}
 		}
 		effect = {
 			add_country_modifier = {

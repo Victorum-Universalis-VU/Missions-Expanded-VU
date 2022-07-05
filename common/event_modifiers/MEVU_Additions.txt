@@ -21,3 +21,87 @@ italy_tariff_boost = {
 HRE_conquering_frenzy = {
 	army_tradition = 1
 }
+
+#Province Modifiers
+fer_grazing_fields_modifier = {
+	global_prosperity_growth = 0.1
+}
+
+nitra_transdanubian_integration_modifier = {
+	local_autonomy = 0.05
+}
+
+nitra_carpathian_hegemony_modifier = {
+	local_years_of_nationalism = -5
+}
+
+nitra_slovakization_modifier = {
+	local_warscore_cost_modifier = 0.1
+}
+
+nitra_repair_devin_modifier = {
+	local_build_cost = -0.25
+}
+
+nitra_land_castles_modifier = {
+	local_defensiveness = 0.1
+}
+
+developed_presporok_modifier = {
+	institution_growth = 1
+}
+
+fra_university_modifier = {
+	local_institution_spread = 0.1
+}
+
+#Country Modifiers
+WES_swabia_modifier = {
+	mercenary_discipline = 0.10
+}
+
+nitra_rex_sclavorum_modifier = {
+	promote_culture_cost = -0.25
+}
+
+nitra_svatopluk_ambition_modifier = {
+	relation_with_same_religion = 5
+}
+
+nitra_habsburgs_modifier = {
+	manpower_against_imperial_enemies = 0.1
+}
+
+great_moravian_empire_modifier = {
+	relation_with_accepted_culture = 5
+}
+
+nitra_freedom_fighters_modifier = {
+	global_unrest = -2
+}
+
+nitra_independence_modifier = {
+	min_autonomy_in_territories = 0.1
+}
+
+nitra_suppress_magyars_modifier = {
+	harsh_treatment_cost = -0.2
+}
+
+nitra_domestic_intelligence_modifier = {
+	global_spy_defence = 0.1
+}
+
+nitra_universitas_istropolitana_modifier = {
+	global_institution_spread = 0.1
+}
+
+ME_HUN_crownsUnitedBohemia_modifier = {
+	same_culture_advisor_cost = -0.5
+	relation_with_same_culture = 5
+}
+
+ME_Hungary_fierceConversion_modifier = {
+	culture_conversion_cost = -0.25
+	harsh_treatment_cost = -0.2
+}

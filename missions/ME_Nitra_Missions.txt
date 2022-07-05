@@ -91,7 +91,7 @@ SLO_missions_1 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "nitra_rex_sclavorum"
+				name = "nitra_rex_sclavorum_modifier"
 				duration = 7300
 			}
 		}
@@ -128,7 +128,7 @@ SLO_missions_2 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "nitra_svatopluk_ambition"
+				name = "nitra_svatopluk_ambition_modifier"
 				duration = 3650
 			}
 			bohemia_area = {
@@ -225,7 +225,7 @@ SLO_missions_2 = {
 			add_prestige = 15
 			add_legitimacy_equivalent = { amount = 15 republican_tradition = 15 }
 			add_country_modifier = {
-				name = "nitra_hasburgs"
+				name = "nitra_habsburgs_modifier"
 				duration = 7300
 			}
 		}
@@ -251,7 +251,7 @@ SLO_missions_2 = {
 			add_prestige = 20
 			add_legitimacy_equivalent = { amount = 20 republican_tradition = 20 }
 			add_country_modifier = {
-				name = "great_moravian_empire"
+				name = "great_moravian_empire_modifier"
 				duration = -1
 			}
 		}
@@ -278,7 +278,7 @@ SLO_missions_3 = {
 		effect = {
 			add_mil_power = 50
 			add_country_modifier = {
-				name = "nitra_freedom_fighters"
+				name = "nitra_freedom_fighters_modifier"
 				duration = 3650
 			}
 		}
@@ -304,7 +304,7 @@ SLO_missions_3 = {
 			add_prestige = 10
 			add_legitimacy_equivalent = { amount = 10 republican_tradition = 10 }
 			add_country_modifier = {
-				name = "nitra_independence"
+				name = "nitra_independence_modifier"
 				duration = 5475
 			}
 			265 = {
@@ -385,7 +385,7 @@ SLO_missions_3 = {
 		effect = {
 		    transdanubia_area = {
                 add_province_modifier = {
-                    name = "nitra_transdanubian_integration"
+                    name = "nitra_transdanubian_integration_modifier"
 					duration = 1825
 				}
 			}
@@ -415,7 +415,7 @@ SLO_missions_3 = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "nitra_suppress_magyars"
+				name = "nitra_suppress_magyars_modifier"
 				duration = 3650
 			}
 			transylvania_area = {
@@ -462,7 +462,7 @@ SLO_missions_3 = {
 					owned_by = ROOT
 				}
 				add_province_modifier = {
-					name = nitra_carpathian_hegemony
+					name = nitra_carpathian_hegemony_modifier
 					duration = 9125
 				}
 			}
@@ -500,7 +500,7 @@ SLO_missions_4 = {
 					culture = slovak
 				}
                add_province_modifier = {
-                    name = "nitra_slovakization"
+                    name = "nitra_slovakization_modifier"
 					duration = -1
 				}
 			}
@@ -565,7 +565,7 @@ SLO_missions_4 = {
 		effect = {
 			add_dip_power = -100
 			add_country_modifier = {
-				name = "nitra_domestic_intelligence"
+				name = "nitra_domestic_intelligence_modifier"
 				duration = -1
 			}
 		}
@@ -600,7 +600,7 @@ SLO_missions_4 = {
 				add_dip_power = 75
 			}
 			add_country_modifier = {
-				name = "nitra_universitas_istropolitana"
+				name = "nitra_universitas_istropolitana_modifier"
 				duration = 7300
 			}
 		}
@@ -646,7 +646,7 @@ SLO_missions_5 = {
 		effect = {
 			1772 = {
 				add_province_modifier = {
-					name = nitra_repair_devin
+					name = nitra_repair_devin_modifier
 					duration = -1
 				}
 			}
@@ -688,7 +688,7 @@ SLO_missions_5 = {
 		effect = {
 			slovakia_area = {
 				add_province_modifier = {
-					name = nitra_land_castles
+					name = nitra_land_castles_modifier
 					duration = -1
 				}
 			}
@@ -743,7 +743,7 @@ SLO_missions_5 = {
 					add_center_of_trade_level = 1
 				}
 				add_province_modifier = {
-					name = "developed_presporok"
+					name = "developed_presporok_modifier"
 					duration = 7300
 				}
 			}

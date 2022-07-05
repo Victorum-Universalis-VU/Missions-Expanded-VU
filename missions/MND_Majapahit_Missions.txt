@@ -224,7 +224,7 @@ mnd_maj_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = central_java_area
-				#area = surabaya_area
+				area = east_java_area
 				province_id = 2691
 				province_id = 4794
 			}
@@ -237,10 +237,10 @@ mnd_maj_2 = {
 				type = all
 				owned_by = ROOT
 			}
-			#surabaya_area = {
-			#	type = all
-			#	owned_by = ROOT
-			#}
+			east_java_area = {
+				type = all
+				owned_by = ROOT
+			}
 			2691 = {
 				owned_by = ROOT
 			}

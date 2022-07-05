@@ -491,7 +491,7 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = PRU_holds_all_of_the_highlighted_lands
 				AND = {
-					baden_area = { # used to be upper_rhineland_area
+					baden_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -501,7 +501,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			baden_area= { # used to be upper_rhineland_area
+			baden_area= {
 				cede_province = BAD
 				add_core = BAD
 				hidden_effect = { remove_core = ROOT }

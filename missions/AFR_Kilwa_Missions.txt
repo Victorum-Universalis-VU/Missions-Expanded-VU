@@ -984,20 +984,6 @@ kilwa_colonization_missions_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-#				banten_area = {
-#					limit = {
-#						NOT = { is_core = ROOT }
-#						NOT = { is_permanent_claim = ROOT }
-#					}
-#					add_permanent_claim = ROOT
-#				}
-#				surabaya_area = {
-#					limit = {
-#						NOT = { is_core = ROOT }
-#						NOT = { is_permanent_claim = ROOT }
-#					}
-#					add_permanent_claim = ROOT
-#				}
 			}
 		}
 	}

@@ -379,11 +379,11 @@ me_bavaria_minor_missions_3 = {
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	# is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 	}
 	has_country_shield = yes
@@ -589,11 +589,11 @@ me_bavaria_minor_missions_4_2 = {
 				}
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	# is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 	}
 	has_country_shield = yes
@@ -1035,11 +1035,11 @@ me_bavaria_missions_2 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 	}
 	has_country_shield = yes
@@ -2945,11 +2945,11 @@ me_bavaria_missions_wittelsbach_1 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	# is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 		has_country_flag = bav_dynasty_wittelsbach
 	}
@@ -4338,11 +4338,11 @@ me_bavaria_missions_welf_1 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	# is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 		has_country_flag = bav_dynasty_welf
 	}
@@ -4451,11 +4451,11 @@ me_bavaria_missions_welf_2 = {
 				tag = BAV
 				has_country_flag = use_missions_expanded_missions_instead_of_paradox
 			}
-			AND = {
-				# is_expanded_mod_active = { mod = formables }
-				tag = AUB
-				was_tag = BAV
-			}
+			#AND = {
+			#	# is_expanded_mod_active = { mod = formables }
+			#	tag = AUB
+			#	was_tag = BAV
+			#}
 		}
 		has_country_flag = bav_dynasty_welf
 	}

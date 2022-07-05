@@ -508,7 +508,7 @@ country_event = {
 		
 		random_owned_province = {
 			limit = {
-				trade_goods = tanned_leather
+				trade_goods = leather
 				has_manufactory_trigger = yes
 			}
 			save_event_target_as = leather_province
@@ -545,7 +545,7 @@ country_event = {
 			europe = {
 				limit = {
 					OR = {
-						trade_goods = tanned_leather
+						trade_goods = leather
 						trade_goods = livestock
 					}
 				}

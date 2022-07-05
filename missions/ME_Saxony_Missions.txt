@@ -817,8 +817,9 @@ saxony_missions_slot_2 = {
 					area = east_prussia_area
 				}
 				OR = {
-					has_building = coastal_defence
-					has_building = naval_battery
+					has_building = naval_base
+					has_building = naval_arsenal
+					has_building = coastal_artillery
 				}
 			}
 		}
