@@ -27,7 +27,7 @@
 #	}
 #	
 #}
-
+#
 #QNG_salt_stations = {
 #	potential = {
 #		owner = {
