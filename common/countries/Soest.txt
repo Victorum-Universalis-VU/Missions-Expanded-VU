@@ -90,7 +90,7 @@ leader_names = {
 }
 
 ship_names = {
-	"Bischöfliche Galeere"
+	"Bischöfliche Galeere" Neustadt Kaiserslautern Elmstein Landstuhl Rhodt Deidesheim Hochspeyer Neunkirchen Wolfstein Winnweiler
 }
 
 army_names = {
