@@ -12,7 +12,9 @@ new_world_natives_missions_modernization_tag = {
 			tag = CHE
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -72,7 +74,9 @@ new_world_natives_missions_modernization = {
 			tag = CHE
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -123,7 +127,9 @@ new_world_natives_missions_no_reg = {
 			technology_group = mesoamerican
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -164,7 +170,9 @@ new_world_natives_missions_slot1 = {
 			technology_group = mesoamerican
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -282,7 +290,9 @@ new_world_natives_missions_slot2 = {
 			technology_group = mesoamerican
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -358,7 +368,9 @@ new_world_natives_missions_slot4 = {
 			technology_group = mesoamerican
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
@@ -525,7 +537,9 @@ new_world_natives_missions_slot5 = {
 			technology_group = mesoamerican
 		}
 		OR = {
+			NOT = { tag = MAY }
 			NOT = { tag = INC }
+			NOT = { tag = AZT }
 			has_country_flag = use_paradox_missions
 		}
 	}
