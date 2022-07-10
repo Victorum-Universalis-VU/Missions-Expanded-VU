@@ -1480,7 +1480,7 @@ UKS_missions_2 = {
 		}
         effect = {
 			add_country_modifier = {
-				name = fra_conquest_of_naples
+				name = fra_conquest_of_naples_modifier
 				duration = 9125
 			}
 			sicily_area = {
@@ -1899,7 +1899,7 @@ UKS_missions_3 = {
 					add_base_tax = 1
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1914,7 +1914,7 @@ UKS_missions_3 = {
 					add_base_tax = 1
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1954,10 +1954,10 @@ UKS_missions_3 = {
 				limit = {
 					region = france_region
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1965,10 +1965,10 @@ UKS_missions_3 = {
 				limit = {
 					region = france_region
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1976,10 +1976,10 @@ UKS_missions_3 = {
 				limit = {
 					region = france_region
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1987,10 +1987,10 @@ UKS_missions_3 = {
 				limit = {
 					region = france_region
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -1998,10 +1998,10 @@ UKS_missions_3 = {
 				limit = {
 					region = france_region
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -3155,10 +3155,10 @@ UKS_missions_4 = {
 				limit = {
 					culture = dutch
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -3166,10 +3166,10 @@ UKS_missions_4 = {
 				limit = {
 					culture = dutch
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}
@@ -3177,10 +3177,10 @@ UKS_missions_4 = {
 				limit = {
 					culture = dutch
 					has_building = university
-					NOT = { has_province_modifier = fra_university }
+					NOT = { has_province_modifier = fra_university_modifier }
 				}
 				add_province_modifier = {
-					name = fra_university
+					name = fra_university_modifier
 					duration = -1
 				}
 			}

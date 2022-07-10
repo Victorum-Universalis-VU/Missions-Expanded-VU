@@ -96,6 +96,10 @@ nitra_universitas_istropolitana_modifier = {
 	global_institution_spread = 0.1
 }
 
+fra_conquest_of_naples_modifier = {
+	mercenary_discipline = 0.10
+}
+
 ME_HUN_crownsUnitedBohemia_modifier = {
 	same_culture_advisor_cost = -0.5
 	relation_with_same_culture = 5

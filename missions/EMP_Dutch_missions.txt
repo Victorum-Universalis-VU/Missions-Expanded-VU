@@ -471,18 +471,18 @@ emp_ned_slot2_indies_branch = {
 		completed_by = 1602.3.20 # historical date of its establishment
 		
 		trigger = {
-			colonial_indonesia = {
-				has_discovered = ROOT
-			}
+			#colonial_indonesia = {
+			#	has_discovered = ROOT
+			#}
 			trade_company_polynesia = {
 				has_discovered = ROOT
 			}
-			#trade_company_indonesia = {
-			#	has_discovered = ROOT
-			#}
-			#trade_company_moluccas = {
-			#	has_discovered = ROOT
-			#}
+			trade_company_indonesia = {
+				has_discovered = ROOT
+			}
+			trade_company_moluccas = {
+				has_discovered = ROOT
+			}
 		}
 		effect = {
 			lanka_area = {
@@ -547,8 +547,8 @@ emp_ned_slot2_indies_branch = {
 		provinces_to_highlight = {
 			OR = {
 				trade_company_region = trade_company_polynesia
-				#trade_company_region = trade_company_moluccas
-				#trade_company_region = trade_company_indonesia
+				trade_company_region = trade_company_moluccas
+				trade_company_region = trade_company_indonesia
 			}
 			is_sea = no
 			NOT = { owned_by = ROOT }
@@ -560,8 +560,8 @@ emp_ned_slot2_indies_branch = {
 				all_owned_province = {
 					OR = {
 						trade_company_region = trade_company_polynesia
-						#trade_company_region = trade_company_moluccas
-						#trade_company_region = trade_company_indonesia
+						trade_company_region = trade_company_moluccas
+						trade_company_region = trade_company_indonesia
 					}
 				}
 				amount = 15

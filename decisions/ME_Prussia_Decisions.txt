@@ -59,10 +59,10 @@ country_decisions = {
 #				hidden_effect = { remove_core = ROOT }
 #			}
 #			east_bavaria_area = {
-				cede_province = BAV
-				add_core = BAV
-				hidden_effect = { remove_core = ROOT }
-			}
+#				cede_province = BAV
+#				add_core = BAV
+#				hidden_effect = { remove_core = ROOT }
+#			}
 			66 = {
 				cede_province = BAV
 				add_core = BAV

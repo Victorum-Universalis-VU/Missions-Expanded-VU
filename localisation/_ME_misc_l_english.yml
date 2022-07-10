@@ -37,8 +37,6 @@ l_english:
  desc_italy_tariff_boost:0 "."
  HRE_conquering_frenzy:0 "Italian Tariff Boost"
  desc_HRE_conquering_frenzy:0 "."
- fra_conquest_of_naples:0 "Conquest of Naples"
- desc_fra_conquest_of_naples:0 "."
 
  #Missing Province Modifiers
  fer_grazing_fields_modifier:0 "Grazing Fields"
@@ -101,4 +99,7 @@ l_english:
  
  nitra_universitas_istropolitana_modifier:0 "Universitas Istropolitana"
  desc_nitra_universitas_istropolitana_modifier:0 "A prestigious institution for learning."
+ 
+ fra_conquest_of_naples_modifier:0 "Conquest of Naples"
+ desc_fra_conquest_of_naples_modifier:0 "French conquest of Naples."
  
