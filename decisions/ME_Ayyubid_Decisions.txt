@@ -201,7 +201,7 @@ country_decisions = {
 			}
 			mission_completed = AYY_prosperity_of_the_mouth
 			has_discovered = 4316
-			4316 = {
+			2315 = {
 				range = ROOT
 				NOT = {
 					has_great_project = {
