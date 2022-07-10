@@ -222,7 +222,7 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
-			adm_tech = 10
+			#adm_tech = 10
 		}
 		allow = {
 			owns_or_non_sovereign_subject_of = 4316
