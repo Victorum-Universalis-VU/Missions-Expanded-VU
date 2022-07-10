@@ -58,7 +58,7 @@ country_decisions = {
 #				add_core = BAV
 #				hidden_effect = { remove_core = ROOT }
 #			}
-#			east_bavaria_area = {
+			bavaria_area = {
 				cede_province = BAV
 				add_core = BAV
 				hidden_effect = { remove_core = ROOT }
@@ -160,10 +160,11 @@ country_decisions = {
 				desc = PRU_until_germany_is_formed
 				duration = -1
 			}
-		add_adm_power = 75
-		add_dip_power = 75
-		add_mil_power = 75
-		BAV = { add_liberty_desire = -100 }
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			BAV = { add_liberty_desire = -100 }
+		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -495,18 +496,12 @@ country_decisions = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					4712 = { country_or_non_sovereign_subject_holds = ROOT }
 					77 = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 		}
 		effect = {
 			baden_area= {
-				cede_province = BAD
-				add_core = BAD
-				hidden_effect = { remove_core = ROOT }
-			}
-			4712 = {
 				cede_province = BAD
 				add_core = BAD
 				hidden_effect = { remove_core = ROOT }
