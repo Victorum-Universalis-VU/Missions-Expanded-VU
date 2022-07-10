@@ -2524,7 +2524,7 @@ country_event = {
 		4370 = {
 			owned_by = ROOT
 		}
-		mission_completed = eng_rb_universities
+		mission_completed = eng_universities
 	}
 	
 	immediate = {
