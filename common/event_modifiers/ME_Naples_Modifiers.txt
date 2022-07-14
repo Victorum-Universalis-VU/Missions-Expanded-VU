@@ -65,6 +65,7 @@ nap_restore_republic = {
 }
 nap_republic_amalfi_modifier = {
 	trade_deals_slots = 0.01
+	picture = "trade_deals_slots_icon"
 }
 nap_lighthouse_otranto = {
 	local_ship_cost = -0.20

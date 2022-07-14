@@ -82,6 +82,7 @@ ita_finally_united = {
 ita_eboriokratia_ge = {
 	global_trade_goods_size_modifier = 0.10
 	trade_deals_slots = 0.01
+	picture = "trade_deals_slots_icon"
 }
 ita_eboriokratia = {
 	global_trade_goods_size_modifier = 0.10
