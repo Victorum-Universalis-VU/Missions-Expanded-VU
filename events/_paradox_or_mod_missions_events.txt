@@ -21,10 +21,10 @@ country_event = {
 			every_country = {
 				if = {
 					limit = {
-						OR = {
+						#OR = {
 							country_has_both_paradox_and_me_missions = yes
-							country_has_both_paradox_and_golden_bull_missions = yes
-						}
+						#	country_has_both_paradox_and_golden_bull_missions = yes
+						#}
 					}
 					country_event = { id = paradox_or_mod_missions_events.2 days = 1 }
 				}
@@ -55,10 +55,10 @@ country_event = {
 	trigger = {
 		has_global_flag = paradox_or_mod_missions_events_flag
 		NOT = { has_country_flag = has_selected_missions_@ROOT }
-		OR = {
+		#OR = {
 			country_has_both_paradox_and_me_missions = yes
-			country_has_both_paradox_and_golden_bull_missions = yes
-		}
+		#	country_has_both_paradox_and_golden_bull_missions = yes
+		#}
 	}
 
 	immediate = {
