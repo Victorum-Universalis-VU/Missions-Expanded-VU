@@ -207,12 +207,12 @@ l_english:
  brl_ideas_7_desc: "English Channel? Whats that?"
  
  # Cultures:
- #welsh_celtic: "Welsh"
+ welsh_celtic: "Welsh"
  cornish: "Cornish"
  manx: "Manx"
- #breton_celtic: "Breton"
+ breton_celtic: "Breton"
  galician_celtic: "Galician"
- #scottish_celtic: "Scots-Gael"
+ scottish_celtic: "Scots-Gael"
  
  # Decisions:
  wls_create_cornwall_title: "Create the Kingdom of Cornwall"

@@ -99,7 +99,6 @@ vij_preparation_war = {
 vij_trade_dominion_ge = {
 	trade_deals_slots = 0.02
 	global_trade_power = 0.10
-	picture = "trade_deals_slots_icon"
 }
 vij_trade_dominion = {
 	global_trade_power = 0.10

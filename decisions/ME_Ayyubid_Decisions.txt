@@ -196,12 +196,12 @@ country_decisions = {
 				ai = no
 				AND = {
 					treasury = 10000
-					owns_or_vassal_of = 5261
+					owns_or_vassal_of = 4316
 				}
 			}
 			mission_completed = AYY_prosperity_of_the_mouth
-			has_discovered = 5261
-			5261 = {
+			has_discovered = 4316
+			2315 = {
 				range = ROOT
 				NOT = {
 					has_great_project = {
@@ -215,17 +215,17 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 5261
+				province_id = 4316
 				province_id = 2315
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
-			adm_tech = 10
+			#adm_tech = 10
 		}
 		allow = {
-			owns_or_non_sovereign_subject_of = 5261
+			owns_or_non_sovereign_subject_of = 4316
 			owns_or_non_sovereign_subject_of = 2315
 			is_subject = no
 			adm_tech = 10
@@ -233,19 +233,8 @@ country_decisions = {
 		}
 		effect = {
 			2315 = {	# Sharqiya
-				#add_great_project = suez_canal
-				add_great_project = {
-				    type = suez_canal
-					instant = no
-				}
+				add_great_project = suez_canal 
 			}
-			#5261 = {	# Borsa'id
-			#	#add_great_project = second_suez_canal
-			#	add_great_project = {
-			#	    type = second_suez_canal
-			#		instant = no
-			#	}
-			#}
 		}
 		ai_will_do = {
 			factor = 1

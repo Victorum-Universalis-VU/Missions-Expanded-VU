@@ -529,7 +529,6 @@ MSA_navy_innovation_modifier = {
 MSA_mastery_of_the_coin_modifier_GE = {
 	trade_deals_slots = 0.01
 	trade_steering = 0.1
-	picture = "trade_deals_slots_icon"
 }
 
 MSA_mastery_of_the_coin_modifier = {

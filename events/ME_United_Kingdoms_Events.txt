@@ -609,8 +609,7 @@ country_event = {
 		has_country_flag = ENG_Angevin_Missions
 		NOT = { has_country_modifier = UKS_cooldown }
 		any_owned_province = {
-			#culture = breton_celtic
-			culture = celtic_breton_culture
+			culture = breton_celtic
 		}
 		is_at_war = yes
 	}
@@ -641,8 +640,7 @@ country_event = {
 		
 		random_owned_province = {
 			limit = {
-				#culture = breton_celtic
-				culture = celtic_breton_culture
+				culture = breton_celtic
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -669,8 +667,7 @@ province_event = {
 			}
 			has_country_flag = Breton_Intolerance
 			any_owned_province = {
-				#culture = breton_celtic
-				culture = celtic_breton_culture
+				culture = breton_celtic
 			}
 		}
 	}
@@ -680,8 +677,7 @@ province_event = {
 			owner = {
 				random_owned_province = {
 					limit = {
-						#culture = breton_celtic
-						culture = celtic_breton_culture
+						culture = breton_celtic
 					}
 					save_event_target_as = ENG_Event_target_1
 				}
@@ -721,8 +717,7 @@ province_event = {
 	picture = CULTURE_eventPicture
 	
 	trigger = {
-		#culture = breton_celtic
-		culture = celtic_breton_culture
+		culture = breton_celtic
 		owner = {
 			OR = {
 				has_country_flag = Breton_Intolerance
