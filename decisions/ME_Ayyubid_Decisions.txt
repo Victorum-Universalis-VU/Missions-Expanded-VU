@@ -233,7 +233,11 @@ country_decisions = {
 		}
 		effect = {
 			2315 = {	# Sharqiya
-				add_great_project = suez_canal 
+				#add_great_project = suez_canal
+				add_great_project = {
+                    type = suez_canal
+                    instant = no
+                }
 			}
 		}
 		ai_will_do = {
