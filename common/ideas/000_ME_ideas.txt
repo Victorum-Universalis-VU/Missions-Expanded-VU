@@ -674,44 +674,44 @@ HBC2_ideas = {
 }
 
 # Gran Colombia
-GRC_ideas = {
-	start = {
-		leader_land_fire = 1
-		prestige = 1
-	}
-
-	bonus = {
-		governing_capacity = 100
-	}
-
-	trigger = {
-		tag = GRC
-	}
-	free = yes
-
-	GRC_the_admirable_campaign = {
-		army_tradition = 0.5
-		land_attrition = -0.1
-	}
-	GRC_haciendas = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	GRC_patriotic_army = {
-		movement_speed = 0.1
- 	}
-	GRC_colonizing_the_inferior = {
-		global_colonial_growth = 20
-	}
-	GRC_the_new_revolution = {
-		land_morale = 0.15
-	}
-	GRC_the_red_blue_and_yellow = {
-		war_exhaustion = -0.02
-	}
-	GRC_recruit_the_llaneros = {
-		cavalry_power = 0.15
-	}
-}
+#GRC_ideas = {
+#	start = {
+#		leader_land_fire = 1
+#		prestige = 1
+#	}
+#
+#	bonus = {
+#		governing_capacity = 100
+#	}
+#
+#	trigger = {
+#		tag = GRC
+#	}
+#	free = yes
+#
+#	GRC_the_admirable_campaign = {
+#		army_tradition = 0.5
+#		land_attrition = -0.1
+#	}
+#	GRC_haciendas = {
+#		global_trade_goods_size_modifier = 0.1
+#	}
+#	GRC_patriotic_army = {
+#		movement_speed = 0.1
+# 	}
+#	GRC_colonizing_the_inferior = {
+#		global_colonial_growth = 20
+#	}
+#	GRC_the_new_revolution = {
+#		land_morale = 0.15
+#	}
+#	GRC_the_red_blue_and_yellow = {
+#		war_exhaustion = -0.02
+#	}
+#	GRC_recruit_the_llaneros = {
+#		cavalry_power = 0.15
+#	}
+#}
 
 CAP_ideas = {
 	start = {
