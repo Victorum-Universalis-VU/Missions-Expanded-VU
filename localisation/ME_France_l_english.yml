@@ -639,6 +639,7 @@
  declined_make_french_hre_subject_opinion: "Rejected our offer to become a Prince Français"
  po_make_french_hre_subject_opinion: "Forced to become a Prince Français"
  fra_declared_world_conquest: "Declared World Conquest"
+ declined_ask_to_become_agricultural_march: "Rejected our offer to become an Agricultural March"
 
  # Trade Modifiers:
  fra_carribean_trade: "Carribean Trade"

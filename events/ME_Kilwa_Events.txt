@@ -334,7 +334,7 @@ country_event = {
 		hidden_effect = {
 			FROM = {
 				export_to_variable = {
-					which = zan_money_to_pay value
+					which = zan_money_to_pay
 					value = years_of_income
 				}
 				multiply_variable = { which = zan_money_to_pay value = 3.5 }
@@ -460,7 +460,7 @@ country_event = {
 		hidden_effect = {
 			FROM = {
 				export_to_variable = {
-					which = zan_money_to_pay value
+					which = zan_money_to_pay
 					value = years_of_income
 				}
 				multiply_variable = { which = zan_money_to_pay value = 1.5 }
@@ -586,7 +586,7 @@ country_event = {
 		hidden_effect = {
 			FROM = {
 				export_to_variable = {
-					which = zan_money_to_pay value
+					which = zan_money_to_pay
 					value = years_of_income
 				}
 				multiply_variable = { which = zan_money_to_pay value = 2.5 }
