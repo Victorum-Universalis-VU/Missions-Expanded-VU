@@ -116,11 +116,14 @@ country_has_both_paradox_and_me_missions = {
 		}
 		# Default
 		tag = ARA
+		tag = AVR
 		tag = CAS
+		tag = CIR
 		tag = HAB
 		tag = CRI
 		tag = DAN
 		tag = FRA
+		tag = GAZ
 		tag = GOL
 		tag = HSA
 		tag = ICE
