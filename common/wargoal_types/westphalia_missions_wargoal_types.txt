@@ -1,5 +1,5 @@
 expel_cologne = {
-	type = show_superiority
+	type = superiority
 	
 	attacker = {
 		badboy_factor = 0.5
