@@ -63,23 +63,20 @@ country_decisions = {
 			is_at_war = no			
 			owns_core_province = 2108		#Huncun	
 			owns_core_province = 730		#Girin
-			730 = {							#Girin
-				is_state = yes
-			}		
-			num_of_owned_provinces_with = {
-				custom_trigger_tooltip = {
-					tooltip = manchu_manchuria_decision.tooltip
+			custom_trigger_tooltip = {
+				tooltip = manchu_manchuria_decision.tooltip
+				num_of_owned_provinces_with = {
 					is_core = ROOT
 					OR = {
 						culture = manchu_new
 						culture = manchu
 					}
+					value = 20
 				}
-				value = 20
 			}
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			change_tag = MCH
 			swap_non_generic_missions = yes
 			if = {
@@ -215,9 +212,6 @@ country_decisions = {
 			owns = 723		# Xilin Gol
 			owns = 726		# Liaodong
 			owns = 1816		# Beijing
-			1816 = {		# Beijing
-				is_state = yes
-			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			NOT = {
@@ -239,7 +233,7 @@ country_decisions = {
 				government_rank = 3
 			}
 			else = {
-				total_development = 1000
+				total_development = 2000 #VU dev doubling
 			}
 		}
 		effect = {

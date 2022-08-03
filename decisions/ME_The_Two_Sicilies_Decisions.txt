@@ -390,7 +390,7 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = tts_king_jerusalem_decision_completed
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			add_papal_influence = 25
 			add_country_modifier = {
 				name = tts_deus_vult

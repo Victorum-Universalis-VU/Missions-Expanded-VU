@@ -259,7 +259,7 @@ HSA_missions_2 = {
 			army_tradition = 40
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			create_general = { tradition = 75 }
 		}
 	}
