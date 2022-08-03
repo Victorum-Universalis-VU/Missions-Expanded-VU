@@ -233,11 +233,11 @@ country_decisions = {
 		}
 		effect = {
 			2315 = {	# Sharqiya
-				#add_great_project = suez_canal
-				add_great_project = {
-                    type = suez_canal
-                    instant = no
-                }
+				add_great_project = suez_canal
+				#add_great_project = {
+                #    type = suez_canal
+                #    instant = no
+                #}
 			}
 		}
 		ai_will_do = {
@@ -272,9 +272,10 @@ country_decisions = {
 				add_building_construction = {
 					building = university
 					speed = 2
+					cost = 0
 				}
-				add_treasury = -300
 			}
+			add_treasury = -300
 		}
 		ai_will_do = {
 			factor = 1
