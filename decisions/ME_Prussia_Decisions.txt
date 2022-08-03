@@ -454,7 +454,7 @@ country_decisions = {
 					limit = {
 						NOT = { is_free_or_tributary_trigger = yes }
 						culture_group = germanic
-						NOT = { development = 500 }
+						NOT = { total_development = 500 }
 						ai = yes
 					}
 					ROOT = { inherit = PREV }
