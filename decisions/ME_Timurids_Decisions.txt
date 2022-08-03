@@ -82,7 +82,7 @@ country_decisions = {
 	
 	timurid_or_beijing_owner_cancel_pact = {
 		potential = {
-			has_province_modifier = ME_beijing_samarkand_pact
+			has_country_modifier = ME_beijing_samarkand_pact
 			ai = no #AI will never be able to cancel it
 		}
 		allow = {
