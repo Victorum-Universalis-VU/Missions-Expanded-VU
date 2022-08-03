@@ -133,7 +133,7 @@ WES_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			add_country_modifier = {
 				name = WES_defeated_the_southern_bastion
 				duration = 9125

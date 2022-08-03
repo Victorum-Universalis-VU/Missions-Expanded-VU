@@ -1765,7 +1765,7 @@ KOR_missions_5 = {
 				limit = {
 					4651 = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				add_prestige_or_monarch_power = { amount = 25 }
+				add_prestige = 25
 			}
 			add_country_modifier = {
 				name = KOR_dominance_in_the_strait
@@ -3322,7 +3322,7 @@ KOR_missions_4_Colonial = {
 			}
 		}
 		effect = {
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			add_country_modifier = {
 				name = KOR_fusang_found
 				duration = 9125

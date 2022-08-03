@@ -498,7 +498,7 @@ BRZ_missions_4 = {
 		}
 		effect = {
 			add_legitimacy_equivalent = { amount = 20 republican_tradition = 20 }
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 		}
 	}
 
