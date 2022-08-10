@@ -24,8 +24,8 @@ francia_missions_1 = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_has_center_of_trade_of_level = 1
-						development = 30
+						province_has_center_of_trade_of_level = 3 # Was 1, nerfed for VU
+						development = 60
 					}
 					is_state_core = ROOT
 				}
