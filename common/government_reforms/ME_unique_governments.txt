@@ -313,7 +313,7 @@ trade_confederation = {
 		tc_cities
 		tc_federal
 		tc_merchants
-		tc_pirates
+		#tc_pirates
 	}
 	republic = yes
 	modifiers = {
