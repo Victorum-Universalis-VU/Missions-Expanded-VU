@@ -56,7 +56,9 @@ korean_military_rebels = {
 		}
 		modifier = {
 			factor = 5
-			has_estate = estate_nobles
+			owner = {
+				has_estate = estate_nobles
+			}
 		}
 		modifier = {
 			factor = 3.0
