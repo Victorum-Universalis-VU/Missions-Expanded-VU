@@ -2330,9 +2330,11 @@ country_decisions = {
 			NOT = { has_country_flag = formed_netherlands_flag }
 			NOT = { tag = NED }
 			NOT = { tag = BEL }
-			AND = { #To hide decision with FLA if using ME MT
-				tag = FLA
-				has_country_flag = use_paradox_missions
+			NOT = {
+				AND = { #To hide decision with FLA if using ME MT
+					tag = FLA
+					has_country_flag = use_missions_expanded_missions_instead_of_paradox
+				}
 			}
 			OR = {
 				primary_culture = dutch
