@@ -17,6 +17,19 @@ ME_irish_minors_missions_1 = {
 			tag = ORD
 			tag = MTH
 			tag = MNS
+			#VU tags
+			tag = ANR
+			tag = BIF
+			tag = CLN
+			tag = ECO
+			tag = FGH
+			tag = GLW
+			tag = IVE
+			tag = LGN
+			tag = MGH
+			tag = MYO
+			tag = THO
+			tag = WCO
 		}
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -123,6 +136,19 @@ ME_irish_minors_missions_2 = {
 			tag = ORD
 			tag = MTH
 			tag = MNS
+			#VU tags
+			tag = ANR
+			tag = BIF
+			tag = CLN
+			tag = ECO
+			tag = FGH
+			tag = GLW
+			tag = IVE
+			tag = LGN
+			tag = MGH
+			tag = MYO
+			tag = THO
+			tag = WCO
 		}
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -230,6 +256,19 @@ ME_irish_minors_missions_3 = {
 			tag = ORD
 			tag = MTH
 			tag = MNS
+			#VU tags
+			tag = ANR
+			tag = BIF
+			tag = CLN
+			tag = ECO
+			tag = FGH
+			tag = GLW
+			tag = IVE
+			tag = LGN
+			tag = MGH
+			tag = MYO
+			tag = THO
+			tag = WCO
 		}
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -316,6 +355,19 @@ ME_irish_minors_missions_4 = {
 			tag = ORD
 			tag = MTH
 			tag = MNS
+			#VU tags
+			tag = ANR
+			tag = BIF
+			tag = CLN
+			tag = ECO
+			tag = FGH
+			tag = GLW
+			tag = IVE
+			tag = LGN
+			tag = MGH
+			tag = MYO
+			tag = THO
+			tag = WCO
 		}
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox
@@ -434,6 +486,19 @@ ME_irish_minors_missions_5 = {
 			tag = ORD
 			tag = MTH
 			tag = MNS
+			#VU tags
+			tag = ANR
+			tag = BIF
+			tag = CLN
+			tag = ECO
+			tag = FGH
+			tag = GLW
+			tag = IVE
+			tag = LGN
+			tag = MGH
+			tag = MYO
+			tag = THO
+			tag = WCO
 		}
 		OR = {
 			has_country_flag = use_missions_expanded_missions_instead_of_paradox

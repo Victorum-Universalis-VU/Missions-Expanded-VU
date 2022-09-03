@@ -93,6 +93,19 @@ country_has_both_paradox_and_me_missions = {
 				tag = ORD
 				tag = MTH
 				tag = MNS
+				#VU tags
+				tag = ANR
+				tag = BIF
+				tag = CLN
+				tag = ECO
+				tag = FGH
+				tag = GLW
+				tag = IVE
+				tag = LGN
+				tag = MGH
+				tag = MYO
+				tag = THO
+				tag = WCO
 			}
 		}
 		AND = {
