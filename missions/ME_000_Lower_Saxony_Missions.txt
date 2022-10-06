@@ -466,7 +466,14 @@ HAN_gen_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -481,13 +488,6 @@ HAN_gen_missions_3 = {
 				add_permanent_claim = ROOT
 			}
 			thuringia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_saxony_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

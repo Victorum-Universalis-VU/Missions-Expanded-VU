@@ -172,7 +172,7 @@
  # Factions:
  timurid_legitimacy: "Timurid Legitimacy"
  timurid_legitimacy_FACTION_DESC: " "
- timurid_legitimacy_influence: "Yearly Timurid Legitimacy"
+ #timurid_legitimacy_influence: "Yearly Timurid Legitimacy"
  
  # Variables:
  timurid_legitimacy_value: "Timurid Legitimacy"

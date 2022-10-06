@@ -24,6 +24,10 @@ pirate_1 = {
 				tag = PLB
 				has_country_flag = use_paradox_missions
 			}
+			AND = {
+				NOT = { tag = GOT }
+				NOT = { was_tag = GOT }
+			}
 		}
 	}
 
@@ -194,6 +198,10 @@ pirate_2 = {
 			AND = {
 				tag = PLB
 				has_country_flag = use_paradox_missions
+			}
+			AND = {
+				NOT = { tag = GOT }
+				NOT = { was_tag = GOT }
 			}
 		}
 	}
@@ -383,6 +391,10 @@ pirate_3 = {
 				tag = PLB
 				has_country_flag = use_paradox_missions
 			}
+			AND = {
+				NOT = { tag = GOT }
+				NOT = { was_tag = GOT }
+			}
 		}
 	}
 
@@ -507,6 +519,10 @@ pirate_5 = {
 				tag = PLB
 				has_country_flag = use_paradox_missions
 			}
+			AND = {
+				NOT = { tag = GOT }
+				NOT = { was_tag = GOT }
+			}
 		}
 	}
 
@@ -555,13 +571,24 @@ pirate_5 = {
 		
 		trigger = {
 			has_leader_with = { admiral = yes total_pips = 12 }
-			custom_trigger_tooltip = {
-				tooltip = a_mighty_pirate_leader
-				has_ruler_flag = historical_pirate
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = a_mighty_pirate_leader
+					has_ruler_flag = historical_pirate
+				}
+				AND = {
+					republican_tradition = 95
+					navy_tradition = 50
+					ADM = 4
+					DIP = 4
+					MIL = 4
+				}
 			}
 		}
 		
 		effect = {
+			custom_tooltip = got_pirate_renowned_pirate_king_tt
+			set_country_flag = can_gain_legendary_pirates_flag
 			add_country_modifier = {
 				name = "pirate_a_famous_pirate"
 				duration = 7300

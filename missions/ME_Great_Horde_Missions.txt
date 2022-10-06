@@ -182,7 +182,7 @@ Great_Horde_missions_2 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = astrakhani
+			add_accepted_culture_or_dip_power = { culture = astrakhani }
 			set_capital = 466
 			466 = {
 				if = {
@@ -659,6 +659,13 @@ Great_Horde_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			samtskhe_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			imereti_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -699,6 +706,7 @@ Great_Horde_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = shirvan_area
+				area = samtskhe_area
 				area = imereti_area
 			}
 			NOT = { country_or_subject_holds = ROOT } 
@@ -706,6 +714,10 @@ Great_Horde_missions_4 = {
 	
 		trigger = {
 			shirvan_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			samtskhe_area = {
 				type = all
 				country_or_subject_holds = ROOT
 			}

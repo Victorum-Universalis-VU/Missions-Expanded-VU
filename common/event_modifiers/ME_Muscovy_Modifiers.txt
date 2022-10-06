@@ -57,7 +57,7 @@ muscovy_artillery_combat = {
 	artillery_power = 0.1
 }
 muscovy_artillery_siege = {
-	artillery_bonus_vs_fort = 1
+	artillery_levels_available_vs_fort = 1
 	siege_ability = 0.15
 }
 muscovy_special_artillery = {

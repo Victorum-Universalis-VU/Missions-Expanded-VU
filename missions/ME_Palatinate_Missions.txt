@@ -160,7 +160,7 @@ PAL_Missions_3 = {
 				}
 				OR = {
 					area = franconia_area
-					#area = upper_franconia_area
+					area = thuringia_area
 				}
 			}
 			else = {
@@ -291,6 +291,13 @@ PAL_Missions_4 = {
 				duration = 9125
 			}
 			franconia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

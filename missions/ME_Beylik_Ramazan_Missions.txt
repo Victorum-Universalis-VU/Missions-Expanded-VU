@@ -56,7 +56,7 @@ RAM_missions_1 = {
 		}
 		effect = {
 			custom_tooltip = ram_ally_tt
-			hidden_effect = {
+			hidden_effect {
 				if = {
 					limit = {
 						alliance_with = TUR

@@ -1,22 +1,22 @@
-#Updated by C1CK 31-01-2020
-#Right most lines were up-to-date, the west line worked fine but wasn't actually using the proper borders, and the union missions occasionally strayed outside of the target country (Burgenland!)
-#Has no changes besides updating claims for BT
-
 polish_missions_main_slot = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		OR = {
 			tag = POL
 			tag = PLC
 		}
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
-	prussian_confederation_mission_pol = { #Updated by C1CK (Win Danzig war)
+	prussian_confederation_mission_pol = {
 		icon = mission_alliances
 		required_missions = { }
 		completed_by = 1466.10.19
@@ -53,14 +53,20 @@ polish_missions_main_slot = {
 					DNZ = {
 						is_subject = no
 						is_at_war = no
-						NOT = { total_development = 200 }
+						NOT = { total_development = 100 }
 					}
 				}
 				country_event = { id = flavor_teu.3 }
 				custom_tooltip = vassalize_danzig_tooltip
 			}
 			else_if = {
-				limit = { any_subject_country = { any_owned_province = { area = west_prussia_area } } }
+				limit = {
+					any_subject_country = {
+						any_owned_province = {
+							area = west_prussia_area
+						}
+					}
+				}
 				west_prussia_area = {
 					limit = {
 						NOT = { is_core = ROOT	}
@@ -77,45 +83,17 @@ polish_missions_main_slot = {
 					add_permanent_claim = ROOT
 				}
 			}
-			1841 = { #Marienburg
-				if = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
+			kuyavia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-			}
-			7829 = { #Marienwerder
-				if = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			1859 = { #Kulmerland
-				if = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			42 = { #Ermland
-				if = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
-	conquer_warmia = { #Updated by C1CK (Conquer Historic lands in West Prussia)
+
+	conquer_warmia = { #Conquer Western Prussia
 		icon = mission_conquer_5_states
 		required_missions = { prussian_confederation_mission_pol }
 		completed_by = 1466.10.19
@@ -123,14 +101,13 @@ polish_missions_main_slot = {
 		provinces_to_highlight = {
 			OR = {
 				area = west_prussia_area
-				province_id = 1841 #Marienburg
-				province_id = 7829 #Marienwerder
-				province_id = 1859 #Kulmerland
-				province_id = 42 #Ermland
+				area = kuyavia_area
 			}
 			NOT = {
-				owned_by = ROOT
-				is_core = ROOT
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -139,19 +116,8 @@ polish_missions_main_slot = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			1841 = { #Marienburg
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			7829 = { #Marienwerder
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			1859 = { #Kulmerland
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			42 = { #Ermland
+			kuyavia_area = {
+				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
@@ -181,33 +147,15 @@ polish_missions_main_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-				nadruvia_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				masuria_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 		}
 	}
-	vassalize_the_teutonic_order = { #Updated by C1CK
+	vassalize_the_teutonic_order = {
 		icon = mission_teutonic_knights
 		required_missions = { conquer_warmia }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-				area = east_prussia_area
-				area = nadruvia_area
-				area = masuria_area
-			}
+			area = east_prussia_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -223,42 +171,7 @@ polish_missions_main_slot = {
 				name = "teutons_pacified"
 				duration = 7300
 			}
-			bulgaria_area = { #Sofia
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			vidin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			danubian_plain_area = { #Lower Moesia
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_thrace_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			northern_thrace_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			silistria_area = { #Dobruja
+			bulgaria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -292,28 +205,34 @@ plc_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		tag = PLC
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
-	polish_navy_mission = { #Updated by C1CK
+	polish_navy_mission = {
 		icon = mission_galleys_in_port
 		required_missions = { vassalize_the_teutonic_order }
 		position = 6
 		provinces_to_highlight = {
-			province_id = 43 #Danzig
+			province_id = 43
 			NOT = {
-				owned_by = ROOT
-				OR = {
-					has_building = dock
-					has_building = drydock
-				}
-				OR = {
-					has_building = shipyard
-					has_building = grand_shipyard
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+					}
 				}
 			}
 		}
@@ -334,13 +253,6 @@ plc_missions_1 = {
 		}
 		effect = {
 			country_event = { id = flavor_pol.1 }
-			vastra_gotaland_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			svealand_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -357,24 +269,19 @@ plc_missions_1 = {
 			}
 		}
 	}
-	swedish_deluge_mission = { #Updated by C1CK, fixed by Dub
+	swedish_deluge_mission = {
 		icon = mission_steppe_warriors
 		required_missions = { polish_navy_mission }
 		provinces_to_highlight = {
 			OR = {
 				area = svealand_area
 				area = gotaland_area
-				area = vastra_gotaland_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			vastra_gotaland_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			svealand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -397,29 +304,28 @@ polish_missions_branch_slot = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		OR = {
 			tag = POL
 			tag = PLC
 		}
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
-	revenge_for_varna_mission = { #Updated by C1CK
+	revenge_for_varna_mission = {
 		icon = mission_crusade_for_varna
 		required_missions = { vassalize_the_teutonic_order }
 		position = 6
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = bulgaria_area #Sofia
-					area = vidin_area
-					area = danubian_plain_area #Lower Moesia
-					area = upper_thrace_area
-					area = northern_thrace_area
-					area = silistria_area #Dobruja
+					area = bulgaria_area
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -466,12 +372,16 @@ polish_missions_slot_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		OR = {
 			tag = POL
 			tag = PLC
 		}
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -480,19 +390,12 @@ polish_missions_slot_3 = {
 		required_missions = {  }
 		completed_by = 1526.3.9
 		provinces_to_highlight = {
-			OR = {
-				region = poland_region
-				region = ruthenia_region
-				region = baltic_region
+			province_id = 257
+			NOT = {
+				owned_by = ROOT
 			}
-			OR = {
-				owned_by = MAZ
-				province_id = 257			
-			}
-			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			NOT = { exists = MAZ }
 			owns_core_province = 257
 		}
 		effect = {
@@ -507,135 +410,98 @@ polish_missions_slot_3 = {
 						junior_union_with = ROOT
 						lithuania_area = {
 							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
+							owned_by = LIT
 						}
-						yotvingia_area = {
+						minsk_area = {
 							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
+							owned_by = LIT
 						}
-						trakai_area = {
+						west_dniepr_area = {
 							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
-						}
-						volhynia_area = {
-							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
-						}
-						eastern_volhynia_area = {
-							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
+							owned_by = LIT
 						}
 						pripyat_area = {
 							type = all
-							OR = {
-								owned_by = LIT
-								owned_by = ROOT
-							}
+							owned_by = LIT
+						}
+						smolensk_area = {
+							type = all
+							owned_by = LIT
 						}
 					}
 				}
-			}
-			else_if = {
-				limit = {
-					government = monarchy
-					exists = LIT
-					is_subject = no
-					religion_group = christian
-					LIT = {
-						is_subject = no
-						government = monarchy
-					}
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = LIT
-				}
+				add_dip_power = 100
 			}
 			else = {
-				poland_region = {
+				lithuania_area = {
 					limit = {
-						is_core = LIT
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
-				ruthenia_region = {
+				minsk_area = {
 					limit = {
-						is_core = LIT
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
-				baltic_region = {
+				west_dniepr_area = {
 					limit = {
-						is_core = LIT
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				pripyat_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				smolensk_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	vassalize_lithuania = { #Updated by C1CK (Integrate!)
+	vassalize_lithuania = { # INTEGRATE lithuania
 		icon = mission_empire
 		required_missions = { annex_mazovia }
 		completed_by = 1569.7.1
 		provinces_to_highlight = {
 			OR = {
-				region = poland_region
-				region = ruthenia_region
-				region = baltic_region
+				area = lithuania_area
+				area = minsk_area
+				area = west_dniepr_area
+				area = pripyat_area
 			}
-			OR = {
-				owned_by = LIT
-				is_core = LIT
-				province_id = 272			
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			poland_region = {
+			lithuania_area = {
 				type = all
-				OR = {
-					NOT = { is_core = LIT }
-					NOT = { owned_by = LIT }
-					owned_by = ROOT
-				}
+				owned_by = ROOT
 			}
-			ruthenia_region = {
+			minsk_area = {
 				type = all
-				OR = {
-					NOT = { is_core = LIT }
-					NOT = { owned_by = LIT }
-					owned_by = ROOT
-				}
+				owned_by = ROOT
 			}
-			baltic_region = {
+			west_dniepr_area = {
 				type = all
-				OR = {
-					NOT = { is_core = LIT }
-					NOT = { owned_by = LIT }
-					owned_by = ROOT
-				}
+				owned_by = ROOT
+			}
+			pripyat_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -645,13 +511,10 @@ polish_missions_slot_3 = {
 			}
 			if = {
 				limit = {
-					government = monarchy
 					exists = HUN
-					is_subject = no
-					religion_group = christian
+					valid_for_personal_unions_trigger = yes
 					HUN = {
-						is_subject = no
-						government = monarchy
+						valid_for_personal_unions_trigger = yes
 					}
 				}
 				add_casus_belli = {
@@ -668,18 +531,10 @@ polish_missions_slot_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				carpathian_ruthenia_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
 				transdanubia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
-						NOT = { province_id = 3051 } #Burgenland
 					}
 					add_permanent_claim = ROOT
 				}
@@ -687,60 +542,39 @@ polish_missions_slot_3 = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
-						AND = {
-							NOT = { province_id = 7740 } #Backa
-							NOT = { province_id = 4173 } #Subotica
-						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	union_over_hungary_mission = { #Updated by C1CK
+	union_over_hungary_mission = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { vassalize_lithuania  }
 		provinces_to_highlight = {
 			OR = {
 				area = slovakia_area
-				area = carpathian_ruthenia_area
 				area = transdanubia_area
 				area = alfold_area
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-				province_id = 3051 #Burgenland
-				province_id = 7740 #Backa
-				province_id = 4173 #Subotica
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			slovakia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			carpathian_ruthenia_area = {
+			transdanubia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			transdanubia_area = {
-				type = all
-				OR = {
-					province_id = 3051 #Burgenland
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
 			alfold_area = {
 				type = all
-				OR = {
-					province_id = 7740 #Backa
-					province_id = 4173 #Subotica
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			silesia_area = { #Upper Silesia
+			silesia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -749,7 +583,7 @@ polish_missions_slot_3 = {
 			}
 		}
 	}
-	conquer_silesia = { #Updated by C1CK
+	conquer_silesia = {
 		icon = mission_conquer_5_states
 		required_missions = { union_over_hungary_mission }
 		provinces_to_highlight = {
@@ -759,7 +593,7 @@ polish_missions_slot_3 = {
 			}
 		}
 		trigger = {
-			silesia_area = { # Silesia
+			silesia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -771,13 +605,10 @@ polish_missions_slot_3 = {
 			}
 			if = {
 				limit = {
-					government = monarchy
 					exists = BOH
-					is_subject = no
-					religion_group = christian
+					valid_for_personal_unions_trigger = yes
 					BOH = {
-						government = monarchy
-						is_subject = no
+						valid_for_personal_unions_trigger = yes
 					}
 				}
 				add_casus_belli = {
@@ -794,14 +625,14 @@ polish_missions_slot_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				erzgebirge_area = {
+				moravia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
-				moravia_area = {
+				erzgebirge_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -811,14 +642,14 @@ polish_missions_slot_3 = {
 			}
 		}
 	}
-	union_over_bohemia_mission = { #Updated by C1CK
+	union_over_bohemia_mission = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { conquer_silesia  }
 		provinces_to_highlight = {
 			OR = {
 				area = bohemia_area
-				area = erzgebirge_area
 				area = moravia_area
+				area = erzgebirge_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -827,11 +658,11 @@ polish_missions_slot_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			erzgebirge_area = {
+			moravia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			moravia_area = {
+			erzgebirge_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -850,9 +681,13 @@ polish_missions_slot_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		tag = PLC
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -876,34 +711,16 @@ polish_missions_slot_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Dharma"
-						has_dlc = "Common Sense"
-					}
-				}
-				280 = {
-					development = 30
-				}
-				num_of_owned_provinces_with = {
-					OR = {
-						area = west_dniepr_area
-						area = east_dniepr_area
-					}
-					development = 15
-					value = 5
-				}
+			280 = {
+				development = 20
 			}
-			else = {
-				num_of_owned_provinces_with = {
-					OR = {
-						area = west_dniepr_area
-						area = east_dniepr_area
-					}
-					has_building = cathedral
-					value = 5
+			num_of_owned_provinces_with = {
+				OR = {
+					area = west_dniepr_area
+					area = east_dniepr_area
 				}
+				development = 10
+				value = 5
 			}
 		}
 		effect = {
@@ -929,12 +746,16 @@ polish_missions_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "Lions of the North" }
+	}
 	potential = {
 		OR = {
 			tag = POL
 			tag = PLC
 		}
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Lions of the North" }
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -947,13 +768,13 @@ polish_missions_slot_5 = {
 				capital_scope = {
 					region = russia_region
 				}
-				total_development = 200
+				total_development = 100
 				culture_group = east_slavic
 				is_subject = no
 			}
 		}
 		trigger = {
-			total_development = 1200
+			total_development = 600
 			custom_trigger_tooltip = {
 				tooltip = break_the_rus_mission_tooltip
 				NOT = {
@@ -961,7 +782,7 @@ polish_missions_slot_5 = {
 						capital_scope = {
 							region = russia_region
 						}
-						total_development = 200
+						total_development = 100
 						culture_group = east_slavic
 						is_subject = no
 					}
@@ -992,6 +813,9 @@ polish_missions_slot_5 = {
 			add_country_modifier = {
 				name = "polish_renaissance"
 				duration = 7300
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_orthodox_tolerance
 			}
 		}
 	}
@@ -1053,7 +877,13 @@ polish_missions_slot_5 = {
 			NOT = {
 				has_reform = elective_monarchy
 			}
-			absolutism = 50
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				absolutism = 50
+			}
+			crown_land_share = 50
 		}
 		effect = {
 			add_adm_power = 100
@@ -1076,21 +906,7 @@ polish_missions_slot_5 = {
 			owns_core_province = 260
 			owns_core_province = 2961
 			260 = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Dharma"
-							has_dlc = "Common Sense"
-						}
-					}
-					development = 30
-				}
-				else = {
-					OR = {
-						has_building = cathedral
-						has_building = counting_house
-					}
-				}				
+				development = 20			
 				has_manufactory_trigger = yes
 				if = {
 					limit = {
@@ -1106,21 +922,7 @@ polish_missions_slot_5 = {
 				}				
 			}
 			2961 = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Dharma"
-							has_dlc = "Common Sense"
-						}
-					}
-					development = 30
-				}
-				else = {
-					OR = {
-						has_building = cathedral
-						has_building = counting_house
-					}
-				}
+				development = 20
 				has_manufactory_trigger = yes
 				if = {
 					limit = {

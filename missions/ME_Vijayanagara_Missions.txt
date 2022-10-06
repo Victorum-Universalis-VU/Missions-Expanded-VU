@@ -720,7 +720,9 @@ vijayanagara_mission_3 = {
 		}
 		effect = {
 			add_mercantilism = 5
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 		}
 	}
 
@@ -1433,7 +1435,6 @@ vijayanagara_mission_1_expansion = {
 					NOT = { has_building = fort_18th }
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
-					NOT = { has_building = coastal_artillery }
 				}
 			}
 		}
@@ -1452,7 +1453,6 @@ vijayanagara_mission_1_expansion = {
 					has_building = fort_18th
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -1469,7 +1469,6 @@ vijayanagara_mission_1_expansion = {
 					has_building = fort_18th
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 				}
 			}
 		}
@@ -1490,7 +1489,6 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1510,7 +1508,6 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1530,7 +1527,6 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1550,7 +1546,6 @@ vijayanagara_mission_1_expansion = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 				}
 				add_base_manpower = 2
@@ -1956,7 +1951,9 @@ vijayanagara_mission_3_expansion = {
 			}
 		}
 		effect = {
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			add_country_modifier = {
 				name = vij_dream_unification
 				duration = -1
@@ -2767,7 +2764,9 @@ vijayanagara_mission_1_tall = {
 			else = { monthly_mil = 10 }
 		}
 		effect = {
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			add_country_modifier = {
 				name = vij_ministers
 				duration = 9125
@@ -2919,7 +2918,9 @@ vijayanagara_mission_1_tall = {
 		}
 		effect = {
 			add_splendor = 200
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 		}
 	}
 }
@@ -3164,7 +3165,9 @@ vijayanagara_mission_2_tall = {
 				}
 				change_adm = 1
 				change_dip = 1
-				add_mana_scaled_on_monarch_skill = yes
+				add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			}
 			else = {
 				add_country_modifier = {

@@ -48,16 +48,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-#			upper_bavaria_area = {
-#				cede_province = BAV
-#				add_core = BAV
-#				hidden_effect = { remove_core = ROOT }
-#			}
-#			lower_bavaria_area = {
-#				cede_province = BAV
-#				add_core = BAV
-#				hidden_effect = { remove_core = ROOT }
-#			}
 			bavaria_area = {
 				cede_province = BAV
 				add_core = BAV
@@ -131,7 +121,6 @@ country_decisions = {
 								}
 							}
 							AND = {
-								has_country_flag = pru_vassal_more
 								NOT = {
 									calc_true_if = {
 										all_subject_country = {
@@ -460,6 +449,12 @@ country_decisions = {
 					ROOT = { inherit = PREV }
 				}
 			}
+			remove_country_modifier = PRU_vassal_play
+			remove_country_modifier = PRU_BAV_unification
+			remove_country_modifier = PRU_WUR_unification
+			remove_country_modifier = PRU_BAD_unification
+			remove_country_modifier = PRU_SAX_unification
+			remove_country_modifier = PRU_MKL_unification
 		}
 		ai_will_do = {
 			factor = 1
@@ -496,12 +491,18 @@ country_decisions = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
+					4712 = { country_or_non_sovereign_subject_holds = ROOT }
 					77 = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 		}
 		effect = {
-			baden_area= {
+			baden_area = {
+				cede_province = BAD
+				add_core = BAD
+				hidden_effect = { remove_core = ROOT }
+			}
+			4712 = {
 				cede_province = BAD
 				add_core = BAD
 				hidden_effect = { remove_core = ROOT }

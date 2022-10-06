@@ -18,21 +18,15 @@ cro_1 = {
 		required_missions = {  }
 		position = 2
 		provinces_to_highlight = {
-			area = east_adriatic_coast_area
+			OR = {
+				province_id = 4753
+				province_id = 136
+			}
 			NOT = { owned_by = ROOT }
-			NOT = { province_id = 137 }
-			NOT = { province_id = 4754 }
 		}
 		trigger = {
-			is_subject = no
-			east_adriatic_coast_area = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					province_id = 137
-					province_id = 4754
-				}
-			}
+			4753 = { owned_by = ROOT }
+			136 = { owned_by = ROOT }
 		}
 		effect = {
 			add_prestige = 20
@@ -47,6 +41,9 @@ cro_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500	#Reconquest
 		}
 	}
 	cro_dominate_dubrovnik = {
@@ -80,24 +77,9 @@ cro_1 = {
 			else = {
 				add_treasury = 200
 			}
-			carinthia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			4752 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+		}
+		ai_weight = {
+			factor = 500	#More expansion at the coast line
 		}
 	}
 	cro_expel_italians = {
@@ -113,7 +95,7 @@ cro_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = balkan_region
-				value = 40
+				value = 20
 			}
 			balkan_region = {
 				type = all
@@ -138,6 +120,9 @@ cro_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Seems pretty Balkan to me
+		}
 	}
 	cro_withstand_ottomans = {
 		icon = mission_non-western_soldiers
@@ -151,7 +136,7 @@ cro_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				region = balkan_region
-				value = 70
+				value = 30
 			}
 			if = {
 				limit = {
@@ -161,7 +146,7 @@ cro_1 = {
 					tooltip = cro_tur_army
 					army_strength = {
 						who = TUR
-						value = 0.8
+						value = 0.5
 					}
 				}
 			}
@@ -171,6 +156,9 @@ cro_1 = {
 		}
 		effect = {
 			add_mil_power = 200
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }
@@ -215,44 +203,9 @@ cro_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			herzegovina_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_adriatic_coast_area  = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { province_id = 137 }
-					NOT = { province_id = 4754 }
-				}
-				add_permanent_claim = ROOT
-			}
-			1828 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			7727 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 	cro_reclaim_bosnia = {
@@ -260,7 +213,7 @@ cro_2 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			OR = {
-				area = herzegovina_area
+				area = croatia_area
 				area = bosnia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -277,14 +230,6 @@ cro_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			7727 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				religion = ROOT
-			}
-			1828 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				religion = ROOT
-			}
 		}
 		effect = {
 			if = {
@@ -293,11 +238,14 @@ cro_2 = {
 						accepted_culture = bosnian
 					}
 				}
-				add_accepted_culture = bosnian
+				add_accepted_culture_or_dip_power = { culture = bosnian }
 			}
 			else = {
 				add_dip_power = 100
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 	cro_croatian_fleet = {
@@ -317,6 +265,9 @@ cro_2 = {
 				duration = 7300
 			}	
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 	cro_conquer_carniola = {
 		icon = mission_landsknecht_soldier
@@ -334,6 +285,9 @@ cro_2 = {
 		}
 		effect = {
 			add_army_tradition = 30
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }
@@ -372,6 +326,9 @@ cro_5 = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 	cro_zagreb = {
 		icon = mission_eastern_european_city
@@ -391,6 +348,9 @@ cro_5 = {
 				add_base_manpower = 2
 				center_of_trade = 2
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 }

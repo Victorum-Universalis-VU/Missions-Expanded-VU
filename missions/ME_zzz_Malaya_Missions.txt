@@ -335,7 +335,7 @@ MSA_Missions_Expansion_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			degar_highlands_area = {
+			south_laos_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -351,14 +351,15 @@ MSA_Missions_Expansion_2 = {
 		position = 11
 		provinces_to_highlight = {
 			OR = {
+				area = south_laos_area
 				area = northern_thai_area
 				area = cambodia_area
 				area = mekong_area
-				area = degar_highlands_area
 				area = central_thai_area
 				area = khorat_area
 				area = tenasserim_area
 				area = north_tenasserim_area
+				area = degar_highlands_area
 				area = champa_area
 				area = sukothai_area
 				area = north_laos_area
@@ -368,16 +369,17 @@ MSA_Missions_Expansion_2 = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
+							area = south_laos_area
+							area = sukothai_area
 							area = northern_thai_area
 							area = cambodia_area
 							area = mekong_area
-							area = degar_highlands_area
 							area = central_thai_area
 							area = khorat_area
 							area = tenasserim_area
 							area = north_tenasserim_area
+							area = degar_highlands_area
 							area = champa_area
-							area = sukothai_area
 							area = north_laos_area
 						}
 						value = 40
@@ -388,16 +390,17 @@ MSA_Missions_Expansion_2 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
+					area = south_laos_area
+					area = sukothai_area
 					area = northern_thai_area
 					area = cambodia_area
 					area = mekong_area
-					area = degar_highlands_area
 					area = central_thai_area
 					area = khorat_area
 					area = tenasserim_area
 					area = north_tenasserim_area
+					area = degar_highlands_area
 					area = champa_area
-					area = sukothai_area
 					area = north_laos_area
 				}
 				value = 40
@@ -557,13 +560,6 @@ MSA_Missions_Expansion_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			cambodia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			custom_tooltip = MSA_completed_by_alliance
 			tooltip = {
 				CHA = {
@@ -610,7 +606,6 @@ MSA_Missions_Expansion_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = mekong_area
-				area = khorat_area
 				area = cambodia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -619,7 +614,6 @@ MSA_Missions_Expansion_3 = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
 							area = mekong_area
-							area = khorat_area
 							area = cambodia_area
 						}
 						value = 7
@@ -631,7 +625,6 @@ MSA_Missions_Expansion_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = mekong_area
-					area = khorat_area
 					area = cambodia_area
 				}
 				value = 7
@@ -652,7 +645,7 @@ MSA_Missions_Expansion_3 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						religion = hinduism
+						religion = hindu
 					}
 					add_country_modifier = {
 						name = MSA_legacy_of_the_hindu_empire
@@ -769,7 +762,6 @@ MSA_Missions_Expansion_4 = {
 				province_id = 650
 				area = south_sulawesi_area
 				area = sulawesi_area
-				area = east_sulawesi_area
 				area = spice_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -786,7 +778,6 @@ MSA_Missions_Expansion_4 = {
 							OR = {
 								area = south_sulawesi_area
 								area = sulawesi_area
-								area = east_sulawesi_area
 								area = spice_islands_area
 							}
 							value = 7
@@ -805,7 +796,6 @@ MSA_Missions_Expansion_4 = {
 					OR = {
 						area = south_sulawesi_area
 						area = sulawesi_area
-						area = east_sulawesi_area
 						area = spice_islands_area
 					}
 					value = 7
@@ -921,6 +911,7 @@ MSA_Missions_Expansion_5 = {
 			OR = {
 				area = luzon_area
 				area = visayas_area
+				area = sulu_archipelago_area
 				area = mindanao_area
 				area = southern_luzon_area
 			}
@@ -931,6 +922,7 @@ MSA_Missions_Expansion_5 = {
 						OR = {
 							area = luzon_area
 							area = visayas_area
+							area = sulu_archipelago_area
 							area = mindanao_area
 							area = southern_luzon_area
 						}
@@ -944,6 +936,7 @@ MSA_Missions_Expansion_5 = {
 				OR = {
 					area = luzon_area
 					area = visayas_area
+					area = sulu_archipelago_area
 					area = mindanao_area
 					area = southern_luzon_area
 				}
@@ -1016,7 +1009,6 @@ MSA_Missions_Expansion_5 = {
 			OR = {
 				area = south_sulawesi_area
 				area = sulawesi_area
-				area = east_sulawesi_area
 				area = spice_islands_area
 				area = timor_area
 				area = lesser_sunda_islands_area
@@ -1030,10 +1022,6 @@ MSA_Missions_Expansion_5 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			sulawesi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_sulawesi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1199,41 +1187,88 @@ MSA_Missions_Trade_1 = {
 		required_missions = { MSA_capitalize }
 		position = 14
 		trigger = {
-			num_of_owned_provinces_with = {
-				OR = {
-					trade_goods = spices
-					trade_goods = nutmeg
-					trade_goods = cloves
-					trade_goods = vanilla
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
 				}
-				has_production_building_trigger = yes
-				has_manufactory_trigger = yes
-				value = 10
-			}
-			development_in_provinces = {
-				OR = {
-					trade_goods = spices
-					trade_goods = nutmeg
-					trade_goods = cloves
-					trade_goods = vanilla
-				}
-				value = 300
-			}
-		}
-		effect = {
-			add_years_of_owned_provinces_production_income = {
-				years = 5
-				trigger = {
+				num_of_owned_provinces_with = {
 					OR = {
 						trade_goods = spices
 						trade_goods = nutmeg
 						trade_goods = cloves
 						trade_goods = vanilla
 					}
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					value = 10
 				}
-				custom_tooltip = MSA_from_spice_production_TGE
+				development_in_provinces = {
+					OR = {
+						trade_goods = spices
+						trade_goods = nutmeg
+						trade_goods = cloves
+						trade_goods = vanilla
+					}
+					value = 300
+				}
 			}
-			custom_tooltip = MSA_every_province_producing_spices_TGE
+			else = {
+				num_of_owned_provinces_with = {
+					OR = {
+						trade_goods = spices
+						trade_goods = cloves
+					}
+					has_production_building_trigger = yes
+					has_manufactory_trigger = yes
+					value = 10
+				}
+				development_in_provinces = {
+					OR = {
+						trade_goods = spices
+						trade_goods = cloves
+					}
+					value = 200
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods  }
+				}
+				add_years_of_owned_provinces_production_income = {
+					years = 5
+					trigger = {
+						OR = {
+							trade_goods = spices
+							trade_goods = nutmeg
+							trade_goods = cloves
+							trade_goods = vanilla
+						}
+					}
+					custom_tooltip = MSA_from_spice_production_TGE
+				}
+				custom_tooltip = MSA_every_province_producing_spices_TGE
+			}
+			else = {
+				add_years_of_owned_provinces_production_income = {
+					years = 5
+					trigger = {
+						OR = {
+							trade_goods = spices
+							trade_goods = cloves
+						}
+					}
+					custom_tooltip = MSA_from_spice_production
+				}
+				custom_tooltip = MSA_every_province_producing_spices
+			}
+			tooltip = {
+				add_province_modifier = {
+					name = MSA_masterful_spice
+					duration = 10950
+				}
+			}
 		}
 	}
 
@@ -1242,24 +1277,38 @@ MSA_Missions_Trade_1 = {
 		required_missions = { MSA_masters }
 		position = 15
 		trigger = {
-			trading_part = {
-				trade_goods = spices
-				value = 0.33
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				trading_part = {
+					trade_goods = spices
+					value = 0.33
+				}
+				trading_part = {
+					trade_goods = nutmeg
+					value = 0.75
+				}
+				trading_part = {
+					trade_goods = cloves
+					value = 0.75
+				}
+				trading_part = {
+					trade_goods = vanilla
+					value = 0.75
+				}
 			}
-			trading_part = {
-				trade_goods = nutmeg
-				value = 0.75
-			}
-			trading_part = {
-				trade_goods = cloves
-				value = 0.75
-			}
-			trading_part = {
-				trade_goods = vanilla
-				value = 0.75
+			else = {
+				trading_part = {
+					trade_goods = spices
+					value = 0.6
+				}
+				trading_part = {
+					trade_goods = cloves
+					value = 0.9
+				}
 			}
 		}
-		
 		effect = {
 			add_mercantilism = 5
 			custom_tooltip = MSA_modify_capitalization_of_goods_by
@@ -1330,7 +1379,7 @@ MSA_Missions_Trade_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			indonesian_islands_area = {
+			kedah_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1352,7 +1401,7 @@ MSA_Missions_Trade_1 = {
 					duration = -1
 				}
 			}
-			indonesian_islands_area = {
+			kedah_area = {
 				add_province_modifier = {
 					name = MSA_strait_of_malaya
 					duration = -1
@@ -2327,18 +2376,18 @@ MSA_Missions_General_4 = {
 	}
 }
 
-#MSA_Missions_General_5 = {
-#	slot = 5
-#	generic = no
-#	ai = yes
-#	potential = {
-#		always = no #unused
-#		tag = MSA
-#		has_country_flag = use_missions_expanded_missions_instead_of_paradox
-#	}
-#	has_country_shield = yes
-#
-#}
+MSA_Missions_General_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		always = no #unused
+		tag = MSA
+		has_country_flag = use_missions_expanded_missions_instead_of_paradox
+	}
+	has_country_shield = yes
+
+}
 
 MSA_Missions_Muslim_1 = {
 	slot = 1
@@ -2414,7 +2463,7 @@ MSA_Missions_Muslim_1 = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
-							indonesian_islands_area = {
+							kedah_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
@@ -2426,7 +2475,7 @@ MSA_Missions_Muslim_1 = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
-							east_sulawesi_area = {
+							malacca_area = {
 								owned_by = ROOT
 								has_tax_building_trigger = yes
 							}
@@ -2489,11 +2538,8 @@ MSA_Missions_Muslim_1 = {
 						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
-					indonesian_islands_area = {
-						owned_by = ROOT
-						has_tax_building_trigger = yes
-					}
 					kedah_area = {
+						owned_by = ROOT
 						has_tax_building_trigger = yes
 					}
 					north_tenasserim_area = {
@@ -4614,9 +4660,7 @@ MSA_Missions_Europe_4 = {
 						capital_scope = {
 							continent = europe
 						}
-						ROOT = {
-							has_better_tech_than = { who = PREV amount = 1 }
-						}
+						has_better_tech_than = { who = ROOT amount = 1 }
 					}
 				}
 			}

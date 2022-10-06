@@ -642,7 +642,7 @@ country_decisions = {
 						area = hesse_area
 						area = palatinate_area
 						area = baden_area
-						area = swabia_area
+						area = wurttemburg_area
 					}
 				}
 				has_spy_network_from = {
@@ -666,7 +666,7 @@ country_decisions = {
 							area = hesse_area
 							area = palatinate_area
 							area = baden_area
-							area = swabia_area
+							area = wurttemburg_area
 						}
 					}
 					has_spy_network_from = {

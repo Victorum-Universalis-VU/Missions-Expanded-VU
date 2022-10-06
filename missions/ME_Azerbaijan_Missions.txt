@@ -459,11 +459,9 @@ Azerbaijani_Generic_Missions_TBR = {
 			}
 		}
 		effect = {
-			416 = {
-				add_province_modifier = {
-					name = TBR_the_center_of_azerbaijan
-					duration = -1
-				}
+			add_province_modifier = {
+				name = TBR_the_center_of_azerbaijan
+				duration = -1
 			}
 		}
 	}
@@ -912,7 +910,7 @@ AZE_Missions_3 = {
 				add_nationalism = -10
 				add_local_autonomy = -10
 			}
-			add_accepted_culture = turkish
+			add_accepted_culture_or_dip_power = { culture = turkish }
 			151 = {
 				if = {
 					limit = {
@@ -1000,13 +998,6 @@ AZE_Missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			kartli_kakheti_area = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { is_permanent_claim = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
 			samtskhe_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1111,7 +1102,7 @@ AZE_Missions_4 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = turkish
+			add_accepted_culture_or_dip_power = { culture = turkish }
 			add_country_modifier = {
 				name = AZE_reunited_with_brethren
 				duration = -1
@@ -1168,17 +1159,10 @@ AZE_Missions_5 = {
 		required_missions = { AZE_conquer_armenia }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-#				area = kartli_kakheti_area
-				area = samtskhe_area
-			}
+			area = samtskhe_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-#			kartli_kakheti_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
 			samtskhe_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

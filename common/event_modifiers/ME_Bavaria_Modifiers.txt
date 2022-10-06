@@ -81,7 +81,7 @@ bavaria_a_bavarian_emperor_modifier_1 = {
 }
 
 bavaria_a_bavarian_emperor_modifier_2 = {
-	statewide_governing_cost = -0.2
+	governing_cost = -0.1
 	province_warscore_cost = -0.1
 }
 

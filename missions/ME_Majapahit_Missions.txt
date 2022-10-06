@@ -257,7 +257,6 @@ MAJ_missions_1 = {
 				OR = {
 					area = east_java_area
 					area = central_java_area
-					area = west_java_area
 				}
 				value = 225
 			}
@@ -279,13 +278,6 @@ MAJ_missions_1 = {
 					}
 				}
 				central_java_area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
-						name = MAJ_mancanegara_modifier
-						duration = -1
-					}
-				}
-				west_java_area = {
 					limit = { owned_by = ROOT }
 					add_province_modifier = {
 						name = MAJ_mancanegara_modifier
@@ -327,13 +319,6 @@ MAJ_missions_2 = {
 			add_adm_power = 50
 			add_army_tradition_or_mil_power = { amount = 10 }
 			west_java_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -454,18 +439,65 @@ MAJ_missions_2 = {
 						}
 					"
 				}
-				east_java_area = {
-					limit = { trade_goods = rice }
-					add_province_modifier = {
-					name = MAJ_rice_fields
-					duration = 9125
+				if = {
+					limit = {
+						is_expanded_mod_active = { mod = trade_goods }
+					}
+					east_java_area = {
+						limit = { trade_goods = rice }
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
+					central_java_area = {
+						limit = { trade_goods = rice }
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
+					west_java_area = {
+						limit = { trade_goods = rice }
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
 					}
 				}
-				central_java_area = {
-					limit = { trade_goods = rice }
-					add_province_modifier = {
-					name = MAJ_rice_fields
-					duration = 9125
+				else = { #inefficient use of space but eh
+					east_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
+					central_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
+					west_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
 					}
 				}
 			}
@@ -816,13 +848,6 @@ MAJ_missions_4 = {
 			}
 			MSA_claims_sulawesi = yes
 			kutai_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kapuas_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

@@ -342,7 +342,7 @@ USA_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = northern_california_area
+					area = california_area
 					NOT = { owned_by = ROOT }
 				}
 				AND = {
@@ -352,7 +352,7 @@ USA_missions_2 = {
 			}
 		}
 		trigger = {
-			northern_california_area = {
+			california_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -623,7 +623,7 @@ USA_missions_3 = {
 						add_base_manpower = 2
 					}
 				}
-				coastal_prarie_area = {
+				texas_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 						NOT = { is_core = ROOT }

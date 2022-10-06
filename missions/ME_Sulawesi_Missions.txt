@@ -57,7 +57,7 @@ MKS_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = kutai_area
-				area = kapuas_area
+				area = kalimantan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -65,7 +65,7 @@ MKS_missions_1 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = kutai_area
-					area = kapuas_area
+					area = kalimantan_area
 				}
 				value = 5
 			}
@@ -248,7 +248,7 @@ MKS_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kapuas_area = {
+			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

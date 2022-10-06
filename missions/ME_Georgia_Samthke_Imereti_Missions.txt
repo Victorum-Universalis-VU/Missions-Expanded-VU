@@ -137,12 +137,12 @@ GEO_missions_1 = {
 				AND = {
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 2 }
+						NOT = { num_of_times_improved = 2 }
 					}
 					NOT = {
 						area_for_scope_province = {
 							owned_by = ROOT
-							num_of_times_improved_by_owner = 2
+							num_of_times_improved = 2
 						}
 					}
 				}
@@ -165,7 +165,7 @@ GEO_missions_1 = {
 					}
 					area_for_scope_province = {
 						owned_by = ROOT
-						num_of_times_improved_by_owner = 2
+						num_of_times_improved = 2
 					}
 				}
 			}
@@ -173,7 +173,7 @@ GEO_missions_1 = {
 				capital_scope = {
 					area_for_scope_province = {
 						owned_by = ROOT
-						num_of_times_improved_by_owner = 2
+						num_of_times_improved = 2
 					}
 				}
 			}
@@ -200,7 +200,7 @@ GEO_missions_1 = {
 					province_id = 421
 					OR = {
 						NOT = { base_production = 6 }
-						NOT = { num_of_times_improved_by_owner = 3 }
+						NOT = { num_of_times_improved = 3 }
 					}
 				}
 			}
@@ -212,7 +212,7 @@ GEO_missions_1 = {
 			}
 			421 = {
 				base_production = 6
-				num_of_times_improved_by_owner = 3
+				num_of_times_improved = 3
 			}
 		}
 		effect = {
@@ -238,7 +238,7 @@ GEO_missions_2_shared = {
 	}
 	has_country_shield = yes
 	
-	GEO_combat_the_collapse = { #Unlike vanilla Georgia is united, not sure how that mission would translate in VU
+	GEO_combat_the_collapse = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		position = 1
@@ -275,6 +275,13 @@ GEO_missions_2_shared = {
 			else_if = {
 				limit = {
 					tag = SME
+				}
+				samtskhe_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 				imereti_area = {
 					limit = {
@@ -462,7 +469,7 @@ IME_missions_3 = {
 		required_missions = { GEO_combat_the_collapse }
 		position = 2
 		provinces_to_highlight = {
-			province_id = 423
+			area = samtskhe_area
 			NOT = { owned_by = ROOT }
 			ROOT = {
 				NOT = { overlord_of = GEO }
@@ -471,7 +478,8 @@ IME_missions_3 = {
 		trigger = {
 			OR = {
 				overlord_of = GEO
-				423 = {
+				samtskhe_area = {
+					type = all
 					owned_by = ROOT
 				}
 			}
@@ -530,16 +538,17 @@ SME_missions_3 = {
 		required_missions = { GEO_combat_the_collapse }
 		position = 2
 		provinces_to_highlight = {
-			province_id = 423
+			area = samtskhe_area
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			423 = {
+			samtskhe_area = {
+				type = all
 				owned_by = ROOT
 			}
 		}
 		effect = {
-			423 = {
+			samtskhe_area = {
 				add_core = ROOT
 				add_local_autonomy = -25
 				add_nationalism = -10

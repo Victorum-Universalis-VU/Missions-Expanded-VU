@@ -1,5 +1,0 @@
-declined_ask_to_become_agricultural_march = {
-	opinion = -25
-	yearly_decay = 1
-	min = -100
-}

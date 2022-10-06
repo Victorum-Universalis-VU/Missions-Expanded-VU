@@ -15,9 +15,9 @@ country_event = {
 					which = zan_money_to_pay
 					value = years_of_income
 				}
-				multiply_variable = { which = zan_money_to_pay value = 1.5 }
-				divide_variable = { which = zan_money_to_pay value = 1000 }
-				multiply_variable = { which = zan_money_to_pay value = 1000 }
+				multiply_variable = { zan_money_to_pay = 1.5 }
+				divide_variable = { zan_money_to_pay = 1000 }
+				multiply_variable = { zan_money_to_pay = 1000 }
 			}
 		}
 	}
@@ -71,11 +71,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100000 }
+						check_variable = { zan_money_to_pay = 100000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100000 }
+					change_variable = { zan_money_to_pay = -100000 }
 					add_treasury = -100000
 				}
 				add_treasury = 100000
@@ -83,11 +83,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10000 }
+						check_variable = { zan_money_to_pay = 10000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10000 }
+					change_variable = { zan_money_to_pay = -10000 }
 					add_treasury = -10000
 				}
 				add_treasury = 10000
@@ -95,11 +95,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1000 }
+						check_variable = { zan_money_to_pay = 1000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1000 }
+					change_variable = { zan_money_to_pay = -1000 }
 					add_treasury = -1000
 				}
 				add_treasury = 1000
@@ -107,11 +107,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100 }
+						check_variable = { zan_money_to_pay = 100 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100 }
+					change_variable = { zan_money_to_pay = -100 }
 					add_treasury = -100
 				}
 				add_treasury = 100
@@ -119,11 +119,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10 }
+						check_variable = { zan_money_to_pay = 10 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10 }
+					change_variable = { zan_money_to_pay = -10 }
 					add_treasury = -10
 				}
 				add_treasury = 10
@@ -131,11 +131,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1 }
+						check_variable = { zan_money_to_pay = 1 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1 }
+					change_variable = { zan_money_to_pay = -1 }
 					add_treasury = -1
 				}
 				add_treasury = 1
@@ -212,9 +212,9 @@ country_event = {
 					which = zan_money_to_pay
 					value = years_of_income
 				}
-				multiply_variable = { which = zan_money_to_pay value = 2 }
-				divide_variable = { which = zan_money_to_pay value = 1000 }
-				multiply_variable = { which = zan_money_to_pay value = 1000 }
+				multiply_variable = { zan_money_to_pay = 2 }
+				divide_variable = { zan_money_to_pay = 1000 }
+				multiply_variable = { zan_money_to_pay = 1000 }
 			}
 		}
 	}
@@ -249,11 +249,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100000 }
+						check_variable = { zan_money_to_pay = 100000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100000 }
+					change_variable = { zan_money_to_pay = -100000 }
 					add_treasury = -100000
 				}
 				add_treasury = 100000
@@ -261,11 +261,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10000 }
+						check_variable = { zan_money_to_pay = 10000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10000 }
+					change_variable = { zan_money_to_pay = -10000 }
 					add_treasury = -10000
 				}
 				add_treasury = 10000
@@ -273,11 +273,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1000 }
+						check_variable = { zan_money_to_pay = 1000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1000 }
+					change_variable = { zan_money_to_pay = -1000 }
 					add_treasury = -1000
 				}
 				add_treasury = 1000
@@ -285,11 +285,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100 }
+						check_variable = { zan_money_to_pay = 100 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100 }
+					change_variable = { zan_money_to_pay = -100 }
 					add_treasury = -100
 				}
 				add_treasury = 100
@@ -297,11 +297,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10 }
+						check_variable = { zan_money_to_pay = 10 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10 }
+					change_variable = { zan_money_to_pay = -10 }
 					add_treasury = -10
 				}
 				add_treasury = 10
@@ -309,11 +309,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1 }
+						check_variable = { zan_money_to_pay = 1 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1 }
+					change_variable = { zan_money_to_pay = -1 }
 					add_treasury = -1
 				}
 				add_treasury = 1
@@ -337,9 +337,9 @@ country_event = {
 					which = zan_money_to_pay
 					value = years_of_income
 				}
-				multiply_variable = { which = zan_money_to_pay value = 3.5 }
-				divide_variable = { which = zan_money_to_pay value = 1000 }
-				multiply_variable = { which = zan_money_to_pay value = 1000 }
+				multiply_variable = { zan_money_to_pay = 3.5 }
+				divide_variable = { zan_money_to_pay = 1000 }
+				multiply_variable = { zan_money_to_pay = 1000 }
 			}
 		}
 	}
@@ -375,11 +375,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100000 }
+						check_variable = { zan_money_to_pay = 100000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100000 }
+					change_variable = { zan_money_to_pay = -100000 }
 					add_treasury = -100000
 				}
 				add_treasury = 100000
@@ -387,11 +387,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10000 }
+						check_variable = { zan_money_to_pay = 10000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10000 }
+					change_variable = { zan_money_to_pay = -10000 }
 					add_treasury = -10000
 				}
 				add_treasury = 10000
@@ -399,11 +399,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1000 }
+						check_variable = { zan_money_to_pay = 1000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1000 }
+					change_variable = { zan_money_to_pay = -1000 }
 					add_treasury = -1000
 				}
 				add_treasury = 1000
@@ -411,11 +411,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100 }
+						check_variable = { zan_money_to_pay = 100 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100 }
+					change_variable = { zan_money_to_pay = -100 }
 					add_treasury = -100
 				}
 				add_treasury = 100
@@ -423,11 +423,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10 }
+						check_variable = { zan_money_to_pay = 10 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10 }
+					change_variable = { zan_money_to_pay = -10 }
 					add_treasury = -10
 				}
 				add_treasury = 10
@@ -435,11 +435,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1 }
+						check_variable = { zan_money_to_pay = 1 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1 }
+					change_variable = { zan_money_to_pay = -1 }
 					add_treasury = -1
 				}
 				add_treasury = 1
@@ -463,9 +463,9 @@ country_event = {
 					which = zan_money_to_pay
 					value = years_of_income
 				}
-				multiply_variable = { which = zan_money_to_pay value = 1.5 }
-				divide_variable = { which = zan_money_to_pay value = 1000 }
-				multiply_variable = { which = zan_money_to_pay value = 1000 }
+				multiply_variable = { zan_money_to_pay = 1.5 }
+				divide_variable = { zan_money_to_pay = 1000 }
+				multiply_variable = { zan_money_to_pay = 1000 }
 			}
 		}
 	}
@@ -501,11 +501,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100000 }
+						check_variable = { zan_money_to_pay = 100000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100000 }
+					change_variable = { zan_money_to_pay = -100000 }
 					add_treasury = -100000
 				}
 				add_treasury = 100000
@@ -513,11 +513,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10000 }
+						check_variable = { zan_money_to_pay = 10000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10000 }
+					change_variable = { zan_money_to_pay = -10000 }
 					add_treasury = -10000
 				}
 				add_treasury = 10000
@@ -525,11 +525,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1000 }
+						check_variable = { zan_money_to_pay = 1000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1000 }
+					change_variable = { zan_money_to_pay = -1000 }
 					add_treasury = -1000
 				}
 				add_treasury = 1000
@@ -537,11 +537,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100 }
+						check_variable = { zan_money_to_pay = 100 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100 }
+					change_variable = { zan_money_to_pay = -100 }
 					add_treasury = -100
 				}
 				add_treasury = 100
@@ -549,11 +549,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10 }
+						check_variable = { zan_money_to_pay = 10 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10 }
+					change_variable = { zan_money_to_pay = -10 }
 					add_treasury = -10
 				}
 				add_treasury = 10
@@ -561,11 +561,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1 }
+						check_variable = { zan_money_to_pay = 1 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1 }
+					change_variable = { zan_money_to_pay = -1 }
 					add_treasury = -1
 				}
 				add_treasury = 1
@@ -589,9 +589,9 @@ country_event = {
 					which = zan_money_to_pay
 					value = years_of_income
 				}
-				multiply_variable = { which = zan_money_to_pay value = 2.5 }
-				divide_variable = { which = zan_money_to_pay value = 1000 }
-				multiply_variable = { which = zan_money_to_pay value = 1000 }
+				multiply_variable = { zan_money_to_pay = 2.5 }
+				divide_variable = { zan_money_to_pay = 1000 }
+				multiply_variable = { zan_money_to_pay = 1000 }
 			}
 		}
 	}
@@ -620,11 +620,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100000 }
+						check_variable = { zan_money_to_pay = 100000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100000 }
+					change_variable = { zan_money_to_pay = -100000 }
 					add_treasury = -100000
 				}
 				add_treasury = 100000
@@ -632,11 +632,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10000 }
+						check_variable = { zan_money_to_pay = 10000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10000 }
+					change_variable = { zan_money_to_pay = -10000 }
 					add_treasury = -10000
 				}
 				add_treasury = 10000
@@ -644,11 +644,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1000 }
+						check_variable = { zan_money_to_pay = 1000 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1000 }
+					change_variable = { zan_money_to_pay = -1000 }
 					add_treasury = -1000
 				}
 				add_treasury = 1000
@@ -656,11 +656,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 100 }
+						check_variable = { zan_money_to_pay = 100 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -100 }
+					change_variable = { zan_money_to_pay = -100 }
 					add_treasury = -100
 				}
 				add_treasury = 100
@@ -668,11 +668,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 10 }
+						check_variable = { zan_money_to_pay = 10 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -10 }
+					change_variable = { zan_money_to_pay = -10 }
 					add_treasury = -10
 				}
 				add_treasury = 10
@@ -680,11 +680,11 @@ country_event = {
 			while = {
 				limit = {
 					FROM = {
-						check_variable = { which = zan_money_to_pay value = 1 }
+						check_variable = { zan_money_to_pay = 1 }
 					}
 				}
 				FROM = {
-					change_variable = { which = zan_money_to_pay value = -1 }
+					change_variable = { zan_money_to_pay = -1 }
 					add_treasury = -1
 				}
 				add_treasury = 1

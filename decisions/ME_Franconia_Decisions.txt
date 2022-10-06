@@ -44,7 +44,7 @@ country_decisions = {
 						# has_reform = free_city_reform
 					# }
 				# }
-				# upper_franconia_area = {
+				# thuringia_area = {
 					# owner = {
 						# has_reform = free_city_reform
 					# }
@@ -70,7 +70,7 @@ country_decisions = {
 					# }
 				# }
 			# }
-			# upper_franconia_area = {
+			# thuringia_area = {
 				# owner = {
 					# if = {
 						# limit = {

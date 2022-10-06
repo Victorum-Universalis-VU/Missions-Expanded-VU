@@ -74,13 +74,13 @@ country_event = { #A new Order
 				limit = {
 					culture = breton
 				}
-				change_culture = celtic_breton_culture #VU culture
+				change_culture = breton_celtic
 			}
 			every_country = {
 				limit = {
 					primary_culture = breton
 				}
-				change_primary_culture = celtic_breton_culture #VU culture
+				change_primary_culture = breton_celtic
 			}
 			set_variable = {
 				which = ENG_Patronized
@@ -390,7 +390,7 @@ country_event = {
 
 		ai_chance = { factor = 50 }
 
-		add_accepted_culture = highland_scottish
+		add_accepted_culture_or_dip_power = { culture = highland_scottish }
 	}
 }
 
@@ -432,7 +432,7 @@ country_event = {
 
 		ai_chance = { factor = 50 }
 
-		add_accepted_culture = highland_scottish
+		add_accepted_culture_or_dip_power = { culture = highlander }
 	}
 }
 

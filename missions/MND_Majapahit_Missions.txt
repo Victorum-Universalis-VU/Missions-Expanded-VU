@@ -323,7 +323,6 @@ mnd_maj_2 = {
 				area = brunei_area
 				area = kutai_area
 				area = kalimantan_area
-				area = kapuas_area
 				area = sabah_area
 			}
 			NOT = {
@@ -345,7 +344,6 @@ mnd_maj_2 = {
 						area = kutai_area
 						area = brunei_area
 						area = kalimantan_area
-						area = kapuas_area
 						area = sabah_area
 					}
 				}
@@ -661,7 +659,7 @@ mnd_maj_3 = {
 				owner = {
 					tag = MKS
 				}
-				area = east_sulawesi_area
+				area = south_sulawesi_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -674,7 +672,7 @@ mnd_maj_3 = {
 					is_subject_of = ROOT
 				}
 			}
-			east_sulawesi_area = {
+			south_sulawesi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -687,7 +685,7 @@ mnd_maj_3 = {
 						is_subject_of = ROOT
 						religion = animism
 						capital_scope = {
-							area = east_sulawesi_area
+							area = south_sulawesi_area
 						}
 					}
 				}
@@ -696,7 +694,7 @@ mnd_maj_3 = {
 						is_subject_of = ROOT
 						religion = animism
 						capital_scope = {
-							area = east_sulawesi_area
+							area = south_sulawesi_area
 						}
 					}
 					change_religion = ROOT
@@ -789,10 +787,7 @@ mnd_maj_4 = {
 			OR = {
 				owned_by = SUN
 				AND = {
-					OR = {
-						area = central_java_area
-						area = west_java_area
-					}
+					area = west_java_area
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
@@ -807,10 +802,6 @@ mnd_maj_4 = {
 					}
 				}
 				AND = {
-					central_java_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
 					west_java_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
@@ -837,7 +828,7 @@ mnd_maj_4 = {
 				}
 				SUN = {
 					change_primary_culture = javanese
-					add_accepted_culture = sundanese
+					add_accepted_culture_or_dip_power = { culture = sundanese }
 				}				
 			}
 			if = {
@@ -902,6 +893,7 @@ mnd_maj_4 = {
 						has_dlc = "El Dorado"
 						has_dlc = "Mare Nostrum"
 						has_dlc = "Golden Century"
+						has_dlc = "Lions of the North"
 					}
 				}
 				add_country_modifier = {
@@ -930,6 +922,7 @@ mnd_maj_4 = {
 						has_dlc = "El Dorado"
 						has_dlc = "Mare Nostrum"
 						has_dlc = "Golden Century"
+						has_dlc = "Lions of the North"
 					}
 				}
 				1371 = {

@@ -1235,7 +1235,7 @@ ZAN_missions_3_spain = {
 					exists = SPA
 				}
 				SPA = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 			else_if = {
@@ -1243,7 +1243,7 @@ ZAN_missions_3_spain = {
 					exists = CAS
 				}
 				CAS = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 			else_if = {
@@ -1251,13 +1251,13 @@ ZAN_missions_3_spain = {
 					exists = GBR
 				}
 				GBR = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 			else = {
 				exists = ENG
 				ENG = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 		}
@@ -1353,7 +1353,7 @@ ZAN_missions_3_spain = {
 						tag = POR
 						tag = FRA
 					}
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 				add_casus_belli = {
 					target = ROOT
@@ -1527,13 +1527,13 @@ ZAN_missions_2_portugal = {
 					exists = POR
 				}
 				POR = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 			else = {
 				exists = FRA
 				FRA = {
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 			}
 		}
@@ -1587,7 +1587,7 @@ ZAN_missions_2_portugal = {
 						tag = GBR
 						tag = ENG
 					}
-					check_variable = { which = trade_influence_from_kilwa value= 50 }
+					check_variable = { trade_influence_from_kilwa = 50 }
 				}
 				add_casus_belli = {
 					target = ROOT
@@ -1757,7 +1757,7 @@ ZAN_missions_1_neutrality = {
 		required_missions = { }
 		position = 6
 		trigger = {
-			check_variable = { which = trade_influence_from_kilwa value= 50 }
+			check_variable = { trade_influence_from_kilwa = 50 }
 		}
 		effect = {
 			capital_scope = {
@@ -1779,7 +1779,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT
@@ -1800,7 +1800,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT
@@ -1821,7 +1821,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT
@@ -1842,7 +1842,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT
@@ -1863,7 +1863,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT
@@ -1884,7 +1884,7 @@ ZAN_missions_1_neutrality = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = trade_influence_from_kilwa value= 50 }
+							check_variable = { trade_influence_from_kilwa = 50 }
 						}
 						add_casus_belli = {
 							target = ROOT

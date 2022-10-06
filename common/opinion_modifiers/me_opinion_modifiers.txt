@@ -1,0 +1,959 @@
+#Subject Opinion Modifiers
+is_french_hre_subject = {
+	opinion = 25
+}
+
+declined_make_french_hre_subject_opinion = {
+	opinion = -25
+	yearly_decay = 1
+	min = -100
+}
+
+po_make_french_hre_subject_opinion = {
+	opinion = -100
+	yearly_decay = 2
+	min = -100
+}
+
+#Albania_opinion_modifiers
+alb_defended_christianity = {
+	opinion = 50
+	yearly_decay = 3
+}
+alb_turks_defeated = {
+	opinion = 100
+}
+alb_well_wishes = {
+	opinion = -50
+}
+
+#Aragon_opinion_modifiers
+ara_approached_por = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#Armenia_opinion_modifiers
+ARM_mamluk_enmity = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+ARM_tolerating_all_christians = {
+	opinion = 75
+	yearly_decay = 2
+}
+
+ARM_armenian_contacts = {
+	opinion = 75
+	yearly_decay = 2
+}
+
+#Bavaria_opinion_modifiers
+bavaria_failed_electorate_opinion = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
+
+bavaria_heir_from_us_accepted_opinion = {
+	opinion = 50
+	max = 50
+	yearly_decay = 1
+}
+
+bavaria_heir_from_us_declined_opinion = {
+	opinion = -100
+	min = -100
+	yearly_decay = 1
+}
+
+bavaria_ferrara_declined_opinion = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
+
+bavaria_took_electorate_from_pal_opinion = {
+	opinion = -100
+	min = -100
+	yearly_decay = 1.5
+}
+
+#Beylik_opinion_modifiers
+CND_GEN_opinion = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+CND_VEN_opinion = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#Bosnia_opinion_modifiers
+bos_hun_opinion = {
+	opinion = 75
+	yearly_decay = 1
+}
+
+#Canada_opinion_modifiers
+can_great_fur_trade_opinion = {
+	opinion = 15
+	years = 15
+}
+can_preferes_fur = {
+	opinion = 30
+	yearly_decay = 1
+}
+can_hbc_defended = {
+	opinion = 50
+	yearly_decay = 1
+}
+can_hbc_punished = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+#Cilli_opinion_modifiers
+cli_spared_hungarian_nobles = {
+	opinion = 100
+	yearly_decay = 5
+}
+
+#Coburg_opinion_modifiers
+coburg_moderate_opening = {
+	opinion = 25
+	yearly_decay = 1
+}
+
+coburg_lavish_opening = {
+	opinion = 75
+	yearly_decay = 1
+}
+
+#Congress_of_paderborn_modifiers
+accepted_invitation_to_congress_of_paderborn_opinion = {
+	opinion = 100
+	yearly_decay = 1
+}
+
+declined_invitation_to_congress_of_paderborn_opinion = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+#Cyprus_Opinion_modifiers
+pap_affairs_italy = {
+	opinion = -20
+	yearly_decay = 2
+}
+
+kni_declined_pact = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
+
+cyp_attack_holy = {
+	opinion = -50
+	min = -50
+	yearly_decay = 1
+}
+
+pap_crusades_over = {
+	opinion = -200
+	min = -200
+	yearly_decay = 1
+}
+
+pap_coronation_present = {
+	opinion = 200
+	max = 200
+	yearly_decay = 1
+}
+
+cyp_coronation_present = {
+	opinion = 50
+	months = 120
+}
+
+cyp_coronation_absent = {
+	opinion = -75
+	min = -75
+	months = 120
+}
+
+pap_coronation_absent = {
+	opinion = -50
+	min = -50
+	months = 120
+}
+
+cyp_coronation_greedy = {
+	opinion = 40
+	months = 120
+}
+
+cyp_coronation_pap = {
+	opinion = -75
+	min = -75
+	months = 120
+}
+
+cyp_coronation_catholics = {
+	opinion = -25
+	min = -25
+	months = 60
+}
+
+#Ferrara_opinion_modifiers
+fer_pap_pos = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+fer_pap_neg = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+#Franconia_opinion_modifiers
+franconia_in_defense = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#FU_Ashikaga_opinion_modifiers
+ASK_hunted_down_the_ronin = {
+	opinion = 25
+	yearly_decay = 2
+}
+ASK_tosenbugyo = {
+	opinion = 100
+	yearly_decay = 2
+}
+ASK_Refused = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+#FU_Byzantium_opinion_modifiers
+byz_religious_schism_opinion = {
+	opinion = -100 
+	yearly_decay = 5
+}
+byz_byzantine_conversion_modifier = {
+	opinion = 150 
+	yearly_decay = 5 
+}
+byz_denied_access_to_constantinople_modifier = {
+	opinion = -50 
+	yearly_decay = 2.5 
+}
+byz_refused_to_defend_the_empire_opinion = {
+	opinion = -50 
+	yearly_decay = 5 
+}
+
+#FU_Dithmarschen_opinion_modifiers
+dtt_open_peasant_revolts_opinion = {
+	opinion = -100 
+	yearly_decay = 5
+}
+
+#FU_Florence_opinion_modifiers
+lan_italian_trusted_funds_modifier = {
+	opinion = 25
+	yearly_decay = 2.5
+}
+lan_treaty_eight_saints_modifier = { 
+	opinion = 50
+	yearly_decay = -5
+}
+lan_florentine_giraffe_opinion_modifier = {
+	opinion = 50
+	yearly_decay = 5
+}
+
+#FU_Lubeck_opinion_modifiers
+hsa_permitted_kontor_modifier = {
+	opinion = 50 
+	yearly_decay = 2.5 
+}
+hsa_allowed_regional_admin_opinion_modifier = {
+	opinion = 50 
+	yearly_decay = 2.5 
+}
+hsa_treaty_of_danzig_modifier = {
+	opinion = 25 
+	yearly_decay = 2.5 
+}
+hsa_refused_the_treaty_of_danzig_modifier = {
+	opinion = -30 
+	yearly_decay = 3
+}
+hsa_moved_the_staple_port = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+#FU_Monument_opinion_modifiers
+fu_constructed_the_florentine_cathedral = {
+	opinion = 25 
+	yearly_decay = 1 
+}
+fu_expanded_the_florentine_cathedral = {
+	opinion = 50 
+	yearly_decay = 2
+}
+
+#FU_Provence_opinion_modifiers
+pro_prevented_mad_war_opinion_modifier = {
+	opinion = 50
+	yearly_decay = 5
+}
+
+#FU_Switzerland_opinion_modifiers
+swi_peaceful_coexistence_of_beliefs_modifier = {
+	opinion = 25 
+	yearly_decay = 1 
+}
+
+#FU_Yamana_opinion_modifiers
+YMN_Reputation_Slandered = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+#georgia_opinion_modifiers
+geo_opinion = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+#germany_opinion_modifiers
+germany_undoing_the_treaty_of_verdun_opinion = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+germany_undoing_the_treaty_of_verdun_opinion_light = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+germany_undoing_the_treaty_of_verdun_opinion_positive = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+#golden_horde_opinion_modifiers
+golden_horde_timurid_princes_opinion = {
+	opinion = -30
+}
+
+#hansa_opinion_modifiers
+me_angry_hansa = {
+	opinion = -75
+	yearly_decay = 3
+}
+
+lbk_portugal_kontor = {
+	opinion = 25
+	yearly_decay = 0.25
+}
+
+#hesse_opinion_modifiers
+HES_marburg_colloquy_successful = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#hungary_opinion_modifiers
+ME_HUN_hussiteRebellion_opinion = {
+	opinion = -200
+	yearly_decay = 5
+}
+
+ME_HUN_hungarianLament_opinion = {
+	opinion = -100
+	yearly_decay = 5
+}
+
+#inca_opinion_modifiers
+inca_improved_relations_to_europeans_opinion_modifier = {
+	opinion = 100
+	max = 100
+	years = 5
+}
+
+#kazan_opinion_modifiers
+kaz_big_help = {
+	opinion = 200
+	yearly_decay = 5
+}
+
+#kilwa_opinion_modifiers
+kilwa_rejected_contacts_in_gujarat = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+kilwa_accepted_contacts_in_gujarat = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+kilwa_accepted_gulf_of_aden = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+kilwa_rejected_ship_purchase = {
+	opinion = -20
+	yearly_decay = 0.5
+}
+
+kilwa_rejected_officer_purchase = {
+	opinion = -20
+	yearly_decay = 0.5
+}
+
+kilwa_rejected_merchants_invitation = {
+	opinion = -20
+	yearly_decay = 0.5
+}
+
+kilwa_chose_neutrality = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+#korea_opinion_modifiers
+kor_tributary = {
+	opinion = 75
+	yearly_decay = 3
+}
+KOR_volunteerary_believers = {
+	opinion = 20
+	yearly_decay = 1
+}
+
+#lubeck_opinion_modifiers
+hns_hansa_decline = {
+	opinion = -10
+	yearly_decay = 0.5
+}
+
+#lucca_opinion_modifiers
+lucca_turned_to_us = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+lucca_turned_to_them = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#mali_opinion_modifiers
+mali_friendly_neighbors = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+western_jihad = {
+	opinion = 50
+	yearly_decay = 3
+}
+
+#mazandaran_opinion_modifiers
+kry_support_opinion = {
+	opinion = 75
+	yearly_decay = 3
+}
+
+kry_scumbags = {
+	opinion = -75
+	yearly_decay = 3
+}
+
+#ME_Austria_Opinion_Modifiers
+me_hab_rising_imperial_influence = {
+	opinion = 20
+	yearly_decay = 1
+}
+
+me_hab_successful_reform = {
+	opinion = 30
+	yearly_decay = 1
+}
+
+me_hab_rejected_imperial_authority = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+me_hab_imperial_authortiy = {
+	opinion = 30
+	yearly_decay = 1
+}
+
+me_hab_champion_of_reformation = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+me_hab_spent_glory = {
+	opinion = 150
+	yearly_decay = 0.5
+}
+
+me_hab_shadow_kingdom_opinion = {
+	opinion = 40
+	yearly_decay = 1
+}
+
+me_hab_kingdom_of_italy_opinion = {
+	opinion = 75
+	yearly_decay = 1
+}
+
+#ME_France_Opinion_Modifiers
+fra_reassured_auld_alliance = {
+	opinion = 50
+}
+fra_french_influence_inside_burgundy = {
+	opinion = 125
+	yearly_decay = 1
+}
+fra_angered_pap = {
+	opinion = -50
+}
+fra_bastion_for_christianity = {
+	opinion = 25
+}
+is_french_hre_subject = {
+	opinion = 25
+}
+declined_make_french_hre_subject_opinion = {
+	opinion = -25
+	yearly_decay = 1
+	min = -100
+}
+po_make_french_hre_subject_opinion = {
+	opinion = -100
+	yearly_decay = 2
+	min = -100
+}
+fra_declared_world_conquest = {
+	opinion = -100
+	yearly_decay = 1
+	min = -100
+}
+
+#ME_Genoa_Opinion_Modifiers
+gen_accepted_treaty = {
+	opinion = 50
+}
+gen_refused_treaty = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+#ME_Mantua_Opinion_Modifiers
+man_imperial_consecration_opinion = {
+	opinion = 25
+	yearly_decay = 2	# optional
+}
+
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#ME_Mazandaran_Opinion_Modifiers
+kry_support_opinion = {
+	opinion = 75
+	yearly_decay = 3
+}
+
+kry_scumbags = {
+	opinion = -75
+	yearly_decay = 3
+}
+
+maz_warm_reception = {
+	opinion = 30
+	yearly_decay = 4
+}
+maz_religious_amends = {
+	opinion = 25
+}
+
+#ME_Milan_Opinion_Modifiers
+mlo_commercial_relations = {
+	opinion = 50
+}
+
+mlo_imperial_blessing = {
+	opinion = 75
+}
+
+mlo_carve_new_empire_elector = {
+	opinion = -50
+	years = 50
+}
+
+mlo_carve_new_empire_emperor = {
+	opinion = -100
+	years = 50
+}
+
+mlo_holy_roman_emperor = {
+	opinion = 25
+}
+
+mlo_refused_intermarriage = {
+	opinion = -50
+	years = 50
+}
+
+#ME_Naples_Opinion_Modifiers
+nap_crown_himself = {
+	opinion = -100
+	yearly_decay = 2	# optional
+}
+
+nap_refuse_crown = {
+	opinion = 50
+	yearly_decay = 2	# optional
+}
+
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#ME_Persia_Opinion_Modifiers
+persia_flexible = {
+	opinion = -100
+	yearly_decay = 1	# optional
+}
+persia_prioritise = {
+	opinion = 100
+	yearly_decay = 1	# optional
+}
+persia_coup_in_india = {
+	opinion = -10
+	yearly_decay = 1
+}
+
+#ME_Savoy_Opinion_Modifiers
+sav_supporting_anti = {
+	opinion = -100
+	years = 25
+}
+
+#ME_Ternate_Tidore_opinion_modifiers
+TID_TER_community_of_faithful = {
+	opinion = 50
+	yearly_decay = 1	# optional
+}
+
+#ME_Venice_Opinions_Modiifers
+ven_mamluks_accept = {
+	opinion = 100
+	yearly_decay = -1	# optional
+}
+
+ven_mamluks_refuse = {
+	opinion = -50
+	yearly_decay = 2	# optional
+}
+
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#ME_Vjiayanagara_Opinions_Modiifers
+vij_pegu_relation_positive = {
+	opinion = 50
+	yearly_decay = 2	# optional
+}
+
+vij_pegu_relation_negative = {
+	opinion = -50
+	yearly_decay = 2	# optional
+}
+
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#Melva_Fairs_Opinion_Modifiers
+melva_fairs_accepted_invitation = {
+	opinion = 25
+	yearly_decay = 1
+}
+melva_fairs_declined_invitation = {
+	opinion = -25
+	yearly_decay = 1
+}
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#Melva_Naples_Opinion_Modifiers
+melva_naples_recoinciliation = {
+	opinion = 50
+	months = 240
+}
+nap_helps_skanderberg = {
+	opinion = -25
+	years = 10
+}
+#name_of_modifier = {
+#	opinion = 1
+#	min = -15			# optional
+#	max = 15			# optional
+#	yearly_decay = 5	# optional
+#	months = 10			# optional
+#}
+
+#mexico_opinion_modifiers
+mex_razed_sacred_city = {
+	opinion = -50
+	yearly_decay = 1
+}
+
+mex_keeped_sacred_city = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+#mongolia_opinion_modifiers
+mongolia_opinion_lost_mandate = {
+	opinion = -20
+}
+
+mongolia_opinion_new_rising_empire = {
+	opinion = 20
+}
+
+mongolia_happy_with_decision = {
+	opinion = 20
+	yearly_decay = 2
+}
+
+mongolia_unhappy_with_decision = {
+	opinion = -20
+	yearly_decay = 2
+}
+
+#muscovy_opinion_modifiers
+muscovy_refused_deal = {
+	opinion = -100
+	yearly_decay = 5
+}
+muscovy_supported_pretender = {
+	opinion = -50
+	yearly_decay = 2
+}
+muscovy_approves_prince = {
+	opinion = 100
+	yearly_decay = 5
+}
+muscovy_common_enemy = {
+	opinion = 100
+	yearly_decay = 5
+}
+muscovy_denied_meddling = {
+	opinion = 50
+	yearly_decay = 5
+}
+
+#normandy_opinion_modifiers
+denounced_by_normandy = {
+	opinion = -75
+	min = -75
+	years = 10
+}
+
+#ottoman_opinion_modifiers
+tur_spared_knights = {
+	opinion = 20
+	yearly_decay = 1
+}
+
+tur_killed_knights = {
+	opinion = -30
+	yearly_decay = 1
+}
+
+TUR_peace_of_constantinople = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+#poland_opinion_modifiers
+POL_jagiellonian_ties = {
+	opinion = 75
+	yearly_decay = 0.5
+}
+
+#provence_opinion_modifiers
+pro_did_join_empire = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+pro_didnt_join_empire = {
+	opinion = 100
+	yearly_decay = 1
+}
+
+pro_didnt_join_empire_for_emperor = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+#prussia_opinion_modifiers
+defeated_france_prussia_opinion = {
+	opinion = 75
+	yearly_decay = 0.5
+}
+
+#rhineland_opinion_modifiers
+rhn_acting_for_the_faith = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+rhn_faith = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+#spain_opinion_modifiers
+spain_habsburg_union_small_opinion = {
+	opinion = -50
+	yearly_decay = 0.1
+}
+
+spain_habsburg_union_elector_opinion = {
+	opinion = -75
+	yearly_decay = 0.2
+}
+
+spain_habsburg_union_opinion = {
+	opinion = -100
+	yearly_decay = 0.25
+}
+
+spain_released_jerusalem_opinion = {
+	opinion = 25
+	yearly_decay = 0.25
+}
+
+spain_not_released_jerusalem_opinion = {
+	opinion = -25
+	yearly_decay = 0.25
+}
+
+#sweden_opinion_modifiers
+sweden_protected_scandinavia_catholic = {
+	opinion = 50
+	yearly_decay = 1
+}
+
+#teutonic_order_opinion_modifiers
+teu_reconquered_samogitia = {
+	opinion = 50
+	yearly_decay = 0.5
+}
+
+#theodoro_opinion_modifiers
+TRE_refused = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+#timurids_opinion_modifiers
+TIM_claimed_the_empire = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+#tokugawa_opinion_modifiers
+tokugawa_the_oda_allies_opinion_modifier = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+#wales_braelyc_cymru_opinion_modifiers
+wls_pope_rival = {
+	opinion = 75
+	yearly_decay = 2
+}
+
+#yemen_opinion_modifiers
+yemen_the_giant_of_slaves_opinion = {
+	opinion = 100
+	yearly_decay = 1
+}
+
+yemen_sacred_cities_opinion = {
+	opinion = -20
+	yearly_decay = 3
+}
+
+#zaporozhie_opinion_modifiers
+zaz_tur_friend = {
+	opinion = 100
+	yearly_decay = 5
+}
+
+zaz_hate_plc = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+zaz_rus_friend = {
+	opinion = 100
+	yearly_decay = 5
+}
+
+zaz_hate_mos = {
+	opinion = -25
+	yearly_decay = 1
+}
+
+zaz_gol_friend = {
+	opinion = 100
+	yearly_decay = 1
+}
+
+zaz_converted_islam = {
+	opinion = 50
+	yearly_decay = 1
+}

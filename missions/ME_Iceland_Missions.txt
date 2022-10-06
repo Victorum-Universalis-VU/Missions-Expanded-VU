@@ -4,7 +4,6 @@ ICE_missions_1 = {
 	ai = yes
 	potential = {
 		tag = ICE
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 
@@ -152,7 +151,6 @@ ICE_missions_5 = {
 	ai = yes
 	potential = {
 		tag = ICE
-		has_country_flag = use_missions_expanded_missions_instead_of_paradox
 	}
 	has_country_shield = yes
 

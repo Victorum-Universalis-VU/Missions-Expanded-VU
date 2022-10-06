@@ -6,12 +6,21 @@ emp_bra_pru_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -46,6 +55,13 @@ emp_bra_pru_1 = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_year = 1460
 			}
 		}
 	}
@@ -94,6 +110,9 @@ emp_bra_pru_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	emp_brapru_connect_the_prussian_lands = {
 		icon = mission_teutonic_knights
@@ -138,7 +157,9 @@ emp_bra_pru_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	
@@ -149,14 +170,12 @@ emp_bra_pru_1 = {
 			province_id = 41
 			OR = {
 				NOT = {	owned_by = ROOT }
-				NOT = {	has_building = university }
 				NOT = {	development = 30 }
 			}
 		}
 		trigger = {
 			41 = {
 				owned_by = ROOT
-				has_building = university
 				development = 30
 			}
 		}
@@ -222,10 +241,19 @@ emp_bra_pru_1_b = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
-		tag = PRU
+		AND = {
+			OR = {
+				NOT = { has_dlc = "Lions of the North" }
+				AND = {
+					NOT = { was_tag = TEU }
+					NOT = { was_tag = DNZ }
+				}
+			}
+			tag = PRU
+		}
 	}
 	has_country_shield = yes
 	emp_brapru_army_reforms_2 = {
@@ -292,12 +320,21 @@ emp_bra_pru_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -322,31 +359,40 @@ emp_bra_pru_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			thuringia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_brapru_franconian_conquest = {
 		icon = mission_eastern_european_city
 		required_missions = { emp_brapru_ansbach_succession }
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 			}
 		}
 		effect = {
 			add_mil_power = 100
-			if = {
-				limit = {
-					NOT = {
-						accepted_culture = franconian
-					}
-				}
-				add_accepted_culture = franconian
-			}
+			add_accepted_culture_or_dip_power = { culture = franconian }
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 	emp_brapru_conquer_silesia = {
@@ -391,6 +437,9 @@ emp_bra_pru_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	emp_brapru_prussia_partitions_poland = {
 		icon = mission_conquer_5_states
@@ -419,6 +468,10 @@ emp_bra_pru_2 = {
 				name = "polish_partitions"
 				duration = 7300
 			}
+			restore_country_name = yes 
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	emp_brapru_chinese_trade = {
@@ -481,7 +534,7 @@ emp_bra_pru_2 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			has_final_tier_reforms_trigger = yes
+			reform_level = 7
 		}
 		effect = {
 			set_country_flag = pru_legal_reforms_flag
@@ -521,12 +574,21 @@ emp_bra_pru_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -545,7 +607,14 @@ emp_bra_pru_3 = {
 			}
 		}
 		effect = {
-			saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -584,7 +653,8 @@ emp_bra_pru_3 = {
 		required_missions = { emp_brapru_show_of_strength }
 		provinces_to_highlight = {
 			OR = {
-				area = saxony_area
+				area = altmark_area
+				area = holstein_area
 				area = lower_saxony_area
 				area = weser_area
 				province_id = 1931
@@ -597,7 +667,8 @@ emp_bra_pru_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
-					area = saxony_area
+					area = altmark_area
+					area = holstein_area
 					area = lower_saxony_area
 					area = weser_area
 				}
@@ -634,6 +705,9 @@ emp_bra_pru_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	emp_brapru_emden_company = {
@@ -721,10 +795,13 @@ emp_bra_pru_3 = {
 							limit = {
 								has_dlc = "Leviathan"
 							}
-							has_great_project = {
-								type = kiel_canal
-								tier = 1
-							} 
+							OR = {
+								has_construction = great_project 
+								has_great_project = {
+									type = kiel_canal
+									tier = 0
+								} 
+							}
 						}
 						else = {
 							has_construction = kiel_canal
@@ -744,10 +821,13 @@ emp_bra_pru_3 = {
 						has_dlc = "Leviathan"
 					}
 					owned_by = ROOT
-					has_great_project = {
-						type = kiel_canal
-						tier = 1
-					} 
+					OR = {
+						has_construction = great_project 
+						has_great_project = {
+							type = kiel_canal
+							tier = 0
+						} 
+					}
 				}
 				else = {
 					owned_by = ROOT
@@ -797,12 +877,21 @@ emp_bra_pru_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
+		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -859,6 +948,9 @@ emp_bra_pru_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 	emp_brapru_duchy_of_cleves = {
 		icon = mission_cannons_firing
@@ -898,6 +990,9 @@ emp_bra_pru_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 	emp_brapru_rhineland_conquest = {
 		icon = rhineland_conquest
@@ -933,6 +1028,9 @@ emp_bra_pru_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 	emp_brapru_german_empire = {
 		icon = ger_kaiserreich
@@ -954,10 +1052,17 @@ emp_bra_pru_4 = {
 			}
 		}
 		effect = {
+			set_country_flag = pru_imperial_capital
+			capital_scope = {
+				add_province_triggered_modifier = imperial_prussian_capital
+			}
 			add_country_modifier = {
 				name = "pru_german_confederation"
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 }

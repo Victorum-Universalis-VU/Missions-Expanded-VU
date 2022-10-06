@@ -38,6 +38,13 @@ mas_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sulu_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -94,6 +101,7 @@ mas_1 = {
 				area = southern_luzon_area
 				area = visayas_area
 				area = mindanao_area
+				area = sulu_archipelago_area
 			}
 		}
 		
@@ -112,6 +120,7 @@ mas_1 = {
 						area = southern_luzon_area
 						area = visayas_area
 						area = mindanao_area
+						area = sulu_archipelago_area
 					}
 					owned_by = ROOT
 				}

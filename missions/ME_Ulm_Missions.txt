@@ -82,13 +82,20 @@ Ulm_missions_1 = {
 				name = "influential_diplomacy"
 				duration = 10950
 			}
-			swabia_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
+			wurttemburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
-            }
+			}
+			swabia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -97,7 +104,10 @@ Ulm_missions_1 = {
 		position = 5
 		required_missions = { ulm_subjugate_someone }
 		provinces_to_highlight = {
-			area = swabia_area
+			OR = {
+				area = swabia_area
+				area = wurttemburg_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -105,22 +115,19 @@ Ulm_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			wurttemburg_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			baden_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
+				limit = {
+					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
-            }
-			wurttemburg_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-            }
+			}
 		}
 	}
 	
@@ -129,18 +136,11 @@ Ulm_missions_1 = {
 		position = 6
 		required_missions = { ulm_unite_swabia }
 		provinces_to_highlight = {
-			OR = {
-				area = baden_area
-				area = wurttemburg_area
-			}
+			area = baden_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			baden_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			wurttemburg_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

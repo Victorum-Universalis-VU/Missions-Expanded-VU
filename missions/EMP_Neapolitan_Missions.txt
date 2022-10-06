@@ -6,12 +6,12 @@ emp_naples_1 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -91,12 +91,12 @@ emp_naples_2 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -106,19 +106,16 @@ emp_naples_2 = {
 		required_missions = { emp_nap_independent_naples }
 		position = 2
 		provinces_to_highlight = {
-			OR = {
-				area = tuscany_area
-				area = south_tuscany_area
-			}
+			area = tuscany_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 14
-				OR = {
-					area = tuscany_area
-					area = south_tuscany_area
-				}
+				value = 3
+				area = tuscany_area
+			}
+			117 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -136,27 +133,9 @@ emp_naples_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			emilia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lazio_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			umbria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 	emp_nap_italian_wars = {
@@ -169,7 +148,7 @@ emp_naples_2 = {
 		trigger = {
 			is_subject = no
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 80
+				value = 25
 				region = italy_region
 			}
 		}
@@ -178,13 +157,9 @@ emp_naples_2 = {
 				name = "nap_italian_wars_modifier"
 				duration = -1
 			}
-			italy_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 	emp_nap_dalmatian_conquest = {
@@ -194,15 +169,17 @@ emp_naples_2 = {
 			OR = {
 				area = east_adriatic_coast_area
 				area = croatia_area
+				province_id = 4754
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8
+				value = 4
 				OR = {
 					area = east_adriatic_coast_area
 					area = croatia_area
+					province_id = 4754
 				}
 			}
 			137 = {
@@ -226,6 +203,9 @@ emp_naples_2 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 50
+		}
 	}
 }
 
@@ -237,12 +217,12 @@ emp_naples_3 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -269,27 +249,20 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_tuscany_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sicily_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 	emp_nap_two_sicilies = {
 		icon = unite_the_two_sicilies
 		required_missions = { emp_nap_independent_naples }
 		provinces_to_highlight = {
-			area = sicily_area
+			OR = {
+				area = sicily_area
+				province_id = 124
+				province_id = 2982
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -297,10 +270,12 @@ emp_naples_3 = {
 				type = all
 				owned_by = ROOT
 			}
+			owns = 124
+			owns = 2982
 		}
 		effect = {
 			add_prestige = 20
-			northern_epirus_area = {
+			morea_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -314,13 +289,9 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			aetolia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	emp_nap_despot_of_epirus = {
@@ -328,9 +299,8 @@ emp_naples_3 = {
 		required_missions = { emp_nap_two_sicilies }
 		provinces_to_highlight = {
 			OR = {
+				area = morea_area
 				area = northern_greece_area
-				area = aetolia_area 
-				area = northern_epirus_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -339,16 +309,17 @@ emp_naples_3 = {
 				NOT = { exists = EPI }
 				EPI = { is_subject_of = ROOT }
 			}
-			northern_greece_area = {
-				type = all
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = morea_area
+					area = northern_greece_area
+				}
+			}
+			4699 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			aetolia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_epirus_area = {
-				type = all
+			144 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -374,44 +345,49 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			morea_area = {
+			trans_jordan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			western_aegean_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			thessaly_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 	emp_nap_king_of_jerusalem = {
 		icon = jerusalem
 		required_missions = { emp_nap_despot_of_epirus emp_nap_neapolitan_navy }
 		provinces_to_highlight = {
-			area = palestine_area
+			OR = {
+				area = palestine_area
+				area = syria_area
+				area = aleppo_area
+				area = trans_jordan_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			palestine_area = {
-				type = all
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = palestine_area
+					area = syria_area
+					area = aleppo_area
+					area = trans_jordan_area
+				}
+			}
+			379 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			country_event = { id = knights_missions.2 }
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 	emp_nap_crown_of_aragon = {
@@ -452,6 +428,9 @@ emp_naples_3 = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 50
+		}
 	}
 }
 
@@ -463,12 +442,12 @@ emp_naples_4 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -485,7 +464,14 @@ emp_naples_4 = {
 			num_of_galley = 20
 		}
 		effect = {
-			sardinia_area = {
+			aleppo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -514,21 +500,15 @@ emp_naples_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
-				area = sardinia_area
 				area = baleares_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			any_owned_province = {
+				area = baleares_area
+			}
 			corsica_sardinia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sardinia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			baleares_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -555,13 +535,6 @@ emp_naples_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			barbary_coast_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			tripolitania_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -569,21 +542,6 @@ emp_naples_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-						if = {
-				limit = {
-					exists = ARA
-					valid_for_personal_unions_trigger = yes
-					ARA = {
-						valid_for_personal_unions_trigger = yes
-					}
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = ARA
-				}
-			}
-			else = {
 			aragon_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -605,7 +563,6 @@ emp_naples_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			}
 		}
 	}
 	emp_nap_barbary_pirates = {
@@ -618,7 +575,7 @@ emp_naples_4 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 40
+				value = 10
 				region = maghreb_region
 			}
 			341 = {
@@ -645,12 +602,12 @@ emp_naples_5 = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		has_country_flag = use_paradox_missions
 		OR = {
 			tag = NAP
 			tag = TTS
 		}
 		NOT = { map_setup = map_setup_random }
+		has_country_flag = use_paradox_missions
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
@@ -685,11 +642,11 @@ emp_naples_5 = {
 		trigger = {
 			121 = {
 				owned_by = ROOT
-				development = 40
+				development = 30
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				development = 16
+				development = 10
 				region = italy_region
 			}
 		}
@@ -737,7 +694,7 @@ emp_naples_5 = {
 				tooltip = naples_government_tt
 				OR = {
 					government = republic
-					has_final_tier_reforms_trigger = yes
+					reform_level = 7
 				}
 			}
 		}

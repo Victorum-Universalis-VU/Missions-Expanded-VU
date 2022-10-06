@@ -11,6 +11,11 @@ TEU_Missions_1 = {
 				NOT = { has_country_flag = use_paradox_missions }
 			}
 		}
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
+		
 	}
 	has_country_shield = yes
 
@@ -249,6 +254,10 @@ TEU_Missions_2 = {
 				NOT = { has_country_flag = use_paradox_missions }
 			}
 		}
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -443,6 +452,10 @@ TEU_Missions_3 = {
 				tag = PRU
 				NOT = { has_country_flag = use_paradox_missions }
 			}
+		}
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		}
 	}
 	has_country_shield = yes
@@ -769,6 +782,10 @@ TEU_Missions_4 = {
 				NOT = { has_country_flag = use_paradox_missions }
 			}
 		}
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -987,6 +1004,10 @@ TEU_Missions_5 = {
 				tag = PRU
 				NOT = { has_country_flag = use_paradox_missions }
 			}
+		}
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
 		}
 	}
 	has_country_shield = yes

@@ -4,6 +4,7 @@ hannoverian_group_1 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BRU
 			tag = LUN
@@ -11,17 +12,12 @@ hannoverian_group_1 = {
 			tag = HAN
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
 	han_unite_the_welfs = {
 		icon = mission_noble_council
 		required_missions = { }
-
-		ai_priority = {
-			factor = 5
-		}
 
 		ai_weight = {
 			factor = 5
@@ -168,14 +164,14 @@ hannoverian_group_1 = {
 		}
 
 		effect = {
-			lower_saxony_area = {
+			altmark_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
 					NOT = { is_core = root }
 				}
 				add_permanent_claim = root
 			}
-			saxony_area = {
+			holstein_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
 					NOT = { is_core = root }
@@ -198,8 +194,8 @@ hannoverian_group_1 = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = lower_saxony_area
-				area = saxony_area
+				area = altmark_area
+				area = holstein_area
 				area = thuringia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
@@ -208,8 +204,8 @@ hannoverian_group_1 = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 10 #out of 12
 						OR = {
-							area = lower_saxony_area
-							area = saxony_area
+							area = altmark_area
+							area = holstein_area
 							area = thuringia_area
 						}
 					}
@@ -221,8 +217,8 @@ hannoverian_group_1 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10 #out of 12
 				OR = {
-					area = lower_saxony_area
-					area = saxony_area
+					area = altmark_area
+					area = holstein_area
 					area = thuringia_area
 				}
 			}
@@ -335,9 +331,9 @@ hannoverian_group_2 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = HAN
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -492,14 +488,14 @@ hannoverian_group_2 = {
 						}
 						add_permanent_claim = root
 					}
-					greater_london_area = {
+					south_east_area = {
 						limit = {
 							NOT = { is_permanent_claim = root }
 							NOT = { is_core = root }
 						}
 						add_permanent_claim = root
 					}
-					south_east_area = {
+					cornwall_area = {
 						limit = {
 							NOT = { is_permanent_claim = root }
 							NOT = { is_core = root }
@@ -527,20 +523,6 @@ hannoverian_group_2 = {
 						}
 						add_permanent_claim = root
 					}
-					lancashire_area = {
-						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					northern_england_area = {
-						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}					
 				}
 				else_if = {
 					limit = {
@@ -571,6 +553,7 @@ hannoverian_group_3 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = BRU
 			tag = LUN
@@ -578,7 +561,6 @@ hannoverian_group_3 = {
 			tag = HAN
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -628,9 +610,9 @@ hannoverian_group_4 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = HAN
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -806,14 +788,14 @@ hannoverian_group_4 = {
 						}
 						add_permanent_claim = root
 					}
-					greater_london_area = {
+					south_east_area = {
 						limit = {
 							NOT = { is_permanent_claim = root }
 							NOT = { is_core = root }
 						}
 						add_permanent_claim = root
 					}
-					south_east_area = {
+					cornwall_area = {
 						limit = {
 							NOT = { is_permanent_claim = root }
 							NOT = { is_core = root }
@@ -835,20 +817,6 @@ hannoverian_group_4 = {
 						add_permanent_claim = root
 					}
 					yorkshire_area = {
-						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					northern_england_area = {
-						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					lancashire_area = {
 						limit = {
 							NOT = { is_permanent_claim = root }
 							NOT = { is_core = root }
@@ -888,13 +856,11 @@ hannoverian_group_4 = {
 				AND = {
 					OR = {
 						area = east_anglia_area
-						area = northern_england_area
-						area = greater_london_area
+						area = south_east_area
+						area = cornwall_area
 						area = east_midlands_area
 						area = west_midlands_area
 						area = yorkshire_area
-						area = south_east_area
-						area = lancashire_area
 					}
 					NOT = {
 						ROOT = {
@@ -902,13 +868,11 @@ hannoverian_group_4 = {
 								value = 15 #out of 20
 								OR = {
 									area = east_anglia_area
-									area = northern_england_area
-									area = greater_london_area
+									area = south_east_area
+									area = cornwall_area
 									area = east_midlands_area
 									area = west_midlands_area
 									area = yorkshire_area
-									area = south_east_area
-									area = lancashire_area
 								}
 							}
 						}
@@ -924,13 +888,11 @@ hannoverian_group_4 = {
 				value = 15 #out of 20
 				OR = {
 					area = east_anglia_area
-					area = northern_england_area
-					area = greater_london_area
+					area = south_east_area
+					area = cornwall_area
 					area = east_midlands_area
 					area = west_midlands_area
 					area = yorkshire_area
-					area = south_east_area
-					area = lancashire_area
 				}
 			}
 		}

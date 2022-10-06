@@ -19,7 +19,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			set_variable = { which = westernization_vs_isolation value = 0 }
+			set_variable = { westernization_vs_isolation = 0 }
 			clr_country_flag = reform_realm
 			set_country_flag = reform_navy
 		}
@@ -30,7 +30,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = 10 }
+		change_variable = { westernization_vs_isolation = 10 }
 		add_country_modifier = {
 			name = national_army
 			duration = -1
@@ -42,7 +42,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = -10 }
+		change_variable = { westernization_vs_isolation = -10 }
 		add_country_modifier = {
 			name = foreign_auxilaries
 			duration = -1
@@ -79,7 +79,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = 10 }
+		change_variable = { westernization_vs_isolation = 10 }
 		add_country_modifier = {
 			name = local_sailors
 			duration = -1
@@ -91,7 +91,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = -10 }
+		change_variable = { westernization_vs_isolation = -10 }
 		add_country_modifier = {
 			name = exotic_ships
 			duration = -1
@@ -128,7 +128,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = 10 }
+		change_variable = { westernization_vs_isolation = 10 }
 		add_country_modifier = {
 			name = used_local_nobles
 			duration = -1
@@ -140,7 +140,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = -10 }
+		change_variable = { westernization_vs_isolation = -10 }
 		add_country_modifier = {
 			name = brought_western_administrators
 			duration = -1
@@ -177,7 +177,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = 10 }
+		change_variable = { westernization_vs_isolation = 10 }
 		add_country_modifier = {
 			name = banned_foreign_traders
 			duration = -1
@@ -189,7 +189,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = -10 }
+		change_variable = { westernization_vs_isolation = -10 }
 		add_country_modifier = {
 			name = free_trade
 			duration = -1
@@ -226,7 +226,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = 10 }
+		change_variable = { westernization_vs_isolation = 10 }
 		add_country_modifier = {
 			name = isolationist_diplomacy
 			duration = -1
@@ -238,7 +238,7 @@ country_event = {
 
 		ai_chance = { factor = 0.5 }
 
-		change_variable = { which = westernization_vs_isolation value = -10 }
+		change_variable = { westernization_vs_isolation = -10 }
 		add_country_modifier = {
 			name = western_diplomacy
 			duration = -1

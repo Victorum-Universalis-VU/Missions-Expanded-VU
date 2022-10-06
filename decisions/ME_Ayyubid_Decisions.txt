@@ -201,7 +201,7 @@ country_decisions = {
 			}
 			mission_completed = AYY_prosperity_of_the_mouth
 			has_discovered = 4316
-			2315 = {
+			4316 = {
 				range = ROOT
 				NOT = {
 					has_great_project = {
@@ -222,7 +222,7 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
-			#adm_tech = 10
+			adm_tech = 10
 		}
 		allow = {
 			owns_or_non_sovereign_subject_of = 4316
@@ -232,12 +232,8 @@ country_decisions = {
 			treasury = 10000
 		}
 		effect = {
-			2315 = {	# Sharqiya
-				#add_great_project = suez_canal
-				add_great_project = {
-                    type = suez_canal
-                    instant = no
-                }
+			4316 = {	# Sharqiya
+				add_great_project = { type = suez_canal }
 			}
 		}
 		ai_will_do = {

@@ -279,7 +279,7 @@
  KOR_seize_the_chrysanthemum_throne_title: "Abase the Shogun"
  KOR_seize_the_chrysanthemum_throne_desc: "The Japanese Shogun claims he has power over all of Japan. Little does he know, for we will put a swift end to his rule for once and for all."
 
- KOR_NEW_IDEAS: "§G-10.0%§! Construction Cost from Korean Traditions is replaced with §G+10.0%§! Land Forcelimit Modifier.\n'§YGrand Code for State Administration§!' which gives §G-10.0%§! Stability Cost Modifier is replaced with '§YHostilities in the North§!' which gives §G-10.0%§! Cavalry Cost and §G+10.0%§! Cavalry Combat Ability.\n'§YGeobukseon§!' is buffed from §G+5.0%§! Ship Durability to §G+10.0%§! Ship Durability.\n'§YThe Hopae System§!' is buffed from §G+10.0%§! Global Manpower Modifier to §G+10.0%§! Global Manpower Modifier and §G+5.0%§! Manpower Recovery Speed.\n'§YEconomic reform§!' which gives §G+10.0%§! National Tax Modifier is replaced with '§YAgainst the Western Foes§!' which gives §G-5.0%§! Fire Damage Received."
+ KOR_NEW_IDEAS: "§G-10.0%§! Construction Cost from Korean Traditions is replaced with §G+10.0%§! Land Forcelimit Modifier.\n\n'§YGrand Code for State Administration§!' which gives §G-10.0%§! Stability Cost Modifier is replaced with '§YHostilities in the North§!' which gives §G-10.0%§! Cavalry Cost and §G+10.0%§! Cavalry Combat Ability.\n\n'§YGeobukseon§!' is buffed from §G+10.0%§! Ship Durability to §G+15.0%§! Ship Durability.\n\n'§YThe Hopae System§!' is buffed from §G+10.0%§! Global Manpower Modifier to §G+10.0%§! Global Manpower Modifier and §G+5.0%§! Manpower Recovery Speed.\n\n'§YEconomic reform§!' which gives §G+10.0%§! National Tax Modifier is replaced with '§YAgainst the Western Foes§!' which gives §G-10.0%§! Fire Damage Received."
  KOR_unite_china: "Owns all provinces in the §YChinese§! culture group"
  KOR_3_cultures: "Accept §Y3§! cultures in the §YChinese§! culture group"
 
@@ -394,35 +394,35 @@
  ME_Korea_Events.5.a: "Lay claims to the North"
  ME_Korea_Events.5.b: "Negotiate a lift of the Seaban"
 
- ME_Korea_Events.40.t: "New Shrine Built"
- ME_Korea_Events.40.d: "A New Shrine has been built in the capital. With the basic outlay done, it is time we picked who to dedicate this shrine to. Should we dedicate it to the royals and construct a Jongmyo, or shall it be dedicated to one of our great scholars by constructing a shrine called Munmyo? The decision is bound to have a lasting effect on the society for the next few decades."
- ME_Korea_Events.40.a: "Dedicate it to Confucius himself."
- ME_Korea_Events.40.b: "[Root.Monarch.GetName] deserves some recognition"
-
- ME_Korea_Events.41.t: "Growing Paper Industry"
- ME_Korea_Events.41.d: "With the growth of Pyeongyang, new businesses start popping up. One of the businesses that is growing at an exponential pace is the paper industry, which will soon make up for most of the gross domestic product of the city."
- ME_Korea_Events.41.a: "We must embrace the changes!"
- ME_Korea_Events.41.b: "Pyeongyang has been a center of agrarian economy, and will continue to be!"
-
- ME_Korea_Events.42.t: "A New Destiny"
- ME_Korea_Events.42.d: "Times are changing, and so we are. Our recent naval growth and ambition is leading us to believe that we should be the ones to discovered the legendary lands of the East."
- ME_Korea_Events.42.a: "Fusang shall be no mystery to man!"
- ME_Korea_Events.42.b: "Tis all but a mere dream!"
- 
- ME_Korea_Events.43.t: "A New Destiny"
- ME_Korea_Events.43.d: "Times are changing, and so we are. Our recent expansion into china and the imperial ambitions are leading us further west."
- ME_Korea_Events.43.a: "We are the sons of heaven!"
- ME_Korea_Events.43.b: "We will not respect the traditions."
- 
- ME_Korea_Events.44.t: "Chrysanthemum Throne"
- ME_Korea_Events.44.d: "At last, the Japanese throne is ours!"
- ME_Korea_Events.44.a: "Move the ensigns of power to Korea."
- ME_Korea_Events.44.b: "Appoint a local governor"
- 
- ME_Korea_Events.49.t: "Army Modernization"
- ME_Korea_Events.49.d: "With the rapid growth of gunpowder weaponry, our old tactics are being rendered useless in these dire times. As such, a motion has been put by the military advisory to reform and modernize the army."
- ME_Korea_Events.49.a: "The Standing Army shall be introduced."
- ME_Korea_Events.49.b: "The old ways have not yet disappointed us."
+ #ME_Korea_Events.40.t: "New Shrine Built"
+ #ME_Korea_Events.40.d: "A New Shrine has been built in the capital. With the basic outlay done, it is time we picked who to dedicate this shrine to. Should we dedicate it to the royals and construct a Jongmyo, or shall it be dedicated to one of our great scholars by constructing a shrine called Munmyo? The decision is bound to have a lasting effect on the society for the next few decades."
+ #ME_Korea_Events.40.a: "Dedicate it to Confucius himself."
+ #ME_Korea_Events.40.b: "[Root.Monarch.GetName] deserves some recognition"
+ #
+ #ME_Korea_Events.41.t: "Growing Paper Industry"
+ #ME_Korea_Events.41.d: "With the growth of Pyeongyang, new businesses start popping up. One of the businesses that is growing at an exponential pace is the paper industry, which will soon make up for most of the gross domestic product of the city."
+ #ME_Korea_Events.41.a: "We must embrace the changes!"
+ #ME_Korea_Events.41.b: "Pyeongyang has been a center of agrarian economy, and will continue to be!"
+ #
+ #ME_Korea_Events.42.t: "A New Destiny"
+ #ME_Korea_Events.42.d: "Times are changing, and so we are. Our recent naval growth and ambition is leading us to believe that we should be the ones to discovered the legendary lands of the East."
+ #ME_Korea_Events.42.a: "Fusang shall be no mystery to man!"
+ #ME_Korea_Events.42.b: "Tis all but a mere dream!"
+ #
+ #ME_Korea_Events.43.t: "A New Destiny"
+ #ME_Korea_Events.43.d: "Times are changing, and so we are. Our recent expansion into china and the imperial ambitions are leading us further west."
+ #ME_Korea_Events.43.a: "We are the sons of heaven!"
+ #ME_Korea_Events.43.b: "We will not respect the traditions."
+ #
+ #ME_Korea_Events.44.t: "Chrysanthemum Throne"
+ #ME_Korea_Events.44.d: "At last, the Japanese throne is ours!"
+ #ME_Korea_Events.44.a: "Move the ensigns of power to Korea."
+ #ME_Korea_Events.44.b: "Appoint a local governor"
+ #
+ #ME_Korea_Events.49.t: "Army Modernization"
+ #ME_Korea_Events.49.d: "With the rapid growth of gunpowder weaponry, our old tactics are being rendered useless in these dire times. As such, a motion has been put by the military advisory to reform and modernize the army."
+ #ME_Korea_Events.49.a: "The Standing Army shall be introduced."
+ #ME_Korea_Events.49.b: "The old ways have not yet disappointed us."
  
  #Tooltips:
  KOR_claim_on_central_jilin: "§Y[Root.Country.GetName]§! gains a permanent claim on §YSouth Ilin Hala§! Area, excluding §Y[2105.Province.GetName]§!"
@@ -483,24 +483,24 @@
  KOR_build_the_wall_desc: "Yay"
 
  # Events:
- ME_Korea_Events.45.t: "Chinese Corps"
- ME_Korea_Events.45.d: "The Chinese Lands are among the most populated regions in the world. Controlling the region gives us immense manpower. How should it be exploited?"
- ME_Korea_Events.45.a: "Conscript them into our armies!"
- ME_Korea_Events.45.b: "We will be better off having them work on at home"
- 
- ME_Korea_Events.46.t: "Korean Maritime Expedition"
- ME_Korea_Events.46.d: "A Korean Maritime Expedition has arrived in our shores. They bring forth gifts and tales of the thriving lands in the north. Furthermore, they are trying to convince us to submit to the son of heaven and to pay tribute in exchange for protection."
- ME_Korea_Events.46.a: "Interesting offer..."
- ME_Korea_Events.46.b: "We will pay no tribute to foul imposters!"
- 
- ME_Korea_Events.47.t: "Unsuccessful mission in [From.Country.GetName]"
- ME_Korea_Events.47.d: "It appears that our maritime expedition did not manage to convince the court of [From.Country.GetName]. Our gifts have been accepted, but our requests refused."
- ME_Korea_Events.47.a: "They will pay!"
- 
- ME_Korea_Events.48.t: "Silk Road Reopened"
- ME_Korea_Events.48.d: "Thanks to the joint cooperation between us and the hegemons of the western trade, we have managed to secure and reopen the once prosperous route leading through the Tami Basin. The once centers of Silk Trade will be restored back to their glory!"
- ME_Korea_Events.48.a: "Back to glory, they will be restored."
- ME_Korea_Events.48.b: "The Silk Trade should benefit the capital!"
+ #ME_Korea_Events.45.t: "Chinese Corps"
+ #ME_Korea_Events.45.d: "The Chinese Lands are among the most populated regions in the world. Controlling the region gives us immense manpower. How should it be exploited?"
+ #ME_Korea_Events.45.a: "Conscript them into our armies!"
+ #ME_Korea_Events.45.b: "We will be better off having them work on at home"
+ #
+ #ME_Korea_Events.46.t: "Korean Maritime Expedition"
+ #ME_Korea_Events.46.d: "A Korean Maritime Expedition has arrived in our shores. They bring forth gifts and tales of the thriving lands in the north. Furthermore, they are trying to convince us to submit to the son of heaven and to pay tribute in exchange for protection."
+ #ME_Korea_Events.46.a: "Interesting offer..."
+ #ME_Korea_Events.46.b: "We will pay no tribute to foul imposters!"
+ #
+ #ME_Korea_Events.47.t: "Unsuccessful mission in [From.Country.GetName]"
+ #ME_Korea_Events.47.d: "It appears that our maritime expedition did not manage to convince the court of [From.Country.GetName]. Our gifts have been accepted, but our requests refused."
+ #ME_Korea_Events.47.a: "They will pay!"
+ #
+ #ME_Korea_Events.48.t: "Silk Road Reopened"
+ #ME_Korea_Events.48.d: "Thanks to the joint cooperation between us and the hegemons of the western trade, we have managed to secure and reopen the once prosperous route leading through the Tami Basin. The once centers of Silk Trade will be restored back to their glory!"
+ #ME_Korea_Events.48.a: "Back to glory, they will be restored."
+ #ME_Korea_Events.48.b: "The Silk Trade should benefit the capital!"
  
  # Modifiers:
  KOR_silk_road_reopened: "Silk Road Reopened"

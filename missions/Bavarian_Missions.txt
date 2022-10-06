@@ -19,10 +19,7 @@ bavarian_missions_main = {
 		required_missions = { }
 		completed_by = 1507.1.1
 		ai_weight = {
-			factor = 10
-		}
-		ai_priority = {
-			factor = 10
+			factor = 500
 		}
 
 		provinces_to_highlight = {
@@ -201,6 +198,16 @@ bavarian_missions_main = {
 				}
 				add_permanent_claim = ROOT
 			}
+			thuringia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500	#Historical conquest
 		}
 	}
 
@@ -209,7 +216,10 @@ bavarian_missions_main = {
 		required_missions = { bav_expand_in_bavaria }
 		completed_by = 1806.1.1
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -217,7 +227,10 @@ bavarian_missions_main = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 			}
 		}
 		effect = {
@@ -225,6 +238,13 @@ bavarian_missions_main = {
 			add_country_modifier = {
 				name = "bavarian_ambition"
 				duration = 7300
+			}
+			wurttemburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			swabia_area = {
 				limit = {
@@ -234,13 +254,19 @@ bavarian_missions_main = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical conquest
+		}
 	}
 
 	conquer_ansbach = {
 		icon = mission_landsknecht_soldier
 		required_missions = { conquer_franken }
 		provinces_to_highlight = {
-			area = swabia_area
+			OR = {
+				area = wurttemburg_area
+				area = swabia_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -248,7 +274,10 @@ bavarian_missions_main = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
-				area = swabia_area
+				OR = {
+					area = wurttemburg_area
+					area = swabia_area
+				}
 			}
 		}
 		effect = {
@@ -260,6 +289,9 @@ bavarian_missions_main = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 100	#Plausible conquest
 		}
 	}
 }
@@ -316,6 +348,9 @@ bavarian_missions_palatinate = {
 					duration = 7300
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500	#Historical conquest
 		}
 	}
 }

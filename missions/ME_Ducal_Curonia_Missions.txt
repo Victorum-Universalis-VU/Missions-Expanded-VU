@@ -58,19 +58,15 @@ Ducal_KUR_missions_1 = {
 			north_america = { has_discovered = ROOT }
 			south_america = { has_discovered = ROOT }
 			#1177 = { has_discovered = ROOT }
-			7364 = { has_discovered = ROOT }
-			5581 = { has_discovered = ROOT }
+			1114 = { has_discovered = ROOT }
+			502 = { has_discovered = ROOT }
 		}
 		effect = {
 			if = {
 				limit = {
-					OR = {
-						7364 = { is_empty = yes }
-						5581 = { is_empty = yes }
-					}
+					502 = { is_empty = yes }
 				}
-				7364 = { add_siberian_construction = 200 }
-				5581 = { add_siberian_construction = 200 }
+				502 = { add_siberian_construction = 200 }
 			}
 			else_if = {
 				limit = {
@@ -105,14 +101,14 @@ Ducal_KUR_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 7839
+					province_id = 39
 					OR = {
 						NOT = { has_shipyard_building_trigger = yes }
 						NOT = { owned_by = ROOT }
 					}
 				}
 				AND = {
-					province_id = 7839
+					province_id = 1114
 					OR = {
 						NOT = { has_discovered = ROOT }
 						NOT = { range = ROOT }
@@ -138,7 +134,7 @@ Ducal_KUR_missions_1 = {
 		required_missions = { Ducal_KUR_charter_gambia Ducal_KUR_establish_colony_in_tobago }
 		position = 4
 		provinces_to_highlight = {
-			province_id = 7839
+			province_id = 39
 			OR = {
 				NOT = { has_shipyard_building_trigger = yes }
 				NOT = { has_dock_building_trigger = yes }
@@ -147,7 +143,7 @@ Ducal_KUR_missions_1 = {
 		}
 		trigger = {
 			total_development = 50
-			7839 = {
+			39 = {
 				has_shipyard_building_trigger = yes
 				has_dock_building_trigger = yes
 				owned_by = ROOT

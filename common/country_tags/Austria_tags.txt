@@ -1,0 +1,4 @@
+GRP = "countries/GreaterPoland.txt"
+LRP = "countries/LesserPoland.txt"
+GNE = "countries/Gniezno.txt"
+KUY = "countries/Kuyavia.txt"

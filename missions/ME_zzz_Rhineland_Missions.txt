@@ -135,8 +135,8 @@ RHN_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = swabia_area
-				area = baden_area
 				area = wurttemburg_area
+				area = baden_area
 				area = alsace_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -145,8 +145,8 @@ RHN_missions_1 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = swabia_area
-					area = baden_area
 					area = wurttemburg_area
+					area = baden_area
 					area = alsace_area
 				}
 				value = 10
@@ -214,7 +214,7 @@ RHN_missions_1 = {
 						province_id = 2975
 						province_id = 84
 					}
-					value = 120
+					value = 100
 				}
 			}
 		}
@@ -391,12 +391,18 @@ RHN_missions_2 = {
 		required_missions = { rhn_generic_unite_rhineland }
 		position = 7
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 				value = 6
 			}
 			67 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -432,13 +438,6 @@ RHN_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			altmark_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	RHN_saxony = {
@@ -450,6 +449,8 @@ RHN_missions_2 = {
 				area = saxony_area
 				area = thuringia_area
 				area = altmark_area
+				area = anhalt_area
+				area = hesse_area
 				area = mecklenburg_area
 				area = mittelmark_area
 			}
@@ -461,6 +462,8 @@ RHN_missions_2 = {
 					area = saxony_area
 					area = thuringia_area
 					area = altmark_area
+					area = anhalt_area
+					area = hesse_area
 					area = mecklenburg_area
 					area = mittelmark_area
 				}
@@ -652,9 +655,20 @@ RHN_missions_2 = {
 		required_missions = { RHN_military_industry }
 		position = 13
 		trigger = {
-			any_owned_province = {
-				trade_goods = leather
-				has_manufactory_trigger = yes
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				any_owned_province = {
+					trade_goods = leather
+					has_manufactory_trigger = yes
+				}
+			}
+			else = {
+				any_owned_province = {
+					trade_goods = livestock
+					has_manufactory_trigger = yes
+				}
 			}
 		}
 		effect = {
@@ -742,7 +756,7 @@ RHN_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_saxony_area = {
+			holstein_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -769,7 +783,7 @@ RHN_missions_3 = {
 		position = 8
 		provinces_to_highlight = {
 			OR = {
-				area = lower_saxony_area
+				area = holstein_area
 				area = braunschweig_area
 				area = weser_area
 			}
@@ -779,7 +793,7 @@ RHN_missions_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				OR = {
-					area = lower_saxony_area
+					area = holstein_area
 					area = braunschweig_area
 					area = weser_area
 				}
@@ -790,7 +804,21 @@ RHN_missions_3 = {
 				name = RHN_king_of_saxony
 				duration = 9125
 			}
-			saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1352,7 +1380,7 @@ RHN_missions_5 = {
 		position = 9
 		trigger = {
 			has_institution = printing_press
-			is_religion_enabled = protestant
+			is_religion_enabled = inttestant
 			all_owned_province = {
 				printing_press = 100
 			}

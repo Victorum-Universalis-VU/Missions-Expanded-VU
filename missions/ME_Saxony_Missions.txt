@@ -172,7 +172,7 @@ saxony_missions_slot_1 = {
 		}
 		effect = {
 			add_prestige = 20
-			add_accepted_culture = polish
+			add_accepted_culture_or_dip_power = { culture = polish }
 			add_country_modifier = {
 				name = saxony_integrate_poland_modifier_1
 				duration = -1
@@ -497,7 +497,7 @@ saxony_missions_slot_2 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = sorbian
+			add_accepted_culture_or_dip_power = { culture = sorbian }
 			add_country_modifier = {
 				name = saxony_reconquest_of_the_lausitz_modifier
 				duration = -1
@@ -819,7 +819,6 @@ saxony_missions_slot_2 = {
 				OR = {
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 				}
 			}
 		}
@@ -1309,7 +1308,7 @@ saxony_missions_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_saxony_area = {
+			holstein_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1410,10 +1409,17 @@ saxony_missions_slot_3 = {
 		position = 11
 		required_missions = { saxony_conquer_hesse saxony_conquer_upper_franconia }
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = bavaria_area
+				area = franconia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			bavaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			franconia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1711,7 +1717,7 @@ saxony_missions_slot_3 = {
 				hidden_effect = {
 					restore_country_name = yes
 				}
-				override_country_name = EAST_FRANCIA
+				ME_override_country_name = { name = EAST_FRANCIA }
 				custom_tooltip = " "
 				tooltip = {
 					country_event = { id = ideagroups.1 }
@@ -1974,7 +1980,7 @@ saxony_missions_slot_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = braunschweig_area
-				area = lower_saxony_area
+				area = holstein_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1983,7 +1989,7 @@ saxony_missions_slot_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_saxony_area = {
+			holstein_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2025,7 +2031,7 @@ saxony_missions_slot_4 = {
 					duration = 5475
 				}
 			}
-			palatinate_area = {
+			thuringia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2047,11 +2053,11 @@ saxony_missions_slot_4 = {
 		position = 10
 		required_missions = { saxony_reunite_saxony_and_thuringia }
 		provinces_to_highlight = {
-			area = palatinate_area
+			area = thuringia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			palatinate_area = {
+			thuringia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2062,7 +2068,7 @@ saxony_missions_slot_4 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			wurttemburg_area = {
+			bavaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

@@ -36,6 +36,9 @@ ethiopia_european_slot = {
 			add_sailors = 1000
 			add_treasury = -75
 		}
+		ai_weight = {
+			factor = 100	#Not that important, but still desirable
+		}
 	}
 
 	#Try to get contact
@@ -55,6 +58,9 @@ ethiopia_european_slot = {
 					days = 30
 				}
 			}
+		}
+		ai_weight = {
+			factor = 100	#Not that important, but still desirable
 		}
 	}
 
@@ -101,6 +107,9 @@ ethiopia_european_slot = {
 			else = {
 				add_dip_power = 100
 			}
+		}
+		ai_weight = {
+			factor = 500	#This one completes by itself
 		}
 	}
 
@@ -156,6 +165,9 @@ ethiopia_european_slot = {
 			}
 			add_years_of_income = 1
 		}
+		ai_weight = {
+			factor = 25	#Probably impossible
+		}
 	}
 
 	#Become a more modern state
@@ -177,6 +189,9 @@ ethiopia_european_slot = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 1	#No priority so the tech difference can be sustained
 		}
 	}
 
@@ -202,6 +217,9 @@ ethiopia_european_slot = {
 			country_event = {
 				id = flavor_eth.48
 			}
+		}
+		ai_weight = {
+			factor = 1	#No priority so the tech difference can be sustained
 		}
 	}
 }
@@ -247,6 +265,9 @@ ethiopia_policy_with_the_cushitic_people = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Ethiopia should survive...
+		}
 	}
 
 	#Kaffa, Welayta, etc
@@ -290,6 +311,9 @@ ethiopia_policy_with_the_cushitic_people = {
 					duration = 9125
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500	#...and grow
 		}
 	}
 
@@ -341,6 +365,9 @@ ethiopia_policy_with_the_cushitic_people = {
 			}
 			change_government_reform_progress = 100
 		}
+		ai_weight = {
+			factor = 500	#Also gold is important too
+		}
 	}
 
 	#Train the Cawa
@@ -370,6 +397,9 @@ ethiopia_policy_with_the_cushitic_people = {
 			unlock_estate_privilege = {
 				estate_privilege = estate_nobles_cawa_offensive_fighters
 			}
+		}
+		ai_weight = {
+			factor = 500	#Not sure if the AI will understand this one tbh, but it should try
 		}
 	}
 }
@@ -439,6 +469,9 @@ ethiopia_religion_slot = {
 				add_stability = 1
 			}
 		}
+		ai_weight = {
+			factor = 500	#Rebels are always bad
+		}
 	}
 
 	#Eliminate the followers of Gudit
@@ -498,6 +531,9 @@ ethiopia_religion_slot = {
 				add_adm_power = 150
 			}
 		}
+		ai_weight = {
+			factor = 100	#While conversion was a thing in Ethiopia, it wasn't really that big of a goal
+		}
 	}
 
 	#Yaqob's making a compromise for church
@@ -549,6 +585,9 @@ ethiopia_religion_slot = {
 			}
 			change_government_reform_progress = 100
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Coptic mission - Qasr Ibrim
@@ -581,6 +620,9 @@ ethiopia_religion_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 25	#Alt History, Ethiopia should not suicide itself into the Mamluks
+		}
 	}
 
 	#Coptic mission - Alexandria
@@ -601,7 +643,7 @@ ethiopia_religion_slot = {
 		}
 		position = 5
 		effect = {
-			add_accepted_culture = al_misr_arabic
+			add_accepted_culture_or_dip_power = { culture = al_misr_arabic }
 			add_country_modifier = {
 				name = eth_legacy_of_alexandria
 				duration = 9125
@@ -628,6 +670,9 @@ ethiopia_religion_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 25	#Alt History, Ethiopia should not suicide itself into the Mamluks
+		}
 	}
 
 	#Coptic mission - Antioch
@@ -651,6 +696,9 @@ ethiopia_religion_slot = {
 				name = eth_conversion_focus
 				duration = 18250
 			}
+		}
+		ai_weight = {
+			factor = 25	#Alt History, Ethiopia should not suicide itself into the Mamluks
 		}
 	}
 
@@ -680,6 +728,9 @@ ethiopia_religion_slot = {
 				name = eth_blessed_empire
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 500	#Pay Off mission
 		}
 	}
 }
@@ -783,6 +834,9 @@ ethiopia_trade_slot = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Annexing Vassals is fun
+		}
 	}
 
 	#Push towards north
@@ -814,8 +868,11 @@ ethiopia_trade_slot = {
 			create_colony_mission_reward = {
 				province = 1217
 			}
-			add_accepted_culture = nubian
+			add_accepted_culture_or_dip_power = { culture = nubian }
 			add_permanent_claim = 1232
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -836,6 +893,9 @@ ethiopia_trade_slot = {
 				id = flavor_eth.37
 			}
 			change_government_reform_progress = 100
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -870,6 +930,9 @@ ethiopia_trade_slot = {
 				set_country_flag = unlocked_solomid_empire_reform
 			}
 			country_event = { id = flavor_eth.30 }
+		}
+		ai_weight = {
+			factor = 25	#Very unlikely that this happen, and as such AI should not focus on that too much
 		}
 	}
 }
@@ -941,6 +1004,9 @@ ethiopia_slot_aksumite_empire = {
 				add_core = 2766
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall missions are always okay for the AI
+		}
 	}
 
 	#Adulis, the harbor of Aksum
@@ -994,6 +1060,9 @@ ethiopia_slot_aksumite_empire = {
 				}
 				add_permanent_claim = 1210
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -1058,6 +1127,9 @@ ethiopia_slot_aksumite_empire = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
 
 	#Go east
@@ -1108,6 +1180,9 @@ ethiopia_slot_aksumite_empire = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75	#Default
 		}
 	}
 
@@ -1194,6 +1269,9 @@ ethiopia_slot_aksumite_empire = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 25	#Plausible, but AI Ethiopia should not blob into Arabia
+		}
 	}
 
 	#Restore Aksumite Empire
@@ -1223,6 +1301,9 @@ ethiopia_slot_aksumite_empire = {
 				name = eth_surpassed_aksumite_empire
 				duration = 18250
 			}
+		}
+		ai_weight = {
+			factor = 25	#AI Aksum should be really rare to appear...
 		}
 	}
 }

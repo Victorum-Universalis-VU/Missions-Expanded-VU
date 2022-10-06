@@ -8,7 +8,7 @@ bavaria_university_of_ingolstadt_province_triggered_modifier = {
 
 	trigger = {
 		has_building = university
-		NOT = { devastation = 1 }
+		NOT = { devastation = 0.01 }
 	}
 
 	idea_cost = -0.05

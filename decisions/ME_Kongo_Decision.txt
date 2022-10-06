@@ -2,7 +2,7 @@ country_decisions = {
 	kon_colony = {
 		potential = {
 			has_country_flag = KON_decision_enabled
-#			OR = {
+			OR = {
 				gulf_of_guinea_area = {
 					has_discovered = ROOT
 					is_empty = yes
@@ -10,20 +10,44 @@ country_decisions = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
-#				angola_namibia_area = {
-#					has_discovered = ROOT
-#					is_empty = yes
-#					any_neighbor_province = {
-#						country_or_non_sovereign_subject_holds = ROOT
-#					}
-#				}
-#			}
+				south_atlantic_islands_area = { 
+					has_discovered = ROOT
+					is_empty = yes
+					any_neighbor_province = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				bengo_area = { 
+					has_discovered = ROOT
+					is_empty = yes
+					any_neighbor_province = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				wambu_area = { 
+					has_discovered = ROOT
+					is_empty = yes
+					any_neighbor_province = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				skeleton_coast_land_area = { 
+					has_discovered = ROOT
+					is_empty = yes
+					any_neighbor_province = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
 		}
 		provinces_to_highlight = {
-#			OR = {
+			OR = {
 				area = gulf_of_guinea_area
-#				area = angola_namibia_area
-#			}
+				area = south_atlantic_islands_area
+				area = bengo_area
+				area = wambu_area
+				area = skeleton_coast_land_area
+			}
 			has_discovered = ROOT
 			is_colony = yes
 			controlled_by = ROOT
@@ -40,25 +64,58 @@ country_decisions = {
 					NOT = { controlled_by = ROOT }
 				}
 			}
-#			angola_namibia_area = {
-#				type = all
-#				OR = {
-#					AND = {
-#						has_discovered = ROOT
-#						is_colony = no
-#					}
-#					NOT = { controlled_by = ROOT }
-#				}
-#			}
+			south_atlantic_islands_area = {
+				type = all
+				OR = {
+					AND = {
+						has_discovered = ROOT
+						is_colony = no
+					}
+					NOT = { controlled_by = ROOT }
+				}
+			}
+			bengo_area = {
+				type = all
+				OR = {
+					AND = {
+						has_discovered = ROOT
+						is_colony = no
+					}
+					NOT = { controlled_by = ROOT }
+				}
+			}
+			wambu_area = {
+				type = all
+				OR = {
+					AND = {
+						has_discovered = ROOT
+						is_colony = no
+					}
+					NOT = { controlled_by = ROOT }
+				}
+			}
+			skeleton_coast_land_area = {
+				type = all
+				OR = {
+					AND = {
+						has_discovered = ROOT
+						is_colony = no
+					}
+					NOT = { controlled_by = ROOT }
+				}
+			}
 		}
 		effect = {
 			random_province = {
 				limit = {
 					has_discovered = ROOT
-#					OR = {
+					OR = {
 						area = gulf_of_guinea_area
-#						area = angola_namibia_area
-#					}
+						area = south_atlantic_islands_area
+						area = bengo_area
+						area = wambu_area
+						area = skeleton_coast_land_area
+					}
 					is_empty = yes
 					any_neighbor_province = {
 						country_or_non_sovereign_subject_holds = ROOT

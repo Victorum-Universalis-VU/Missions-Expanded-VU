@@ -5,17 +5,29 @@ estate_industrial_conquer_good = {
 				NOT = { owned_by = ROOT }
 				area_for_scope_province = {
 					NOT = { owned_by = ROOT }
-					OR = {
-						trade_goods = gold
-						trade_goods = glass
-						trade_goods = silver
-						trade_goods = copper
-						trade_goods = iron
-						trade_goods = lead
-						trade_goods = bronze
-						trade_goods = brass
-						trade_goods = tin
-						trade_goods = zinc
+					if = {
+						limit = {
+							is_expanded_mod_active = { mod = trade_goods }
+						}
+						OR = {
+							trade_goods = gold
+							trade_goods = glass
+							trade_goods = silver
+							trade_goods = copper
+							trade_goods = iron
+							trade_goods = lead
+							trade_goods = bronze
+							trade_goods = tin
+							trade_goods = zinc
+						}
+					}
+					else = {
+						OR = {
+							trade_goods = gold
+							trade_goods = glass
+							trade_goods = copper
+							trade_goods = iron
+						}
 					}
 				}
 			}
@@ -31,17 +43,28 @@ estate_industrial_conquer_good = {
 					NOT = { owned_by = ROOT }
 					area_for_scope_province = {
 						NOT = { owned_by = ROOT }
-						OR = {
-							trade_goods = gold
-							trade_goods = glass
-							trade_goods = silver
-							trade_goods = copper
-							trade_goods = iron
-							trade_goods = lead
-							trade_goods = bronze
-							trade_goods = brass
-							trade_goods = tin
-							trade_goods = zinc
+						if = {
+							limit = {
+								is_expanded_mod_active = { mod = trade_goods }
+							}
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = silver
+								trade_goods = copper
+								trade_goods = iron
+								trade_goods = lead
+								trade_goods = tin
+								trade_goods = zinc
+							}
+						}
+						else = {
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
 					}
 				}
@@ -51,17 +74,28 @@ estate_industrial_conquer_good = {
 					NOT = { owned_by = ROOT }
 					area_for_scope_province = {
 						NOT = { owned_by = ROOT }
-						OR = {
-							trade_goods = gold
-							trade_goods = glass
-							trade_goods = silver
-							trade_goods = copper
-							trade_goods = iron
-							trade_goods = lead
-							trade_goods = bronze
-							trade_goods = brass
-							trade_goods = tin
-							trade_goods = zinc
+						if = {
+							limit = {
+								is_expanded_mod_active = { mod = trade_goods }
+							}
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = silver
+								trade_goods = copper
+								trade_goods = iron
+								trade_goods = lead
+								trade_goods = tin
+								trade_goods = zinc
+							}
+						}
+						else = {
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
 					}
 				}
@@ -69,17 +103,28 @@ estate_industrial_conquer_good = {
 					limit = {
 						area = PREV
 						NOT = { owned_by = ROOT }
-						OR = {
-							trade_goods = gold
-							trade_goods = glass
-							trade_goods = silver
-							trade_goods = copper
-							trade_goods = iron
-							trade_goods = lead
-							trade_goods = bronze
-							trade_goods = brass
-							trade_goods = tin
-							trade_goods = zinc
+						if = {
+							limit = {
+								is_expanded_mod_active = { mod = trade_goods }
+							}
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = silver
+								trade_goods = copper
+								trade_goods = iron
+								trade_goods = lead
+								trade_goods = tin
+								trade_goods = zinc
+							}
+						}
+						else = {
+							OR = {
+								trade_goods = gold
+								trade_goods = glass
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
 					}
 					save_event_target_as = agenda_province

@@ -1289,7 +1289,6 @@ me_venice_missions_4 = {
 						AND = {
 							NOT = { has_building = naval_base }
 							NOT = { has_building = naval_arsenal }
-							NOT = { has_building = coastal_artillery }
 							NOT = { has_building = fort_15th }
 							NOT = { has_building = fort_16th }
 							NOT = { has_building = fort_17th }
@@ -1314,7 +1313,6 @@ me_venice_missions_4 = {
 								has_building = fort_18th
 								has_building = naval_base
 								has_building = naval_arsenal
-								has_building = coastal_artillery
 							}
 						}
 					}
@@ -1332,7 +1330,6 @@ me_venice_missions_4 = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 				}
 				146 = { owned_by = ROOT }
@@ -1350,7 +1347,6 @@ me_venice_missions_4 = {
 							has_building = fort_18th
 							has_building = naval_base
 							has_building = naval_arsenal
-							has_building = coastal_artillery
 						}
 					}
 					add_permanent_province_modifier = {

@@ -179,13 +179,13 @@ FKN_Gen_Missions_3 = {
 			}
 		}
 		effect = {
-		#	upper_franconia_area = {
-		#		limit = {
-		#			NOT = { owned_by = ROOT }
-		#			NOT = { is_core = ROOT }
-		#		}
-		#		add_permanent_claim = ROOT
-		#	}
+			thuringia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			franconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -262,12 +262,18 @@ FKN_Gen_Missions_3 = {
 		required_missions = { FKN_conquer_wurzburg FKN_conquer_nuremburg FKN_conquer_ansbach }
 		position = 3
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 				value = 5
 			}
 		}
@@ -287,6 +293,12 @@ FKN_Gen_Missions_3 = {
 				}
 				add_prosperity = 50
 			}
+			random_owned_province = {
+				limit = {
+					area = thuringia_area
+				}
+				add_prosperity = 50
+			}
 			add_yearly_manpower = 1
 		}
 	}
@@ -296,13 +308,19 @@ FKN_Gen_Missions_3 = {
 		required_missions = { FKN_unifying_franconia }
 		position = 5
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = franconia_area
+				area = thuringia_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			tag = FKN
 			num_of_owned_provinces_with = {
-				area = franconia_area
+				OR = {
+					area = franconia_area
+					area = thuringia_area
+				}
 				value = 6
 			}
 			if = {
@@ -692,10 +710,23 @@ FKN_Missions_1 = {
 						}
 					}
 				}
+				AND = {
+					area = thuringia_area
+					NOT = {
+						thuringia_area = {
+							owned_by = ROOT
+							has_building = university
+						}
+					}
+				}
 			}
 		}
 		trigger = {	
 			franconia_area = {
+				owned_by = ROOT
+				has_building = university
+			}
+			thuringia_area = {
 				owned_by = ROOT
 				has_building = university
 			}
@@ -772,7 +803,7 @@ FKN_Missions_2 = {
 		required_missions = { FKN_dux_francorum }
 		position = 6
 		provinces_to_highlight = {
-						area = bavaria_area
+			area = bavaria_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -1127,7 +1158,7 @@ FKN_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_saxony_area = {
+			holstein_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1169,6 +1200,13 @@ FKN_Missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			wurttemburg_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			westphalia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1201,6 +1239,7 @@ FKN_Missions_3 = {
 			OR = {
 				area = alsace_area
 				area = baden_area
+				area = wurttemburg_area
 				area = swabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1210,6 +1249,7 @@ FKN_Missions_3 = {
 				OR = {
 					area = alsace_area
 					area = baden_area
+					area = wurttemburg_area
 					area = swabia_area
 				}
 				value = 10
@@ -1411,7 +1451,21 @@ FKN_Missions_4 = {
 					key = FKN_influence_in_saxony
 				}
 			}
-			lower_saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1429,7 +1483,7 @@ FKN_Missions_4 = {
 			OR = {
 				area = braunschweig_area
 				area = weser_area
-				area = lower_saxony_area
+				area = holstein_area
 				area = lower_rhineland_area
 				area = north_rhine_area
 				area = westphalia_area
@@ -1442,7 +1496,7 @@ FKN_Missions_4 = {
 				OR = {
 					area = braunschweig_area
 					area = weser_area
-					area = lower_saxony_area
+					area = holstein_area
 					area = lower_rhineland_area
 					area = north_rhine_area
 					area = westphalia_area

@@ -16,7 +16,8 @@ mamluks_library_of_alexandria_modifier = {
 }
 
 mamluks_lighthouse_of_alexandria_modifier = {
-	admiral_skill_gain_modifier = 0.01
+    trade_range_modifier = 0.25
+	#admiral_skill_gain_modifier = 0.01
 }
 
 mamluks_the_nile_breadbasket_province_modifier = {
@@ -30,7 +31,6 @@ mamluks_a_new_egyptian_golden_age_modifier = {
 }
 
 mamluks_yemeni_trade_modifier = {
-	trade_range_modifier = 0.25
 	placed_merchant_power = 2
 }
 

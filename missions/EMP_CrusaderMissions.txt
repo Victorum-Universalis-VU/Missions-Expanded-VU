@@ -57,6 +57,9 @@ EMP_crusader_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
 	}
 	EMP_crusader_convert_the_holy_land = {
 		icon = convert_the_holy_lands
@@ -94,6 +97,9 @@ EMP_crusader_1 = {
 				name = "kni_converted_the_holy_land"
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 500	#Natural conquest
 		}
 	}
 }
@@ -173,6 +179,8 @@ EMP_crusader_2 = {
 			owns = 379
 		}
 		effect = {
+			custom_tooltip = crusader_can_always_reform_jerusalem
+			set_country_flag = can_form_jerusalem_later_too
 			if = {
 				limit = {
 					religion = catholic
@@ -187,6 +195,9 @@ EMP_crusader_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
 	}
 	EMP_crusader_syria = {
 		icon = kingdom_of_heaven
@@ -194,7 +205,7 @@ EMP_crusader_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = syria_area
-				area = tripoli_area
+				area = syrian_desert_area
 				area = trans_jordan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -204,7 +215,7 @@ EMP_crusader_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			tripoli_area = {
+			syrian_desert_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -244,35 +255,16 @@ EMP_crusader_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			gulf_of_arabia_area = {
-#				limit = {
-#					NOT = { is_permanent_claim = ROOT	}
-#					NOT = { is_core = ROOT	}
-#				}
-#				add_permanent_claim = ROOT
-#			}
 			said_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-			}
-			syrian_desert_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			red_sea_coast_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-					NOT = { is_empty = yes }
-				}
-				add_permanent_claim = ROOT
-			}
+			}			
+		}
+		ai_weight = {
+			factor = 500	#Natural conquest
 		}
 	}
 	EMP_crusader_egypt = {
@@ -325,6 +317,9 @@ EMP_crusader_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
 	}
 	EMP_crusader_ark_of_the_covenant = {
 		icon = ark_of_the_covenant
@@ -338,6 +333,9 @@ EMP_crusader_2 = {
 		}
 		effect = {
 			country_event = { id = knights_missions.4 }
+		}
+		ai_weight = {
+			factor = 500	#Natural conquest
 		}
 	}	
 }
@@ -406,23 +404,7 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_aegean_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-					NOT = { owned_by = PAP }
-				}
-				add_permanent_claim = ROOT
-			}
 			aegean_archipelago_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-					NOT = { owned_by = PAP }
-				}
-				add_permanent_claim = ROOT
-			}
-			eastern_mediterrenean_islands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -438,9 +420,7 @@ EMP_crusader_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
-				area = western_aegean_area
 				area = aegean_archipelago_area
-				area = eastern_mediterrenean_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -451,36 +431,13 @@ EMP_crusader_3 = {
 					value = 5
 					OR = {
 						area = morea_area
-						area = western_aegean_area
 						area = aegean_archipelago_area
-						area = eastern_mediterrenean_islands_area
 					}
 				}
 			}
 		}
 		effect = {
 			northern_greece_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			aetolia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			thessaly_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			northern_epirus_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -494,21 +451,7 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_macedonia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			thrace_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			karasi_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -523,6 +466,9 @@ EMP_crusader_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
 	}
 	EMP_crusader_latin_empire = {
 		icon = the_latin_empire
@@ -530,13 +476,8 @@ EMP_crusader_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_greece_area
-				area = aetolia_area
-				area = thessaly_area
-				area = northern_epirus_area
 				area = macedonia_area
-				area = eastern_macedonia_area
 				area = thrace_area
-				area = karasi_area
 				area = hudavendigar_area
 			}
 			OR = {
@@ -559,31 +500,11 @@ EMP_crusader_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			aetolia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			thessaly_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_epirus_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			macedonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			eastern_macedonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			thrace_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			karasi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -613,6 +534,9 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500	#Natural conquest
 		}
 	}
 	EMP_crusader_catholic = {
@@ -910,7 +834,7 @@ EMP_crusader_4 = {
 			custom_trigger_tooltip = {
 				tooltip = cruader_piracy_tt
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 15 #Was 10
+					value = 10
 					region = maghreb_region
 					has_port = yes
 				}

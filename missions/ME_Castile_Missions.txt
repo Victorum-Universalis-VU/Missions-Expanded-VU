@@ -172,7 +172,7 @@ CAS_missions_1 = {
 		required_missions = { spa_rb_incans_two_ME }
 		position = 10
 		provinces_to_highlight = {
-			province_id = 225
+			province_id = 2754
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { base_tax = 5 }
@@ -181,15 +181,15 @@ CAS_missions_1 = {
 			}
 		}
 		trigger = {
-			owns = 225
-			225 = {
+			owns = 2754
+			2754 = {
 				base_tax = 5
 				base_production = 5
 				base_manpower = 5
 			}
 		}
 		effect = {
-			225 = {
+			2754 = {
 				add_province_modifier = {
 					name = Castile_la_mancha
 					duration = -1
@@ -558,6 +558,7 @@ CAS_missions_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 				area = mindanao_area
+				area = sulu_archipelago_area
 				area = visayas_area
 			}
 			NOT = { owned_by = ROOT }
@@ -571,6 +572,9 @@ CAS_missions_2 = {
 					owned_by = ROOT
 				}
 				mindanao_area = {
+					owned_by = ROOT
+				}
+				sulu_archipelago_area = {
 					owned_by = ROOT
 				}
 				visayas_area = {
@@ -598,6 +602,13 @@ CAS_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			mindanao_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sulu_archipelago_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1213,6 +1224,13 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			barbary_coast_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1221,11 +1239,18 @@ CAS_missions_4 = {
 		required_missions = { spa_rb_iberia_christian_ME }
 		position = 5
 		provinces_to_highlight = {
-			area = northern_morocco_area
+			OR = {
+			    area = northern_morocco_area
+			    area = barbary_coast_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			northern_morocco_area = {
+				type = all
+				owned_by = ROOT
+			}
+			barbary_coast_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1270,6 +1295,20 @@ CAS_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			barbary_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1280,6 +1319,7 @@ CAS_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_morocco_area
+				area = barbary_coast_area
 				area = southern_morocco_area
 				area = western_morocco_area
 				area = marrekesh_area
@@ -1290,6 +1330,10 @@ CAS_missions_4 = {
 		}
 		trigger = {
 			northern_morocco_area = {
+				type = all
+				owned_by = ROOT
+			}
+			barbary_coast_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1334,6 +1378,7 @@ CAS_missions_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_morocco_area
+				area = barbary_coast_area
 				area = southern_morocco_area
 				area = western_morocco_area
 				area = marrekesh_area
@@ -1344,6 +1389,10 @@ CAS_missions_4 = {
 		}
 		trigger = {
 			northern_morocco_area = {
+				type = all
+				religion = ROOT
+			}
+			barbary_coast_area = {
 				type = all
 				religion = ROOT
 			}
@@ -1369,7 +1418,7 @@ CAS_missions_4 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = moroccan
+			add_accepted_culture_or_dip_power = { culture = moroccan }
 			custom_tooltip = cas_morocco
 			set_country_flag = cas_morocco_culture
 		}
@@ -1450,14 +1499,6 @@ CAS_missions_4 = {
 			OR = {
 				area = pyrenees_area
 				area = basque_area
-				province_id = 8026 
-				province_id = 209 
-				province_id = 8016 
-				province_id = 7929 
-				province_id = 210 
-				province_id = 7920
-				province_id = 173
-				province_id = 7923
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1470,14 +1511,6 @@ CAS_missions_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			8026 = { country_or_non_sovereign_subject_holds = ROOT }
-			209 = { country_or_non_sovereign_subject_holds = ROOT }
-			8016 = { country_or_non_sovereign_subject_holds = ROOT }
-			7929 = { country_or_non_sovereign_subject_holds = ROOT }
-			210 = { country_or_non_sovereign_subject_holds = ROOT }
-			7920 = { country_or_non_sovereign_subject_holds = ROOT }
-			173 = { country_or_non_sovereign_subject_holds = ROOT }
-			7923 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			guyenne_area = {

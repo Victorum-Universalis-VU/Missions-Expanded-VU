@@ -25,9 +25,19 @@ mnd_khmer_1 = {
 		trigger = {
 			609 = {
 				development = 15
-				has_great_project = {
-					type = angkor_wat
-					tier = 1
+				OR = { 
+					has_great_project = {
+						type = angkor_wat
+						tier = 1
+					}
+					has_great_project = {
+						type = angkor_wat
+						tier = 2
+					}
+					has_great_project = {
+						type = angkor_wat
+						tier = 3
+					}
 				}
 			}
 		}
@@ -224,7 +234,6 @@ mnd_khmer_3 = {
 			OR = {
 				area = cambodia_area
 				area = mekong_area
-				area = cambodia_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -238,11 +247,6 @@ mnd_khmer_3 = {
 				development = 10
 			}
 			mekong_area = {
-				type = all
-				owned_by = ROOT
-				development = 10
-			}
-			cambodia_area = {
 				type = all
 				owned_by = ROOT
 				development = 10
@@ -360,6 +364,7 @@ mnd_khmer_3 = {
 					reverse_add_casus_belli = {
 						target = ROOT
 						type = cb_vassalize_mission
+						months = 120
 					}
 				}
 			}
@@ -417,6 +422,7 @@ mnd_khmer_3 = {
 					reverse_add_casus_belli = {
 						target = ROOT
 						type = cb_vassalize_mission
+						months = 120
 					}
 				}
 			}
@@ -435,7 +441,6 @@ mnd_khmer_3 = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { mnd_khm_subjugate_dia_viet }
 		provinces_to_highlight = {
-			area = kalimantan_area
 			area = brunei_area
 			area = kalimantan_area
 			area = kutai_area
@@ -448,7 +453,6 @@ mnd_khmer_3 = {
 				all_province = {
 					culture = bornean
 					OR = {
-						area = kalimantan_area
 						area = brunei_area
 						area = kalimantan_area
 						area = kutai_area
@@ -515,6 +519,7 @@ mnd_khmer_4 = {
 				add_casus_belli = {
 					target = AYU
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 			else = {
@@ -658,6 +663,7 @@ mnd_khmer_5 = {
 					reverse_add_casus_belli = {
 						target = ROOT
 						type = cb_vassalize_mission
+						months = 120
 					}
 				}
 			}

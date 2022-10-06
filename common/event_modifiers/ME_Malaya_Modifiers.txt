@@ -249,7 +249,8 @@ MSA_entrepot_of_malaya = {
 }
 
 MSA_spice_islands_modifier_GE = {
-	plantage_goods_produced_modifier = 0.1
+    trade_value_modifier = 0.5
+	#plantage_goods_produced_modifier = 0.1
 }
 
 MSA_spice_islands_modifier = {
@@ -262,7 +263,6 @@ MSA_nation_of_seafarers = {
 
 MSA_malay_community = {
 	picture = "modifier_icon_malay_flag"
-	trade_value_modifier = 0.5
 	trade_goods_size_modifier = 0.25
 }
 
@@ -527,7 +527,7 @@ MSA_navy_innovation_modifier = {
 }
 
 MSA_mastery_of_the_coin_modifier_GE = {
-	trade_deals_slots = 0.01
+	#trade_deals_slots = 0.01
 	trade_steering = 0.1
 }
 

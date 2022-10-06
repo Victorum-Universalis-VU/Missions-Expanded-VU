@@ -304,9 +304,11 @@ mantua_mission_2 = {
 		}
 		position = 10
 		provinces_to_highlight = {
-			AND = {
-				area = sicily_area
-				NOT = { province_id = 126 }
+			OR = {
+				AND = {
+					area = sicily_area
+					NOT = { province_id = 126 }
+				}
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -622,9 +624,13 @@ mantua_mission_3 = {
 		effect = {
 			118 = { add_core = ROOT }
 			capital_scope = {
-				add_development_scaled_on_monthly_monarch_power = yes
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 4
 			}
-			add_mana_scaled_on_monthly_monarch_power = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			complete_conquest_of_rome_missions = yes
 		}
 	}

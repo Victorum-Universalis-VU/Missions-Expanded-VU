@@ -236,7 +236,7 @@ ZCV_missions_2_2 = {
 		required_missions = { }
 		position = 6
 		trigger = {
-			check_variable = { which = ME_slovak_loyalty value = 75 }
+			check_variable = { ME_slovak_loyalty = 75 }
 			all_owned_province = {
 				OR = {
 					NOT = { culture = slovak }
@@ -252,7 +252,7 @@ ZCV_missions_2_2 = {
 				add_base_tax = 2
 				add_base_production = 2
 			}
-			change_variable = { which = ME_slovak_loyalty value  = 20 }
+			change_variable = { ME_slovak_loyalty = 20 }
 		}
 	}
 }
@@ -469,7 +469,7 @@ ZCV_missions_3_2 = {
 		required_missions = { }
 		position = 6
 		trigger = {
-			check_variable = { which = ME_polish_loyalty value = 75 }
+			check_variable = { ME_polish_loyalty = 75 }
 			num_of_cavalry = 30
 		}
 		effect = {
@@ -478,7 +478,7 @@ ZCV_missions_3_2 = {
 				duration = 7300
 			}
 			add_absolutism = 20
-			change_variable = { which = ME_polish_loyalty value = 20 }
+			change_variable = { ME_polish_loyalty = 20 }
 		}
 	}
 	
@@ -491,9 +491,9 @@ ZCV_missions_3_2 = {
 		}
 		position = 7
 		trigger = {
-			check_variable = { which = ME_czech_loyalty value  = 190 }
-			check_variable = { which = ME_polish_loyalty value = 190 }
-			check_variable = { which = ME_slovak_loyalty value  = 190 }
+			check_variable = { ME_czech_loyalty = 190 }
+			check_variable = { ME_polish_loyalty = 190 }
+			check_variable = { ME_slovak_loyalty = 190 }
 		}
 		effect = {
 			set_country_flag = ME_lowered_penalties
@@ -641,7 +641,7 @@ ZCV_missions_4_2 = {
 		required_missions = { }
 		position = 6
 		trigger = {
-			check_variable = { which = ME_czech_loyalty value = 75 }
+			check_variable = { ME_czech_loyalty = 75 }
 			prestige = 50
 		}
 		effect = {
@@ -681,7 +681,7 @@ ZCV_missions_4_2 = {
 				}
 				add_base_production = 1
 			}
-			change_variable = { which = ME_czech_loyalty value = 20 }
+			change_variable = { ME_czech_loyalty = 20 }
 		}
 	}
 }

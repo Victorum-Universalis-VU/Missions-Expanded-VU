@@ -75,10 +75,6 @@ country_event = { #Sicily Reclaimed
 			type = all
 			country_or_non_sovereign_subject_holds = ROOT
 		}
-#		western_sicily_area = {
-#			type = all
-#			country_or_non_sovereign_subject_holds = ROOT
-#		}
 	}
 	fire_only_once = yes
 	major = yes
@@ -153,9 +149,6 @@ country_event = { #Grant Cores on Sicily
 		sicily_area = {
 			add_core = ROOT
 		}
-#		western_sicily_area = {
-#			add_core = ROOT
-#		}
 	}
 }
 

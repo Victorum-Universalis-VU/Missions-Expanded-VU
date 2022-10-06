@@ -25,7 +25,6 @@ PLB_missions_1 = {
 			OR = {
 				area = central_java_area
 				area = west_java_area
-				area = east_java_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
@@ -34,7 +33,6 @@ PLB_missions_1 = {
 						OR = {
 							area = central_java_area
 							area = west_java_area
-							area = east_java_area
 						}
 						value = 6
 					}
@@ -46,7 +44,6 @@ PLB_missions_1 = {
 				OR = {
 					area = central_java_area
 					area = west_java_area
-					area = east_java_area
 				}
 				value = 6
 			}
@@ -56,13 +53,6 @@ PLB_missions_1 = {
 				name = PLB_heirs_of_tarumanagara_defeated
 				duration = -1
 			}
-			central_java_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			east_java_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -70,7 +60,7 @@ PLB_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_java_area = {
+			kalimantan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -109,13 +99,6 @@ PLB_missions_1 = {
 				duration = 7300
 			}
 			sulawesi_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_sulawesi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -172,10 +155,6 @@ PLB_missions_1 = {
 					owned_by = ROOT
 				}
 				west_java_area = {
-					type = all
-					owned_by = ROOT
-				}
-				east_java_area = {
 					type = all
 					owned_by = ROOT
 				}
@@ -317,13 +296,6 @@ PLB_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			central_java_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_java_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

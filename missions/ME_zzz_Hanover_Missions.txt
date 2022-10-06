@@ -251,7 +251,9 @@ HAN_missions_2 = {
 			OR = {
 				area = mittelmark_area
 				area = neumark_area
-				area = saxony_area
+				area = altmark_area
+				area = anhalt_area
+				area = hesse_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -260,7 +262,9 @@ HAN_missions_2 = {
 				OR = {
 					area = mittelmark_area
 					area = neumark_area
-					area = saxony_area
+					area = altmark_area
+					area = anhalt_area
+					area = hesse_area
 				}
 				value = 8
 			}
@@ -504,7 +508,7 @@ HAN_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = thuringia_area
-				area = lower_saxony_area
+				area = saxony_area
 				area = lusatia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -513,7 +517,7 @@ HAN_missions_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = thuringia_area
-					area = lower_saxony_area
+					area = saxony_area
 					area = lusatia_area
 				}
 				value = 8
@@ -846,12 +850,18 @@ HAN_missions_4 = {
 		required_missions = { HAN_rhineland }
 		position = 7
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = thuringia_area
+				area = franconia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = franconia_area
+				OR = {
+					area = thuringia_area
+					area = franconia_area
+				}
 				value = 5
 			}
 		}
@@ -881,9 +891,7 @@ HAN_missions_4 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				OR = {
-					area = bavaria_area
-				}
+				area = bavaria_area
 				value = 8
 			}
 		}
@@ -1190,6 +1198,13 @@ HAN_missions_5_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			wurttemburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			swabia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1198,6 +1213,13 @@ HAN_missions_5_1 = {
 				add_permanent_claim = ROOT
 			}
 			franconia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -1215,6 +1237,7 @@ HAN_missions_5_1 = {
 			OR = {
 				area = baden_area
 				area = alsace_area
+				area = wurttemburg_area
 				area = swabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1224,6 +1247,7 @@ HAN_missions_5_1 = {
 				OR = {
 					area = baden_area
 					area = alsace_area
+					area = wurttemburg_area
 					area = swabia_area
 				}
 				value = 10
@@ -1390,7 +1414,7 @@ HAN_missions_5_2 = {
 			custom_tooltip = HAN_if_a_GBR_or_ENG_nation_exists
 			custom_tooltip = PRO_cb_lasts_for_20_years
 			custom_tooltip = HAN_perma_claims_on_ENG_and_GBR_core_land
-			greater_london_area = {
+			south_east_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

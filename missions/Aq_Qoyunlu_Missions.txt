@@ -64,6 +64,9 @@ akk_missions = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Annexing a neighboring OPM should be done by the AI
+		}
 	}
 	defeat_black_sheep = {
 		icon = mission_non-western_cavalry_raid
@@ -129,13 +132,6 @@ akk_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-#			kartli_kakheti_area = {
-#				limit = {
-#					NOT = { is_permanent_claim = ROOT }
-#					NOT = { is_core = ROOT	}
-#				}
-#				add_permanent_claim = ROOT
-#			}
 			iraq_arabi_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -165,6 +161,9 @@ akk_missions = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Black and White sheeps cannot stand eachother. Why? They are both sheeps...
+		}
 	}
 	conquer_the_caucasus_akk = {
 		icon = mission_conquer_50_development
@@ -174,7 +173,6 @@ akk_missions = {
 				area = shirvan_area
 				area = imereti_area
 				area = samtskhe_area
-#				area = kartli_kakheti_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -193,10 +191,6 @@ akk_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-#			kartli_kakheti_area = {
-#				type = all
-#				country_or_non_sovereign_subject_holds = ROOT
-#			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -232,6 +226,9 @@ akk_missions = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Should be on their todo list as they can form Persia
+		}
 	}
 	invade_persia_akk = {
 		icon = mission_persian_soldiers
@@ -254,6 +251,9 @@ akk_missions = {
 				name = "akk_persia"
 				duration = 7300
 			}
+		}
+		ai_weight = {
+			factor = 500	#Should be on their todo list as they can form Persia
 		}
 	}
 }
@@ -339,6 +339,9 @@ akk_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500	#Should be on their todo list as they can form Persia
 		}
 	}
 }

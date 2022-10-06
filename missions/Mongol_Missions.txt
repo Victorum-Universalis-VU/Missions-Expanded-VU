@@ -246,7 +246,7 @@ mongol_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2116
-				province_id = 2190
+				province_id = 4678
 			}
 			NOT = {
 				owned_by = ROOT
@@ -255,7 +255,7 @@ mongol_missions_2 = {
 		}
 		trigger = {
 			owns_core_province = 2116
-			owns_core_province = 2190
+			owns_core_province = 4678
 			is_subject = no
 		}
 		effect = {

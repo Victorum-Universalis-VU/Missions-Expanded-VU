@@ -164,10 +164,10 @@ maya_secure_our_position_modifier = {
 	discipline = 0.025
 }
 
-maya_expel_the_foreigners_modifier = {
-	core_creation = -0.1
-	land_morale = 0.05
-}
+#maya_expel_the_foreigners_modifier = {
+#	core_creation = -0.1
+#	land_morale = 0.05
+#}
 
 maya_destroy_european_administration_modifier = {
 	global_autonomy = -0.05

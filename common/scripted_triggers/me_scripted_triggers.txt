@@ -1,0 +1,2008 @@
+#Expanded Family Scripted Triggers
+is_expanded_mod_active = {
+	OR = {
+		has_global_flag = $mod$_expanded_mod_active
+		has_global_flag = $mod$_exapanded_mod_active
+	}
+}
+
+#Area Development Scripted Triggers
+# usage:
+#	area_has_total_development_of_type = {
+#		type = <tax/production/manpower>
+#		1 = <province id>	# all provinces should be in the same area
+#		2 = <province id>
+#		3 = <province id>
+#		4 = <province id>
+#		5 = <province id>
+#		total = <int>		# amount of development of <type> that the sum of all provinces' development of <type> should at least be
+#	}
+area_has_total_development_of_type = {
+	$1$ = {
+		custom_trigger_tooltip = {
+			tooltip = area_has_total_development_of_type_tt_$type$
+			OR = {
+				always = yes
+				development = $total$ # for the tooltip
+			}
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = area_var
+					value = base_$type$
+					who = $1$
+				}
+				[[2]
+					export_to_variable = {
+						which = province_$2$
+						value = base_$type$
+						who = $2$
+					}
+					change_variable = { which = area_var which = province_$2$ }
+				]
+				[[3]
+					export_to_variable = {
+						which = province_$3$
+						value = base_$type$
+						who = $3$
+					}
+					change_variable = { which = area_var which = province_$3$ }
+				]
+				[[4]
+					export_to_variable = {
+						which = province_$4$
+						value = base_$type$
+						who = $4$
+					}
+					change_variable = { which = area_var which = province_$4$ }
+				]
+				[[5]
+					export_to_variable = {
+						which = province_$5$
+						value = base_$type$
+						who = $5$
+					}
+					change_variable = { which = area_var which = province_$5$ }
+				]
+				check_variable = { which = area_var value = $total$ }
+			}
+		}
+	}
+}
+
+#Austrian Scripted Triggers
+HAB_reorganize_the_kingdom_group_trigger = {
+	venetia_area = {
+		$trigger$
+		type = all 
+	}
+	po_valley_area = {
+		$trigger$
+		type = all 
+	}
+	lombardy_area = {
+		$trigger$
+		type = all 
+	}
+	emilia_romagna_area = {
+		$trigger$
+		type = all 
+	}
+	tuscany_area = {
+		$trigger$
+		type = all 
+	}
+	liguria_area = {
+		$trigger$
+		type = all 
+	}
+	piedmont_area = {
+		$trigger$
+		type = all 
+	}
+	lazio_area = {
+		$trigger$
+		type = all 
+	}
+	2977 = {
+		$trigger$
+	}
+	119 = {
+		$trigger$
+	}
+}
+
+HAB_can_take_unshaken_reputation_trigger = {
+	check_variable = {
+		which = habsburg_glory
+		value = 10
+	}
+	NOT = {
+		has_country_modifier = me_hab_unshaken_reputation
+	}
+}
+
+HAB_can_take_glory_of_habsburg_trigger = {
+	check_variable = {
+		which = habsburg_glory
+		value = 30
+	}
+	NOT = {
+		has_country_modifier = me_hab_glory_of_habsburg
+	}
+}
+
+HAB_can_take_me_hab_favors_modifier_trigger = {
+	has_country_flag = me_hab_more_actions
+	check_variable = {
+		which = habsburg_glory
+		value = 15
+	}
+	NOT = {
+		has_country_modifier = me_hab_courtly_help
+	}
+}
+
+HAB_can_take_me_hab_courtly_help_trigger = {
+	has_country_flag = me_hab_more_actions
+	check_variable = {
+		which = habsburg_glory
+		value = 45
+	}
+	NOT = {
+		has_country_modifier = me_hab_courtly_help
+	}
+}
+
+HAB_has_any_habsburg_glory_interaction_available = {
+	custom_trigger_tooltip = {
+		tooltip = HAB_has_any_habsburg_glory_interaction_available_tt
+		OR = {
+			HAB_can_take_glory_of_habsburg_trigger = yes
+			HAB_can_take_unshaken_reputation_trigger = yes
+			HAB_can_take_me_hab_favors_modifier_trigger = yes
+			HAB_can_take_me_hab_courtly_help_trigger = yes
+		}
+	}
+}
+
+#ME_amount_of_mil_ideas = { amount = x }
+ME_amount_of_mil_ideas = {
+	calc_true_if = {
+		full_idea_group = aristocracy_ideas
+		full_idea_group = plutocracy_ideas
+		full_idea_group = horde_gov_ideas
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = indigenous_ideas
+		full_idea_group = offensive_ideas
+		full_idea_group = defensive_ideas
+		full_idea_group = quality_ideas
+		full_idea_group = quantity_ideas
+		full_idea_group = naval_ideas
+
+		amount = $amount$
+	}
+	custom_tooltip = ME_mil_ideas_completed_$amount$
+}
+
+has_mil_advisor_5 = {
+	OR = {
+		army_organiser = 5
+		army_reformer = 5
+		commandant = 5
+		grand_captain = 5
+		recruitmaster = 5
+		fortification_expert = 5
+		quartermaster = 5
+	}
+}
+
+has_adm_advisor_5 = {
+	OR = {
+		treasurer = 5
+		philosopher = 5
+		artist = 5
+		theologian = 5
+		master_of_mint = 5
+		inquisitor = 5
+		natural_scientist = 5
+	}
+}
+
+
+has_dip_advisor_5 = {
+	OR = {
+		statesman = 5
+		diplomat = 5
+		naval_reformer = 5
+		trader = 5
+		colonial_governor = 5
+		navigator = 5
+		spymaster = 5
+	}
+}
+
+#Bavarian Scripted Triggers
+me_bav_is_beer_enabled = {
+	is_expanded_mod_active = { mod = trade_goods }
+	NOT = { has_global_flag = No_Beer }
+}
+
+#Buildings Scripted Triggers
+## country scope
+num_of_owned_manufactory_trigger = {
+	OR = {
+		wharf = $amount$
+		weapons = $amount$
+		textile = $amount$
+		tradecompany = $amount$
+		farm_estate = $amount$
+		mills = $amount$
+		furnace = $amount$
+		plantations = $amount$
+		ramparts = $amount$
+		soldier_households = $amount$
+		impressment_offices = $amount$
+		state_house = $amount$
+	}
+}
+
+num_of_owned_manufactory_combined_trigger = {
+	calc_true_if = {
+		all_owned_province = {
+			has_manufactory_trigger = yes
+		}
+		amount = $amount$
+	}
+}
+
+#Colonial Scripted Triggers
+# usage:
+## is_in_same_colonial_region_as = { target = <PREV/ROOT/FROM/province ID> }
+is_in_same_colonial_region_as = {
+	$target$ = {
+		custom_trigger_tooltip = {
+			tooltip = IS_IN_SAME_COLONIAL_REGION_AS_TT
+			OR = {
+				AND = {
+					colonial_region = colonial_alaska
+					PREV = { colonial_region = colonial_alaska }
+				}
+				AND = {
+					colonial_region = colonial_canada
+					PREV = { colonial_region = colonial_canada }
+				}
+				AND = {
+					colonial_region = colonial_eastern_america
+					PREV = { colonial_region = colonial_eastern_america }
+				}
+				AND = {
+					colonial_region = colonial_louisiana
+					PREV = { colonial_region = colonial_louisiana }
+				}
+				AND = {
+					colonial_region = colonial_california
+					PREV = { colonial_region = colonial_california }
+				}
+				AND = {
+					colonial_region = colonial_mexico
+					PREV = { colonial_region = colonial_mexico }
+				}
+				AND = {
+					colonial_region = colonial_the_carribean
+					PREV = { colonial_region = colonial_the_carribean }
+				}
+				AND = {
+					colonial_region = colonial_colombia
+					PREV = { colonial_region = colonial_colombia }
+				}
+				AND = {
+					colonial_region = colonial_peru
+					PREV = { colonial_region = colonial_peru }
+				}
+				AND = {
+					colonial_region = colonial_la_plata
+					PREV = { colonial_region = colonial_la_plata }
+				}
+				AND = {
+					colonial_region = colonial_brazil
+					PREV = { colonial_region = colonial_brazil }
+				}
+				AND = {
+					colonial_region = colonial_australia
+					PREV = { colonial_region = colonial_australia }
+				}
+			}
+		}
+	}
+}
+
+# usage:
+## is_not_in_same_colonial_region_as = { target = <PREV/ROOT/FROM/province ID> }
+is_not_in_same_colonial_region_as = {
+	$target$ = {
+		custom_trigger_tooltip = {
+			tooltip = IS_NOT_IN_SAME_COLONIAL_REGION_AS_TT
+			NOT = {
+				OR = {
+					AND = {
+						colonial_region = colonial_alaska
+						PREV = { colonial_region = colonial_alaska }
+					}
+					AND = {
+						colonial_region = colonial_canada
+						PREV = { colonial_region = colonial_canada }
+					}
+					AND = {
+						colonial_region = colonial_eastern_america
+						PREV = { colonial_region = colonial_eastern_america }
+					}
+					AND = {
+						colonial_region = colonial_louisiana
+						PREV = { colonial_region = colonial_louisiana }
+					}
+					AND = {
+						colonial_region = colonial_california
+						PREV = { colonial_region = colonial_california }
+					}
+					AND = {
+						colonial_region = colonial_mexico
+						PREV = { colonial_region = colonial_mexico }
+					}
+					AND = {
+						colonial_region = colonial_the_carribean
+						PREV = { colonial_region = colonial_the_carribean }
+					}
+					AND = {
+						colonial_region = colonial_colombia
+						PREV = { colonial_region = colonial_colombia }
+					}
+					AND = {
+						colonial_region = colonial_peru
+						PREV = { colonial_region = colonial_peru }
+					}
+					AND = {
+						colonial_region = colonial_la_plata
+						PREV = { colonial_region = colonial_la_plata }
+					}
+					AND = {
+						colonial_region = colonial_brazil
+						PREV = { colonial_region = colonial_brazil }
+					}
+					AND = {
+						colonial_region = colonial_australia
+						PREV = { colonial_region = colonial_australia }
+					}
+				}
+			}
+		}
+	}
+}
+
+#Diplomatic Scripted Triggers
+num_of_supported_independencies = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "El Dorado"
+				has_dlc = "Conquest of Paradise"
+			}
+		}
+		calc_true_if = {
+			all_country = {
+				PREV = {
+					is_supporting_independence_of = PREV
+				}
+			}
+			amount = $amount$
+			desc = NUM_OF_SUPPORTED_INDEPENDENCIES_TT
+		}
+	}
+	else = {
+		num_of_allies = $amount$
+	}
+}
+
+has_trade_deal_with_root_trigger = { #checks if X has a trade deal with ROOT
+	if = {							 #if ROOT can have a trade deal and GE is enabled,
+		limit = {					 #otherwise checks for opinion.
+			is_expanded_mod_active = { mod = governments }
+			has_global_modifier_value = {
+				which = num_accepted_cultures #trade_deals_slots
+				value = 1
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = TRADE_DEAL_SCRIPTED_TRIGGER_TT
+			OR = {
+				has_country_flag = GE_Trade_Deal_From_@Root
+				has_country_flag = GE_Trade_Deal_With_@Root
+			}
+		}
+	}
+	else = {
+		has_opinion = {
+			who = ROOT
+			value = 150
+		}
+	}
+}
+
+#Estates Scripted Triggers
+can_select_estate_agenda = {
+	has_estate = $estate$
+	can_select_estate_agenda_$agenda$ = yes
+}
+
+can_select_estate_agenda_estate_maya_build_university = {
+	adm_tech = 17
+	any_owned_province = {
+		is_state_core = ROOT
+		NOT = { has_building = university }
+		OR = {
+			num_free_building_slots = 1
+			NOT = { num_of_buildings_in_province = 12 }
+		}
+	}
+}
+
+can_select_estate_agenda_estate_maya_develop_province = {
+	any_owned_province = {
+		is_state_core = ROOT
+	}
+}
+
+can_select_estate_agenda_estate_maya_teach_ruler = {
+	OR = {
+		government = monarchy
+		government = native
+		AND = {
+			government = tribal
+			OR = {
+				has_reform = tribal_despotism
+				has_reform = tribal_kingdom
+			}
+		}
+	}
+	has_regency = no
+	NOT = { ADM = 6 }
+	NOT = { has_ruler_flag = estate_maya_teach_ruler_flag }
+}
+
+can_select_estate_agenda_estate_maya_advisor_employed = {
+	NOT = { has_country_modifier = estate_maya_advisor_employed_modifier }
+	NOT = { advisor = mayan_scribe }
+	num_of_owned_provinces_with = {
+		value = 1
+		has_building = university
+	}
+}
+
+estate_industrial_privileges_allow = {
+	num_of_estate_privileges = {
+		estate = estate_industrial
+		value = 4
+	}
+}
+
+estate_industrial_privileges_invalid = {
+	always = no
+}
+
+#Government Scripted Triggers
+has_absolutism_equivalent = {
+	if = {
+		limit = {
+			has_dlc = "Emperor"
+			OR = {
+				is_revolution_target = yes
+				is_revolutionary = yes
+			}
+		}
+		revolutionary_zeal = $amount$
+	}
+	else = {
+		absolutism = $amount$
+	}
+}
+
+ME_has_completed_all_reforms = {
+	custom_trigger_tooltip = {
+		tooltip = ME_has_completed_all_reforms_tt
+		if = {
+			limit = { government = monarchy }
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = governments }
+				}
+				reform_level = 9
+			}
+			else = { reform_level = 7 }
+		}
+		else_if = {
+			limit = { government = republic }
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = governments }
+				}
+				reform_level = 11
+			}
+			else = { reform_level = 10 }
+		}
+		else_if = {
+			limit = { government = theocracy }
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = governments }
+				}
+				reform_level = 12
+			}
+			else = { reform_level = 8 }
+		}
+		else_if = {
+			limit = { government = tribal }
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = governments }
+				}
+				reform_level = 6
+			}
+			else = { reform_level = 5 }
+		}
+		else_if = {
+			limit = { government = native }
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = governments }
+				}
+				reform_level = 5
+			}
+			else = { reform_level = 5 }
+		}
+		else = { reform_level = 5 }
+	}
+}
+
+# This is just has_reform_on_level but with an accurate tooltip. Accepts level and value because why not? Levels count from 0, so tier 1 = 0. Not my fault. This is just to fix the tooltip :/ Supports up to 14 gov reforms. More than GE has!
+ME_has_reform_on_level = {
+	[[level]
+		custom_trigger_tooltip = {
+			tooltip = has_reform_on_level_$level$_tt
+			has_reform_on_level = $level$
+		}
+	]
+	[[value]
+		custom_trigger_tooltip = {
+			tooltip = has_reform_on_level_$value$_tt
+			has_reform_on_level = $value$
+		}
+	]
+}
+
+#Italian Missions Scripted Triggers
+country_has_unique_italian_missions = {
+	tag = ITA
+	NOT = { was_tag = FER }
+	NOT = { was_tag = MAN }
+	NOT = { was_tag = NAP }
+	NOT = { was_tag = SIC }
+	NOT = { was_tag = TTS }
+	NOT = { was_tag = SAR }
+	NOT = { was_tag = SAV }
+	NOT = { was_tag = SPI }
+	NOT = { was_tag = GEN }
+	NOT = { was_tag = MLO }
+	NOT = { was_tag = VEN }
+	NOT = { was_tag = LAN }
+	NOT = { was_tag = PIS }
+	NOT = { was_tag = TUS }
+	NOT = { was_tag = PGA }
+	NOT = { was_tag = SIE }
+	NOT = { was_tag = LUC }
+	NOT = { was_tag = VRN }
+}
+country_was_not_more_than_one_italian_formable = {
+	NOT = {
+		calc_true_if = {
+			amount = 2
+			was_tag = SPI
+			was_tag = TUS
+			was_tag = TTS
+		}
+	}
+}
+
+#Malayan Scripted Triggers
+MSA_is_in_borneo = {
+	OR = {
+		area = kutai_area
+		area = palawan_area
+		area = kalimantan_area
+		area = sabah_area
+		area = brunei_area
+	}
+}
+
+MSA_is_in_sumatra = {
+	OR = {
+		area = central_sumatra_area
+		area = palembang_area
+		area = minangkabau_area
+		area = north_sumatra_area
+		area = south_sumatra_area
+		area = batak_area
+	}
+}
+
+MSA_is_in_java = {
+	OR = {
+		area = east_java_area
+		area = central_java_area
+		area = west_java_area
+	}
+}
+
+MSA_is_in_sulawesi = {
+	OR = {
+		area = south_sulawesi_area
+		area = sulawesi_area
+		area = south_sulawesi_area
+	}
+}
+
+MSA_is_in_malaya = {
+	OR = {
+		area = malacca_area
+		area = malaya_area
+		area = kedah_area
+		area = indonesian_islands_area
+	}
+}
+
+MSA_is_in_spice_islands = {
+	OR = {
+		area = molluca_area
+		area = spice_islands_area
+	}
+}
+
+MSA_is_in_philippines = {
+	OR = {
+		area = visayas_area
+		area = luzon_area
+		area = southern_luzon_area
+		area = mindanao_area
+		area = sulu_archipelago_area
+	}
+}
+
+MSA_is_tag = {
+	OR = {
+		tag = $tag$
+		AND = {
+			tag = MSA
+			was_tag = $tag$
+		}
+	}
+}
+
+MSA_malaya_trigger = {
+	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		OR = {
+			region = malaya_region
+			region = indonesia_region
+		}
+		value = 60
+	}
+}
+
+MSA_malaya_pth = {
+	OR = {
+		region = malaya_region
+		region = indonesia_region
+	}
+	NOT = { country_or_non_sovereign_subject_holds = ROOT }
+}
+
+MSA_affected_by_spread_of_islam = {
+	OR = {
+		region = malaya_region
+		region = indonesia_region
+		region = moluccas_region
+	}
+	owner = {
+		culture_group = malay
+	}
+}
+
+MSA_orang_laut_trigger = {
+	calc_true_if = {
+		has_estate_privilege = estate_burghers_orang_laut_alliances 
+		estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 65
+		}
+		navy_tradition = 30
+		custom_trigger_tooltip = {
+			tooltip = MSA_10_dip
+			OR = { monthly_dip = 10 } # To the future developer (Lim or not): This OR is required. 
+		}
+		amount = 2
+	}
+}
+
+MSA_TID_TER_cost_trigger = {
+	if = {
+		limit = {
+			check_variable = { which = MSA_num_of_colonies value = 1 }
+		}
+		if = {
+			limit = {
+				check_variable = { which = MSA_num_of_colonies value = 2 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = MSA_num_of_colonies value = 3 }
+				}
+				if = {
+					limit = {
+						check_variable = { which = MSA_num_of_colonies value = 4 }
+					}
+					treasury = 150
+				}
+				else = { treasury = 125 }
+			}
+			else = { treasury = 100 }
+		}
+		else = { treasury = 75 }
+	}
+	else = { treasury = 50 }
+}
+
+MSA_has_available_concession_trigger = {
+	OR = {
+		NOT = { has_country_modifier = MSA_concession_guard }
+		NOT = { has_country_modifier = MSA_concession_trade_efficiency }
+		any_ally = {
+			capital_scope = {
+				continent = europe
+			}
+		}
+		# any_owned_province = {
+			# province_has_center_of_trade_of_level = 1
+		# }
+	}
+}
+
+MSA_has_available_request_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = MSA_any_request_available
+		OR = {
+			AND = {
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 10
+				}
+				OR = {
+					NOT = { has_country_flag = MSA_investment_a_cooldown }
+					had_country_flag = {
+						flag = MSA_investment_a_cooldown
+						days = 3650
+					}
+				}
+			}
+			AND = {
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 10
+				}
+				NOT = { has_country_modifier = MSA_mercenary_investment_modifier }
+			}
+			AND = {
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 5
+				}
+				OR = {
+					NOT = { has_country_flag = MSA_investment_e_cooldown }
+					had_country_flag = {
+						flag = MSA_investment_e_cooldown
+						days = 1825
+					}
+				}
+			}
+			AND = {
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 10
+				}
+				any_ally = {
+					capital_scope = {
+						continent = europe
+					}
+				}
+				OR = {
+					NOT = { has_country_flag = MSA_investment_f_cooldown }
+					had_country_flag = {
+						flag = MSA_investment_f_cooldown
+						days = 3650
+					}
+				}
+			}
+			AND = {
+				has_country_flag = MSA_invest_in_production
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 20
+				}
+				OR = {
+					NOT = { has_country_flag = MSA_investment_g_cooldown }
+					had_country_flag = {
+						flag = MSA_investment_g_cooldown
+						days = 5475
+					}
+				}
+				if = {
+					limit = {
+						is_expanded_mod_active = { mod = trade_goods }
+					}
+					any_owned_province = {
+						OR = {
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = nutmeg
+							trade_goods = vanilla
+						}
+						NOT = { has_province_modifier = MSA_enhanced_spice_production }
+					}
+				}
+				else = {
+					any_owned_province = {
+						OR = {
+							trade_goods = spices
+							trade_goods = cloves
+						}
+						NOT = { has_province_modifier = MSA_enhanced_spice_production }
+					}
+				}
+			}
+			AND = {
+				check_variable = {
+					which = MSA_foreign_investment_amount
+					value = 15
+				}
+				OR = {
+					NOT = { has_country_flag = MSA_investment_c_cooldown }
+					had_country_flag = {
+						flag = MSA_investment_c_cooldown
+						days = 5475
+					}
+				}
+				any_owned_province = {
+					NOT = { trade_goods = coffee } #wtf?
+				}
+			}
+		}
+	}
+}
+
+#Polish Scripted Triggers
+owned_by_LIT_or_associated_poland = {
+	custom_trigger_tooltip = {
+		tooltip = LIT_owned_by_LIT_or_associated_poland 
+		OR = {
+			country_or_non_sovereign_subject_holds = ROOT
+			owner = {
+				OR = {
+					tag = POL
+					is_subject_of = POL
+				}
+				OR = {
+					POL = { senior_union_with = LIT }
+					POL = { alliance_with = LIT }
+				}
+			}
+		}
+	}
+}
+
+#More ME Scripted Triggers
+country_has_both_paradox_and_me_missions = {
+	OR = {
+		# Dharma DLC
+		AND = {
+			has_dlc = "Dharma"
+			tag = VIJ
+		}
+		# Origins DLC
+		AND = {
+			has_dlc = "Origins"
+			NOT = { map_setup = map_setup_random }
+			OR = {
+				tag = ZAN
+				tag = ETH
+				tag = MAL
+				tag = SON
+				tag = KON
+				# Madagascar Generics
+				tag = SKA
+				tag = MIR
+				tag = BTS
+				tag = ANT
+				tag = MFY
+			}
+		}
+		# Emperor DLC
+		AND = {
+			has_dlc = "Emperor"
+			OR = {
+				#Italy
+				tag = BOH
+				tag = ITA
+				tag = MLO
+				tag = NAP
+				tag = TTS
+				tag = SAV
+				tag = SPI
+				tag = VEN
+				tag = LAN
+				tag = TUS
+				#Crusader
+				tag = CYP
+				tag = EPI
+				tag = KNI
+				tag = NAX
+				#Germany
+				tag = GER
+				tag = HLR
+				tag = SAX
+				tag = THU
+				#Balkans
+				tag = HUN
+				#France
+				tag = PRO
+			}
+		}
+		# Third Rome DLC
+		# Rule Britannia DLC
+		AND = {
+			has_dlc = "Rule Britannia"
+			OR = {
+				tag = IRE
+				tag = TYR
+				tag = TRY
+				tag = LEI
+				tag = ULS
+				tag = FLY
+				tag = KID
+				tag = CNN
+				tag = SLN
+				tag = MCM
+				tag = DMS
+				tag = ORD
+				tag = MTH
+				tag = MNS
+			}
+		}
+		AND = {
+			has_dlc = "Leviathan"
+			OR = {
+				tag = KHM
+				tag = PLB
+				tag = MAJ
+			}
+		}
+		AND = {
+			has_dlc = "Lions of the North"
+			OR = {
+				tag = TEU
+				tag = SCA
+				tag = NOR
+			}
+		}
+		AND = {
+			has_dlc = "Golden Century"
+			OR = {
+				tag = GRA
+				tag = ADU
+			}
+		}
+		AND = {
+			has_dlc = "American Dream"
+			tag = USA
+		}
+		# Default
+		tag = ARA
+		tag = CAS
+		tag = HAB
+		tag = CRI
+		tag = DAN
+		tag = FRA
+		tag = GOL
+		tag = HSA
+		tag = KAZ
+		tag = KIE
+		tag = MOL
+		tag = HSN
+		tag = POL
+		tag = PLC
+		tag = LIT
+		tag = QAS
+		tag = RMN
+		tag = RUS
+		tag = MOS
+		tag = STY
+		tag = SWE
+		tag = TIR
+		tag = TRA
+		tag = TIM
+		tag = PER
+		tag = QAR
+		tag = AKK
+		AND = {
+			tag = SPA
+			is_random_new_world = no
+			NOT = { map_setup = map_setup_random }
+		}
+		tag = PRU
+		tag = BRA
+		tag = KOR
+		tag = TUR
+		tag = MAM
+		tag = ENG
+		tag = GBR
+		tag = GLH
+		tag = INC
+		# Manchurian Tribes
+		tag = EJZ
+		tag = MHX
+		tag = MJZ
+		tag = MYR
+		tag = NHX
+		tag = MCH
+		tag = QNG
+		AND = {
+			OR = {
+				primary_culture = mongol
+				primary_culture = chahar
+				primary_culture = khalkha
+				primary_culture = oirats
+			}
+			OR = {
+				tag = KHA
+				tag = YUA
+				tag = ILK
+			}
+		}
+		tag = KHO
+		tag = TRS
+		tag = FRS
+		tag = QOM
+		tag = AFG
+		tag = OTM
+		# Japan
+		AND = {
+			OR = {
+				has_reform = indep_daimyo
+				has_reform = daimyo
+				has_reform = shogunate
+				tag = JAP
+			}
+			OR = {
+				country_gets_japanese_generic_missions = yes
+				country_gets_japanese_unique_missions = yes
+			}
+		}
+		#Germany
+		tag = PAL
+		tag = KOL
+		tag = TRI
+		tag = MAI
+		tag = DTT
+		tag = GER
+		tag = HLR
+		#Pomerania
+		tag = POM
+		tag = STE
+		tag = WOL
+		#Franconia
+		tag = WBG
+		tag = ANS
+		tag = BAM
+		tag = BYT
+		tag = ROT
+		tag = NUM
+		tag = FKN
+		#Westphalia
+		AND = {
+			OR = {
+				tag = RVA
+				tag = OSN
+				tag = OLD
+				tag = LPP
+				tag = MUN
+				tag = HES
+				tag = BRG
+				tag = NSA
+				tag = KLE
+				tag = FRN
+				tag = AAC
+				tag = WES
+			}
+			OR = {
+				primary_culture = hannoverian
+				primary_culture = hessian
+			}
+		}
+		#Hanover
+		tag = BRU
+		tag = LUN
+		tag = CLB
+		tag = HAN
+		#Swabia
+		tag = WUR
+		tag = BAD
+		tag = ALS
+		tag = MLH
+		tag = KNZ
+		tag = MEM
+		tag = ULM
+		tag = DWT
+		tag = SWA
+		#Bavaria
+		tag = BAV
+		tag = ING
+		tag = LBV
+		tag = UBV
+		#Low Countries
+		tag = UTR
+		tag = GEL
+		tag = FRI
+		tag = FLA
+		tag = BRB
+		#Italy
+		is_italian_minor = yes
+		tag = FER
+		tag = GEN
+		tag = MAN
+		tag = MFA
+		tag = PIS
+		tag = SAR
+		tag = SIC
+		tag = VEN
+		tag = PGA
+		tag = LUC
+		tag = SIE
+		tag = VRN
+		#France
+		tag = BUR
+		tag = FRA
+		#French Minors, remove? mostly bad
+		tag = NRM
+		#Balkans
+		tag = ALB
+		tag = BUL
+		tag = CRO
+		tag = RAG
+		tag = HUN
+		#Malaya
+		tag = MLC
+		tag = BEI
+		tag = MSA
+		#Spice Islands
+		tag = TER
+		tag = TID
+		#Phillippines
+		tag = PGS
+		tag = TDO
+		tag = MNA
+		tag = MAS
+		tag = CEB
+		tag = BTU
+		tag = MGD
+		tag = SUL
+		#Pasai and Aceh
+		tag = PSA
+		tag = ATJ
+		#Java
+		tag = SUN
+		tag = BLI
+		tag = BAN
+		tag = CRB
+		#Tibet
+		tag = TIB
+		tag = GUG
+		tag = UTS
+		tag = KAM
+		tag = PHA
+		##############################################################################################################################
+		## Add other possible countries here.																						##
+		## Remember to add "has_country_flag = use_paradox_missions" to the default missions.										##
+		## Remember to add "has_country_flag = use_missions_expanded_missions_instead_of_paradox" to the ME missions. 				##
+		## For an example, look at Yaroslavl_Missions.txt and TR_Russian_Minors_Missions.txt										##
+		##############################################################################################################################
+	}
+}
+
+was_beylik = {
+	OR = {
+		tag = SRU
+		tag = AYD
+		tag = MEN
+		tag = GRM
+		tag = KAR
+		tag = ERE
+		tag = CND
+		tag = RAM
+		tag = DUL
+
+		was_tag = SRU
+		was_tag = AYD
+		was_tag = MEN
+		was_tag = GRM
+		was_tag = KAR
+		was_tag = ERE
+		was_tag = CND
+		was_tag = RAM
+		was_tag = DUL
+	}
+}
+
+country_gets_japanese_generic_missions = {
+	capital_scope = {
+		region = japan_region
+	}
+	OR = {
+		tag = OTM
+		NOT = { country_gets_japanese_unique_missions = yes }
+	}
+}
+
+country_gets_japanese_unique_missions = {
+	OR = {
+		tag = HSK
+		tag = ANU
+		tag = SMZ
+		tag = TKD
+		tag = RYU
+		tag = TKG
+		tag = ODA
+		tag = RYU
+		tag = OTM
+		tag = JAP
+	}
+}
+
+is_jurchen_minor = {
+	OR = {
+		tag = EJZ
+		tag = MHX
+		tag = MJZ
+		tag = MYR
+		tag = NHX
+	}
+}
+
+was_jurchen_minor = {
+	OR = {
+		was_tag = EJZ
+		was_tag = MHX
+		was_tag = MJZ
+		was_tag = MYR
+		was_tag = NHX
+	}
+}
+
+is_evenki_minor = {
+	OR = {
+		tag = SOL
+		tag = NVK
+		tag = BRT
+	}
+}
+
+was_evenki_minor = {
+	OR = {
+		was_tag = SOL
+		was_tag = NVK
+		was_tag = BRT
+	}
+}
+
+is_kamchatkan_minor = {
+	OR = {
+		tag = CHU
+		tag = HOD
+		tag = CHV
+		tag = KMC
+	}
+}
+
+was_kamchatkan_minor = {
+	OR = {
+		was_tag = CHU
+		was_tag = HOD
+		was_tag = CHV
+		was_tag = KMC
+	}
+}
+
+is_italian_minor = {
+	OR = {
+		tag = AQU
+		tag = BLG
+		tag = MOD
+		tag = PAR
+		tag = PDV
+		tag = SPL
+		tag = SZO
+		tag = URB
+		tag = JAI
+		tag = MFA
+	}
+}
+
+was_italian_minor = {
+	OR = {
+		was_tag = AQU
+		was_tag = BLG
+		was_tag = MOD
+		was_tag = PAR
+		was_tag = PDV
+		was_tag = SPL
+		was_tag = SZO
+		was_tag = URB
+		was_tag = JAI
+		was_tag = MFA
+	}
+}
+
+#Tech Scripted Triggers
+# usage:
+## is_ahead_of_time_in_tech = { type = adm }
+### type supports the following: adm, dip, mil, all, any, none
+is_ahead_of_time_in_tech = {
+	is_ahead_of_time_in_tech_$type$ = yes
+}
+
+# usage:
+## is_ahead_of_time_in_tech_all = yes
+is_ahead_of_time_in_tech_all = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_tech_tt_all
+		is_ahead_of_time_in_specific_tech = { type = adm }
+		is_ahead_of_time_in_specific_tech = { type = dip }
+		is_ahead_of_time_in_specific_tech = { type = mil }
+	}
+}
+
+# usage:
+## is_ahead_of_time_in_tech_any = yes
+is_ahead_of_time_in_tech_any = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_tech_tt_any
+		OR = {
+			is_ahead_of_time_in_specific_tech = { type = adm }
+			is_ahead_of_time_in_specific_tech = { type = dip }
+			is_ahead_of_time_in_specific_tech = { type = mil }
+		}
+	}
+}
+
+# usage:
+## is_ahead_of_time_in_tech_none = yes
+is_ahead_of_time_in_tech_none = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_tech_tt_none
+		NOT = { is_ahead_of_time_in_specific_tech = { type = adm } }
+		NOT = { is_ahead_of_time_in_specific_tech = { type = dip } }
+		NOT = { is_ahead_of_time_in_specific_tech = { type = mil } }
+	}
+}
+
+# usage:
+## is_ahead_of_time_in_tech_adm = yes
+is_ahead_of_time_in_tech_adm = {
+	is_ahead_of_time_in_specific_tech = { type = adm }
+}
+
+# usage:
+## is_ahead_of_time_in_tech_dip = yes
+is_ahead_of_time_in_tech_dip = {
+	is_ahead_of_time_in_specific_tech = { type = dip }
+}
+
+# usage:
+## is_ahead_of_time_in_tech_mil = yes
+is_ahead_of_time_in_tech_mil = {
+	is_ahead_of_time_in_specific_tech = { type = mil }
+}
+
+# usage:
+## is_ahead_of_time_in_specific_tech = { type = adm }
+### type supports the following: adm, dip, mil
+### this is just for the scripted trigger above
+is_ahead_of_time_in_specific_tech = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_tech_tt_$type$
+		OR = {
+			AND = {
+				NOT = { is_year = 1453 }
+				$type$_tech = 4
+			}
+			AND = {
+				NOT = { is_year = 1466 }
+				$type$_tech = 5
+			}
+			AND = {
+				NOT = { is_year = 1479 }
+				$type$_tech = 6
+			}
+			AND = {
+				NOT = { is_year = 1492 }
+				$type$_tech = 7
+			}
+			AND = {
+				NOT = { is_year = 1505 }
+				$type$_tech = 8
+			}
+			AND = {
+				NOT = { is_year = 1518 }
+				$type$_tech = 9
+			}
+			AND = {
+				NOT = { is_year = 1531 }
+				$type$_tech = 10
+			}
+			AND = {
+				NOT = { is_year = 1544 }
+				$type$_tech = 11
+			}
+			AND = {
+				NOT = { is_year = 1557 }
+				$type$_tech = 12
+			}
+			AND = {
+				NOT = { is_year = 1570 }
+				$type$_tech = 13
+			}
+			AND = {
+				NOT = { is_year = 1583 }
+				$type$_tech = 14
+			}
+			AND = {
+				NOT = { is_year = 1596 }
+				$type$_tech = 15
+			}
+			AND = {
+				NOT = { is_year = 1609 }
+				$type$_tech = 16
+			}
+			AND = {
+				NOT = { is_year = 1622 }
+				$type$_tech = 17
+			}
+			AND = {
+				NOT = { is_year = 1635 }
+				$type$_tech = 18
+			}
+			AND = {
+				NOT = { is_year = 1648 }
+				$type$_tech = 19
+			}
+			AND = {
+				NOT = { is_year = 1661 }
+				$type$_tech = 20
+			}
+			AND = {
+				NOT = { is_year = 1674 }
+				$type$_tech = 21
+			}
+			AND = {
+				NOT = { is_year = 1687 }
+				$type$_tech = 22
+			}
+			AND = {
+				NOT = { is_year = 1700 }
+				$type$_tech = 23
+			}
+			AND = {
+				NOT = { is_year = 1715 }
+				$type$_tech = 24
+			}
+			AND = {
+				NOT = { is_year = 1730 }
+				$type$_tech = 25
+			}
+			AND = {
+				NOT = { is_year = 1745 }
+				$type$_tech = 26
+			}
+			AND = {
+				NOT = { is_year = 1760 }
+				$type$_tech = 27
+			}
+			AND = {
+				NOT = { is_year = 1775 }
+				$type$_tech = 28
+			}
+			AND = {
+				NOT = { is_year = 1790 }
+				$type$_tech = 29
+			}
+			AND = {
+				NOT = { is_year = 1805 }
+				$type$_tech = 30
+			}
+			AND = {
+				NOT = { is_year = 1820 }
+				$type$_tech = 31
+			}
+			AND = {
+				NOT = { is_year = 1835 }
+				$type$_tech = 32
+			}
+		}
+	}
+}
+
+# usage:
+## has_better_tech_than = { who = PREV amount = 1 }
+has_better_tech_than = {
+	$who$ = {
+		custom_trigger_tooltip = {
+			tooltip = HAS_BETTER_TECH_THAN_TT
+			OR = {
+				num_of_cities = $amount$ # for the tooltip
+				always = yes
+			}
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = our_tech_amount
+					value = adm_tech
+					who = PREV
+				}
+				export_to_variable = {
+					which = our_dip_tech_amount
+					value = dip_tech
+					who = PREV
+				}
+				export_to_variable = {
+					which = our_mil_tech_amount
+					value = mil_tech
+					who = PREV
+				}
+				change_variable = { which = our_tech_amount which = our_dip_tech_amount }
+				change_variable = { which = our_tech_amount which = our_mil_tech_amount }
+				export_to_variable = {
+					which = their_tech_amount
+					value = adm_tech
+				}
+				export_to_variable = {
+					which = their_dip_tech_amount
+					value = dip_tech
+				}
+				export_to_variable = {
+					which = their_mil_tech_amount
+					value = mil_tech
+				}
+				change_variable = { which = their_tech_amount which = their_dip_tech_amount }
+				change_variable = { which = their_tech_amount which = their_mil_tech_amount }
+				change_variable = { which = their_tech_amount value = $amount$ }
+				check_variable = { which = our_tech_amount which = their_tech_amount }
+			}
+		}
+	}
+}
+
+#Trade Goods Scripted Triggers
+is_production_leader_of_any_trade_good = {
+	custom_trigger_tooltip = {
+		tooltip = COUNTRY_IS_PRODUCTION_LEADER_OF_ANY_TRADE_GOOD
+		OR = {
+			production_leader = {
+				trade_goods = grain
+			}
+			production_leader = {
+				trade_goods = wine
+			}
+			production_leader = {
+				trade_goods = wool
+			}
+			production_leader = {
+				trade_goods = cloth
+			}
+			production_leader = {
+				trade_goods = fish
+			}
+			production_leader = {
+				trade_goods = fur
+			}
+			production_leader = {
+				trade_goods = salt
+			}
+			production_leader = {
+				trade_goods = naval_supplies
+			}
+			production_leader = {
+				trade_goods = copper
+			}
+			production_leader = {
+				trade_goods = gold
+			}
+			production_leader = {
+				trade_goods = iron
+			}
+			production_leader = {
+				trade_goods = slaves
+			}
+			production_leader = {
+				trade_goods = ivory
+			}
+			production_leader = {
+				trade_goods = tea
+			}
+			production_leader = {
+				trade_goods = chinaware
+			}
+			production_leader = {
+				trade_goods = spices
+			}
+			production_leader = {
+				trade_goods = coffee
+			}
+			production_leader = {
+				trade_goods = cotton
+			}
+			production_leader = {
+				trade_goods = sugar
+			}
+			production_leader = {
+				trade_goods = tobacco
+			}
+			production_leader = {
+				trade_goods = cocoa
+			}
+			production_leader = {
+				trade_goods = silk
+			}
+			production_leader = {
+				trade_goods = dyes
+			}
+			production_leader = {
+				trade_goods = tropical_wood
+			}
+			production_leader = {
+				trade_goods = livestock
+			}
+			production_leader = {
+				trade_goods = incense
+			}
+			production_leader = {
+				trade_goods = glass
+			}
+			production_leader = {
+				trade_goods = paper
+			}
+			production_leader = {
+				trade_goods = gems
+			}
+			production_leader = {
+				trade_goods = coal
+			}
+		}
+	}
+}
+
+#Trade Nodes Scripted Triggers
+# usage:
+## province_is_trade_node_center_province = yes
+province_is_trade_node_center_province = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_trade_node_center_province_tt
+		OR = {
+			province_id = 4064
+			province_id = 4097
+			province_id = 1191
+			province_id = 2868
+			province_id = 2935
+			province_id = 2499
+			province_id = 2021
+			province_id = 730
+			province_id = 1507
+			province_id = 2526
+			province_id = 1551
+			province_id = 677
+			province_id = 679
+			province_id = 1371
+			province_id = 1397
+			province_id = 1997
+			province_id = 1411
+			province_id = 1376
+			province_id = 684
+			province_id = 700
+			province_id = 4233
+			province_id = 1357
+			province_id = 1365
+			province_id = 1361
+			province_id = 1064
+			province_id = 707
+			province_id = 584
+			province_id = 1343
+			province_id = 524
+			province_id = 507
+			province_id = 1948
+			province_id = 1340
+			province_id = 504
+			province_id = 1149
+			province_id = 2772
+			province_id = 4346
+			province_id = 1334
+			province_id = 1448
+			province_id = 1460
+			province_id = 1335
+			province_id = 454
+			province_id = 4341
+			province_id = 377
+			province_id = 358
+			province_id = 464
+			province_id = 1322
+			province_id = 1320
+			province_id = 280
+			province_id = 1082
+			province_id = 33
+			province_id = 800
+			province_id = 1536
+			province_id = 809
+			province_id = 1531
+			province_id = 1132
+			province_id = 1466
+			province_id = 341
+			province_id = 137
+			province_id = 1110
+			province_id = 153
+			province_id = 262
+			province_id = 134
+			province_id = 61
+			province_id = 1926
+			province_id = 1876
+			province_id = 835
+			province_id = 1516
+			province_id = 1500
+			province_id = 1486
+			province_id = 1490
+			province_id = 1652
+			province_id = 1975
+			province_id = 45
+			province_id = 1276
+			province_id = 1293
+			province_id = 186
+			province_id = 1295
+			province_id = 1298
+			province_id = 1308
+			province_id = 1269
+		}
+	}
+}
+
+# usage:
+## province_is_in_trade_node = { center = 45 }
+### the node centers can be found in Europa Universalis IV/common/tradenodes
+province_is_in_trade_node = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_in_trade_node_tt_$center$
+		OR = {
+			province_id = $center$
+			any_trade_node_member_province = {
+				province_id = $center$
+			}
+		}
+	}
+}
+
+is_privateering_or_protecting_trade_10_percent = {
+	custom_trigger_tooltip = {
+		tooltip = is_privateering_or_protecting_trade_10_percent_tt
+		OR = {
+			has_privateer_share_in_trade_node = {
+				who = ROOT
+				share = 10
+			}
+			trade_share = {
+				country = ROOT
+				share = 10
+			}
+		}
+	}
+}
+
+#Trade Outpost Scripted Triggers
+controls_hanseatic_port_for_20_years = {
+	custom_trigger_tooltip = {
+		tooltip = controls_hanseatic_port_for_20_years_tt
+		OR = {
+			AND = {
+				had_province_flag = {
+					flag = HNS_activated
+					days = 7300
+				}
+				has_province_modifier = HNS_icon
+			}
+			owned_by = ROOT
+		}
+	}
+}
+
+is_hanseatic_port = {
+	OR = {
+		has_province_modifier = HNS_icon_gray
+		has_province_modifier = HNS_icon
+	}
+}
+
+#Silk Route
+controls_silk_route = {
+	custom_trigger_tooltip = {
+		tooltip = controls_silk_route_tt
+		has_province_modifier = silk_route_icon
+	}
+}
+
+is_silk_route = {
+	OR = {
+		has_province_modifier = silk_route_icon_gray
+		has_province_modifier = silk_route_icon
+	}
+}
+
+#Reforms Scripted Triggers
+has_any_religious_reform = {
+	if = {
+		limit = {
+			religion = nahuatl
+		}
+		has_any_nahuatl_reform = yes
+	}
+	else_if = {
+		limit = {
+			religion = inti
+		}
+		has_any_inti_reform = yes
+	}
+	else_if = {
+		limit = {
+			religion = mesoamerican_religion
+		}
+		has_any_mesoamerican_reform = yes
+	}
+}
+
+has_all_religious_reforms = {
+	if = {
+		limit = {
+			religion = nahuatl
+		}
+		has_all_nahuatl_reforms = yes
+	}
+	else_if = {
+		limit = {
+			religion = inti
+		}
+		has_all_inti_reforms = yes
+	}
+	else_if = {
+		limit = {
+			religion = mesoamerican_religion
+		}
+		has_all_mesoamerican_reforms = yes
+	}
+}
+
+has_any_nahuatl_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ANY_NAHUATL_REFORM
+		OR = {
+			has_nahuatl_reform = { id = 1 }
+			has_nahuatl_reform = { id = 2 }
+			has_nahuatl_reform = { id = 3 }
+			has_nahuatl_reform = { id = 4 }
+			has_nahuatl_reform = { id = 5 }
+		}
+	}
+}
+
+has_all_nahuatl_reforms = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ALL_NAHUATL_REFORM
+		has_nahuatl_reform = { id = 1 }
+		has_nahuatl_reform = { id = 2 }
+		has_nahuatl_reform = { id = 3 }
+		has_nahuatl_reform = { id = 4 }
+		has_nahuatl_reform = { id = 5 }
+	}
+}
+
+has_nahuatl_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_NAHUATL_REFORM_$id$
+		has_global_modifier_value = { which = nahuatl_reform_$id$_influence value = 1 }
+	}
+}
+
+has_any_inti_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ANY_INTI_REFORM
+		OR = {
+			has_inti_reform = { id = 1 }
+			has_inti_reform = { id = 2 }
+			has_inti_reform = { id = 3 }
+			has_inti_reform = { id = 4 }
+			has_inti_reform = { id = 5 }
+		}
+	}
+}
+
+has_all_inti_reforms = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ALL_INTI_REFORM
+		has_inti_reform = { id = 1 }
+		has_inti_reform = { id = 2 }
+		has_inti_reform = { id = 3 }
+		has_inti_reform = { id = 4 }
+		has_inti_reform = { id = 5 }
+	}
+}
+
+has_inti_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_INTI_REFORM_$id$
+		has_global_modifier_value = { which = inti_reform_$id$_influence value = 1 }
+	}
+}
+
+has_any_mesoamerican_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ANY_MESOAMERICAN_REFORM
+		OR = {
+			has_mesoamerican_reform = { id = 1 }
+			has_mesoamerican_reform = { id = 2 }
+			has_mesoamerican_reform = { id = 3 }
+			has_mesoamerican_reform = { id = 4 }
+			has_mesoamerican_reform = { id = 5 }
+		}
+	}
+}
+
+has_all_mesoamerican_reforms = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_ALL_MESOAMERICAN_REFORM
+		has_mesoamerican_reform = { id = 1 }
+		has_mesoamerican_reform = { id = 2 }
+		has_mesoamerican_reform = { id = 3 }
+		has_mesoamerican_reform = { id = 4 }
+		has_mesoamerican_reform = { id = 5 }
+	}
+}
+
+has_mesoamerican_reform = {
+	custom_trigger_tooltip = {
+		tooltip = HAS_MESOAMERICAN_REFORM_$id$
+		has_global_modifier_value = { which = mesoamerican_reform_$id$_influence value = 1 }
+	}
+}
+
+#Subjects Scripted Triggers
+can_create_subject_type = {
+	always = no
+	hidden_trigger = {
+		can_be_overlord = $subject_type$
+		$subject$ = {
+			always = no
+		}
+	}
+}
+
+is_different_march_subject = {
+	hidden_trigger = {
+		always = no
+	}
+}

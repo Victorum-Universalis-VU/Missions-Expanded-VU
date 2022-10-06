@@ -488,6 +488,7 @@ inca_missions_1 = {
 			has_discovered = ROOT
 			is_empty = no
 			is_sea = no
+			is_wasteland = no
 			owner = {
 				OR = {
 					capital_scope = {
@@ -511,6 +512,7 @@ inca_missions_1 = {
 						}
 						is_empty = yes
 						is_sea = yes
+						is_wasteland = yes
 					}
 				}
 			}
@@ -523,6 +525,7 @@ inca_missions_1 = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 					is_sea = no
+					is_wasteland = no
 				}
 				add_permanent_claim = ROOT
 			}
@@ -537,6 +540,7 @@ inca_missions_1 = {
 			continent = south_america
 			has_discovered = ROOT
 			is_sea = no
+			is_wasteland = no
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -545,6 +549,7 @@ inca_missions_1 = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT
 					is_sea = yes
+					is_wasteland = yes
 				}
 			}
 		}
@@ -574,9 +579,10 @@ inca_missions_1 = {
 				AND = {
 					continent = south_america
 					is_sea = no
+					is_wasteland = no
 					OR = {
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 						NOT = { development = 5 }
 						unrest = 1
 					}
@@ -594,11 +600,12 @@ inca_missions_1 = {
 				OR = {
 					AND = {
 						owned_by = ROOT
-						num_of_times_improved_by_owner = 1
+						num_of_times_improved = 1
 						development = 5
 						NOT = { unrest = 1 }
 					}
 					is_sea = yes
+					is_wasteland = yes
 				}
 			}
 		}
@@ -607,6 +614,7 @@ inca_missions_1 = {
 			south_america = {
 				limit = {
 					is_sea = no
+					is_wasteland = no
 					NOT = { has_province_modifier = inca_roads_province_modifier }
 				}
 				add_province_modifier = {
@@ -786,7 +794,7 @@ inca_missions_2 = {
 			trade_goods = gold
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved_by_owner = 1 }
+				NOT = { num_of_times_improved = 1 }
 			}
 		}
 		trigger = {
@@ -796,7 +804,7 @@ inca_missions_2 = {
 					AND = {
 						trade_goods = gold
 						base_production = 5
-						num_of_times_improved_by_owner = 1
+						num_of_times_improved = 1
 					}
 				}
 			}
@@ -962,7 +970,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 				AND = {
@@ -979,7 +987,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 				AND = {
@@ -997,7 +1005,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 				AND = {
@@ -1015,7 +1023,7 @@ inca_missions_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 			}
@@ -1024,69 +1032,57 @@ inca_missions_2 = {
 			huanuco_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_809_AREA_HAS_AT_LEAST_15_TAX
-				area_has_total_development_of_type = {
-					type = tax
-					1 = 809
-					2 = 810
-					3 = 811
-					4 = 814
-					5 = 2827
-					total = 15
-				}
+			area_has_total_development_of_type = {
+				type = tax
+				1 = 809
+				2 = 810
+				3 = 811
+				4 = 814
+				5 = 2827
+				total = 15
 			}
 			cajamarca_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_813_AREA_HAS_AT_LEAST_15_TAX
-				area_has_total_development_of_type = {
-					type = tax
-					1 = 813
-					2 = 2824
-					3 = 2825
-					4 = 2943
-					total = 15
-				}
+			area_has_total_development_of_type = {
+				type = tax
+				1 = 813
+				2 = 2824
+				3 = 2825
+				4 = 2943
+				total = 15
 			}
 			chimor_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_812_AREA_HAS_AT_LEAST_20_TAX
-				area_has_total_development_of_type = {
-					type = tax
-					1 = 812
-					2 = 2002
-					3 = 2821
-					4 = 2822
-					5 = 2826
-					total = 20
-				}
+			area_has_total_development_of_type = {
+				type = tax
+				1 = 812
+				2 = 2002
+				3 = 2821
+				4 = 2822
+				5 = 2826
+				total = 20
 			}
 			quito_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_816_AREA_HAS_AT_LEAST_20_TAX
-				area_has_total_development_of_type = {
-					type = tax
-					1 = 816
-					2 = 817
-					3 = 819
-					4 = 820
-					5 = 2820
-					total = 20
-				}
+			area_has_total_development_of_type = {
+				type = tax
+				1 = 816
+				2 = 817
+				3 = 819
+				4 = 820
+				5 = 2820
+				total = 20
 			}
 		}
 		effect = {
@@ -1726,7 +1722,7 @@ inca_missions_3 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 				AND = {
@@ -1742,7 +1738,7 @@ inca_missions_3 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 			}
@@ -1751,33 +1747,27 @@ inca_missions_3 = {
 			kuntisuyu_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_807_AREA_HAS_AT_LEAST_20_PRODUCTION
-				area_has_total_development_of_type = {
-					type = production
-					1 = 807
-					2 = 808
-					3 = 2829
-					4 = 2830
-					total = 20
-				}
+			area_has_total_development_of_type = {
+				type = production
+				1 = 807
+				2 = 808
+				3 = 2829
+				4 = 2830
+				total = 20
 			}
 			peruan_coast = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_805_AREA_HAS_AT_LEAST_10_PRODUCTION
-				area_has_total_development_of_type = {
-					type = production
-					1 = 805
-					2 = 806
-					3 = 2828
-					total = 10
-				}
+			area_has_total_development_of_type = {
+				type = production
+				1 = 805
+				2 = 806
+				3 = 2828
+				total = 10
 			}
 		}
 		effect = {
@@ -2021,10 +2011,10 @@ inca_missions_3 = {
 		required_missions = { inca_to_the_east }
 		position = 14
 		provinces_to_highlight = {
-#			OR = {
-#				area = ofaie_area
+			OR = {
+				area = mato_grosso_area
 				area = goias_area
-#			}
+			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2032,11 +2022,11 @@ inca_missions_3 = {
 			}
 		}
 		trigger = {
-#			ofaie_area = {
-#				type = all
-#				owned_by = ROOT
-#				is_city = yes
-#			}
+			mato_grosso_area = {
+				type = all
+				owned_by = ROOT
+				is_city = yes
+			}
 			goias_area = {
 				type = all
 				owned_by = ROOT
@@ -2047,11 +2037,11 @@ inca_missions_3 = {
 			if = {
 				limit = {
 					OR = {
-#						ofaie_area = {
-#							NOT = { trade_goods = gold }
-#							NOT = { trade_goods = coffee }
-#							NOT = { trade_goods = gems }
-#						}
+						mato_grosso_area = {
+							NOT = { trade_goods = gold }
+							NOT = { trade_goods = coffee }
+							NOT = { trade_goods = gems }
+						}
 						goias_area = {
 							NOT = { trade_goods = gold }
 							NOT = { trade_goods = coffee }
@@ -2062,10 +2052,10 @@ inca_missions_3 = {
 				add_years_of_income = 0.5
 				random_province = {
 					limit = {
-#						OR = {
-#							area = ofaie_area
+						OR = {
+							area = mato_grosso_area
 							area = goias_area
-#						}
+						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2074,10 +2064,10 @@ inca_missions_3 = {
 				}
 				random_province = {
 					limit = {
-#						OR = {
-#							area = ofaie_area
+						OR = {
+							area = mato_grosso_area
 							area = goias_area
-#						}
+						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2086,10 +2076,10 @@ inca_missions_3 = {
 				}
 				random_province = {
 					limit = {
-#						OR = {
-#							area = ofaie_area
+						OR = {
+							area = mato_grosso_area
 							area = goias_area
-#						}
+						}
 						NOT = { trade_goods = gold }
 						NOT = { trade_goods = coffee }
 						NOT = { trade_goods = gems }
@@ -2292,25 +2282,22 @@ inca_missions_4 = {
 					}
 				}
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved_by_owner = 1 }
+				NOT = { num_of_times_improved = 1 }
 			}
 		}
 		trigger = {
 			antisuyu_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_802_AREA_HAS_AT_LEAST_15_PRODUCTION
-				area_has_total_development_of_type = {
-					type = production
-					1 = 802
-					2 = 804
-					3 = 2831
-					4 = 2947
-					total = 15
-				}
+			area_has_total_development_of_type = {
+				type = production
+				1 = 802
+				2 = 804
+				3 = 2831
+				4 = 2947
+				total = 15
 			}
 		}
 		effect = {
@@ -2402,7 +2389,7 @@ inca_missions_4 = {
 			trade_goods = copper
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved_by_owner = 1 }
+				NOT = { num_of_times_improved = 1 }
 			}
 		}
 		trigger = {
@@ -2413,7 +2400,7 @@ inca_missions_4 = {
 					AND = {
 						trade_goods = copper
 						base_production = 5
-						num_of_times_improved_by_owner = 1
+						num_of_times_improved = 1
 					}
 				}
 			}
@@ -2595,10 +2582,7 @@ inca_missions_4 = {
 		required_missions = { inca_to_the_east }
 		position = 14
 		provinces_to_highlight = {
-#			OR = {
-#				area = guapore_area
-				area = mato_grosso_area
-#			}
+			area = mato_grosso_area
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2606,11 +2590,6 @@ inca_missions_4 = {
 			}
 		}
 		trigger = {
-#			guapore_area = {
-#				type = all
-#				owned_by = ROOT
-#				is_city = yes
-#			}
 			mato_grosso_area = {
 				type = all
 				owned_by = ROOT
@@ -2628,10 +2607,10 @@ inca_missions_4 = {
 		required_missions = { inca_colonize_eastern_amazon }
 		position = 15
 		provinces_to_highlight = {
-#			OR = {
-#				area = pontal_area
+			OR = {
+				area = goias_area
 				area = maranhao_area
-#			}
+			}
 			has_discovered = ROOT
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2639,11 +2618,11 @@ inca_missions_4 = {
 			}
 		}
 		trigger = {
-#			pontal_area = {
-#				type = all
-#				owned_by = ROOT
-#				is_city = yes
-#			}
+			goias_area = {
+				type = all
+				owned_by = ROOT
+				is_city = yes
+			}
 			maranhao_area = {
 				type = all
 				owned_by = ROOT
@@ -2833,7 +2812,7 @@ inca_missions_5_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 				AND = {
@@ -2850,7 +2829,7 @@ inca_missions_5_2 = {
 							}
 						}
 						NOT = { owned_by = ROOT }
-						NOT = { num_of_times_improved_by_owner = 1 }
+						NOT = { num_of_times_improved = 1 }
 					}
 				}
 			}
@@ -2859,34 +2838,28 @@ inca_missions_5_2 = {
 			upper_peru = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_2835_AREA_HAS_AT_LEAST_10_MANPOWER
-				area_has_total_development_of_type = {
-					type = manpower
-					1 = 2835
-					2 = 2838
-					3 = 2941
-					4 = 2942
-					total = 10
-				}
+			area_has_total_development_of_type = {
+				type = manpower
+				1 = 2835
+				2 = 2838
+				3 = 2941
+				4 = 2942
+				total = 10
 			}
 			potosi_area = {
 				type = all
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 1
+				num_of_times_improved = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = INC_795_AREA_HAS_AT_LEAST_15_MANPOWER
-				area_has_total_development_of_type = {
-					type = manpower
-					1 = 795
-					2 = 797
-					3 = 2940
-					4 = 2946
-					total = 15
-				}
+			area_has_total_development_of_type = {
+				type = manpower
+				1 = 795
+				2 = 797
+				3 = 2940
+				4 = 2946
+				total = 15
 			}
 		}
 		effect = {
@@ -2949,7 +2922,7 @@ inca_missions_5_2 = {
 			trade_goods = wool
 			OR = {
 				NOT = { base_production = 5 }
-				NOT = { num_of_times_improved_by_owner = 2 }
+				NOT = { num_of_times_improved = 2 }
 			}
 		}
 		trigger = {
@@ -2959,7 +2932,7 @@ inca_missions_5_2 = {
 					AND = {
 						trade_goods = wool
 						base_production = 5
-						num_of_times_improved_by_owner = 2
+						num_of_times_improved = 2
 					}
 				}
 			}

@@ -449,13 +449,13 @@ generic_japan_me_4 = {
 		position = 1
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { num_of_times_improved_by_owner = 3 }
+			NOT = { num_of_times_improved = 3 }
 		}
 		trigger = {
 			treasury = 150
 			num_of_owned_provinces_with = {
 				value = 3
-				num_of_times_improved_by_owner = 3
+				num_of_times_improved = 3
 			}
 		}
 		effect = {
@@ -614,7 +614,7 @@ generic_japan_me_4_MoH = {
 		trigger = {
 			any_owned_province = {
 				has_province_modifier = JAP_ikko_province
-				num_of_times_improved_by_owner = 4
+				num_of_times_improved = 4
 			}
 		}
 		effect = {

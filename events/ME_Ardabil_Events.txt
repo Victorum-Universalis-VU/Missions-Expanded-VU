@@ -221,9 +221,6 @@ country_event = {
 
 		ai_chance = { factor = 100 }
 
-		imereti_area = {
-			add_core = GEO
-		}
 		samtskhe_area = {
 			add_core = GEO
 		}

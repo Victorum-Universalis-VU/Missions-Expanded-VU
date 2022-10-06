@@ -31,19 +31,21 @@ indonesians_3 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					ROOT = {
-						home_trade_node = {
-							province_id = PREV_PREV
+				ROOT = {
+					home_trade_node = {
+						province_id = PREV_PREV	#Yes, it does work. And yes, it is supported in the game.
+						NOT = {
+							trade_share = {
+								country = ROOT
+								share = 60
+							}
 						}
-					}
-					OR = {
-						NOT = { is_strongest_trade_power = ROOT }
-						NOT = { highest_value_trade_node = yes }
 					}
 				}
 				AND = {
+					has_dlc = "Dharma"
 					NOT = { province_has_center_of_trade_of_level = 3 }
+					province_has_center_of_trade_of_level = 1
 					owned_by = ROOT
 				}
 			}
@@ -188,10 +190,20 @@ indonesians_4 = {
 				AND = { # borneo
 					ROOT = {
 						capital_scope = {
-							region = borneo_region
+							OR = {
+								area = kutai_area
+								area = brunei_area
+								area = kalimantan_area
+								area = sabah_area
+							}
 						}
 					}
-					region = borneo_region
+					OR = {
+						area = kutai_area
+						area = brunei_area
+						area = kalimantan_area
+						area = sabah_area
+					}
 				}
 				AND = { # sumatra
 					ROOT = {
@@ -223,8 +235,6 @@ indonesians_4 = {
 								area = central_java_area
 								area = west_java_area
 								area = lesser_sunda_islands_area
-								area = central_java_area
-								area = west_java_area
 							}
 						}
 					}
@@ -233,8 +243,6 @@ indonesians_4 = {
 						area = central_java_area
 						area = west_java_area
 						area = lesser_sunda_islands_area
-						area = central_java_area
-						area = west_java_area
 					}
 				}
 				AND = { # malay peninsula
@@ -266,7 +274,6 @@ indonesians_4 = {
 								area = molluca_area
 								area = sulawesi_area
 								area = south_sulawesi_area
-								area = east_sulawesi_area
 								area = spice_islands_area
 							}
 						}
@@ -275,7 +282,6 @@ indonesians_4 = {
 						area = molluca_area
 						area = sulawesi_area
 						area = south_sulawesi_area
-						area = east_sulawesi_area
 						area = spice_islands_area
 					}
 				}
@@ -286,6 +292,7 @@ indonesians_4 = {
 								area = luzon_area
 								area = southern_luzon_area
 								area = mindanao_area
+								area = sulu_archipelago_area
 								area = visayas_area
 								area = palawan_area
 							}
@@ -295,6 +302,7 @@ indonesians_4 = {
 						area = luzon_area
 						area = southern_luzon_area
 						area = mindanao_area
+						area = sulu_archipelago_area
 						area = visayas_area
 						area = palawan_area
 					}
@@ -304,268 +312,258 @@ indonesians_4 = {
 		trigger = {
 			NOT = { current_age = age_of_discovery }
 			custom_trigger_tooltip = {
-			    tooltip = indonesia_convert_island.tooltip
-			    if = { # borneo
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = kutai_area
-				    			area = brunei_area
-				    			area = kalimantan_area
-				    			area = sabah_area
-				    		}
-				    	}
-				    }
-				    kutai_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    brunei_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    sabah_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    kalimantan_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
+				tooltip = indonesia_convert_island.tooltip
+				if = { # borneo
+					limit = {
+						capital_scope = {
+							OR = {
+								area = kutai_area
+								area = brunei_area
+								area = kalimantan_area
+								area = sabah_area
+							}
+						}
+					}
+					kutai_area = {
+						type = all
+						religion = ROOT
+					}
+					brunei_area = {
+						type = all
+						religion = ROOT
+					}
+					sabah_area = {
+						type = all
+						religion = ROOT
+					}
+					kalimantan_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
 				}
 				else_if = { # java
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = east_java_area
-				    			area = central_java_area
-				    			area = west_java_area
-				    			area = lesser_sunda_islands_area
-				    			area = central_java_area
-				    			area = west_java_area
-				    		}
-				    	}
-				    }
-				    east_java_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    central_java_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    west_java_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    central_java_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    west_java_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    lesser_sunda_islands_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
+					limit = {
+						capital_scope = {
+							OR = {
+								area = east_java_area
+								area = central_java_area
+								area = west_java_area
+								area = lesser_sunda_islands_area
+							}
+						}
+					}
+					east_java_area = {
+						type = all
+						religion = ROOT
+					}
+					central_java_area = {
+						type = all
+						religion = ROOT
+					}
+					west_java_area = {
+						type = all
+						religion = ROOT
+					}
+					lesser_sunda_islands_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
 				}
 				else_if = { # sumatra
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = north_sumatra_area
-				    			area = central_sumatra_area
-				    			area = south_sumatra_area
-				    			area = palembang_area
-				    			area = batak_area
-				    			area = minangkabau_area
-				    		}
-				    	}
-				    }
-				    north_sumatra_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    central_sumatra_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    palembang_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    south_sumatra_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    batak_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    minangkabau_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-			    }
+					limit = {
+						capital_scope = {
+							OR = {
+								area = north_sumatra_area
+								area = central_sumatra_area
+								area = south_sumatra_area
+								area = palembang_area
+								area = batak_area
+								area = minangkabau_area
+							}
+						}
+					}
+					north_sumatra_area = {
+						type = all
+						religion = ROOT
+					}
+					central_sumatra_area = {
+						type = all
+						religion = ROOT
+					}
+					palembang_area = {
+						type = all
+						religion = ROOT
+					}
+					south_sumatra_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					batak_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					minangkabau_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+				}
 				else_if = { # malay peninsula
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = tenasserim_area
-				    			area = north_tenasserim_area
-				    			area = malaya_area
-				    			area = indonesian_islands_area
-				    			area = kedah_area
-				    			area = malacca_area
-				    		}
-				    	}
-				    }
-				    tenasserim_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    north_tenasserim_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    malaya_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    indonesian_islands_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    kedah_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
-				    malacca_area = {
-				    	type = all
-				    	religion = ROOT
-				    }
+					limit = {
+						capital_scope = {
+							OR = {
+								area = tenasserim_area
+								area = north_tenasserim_area
+								area = malaya_area
+								area = indonesian_islands_area
+								area = kedah_area
+								area = malacca_area
+							}
+						}
+					}
+					tenasserim_area = {
+						type = all
+						religion = ROOT
+					}
+					north_tenasserim_area = {
+						type = all
+						religion = ROOT
+					}
+					malaya_area = {
+						type = all
+						religion = ROOT
+					}
+					indonesian_islands_area = {
+						type = all
+						religion = ROOT
+					}
+					kedah_area = {
+						type = all
+						religion = ROOT
+					}
+					malacca_area = {
+						type = all
+						religion = ROOT
+					}
 				}
 				else_if = { # sulawesi and spice islands
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = molluca_area
-				    			area = sulawesi_area
-				    			area = south_sulawesi_area
-				    			area = east_sulawesi_area
-				    			area = spice_islands_area
-				    		}
-				    	}
-				    }
-				    molluca_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    sulawesi_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    south_sulawesi_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    east_sulawesi_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    spice_islands_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
+					limit = {
+						capital_scope = {
+							OR = {
+								area = molluca_area
+								area = sulawesi_area
+								area = south_sulawesi_area
+								area = spice_islands_area
+							}
+						}
+					}
+					molluca_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					sulawesi_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					south_sulawesi_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					spice_islands_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
 				}
 				else_if = {	# philippines
-				    limit = {
-				    	capital_scope = {
-				    		OR = {
-				    			area = luzon_area
-				    			area = southern_luzon_area
-				    			area = mindanao_area
-				    			area = visayas_area
-				    			area = palawan_area
-				    		}
-				    	}
-				    }
-				    luzon_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    southern_luzon_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    mindanao_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    visayas_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
-				    palawan_area = {
-				    	type = all
-				    	OR = {
-				    		religion = ROOT
-				    		is_empty = yes
-				    	}
-				    }
+					limit = {
+						capital_scope = {
+							OR = {
+								area = luzon_area
+								area = southern_luzon_area
+								area = mindanao_area
+								area = sulu_archipelago_area
+								area = visayas_area
+								area = palawan_area
+							}
+						}
+					}
+					luzon_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}	
+					southern_luzon_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					mindanao_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					sulu_archipelago_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					visayas_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
+					palawan_area = {
+						type = all
+						OR = {
+							religion = ROOT
+							is_empty = yes
+						}
+					}
 				}
 				else = {
-				    calc_true_if = {
-				    	amount = 30
-				    	all_province = {
-				    		owned_by = ROOT
-				    		religion = ROOT
-				    	}
-				    }
+					calc_true_if = {
+						amount = 30
+						all_province = {
+							owned_by = ROOT
+							religion = ROOT
+						}
+					}
 				}
 			}
 		}
@@ -645,6 +643,12 @@ indonesians_4 = {
 			add_country_modifier = {
 				name = malay_united_nusantara
 				duration = -1
+			}
+			if = { 
+				limit = { 
+					NOT = { government_rank = 3 } 
+				}
+				set_government_rank = 3
 			}
 		}
 	}	

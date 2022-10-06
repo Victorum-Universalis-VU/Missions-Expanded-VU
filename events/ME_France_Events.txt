@@ -142,13 +142,13 @@ country_event = {
 
 		ai_chance = { factor = 100 }
 
-#		algiers_area = {
-#			limit = {
-#				NOT = { owned_by = ROOT }
-#				NOT = { is_core = ROOT }
-#			}
-#			add_permanent_claim = ROOT
-#		}
+		northern_morocco_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
 		barbary_coast_area = {
 			limit = {
 				NOT = { owned_by = ROOT }
@@ -307,7 +307,7 @@ country_event = {
 			}
 			add_core = GER
 		}
-		swabia_area = {
+		wurttemburg_area = {
 			limit = {
 				owned_by = ROOT
 			}
@@ -396,7 +396,7 @@ country_event = {
 		name = ME_France_Events.16.OPT1
 
 		ai_chance = { factor = 100 }
-		greater_london_area = {
+		south_east_area = {
 			limit = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -1667,6 +1667,7 @@ country_event = {
 
 	trigger = {
 		tag = FRA
+		hre_size = 1
 		west_burgundy_area = {
 			type = all
 			country_or_non_sovereign_subject_holds = ROOT

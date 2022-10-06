@@ -13,10 +13,10 @@ estate_industrial = {
 			has_estate = estate_industrial
 		}
 	}
-	modifier_definition = {
-		key = blast_furnace_construction_cost
-		trigger = {
-			always = yes
-		}
-	}
+	#modifier_definition = {
+	#	key = blast_furnace_construction_cost
+	#	trigger = {
+	#		always = yes
+	#	}
+	#}
 }

@@ -10,12 +10,16 @@ ned_reconquest_group = {
 				NOT = { was_tag = BRB }
 			}
 			tag = HOL
-			tag = UTR
-			tag = GEL
-			tag = FRI
+			AND = {
+				OR = {
+					tag = UTR
+					tag = GEL
+					tag = FRI
+				}
+				has_country_flag = use_paradox_missions
+			}
 		}
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -65,6 +69,9 @@ ned_reconquest_group = {
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 	ned_lowlands_two = {
@@ -95,6 +102,9 @@ ned_reconquest_group = {
 		effect = {
 			add_adm_power = 100
 			add_treasury = 250
+		}
+		ai_weight = {
+			factor = 500	#Historical mission
 		}
 	}
 	
@@ -134,7 +144,6 @@ ned_colonial_group = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -159,6 +168,9 @@ ned_colonial_group = {
 				name = "the_unknown_frontier"
 				duration = 5475
 			}
+		}
+		ai_weight = {
+			factor = 500	#Historical mission
 		}
 	}
 	
@@ -191,6 +203,9 @@ ned_colonial_group = {
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 	ned_south_africa_colony = {
@@ -200,16 +215,32 @@ ned_colonial_group = {
 		completed_by = 1660.1.1
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_cape
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				province_id = 833
+				province_id = 1177
+				province_id = 1179
+			}
+			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
 				
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 1
-				colonial_region = colonial_cape
-				is_city = yes
+			custom_trigger_tooltip = {
+				tooltip = ned_south_africa_colony.tooltip
+				OR = {
+					833 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+					1177 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+					1179 = {
+						owned_by = ROOT
+						is_city = yes
+					}
+				}
 			}
 		}
 		
@@ -223,6 +254,9 @@ ned_colonial_group = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 }
 
@@ -235,7 +269,6 @@ ned_colonial_group_two = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -284,6 +317,9 @@ ned_colonial_group_two = {
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 	ned_india_ceylon = {
@@ -311,6 +347,9 @@ ned_colonial_group_two = {
 				duration = "5475"
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 	ned_spice_australia = {
@@ -325,16 +364,10 @@ ned_colonial_group_two = {
 				colonial_australia = {
 					has_discovered = ROOT
 				}
-				#colonial_indonesia = { #To disable if the trade company is reenabled
-				#	has_discovered = ROOT
-				#}
-				trade_company_polynesia = { #To disable if moluccas trade charter gets back in
+				trade_company_indonesia = {
 					has_discovered = ROOT
 				}
-				trade_company_indonesia = { #Cut for now
-					has_discovered = ROOT
-				}
-				trade_company_moluccas = { #Cut for now
+				trade_company_moluccas = {
 					has_discovered = ROOT
 				}
 			}
@@ -380,6 +413,9 @@ ned_colonial_group_two = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 	ned_indonesia_cot = {
@@ -404,6 +440,9 @@ ned_colonial_group_two = {
 				duration = 7300
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 }
 	
@@ -416,7 +455,6 @@ ned_colonial_group_three = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -465,6 +503,9 @@ ned_colonial_group_three = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Historical mission
+		}
 	}
 	
 }
@@ -478,7 +519,6 @@ ned_colonial_group_four = {
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -514,6 +554,9 @@ ned_colonial_group_four = {
 				add_base_production = 2
 				add_base_manpower = 2
 			}
+		}
+		ai_weight = {
+			factor = 500	#Historical mission
 		}
 	}
 }

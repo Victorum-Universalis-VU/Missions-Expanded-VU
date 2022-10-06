@@ -1,4 +1,3 @@
-#Updated and scriptified by Dub.
 tim_reconquest_persia = {
 	slot = 1
 	generic = no
@@ -45,9 +44,15 @@ tim_reconquest_persia = {
 					}
 				}
 				TIM = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = insulted
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
 					}
 				}
 			}
@@ -94,7 +99,39 @@ tim_reconquest_persia = {
 				limit = {
 					NOT = { tag = TIM }
 				}
-				give_permaclaims_for_mission = { mission=tim_persia_one }
+				farsistan_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				persian_gulf_coast = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				kerman_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				431 = {
+					add_permanent_claim = ROOT
+				}
+				4327 = {
+					add_permanent_claim = ROOT
+				}
+				2217 = {
+					add_permanent_claim = ROOT
+				}
+				4342 = {
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -105,21 +142,77 @@ tim_reconquest_persia = {
 		position = 3
 		
 		provinces_to_highlight = {
-			tim_persia_one_provinces = yes
+			OR = {
+				area = farsistan_area
+				area = persian_gulf_coast
+				area = kerman_area
+				province_id = 431
+				province_id = 4327
+				province_id = 2217
+				province_id = 4342
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=tim_persia_one_provinces
-				owner_type=owned_by
+			farsistan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			persian_gulf_coast = {
+				type = all
+				owned_by = ROOT
+			}
+			kerman_area = {
+				type = all
+				owned_by = ROOT
+			}
+			431 = {
+				owned_by = ROOT
+			}
+			4327 = {
+				owned_by = ROOT
+			}
+			2217 = {
+				owned_by = ROOT
+			}
+			4342 = {
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
 			add_treasury = 400
-			give_permaclaims_for_mission = { mission=tim_persia_two }
+			413 = {
+				add_permanent_claim = ROOT
+			}
+			414 = {
+				add_permanent_claim = ROOT
+			}
+			2210 = {
+				add_permanent_claim = ROOT
+			}
+			isfahan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_e_ajam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			azerbaijan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -129,15 +222,38 @@ tim_reconquest_persia = {
 		position = 5
 		
 		provinces_to_highlight = {
-			tim_persia_two_provinces = yes
+			OR = {
+				area = isfahan_area
+				area = iraq_e_ajam_area
+				area = azerbaijan_area
+				province_id = 413
+				province_id = 414
+				province_id = 2210
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=tim_persia_two_provinces
-				owner_type=owned_by
+			413 = {
+				owned_by = ROOT
+			}
+			414 = {
+				owned_by = ROOT
+			}
+			2210 = {
+				owned_by = ROOT
+			}
+			isfahan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			iraq_e_ajam_area = {
+				type = all
+				owned_by = ROOT
+			}
+			azerbaijan_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
@@ -152,7 +268,7 @@ tim_reconquest_persia = {
 	
 }
 
-tim_reconquest_khorasan = { #Unfixed because Dharma gives their own tree. Though it is literally the same as the other tree.
+tim_reconquest_khorasan = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -233,6 +349,9 @@ tim_reconquest_khorasan = { #Unfixed because Dharma gives their own tree. Though
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	
 	tim_khorasan_one = {
@@ -292,6 +411,9 @@ tim_reconquest_khorasan = { #Unfixed because Dharma gives their own tree. Though
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	
 	tim_khorasan_two = {
@@ -330,6 +452,9 @@ tim_reconquest_khorasan = { #Unfixed because Dharma gives their own tree. Though
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	
 }
@@ -339,6 +464,7 @@ tim_reconquest_transoxiana = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = TIM
 			tag = TRS
@@ -346,7 +472,6 @@ tim_reconquest_transoxiana = {
 			tag = QOM
 			tag = KHO
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -357,11 +482,39 @@ tim_reconquest_transoxiana = {
 		position = 1
 		
 		trigger = {
-			stability = 2
+			stability	= 2
 		}
 		
 		effect = {
-			give_permaclaims_for_mission = { mission=tim_transoxiana_one }
+			transoxiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			termez_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			458 = {
+				add_permanent_claim = ROOT
+			}
+			1967 = {
+				add_permanent_claim = ROOT
+			}
+			457 = {
+				add_permanent_claim = ROOT
+			}
+			2356 = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	
@@ -371,20 +524,72 @@ tim_reconquest_transoxiana = {
 		position = 3
 		
 		provinces_to_highlight = {
-			tim_transoxiana_one_provinces = yes
+			OR = {
+				area = transoxiana_area
+				area = termez_area
+				province_id = 458
+				province_id = 1967
+				province_id = 457
+				province_id = 2356
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=tim_transoxiana_one_provinces
-				owner_type=owned_by
+			transoxiana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			termez_area = {
+				type = all
+				owned_by = ROOT
+			}
+			458 = {
+				owned_by = ROOT
+			}
+			1967 = {
+				owned_by = ROOT
+			}
+			457 = {
+				owned_by = ROOT
+			}
+			2356 = {
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
-			give_permaclaims_for_mission = { mission=tim_transoxiana_two }
+			merv_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			437 = {
+				add_permanent_claim = ROOT
+			}
+			438 = {
+				add_permanent_claim = ROOT
+			}
+			2349 = {
+				add_permanent_claim = ROOT
+			}
+			2214 = {
+				add_permanent_claim = ROOT
+			}
+			441 = {
+				add_permanent_claim = ROOT
+			}
+			2362 = {
+				add_permanent_claim = ROOT
+			}
+			1973 = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 0
 		}
 	}
 	
@@ -394,15 +599,44 @@ tim_reconquest_transoxiana = {
 		position = 5
 		
 		provinces_to_highlight = {
-			tim_transoxiana_two_provinces = yes
+			OR = {
+				area = merv_area
+				province_id = 437
+				province_id = 438
+				province_id = 2349
+				province_id = 2214
+				province_id = 441
+				province_id = 2362
+				province_id = 1973
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=tim_transoxiana_two_provinces
-				owner_type=owned_by
+			merv_area = {
+				type = all
+				owned_by = ROOT
+			}
+			437 = {
+				owned_by = ROOT
+			}
+			438 = {
+				owned_by = ROOT
+			}
+			2349 = {
+				owned_by = ROOT
+			}
+			2214 = {
+				owned_by = ROOT
+			}
+			441 = {
+				owned_by = ROOT
+			}
+			2362 = {
+				owned_by = ROOT
+			}
+			1973 = {
+				owned_by = ROOT
 			}
 		}
 		
@@ -413,15 +647,19 @@ tim_reconquest_transoxiana = {
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 0
+		}
 	}
 	
 }
 
-tim_india = { #Unfixed because Dharma gives their own tree. Though it is literally the same as the other tree.
+tim_india = {
 	slot = 3
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		OR = {
 			tag = TIM
 			tag = TRS
@@ -429,7 +667,6 @@ tim_india = { #Unfixed because Dharma gives their own tree. Though it is literal
 			tag = QOM
 			tag = KHO
 		}
-		has_country_flag = use_paradox_missions
 		NOT = { has_dlc = "Dharma" }
 		NOT = { map_setup = map_setup_random }
 	}
@@ -475,6 +712,9 @@ tim_india = { #Unfixed because Dharma gives their own tree. Though it is literal
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 1000
+		}
 	}
 	
 	conquer_delhi = {
@@ -504,6 +744,9 @@ tim_india = { #Unfixed because Dharma gives their own tree. Though it is literal
 		effect = {
 			add_treasury = 500
 			add_prestige = 20
+		}
+		ai_weight = {
+			factor = 1000
 		}
 	}
 }

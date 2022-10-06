@@ -6,7 +6,6 @@ Javan_missions_1 = {
 		OR = {
 			AND = {
 				OR = {
-					tag = GLU #Galuh
 					tag = BLM #Blambangan
 					tag = BLI #Bali
 					tag = MTR #Mataram
@@ -15,7 +14,6 @@ Javan_missions_1 = {
 						OR = {
 							was_tag = SUN
 							was_tag = CRB
-							was_tag = GLU
 							was_tag = BLI
 							was_tag = MTR 
 							was_tag = BAN
@@ -186,7 +184,6 @@ Javan_missions_2 = {
 		OR = {
 			AND = {
 				OR = {
-					tag = GLU #Galuh
 					tag = BLM #Blambangan
 					tag = BLI #Bali
 					tag = MTR #Mataram
@@ -195,7 +192,6 @@ Javan_missions_2 = {
 						OR = {
 							was_tag = SUN
 							was_tag = CRB
-							was_tag = GLU
 							was_tag = BLI
 							was_tag = MTR 
 							was_tag = BAN
@@ -308,7 +304,7 @@ Javan_missions_2 = {
 		effect = {
 			if = {
 				limit = {
-					religion = hinduism
+					religion = hindu
 				}
 				
 				custom_tooltip = MAJ_immunity_from_spread
@@ -339,7 +335,6 @@ Javan_missions_3 = {
 		OR = {
 			AND = {
 				OR = {
-					tag = GLU #Galuh
 					tag = BLM #Blambangan
 					tag = BLI #Bali
 					tag = MTR #Mataram
@@ -348,7 +343,6 @@ Javan_missions_3 = {
 						OR = {
 							was_tag = SUN
 							was_tag = CRB
-							was_tag = GLU
 							was_tag = BLI
 							was_tag = MTR 
 							was_tag = BAN
@@ -422,7 +416,7 @@ Javan_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			indonesian_islands_area = {	
+			indonesian_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -550,7 +544,6 @@ Javan_missions_4 = {
 		OR = {
 			AND = {
 				OR = {
-					tag = GLU #Galuh
 					tag = BLM #Blambangan
 					tag = BLI #Bali
 					tag = MTR #Mataram
@@ -559,7 +552,6 @@ Javan_missions_4 = {
 						OR = {
 							was_tag = SUN
 							was_tag = CRB
-							was_tag = GLU
 							was_tag = BLI
 							was_tag = MTR 
 							was_tag = BAN
@@ -714,7 +706,6 @@ Javan_missions_5 = {
 		OR = {
 			AND = {
 				OR = {
-					tag = GLU #Galuh
 					tag = BLM #Blambangan
 					tag = BLI #Bali
 					tag = MTR #Mataram
@@ -723,7 +714,6 @@ Javan_missions_5 = {
 						OR = {
 							was_tag = SUN
 							was_tag = CRB
-							was_tag = GLU
 							was_tag = BLI
 							was_tag = MTR 
 							was_tag = BAN
@@ -774,37 +764,53 @@ Javan_missions_5 = {
 		required_missions = { JAV_naval_empires JAV_strait }
 		position = 4
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					trade_goods = nutmeg
-					NOT = {
-						ROOT = {
-							trading_part = {
-								trade_goods = nutmeg
-								value = 0.25
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				OR = {
+					AND = {
+						trade_goods = nutmeg
+						NOT = {
+							ROOT = {
+								trading_part = {
+									trade_goods = nutmeg
+									value = 0.25
+								}
+							}
+						}
+					}
+					AND = {
+						trade_goods = cloves
+						NOT = {
+							ROOT = {
+								trading_part = {
+									trade_goods = cloves
+									value = 0.25
+								}
+							}
+						}
+					}
+					AND = {
+						trade_goods = vanilla
+						NOT = {
+							ROOT = {
+								trading_part = {
+									trade_goods = vanilla
+									value = 0.25
+								}
 							}
 						}
 					}
 				}
-				AND = {
-					trade_goods = cloves
-					NOT = {
-						ROOT = {
-							trading_part = {
-								trade_goods = cloves
-								value = 0.25
-							}
-						}
-					}
-				}
-				AND = {
-					trade_goods = vanilla
-					NOT = {
-						ROOT = {
-							trading_part = {
-								trade_goods = vanilla
-								value = 0.25
-							}
+			}
+			else = {
+				trade_goods = spices
+				NOT = {
+					ROOT = {
+						trading_part = {
+							trade_goods = spices
+							value = 0.25
 						}
 					}
 				}
@@ -813,17 +819,28 @@ Javan_missions_5 = {
 		trigger = {
 			share_of_starting_income = 5
 			monthly_income = 15
-			trading_part = {
-				trade_goods = nutmeg
-				value = 0.25
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				trading_part = {
+					trade_goods = nutmeg
+					value = 0.25
+				}
+				trading_part = {
+					trade_goods = cloves
+					value = 0.25
+				}
+				trading_part = {
+					trade_goods = vanilla
+					value = 0.25
+				}
 			}
-			trading_part = {
-				trade_goods = cloves
-				value = 0.25
-			}
-			trading_part = {
-				trade_goods = vanilla
-				value = 0.25
+			else = {
+				trading_part = {
+					trade_goods = spices
+					value = 0.25
+				}
 			}
 		}
 		effect = {
@@ -928,6 +945,13 @@ Javan_missions_5 = {
 							duration = 9125
 						}
 					}
+					kalimantan_area = {
+						limit = { trade_goods = rice }
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
 				}
 				else = { #inefficient use of space but eh
 					east_java_area = {
@@ -953,6 +977,17 @@ Javan_missions_5 = {
 						}
 					}
 					west_java_area = {
+						limit = {
+							has_production_building_trigger = yes
+							development = 10
+							has_terrain = grasslands
+						}
+						add_province_modifier = {
+							name = MAJ_rice_fields
+							duration = 9125
+						}
+					}
+					kalimantan_area = {
 						limit = {
 							has_production_building_trigger = yes
 							development = 10
@@ -1008,6 +1043,12 @@ Javan_missions_5 = {
 					}
 				}
 				west_java_area = {
+					add_province_modifier = {
+						name = JAV_mancanegara
+						duration = -1
+					}
+				}
+				kalimantan_area = {
 					add_province_modifier = {
 						name = JAV_mancanegara
 						duration = -1

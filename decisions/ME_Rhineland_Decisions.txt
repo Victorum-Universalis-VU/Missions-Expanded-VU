@@ -106,7 +106,7 @@ country_decisions = {
 			hidden_effect = {
 				set_country_flag = RHN_Blast_furnaces_decision
 				set_variable = {
-					which = current_page value = 1
+					current_page = 1
 				}
 				country_event = {
 					id = ME_Rhenish_Events.16

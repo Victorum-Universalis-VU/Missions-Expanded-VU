@@ -70,7 +70,7 @@ country_event = {
 			dynasty = ROOT
 			age = 25
 		}
-		change_variable = { which = ME_slovak_loyalty value = 5 }
+		change_variable = { ME_slovak_loyalty = 5 }
 		add_faction_influence = {
 			faction = west_slav_slovaks
 			influence = 10
@@ -79,12 +79,12 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = ME_lowered_penalties }
 			}
-			change_variable = { which = ME_polish_loyalty value = -5 }
-			change_variable = { which = ME_czech_loyalty value = -5 }
+			change_variable = { ME_polish_loyalty = -5 }
+			change_variable = { ME_czech_loyalty = -5 }
 		}
 		else = {
-			change_variable = { which = ME_polish_loyalty value = -3 }
-			change_variable = { which = ME_czech_loyalty value = -3 }
+			change_variable = { ME_polish_loyalty = -3 }
+			change_variable = { ME_czech_loyalty = -3 }
 		}
 	}
 
@@ -98,7 +98,7 @@ country_event = {
 			dynasty = ROOT
 			age = 25
 		}
-		change_variable = { which = ME_polish_loyalty value = 5 }
+		change_variable = { ME_polish_loyalty = 5 }
 		add_faction_influence = {
 			faction = west_slav_poles
 			influence = 10
@@ -107,12 +107,12 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = ME_lowered_penalties }
 			}
-			change_variable = { which = ME_slovak_loyalty value = -5 }
-			change_variable = { which = ME_czech_loyalty value = -5 }
+			change_variable = { ME_slovak_loyalty = -5 }
+			change_variable = { ME_czech_loyalty = -5 }
 		}
 		else = {
-			change_variable = { which = ME_slovak_loyalty value = -3 }
-			change_variable = { which = ME_czech_loyalty value = -3 }
+			change_variable = { ME_slovak_loyalty = -3 }
+			change_variable = { ME_czech_loyalty = -3 }
 		}
 	}
 
@@ -126,7 +126,7 @@ country_event = {
 			dynasty = ROOT
 			age = 25
 		}
-		change_variable = { which = ME_czech_loyalty value = 5 }
+		change_variable = { ME_czech_loyalty = 5 }
 		add_faction_influence = {
 			faction = west_slav_czechs
 			influence = 10
@@ -135,12 +135,12 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = ME_lowered_penalties }
 			}
-			change_variable = { which = ME_polish_loyalty value = -5 }
-			change_variable = { which = ME_slovak_loyalty value = -5 }
+			change_variable = { ME_polish_loyalty = -5 }
+			change_variable = { ME_slovak_loyalty = -5 }
 		}
 		else = {
-			change_variable = { which = ME_polish_loyalty value = -3 }
-			change_variable = { which = ME_slovak_loyalty value = -3 }
+			change_variable = { ME_polish_loyalty = -3 }
+			change_variable = { ME_slovak_loyalty = -3 }
 		}
 	}
 
@@ -173,19 +173,19 @@ country_event = {
 				limit = {
 					faction_in_power = west_slav_slovaks
 				}
-				change_variable = { which = ME_slovak_loyalty value = 1 }
+				change_variable = { ME_slovak_loyalty = 1 }
 			}
 			else_if = {
 				limit = {
 					faction_in_power = west_slav_poles
 				}
-				change_variable = { which = ME_polish_loyalty value = 1 }
+				change_variable = { ME_polish_loyalty = 1 }
 			}
 			else_if = {
 				limit = {
 					faction_in_power = west_slav_czechs
 				}
-				change_variable = { which = ME_czech_loyalty value = 1 }
+				change_variable = { ME_czech_loyalty = 1 }
 			}
 			add_country_modifier = {
 				name = ME_loyalty_increased
@@ -253,7 +253,7 @@ country_event = {
 					}
 				}
 				ROOT = {
-					change_variable = { which = ME_slovak_loyalty value = -3 }
+					change_variable = { ME_slovak_loyalty = -3 }
 				}
 			}
 			else_if = {
@@ -267,7 +267,7 @@ country_event = {
 					}
 				}
 				ROOT = {
-					change_variable = { which = ME_polish_loyalty value = -3 }
+					change_variable = { ME_polish_loyalty = -3 }
 				}
 			}
 			else_if = {
@@ -278,7 +278,7 @@ country_event = {
 					}
 				}
 				ROOT = {
-					change_variable = { which = ME_czech_loyalty value = -3 }
+					change_variable = { ME_czech_loyalty = -3 }
 				}
 			}
 		}
@@ -325,13 +325,13 @@ country_event = {
 		add_years_of_income = 0.3
 		random = {
 			33 = {
-				change_variable = { which = ME_slovak_loyalty value = 5 }
+				change_variable = { ME_slovak_loyalty = 5 }
 			}
 			33 = {
-				change_variable = { which = ME_czech_loyalty value = 5 }
+				change_variable = { ME_czech_loyalty = 5 }
 			}
 			33 = {
-				change_variable = { which = ME_polish_loyalty value = 5 }
+				change_variable = { ME_polish_loyalty = 5 }
 			}
 		}
 	}
@@ -355,13 +355,13 @@ country_event = {
 		add_years_of_income = 0.7
 		random = {
 			33 = {
-				change_variable = { which = ME_slovak_loyalty value = 10 }
+				change_variable = { ME_slovak_loyalty = 10 }
 			}
 			33 = {
-				change_variable = { which = ME_czech_loyalty value = 10 }
+				change_variable = { ME_czech_loyalty = 10 }
 			}
 			33 = {
-				change_variable = { which = ME_polish_loyalty value = 10 }
+				change_variable = { ME_polish_loyalty = 10 }
 			}
 		}
 	}
@@ -389,14 +389,14 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = ME_lowered_penalties }
 			}
-			change_variable = { which = ME_slovak_loyalty value = -5 }
-			change_variable = { which = ME_czech_loyalty value = -5 }
-			change_variable = { which = ME_polish_loyalty value = -5 }
+			change_variable = { ME_slovak_loyalty = -5 }
+			change_variable = { ME_czech_loyalty = -5 }
+			change_variable = { ME_polish_loyalty = -5 }
 		}
 		else = {
-			change_variable = { which = ME_slovak_loyalty value = -3 }
-			change_variable = { which = ME_czech_loyalty value = -3 }
-			change_variable = { which = ME_polish_loyalty value = -3 }
+			change_variable = { ME_slovak_loyalty = -3 }
+			change_variable = { ME_czech_loyalty = -3 }
+			change_variable = { ME_polish_loyalty = -3 }
 		}
 	}
 }
@@ -419,9 +419,9 @@ country_event = {
 	option = {
 		name = ME_Zapadoslavia_Events.7.a
 
-		change_variable = { which = ME_slovak_loyalty value = 5 }
-		change_variable = { which = ME_czech_loyalty value = 5 }
-		change_variable = { which = ME_polish_loyalty value = 5 }
+		change_variable = { ME_slovak_loyalty = 5 }
+		change_variable = { ME_czech_loyalty = 5 }
+		change_variable = { ME_polish_loyalty = 5 }
 	}
 }
 
@@ -562,13 +562,13 @@ country_event = {
 						limit = {
 							culture = slovak
 						}
-						change_variable = { which = ME_slovak_loyalty value = 1 }
+						change_variable = { ME_slovak_loyalty = 1 }
 					}
 					else_if = {
 						limit = {
 							culture = czech
 						}
-						change_variable = { which = ME_czech_loyalty value = 1 }
+						change_variable = { ME_czech_loyalty = 1 }
 					}
 					else_if = {
 						limit = {
@@ -577,7 +577,7 @@ country_event = {
 								culture = schlesian
 							}
 						}
-						change_variable = { which = ME_polish_loyalty value = 1 }
+						change_variable = { ME_polish_loyalty = 1 }
 					}
 				}
 				else_if = {
@@ -597,13 +597,13 @@ country_event = {
 						limit = {
 							culture = slovak
 						}
-						change_variable = { which = ME_slovak_loyalty value = -1 }
+						change_variable = { ME_slovak_loyalty = -1 }
 					}
 					else_if = {
 						limit = {
 							culture = czech
 						}
-						change_variable = { which = ME_czech_loyalty value = -1 }
+						change_variable = { ME_czech_loyalty = -1 }
 					}
 					else_if = {
 						limit = {
@@ -612,7 +612,7 @@ country_event = {
 								culture = schlesian
 							}
 						}
-						change_variable = { which = ME_polish_loyalty value = -1 }
+						change_variable = { ME_polish_loyalty = -1 }
 					}
 				}
 				else_if = {

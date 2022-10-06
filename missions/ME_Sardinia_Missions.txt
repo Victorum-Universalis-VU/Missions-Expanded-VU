@@ -36,7 +36,6 @@ sardinia_missions_1 = {
 				AND = {
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
-					NOT = { has_building = coastal_artillery }
 					NOT = { has_shipyard_building_trigger = yes }
 					NOT = { has_dock_building_trigger = yes }
 				}
@@ -49,7 +48,6 @@ sardinia_missions_1 = {
 				OR = {
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
@@ -104,7 +102,6 @@ sardinia_missions_1 = {
 				AND = {
 					NOT = { has_building = naval_base }
 					NOT = { has_building = naval_arsenal }
-					NOT = { has_building = coastal_artillery }
 				}
 				NOT = { fort_level = 2 }
 			}
@@ -114,7 +111,6 @@ sardinia_missions_1 = {
 					OR = {
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 					}
 					fort_level = 2
 				}
@@ -126,7 +122,6 @@ sardinia_missions_1 = {
 				OR = {
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 				}
 				fort_level = 2
 			}
@@ -137,6 +132,13 @@ sardinia_missions_1 = {
 				duration = 7300
 			}
 			tunisia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_morocco_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -746,7 +748,7 @@ sardinia_missions_3 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = piedmontese
+			add_accepted_culture_or_dip_power = { culture = piedmontese }
 			hidden_effect = {
 				add_country_modifier = {
 					name = sar_conquest_piedmont

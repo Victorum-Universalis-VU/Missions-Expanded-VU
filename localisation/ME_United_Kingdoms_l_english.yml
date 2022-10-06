@@ -245,13 +245,6 @@
  occitain_UKS: "Occitan"
  wallonian_UKS: "Walloon"
  breton_UKS: "Breton"
- #added missing french cultures
- arpitan_UKS: "Arpitan"
- poitevin_UKS: "Poitevin"
- angevin_UKS: "Norman"
- lorraine_UKS: "Lorraine"
- auvergnat_UKS: "Auvergnat"
- gallo_UKS: "Gallo"
  
  # Buildings:
  building_UKS_Palace: "Great Palace"
@@ -274,7 +267,7 @@
  musketeers_with_red_coats: "Red Coat Musketeers"
  musketeers_with_red_coats_desc: "The redcoats were the staple of English infantry during the 18th century, with equipment and professionalism unmatched by any other troop. The French too flaunted their staple, which was, at the time, their Musketeers of the Guard. French musketeer tactics exceeded what other nations thought possible. By combining the best aspects of the redcoats and musketeers, we might yet produce the greatest infantry unit to ever exist."
  undefeated_navy: "Undefeated Navy"
- undefeated_navy_desc: "Though our victory over France brought us into continental affairs, we have not given in to the weathering of the waves upon our rocky shores. Our oaken masts still stand sturdy amidst the oncoming storm, and thus they shall remain."
+ undefeated_navy_desc: ""Though our victory over France brought us into continental affairs, we have not given in to the weathering of the waves upon our rocky shores. Our oaken masts still stand sturdy amidst the oncoming storm, and thus they shall remain."
  industrialization_pioneers: "Industrialization Pioneers"
  industrialization_pioneers_desc: "The English and French were the first nations to truly industrialization, the former quite a bit more than the latter. The combination of the two worldwide centers of industrialization will no doubt have magnificent consequences."
  

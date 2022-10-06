@@ -129,24 +129,24 @@ swabian_group_1 = {
 
 		provinces_to_highlight = {
 			OR = {
+				area = wurttemburg_area
 				area = swabia_area
 				area = baden_area
-				area = wurttemburg_area
 				area = alsace_area
 			}
 			NOT = { owner = { primary_culture = swabian } }
 		}
 		
 		trigger = {
+			wurttemburg_area = {
+				type = all
+				owner = { primary_culture = swabian }
+			}
 			swabia_area = {
 				type = all
 				owner = { primary_culture = swabian }
 			}
 			baden_area = {
-				type = all
-				owner = { primary_culture = swabian }
-			}
-			wurttemburg_area = {
 				type = all
 				owner = { primary_culture = swabian }
 			}
@@ -210,8 +210,8 @@ swabian_group_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = swabia_area
-				area = baden_area
 				area = wurttemburg_area
+				area = baden_area
 				area = alsace_area
 				AND = {
 					OR = {
@@ -241,11 +241,11 @@ swabian_group_1 = {
 				type = all
 				owned_by = root
 			}
-			baden_area = {
+			wurttemburg_area = {
 				type = all
 				owned_by = root
 			}
-			wurttemburg_area = {
+			baden_area = {
 				type = all
 				owned_by = root
 			}
@@ -284,9 +284,9 @@ swabian_group_2 = {
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = SWA
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	
@@ -692,9 +692,9 @@ swabian_group_3 = { #crusader group
 	generic = no
 	ai = yes
 	potential = {
+		has_country_flag = use_paradox_missions
 		tag = SWA
 		NOT = { map_setup = map_setup_random }
-		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
 	

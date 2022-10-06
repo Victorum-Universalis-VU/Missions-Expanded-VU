@@ -193,18 +193,18 @@ BRA_missions_1_franconia = {
 							}
 						}
 					}
-				#	upper_franconia_area = {
-				#		owner = { 
-				#			dynasty = "von Hohenzollern"
-				#			OR = {
-				#				tag = ROOT
-				#				has_opinion = {
-				#					who = ROOT
-				#					value = 100
-				#				}
-				#			}
-				#		}
-				#	}
+					thuringia_area = {
+						owner = { 
+							dynasty = "von Hohenzollern"
+							OR = {
+								tag = ROOT
+								has_opinion = {
+									who = ROOT
+									value = 100
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -216,7 +216,7 @@ BRA_missions_1_franconia = {
 						capital_scope = {
 							OR = {
 								area = franconia_area
-								#area = upper_franconia_area
+								area = thuringia_area
 							}
 						}
 					}
@@ -236,17 +236,17 @@ BRA_missions_1_franconia = {
 		provinces_to_highlight = {
 			OR = {
 				area = franconia_area
-				#area = upper_franconia_area
+				area = thuringia_area
 			}
 			NOT = {
 				owner = { dynasty = "von Hohenzollern" }
 			}
 		}
 		trigger = {
-		#	upper_franconia_area = {
-		#		type = all
-		#		owner = { dynasty = "von Hohenzollern" }
-		#	}
+			thuringia_area = {
+				type = all
+				owner = { dynasty = "von Hohenzollern" }
+			}
 			franconia_area = {
 				type = all
 				owner = { dynasty = "von Hohenzollern" }
@@ -317,7 +317,7 @@ BRA_missions_2 = {
 			hidden_effect = {
 				if = {
 					limit = {					
-						NOT = { 4747 = { country_or_non_sovereign_subject_holds = ROOT } }
+						NOT = { country_or_non_sovereign_subject_holds = 4747 }
 					}
 					4747 = {
 						remove_province_modifier = BRA_neumark_province
@@ -332,7 +332,7 @@ BRA_missions_2 = {
 				}
 				if = {
 					limit = {					
-						NOT = { 49 = { country_or_non_sovereign_subject_holds = ROOT } }
+						NOT = { country_or_non_sovereign_subject_holds = 49 }
 					}
 					49 = {
 						remove_province_modifier = BRA_neumark_province
@@ -345,20 +345,20 @@ BRA_missions_2 = {
 						}
 					}
 				}
-				vorpommern_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				hinter_pommern_area = {
-					limit = {
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -669,7 +669,7 @@ BRA_missions_3 = {
 				limit = {
 					tag = BRA
 				}
-				override_country_name = BRAPRU
+				ME_override_country_name = { name = BRAPRU }
 			}
 		}
 	}
@@ -813,7 +813,21 @@ BRA_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -846,7 +860,7 @@ BRA_missions_4 = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					OR = {
 						area = thuringia_area
-						area = lower_saxony_area
+						area = saxony_area
 					}
 					value = 4
 				}

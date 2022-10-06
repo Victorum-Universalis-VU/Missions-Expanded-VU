@@ -210,13 +210,6 @@ spice_2 = {
 			}
 		}
 		effect = {
-			central_java_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			east_java_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -231,7 +224,7 @@ spice_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			mindanao_area = {
+			sulu_archipelago_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }

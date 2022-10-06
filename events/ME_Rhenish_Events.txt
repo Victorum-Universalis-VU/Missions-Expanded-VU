@@ -505,13 +505,26 @@ country_event = {
 	major = yes
 
 	immediate = {
-		
-		random_owned_province = {
+		if = {
 			limit = {
-				trade_goods = leather
-				has_manufactory_trigger = yes
+				is_expanded_mod_active = { mod = trade_goods }
 			}
-			save_event_target_as = leather_province
+			random_owned_province = {
+				limit = {
+					trade_goods = leather
+					has_manufactory_trigger = yes
+				}
+				save_event_target_as = leather_province
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					trade_goods = livestock
+					has_manufactory_trigger = yes
+				}
+				save_event_target_as = leather_province
+			}
 		}
 	}
 	option = {
@@ -541,17 +554,32 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			
-			europe = {
+			if = {
 				limit = {
-					OR = {
-						trade_goods = leather
-						trade_goods = livestock
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				europe = {
+					limit = {
+						OR = {
+							trade_goods = leather
+							trade_goods = livestock
+						}
+					}
+					add_province_modifier = {
+						name = RHN_livestock_in_demand
+						duration = 10950
 					}
 				}
-				add_province_modifier = {
-					name = RHN_livestock_in_demand
-					duration = 10950
+			}
+			else = {
+				europe = {
+					limit = {
+						trade_goods = livestock
+					}
+					add_province_modifier = {
+						name = RHN_livestock_in_demand
+						duration = 10950
+					}
 				}
 			}
 		}
@@ -762,7 +790,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 
 		inherit = BRG
-		override_country_name = BRGKLE
+		ME_override_country_name = { name = BRGKLE }
 		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
 	}
 }

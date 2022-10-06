@@ -105,7 +105,7 @@ RHN_munitions = {
 }
 
 RHN_ruhrgebiet = {
-	local_development_cost = -0.2
+	local_development_cost = -0.3
 	trade_goods_size_modifier = 0.25
 }
 
@@ -164,11 +164,11 @@ RHN_centre_of_rhenish_alloy_works = {
 
 RHN_abolished_serfdom = {
 	rural_goods_produced_modifier = -0.25
-	urban_goods_produced_modifier = 0.1
 }
 
 RHN_blast_furnace_cost = {
-	blast_furnace_construction_cost = -0.25
+	#blast_furnace_construction_cost = -0.25
+	urban_goods_produced_modifier = 0.1
 }
 
 RHN_united_rheinzoll = {
@@ -182,7 +182,7 @@ RHN_defeat_of_the_french = {
 }
 
 RHN_paper = {
-	institution_growth = 0.1
+	institution_growth = 6
 	trade_value_modifier = 0.1
 }
 

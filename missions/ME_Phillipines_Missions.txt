@@ -7,7 +7,6 @@ PHI_missions_1 = {
 			tag = PGS
 			tag = TDO
 			tag = MNA
-			tag = PHI #Luzon from FE
 			tag = MAS
 			tag = CEB
 			tag = BTU
@@ -206,7 +205,6 @@ PHI_missions_2 = {
 			tag = PGS
 			tag = TDO
 			tag = MNA
-			tag = PHI #Luzon from FE
 			tag = MAS
 			tag = CEB
 			tag = BTU
@@ -363,7 +361,6 @@ PHI_missions_3 = {
 			tag = PGS
 			tag = TDO
 			tag = MNA
-			tag = PHI #Luzon from FE
 			tag = MAS
 			tag = CEB
 			tag = BTU
@@ -382,6 +379,7 @@ PHI_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = mindanao_area
+				area = sulu_archipelago_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			is_empty = no
@@ -394,10 +392,25 @@ PHI_missions_3 = {
 					is_empty = yes
 				}
 			}
-			
+			sulu_archipelago_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
 		}
 		effect = {
 			mindanao_area = {
+				if = {
+					limit = {
+						is_empty = yes
+					}
+					add_siberian_construction = 10
+				}
+				else = { add_core = ROOT }
+			}
+			sulu_archipelago_area = {
 				if = {
 					limit = {
 						is_empty = yes
@@ -466,7 +479,6 @@ PHI_missions_4 = {
 			tag = PGS
 			tag = TDO
 			tag = MNA
-			tag = PHI #Luzon from FE
 			tag = MAS
 			tag = CEB
 			tag = BTU
@@ -824,7 +836,6 @@ PHI_missions_5 = {
 			tag = PGS
 			tag = TDO
 			tag = MNA
-			tag = PHI #Luzon from FE
 			tag = MAS
 			tag = CEB
 			tag = BTU

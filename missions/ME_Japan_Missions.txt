@@ -576,6 +576,8 @@ Japan_missions_2 = {
 				has_terrain = farmlands
 				has_terrain = grasslands
 			}
+			NOT = { trade_goods = gold }
+			NOT = { trade_goods = silver }
 			OR = {
 				NOT = { owned_by = ROOT }
 				AND = {
@@ -593,6 +595,8 @@ Japan_missions_2 = {
 				japan_region = {
 					type = all
 					OR = {
+						trade_goods = gold
+						trade_goods = silver
 						AND = {
 							NOT = { trade_goods = grain }
 							NOT = { trade_goods = rice }
@@ -1269,6 +1273,13 @@ Japan_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sulu_archipelago_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			mindanao_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1295,6 +1306,7 @@ Japan_missions_3 = {
 				value = 10
 				OR = {
 					area = palawan_area
+					area = sulu_archipelago_area
 					area = mindanao_area
 					area = visayas_area
 					area = southern_luzon_area
@@ -1359,7 +1371,6 @@ Japan_missions_3 = {
 				value = 10
 				OR = {
 					region = malaya_region
-					area = kapuas_area
 					area = brunei_area
 					area = kutai_area
 					area = sabah_area
@@ -1384,7 +1395,11 @@ Japan_missions_3 = {
 		position = 11
 		trigger = {
 			num_of_light_ship = 50
-			num_of_explorers = 1
+			OR = {
+				num_of_explorers = 1
+				monthly_dip = 10
+				DIP = 5
+			}
 		}
 		effect = {
 			add_dip_power = 100
@@ -1446,6 +1461,7 @@ Japan_missions_3 = {
 					OR = {
 						region = bengal_region
 						area = palawan_area
+						area = sulu_archipelago_area
 						area = mindanao_area
 						area = visayas_area
 						area = southern_luzon_area
@@ -1565,6 +1581,10 @@ Japan_missions_3 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				palawan_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				sulu_archipelago_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -1770,7 +1790,6 @@ Japan_missions_4 = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 						area_for_scope_province = {
 							OR = {
 								has_building = fort_15th
@@ -1779,7 +1798,6 @@ Japan_missions_4 = {
 								has_building = fort_18th
 								has_building = naval_base
 								has_building = naval_arsenal
-								has_building = coastal_artillery
 							}
 						}
 					}
@@ -1799,7 +1817,6 @@ Japan_missions_4 = {
 						has_building = fort_18th
 						has_building = naval_base
 						has_building = naval_arsenal
-						has_building = coastal_artillery
 						area_for_scope_province = {
 							OR = {
 								has_building = fort_15th
@@ -1808,7 +1825,6 @@ Japan_missions_4 = {
 								has_building = fort_18th
 								has_building = naval_base
 								has_building = naval_arsenal
-								has_building = coastal_artillery
 							}
 						}
 					}
@@ -2459,7 +2475,6 @@ Japan_missions_5 = {
 				OR = {
 					has_building = naval_base
 					has_building = naval_arsenal
-					has_building = coastal_artillery
 					has_shipyard_building_trigger = yes
 					has_dock_building_trigger = yes
 				}
@@ -2480,7 +2495,6 @@ Japan_missions_5 = {
 						OR = {
 							has_building = naval_base
 							has_building = naval_arsenal
-							has_building = coastal_artillery
 							has_shipyard_building_trigger = yes
 							has_dock_building_trigger = yes
 						}

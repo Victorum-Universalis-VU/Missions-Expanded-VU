@@ -753,6 +753,8 @@ HLR_missions_1 = {
 		position = 26
 		provinces_to_highlight = {
 			OR = {
+				area = upper_platte_area
+				area = yellowstone_area
 				area = dakota_area
 				area = south_dakota_area
 				area = wisconsin_area
@@ -761,6 +763,14 @@ HLR_missions_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
+			upper_platte_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yellowstone_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			dakota_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -992,7 +1002,6 @@ HLR_missions_1 = {
 		position = 30
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1886
 				province_id = 94
 				province_id = 189
 				province_id = 1880
@@ -1012,10 +1021,6 @@ HLR_missions_1 = {
 			}
 		}
 		trigger = {
-			1886 = {
-				owned_by = ROOT
-				base_production = 10
-			}
 			94 = {
 				owned_by = ROOT
 				base_production = 10
@@ -1066,12 +1071,6 @@ HLR_missions_1 = {
 			}
 		}
 		effect = {
-			1886 = {
-				add_province_modifier = {
-					name = "HRE_booming_production"
-					duration = 18250
-				}
-			}
 			94 = {
 				add_province_modifier = {
 					name = "HRE_booming_production"
@@ -1682,6 +1681,7 @@ HLR_missions_2 = {
 				area = connecticut_valley_area
 				area = massachusetts_bay_area
 				area = hudson_bay_area
+				area = chesapeake_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1699,6 +1699,10 @@ HLR_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			hudson_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			chesapeake_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1760,6 +1764,7 @@ HLR_missions_2 = {
 				area = susquehanna_area
 				area = south_iroquoisia_area
 				area = appalachia_area
+				area = choctaw_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1777,6 +1782,10 @@ HLR_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			appalachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			choctaw_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1799,6 +1808,7 @@ HLR_missions_2 = {
 				area = choctaw_area
 				area = alabama_area
 				area = west_florida_area
+				area = ozarks_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1816,6 +1826,10 @@ HLR_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			west_florida_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ozarks_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1880,6 +1894,7 @@ HLR_missions_2 = {
 			OR = {
 				area = california_area
 				area = oregon_area
+				area = central_rockies_area
 				area = salish_sea_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1890,6 +1905,10 @@ HLR_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			oregon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_rockies_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2576,7 +2595,7 @@ HLR_missions_3 = {
 			controls = 235
 		}
 		effect = {
-			south_east_area = { # was home_counties_area before
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -2599,11 +2618,11 @@ HLR_missions_3 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			cornwall_area = { # Wessex
+			cornwall_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_east_area = { #Home Counties
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -3358,7 +3377,7 @@ HLR_missions_4 = {
 			controls = 233
 		}
 		effect = {
-			cornwall_area = { #Wessex
+			cornwall_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

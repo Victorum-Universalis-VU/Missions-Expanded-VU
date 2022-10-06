@@ -79,7 +79,21 @@ country_event = {
 				25 = { set_global_flag = MSA_fleet_two }
 				5 = { set_global_flag = MSA_fleet_three }
 			}
-			#TODO: Add Philippines!
+			luzon_area = {
+				MSA_start_expedition = { delay = 45 }
+			}
+			southern_luzon_area = {
+				MSA_start_expedition = { delay = 45 }
+			}
+			visayas_area = {
+				MSA_start_expedition = { delay = 60 }
+			}
+			sulu_archipelago_area = {
+				MSA_start_expedition = { delay = 75 }
+			}
+			mindanao_area = {
+				MSA_start_expedition = { delay = 90 }
+			}
 			brunei_area = { #likely to be Brunei
 				MSA_start_expedition = { delay = 60 }
 			}
@@ -95,10 +109,7 @@ country_event = {
 			kutai_area = { #kutai and berau
 				MSA_start_expedition = { delay = 120 }
 			}
-			kapuas_area = { #Banjar
-				MSA_start_expedition = { delay = 90 }
-			}
-			indonesia_region = { #noone
+			indonesian_islands_area = { #noone
 				MSA_start_expedition = { delay = 135 }
 			}
 			malaya_area = { #Pahang, Kelantan
@@ -116,9 +127,6 @@ country_event = {
 			south_sumatra_area = { #Palembang
 				MSA_start_expedition = { delay = 180 }
 			}
-			lesser_sunda_islands_area = { #Sunda
-				MSA_start_expedition = { delay = 180 }
-			}
 			kedah_area = { #Kedah Pattani
 				MSA_start_expedition = { delay = 195 }
 			}
@@ -128,22 +136,19 @@ country_event = {
 			west_java_area = { #noone
 				MSA_start_expedition = { delay = 210 }
 			}
-			central_java_area = { #noone
-				MSA_start_expedition = { delay = 210 }
-			}
 			batak_area = { #Barus
 				MSA_start_expedition = { delay = 225 }
 			}
 			minangkabau_area = { #Pagarruyung, Indrapuri
 				MSA_start_expedition = { delay = 240 }
 			}
+			central_java_area = { #Majapahit
+				MSA_start_expedition = { delay = 240 }
+			}
 			lesser_sunda_islands_area = { #Bali
 				MSA_start_expedition = { delay = 270 }
 			}
-			east_java_area = { #Majapahit
-				MSA_start_expedition = { delay = 270 }
-			}
-			east_sulawesi_area = { #Bone and Makassar
+			east_java_area = { #noone
 				MSA_start_expedition = { delay = 270 }
 			}
 			south_sulawesi_area = { #Buton and Luwu
@@ -4198,6 +4203,7 @@ country_event = {
 			luzon_area = { is_empty = yes }
 			visayas_area = { is_empty = yes }
 			mindanao_area = { is_empty = yes }
+			sulu_archipelago_area = { is_empty = yes }
 			palawan_area = { is_empty = yes }
 		}
 	}
@@ -4216,6 +4222,7 @@ country_event = {
 						area = luzon_area
 						area = visayas_area
 						area = mindanao_area
+						area = sulu_archipelago_area
 						area = palawan_area
 					}
 				}

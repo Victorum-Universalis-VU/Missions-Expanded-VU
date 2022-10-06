@@ -40,14 +40,14 @@ TRI_Missions_1 = {
 			province_id = 80
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { num_of_times_improved_by_owner = 5 }
+				NOT = { num_of_times_improved = 5 }
 				unrest = 0
 			}
 		}
 		trigger = {
 			80 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				num_of_times_improved_by_owner = 5
+				num_of_times_improved = 5
 				NOT = { unrest = 0 }
 			}
 		}

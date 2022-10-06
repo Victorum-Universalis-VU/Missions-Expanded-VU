@@ -1860,7 +1860,7 @@ ENG_missions_3_2 = {
 		position = 12
 		provinces_to_highlight = {
 			OR = {
-				area = east_anglia_area
+				area = south_east_area
 				area = east_midlands_area
 				area = west_midlands_area
 				area = cornwall_area
@@ -1877,7 +1877,7 @@ ENG_missions_3_2 = {
 			NOT = {
 				any_province = {
 					OR = {
-						area = east_anglia_area
+						area = south_east_area
 						area = east_midlands_area
 						area = west_midlands_area
 						area = cornwall_area
@@ -3070,14 +3070,22 @@ GBR_missions_4_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = te_waipounamu_area
+				area = tokerau_area
+				area = tainui_area
 				area = te_ika_a_maui_area
+				area = heretaunga_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				area = te_ika_a_maui_area
+				OR = {
+					area = tokerau_area
+					area = tainui_area
+					area = te_ika_a_maui_area
+					area = heretaunga_area
+				}
 			}
 		}
 		effect = {
@@ -3096,7 +3104,10 @@ GBR_missions_4_2 = {
 					OR = {
 						region = australia_region
 						area = te_waipounamu_area
+						area = tokerau_area
+						area = tainui_area
 						area = te_ika_a_maui_area
+						area = heretaunga_area
 					}
 				}
 				AND = {
@@ -3130,6 +3141,18 @@ GBR_missions_4_2 = {
 		}
 		trigger = {
 			australia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			heretaunga_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tokerau_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tainui_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -3483,7 +3506,7 @@ ENG_missions_5_1 = {
 					}
 				}
 				AND = {
-					area = east_anglia_area
+					area = south_east_area
 					OR = {
 						NOT = { owned_by = ROOT }
 						NOT = {
@@ -3594,7 +3617,7 @@ ENG_missions_5_1 = {
 				5 = 234
 				total = 15
 			}
-			east_anglia_area = {
+			south_east_area = {
 				type = all
 				owned_by = ROOT
 			}

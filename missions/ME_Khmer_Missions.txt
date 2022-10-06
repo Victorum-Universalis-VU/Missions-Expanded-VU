@@ -198,7 +198,7 @@ KHM_missions_2 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = vietnamese
+			add_accepted_culture_or_dip_power = { culture = vietnamese }
 			add_country_modifier = {
 				name = khm_free_vietnamese
 				duration = -1
@@ -369,12 +369,28 @@ KHM_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			prachin_area = {
+			south_laos_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			khorat_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			612 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -389,7 +405,7 @@ KHM_missions_3 = {
 				area = central_thai_area
 				area = tenasserim_area
 				area = sukothai_area
-				area = prachin_area
+				province_id = 612
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -410,8 +426,7 @@ KHM_missions_3 = {
 				type = all
 				owned_by = ROOT
 			}
-			prachin_area = {
-				type = all
+			612 = {
 				owned_by = ROOT
 			} 
 		}
@@ -425,7 +440,7 @@ KHM_missions_3 = {
 				name = khm_thai_culture
 				duration = -1
 			}
-			add_accepted_culture = central_thai
+			add_accepted_culture_or_dip_power = { culture = central_thai }
 		}
 	}
 	

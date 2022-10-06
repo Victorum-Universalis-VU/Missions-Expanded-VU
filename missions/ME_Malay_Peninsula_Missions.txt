@@ -669,13 +669,13 @@ MLC_generic_missions_5 = {
 						duration = -1
 					}
 				}
-				kedah_area = {
+				indonesian_islands_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1
 					}
 				}
-				indonesian_islands_area = {
+				kedah_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1

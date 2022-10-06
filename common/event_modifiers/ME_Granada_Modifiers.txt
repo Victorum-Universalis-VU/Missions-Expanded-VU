@@ -42,7 +42,7 @@ cav_reforms = {
 }
 	
 siege_reforms = {
-	artillery_bonus_vs_fort = 1
+	artillery_levels_available_vs_fort = 1
 	siege_ability = 0.2
 	leader_siege = 1
 	artillery_cost = -0.2

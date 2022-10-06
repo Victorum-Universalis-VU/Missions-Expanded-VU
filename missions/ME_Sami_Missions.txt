@@ -229,13 +229,6 @@ SMI_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			svealand_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			finland_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -509,7 +502,6 @@ SMI_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = svealand_area
-				#area = ostra_svealand_area
 				area = vastra_gotaland_area
 				area = finland_area
 				province_id = 2

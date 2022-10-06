@@ -1,0 +1,554 @@
+namespace = FU_Aragon_Events 
+
+country_event = { #Commercial Expansion in Alexandria
+	id = FU_Aragon_Events.1 
+	title = FU_Aragon_Events.1.t 
+	desc = FU_Aragon_Events.1.d 
+	picture = port_of_alexandria_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Aragon_Events.1.a 
+		
+		bahari_area = { 
+			add_province_modifier = {
+				name = ara_nile_production_monopoly_modifier
+				duration = 9125 
+			}
+		}
+		delta_area = {
+			add_province_modifier = {
+				name = ara_nile_production_monopoly_modifier
+				duration = 9125 
+			}
+		}
+	}
+}
+
+country_event = { #The Chambers of Lonja de la Seda
+	id = FU_Aragon_Events.2
+	title = FU_Aragon_Events.2.t 
+	desc = FU_Aragon_Events.2.d 
+	picture = prosperous_town_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Aragon_Events.2.a 
+		
+		220 = {
+			add_province_modifier = {
+				name = ara_sala_de_contraction_modifier 
+				duration = -1 
+			}
+			if = {
+				limit = {
+					NOT = { trade_goods = silk }
+				}
+				change_trade_goods = silk 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Aragon_Events.2.b 
+		
+		220 = {
+			add_province_modifier = {
+				name = ara_consulat_de_mar_modifier 
+				duration = -1 
+			}
+			if = {
+				limit = {
+					NOT = { trade_goods = silk }
+				}
+				change_trade_goods = silk 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Aragon_Events.2.c 
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = has_trade_goods_expanded_active
+				has_global_flag = trade_goods_expanded_mod_active 
+			}
+		}
+		highlight = yes 
+		220 = {
+			change_trade_goods = olive_oil
+			add_province_modifier = {
+				name = ara_oil_exchange_modifier 
+				duration = -1 
+			}
+		}
+	}
+}
+
+country_event = { #Table of Exchange 
+	id = FU_Aragon_Events.3
+	title = FU_Aragon_Events.3.t 
+	desc = FU_Aragon_Events.3.d 
+	picture = table_of_exchange_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Aragon_Events.3.a 
+		
+		220 = {
+			add_province_modifier = {
+				name = ara_branch_of_the_taula_de_canvi_modifier
+				duration = -1 
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers 
+			loyalty = 15
+		}
+	}
+}
+
+#country_event = { #Imperium Constantinopolitanum 
+#	id = FU_Aragon_Events.4
+#	title = FU_Aragon_Events.4.t 
+#	desc = FU_Aragon_Events.4.d 
+#	picture = BYZ_BYZANTINE_EAGLE_eventPicture
+#	
+#	is_triggered_only = yes 
+#	
+#	
+#	option = {
+#		name = FU_Aragon_Events.4.a 
+#		
+#		morea_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			morea_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		northern_greece_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			northern_greece_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		macedonia_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			macedonia_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		thrace_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			thrace_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		hudavendigar_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			hudavendigar_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		aydin_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			aydin_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		albania_area = {
+#			limit = {
+#				NOT = { is_core = FU1 }
+#			}
+#			add_core = FU1
+#		}
+#		hidden_effect = {
+#			albania_area = {
+#				limit = {
+#					country_or_non_sovereign_subject_holds = ROOT 
+#				}
+#				cede_province = FU1 
+#			}
+#		}
+#		release = FU1 
+#		FU1 = {
+#			change_government = monarchy
+#			add_government_reform = feudalism_reform
+#			change_religion = catholic
+#			change_government_reform_progress = 100
+#		}
+#		create_march = FU1 
+#		FU1 = {
+#			add_country_modifier = {
+#				name = pro_latin_law_modifier
+#				duration = -1 
+#			}
+#			hidden_effect = {
+#				add_accepted_culture = greek 
+#				add_accepted_culture = bulgarian
+#				add_accepted_culture = turkish
+#				set_government_rank = 3 
+#				add_adm_power = 800
+#				add_dip_power = 800
+#				add_mil_power = 800 
+#				add_treasury = 500
+#				every_owned_province = {
+#					limit = { 
+#						NOT = { religion = catholic }
+#					}
+#					change_religion = catholic 
+#				}
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = FU_Aragon_Events.4.b 
+#		
+#		151 = { 
+#			change_culture = ROOT 
+#			change_religion = ROOT 
+#			add_base_tax = 2 
+#			add_base_production = 2 
+#			add_base_manpower = 3 
+#			add_devastation = -25 
+#		}
+#		add_papal_influence = 25 
+#	}
+#}
+
+country_event = { #Marine Academy of Aragon
+	id = FU_Aragon_Events.5
+	title = FU_Aragon_Events.5.t 
+	desc = FU_Aragon_Events.5.d 
+	picture = naval_academy_eventPicture
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Aragon_Events.5.a 
+		
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			213 = {
+				
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					has_port = yes 
+					base_production = 10 
+					OR = {
+						has_building = shipyard 
+						has_building = grand_shipyard
+					}
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+				}
+				add_province_modifier = {
+					name = marine_admiralty_academy_of_the_crown_of_aragon_modifier 
+					duration = -1 
+				}
+			}
+		}
+	}
+}
+	
+country_event = { #Protecting our Independence 
+	id = FU_Aragon_Events.6 
+	title = FU_Aragon_Events.6.t 
+	desc = FU_Aragon_Events.6.d 
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = ALB 
+		NOT = { is_year = 1455 }
+		is_at_war = no 
+		is_subject = no 
+	}
+	mean_time_to_happen = {
+		months = 20 
+	}
+	
+	immediate = {
+		hidden_effect = {
+			ARA = { set_country_flag = ara_had_skanderbeg_event_flag }
+		}
+	}	
+	option = {
+		name = FU_Aragon_Events.6.a 
+		
+		ARA = { 
+			vassalize = ROOT 
+			country_event = { id = FU_Aragon_Events.7 }
+		}
+		add_mil_power = 50 
+		add_dip_power = 50 
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = FU_Aragon_Events.6.b 
+		
+		add_prestige = 15
+	
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #Envoy from Skanderbeg 
+	id = FU_Aragon_Events.7
+	title = FU_Aragon_Events.7.t 
+	desc = FU_Aragon_Events.7.d 
+	picture = tower_keep_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Aragon_Events.7.a 
+		
+		add_prestige = 10
+	}
+}
+	
+country_event = { #Tirant lo Blanch
+	id = FU_Aragon_Events.8
+	title = FU_Aragon_Events.8.t
+	desc = FU_Aragon_Events.8.d 
+	picture = tirant_lo_blanch_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = ARA 
+		220 = { owned_by = ROOT }
+		is_year = 1489
+	}
+	mean_time_to_happen = {
+		months = 12 
+	}
+	
+	option = { 
+		name = FU_Aragon_Events.8.a 
+		
+		change_innovativeness = 1 
+		add_prestige = 10 
+	}
+	
+	option = {
+		name = FU_Aragon_Events.8.b 
+		
+		trigger = {
+			151 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		highlight = yes 
+		
+		add_prestige = 25 
+		change_innovativeness = 3 
+		add_ruler_modifier = {
+			name = ara_living_legend_modifier
+			duration = -1 
+		}
+	}
+}
+	
+country_event = { #Revolt of the Brotherhoods
+	id = FU_Aragon_Events.9 
+	title = FU_Aragon_Events.9.t 
+	desc = FU_Aragon_Events.9.d 
+	picture = COUNTRY_COLLAPSE_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = {	
+			tag = ARA 
+			tag = SPA
+		}
+		is_year = 1520
+		NOT = { stability = 3 }
+		NOT = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 40
+			}
+		}
+		any_owned_province = {
+			OR = {
+				has_province_modifier = slaves_raided
+				religion = sunni 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = FU_Aragon_Events.9.a 
+		
+		random_owned_province = {
+			limit = { region = iberia_region } 
+			particularist_rebels = 3 
+		}
+		random_owned_province = {
+			limit = { region = iberia_region } 
+			particularist_rebels = 2 
+		}
+		random_owned_province = {
+			particularist_rebels = 1 
+		}
+	}
+	
+	option = {
+		name = FU_Aragon_Events.9.b 
+		
+		add_stability = -1 
+		
+		custom_tooltip = ara_every_center_of_trade_gets_autonomy_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_has_center_of_trade_of_level = 1
+				}
+				add_local_autonomy = 25 
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 15 
+		}
+	}
+}
+
+country_event = { #Furs of Valencia
+	id = FU_Aragon_Events.10
+	title = FU_Aragon_Events.10.t 
+	desc = FU_Aragon_Events.10.d 
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = ARA 
+		220 = { owned_by = ROOT }
+		stability = 1 
+		is_at_war = no 
+		NOT = { current_age = age_of_absolutism }
+	}
+	
+	mean_time_to_happen = {
+		months = 120 
+	}
+	
+	option = {
+		name = FU_Aragon_Events.10.a 
+		
+		change_government_reform_progress = 50 
+		add_country_modifier = {
+			name = ara_checks_balances_of_furs_of_valencia_modifier
+			duration = 9125 
+		}
+	}
+}
+
+country_event = { #Hidden event to give the Conqueror trait 
+	id = FU_Aragon_Events.11
+	title = FU_Aragon_Events.11.t 
+	desc = FU_Aragon_Events.11.d 
+	picture = REFORM_eventPicture 
+	
+	is_triggered_only = yes 
+	hidden = yes 
+	
+	immediate = { add_ruler_personality = conqueror_personality }
+
+	option = { 
+		name = FU_Aragon_Events.11.a
+	}
+}
+
+country_event = { #Hidden event to give the Administrator
+	id = FU_Aragon_Events.12
+	title = FU_Aragon_Events.12.t 
+	desc = FU_Aragon_Events.12.d 
+	picture = REFORM_eventPicture 
+	
+	is_triggered_only = yes 
+	hidden = yes 
+	
+	immediate = { add_ruler_personality = fu_reformist_personality }
+
+	option = { 
+		name = FU_Aragon_Events.12.a
+	}
+}

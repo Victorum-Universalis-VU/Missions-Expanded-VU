@@ -88,9 +88,9 @@ SWE_missions_1 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = latvian
+			add_accepted_culture_or_dip_power = { culture = latvian }
 			custom_tooltip = SWE_LATVIAN_CULTURE_WILL_NOT_COST_AN_ACCEPTED_CULTURE_SLOT
-			add_accepted_culture = estonian
+			add_accepted_culture_or_dip_power = { culture = estonian }
 			custom_tooltip = SWE_ESTONIAN_CULTURE_WILL_NOT_COST_AN_ACCEPTED_CULTURE_SLOT
 			west_prussia_area = {
 				limit = {
@@ -213,10 +213,8 @@ SWE_missions_2 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = karelia_area
-				area = west_karelia_area
-				area = laponia_area
-				area = north_karelia_area
+				province_id = 33
+				province_id = 34
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -224,22 +222,8 @@ SWE_missions_2 = {
 			}
 		}
 		trigger = {
-			karelia_area = {
-				type = all
-				is_core = ROOT
-			}
-			west_karelia_area = {
-				type = all
-				is_core = ROOT
-			}
-			north_karelia_area = {
-				type = all
-				is_core = ROOT
-			}
-			laponia_area = {
-				type = all
-				is_core = ROOT
-			}
+			owns_core_province = 33
+			owns_core_province = 34
 		}
 		effect = {
 			33 = {
@@ -556,7 +540,7 @@ SWE_missions_3 = {
 				name = sweden_ending_the_kalmar_union_modifier
 				duration = -1
 			}
-			25 = {
+			33 = {
 				if = {
 					limit = {
 						NOT = { owned_by = ROOT }
@@ -565,33 +549,14 @@ SWE_missions_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			west_karelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+			34 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			north_karelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			laponia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			karelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -986,7 +951,7 @@ SWE_missions_5_catholic_1 = {
 			set_country_flag = swe_catholic_missions
 			swap_non_generic_missions = yes
 			hidden_effect = {
-				set_variable = { which = swe_num_of_wars_against_non_catholics value = 0 }
+				set_variable = { swe_num_of_wars_against_non_catholics = 0 }
 			}
 		}
 	}
@@ -1019,7 +984,7 @@ SWE_missions_4_catholic = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = SWE_DECLARED_WAR_AGAINST_7_NON_CATHOLICS
-				check_variable = { which = swe_num_of_wars_against_non_catholics value = 7 }
+				check_variable = { swe_num_of_wars_against_non_catholics = 7 }
 			}
 		}
 		effect = {

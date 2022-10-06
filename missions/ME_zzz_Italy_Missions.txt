@@ -557,8 +557,14 @@ italy_missions_3 = {
 		effect = {
 			add_splendor = 100
 			add_stability = 1
-			add_mana_scaled_on_monarch_skill = yes
-			capital_scope = { add_development_scaled_on_monthly_monarch_power = yes }
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
+			capital_scope = {
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 4
+			}
 			if = {
 				limit = {
 					is_expanded_mod_active = { mod = ages_and_splendor }
@@ -736,7 +742,16 @@ italy_missions_3 = {
 					}
 				}
 			}
-			barbary_coast_area = { #Algiers
+			northern_morocco_area = {
+				limit = {
+					has_port = yes
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_empty = yes }
+				}
+				add_permanent_claim = ROOT
+			}
+			barbary_coast_area = {
 				limit = {
 					has_port = yes
 					NOT = { owned_by = ROOT }
@@ -999,10 +1014,15 @@ italy_missions_3 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = ita_domus_marium
-				duration = -1
+			add_dip_power = 100
+			define_admiral = {
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
 			}
+			set_country_flag = ita_domus_marium_flag
+			custom_tooltip = ITA_HEGEMONY_NAVAL_TT
 		}
 	}
 }
@@ -1130,7 +1150,7 @@ italy_missions_4 = {
 						add_permanent_claim = ROOT
 					}
 				}
-				1309 = {
+				137 = {
 					every_trade_node_member_province = {
 						limit = {
 							has_port = yes
@@ -1186,7 +1206,9 @@ italy_missions_4 = {
 		}
 		effect = {
 			add_army_tradition = 10
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 		}
 	}
 
@@ -1205,12 +1227,13 @@ italy_missions_4 = {
 						province_id = 1295 #valencia
 						province_id = 1298 #genoa
 						province_id = 1308 #venice
-						province_id = 1309 #ragusa
+						province_id = 137 #ragusa
 						province_id = 377 #aleppo
 					}
 				}
 				area = upper_andalucia_area
 				area = toledo_area
+				area = northern_morocco_area
 				area = barbary_coast_area
 				area = cyrenaica_area
 				area = delta_area
@@ -1263,7 +1286,7 @@ italy_missions_4 = {
 						}
 					}
 				}
-				1309 = { #ragusa
+				137 = { #ragusa
 					all_trade_node_member_province = {
 						OR = {
 							has_port = no
@@ -1297,7 +1320,15 @@ italy_missions_4 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
-				barbary_coast_area = { #Algiers
+				northern_morocco_area = {
+					type = all
+					OR = {
+						has_port = no
+						NOT = { province_has_center_of_trade_of_level = 1 }
+						owned_by = ROOT
+					}
+				}
+				barbary_coast_area = {
 					type = all
 					OR = {
 						has_port = no
@@ -1348,7 +1379,9 @@ italy_missions_4 = {
 			}
 		}
 		effect = {
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			add_mercantilism = 5
 		}
 	}
@@ -1910,10 +1943,15 @@ italy_missions_2_military = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = ita_domus_terrae
-				duration = -1
+			add_mil_power = 100
+			define_general = {
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
 			}
+			set_country_flag = ita_domus_terrae_flag
+			custom_tooltip = ITA_HEGEMONY_LAND_TT
 		}
 	}
 }
@@ -2226,7 +2264,9 @@ italy_missions_2_tall = {
 			}
 		}
 		effect = {
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			add_country_modifier = {
 				name = ita_center_technological_innovation
 				duration = -1
@@ -2965,7 +3005,9 @@ italy_missions_4_tall = {
 			}
 		}
 		effect = {
-			add_mana_scaled_on_monarch_skill = yes
+			add_adm_power = 120
+			add_dip_power = 120
+			add_mil_power = 120
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 20

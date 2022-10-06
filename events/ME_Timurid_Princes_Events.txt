@@ -718,8 +718,18 @@ country_event = { #End of the rebellion
 				grant_independence = yes
 			}
 		}
-		add_truce_with = FRS
-		add_truce_with = QOM
+		if = {
+			limit = {
+				FRS = { ai = yes }
+			}
+			add_truce_with = FRS
+		}
+		if = {
+			limit = {
+				QOM = { ai = yes }
+			}
+			add_truce_with = QOM
+		}
 		add_prestige = -5
 	}
 
@@ -751,61 +761,65 @@ country_event = { #End of the rebellion
 				QOM = { is_at_war = yes }
 			}
 		}
-
-		add_truce_with = QOM
+		if = {
+			limit = {
+				QOM = { ai = yes }
+			}
+			add_truce_with = QOM
+		}
 		add_legitimacy_equivalent = { amount = -10 republican_tradition = -10 }
 	}
 }
 
-country_event = { #legitimacy stuff
-	id = ME_Timurid_Princes_Event.14
-	title = "ME_Timurid_Princes_Event.EVTNAME14"
-	desc = "ME_Timurid_Princes_Event.EVTDESC14"
-	picture = REVOLUTION_eventPicture
-
-	hidden = yes
-
-	trigger = {
-		has_country_flag = ME_can_use_timurid_legitimacy
-		NOT = { is_month = 1 }
-		NOT = { has_country_modifier = legitimacy_var_increased }
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	immediate = {
-		hidden_effect = {
-			export_to_variable = {
-				which = timurid_legitimacy
-				value = modifier:timurid_legitimacy_influence
-			}
-			# Round to two decimals
-			divide_variable = { which = timurid_legitimacy value = 100 }
-			multiply_variable = { which = timurid_legitimacy value = 100 }
-			# Add to progress
-			change_variable = { which = timurid_legitimacy_value which = timurid_legitimacy }
-			if = {
-				limit = {
-					check_variable = { which = timurid_legitimacy_value value = 100 }
-				}
-				set_variable = { which = timurid_legitimacy_value value = 100 }
-			}
-			add_country_modifier = {
-				name = legitimacy_var_increased
-				duration = 32
-				hidden = yes
-			}
-		}
-	}
-
-	option = {
-		name = ME_Timurid_Princes_Event14.EVTOPT1
-
-		ai_chance = { factor = 100 }
-	}
-}
+#country_event = { #legitimacy stuff
+#	id = ME_Timurid_Princes_Event.14
+#	title = "ME_Timurid_Princes_Event.EVTNAME14"
+#	desc = "ME_Timurid_Princes_Event.EVTDESC14"
+#	picture = REVOLUTION_eventPicture
+#
+#	hidden = yes
+#
+#	trigger = {
+#		has_country_flag = ME_can_use_timurid_legitimacy
+#		NOT = { is_month = 1 }
+#		NOT = { has_country_modifier = legitimacy_var_increased }
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	immediate = {
+#		hidden_effect = {
+#			export_to_variable = {
+#				which = timurid_legitimacy
+#				value = modifier:timurid_legitimacy_influence
+#			}
+#			# Round to two decimals
+#			divide_variable = { timurid_legitimacy = 100 }
+#			multiply_variable = { timurid_legitimacy = 100 }
+#			# Add to progress
+#			change_variable = { which = timurid_legitimacy_value which =  timurid_legitimacy }
+#			if = {
+#				limit = {
+#					check_variable = { timurid_legitimacy_value = 100 }
+#				}
+#				set_variable = { timurid_legitimacy_value = 100 }
+#			}
+#			add_country_modifier = {
+#				name = legitimacy_var_increased
+#				duration = 32
+#				hidden = yes
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Timurid_Princes_Event14.EVTOPT1
+#
+#		ai_chance = { factor = 100 }
+#	}
+#}
 
 country_event = { #legitimacy stuff 2.0
 	id = ME_Timurid_Princes_Event.15
@@ -819,10 +833,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT1
 
 		trigger = {
-			check_variable = { which = timurid_legitimacy_value value = 10 }
+			check_variable = { timurid_legitimacy_value = 10 }
 		}
 
-		subtract_variable = { which = timurid_legitimacy_value value = 10 }
+		subtract_variable = { timurid_legitimacy_value = 10 }
 		add_yearly_manpower = 0.6
 	}
 
@@ -830,10 +844,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT2
 
 		trigger = {
-			check_variable = { which = timurid_legitimacy_value value = 20 }
+			check_variable = { timurid_legitimacy_value = 20 }
 		}
 
-		subtract_variable = { which = timurid_legitimacy_value value = 20 }
+		subtract_variable = { timurid_legitimacy_value = 20 }
 		create_general = { tradition = 40 }
 	}
 
@@ -841,10 +855,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT3
 
 		trigger = {
-			check_variable = { which = timurid_legitimacy_value value = 10 }
+			check_variable = { timurid_legitimacy_value = 10 }
 		}
 
-		subtract_variable = { which = timurid_legitimacy_value value = 10 }
+		subtract_variable = { timurid_legitimacy_value = 10 }
 		add_country_modifier = {
 			name = timurid_prince_satisfied_the_masses
 			duration = 7300
@@ -855,10 +869,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT4
 
 		trigger = {
-			check_variable = { which = timurid_legitimacy_value value = 15 }
+			check_variable = { timurid_legitimacy_value = 15 }
 		}
 
-		subtract_variable = { which = timurid_legitimacy_value value = 15 }
+		subtract_variable = { timurid_legitimacy_value = 15 }
 		add_years_of_income = 0.4
 	}
 
@@ -866,10 +880,10 @@ country_event = { #legitimacy stuff 2.0
 		name = ME_Timurid_Princes_Event15.EVTOPT5
 
 		trigger = {
-			check_variable = { which = timurid_legitimacy_value value = 15 }
+			check_variable = { timurid_legitimacy_value = 15 }
 		}
 
-		subtract_variable = { which = timurid_legitimacy_value value = 15 }
+		subtract_variable = { timurid_legitimacy_value = 15 }
 		define_advisor = {
 			type = army_reformer
 			skill = 2

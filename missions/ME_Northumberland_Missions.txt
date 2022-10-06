@@ -123,7 +123,7 @@ northumberland_missions_1 = {
 		position = 10
 		provinces_to_highlight = {
 			OR = {
-				area = south_east_area #Home Counties
+				area = south_east_area
 				area = east_anglia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -235,7 +235,7 @@ northumberland_missions_2 = {
 			}
 		}
 		effect = {
-			south_east_area = { #home counties
+			south_east_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }

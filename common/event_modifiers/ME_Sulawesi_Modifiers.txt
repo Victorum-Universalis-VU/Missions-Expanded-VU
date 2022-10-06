@@ -4,12 +4,12 @@ MKS_pillar_island_modifier = {
 }
 
 MKS_trade_deal = {
-	trade_deals_slots = 0.01
+	#trade_deals_slots = 0.01
+	trade_steering = 0.2
 }
 
 MKS_trade_with_australia = {
 	diplomatic_reputation = 1
-	trade_steering = 0.2
 }
 
 MKS_iron_extraction = {

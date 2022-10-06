@@ -54,7 +54,7 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { check_variable = { which = ENG_Culture value = 11 } }
+		NOT = { check_variable = { ENG_Culture = 11 } }
 		mission_completed = UKS_cultures_of_France
 	}
 	
@@ -69,13 +69,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
-				accepted_culture = wallonian
-				accepted_culture = arpitan
-				accepted_culture = poitevin_culture
-				accepted_culture = angevin_culture
-				accepted_culture = lorraine_culture
-				accepted_culture = auvergnat_culture
-				accepted_culture = gallo_culture
+				accepted_culture = wallonian 
 			}
 		}
 		modifier = {
@@ -87,13 +81,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
-				accepted_culture = wallonian
-				accepted_culture = arpitan
-				accepted_culture = poitevin_culture
-				accepted_culture = angevin_culture
-				accepted_culture = lorraine_culture
-				accepted_culture = auvergnat_culture
-				accepted_culture = gallo_culture
+				accepted_culture = wallonian 
 				amount = 2
 			}
 		}
@@ -106,12 +94,7 @@ country_event = {
 				accepted_culture = aquitaine 
 				accepted_culture = burgundian 
 				accepted_culture = occitain 
-				accepted_culture = wallonian
-				accepted_culture = poitevin_culture
-				accepted_culture = angevin_culture
-				accepted_culture = lorraine_culture
-				accepted_culture = auvergnat_culture
-				accepted_culture = gallo_culture
+				accepted_culture = wallonian 
 				amount = 3
 			}
 		}

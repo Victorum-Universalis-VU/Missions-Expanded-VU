@@ -1,4 +1,3 @@
-#Updated and scriptified by Dub.
 granada_development_missions = {
 	slot = 1
 	generic = no
@@ -45,9 +44,8 @@ granada_development_missions = {
 		}
 		
 		effect = {
-			capital_scope = { #Not dev-doubled, simply shuffled from 2/0/4, sending Granada from 11/11/6 to 12/12/10. Keep in mind Granada has a lot more dev in BT.
-				add_base_tax = 1
-				add_base_production = 1
+			capital_scope = {
+				add_base_tax = 2
 				add_base_manpower = 4
 			}
 		}
@@ -64,7 +62,7 @@ granada_development_missions = {
 		trigger = {
 			223 = {
 				owned_by = ROOT
-				development = 35 #From 20 to 35. Previous mission has pushed it to 34, so 1 more click is required.
+				development = 20
 				has_building = temple
 			}
 		}
@@ -107,7 +105,6 @@ andalusia_slot_1_missions = {
 					OR = {
 						area = lower_andalucia_area
 						area = upper_andalucia_area
-						area = northern_andalusia_area
 					}
 					OR = {
 						NOT = { owned_by = ROOT }
@@ -122,7 +119,7 @@ andalusia_slot_1_missions = {
 			225 = {
 				owned_by = ROOT
 				OR = {
-					development = 25 #Starts with 20.
+					development = 15
 					has_building = temple
 				}
 			}
@@ -132,11 +129,6 @@ andalusia_slot_1_missions = {
 				religion = ROOT
 			}
 			upper_andalucia_area = {
-				type = all
-				owned_by = ROOT
-				religion = ROOT
-			}
-			northern_andalusia_area = {
 				type = all
 				owned_by = ROOT
 				religion = ROOT
@@ -181,11 +173,10 @@ andalusia_slot_1_missions = {
 				limit = {
 					223 = {
 						owned_by = ROOT
-						NOT = { province_has_center_of_trade_of_level = 3 }
 					}
 				}
 				223 = {
-					add_or_spawn_center_of_trade = { level = 1 }
+					center_of_trade = 1
 				}
 			}
 			else = {
@@ -388,9 +379,38 @@ granada_slot_2_missions = {
 					tradition = 60
 				}
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=gra_reconquer_valencia }
-			give_permaclaims_for_mission = { mission=gra_reconquer_sevilla }
+			221 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4547 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			valencia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_andalucia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 	}
@@ -401,22 +421,40 @@ granada_slot_2_missions = {
 		position = 3
 		
 		provinces_to_highlight = {
-			gra_reconquer_valencia_provinces = yes
+			OR = {
+				province_id = 221
+				province_id = 4547
+				area = valencia_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gra_reconquer_valencia_provinces
-				owner_type=owned_by
+			221 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			4547 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			valencia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
-		effect = { #Creates a nicer tooltip.
-			murcia_area = {
+		effect = {
+			221 = {
+				add_province_modifier = {
+					name = gra_rebuilding_mosques
+					duration = 7300
+				}
+			}
+			4547 = {
 				add_province_modifier = {
 					name = gra_rebuilding_mosques
 					duration = 7300
@@ -438,18 +476,18 @@ granada_slot_2_missions = {
 		position = 4
 		
 		provinces_to_highlight = {
-			gra_reconquer_sevilla_provinces = yes
+			area = lower_andalucia_area
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { religion_group = ROOT	}
+				NOT = { religion_group = muslim	}
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=highlighted_provinces_converted_to_religion 
-				provinces=gra_reconquer_sevilla_provinces
-				owner_type=religion_group
+			lower_andalucia_area = {
+				type = all
+				owned_by = ROOT
+				religion_group = muslim
 			}
 			tag = ADU
 		}
@@ -459,8 +497,63 @@ granada_slot_2_missions = {
 				name = "adu_righteous_conquest"
 				duration = 7300
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=gra_restore_caliphate_cordoba }
+			toledo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			castille_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aragon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					218 = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				218 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					1747 = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				1747 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					216 = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				216 = {
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 		
 	}
@@ -488,24 +581,87 @@ adu_slot_2_missions = {
 		position = 5
 		
 		provinces_to_highlight = {
-			gra_restore_caliphate_cordoba_provinces = yes
+			OR = {
+				area = toledo_area
+				area = castille_area
+				area = aragon_area
+				province_id = 218
+				province_id = 1747
+				province_id = 216
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gra_restore_caliphate_cordoba_provinces
-				owner_type=owned_by
+			toledo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			castille_area = {
+				type = all
+				owned_by = ROOT
+			}
+			aragon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			218 = {
+				owned_by = ROOT
+			}
+			1747 = {
+				owned_by = ROOT
+			}
+			216 = {
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
 			add_adm_power = 200
-			#Claims
-			give_permaclaims_for_mission = { mission=gra_own_iberia }
+			galicia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			asturias_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			leon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			basque_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 	}
@@ -516,17 +672,61 @@ adu_slot_2_missions = {
 		position = 6
 		
 		provinces_to_highlight = {
-			gra_own_iberia_provinces = yes
+			OR = {
+				area = galicia_area
+				area = asturias_area
+				area = leon_area
+				area = extremadura_area
+				area = basque_area
+				area = catalonia_area
+				area = alentejo_area
+				area = beieras_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gra_own_iberia_provinces
-				owner_type=owned_by
+			galicia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			asturias_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			leon_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			extremadura_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			basque_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			catalonia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
@@ -535,8 +735,20 @@ adu_slot_2_missions = {
 				name = adu_white_phoenix
 				duration = 7300
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=gra_into_france }
+			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 	}
@@ -547,17 +759,25 @@ adu_slot_2_missions = {
 		position = 7
 		
 		provinces_to_highlight = {
-			gra_into_france_provinces = yes
+			OR = {
+				area = languedoc_area
+				area = provence_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gra_into_france_provinces
-				owner_type=owned_by
+			languedoc_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			provence_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
@@ -570,13 +790,6 @@ adu_slot_2_missions = {
 				add_claim = ROOT
 			}
 			piedmont_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			south_piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
@@ -736,17 +949,18 @@ granada_slot_3_missions = {
 		position = 3
 		
 		provinces_to_highlight = {
-			gra_reconquer_sevilla_provinces = yes
+			OR = {
+				area = lower_andalucia_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gra_reconquer_sevilla_provinces
-				owner_type=owned_by
+			lower_andalucia_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
@@ -762,8 +976,20 @@ granada_slot_3_missions = {
 				limit = {
 					tag = ADU
 				}
-				#Claims
-				give_permaclaims_for_mission = { mission=adu_conquer_portugal }
+				alentejo_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		
@@ -792,17 +1018,25 @@ andalusia_slot_3_missions = {
 		position = 5
 		
 		provinces_to_highlight = {
-			gc_cas_spa_reconquista_two_provinces = yes
+			OR = {
+				area = alentejo_area
+				area = beieras_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=gc_cas_spa_reconquista_two_provinces
-				owner_type=owned_by
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
@@ -968,12 +1202,12 @@ granada_slot_4_missions = {
 		position = 2
 		
 		provinces_to_highlight = {
-			province_id = 224
+			province_id = 1293
 			NOT = { is_strongest_trade_power = ROOT }
 		}
 		
 		trigger = {
-			224 = {
+			1293 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -989,8 +1223,20 @@ granada_slot_4_missions = {
 				limit = {
 					tag = ADU
 				}
-				#Claims
-				give_permaclaims_for_mission = { mission=adu_conquer_med_islands }
+				corsica_sardinia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				baleares_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		
@@ -1019,32 +1265,44 @@ andalusia_slot_4_missions = {
 		position = 3
 		
 		provinces_to_highlight = {
-			adu_conquer_med_islands_provinces = yes
+			OR = {
+				area = baleares_area
+				area = corsica_sardinia_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_conquer_med_islands_provinces
-				owner_type=owned_by
+			corsica_sardinia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			baleares_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
 		effect = {
-			2986 = { #Increased dev from +8 to +16, spreading a bit over to manpower.
-				add_base_tax = 7
-				add_base_production = 7
-				add_base_manpower = 2
+			2986 = {
+				add_base_tax = 4
+				add_base_production = 4
 				add_province_modifier = {
 					name = "adu_trade_hub"
 					duration = -1
 				}
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=adu_retake_sicily }
+			sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 	}
@@ -1055,17 +1313,17 @@ andalusia_slot_4_missions = {
 		position = 4
 		
 		provinces_to_highlight = {
-			adu_retake_sicily_provinces = yes
+			area = sicily_area
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_retake_sicily_provinces
-				owner_type=owned_by
+			sicily_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
@@ -1102,13 +1360,6 @@ andalusia_slot_4_missions = {
 					}
 					add_claim = ROOT
 				}
-				abruzzo_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_claim = ROOT
-				}
 			}
 		}
 		
@@ -1120,20 +1371,30 @@ andalusia_slot_4_missions = {
 		position = 5
 		
 		provinces_to_highlight = {
-			adu_moroccan_conquest_provinces = yes
+			OR = {
+				area = northern_morocco_area
+				area = marrekesh_area
+				area = western_morocco_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=adu_moroccan_conquest_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			northern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			marrekesh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
 		effect = {
-			#Rest of Morocco
 			tafilalt_area = {
 				limit = {
 					NOT = {
@@ -1226,33 +1487,44 @@ andalusia_slot_4_missions_c = {
 		position = 7
 		
 		provinces_to_highlight = {
-			adu_reclaim_mecca_provinces = yes
+			OR = {
+				area = vostani_area
+				area = tabuk_area
+				area = medina_area
+				area = mecca_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_reclaim_mecca_provinces
-				owner_type=owned_by
+			vostani_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tabuk_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			medina_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mecca_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
 		effect = {
-			add_country_modifier = { #This modifier is seriously broken. -10% monthly piety?! That's 2 years of free manpower every 7.5 months, or approximately +300% manpower recovery speed. May need an adjustment, if you ask me.
+			add_country_modifier = {
 				name = "adu_tolerance_heretics_mod"
 				duration = 7300
-			}
-			arabia_region = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
 			}
 		}
 	}
@@ -1263,39 +1535,40 @@ andalusia_slot_4_missions_c = {
 		position = 8
 		
 		provinces_to_highlight = {
-			adu_down_tigris_provinces = yes
+			OR = {
+				area = iraq_arabi_area
+				area = basra_area
+				area = khuzestan_area
+				area = luristan_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_down_tigris_provinces
-				owner_type=owned_by
+			iraq_arabi_area = {
+				type = all
+				owned_by = ROOT
+			}
+			basra_area = {
+				type = all
+				owned_by = ROOT
+			}
+			khuzestan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			luristan_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
 			add_adm_power = 300
 			408 = {
-				if = {
-					limit = {	
-						NOT = {
-							province_has_center_of_trade_of_level = 2
-						}
-					}
-					add_center_of_trade_level = 2
-				}
-				else_if = {
-					limit = {	
-						NOT = {
-							province_has_center_of_trade_of_level = 3
-						}
-					}
-					add_center_of_trade_level = 1
-				}
+				set_center_level_3_center_of_trade = yes
 			}
 			persian_gulf_coast = {
 				limit = {
@@ -1410,9 +1683,93 @@ granada_slot_5_missions = {
 				limit = {
 					tag = ADU
 				}
-				#Claims
-				give_permaclaims_for_mission = { mission=adu_moroccan_conquest }
-				give_permaclaims_for_mission = { mission=adu_own_tunisia_1 }
+				northern_morocco_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				hautes_plaines_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				barbary_coast_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				kabylia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				tunisia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				djerba_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				tripolitania_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					tag = ADU
+				}
+				northern_morocco_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				marrekesh_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				western_morocco_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		
@@ -1441,22 +1798,52 @@ andalusia_slot_5_missions = {
 		position = 5
 		
 		provinces_to_highlight = {
-			adu_own_tunisia_1_provinces = yes
+			OR = {
+				area = northern_morocco_area
+				area = hautes_plaines_area
+				area = barbary_coast_area
+				area = kabylia_area
+				area = tunisia_area
+				area = djerba_area
+				area = tripolitania_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_own_tunisia_1_provinces
-				owner_type=owned_by
+			northern_morocco_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hautes_plaines_area = {
+				type = all
+				owned_by = ROOT
+			}
+			barbary_coast_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kabylia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tunisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			djerba_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
-			#Rest of Maghreb
 			north_saharan_area = {
 				limit = {
 					NOT = {
@@ -1468,18 +1855,7 @@ andalusia_slot_5_missions = {
 				}
 				add_claim = ROOT
 			}
-			djerba_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			nafusa_mountains_area = {
+			ouled_nail_area = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
@@ -1498,11 +1874,40 @@ andalusia_slot_5_missions = {
 					NOT = {
 						is_core = ROOT
 					}
+					NOT = {
+						province_id = 2474
+					}
 				}
 				add_claim = ROOT
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=adu_fatimid_lands }
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bahari_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vostani_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 	}
@@ -1513,17 +1918,33 @@ andalusia_slot_5_missions = {
 		position = 6
 		
 		provinces_to_highlight = {
-			adu_fatimid_lands_provinces = yes
+			OR = {
+				area = cyrenaica_area
+				area = delta_area
+				area = bahari_area
+				area = vostani_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_fatimid_lands_provinces
-				owner_type=owned_by
+			cyrenaica_area = {
+				type = all
+				owned_by = ROOT
+			}
+			delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bahari_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vostani_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
@@ -1531,40 +1952,69 @@ andalusia_slot_5_missions = {
 			country_event = {
 				id = flavor_gra.3
 			}
-			#Just some extra southern Egypt claims to match Mecca's coast.
-			lower_nubia_area = {
+			said_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-						is_empty = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
-			dongola_area = {
+			palestine_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-						is_empty = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			red_sea_coast_area = {
+			syria_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-						is_empty = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=adu_levantine_restoration }
-			give_permaclaims_for_mission = { mission=adu_reclaim_mecca }
+			aleppo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vostani_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tabuk_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			medina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mecca_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -1574,61 +2024,120 @@ andalusia_slot_5_missions = {
 		position = 7
 		
 		provinces_to_highlight = {
-			adu_levantine_restoration_provinces = yes
+			OR = {
+				area = palestine_area
+				area = syria_area
+				area = aleppo_area
+				area = al_jazira_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_levantine_restoration_provinces
-				owner_type=owned_by
+			palestine_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			syria_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			aleppo_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			al_jazira_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		
 		effect = {
-			382 = { #From 3/3/3 (+9) to 6/6/5 (+17)
-				add_base_tax = 6
-				add_base_production = 6
-				add_base_manpower = 5
+			382 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
 				add_province_modifier = {
 					name = "adu_summer_capital"
 					duration = -1
 				}
-				set_province_flag = bt_damascus_restored
 			}
-			erzurum_area = { #Upper Euphrates
+			syrian_desert_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
-			mardin_area = { #Mardin
+			trans_jordan_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
-			north_kurdistan_area = { #Vaspurakan
+			iraq_arabi_area = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=adu_down_tigris }
-			give_permaclaims_for_mission = { mission=adu_persian_conquest }
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			khuzestan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luristan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tabriz_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			azerbaijan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			armenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -1638,17 +2147,33 @@ andalusia_slot_5_missions = {
 		position = 8
 		
 		provinces_to_highlight = {
-			adu_persian_conquest_provinces = yes
+			OR = {
+				area = shahrizor_area
+				area = tabriz_area
+				area = azerbaijan_area
+				area = armenia_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted 
-				provinces=adu_persian_conquest_provinces
-				owner_type=owned_by
+			shahrizor_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tabriz_area = {
+				type = all
+				owned_by = ROOT
+			}
+			azerbaijan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			armenia_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		

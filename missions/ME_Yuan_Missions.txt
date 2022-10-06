@@ -723,7 +723,7 @@ Yuan_missions_5 = {
 			2116 = {
 				owned_by = ROOT
 				development = 15
-				NOT = { devastation = 1 }
+				NOT = { devastation = 0.1 }
 			}
 		}
 		effect = {

@@ -2,7 +2,7 @@ ME_ulugh_beg = {
 	diplomatic_reputation = 1
 	legitimacy = 1
 	technology_cost = -0.05
-	timurid_legitimacy_influence = 1
+	#timurid_legitimacy_influence = 1
 }
 
 ME_babur = {
@@ -43,7 +43,7 @@ legitimacy_var_increased = {
 }
 
 ME_yearly_timurid_legitimacy = {
-	timurid_legitimacy_influence = 5
+	#timurid_legitimacy_influence = 5
 }
 
 ME_fall_of_herat_in_1_years = {

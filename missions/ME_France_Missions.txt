@@ -706,7 +706,7 @@ france_missions_2 = {
 				area = west_midlands_area
 				area = east_midlands_area
 				area = yorkshire_area
-				area = greater_london_area
+				area = south_east_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -723,7 +723,7 @@ france_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			greater_london_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1421,7 +1421,7 @@ france_missions_3 = {
 				area = hesse_area
 				area = palatinate_area
 				area = baden_area
-				area = swabia_area
+				area = wurttemburg_area
 			}
 			OR = {
 				AND = {
@@ -1461,7 +1461,7 @@ france_missions_3 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				swabia_area = {
+				wurttemburg_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -1487,7 +1487,7 @@ france_missions_3 = {
 					type = all
 					owned_by = ROOT
 				}
-				swabia_area = {
+				wurttemburg_area = {
 					type = all
 					owned_by = ROOT
 				}
@@ -1790,18 +1790,18 @@ france_missions_3 = {
 						}
 					}
 				}
-				#AND = {
-				#	superregion = andes_superregion
-				#	NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				#	ROOT = {
-				#		NOT = {
-				#			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				#				value = 10
-				#				superregion = andes_superregion
-				#			}
-				#		}
-				#	}
-				#}
+				AND = {
+					superregion = andes_superregion
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 10
+								superregion = andes_superregion
+							}
+						}
+					}
+				}
 				AND = {
 					superregion = southern_africa_superregion
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1881,10 +1881,10 @@ france_missions_3 = {
 					value = 10
 					superregion = south_america_superregion
 				}
-			#	num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-			#		value = 10
-			#		superregion = andes_superregion
-			#	}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					superregion = andes_superregion
+				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 10
 					superregion = southern_africa_superregion
@@ -3412,7 +3412,12 @@ france_missions_5 = {
 							has_manufactory_trigger = yes
 							trade_goods = wine
 							NOT = { has_province_flag = fra_wine_flag }
-							has_building = road_system
+							if = {
+								limit = {
+									is_expanded_mod_active = { mod = trade_goods }
+								}
+								has_building = road_system
+							}
 						}
 						set_province_flag = fra_wine_flag
 						add_province_modifier = {
@@ -3444,51 +3449,91 @@ france_missions_5 = {
 				continent = north_america
 				continent = south_america
 			}
-			OR = {
-				trade_goods = tomato
-				trade_goods = potato
-				trade_goods = citrus
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				OR = {
+					trade_goods = tomato
+					trade_goods = potato
+					trade_goods = citrus
+				}
+			}
+			else = {
+				OR = {
+					trade_goods = sugar
+					trade_goods = cotton
+					trade_goods = tobacco
+				}
 			}
 			NOT = { num_of_times_improved = 2 }
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = fra_tge_crops_tt
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-					trade_goods = tomato
+			if = {
+				limit = {
+					is_expanded_mod_active = { mod = trade_goods }
+				}
+				custom_trigger_tooltip = {
+					tooltip = fra_tge_crops_tt
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = tomato
 						num_of_times_improved = 2
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					OR = {
-						continent = north_america
-						continent = south_america
 					}
-					trade_goods = potato
-					num_of_times_improved = 2
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					OR = {
-						continent = north_america
-						continent = south_america
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = potato
+						num_of_times_improved = 2
 					}
-					trade_goods = citrus
-					num_of_times_improved = 2
-				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					OR = {
-						continent = north_america
-						continent = south_america
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = citrus
+						num_of_times_improved = 2
 					}
-					trade_goods = tobacco
-					num_of_times_improved = 2
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = fra_vanilla_crops_tt
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = sugar
+						num_of_times_improved = 2
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = cotton
+						num_of_times_improved = 2
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						trade_goods = tobacco
+						num_of_times_improved = 2
+					}
 				}
 			}
 		}

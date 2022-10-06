@@ -156,12 +156,12 @@ ROT_missions_5 = {
 			province_id = 4715
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { num_of_times_improved_by_owner = 5 }
+				NOT = { num_of_times_improved = 5 }
 			}
 		}
 		trigger = {
 			4715 = {
-				num_of_times_improved_by_owner = 5
+				num_of_times_improved = 5
 				owned_by = ROOT
 			}
 		}

@@ -24,13 +24,13 @@ NSA_Missions_1 = {
 				NOT = { owned_by = ROOT }
 				local_autonomy_above_min = 10
 				unrest = 0
-				NOT = { num_of_times_improved_by_owner = 5 }
+				NOT = { num_of_times_improved = 5 }
 			}
 		}
 		trigger = {
 			83 = {
 				owned_by = ROOT
-				num_of_times_improved_by_owner = 5
+				num_of_times_improved = 5
 				NOT = { local_autonomy_above_min = 10 }
 				NOT = { unrest = 0 }
 			}
@@ -173,7 +173,7 @@ NSA_Missions_5 = {
 					duration = -1
 				}
 			}
-			add_prestige_or_monarch_power = { amount = 10 }				
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}
 }

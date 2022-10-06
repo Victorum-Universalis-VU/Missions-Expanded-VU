@@ -52,10 +52,7 @@ country_decisions = {
 				limit = {
 					has_dlc = "El Dorado"
 				}
-				OR = {
-					is_religion_reformed = yes
-					has_all_mesoamerican_reforms = yes
-				}
+				is_religion_reformed = yes
 			}
 			else = {
 				has_institution = feudalism
@@ -98,7 +95,7 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		ai_importance = 400
 	}

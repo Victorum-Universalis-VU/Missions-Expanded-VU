@@ -136,7 +136,7 @@ bul_king_zapadoslavia = {
 }
 bul_into_bear = {
 	siege_ability = 0.10
-	artillery_bonus_vs_fort = 2
+	artillery_levels_available_vs_fort = 2
 }
 bul_the_dream = {
 	religious_unity = 0.20
@@ -228,5 +228,5 @@ bul_estates_happy = {
 	rajput_loyalty_modifier = 0.10
 	rajput_muslim_loyalty_modifier = 0.10
 	vaisyas_loyalty_modifier = 0.10
-	vaisyas_non_muslim_loyalty_modifier = 0.10
+	#vaisyas_non_muslim_loyalty_modifier = 0.10
 }

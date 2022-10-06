@@ -133,18 +133,6 @@ province_event = {
 					province_id = ROOT
 				}
 			}
-			sonora_area = {
-				is_empty = yes
-				any_neighbor_province = {
-					province_id = ROOT
-				}
-			}
-			baja_california_area = {
-				is_empty = yes
-				any_neighbor_province = {
-					province_id = ROOT
-				}
-			}
 		}
 	}
 
@@ -173,11 +161,7 @@ province_event = {
 		owner = {
 			random_province = {
 				limit = {
-					OR = {
-						area = california_area
-						area = sonora_area
-						area = baja_california_area
-					}
+					area = california_area
 					is_empty = yes
 					any_neighbor_province = {
 						province_id = ROOT
@@ -1669,425 +1653,425 @@ country_event = {
 	# }
 # }
 
-country_event = {
-	id = ME_Korea_Events.40 #Munmyo
-	title = ME_Korea_Events.40.t
-	desc = ME_Korea_Events.40.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.40.a
-
-		add_country_modifier = {
-			name = KOR_religious
-			duration = 10950
-		}
-	}
-
-	option = {
-		name = ME_Korea_Events.40.b
-
-		add_country_modifier = {
-			name = KOR_pride
-			duration = 10950
-		}
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.41 #A new industry
-	title = ME_Korea_Events.41.t
-	desc = ME_Korea_Events.41.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.41.a
-
-		1845 = {
-			change_trade_goods = paper
-		}
-	}
-
-	option = {
-		name = ME_Korea_Events.41.b
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.42 #A New Destiny? - Colonies
-	title = ME_Korea_Events.42.t
-	desc = ME_Korea_Events.42.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.42.a
-
-		custom_tooltip = ME_KOR_PICKED_COLONIES
-		set_country_flag = KOR_picked_option
-		set_country_flag = KOR_colony
-		swap_non_generic_missions = yes
-
-	}
-
-	option = {
-		name = ME_Korea_Events.42.b
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.43 #A New Destiny? - China
-	title = ME_Korea_Events.43.t
-	desc = ME_Korea_Events.43.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.43.a
-
-		trigger = {
-			NOT = { exists = JOS }
-		}
-
-		custom_tooltip = ME_KOR_PICKED_CHINA
-		set_country_flag = KOR_picked_option
-		set_country_flag = KOR_daehan
-		set_country_flag = KOR_great_wall
-		swap_non_generic_missions = yes
-		change_tag = JOS
-	}
-
-	option = {
-		name = ME_Korea_Events.43.b
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.44 #Chrystanthemum throne
-	title = ME_Korea_Events.44.t
-	desc = ME_Korea_Events.44.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.44.a #ensigns of power moved to Korea
-
-		add_prestige_or_monarch_power = { amount = 100 }
-	}
-
-	option = {
-		name = ME_Korea_Events.44.b #stay in Japan
-
-		japan_region = {
-			limit = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			add_nationalism = -10
-		}
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.45 #Chinese Corps
-	title = ME_Korea_Events.45.t
-	desc = ME_Korea_Events.45.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.45.a #Mmmm myes army manpower
-
-		custom_tooltip = KOR_GIVE_CHINA_MODIFIER_1 #The modifier will be integrated into the tooltip, but for ease of changing the values it will be a separate tooltip
-		tooltip = {
-			add_province_modifier = {
-				name = KOR_conscription_manpower
-				duration = -1
-			}
-		}
-		hidden_effect = {
-			xinan_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_manpower
-					duration = -1
-				}
-			}
-			south_china_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_manpower
-					duration = -1
-				}
-			}
-			north_china_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_manpower
-					duration = -1
-				}
-			}
-		}
-	}
-
-	option = {
-		name = ME_Korea_Events.45.b #We can be used better elsewhere
-
-		custom_tooltip = KOR_GIVE_CHINA_MODIFIER_2
-		tooltip = {
-			add_province_modifier = {
-				name = KOR_conscription_goods
-				duration = -1
-			}
-		}
-		hidden_effect = {
-			xinan_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_goods
-					duration = -1
-				}
-			}
-			south_china_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_goods
-					duration = -1
-				}
-			}
-			north_china_region = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = KOR_conscription_goods
-					duration = -1
-				}
-			}
-		}
-	}
-}
-country_event = {
-	id = ME_Korea_Events.46 #Korean Expedition
-	title = ME_Korea_Events.46.t
-	desc = ME_Korea_Events.46.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.46.a #we will be your tributary, o heavenly emperor
-
-		trigger = {
-			has_dlc = "Mandate of Heaven"
-		}
-
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_opinion = {
-						who = FROM
-						value = -25
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				has_opinion = {
-					who = FROM
-					value = 50
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					who = FROM
-					value = 100
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					who = FROM
-					value = 150
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					who = FROM
-					value = 200
-				}
-			}
-		}
-
-		FROM = {
-			create_subject = {
-				subject_type = tributary_state
-				subject = ROOT
-			}
-		}
-	}
-
-	option = {
-		name = ME_Korea_Events.46.b #piss off
-
-		ai_chance = {
-			factor = 100
-		}
-
-		tooltip = {
-			FROM = {
-				add_casus_belli = {
-					target = ROOT
-					type = cb_insult
-					months = 240
-				}
-			}
-		}
-		hidden_effect = {
-			FROM = {
-				country_event = { id = ME_Korea_Events.47 }
-			}
-		}
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.47 #Unsuccessful mission
-	title = ME_Korea_Events.47.t
-	desc = ME_Korea_Events.47.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.47.a #ensigns of power moved to Korea
-
-		add_casus_belli = {
-			target = FROM
-			type = cb_insult
-			months = 240
-		}
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.48
-	title = ME_Korea_Events.48.t #Silk Trade Reopened
-	desc = ME_Korea_Events.48.d
-	picture = SHIP_SAILING_eventPicture
-
-	major = yes
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.48.a #Silk Trade Reopened
-
-		change_price = {
-			trade_goods = silk
-			key = KOR_silk_road_reopened
-			value = 0.25
-			duration = 36500
-		}
-		700 = {
-			change_trade_goods = silk
-			add_base_manpower = 2
-			add_base_production = 2
-			add_base_tax = 1
-		}
-		1836 = {
-			change_trade_goods = silk
-			add_base_manpower = 2
-			add_base_production = 2
-			add_base_tax = 1
-		}
-	}
-
-	option = {
-		name = ME_Korea_Events.48.b #Silk Trade Reopened
-
-		change_price = {
-			trade_goods = silk
-			key = KOR_silk_road_reopened
-			value = 0.25
-			duration = 36500
-		}
-		capital_scope = {
-			add_base_manpower = 2
-			add_base_production = 2
-			add_base_tax = 1
-		}
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.49 #Army Modernization
-	title = ME_Korea_Events.49.t
-	desc = ME_Korea_Events.49.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ME_Korea_Events.49.a #yes.
-
-		add_government_reform = five_military_force_reform
-	}
-
-	option = {
-		name = ME_Korea_Events.49.b #no
-		add_army_tradition = 5
-	}
-}
-
-country_event = {
-	id = ME_Korea_Events.50 #New Traditions and Ambitions
-	title = ideagroups.1.t
-	desc = ideagroups.1.d
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = ideagroups.1.a
-
-		ai_chance = { factor = 100 }
-
-		set_country_flag = KOR_New_idea_group
-		swap_free_idea_group = yes
-		custom_tooltip = KOR_NEW_IDEAS
-	}
-
-	option = {
-		name = ideagroups.1.b
-
-		ai_chance = { factor = 0 }
-	}
-}
+#country_event = {
+#	id = ME_Korea_Events.40 #Munmyo
+#	title = ME_Korea_Events.40.t
+#	desc = ME_Korea_Events.40.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.40.a
+#
+#		add_country_modifier = {
+#			name = KOR_religious
+#			duration = 10950
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.40.b
+#
+#		add_country_modifier = {
+#			name = KOR_pride
+#			duration = 10950
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.41 #A new industry
+#	title = ME_Korea_Events.41.t
+#	desc = ME_Korea_Events.41.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.41.a
+#
+#		1845 = {
+#			change_trade_goods = paper
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.41.b
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.42 #A New Destiny? - Colonies
+#	title = ME_Korea_Events.42.t
+#	desc = ME_Korea_Events.42.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.42.a
+#
+#		custom_tooltip = ME_KOR_PICKED_COLONIES
+#		set_country_flag = KOR_picked_option
+#		set_country_flag = KOR_colony
+#		swap_non_generic_missions = yes
+#
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.42.b
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.43 #A New Destiny? - China
+#	title = ME_Korea_Events.43.t
+#	desc = ME_Korea_Events.43.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.43.a
+#
+#		trigger = {
+#			NOT = { exists = JOS }
+#		}
+#
+#		custom_tooltip = ME_KOR_PICKED_CHINA
+#		set_country_flag = KOR_picked_option
+#		set_country_flag = KOR_daehan
+#		set_country_flag = KOR_great_wall
+#		swap_non_generic_missions = yes
+#		change_tag = JOS
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.43.b
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.44 #Chrystanthemum throne
+#	title = ME_Korea_Events.44.t
+#	desc = ME_Korea_Events.44.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.44.a #ensigns of power moved to Korea
+#
+#		add_prestige_or_monarch_power = { amount = 100 }
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.44.b #stay in Japan
+#
+#		japan_region = {
+#			limit = {
+#				country_or_non_sovereign_subject_holds = ROOT
+#			}
+#			add_nationalism = -10
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.45 #Chinese Corps
+#	title = ME_Korea_Events.45.t
+#	desc = ME_Korea_Events.45.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.45.a #Mmmm myes army manpower
+#
+#		custom_tooltip = KOR_GIVE_CHINA_MODIFIER_1 #The modifier will be integrated into the tooltip, but for ease of changing the values it will be a separate tooltip
+#		tooltip = {
+#			add_province_modifier = {
+#				name = KOR_conscription_manpower
+#				duration = -1
+#			}
+#		}
+#		hidden_effect = {
+#			xinan_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_manpower
+#					duration = -1
+#				}
+#			}
+#			south_china_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_manpower
+#					duration = -1
+#				}
+#			}
+#			north_china_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_manpower
+#					duration = -1
+#				}
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.45.b #We can be used better elsewhere
+#
+#		custom_tooltip = KOR_GIVE_CHINA_MODIFIER_2
+#		tooltip = {
+#			add_province_modifier = {
+#				name = KOR_conscription_goods
+#				duration = -1
+#			}
+#		}
+#		hidden_effect = {
+#			xinan_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_goods
+#					duration = -1
+#				}
+#			}
+#			south_china_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_goods
+#					duration = -1
+#				}
+#			}
+#			north_china_region = {
+#				limit = {
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = KOR_conscription_goods
+#					duration = -1
+#				}
+#			}
+#		}
+#	}
+#}
+#country_event = {
+#	id = ME_Korea_Events.46 #Korean Expedition
+#	title = ME_Korea_Events.46.t
+#	desc = ME_Korea_Events.46.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.46.a #we will be your tributary, o heavenly emperor
+#
+#		trigger = {
+#			has_dlc = "Mandate of Heaven"
+#		}
+#
+#		ai_chance = {
+#			factor = 100
+#			modifier = {
+#				factor = 0
+#				is_subject = yes
+#			}
+#			modifier = {
+#				factor = 0
+#				NOT = {
+#					has_opinion = {
+#						who = FROM
+#						value = -25
+#					}
+#				}
+#			}
+#			modifier = {
+#				factor = 1.5
+#				has_opinion = {
+#					who = FROM
+#					value = 50
+#				}
+#			}
+#			modifier = {
+#				factor = 2
+#				has_opinion = {
+#					who = FROM
+#					value = 100
+#				}
+#			}
+#			modifier = {
+#				factor = 2
+#				has_opinion = {
+#					who = FROM
+#					value = 150
+#				}
+#			}
+#			modifier = {
+#				factor = 2
+#				has_opinion = {
+#					who = FROM
+#					value = 200
+#				}
+#			}
+#		}
+#
+#		FROM = {
+#			create_subject = {
+#				subject_type = tributary_state
+#				subject = ROOT
+#			}
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.46.b #piss off
+#
+#		ai_chance = {
+#			factor = 100
+#		}
+#
+#		tooltip = {
+#			FROM = {
+#				add_casus_belli = {
+#					target = ROOT
+#					type = cb_insult
+#					months = 240
+#				}
+#			}
+#		}
+#		hidden_effect = {
+#			FROM = {
+#				country_event = { id = ME_Korea_Events.47 }
+#			}
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.47 #Unsuccessful mission
+#	title = ME_Korea_Events.47.t
+#	desc = ME_Korea_Events.47.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.47.a #ensigns of power moved to Korea
+#
+#		add_casus_belli = {
+#			target = FROM
+#			type = cb_insult
+#			months = 240
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.48
+#	title = ME_Korea_Events.48.t #Silk Trade Reopened
+#	desc = ME_Korea_Events.48.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	major = yes
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.48.a #Silk Trade Reopened
+#
+#		change_price = {
+#			trade_goods = silk
+#			key = KOR_silk_road_reopened
+#			value = 0.25
+#			duration = 36500
+#		}
+#		700 = {
+#			change_trade_goods = silk
+#			add_base_manpower = 2
+#			add_base_production = 2
+#			add_base_tax = 1
+#		}
+#		1836 = {
+#			change_trade_goods = silk
+#			add_base_manpower = 2
+#			add_base_production = 2
+#			add_base_tax = 1
+#		}
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.48.b #Silk Trade Reopened
+#
+#		change_price = {
+#			trade_goods = silk
+#			key = KOR_silk_road_reopened
+#			value = 0.25
+#			duration = 36500
+#		}
+#		capital_scope = {
+#			add_base_manpower = 2
+#			add_base_production = 2
+#			add_base_tax = 1
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.49 #Army Modernization
+#	title = ME_Korea_Events.49.t
+#	desc = ME_Korea_Events.49.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ME_Korea_Events.49.a #yes.
+#
+#		add_government_reform = five_military_force_reform
+#	}
+#
+#	option = {
+#		name = ME_Korea_Events.49.b #no
+#		add_army_tradition = 5
+#	}
+#}
+#
+#country_event = {
+#	id = ME_Korea_Events.50 #New Traditions and Ambitions
+#	title = ideagroups.1.t
+#	desc = ideagroups.1.d
+#	picture = SHIP_SAILING_eventPicture
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ideagroups.1.a
+#
+#		ai_chance = { factor = 100 }
+#
+#		set_country_flag = KOR_New_idea_group
+#		swap_free_idea_group = yes
+#		custom_tooltip = KOR_NEW_IDEAS
+#	}
+#
+#	option = {
+#		name = ideagroups.1.b
+#
+#		ai_chance = { factor = 0 }
+#	}
+#}
 #A large event chain will be here soon probably
 
 country_event = {

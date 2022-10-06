@@ -9,7 +9,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -75,7 +77,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -111,7 +115,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -177,7 +183,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -212,7 +220,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -265,7 +275,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -278,18 +290,21 @@ country_event = {
 		112 = {
 			OR = {
 				development = 30
-				OR = {
-					has_great_project = {
-						type = venetian_arsenal
-						tier = 1
-					}
-					has_great_project = {
-						type = venetian_arsenal
-						tier = 2
-					}
-					has_great_project = {
-						type = venetian_arsenal
-						tier = 3
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					OR = {
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 1
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 2
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 3
+						}
 					}
 				}
 			}
@@ -325,7 +340,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -338,14 +355,17 @@ country_event = {
 		112 = {
 			OR = {
 				development = 40
-				OR = {
-					has_great_project = {
-						type = venetian_arsenal
-						tier = 2
-					}
-					has_great_project = {
-						type = venetian_arsenal
-						tier = 3
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					OR = {
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 2
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 3
+						}
 					}
 				}
 			}
@@ -385,7 +405,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -398,9 +420,12 @@ country_event = {
 		112 = {
 			OR = {
 				development = 50
-				has_great_project = {
-					type = venetian_arsenal
-					tier = 3
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					has_great_project = {
+						type = gme_arsenale_veneziano
+						tier = 3
+					}
 				}
 			}
 		}
@@ -437,7 +462,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -497,7 +524,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -610,7 +639,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		OR = {
 			tag = VEN
 			AND = {
@@ -644,7 +675,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		is_year = 1509
 		owns_core_province = 112
 	}
@@ -687,7 +720,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		is_year = 1516
 		owns_core_province = 112
 		112 = { has_province_modifier = ven_jew_ghetto }
@@ -748,7 +783,9 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		always = no
+		NOT = {
+			is_expanded_mod_active = { mod = flavour_and_events }
+		}
 		is_year = 1541
 		owns_core_province = 112
 		112 = { has_province_modifier = ven_jew_ghetto_novo }

@@ -1,6 +1,6 @@
 #copied from Aq-Qoyunlu
 
-graphical_culture = muslimgfx
+graphical_culture = persiangfx #muslimgfx
 
 color = { 54  83  125 }
 

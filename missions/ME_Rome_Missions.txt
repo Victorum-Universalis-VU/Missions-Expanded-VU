@@ -178,12 +178,12 @@ ROM_missions_1 = {
 				area = tunisia_area
 				area = djerba_area
 				area = kabylia_area
+				area = northern_morocco_area
+				area = barbary_coast_area
 				area = hautes_plaines_area
 				area = north_saharan_area
 				area = ouled_nail_area
 				area = tripolitania_area
-				area = northern_morocco_area
-				area = barbary_coast_area
 			}
 			NOT = { culture = roman }
 		}
@@ -697,7 +697,7 @@ ROM_missions_3 = {
 				area = yorkshire_area
 				area = scottish_marches_area
 				area = cornwall_area
-				area = greater_london_area
+				area = south_east_area
 				area = west_midlands_area
 				area = wales_area
 				area = armenia_area
@@ -823,7 +823,7 @@ ROM_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			greater_london_area = {
+			south_east_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -900,7 +900,8 @@ ROM_missions_3 = {
 				area = frisia_area
 				area = franconia_area
 				area = braunschweig_area
-				#area = northern_saxony_area
+				area = altmark_area
+				area = anhalt_area
 				area = hesse_area
 				area = thuringia_area
 				province_id = 84
@@ -971,10 +972,18 @@ ROM_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		#	northern_saxony_area = {
-		#		type = all
-		#		country_or_non_sovereign_subject_holds = ROOT
-		#	}
+			altmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			anhalt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hesse_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			thuringia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1027,13 +1036,13 @@ ROM_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-		#	south_saxony_area = {
-		#		limit = {
-		#			NOT = { is_core = ROOT }
-		#			NOT = { owned_by = ROOT }
-		#		}
-		#		add_permanent_claim = ROOT
-		#	}
+			saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			erzgebirge_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1928,6 +1937,13 @@ ROM_missions_5 = {
 				add_permanent_claim = ROOT
 			}
 			altmark_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhalt_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }

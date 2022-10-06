@@ -4,7 +4,7 @@ cb_inca_expulse_europeans = {
 	prerequisites = {
 		OR = {
 			mission_completed = inca_expel_the_foreigners
-			mission_completed = maya_expel_the_foreigners
+			#mission_completed = maya_expel_the_foreigners
 		}
 		OR = {
 			AND = {

@@ -10,6 +10,9 @@ emp_bohemia_1 = {
 		tag = BOH
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
+		NOT = {
+			has_country_flag = ME_boh_pu_missions
+		}
 	}
 	has_country_shield = yes
 	emp_boh_hussite_start = {
@@ -223,6 +226,9 @@ emp_bohemia_1 = {
 			}
 			add_prestige = 20
 		}
+		ai_weight = {
+			factor = 500	#Tall
+		}
 	}
 	emp_boh_development_one = {
 		icon = mission_have_manufactories
@@ -276,6 +282,9 @@ emp_bohemia_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall
+		}
 	}
 	emp_boh_bergordnung_reforms = {
 		icon = reform_bergordnung
@@ -312,6 +321,9 @@ emp_bohemia_1 = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 500	#Tall
+		}
 	}
 }
 
@@ -327,6 +339,9 @@ emp_bohemia_2 = {
 		tag = BOH
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
+		NOT = {
+			has_country_flag = ME_boh_pu_missions
+		}
 	}
 	has_country_shield = yes
 	emp_boh_integrate_silesia = {
@@ -364,6 +379,9 @@ emp_bohemia_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500	#Historical
 		}
 	}
 	emp_boh_great_moravia = {
@@ -412,6 +430,9 @@ emp_bohemia_2 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500	#Reasonable conquest
+		}
 	}
 	emp_boh_hungarian_union = {
 		icon = hungarian_union
@@ -447,6 +468,9 @@ emp_bohemia_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500	#Reasonable conquest
 		}
 	}
 	emp_boh_protect_against_turks = {
@@ -558,6 +582,9 @@ emp_bohemia_2 = {
 				amount = 50
 			}
 		}
+		ai_weight = {
+			factor = 75	#Too ambitious
+		}
 	}
 }
 
@@ -573,6 +600,9 @@ emp_bohemia_3 = {
 		tag = BOH
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
+		NOT = {
+			has_country_flag = ME_boh_pu_missions
+		}
 	}
 	has_country_shield = yes	
 	emp_boh_polish_diplomacy = {
@@ -670,6 +700,9 @@ emp_bohemia_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100	#Little bit too ambitious?
+		}
 	}
 	emp_boh_prem_conquest = {
 		icon = mission_noble_council
@@ -715,6 +748,9 @@ emp_bohemia_3 = {
 				add_permanent_claim = ROOT 
 			}
 		}
+		ai_weight = {
+			factor = 100	#Little bit too ambitious?
+		}
 	}
 	
 	emp_boh_prem_conquest_two = {
@@ -752,6 +788,9 @@ emp_bohemia_3 = {
 				name = "boh_premysl_mod"
 				duration = 7300
 			}
+		}
+		ai_weight = {
+			factor = 50	#Little bit too ambitious?
 		}
 	}
 	emp_boh_bohemian_commonwealth = {
@@ -795,6 +834,9 @@ emp_bohemia_3 = {
 				duration = -1
 			}
 		}
+		ai_weight = {
+			factor = 50	#Little bit too ambitious?
+		}
 	}
 }
 
@@ -810,6 +852,9 @@ emp_bohemia_4 = {
 		tag = BOH
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = use_paradox_missions
+		NOT = {
+			has_country_flag = ME_boh_pu_missions
+		}
 	}
 	has_country_shield = yes
 	emp_boh_humiliate_austria = {
@@ -838,6 +883,7 @@ emp_bohemia_4 = {
 				add_casus_belli = {
 					target = BRA
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 			else = {
@@ -906,10 +952,11 @@ emp_bohemia_4 = {
 				add_casus_belli = {
 					target = SAX
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 			else = {
-				lower_saxony_area = {
+				thuringia_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = {  is_permanent_claim = ROOT }
@@ -917,6 +964,9 @@ emp_bohemia_4 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75	#Not too high or else Austria will never get their vote
 		}
 	}
 	emp_boh_electorate_of_saxony = {
@@ -930,7 +980,7 @@ emp_bohemia_4 = {
 					NOT = { is_subject_of = ROOT }
 				}
 				AND = {
-					area = lower_saxony_area
+					area = thuringia_area
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
@@ -947,7 +997,7 @@ emp_bohemia_4 = {
 					owned_by = ROOT
 				}
 			}
-			lower_saxony_area = {
+			thuringia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -968,6 +1018,9 @@ emp_bohemia_4 = {
 				add_prestige = 25
 			}
 		}
+		ai_weight = {
+			factor = 75	#Not too high or else Saxony will never get their vote
+		}
 	}
 	emp_boh_reformatio_sigismundi = {
 		icon = reformatio_sigismundi
@@ -981,7 +1034,7 @@ emp_bohemia_4 = {
 				hre_reform_passed = emperor_perpetual_diet
 			}
 			else = {
-				has_final_tier_reforms_trigger = yes
+				reform_level = 7
 			}
 		}
 		effect = {

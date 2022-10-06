@@ -58,6 +58,13 @@ WES_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			wurttemburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			swabia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -66,6 +73,13 @@ WES_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			franconia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -83,6 +97,7 @@ WES_missions_1 = {
 			OR = {
 				area = baden_area
 				area = alsace_area
+				area = wurttemburg_area
 				area = swabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -92,6 +107,7 @@ WES_missions_1 = {
 				OR = {
 					area = baden_area
 					area = alsace_area
+					area = wurttemburg_area
 					area = swabia_area
 				}
 				value = 10
@@ -105,9 +121,10 @@ WES_missions_1 = {
 			}
 			custom_tooltip = WES_more_mercs
 			add_country_modifier = {
-				name = WES_swabia_modifier
+				name = WES_swabia
 				duration = 9125
 			}
+			#ME_mercenary_commander?
 			bavaria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -231,12 +248,18 @@ WES_missions_2 = {
 		required_missions = { WES_rhineland_proper }
 		position = 7
 		provinces_to_highlight = {
-			area = franconia_area
+			OR = {
+				area = thuringia_area
+				area = franconia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = franconia_area
+				OR = {
+					area = thuringia_area
+					area = franconia_area
+				}
 				value = 5
 			}
 		}
@@ -447,7 +470,7 @@ WES_missions_3 = {
 		position = 6
 		provinces_to_highlight = {
 			OR = {
-				area = lower_saxony_area
+				area = holstein_area
 				area = braunschweig_area
 				province_id = 54
 				province_id = 4771
@@ -458,7 +481,7 @@ WES_missions_3 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					area = lower_saxony_area
+					area = holstein_area
 					area = braunschweig_area
 					province_id = 54
 					province_id = 4771
@@ -508,7 +531,21 @@ WES_missions_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_saxony_area = {
+			altmark_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anhalt_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -525,9 +562,11 @@ WES_missions_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = mecklenburg_area
-				area = saxony_area
+				area = altmark_area
+				area = anhalt_area
+				area = hesse_area
 				area = thuringia_area
-				area = lower_saxony_area
+				area = saxony_area
 				area = mittelmark_area
 				area = vorpommern_area
 			}
@@ -537,9 +576,11 @@ WES_missions_3 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
 					area = mecklenburg_area
-					area = saxony_area
+					area = altmark_area
+					area = anhalt_area
+					area = hesse_area
 					area = thuringia_area
-					area = lower_saxony_area
+					area = saxony_area
 					area = mittelmark_area
 					area = vorpommern_area
 				}
@@ -600,7 +641,7 @@ WES_missions_3 = {
 			tooltip = {
 				define_advisor = {
 					type = philosopher
-					culture = cosmopolitan_french
+					culture = francien
 					religion = ROOT
 					cost_multiplier = 0.5
 					skill = 1
@@ -622,7 +663,7 @@ WES_missions_3 = {
 					}
 					define_advisor = {
 						type = philosopher
-						culture = cosmopolitan_french
+						culture = francien
 						religion = ROOT
 						cost_multiplier = 0.5
 						skill = 1

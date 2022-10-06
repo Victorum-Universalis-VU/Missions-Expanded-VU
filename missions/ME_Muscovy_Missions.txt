@@ -325,6 +325,7 @@ MOS_2 = {
 			OR = {
 				area = samara_area
 				area = kazan_area
+				area = kama_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -334,6 +335,10 @@ MOS_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			kazan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kama_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -703,6 +708,13 @@ MOS_3 = {
 				add_permanent_claim = ROOT
 			}
 			kazan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kama_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

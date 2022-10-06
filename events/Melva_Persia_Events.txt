@@ -119,15 +119,6 @@ country_event = {
 			}
 			add_permanent_claim = ROOT
 		}
-#		kartli_kakheti_area = {
-#			limit = {
-#				NOT = { owned_by = ROOT }
-#				NOT = { is_core = ROOT }
-#				NOT = { is_empty = yes }
-#				NOT = { is_wasteland = yes }
-#			}
-#			add_permanent_claim = ROOT
-#		}
 		imereti_area = {
 			limit = {
 				NOT = { owned_by = ROOT }
@@ -287,10 +278,10 @@ country_event = {
 
 	trigger = {
 		has_country_flag = melva_persia_ismail
-#		kartli_kakheti_area = {
-#			type = all
-#			owned_by = ROOT
-#		}
+		samtskhe_area = {
+			type = all
+			owned_by = ROOT
+		}
 		imereti_area = {
 			type = all
 			owned_by = ROOT
@@ -759,7 +750,10 @@ country_event = {
 				release = RUM
 			}
 			create_march = RUM
-			RUM = {
+			random_country = {
+			    limit = {
+				    tag = RUM
+				}
 				override_country_name = RUM_SAHKULU
 				define_ruler = {
 					name = "Sahkulu Baba"
@@ -795,6 +789,42 @@ country_event = {
 					add_manpower = 10
 				}
 			}
+			#RUM = {
+			#	override_country_name = RUM_SAHKULU
+			#	define_ruler = {
+			#		name = "Sahkulu Baba"
+			#		dynasty = "Tekeli"
+			#		age = 15
+			#		adm = 2
+			#		dip = 3
+			#		mil = 5
+			#		religion = shiite
+			#	}
+			#	if = {
+			#		limit = {
+			#			NOT = { religion = shiite }
+			#		}
+			#		change_religion = shiite
+			#		set_religious_school = {
+			#			group = muslim
+			#			school = jafari_school
+			#		}
+			#	}
+			#	capital_scope = {
+			#		build_to_forcelimit = {
+			#			infantry = 0.75
+			#			cavalry = 0.20
+			#			artillery = 0.05
+			#		}
+			#	}
+			#	hidden_effect = {
+			#		add_adm_power = 150
+			#		add_dip_power = 150
+			#		add_mil_power = 150
+			#		add_treasury = 100
+			#		add_manpower = 10
+			#	}
+			#}
 		}
 		else_if = {
 			limit = {

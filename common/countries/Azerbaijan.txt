@@ -1,6 +1,6 @@
 #copied from Shirvanshah
 
-graphical_culture = muslimgfx
+graphical_culture = persiangfx #muslimgfx
 
 color = { 0  206  253 }
 

@@ -433,10 +433,10 @@ country_event = {
 	major_trigger = {
 		dynasty = "von Hohenzollern"
 		capital_scope = {
-#			OR = {
+			OR = {
 				area = franconia_area
-#				area = upper_franconia_area
-#			}
+				area = thuringia_area
+			}
 		}
 	}
 		
@@ -450,10 +450,10 @@ country_event = {
 			limit = {
 				dynasty = "von Hohenzollern"
 				capital_scope = {
-#					OR = {
+					OR = {
 						area = franconia_area
-#						area = upper_franconia_area
-#					}
+						area = thuringia_area
+					}
 				}
 			}
 			ROOT = {
@@ -1254,6 +1254,7 @@ country_event = {
 		add_country_modifier = {
 			name = PRU_vassal_play
 			duration = -1
+			desc = PRU_until_germany_is_formed
 		}
 		hidden_effect = {
 			swap_non_generic_missions = yes
@@ -1497,13 +1498,19 @@ country_event = {
 		ai_chance = { factor = 100 }
 		
 		1759 = {
-			change_trade_goods = glass
 			if = {
 				limit = {
 					has_manufactory_trigger = yes
 				}
-				remove_building = textile
+				set_province_flag = PRU_get_manu
+			}
+			change_trade_goods = glass
+			if = {
+				limit = {
+					has_province_flag = PRU_get_manu
+				}
 				add_building = mills
+				clr_province_flag = PRU_get_manu
 			}
 			add_province_modifier = {
 				name = PRU_potsdamer_glass

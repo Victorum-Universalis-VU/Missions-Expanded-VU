@@ -715,7 +715,7 @@ country_event = {
 		canada_region = {
 			limit = {
 				owned_by = ROOT
-				NOT = { culture = canadien }
+				NOT = { culture = quebecois }
 			}
 			change_culture = canadian
 		}
@@ -730,7 +730,7 @@ country_event = {
 		canada_region = {
 			limit = {
 				owned_by = ROOT
-				NOT = { culture = canadien }
+				NOT = { culture = quebecois }
 			}
 			change_culture = canadian
 		}
@@ -2098,7 +2098,7 @@ country_event = {
 		clr_country_flag = can_quebecois_party_appeased
 		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2106,7 +2106,7 @@ country_event = {
 			}
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2114,7 +2114,7 @@ country_event = {
 			}
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2122,7 +2122,7 @@ country_event = {
 			}
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2130,7 +2130,7 @@ country_event = {
 			}
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2138,7 +2138,7 @@ country_event = {
 			}
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_less_taxes
@@ -2157,27 +2157,27 @@ country_event = {
 		hidden_effect = { set_country_flag = canada_refused_reform_1 }
 		add_prestige = 10
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 	}
@@ -2202,7 +2202,7 @@ country_event = {
 		clr_country_flag = can_quebecois_party_appeased
 		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2210,7 +2210,7 @@ country_event = {
 			}
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2218,7 +2218,7 @@ country_event = {
 			}
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2226,7 +2226,7 @@ country_event = {
 			}
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2234,7 +2234,7 @@ country_event = {
 			}
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2242,7 +2242,7 @@ country_event = {
 			}
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 			add_province_modifier = {
 				name = can_unilingual_quebec
@@ -2261,27 +2261,27 @@ country_event = {
 		hidden_effect = { set_country_flag = canada_refused_reform_2 }
 		add_prestige = 10
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 	}
@@ -2306,27 +2306,27 @@ country_event = {
 		clr_country_flag = can_quebecois_party_appeased
 		set_country_flag = can_quebecois_party_appeased
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_local_autonomy = 10
 		}
 		994 = {
@@ -2359,27 +2359,27 @@ country_event = {
 		hidden_effect = { set_country_flag = canada_refused_reform_3 }
 		add_prestige = 10
 		cote_nord_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		upper_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_acadia_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		lower_canada_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		laurentian_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 		notre_dame_mountains_area = {
-			limit = { culture = canadien }
+			limit = { culture = quebecois }
 			add_unrest = 1
 		}
 	}
@@ -3113,22 +3113,22 @@ country_event = {
 		}
 
 		cote_nord_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 		laurentian_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 		lower_canada_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 		notre_dame_mountains_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 		lower_acadia_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 		upper_acadia_area = {
-			change_culture = canadien
+			change_culture = quebecois
 		}
 	}
 }

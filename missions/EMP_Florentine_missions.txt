@@ -25,8 +25,6 @@ emp_tusc_fighting_1 = {
 			OR = {
 				area = lombardy_area
 				area = po_valley_area
-				province_id = 7080
-				province_id = 2979
 			}
 			NOT = {
 				owned_by = ROOT
@@ -39,12 +37,6 @@ emp_tusc_fighting_1 = {
 			}
 			po_valley_area = {
 				type = all
-				owned_by = ROOT
-			}
-			7080 = {
-				owned_by = ROOT
-			}
-			2979 = {
 				owned_by = ROOT
 			}
 		}
@@ -86,20 +78,6 @@ emp_tusc_fighting_1 = {
 			add_country_modifier = {
 				name = "lan_tuscan_naval_expansion"
 				duration = 7300
-			}
-			carnia_area  = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			friuli_area  = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -186,27 +164,6 @@ emp_tusc_dip_and_war_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_tuscany_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_emilia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			emilia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -218,10 +175,7 @@ emp_tusc_dip_and_war_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = tuscany_area
-				area = south_tuscany_area 
 				area = emilia_romagna_area
-				area = upper_emilia_area 
-				area = emilia_area 
 			}
 			NOT = {
 				owned_by = ROOT
@@ -233,18 +187,6 @@ emp_tusc_dip_and_war_2 = {
 				owned_by = ROOT
 			}
 			emilia_romagna_area = {
-				type = all
-				owned_by = ROOT
-			}
-			south_tuscany_area = {
-				type = all
-				owned_by = ROOT
-			}
-			upper_emilia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			emilia_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -263,28 +205,6 @@ emp_tusc_dip_and_war_2 = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			7080 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			2979 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 		}
 	}
@@ -330,27 +250,6 @@ emp_tusc_dip_and_war_2 = {
 		}
 		effect = {
 			add_mercantilism = 2
-			piedmont_area   = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			south_piedmont_area   = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			north_piedmont_area   = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }

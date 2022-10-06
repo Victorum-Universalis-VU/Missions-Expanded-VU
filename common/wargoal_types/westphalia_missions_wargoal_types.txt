@@ -7,7 +7,7 @@ expel_cologne = {
 		peace_cost_factor = 0.5
 		
 		allowed_provinces = {
-			culture = hannoverian
+			culture = hannovieran
 		}
 		
 		peace_options = {
@@ -22,7 +22,7 @@ expel_cologne = {
 		peace_cost_factor = 0.5
 		
 		allowed_provinces = {
-			culture = hannoverian
+			culture = hannovieran
 		}
 		
 		peace_options = {

@@ -18,6 +18,9 @@ MLC_missions_1 = {
 				navy_size = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		trigger = {
 			num_of_admirals = 1
 			navy_size = 10
@@ -50,6 +53,12 @@ MLC_missions_1 = {
 							}
 						}
 						kutai_area = {
+							is_capital = yes
+							owner = {
+								navy_size = ROOT
+							}
+						}
+						kalimantan_area = {
 							is_capital = yes
 							owner = {
 								navy_size = ROOT
@@ -104,6 +113,9 @@ MLC_missions_1 = {
 		icon = mission_restore_rule_over_mysore
 		required_missions = { MLC_naval_superiority }
 		position = 3
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			area = brunei_area
 			NOT = { owned_by = ROOT }
@@ -146,6 +158,13 @@ MLC_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			kalimantan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -153,6 +172,9 @@ MLC_missions_1 = {
 		icon = mission_mnd_maj_rein_in_brunei
 		required_missions = { MLC_defeat_brunei }
 		position = 5
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			MSA_is_in_borneo = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -181,13 +203,6 @@ MLC_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			sulawesi_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_sulawesi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -252,6 +267,9 @@ MLC_missions_2 = {
 		icon = mission_demand_garjat_fealty
 		required_missions = { MLC_succession }
 		position = 2
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = palembang_area
@@ -280,7 +298,7 @@ MLC_missions_2 = {
 			}
 		}
 		effect = {
-			palembang_area= {
+			palembang_area = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -331,6 +349,9 @@ MLC_missions_2 = {
 		icon = mission_assert_control_over_delhi
 		required_missions = { MLC_intervene_in_siak }
 		position = 4
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -388,21 +409,6 @@ MLC_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			khorat_area = {
-				
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			cambodia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -410,6 +416,9 @@ MLC_missions_2 = {
 		icon = mission_mnd_maj_cloves
 		required_missions = { MLC_conquer_borneo }
 		position = 6
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			MSA_is_in_sulawesi = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -452,6 +461,9 @@ MLC_missions_3 = {
 		icon = me_mission_malay_ruler
 		required_missions = { }
 		position = 1
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		trigger = {
 			OR = {
 				army_size = 10
@@ -506,6 +518,9 @@ MLC_missions_3 = {
 		icon = mission_shipyards_of_gujarat
 		required_missions = { MLC_succession }
 		position = 2
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			area = malaya_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -529,6 +544,9 @@ MLC_missions_3 = {
 		icon = me_mission_conquer_malay_states
 		required_missions = { MLC_dominate_malay_peninsula }
 		position = 3
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2394
@@ -600,6 +618,9 @@ MLC_missions_3 = {
 		icon = mission_mnd_maj_end_disaster
 		required_missions = { MLC_conquer_sumatra }
 		position = 5
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -637,6 +658,9 @@ MLC_missions_3 = {
 		icon = mission_sail_to_the_east_indies
 		required_missions = { MLC_majapahit MLC_sulawesi }
 		position = 7
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			MSA_malaya_pth = yes
 		}
@@ -663,6 +687,9 @@ MLC_missions_4 = {
 		icon = me_mission_garuda
 		required_missions = { MLC_tun_perak }
 		position = 2
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			province_id = 600
 			NOT = { owned_by = ROOT }
@@ -702,6 +729,9 @@ MLC_missions_4 = {
 		icon = mission_spoils_of_war
 		required_missions = { MLC_resist_the_siamese_invasion MLC_kedah_pattani }
 		position = 4
+		ai_weight = {
+			factor = 500 #conquest
+		}
 		provinces_to_highlight = {
 			area = tenasserim_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1149,13 +1179,13 @@ MLC_missions_5 = {
 						duration = -1
 					}
 				}
-				kedah_area = {
+				indonesian_islands_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1
 					}
 				}
-				indonesian_islands_area = {
+				kedah_area = {
 					add_province_modifier = {
 						name = MLC_golden_peninsula_modifier
 						duration = -1

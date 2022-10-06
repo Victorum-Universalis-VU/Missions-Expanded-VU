@@ -4,6 +4,11 @@ SCA_missions_1 = {
 	ai = yes
 	potential = {
 		tag = SCA
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
+		
 	}
 	has_country_shield = yes
 
@@ -15,7 +20,6 @@ SCA_missions_1 = {
 			OR = {
 				area = skaneland_area
 				area = svealand_area
-				#area = ostra_svealand_area
 				area = vastra_gotaland_area
 				area = gotaland_area
 				area = jutland_area
@@ -32,10 +36,6 @@ SCA_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#ostra_svealand_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			svealand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -312,6 +312,10 @@ SCA_missions_2 = {
 	ai = yes
 	potential = {
 		tag = SCA
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -498,6 +502,10 @@ SCA_missions_3 = {
 	ai = yes
 	potential = {
 		tag = SCA
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -682,6 +690,10 @@ SCA_missions_4 = {
 	ai = yes
 	potential = {
 		tag = SCA
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
@@ -934,6 +946,10 @@ SCA_missions_5 = {
 	ai = yes
 	potential = {
 		tag = SCA
+		OR = {
+			NOT = { has_dlc = "Lions of the North" }
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+		}
 	}
 	has_country_shield = yes
 
